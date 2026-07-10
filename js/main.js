@@ -102,6 +102,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1750);
   }
 
+  /* ----- back to top ----- */
+  document.querySelectorAll(".s-top").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+
   /* ----- fake multi-step contact form ----- */
   const form = document.querySelector(".form-card form");
   if (form) {

@@ -1038,44 +1038,48 @@ body.blog .site-footer { --footer-shift: 0px; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(24px, 3vw, 42px);
+  gap: 0;
   padding-bottom: 4px;
-}
-.footer-monogram {
-  width: clamp(52px, 5vw, 72px);
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  border: 3px solid var(--cream);
-  border-radius: 36%;
-  color: var(--cream);
-  font-family: var(--sans-display);
-  font-size: clamp(28px, 3vw, 42px);
-  line-height: 1;
-  text-decoration: none;
 }
 .socials {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 .socials a {
-  width: clamp(42px, 4vw, 54px);
+  width: clamp(48px, 4.6vw, 62px);
   aspect-ratio: 1;
-  border-radius: 50%;
+  border-radius: 28%;
   display: grid;
   place-items: center;
   text-decoration: none;
   color: var(--ink);
-  font-family: var(--sans);
-  font-weight: 500;
-  font-size: 15px;
   transition: transform 0.2s;
 }
-.socials a:hover { transform: scale(1.12); }
-.socials .s1 { background: var(--orange); color: var(--cream); }
-.socials .s2 { background: var(--yellow); }
-.socials .s3 { background: var(--blurple); color: var(--cream); }
+.socials a:hover { transform: scale(1.1); }
+.socials a svg {
+  width: 46%;
+  height: 46%;
+  display: block;
+}
+.socials .s-top {
+  background: var(--lavender);
+  color: var(--ink);
+}
+.socials .s-top svg { width: 38%; height: 38%; }
+.socials .s-dribbble {
+  background: var(--orange);
+  color: var(--cream);
+}
+.socials .s-instagram {
+  background: var(--yellow);
+  color: var(--ink);
+}
+.socials .s-linkedin {
+  background: #3b66ff;
+  color: var(--cream);
+}
+.socials .s-linkedin svg { width: 42%; height: 42%; }
 .footer-legal {
   min-height: clamp(92px, 9vw, 126px);
   display: grid;
@@ -1844,9 +1848,7 @@ html.home-intro .site-logo {
   .footer-brand { flex-direction: column; align-items: flex-start; gap: 26px; margin-top: 90px; }
   .giant-wordmark { font-size: clamp(88px, 31vw, 122px); }
   .footer-side { width: 100%; align-items: flex-start; }
-  .footer-monogram { display: none; }
-  .socials { flex-direction: row; }
-  .socials a { width: 38px; }
+  .socials a { width: 42px; }
   .footer-legal { min-height: 112px; }
   .work-hero { min-height: 70vh; }
   .case-duo,
