@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Let's Talk — Brewer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <a class="site-logo" href="index.html" aria-label="Brewer home">
+    <span class="logo-squircle">b</span>
+    <span class="logo-wordmark">Brewer</span>
+  </a>
+
+  <button class="menu-btn" aria-label="Open menu">Menu</button>
+  <nav class="menu-dock" aria-label="Main menu">
+    <a href="about.html">About Me</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html">Let's Talk</a>
+    <a href="blog.html">Blog</a>
+    <button class="menu-close">Close</button>
+  </nav>
+
+  <main class="main">
+    <div class="shell">
+
+      <!-- HERO + FORM -->
+      <section class="contact-hero">
+        <div>
+          <h1 class="h-display split" style="font-size: clamp(40px, 6.4vw, 96px);">Let's design something great together.</h1>
+          <p class="body-copy reveal" style="margin-top: 36px;">Do you have a passion project? A new business? An established company? Let me walk alongside you and build something unique, beautiful, and effective.</p>
+        </div>
+        <div class="form-card reveal d1">
+          <form>
+            <div class="form-step">
+              <p class="step">1 &#8594;</p>
+              <h3>What should I call you? *</h3>
+              <label for="first">First name</label>
+              <input id="first" type="text" placeholder="Jane" autocomplete="given-name" />
+              <label for="last">Last name</label>
+              <input id="last" type="text" placeholder="Smith" autocomplete="family-name" />
+              <div class="ok-row"><button class="ok-btn" type="submit">OK</button><span class="step">press Enter &#8629;</span></div>
+            </div>
+            <div class="form-step">
+              <p class="step">2 &#8594;</p>
+              <h3>Where can I reach you? *</h3>
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="jane@example.com" autocomplete="email" />
+              <div class="ok-row"><button class="ok-btn" type="submit">OK</button><span class="step">press Enter &#8629;</span></div>
+            </div>
+            <div class="form-step">
+              <p class="step">3 &#8594;</p>
+              <h3>Tell me about your project.</h3>
+              <label for="about">The more detail, the better</label>
+              <input id="about" type="text" placeholder="We're launching a..." />
+              <div class="ok-row"><button class="ok-btn" type="submit">OK</button><span class="step">press Enter &#8629;</span></div>
+            </div>
+            <div class="form-step">
+              <p class="step">&#10003;</p>
+              <h3>Thanks! I'll be in touch within a day or two.</h3>
+              <p class="step">In a hurry? Email me directly at quinnsb@gmail.com.</p>
+            </div>
+          </form>
+          <p class="powered">Powered by good intentions</p>
+        </div>
+      </section>
+
+      <!-- OLD SCHOOL -->
+      <section class="section old-school reveal">
+        <h2>Old School?</h2>
+        <p>That's fine by me. Drop me an email and give me as much info as you can. Or, if you're a fellow designer, I'd love to chat.</p>
+        <p>Brewer operates out of a sunny home studio with entirely too many sketchbooks and exactly one very good desk chair. If you're ever in the neighborhood, wave at me!</p>
+      </section>
+
+      <!-- EMAIL BAR -->
+      <a class="email-bar reveal" href="mailto:quinnsb@gmail.com">Email Me!</a>
+
+      <!-- INFO BLOCK -->
+      <section class="info-block reveal">
+        <div class="info-row">
+          <span class="label">Located</span>
+          <span class="value">The home studio<br />Somewhere cozy, USA</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Hours</span>
+          <span class="value">You should probably just email before you show up.</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Contact</span>
+          <span class="value"><a href="mailto:quinnsb@gmail.com">quinnsb@gmail.com</a></span>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="footer-panel">
+          <div class="footer-cta reveal">
+            <h2>We'd love to chat about your design needs.</h2>
+            <a class="pill-btn maroon" href="mailto:quinnsb@gmail.com">Let's Talk Shop</a>
+          </div>
+          <div class="footer-brand reveal">
+            <span class="giant-wordmark">Brewer</span>
+            <div class="footer-side">
+              <a class="footer-monogram" href="index.html" aria-label="Back to top">b</a>
+              <div class="socials"><a class="s1" href="#" aria-label="Instagram">ig</a><a class="s2" href="#" aria-label="Dribbble">dr</a><a class="s3" href="#" aria-label="LinkedIn">li</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-legal"><p class="fine-print">&copy; BREWER 2026 | This site was hand-built with plain old HTML &amp; CSS. It features Degular from OhNo Type Co and Mackinac from P22 Foundry, and none of it would exist without my awesome friends &amp; clients. Thanks for visiting.</p></div>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
