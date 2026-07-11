@@ -2000,6 +2000,9 @@ html.home-intro .site-logo {
     background: var(--bg);
     transform: translateY(103%);
   }
+  /* the full-screen takeover is centered — drop the home page's desktop
+     left rail, which otherwise shoves the pills off the right edge */
+  body.home .menu-dock { padding-left: 24px; }
   .menu-dock a,
   .menu-dock button {
     width: min(76vw, 330px);
