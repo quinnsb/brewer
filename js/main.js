@@ -150,17 +150,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ----- fake multi-step contact form ----- */
+  /* ----- multi-step contact form: final step opens a pre-filled email ----- */
   const form = document.querySelector(".form-card form");
   if (form) {
     const steps = [...form.querySelectorAll(".form-step")];
     let current = 0;
     const show = (i) => {
       steps.forEach((s, j) => (s.style.display = j === i ? "block" : "none"));
+      steps[i]?.querySelector("input")?.focus();
     };
     show(0);
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+      if (current === steps.length - 2) {
+        const val = (id) => form.querySelector(`#${id}`)?.value.trim() ?? "";
+        const name = `${val("first")} ${val("last")}`.trim();
+        const subject = encodeURIComponent(name ? `Project inquiry — ${name}` : "Project inquiry");
+        const body = encodeURIComponent(
+          `Hi Quinn,\n\n${val("about") || "(tell me about your project)"}\n\n— ${name || "(your name)"}\n${val("email")}`
+        );
+        window.location.href = `mailto:quinnsb@gmail.com?subject=${subject}&body=${body}`;
+      }
       if (current < steps.length - 1) {
         current += 1;
         show(current);

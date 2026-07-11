@@ -561,6 +561,13 @@ body.menu-closing .menu-dock button {
   opacity: 1;
   transform: translateY(0);
 }
+/* no hover on touch devices — captions must be visible or the tiles are anonymous */
+@media (hover: none), (max-width: 980px) {
+  .tile-caption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .tile-caption h3 {
   font-size: clamp(28px, 2.05vw, 40px);
   line-height: 0.95;
@@ -1655,6 +1662,12 @@ body.blog .site-footer { --footer-shift: 0px; }
 
 .case-study.atlas { --case-accent: #ea73de; }
 .case-study.ridgeline { --case-accent: #9b4934; }
+
+/* work index heading */
+.work-intro {
+  padding-top: clamp(150px, 22vh, 230px);
+  margin-bottom: clamp(44px, 6vw, 90px);
+}
 
 .work-hero {
   position: relative;
