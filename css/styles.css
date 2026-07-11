@@ -94,7 +94,8 @@
   --radius-sm: 16px;
   --gutter: clamp(20px, 4vw, 48px);
   --logo-gutter: clamp(0px, 8vw, 130px);
-  --home-rail: clamp(4.75rem, 6.5vw, 7.5rem);
+  --page-edge: clamp(30px, 3.2vw, 62px);
+  --home-rail: var(--page-edge);
   --content-max: 1560px;
 }
 
@@ -202,7 +203,7 @@ body.home .hero {
 .site-logo {
   position: fixed;
   top: 34px;
-  left: 34px;
+  left: var(--page-edge);
   z-index: 60;
   display: flex;
   align-items: center;
@@ -248,7 +249,7 @@ body.home .hero {
 .menu-btn {
   position: fixed;
   bottom: 34px;
-  left: 34px;
+  left: var(--page-edge);
   z-index: 80;
   border: 0;
   cursor: pointer;
