@@ -94,6 +94,7 @@
   --radius-sm: 16px;
   --gutter: clamp(20px, 4vw, 48px);
   --logo-gutter: clamp(0px, 8vw, 130px);
+  --home-rail: clamp(4.75rem, 6.5vw, 7.5rem);
   --content-max: 1560px;
 }
 
@@ -142,6 +143,21 @@ p a:hover { opacity: 0.7; }
 
 .main {
   padding-left: calc(var(--logo-gutter));
+}
+
+/* Homepage: content sits in a right-biased column with a milder left rail than Trust */
+body.home .main {
+  padding-left: var(--home-rail);
+  padding-right: 0;
+}
+body.home .shell {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 0 clamp(14px, 1.4vw, 22px) 0 0;
+}
+body.home .hero {
+  margin-left: 0;
 }
 
 .section { margin: clamp(90px, 12vw, 190px) 0; }
@@ -651,7 +667,7 @@ body.menu-open .menu-dock button {
 
 .testimonial-section {
   background: var(--bg);
-  margin-left: clamp(8rem, 12vw, 15rem);
+  margin-left: var(--home-rail);
   padding: 10rem 0 5rem;
   overflow: hidden;
 }
@@ -747,7 +763,7 @@ body.menu-open .menu-dock button {
 
 @media (max-width: 900px) {
   .testimonial-section {
-    margin-left: 12vw;
+    margin-left: 0;
     padding-top: 5rem;
   }
 
@@ -877,6 +893,8 @@ body.menu-open .menu-dock button {
 }
 
 .cta-pill {
+  position: relative;
+  overflow: hidden;
   flex: 0 0 auto;
   width: clamp(140px, 14vw, 220px);
   height: clamp(64px, 7vw, 100px);
@@ -885,7 +903,42 @@ body.menu-open .menu-dock button {
   display: grid;
   place-items: center;
   text-decoration: none;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.cta-pill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--cream);
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cta-pill:hover {
+  transform: scale(1.06);
+  border-radius: 1.15em;
+}
+.cta-pill:hover::before {
+  transform: translateY(0);
+}
+.cta-pill svg {
+  position: relative;
+  z-index: 1;
+  width: 42%;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.3s ease;
+}
+.cta-pill svg path {
+  transition: stroke 0.3s ease;
+}
+.cta-pill:hover svg {
+  transform: translateX(8px);
+}
+.cta-pill:hover svg path {
+  stroke: var(--ink);
 }
 
 @media (max-width: 900px) {
@@ -913,8 +966,6 @@ body.menu-open .menu-dock button {
     margin: 0 auto;
   }
 }
-.cta-pill:hover { transform: scale(1.08); }
-.cta-pill svg { width: 42%; }
 
 /* ---------- press cards ---------- */
 
@@ -1806,6 +1857,8 @@ html.home-intro .site-logo {
 
 @media (max-width: 900px) {
   .main { padding-left: 0; }
+  body.home .main { padding-left: 0; }
+  body.home .shell { padding: 0 var(--gutter); }
   .hero, .footer-brand { margin-left: 0; }
   .caps-grid { grid-template-columns: 1fr 1fr; }
   .tile-caption { min-height: 88px; padding: 14px 20px; }
