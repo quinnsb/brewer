@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ----- collapsing wordmark (home hero only) ----- */
   const wordmark = document.querySelector(".logo-wordmark");
+  const siteLogo = document.querySelector(".site-logo");
   if (wordmark) {
     if (wordmark.dataset.collapse === "true") {
       wordmark.classList.add("visible");
@@ -60,6 +61,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     }
+  }
+
+  /* The homepage mark belongs to the opening frame, not the scrolled page. */
+  if (siteLogo && document.body.classList.contains("home")) {
+    let logoTicking = false;
+    const updateLogoVisibility = () => {
+      siteLogo.classList.toggle("is-scrolled", window.scrollY >= 80);
+    };
+    updateLogoVisibility();
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (logoTicking) return;
+        logoTicking = true;
+        requestAnimationFrame(() => {
+          updateLogoVisibility();
+          logoTicking = false;
+        });
+      },
+      { passive: true }
+    );
   }
 
   /* ----- split headlines into words ----- */

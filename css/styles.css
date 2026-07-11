@@ -95,7 +95,8 @@
   --gutter: clamp(20px, 4vw, 48px);
   --logo-gutter: clamp(0px, 8vw, 130px);
   --page-edge: clamp(30px, 3.2vw, 62px);
-  --home-rail: var(--page-edge);
+  /* Desktop home content clears the fixed logo/menu rail. */
+  --home-rail: clamp(220px, 12.1vw, 242px);
   --content-max: 1560px;
 }
 
@@ -158,7 +159,8 @@ body.home .shell {
   padding: 0 clamp(14px, 1.4vw, 22px) 0 0;
 }
 body.home .hero {
-  margin-left: 0;
+  /* The headline shares the outer edge with the logo; cards use the safe rail. */
+  margin-left: calc(var(--page-edge) - var(--home-rail));
 }
 
 .section { margin: clamp(90px, 12vw, 190px) 0; }
@@ -210,6 +212,11 @@ body.home .hero {
   gap: 14px;
   text-decoration: none;
   color: var(--cream);
+}
+.site-logo.is-scrolled {
+  opacity: 0;
+  transform: translateY(-24px);
+  pointer-events: none;
 }
 
 /* brand mark: mainlogoicon.png used as a mask so it takes currentColor anywhere */
@@ -315,7 +322,7 @@ body.menu-open .menu-bar,
   padding: 34px var(--page-edge); /* matches .menu-btn's bottom/left so Close lands where Menu was */
   display: flex;
   align-items: flex-end; /* bottom-justify, so the Menu-sized Close sits on the baseline */
-  gap: clamp(10px, 0.9vw, 15px);
+  gap: 0;
   max-width: 100%;
   transform: translateY(130%);
   transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
@@ -704,7 +711,7 @@ body.menu-open .menu-dock button {
 
 .testimonial-section {
   background: var(--bg);
-  margin-left: var(--home-rail);
+  margin-left: 0;
   padding: 10rem 0 5rem;
   overflow: hidden;
 }
@@ -1896,6 +1903,7 @@ html.home-intro .site-logo {
   .main { padding-left: 0; }
   body.home .main { padding-left: 0; }
   body.home .shell { padding: 0 var(--gutter); }
+  body.home .hero { margin-left: 0; }
   .hero, .footer-brand { margin-left: 0; }
   .caps-grid { grid-template-columns: 1fr 1fr; }
   .tile-caption { min-height: 88px; padding: 14px 20px; }
@@ -1912,7 +1920,7 @@ html.home-intro .site-logo {
   .footer-inner,
   .case-2up { grid-template-columns: 1fr; }
   .caps-grid { grid-template-columns: 1fr 1fr; }
-  .menu-dock { gap: 10px; padding: 20px; }
+  .menu-dock { gap: 0; padding: 20px; }
   .menu-dock a, .menu-dock button { height: 54px; padding: 0 22px; font-size: 19px; }
   .site-logo { top: 22px; left: 20px; }
   .logo-squircle { width: 44px; height: 44px; }
