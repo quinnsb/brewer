@@ -339,11 +339,6 @@ body.menu-open .menu-bar,
 }
 body.menu-open .menu-dock { transform: translateY(0); }
 
-/* Open menu sits on the content rail so pills clear the logo column (Trust-style) */
-body.home .menu-dock {
-  padding-left: var(--home-rail);
-}
-
 .menu-dock a,
 .menu-dock button {
   position: relative;
@@ -364,15 +359,13 @@ body.home .menu-dock {
   height: clamp(70px, 6.6vw, 98px);
   padding: 0 clamp(30px, 3vw, 56px);
   border-radius: 0.7em; /* rounded rectangle, not a pill */
-  /* intro: blurred, nudged left — clears left-to-right on open */
+  /* intro: nudged left — clears left-to-right on open */
   opacity: 0;
   transform: translateX(-26px);
-  filter: blur(12px);
   transition:
     color 0.3s ease,
     transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.45s ease,
-    filter 0.5s ease,
     border-radius 0.8s cubic-bezier(0.65, 0, 0.35, 1) var(--rd, 0s);
 }
 /* cream background that slides up from the bottom on hover (behind the label) */
@@ -424,11 +417,9 @@ body.menu-open .menu-dock a,
 body.menu-open .menu-dock button {
   opacity: 1;
   transform: translateX(0);
-  filter: blur(0);
   transition:
     transform 0.6s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0s),
     opacity 0.5s ease var(--d, 0s),
-    filter 0.6s ease var(--d, 0s),
     color 0.3s ease,
     border-radius 0.8s cubic-bezier(0.65, 0, 0.35, 1) var(--rd, 0s);
 }
@@ -512,6 +503,9 @@ body.menu-open .menu-dock button {
   aspect-ratio: 16 / 10;
   background: var(--placeholder) center / cover no-repeat;
 }
+/* Cap featured work cards at four-fifths of the viewport height on desktop
+   so a wide 16/10 tile never runs taller than the window. */
+.project-stack .tile { max-height: 80vh; }
 .tile .tile-img {
   position: absolute;
   inset: 0;
@@ -652,7 +646,7 @@ body.menu-open .menu-dock button {
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
   gap: clamp(32px, 5vw, 80px);
-  align-items: center;
+  align-items: stretch; /* photo and cream card share the same height */
 }
 
 .photo-ph {
@@ -663,6 +657,12 @@ body.menu-open .menu-dock button {
   place-items: center;
   position: relative;
   overflow: hidden;
+}
+/* home teaser photo: generously rounded square, height matched to the card */
+.about-teaser .photo-ph {
+  aspect-ratio: auto;
+  min-height: clamp(420px, 46vw, 660px);
+  border-radius: clamp(48px, 11vw, 170px);
 }
 .photo-ph img {
   width: 100%;
@@ -687,22 +687,28 @@ body.menu-open .menu-dock button {
   background: var(--cream);
   color: var(--ink);
   border-radius: var(--radius);
-  padding: clamp(30px, 4vw, 60px);
+  padding: clamp(30px, 4.4vw, 70px);
+  /* content vertically centered within the stretched card (Trust-style) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 .teaser-card h2 {
   font-family: var(--sans-display);
-  font-size: clamp(30px, 3.4vw, 48px);
+  font-weight: 600;
+  font-size: clamp(40px, 4.8vw, 76px);
   letter-spacing: -0.02em;
-  margin-bottom: 26px;
+  line-height: 1;
+  margin-bottom: clamp(22px, 2.4vw, 34px);
 }
 .teaser-card .body-copy {
-  font-size: 16px;
   color: rgba(30, 28, 25, 0.85);
 }
 .teaser-card .arrow-link {
   color: var(--ink);
   font-size: 20px;
-  margin-top: 30px;
+  margin-top: clamp(30px, 3vw, 44px);
 }
 
 /* ---------- marquee link ---------- */
