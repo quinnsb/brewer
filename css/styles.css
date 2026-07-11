@@ -1980,4 +1980,16 @@ html.home-intro .site-logo {
   .menu-btn { display: none; }
   .menu-bar { display: flex; }
   .menu-bar .menu-btn { display: block; }
+  /* hero: bigger type, shorter section so the first tile peeks in */
+  .hero {
+    min-height: 0;
+    height: calc(100svh - 205px);
+    padding-top: 110px;
+    padding-bottom: 18px;
+  }
+  .hero .h-display {
+    font-size: clamp(48px, 16.5vw, 72px);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+  }
 }
