@@ -212,19 +212,17 @@ body.home .hero {
   color: var(--cream);
 }
 
+/* brand mark: mainlogoicon.png used as a mask so it takes currentColor anywhere */
 .logo-squircle {
   width: 52px;
   height: 52px;
   flex: 0 0 auto;
-  display: grid;
-  place-items: center;
+  display: block;
+  background-color: currentColor;
+  -webkit-mask: url("../images/mainlogoicon.png") center / contain no-repeat;
+  mask: url("../images/mainlogoicon.png") center / contain no-repeat;
   color: var(--cream);
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-.logo-squircle svg {
-  width: 100%;
-  height: 100%;
-  display: block;
 }
 .site-logo:hover .logo-squircle { transform: rotate(-8deg) scale(1.05); }
 
@@ -289,9 +287,11 @@ body.menu-open .menu-btn { opacity: 0; transform: translateX(16px); pointer-even
   display: block;
   width: 36px;
   height: 36px;
+  background-color: currentColor;
+  -webkit-mask: url("../images/mainlogoicon.png") center / contain no-repeat;
+  mask: url("../images/mainlogoicon.png") center / contain no-repeat;
   color: var(--ink);
 }
-.menu-bar-logo svg { width: 100%; height: 100%; display: block; }
 .menu-bar .menu-btn {
   position: static;
   background: var(--ink);
