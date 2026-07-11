@@ -1166,7 +1166,7 @@ body.blog .site-footer { --footer-shift: 0px; }
 .socials a {
   width: clamp(48px, 4.6vw, 62px);
   aspect-ratio: 1;
-  border-radius: 28%;
+  border-radius: 50%;
   display: grid;
   place-items: center;
   text-decoration: none;
@@ -1183,7 +1183,7 @@ body.blog .site-footer { --footer-shift: 0px; }
   background: var(--lavender);
   color: var(--ink);
 }
-.socials .s-top svg { width: 38%; height: 38%; }
+.socials .s-top svg { width: 44%; height: 44%; }
 .socials .s-dribbble {
   background: var(--orange);
   color: var(--cream);
@@ -1196,7 +1196,7 @@ body.blog .site-footer { --footer-shift: 0px; }
   background: #3b66ff;
   color: var(--cream);
 }
-.socials .s-linkedin svg { width: 42%; height: 42%; }
+.socials .s-linkedin svg { width: 52%; height: 52%; }
 .footer-legal {
   min-height: clamp(92px, 9vw, 126px);
   display: grid;
@@ -1973,10 +1973,14 @@ html.home-intro .site-logo {
 @media (max-width: 620px) {
   .footer-panel { padding-top: 64px; }
   .footer-cta h2 { font-size: clamp(40px, 13vw, 58px); }
-  .footer-brand { flex-direction: column; align-items: flex-start; gap: 26px; margin-top: 90px; }
+  /* Trust-style mobile footer: centered CTA, socials row, wordmark last */
+  .footer-cta h2 { text-align: center; margin: 0 auto; }
+  .footer-cta .pill-btn { width: 100%; min-width: 0; margin: 0 auto; }
+  .footer-brand { flex-direction: column-reverse; align-items: center; gap: 64px; margin-top: 110px; }
   .giant-wordmark { font-size: clamp(88px, 31vw, 122px); }
-  .footer-side { width: 100%; align-items: flex-start; }
-  .socials a { width: 42px; }
+  .footer-side { width: 100%; align-items: center; }
+  .socials { flex-direction: row; justify-content: center; gap: 10px; width: 100%; }
+  .socials a { width: clamp(64px, 19.5vw, 84px); }
   .footer-legal { min-height: 112px; }
   .work-hero { min-height: 70vh; }
   .case-duo,
