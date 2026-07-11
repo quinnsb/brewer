@@ -236,7 +236,8 @@ body.home .hero {
 .logo-wordmark {
   font-family: var(--sans);
   font-weight: 500;
-  font-size: 30px;
+  font-size: 44px;
+  line-height: 1;
   letter-spacing: -0.01em;
   white-space: nowrap;
   opacity: 0;
@@ -421,9 +422,15 @@ body.menu-open .menu-dock button {
 
 .hero .h-display {
   max-width: none;
-  font-size: clamp(46px, 10.2vw, 220px);
-  line-height: 0.92;
+  font-size: clamp(48px, 11.2vw, 240px);
+  line-height: 0.96;
   letter-spacing: -0.035em;
+}
+
+/* Give animated letterforms room for descenders and wide terminals. */
+.hero .split .word {
+  padding: 0 0.035em 0.14em;
+  margin: 0 -0.035em -0.14em;
 }
 
 .hero {
@@ -1866,6 +1873,16 @@ body.blog .site-footer { --footer-shift: 0px; }
 .reveal.d2 { transition-delay: 0.2s; }
 .reveal.d3 { transition-delay: 0.3s; }
 
+/* The first project enters with the homepage identity, even below the fold. */
+body.home .project-stack .project-card:first-child {
+  opacity: 1;
+  transform: none;
+}
+html.home-intro body.home .project-stack .project-card:first-child {
+  opacity: 0;
+  transform: translateY(46px);
+}
+
 /* per-word split reveal */
 .split .word {
   display: inline-block;
@@ -1924,7 +1941,7 @@ html.home-intro .site-logo {
   .menu-dock a, .menu-dock button { height: 54px; padding: 0 22px; font-size: 19px; }
   .site-logo { top: 22px; left: 20px; }
   .logo-squircle { width: 44px; height: 44px; }
-  .logo-wordmark { font-size: 24px; }
+  .logo-wordmark { font-size: 36px; }
   .menu-btn { bottom: 20px; left: 20px; }
   .hero { min-height: 78vh; }
   .prev-next { grid-template-columns: 1fr 1fr; }
