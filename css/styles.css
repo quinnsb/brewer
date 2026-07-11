@@ -1258,97 +1258,20 @@ body.blog .site-footer { --footer-shift: 0px; }
   padding-top: 130px;
 }
 
+/* Trust-style mission statement: big sans copy spanning the full shell */
 .mission {
   font-family: var(--sans-display);
   font-weight: 500;
   font-size: clamp(30px, 4.4vw, 64px);
-  line-height: 1.08;
+  line-height: 1.14;
   letter-spacing: -0.015em;
-  max-width: 20ch;
 }
-.mission em {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 500;
-}
-
-.team-cards {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: clamp(20px, 2.6vw, 40px);
-  max-width: 560px;
-}
-.team-card {
-  border-radius: var(--radius);
-  padding: clamp(32px, 4vw, 56px);
-  color: var(--ink);
-}
-.team-card.orange { background: var(--orange); color: var(--cream); }
-.team-card.yellow { background: var(--yellow); }
-.team-card .portrait {
-  width: min(75%, 340px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  margin: 0 auto clamp(28px, 4vw, 52px);
-  background: linear-gradient(160deg, #58524a, #3b3833);
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
-.team-card .portrait img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
-  display: block;
-}
-.team-card .portrait span {
-  font-family: "Space Mono", monospace;
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(241, 236, 227, 0.4);
-}
-.team-card h3 { font-size: clamp(28px, 3vw, 42px); margin-bottom: 10px; }
-.team-card .role {
-  font-family: "Space Mono", monospace;
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  display: block;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  border-bottom: 1.5px solid currentColor;
-}
-.team-card p { font-family: var(--sans); font-size: 18px; }
 
 .about-photos {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(20px, 2.6vw, 40px);
   margin-top: clamp(40px, 5vw, 72px);
-}
-
-.accolades { margin-top: clamp(36px, 4vw, 60px); }
-.accolade {
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 24px;
-  align-items: baseline;
-  padding: 26px 0;
-  border-bottom: 1px solid rgba(241, 236, 227, 0.16);
-}
-.accolade:first-child { border-top: 1px solid rgba(241, 236, 227, 0.16); }
-.accolade .year {
-  font-family: "Space Mono", monospace;
-  font-size: 14px;
-  letter-spacing: 0.1em;
-  color: var(--cream-dim);
-}
-.accolade .what {
-  font-family: var(--sans);
-  font-weight: 500;
-  font-size: clamp(20px, 2.2vw, 30px);
 }
 
 /* ---------- contact page ---------- */
@@ -2038,7 +1961,6 @@ html.home-intro .site-logo {
   .contact-cards,
   .case-intro,
   .press-cards,
-  .team-cards,
   .about-photos,
   .footer-inner,
   .case-2up { grid-template-columns: 1fr; }
