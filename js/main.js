@@ -63,8 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  /* The homepage mark belongs to the opening frame, not the scrolled page. */
-  if (siteLogo && document.body.classList.contains("home")) {
+  /* Top-left mark fades out once you leave the opening frame */
+  if (siteLogo) {
     let logoTicking = false;
     const updateLogoVisibility = () => {
       siteLogo.classList.toggle("is-scrolled", window.scrollY >= 80);

@@ -96,7 +96,7 @@
   --logo-gutter: clamp(0px, 8vw, 130px);
   --page-edge: clamp(30px, 3.2vw, 62px);
   /* Desktop home content clears the fixed logo/menu rail. */
-  --home-rail: clamp(220px, 12.1vw, 242px);
+  --home-rail: clamp(11.5rem, 14vw, 15rem);
   --content-max: 1560px;
 }
 
@@ -147,7 +147,7 @@ p a:hover { opacity: 0.7; }
   padding-left: calc(var(--logo-gutter));
 }
 
-/* Homepage: content sits in a right-biased column with a milder left rail than Trust */
+/* Homepage: one content rail clears the fixed logo + menu — no overlap */
 body.home .main {
   padding-left: var(--home-rail);
   padding-right: 0;
@@ -159,8 +159,13 @@ body.home .shell {
   padding: 0 clamp(14px, 1.4vw, 22px) 0 0;
 }
 body.home .hero {
-  /* The headline shares the outer edge with the logo; cards use the safe rail. */
-  margin-left: calc(var(--page-edge) - var(--home-rail));
+  /* Same left edge as project cards / about / capabilities — not the logo */
+  margin-left: 0;
+}
+body.home .testimonial-section {
+  /* Already inside .main rail; keep flush to that column */
+  margin-left: 0;
+  width: 100%;
 }
 
 .section { margin: clamp(90px, 12vw, 190px) 0; }
@@ -212,6 +217,9 @@ body.home .hero {
   gap: 14px;
   text-decoration: none;
   color: var(--cream);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .site-logo.is-scrolled {
   opacity: 0;
@@ -314,7 +322,7 @@ body.menu-open .menu-bar,
   pointer-events: none;
 }
 
-/* menu dock — rounded-rectangle buttons, bottom-left */
+/* menu dock — rounded-rectangle buttons, bottom-left, touching on desktop */
 .menu-dock {
   position: fixed;
   left: 0;
@@ -324,11 +332,17 @@ body.menu-open .menu-bar,
   display: flex;
   align-items: flex-end; /* bottom-justify, so the Menu-sized Close sits on the baseline */
   gap: 0;
+  column-gap: 0;
   max-width: 100%;
   transform: translateY(130%);
   transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 body.menu-open .menu-dock { transform: translateY(0); }
+
+/* Open menu sits on the content rail so pills clear the logo column (Trust-style) */
+body.home .menu-dock {
+  padding-left: var(--home-rail);
+}
 
 .menu-dock a,
 .menu-dock button {
@@ -337,6 +351,7 @@ body.menu-open .menu-dock { transform: translateY(0); }
   flex: 0 0 auto;
   display: grid;
   place-items: center;
+  margin: 0;
   background: var(--cream);
   color: var(--ink);
   border: 0;
@@ -1901,12 +1916,10 @@ html.home-intro body.home .project-stack .project-card:first-child {
 
 /* ---------- homepage load-in orchestration ---------- */
 /* logo drops in from the top, after the hero text finishes */
-.site-logo {
-  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
 html.home-intro .site-logo {
   opacity: 0;
   transform: translateY(-38px);
+  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
