@@ -258,12 +258,13 @@ body.home .hero {
   font-family: var(--sans);
   font-weight: 500;
   font-size: 17px;
-  padding: 16px 30px;
-  border-radius: 999px;
+  padding: 16px 28px;
+  border-radius: 0.6em; /* rounded rect, matches the dock buttons */
   transition: transform 0.25s, opacity 0.3s;
 }
 .menu-btn:hover { transform: scale(1.06); }
-body.menu-open .menu-btn { opacity: 0; pointer-events: none; }
+/* on open: drift right as the dock sweeps in behind, handing off to Close */
+body.menu-open .menu-btn { opacity: 0; transform: translateX(16px); pointer-events: none; }
 .menu-btn.near-footer {
   opacity: 0;
   pointer-events: none;
@@ -297,6 +298,7 @@ body.menu-open .menu-btn { opacity: 0; pointer-events: none; }
   color: var(--cream);
   font-size: 16px;
   padding: 13px 28px;
+  border-radius: 999px; /* stays a full pill inside the bar */
 }
 body.menu-open .menu-bar,
 .menu-bar.near-footer {
@@ -304,16 +306,16 @@ body.menu-open .menu-bar,
   pointer-events: none;
 }
 
-/* menu dock — rounded-rectangle buttons that touch, bottom-left */
+/* menu dock — rounded-rectangle buttons, bottom-left */
 .menu-dock {
   position: fixed;
   left: 0;
   bottom: 0;
   z-index: 90;
-  padding: 26px clamp(20px, 4vw, 34px);
+  padding: 34px var(--page-edge); /* matches .menu-btn's bottom/left so Close lands where Menu was */
   display: flex;
-  align-items: flex-end; /* bottom-justify, so the half-size Close sits on the baseline */
-  gap: 0; /* buttons touch */
+  align-items: flex-end; /* bottom-justify, so the Menu-sized Close sits on the baseline */
+  gap: clamp(10px, 0.9vw, 15px);
   max-width: 100%;
   transform: translateY(130%);
   transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
@@ -334,10 +336,10 @@ body.menu-open .menu-dock { transform: translateY(0); }
   text-decoration: none;
   font-family: var(--sans);
   font-weight: 500;
-  font-size: clamp(20px, 1.8vw, 28px);
+  font-size: clamp(24px, 2.3vw, 38px);
   letter-spacing: -0.01em;
-  height: clamp(60px, 5.2vw, 74px);
-  padding: 0 clamp(26px, 2.4vw, 40px);
+  height: clamp(70px, 6.6vw, 98px);
+  padding: 0 clamp(30px, 3vw, 56px);
   border-radius: 0.7em; /* rounded rectangle, not a pill */
   /* intro: blurred, nudged left — clears left-to-right on open */
   opacity: 0;
@@ -380,11 +382,11 @@ body.menu-open .menu-dock { transform: translateY(0); }
 .menu-dock a:nth-child(4) { background: var(--green); color: var(--cream); }
 .menu-dock .menu-close { background: var(--cream); color: var(--ink); }
 
-/* Close: half the size of the others, bottom-aligned via the dock's flex-end */
+/* Close: twin of the Menu pill, bottom-aligned via the dock's flex-end */
 .menu-dock .menu-close {
-  height: clamp(30px, 2.6vw, 37px);
-  padding: 0 clamp(14px, 1.4vw, 22px);
-  font-size: clamp(13px, 1.05vw, 15px);
+  height: auto;
+  padding: 16px 28px;
+  font-size: 17px;
   border-radius: 0.6em;
 }
 
