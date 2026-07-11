@@ -2,12 +2,15 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   /* ----- menu dock ----- */
-  const menuBtn = document.querySelector(".menu-btn");
+  const menuTriggers = [...document.querySelectorAll(".menu-btn")];
+  const menuBar = document.querySelector(".menu-bar");
   const dock = document.querySelector(".menu-dock");
-  if (menuBtn && dock) {
+  if (menuTriggers.length && dock) {
     const items = dock.querySelectorAll("a, button");
     items.forEach((el, i) => el.style.setProperty("--d", `${0.05 + i * 0.05}s`));
-    menuBtn.addEventListener("click", () => document.body.classList.add("menu-open"));
+    menuTriggers.forEach((btn) =>
+      btn.addEventListener("click", () => document.body.classList.add("menu-open"))
+    );
     dock.querySelector(".menu-close")?.addEventListener("click", () =>
       document.body.classList.remove("menu-open")
     );
@@ -15,14 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.key === "Escape") document.body.classList.remove("menu-open");
     });
 
-    /* hide menu pill near footer */
+    /* hide menu chrome near footer */
     const footer = document.querySelector(".site-footer");
     if (footer) {
+      const chrome = menuBar ? [...menuTriggers, menuBar] : menuTriggers;
       let footerTicking = false;
       const updateMenuVisibility = () => {
         const footerTop = footer.getBoundingClientRect().top;
         const threshold = window.innerHeight - 120;
-        menuBtn.classList.toggle("near-footer", footerTop <= threshold);
+        chrome.forEach((el) => el.classList.toggle("near-footer", footerTop <= threshold));
       };
       updateMenuVisibility();
       window.addEventListener(
