@@ -7,15 +7,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const dock = document.querySelector(".menu-dock");
   if (menuTriggers.length && dock) {
     const items = dock.querySelectorAll("a, button");
-    items.forEach((el, i) => el.style.setProperty("--d", `${0.05 + i * 0.05}s`));
-    menuTriggers.forEach((btn) =>
-      btn.addEventListener("click", () => document.body.classList.add("menu-open"))
-    );
-    dock.querySelector(".menu-close")?.addEventListener("click", () =>
-      document.body.classList.remove("menu-open")
-    );
+    items.forEach((el, i) => {
+      el.style.setProperty("--d", `${0.05 + i * 0.05}s`);
+      /* reverse stagger for the close sweep: last pill in, first pill out */
+      el.style.setProperty("--dout", `${(items.length - 1 - i) * 0.05}s`);
+    });
+    let closeTimer;
+    const openMenu = () => {
+      clearTimeout(closeTimer);
+      document.body.classList.remove("menu-closing");
+      document.body.classList.add("menu-open");
+    };
+    const closeMenu = () => {
+      if (!document.body.classList.contains("menu-open")) return;
+      document.body.classList.remove("menu-open");
+      /* keep the dock in place while the pills sweep back out, then drop it */
+      document.body.classList.add("menu-closing");
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(() => document.body.classList.remove("menu-closing"), 700);
+    };
+    menuTriggers.forEach((btn) => btn.addEventListener("click", openMenu));
+    dock.querySelector(".menu-close")?.addEventListener("click", closeMenu);
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") document.body.classList.remove("menu-open");
+      if (e.key === "Escape") closeMenu();
     });
 
     /* hide menu chrome near footer */
