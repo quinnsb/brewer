@@ -245,7 +245,8 @@ body.home .testimonial-section {
 .logo-wordmark {
   font-family: var(--sans);
   font-weight: 500;
-  font-size: 44px;
+  /* sized so cap height ≈ 2/3 of the squircle, per brand lockup */
+  font-size: 50px;
   line-height: 1;
   letter-spacing: -0.01em;
   white-space: nowrap;
@@ -1175,14 +1176,11 @@ body.blog .site-footer { --footer-shift: 0px; }
   max-width: var(--content-max);
   margin: clamp(76px, 10vw, 158px) auto 0;
 }
+/* script "Brewer" wordmark image (images/brewer-script.png, 1326x488) */
 .giant-wordmark {
-  font-family: var(--sans-display);
-  font-weight: 600;
-  font-size: clamp(110px, 24vw, 390px);
-  line-height: 0.7;
-  letter-spacing: 0;
-  color: var(--cream);
-  white-space: nowrap;
+  display: block;
+  width: clamp(330px, 68vw, 1100px);
+  height: auto;
 }
 .footer-side {
   display: flex;
@@ -1954,7 +1952,7 @@ html.home-intro .site-logo {
   .tile-caption { min-height: 88px; padding: 14px 20px; }
   .tile-caption p { display: none; }
   .tile-caption h3 { font-size: clamp(22px, 7vw, 30px); margin-bottom: 0; }
-  .giant-wordmark { font-size: clamp(64px, 21vw, 120px); white-space: normal; }
+  .giant-wordmark { width: clamp(200px, 63vw, 380px); }
   .about-teaser,
   .about-hero,
   .contact-hero,
@@ -1969,7 +1967,7 @@ html.home-intro .site-logo {
   .menu-dock a, .menu-dock button { height: 54px; padding: 0 22px; font-size: 19px; }
   .site-logo { top: 22px; left: 20px; }
   .logo-squircle { width: 44px; height: 44px; }
-  .logo-wordmark { font-size: 36px; }
+  .logo-wordmark { font-size: 42px; }
   .menu-btn { bottom: 20px; left: 20px; }
   .hero { min-height: 78vh; }
   .prev-next { grid-template-columns: 1fr 1fr; }
@@ -1992,7 +1990,7 @@ html.home-intro .site-logo {
   .footer-cta h2 { text-align: center; margin: 0 auto; }
   .footer-cta .pill-btn { width: 100%; min-width: 0; margin: 0 auto; }
   .footer-brand { flex-direction: column-reverse; align-items: center; gap: 64px; margin-top: 110px; }
-  .giant-wordmark { font-size: clamp(88px, 31vw, 122px); }
+  .giant-wordmark { width: min(88vw, 400px); }
   .footer-side { width: 100%; align-items: center; }
   .socials { flex-direction: row; justify-content: center; gap: 10px; width: 100%; }
   .socials a { width: clamp(64px, 19.5vw, 84px); }
