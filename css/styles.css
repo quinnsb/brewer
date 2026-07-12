@@ -95,6 +95,9 @@
   --gutter: clamp(20px, 4vw, 48px);
   --logo-gutter: clamp(0px, 8vw, 130px);
   --page-edge: clamp(30px, 3.2vw, 62px);
+  /* Minimum left inset that keeps content clear of the fixed bottom-left
+     menu pill (page-edge + pill width + gap) while that pill is visible. */
+  --rail-safe: 120px;
   /* Desktop home content clears the fixed logo/menu rail. */
   --home-rail: clamp(11.5rem, 14vw, 15rem);
   --content-max: 1560px;
@@ -144,7 +147,8 @@ p a:hover { opacity: 0.7; }
 }
 
 .main {
-  padding-left: calc(var(--logo-gutter));
+  /* never let content slide under the fixed bottom-left menu pill */
+  padding-left: max(var(--logo-gutter), var(--rail-safe));
 }
 
 /* Homepage: one content rail clears the fixed logo + menu — no overlap */
@@ -245,8 +249,9 @@ body.home .testimonial-section {
 .logo-wordmark {
   font-family: var(--sans);
   font-weight: 500;
-  /* sized so cap height ≈ 2/3 of the squircle, per brand lockup */
-  font-size: 50px;
+  /* per brand lockup: wordmark caps stand as tall as the b icon
+     (Degular cap height ≈ 0.61em → 76px caps ≈ the 52px squircle) */
+  font-size: 76px;
   line-height: 1;
   letter-spacing: -0.01em;
   white-space: nowrap;
@@ -535,24 +540,25 @@ body.menu-closing .menu-dock button {
 }
 .project-card:hover .tile .tile-img { transform: scale(1.02); }
 
-/* cream caption card — hidden by default, floats up inset on hover */
+/* cream caption bar — full-width, flush to the tile's bottom edge; slides up on
+   hover. Rounded top corners reveal the image behind; bottom corners match the
+   tile so the bar tucks cleanly into the card. */
 .tile-caption {
   position: absolute;
-  left: clamp(18px, 1.8vw, 34px);
-  right: clamp(18px, 1.8vw, 34px);
-  bottom: clamp(18px, 1.8vw, 34px);
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: var(--cream);
   color: var(--ink);
-  border-radius: clamp(18px, 1.5vw, 24px);
-  min-height: clamp(118px, 8.2vw, 160px);
-  padding: clamp(24px, 2.1vw, 42px) clamp(26px, 2.7vw, 52px);
+  border-radius: clamp(22px, 2vw, 30px) clamp(22px, 2vw, 30px) var(--radius) var(--radius);
+  padding: clamp(24px, 2.1vw, 42px) clamp(28px, 3vw, 56px);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: clamp(24px, 3vw, 54px);
   text-align: left;
   opacity: 0;
-  transform: translateY(calc(100% + clamp(18px, 1.8vw, 34px)));
+  transform: translateY(100%);
   transition:
     transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.4s ease;
@@ -1584,10 +1590,10 @@ body.blog .site-footer { --footer-shift: 0px; }
 .case-study.atlas { --case-accent: #ea73de; }
 .case-study.ridgeline { --case-accent: #9b4934; }
 
-/* work index heading */
-.work-intro {
-  padding-top: clamp(150px, 22vh, 230px);
-  margin-bottom: clamp(44px, 6vw, 90px);
+/* work index: no heading — the grid starts at the top, clearing the fixed
+   logo mark so the first card sits top-justified with it. */
+.work-grid {
+  padding-top: clamp(112px, 14vh, 156px);
 }
 
 .work-hero {
@@ -1943,8 +1949,10 @@ html.home-intro .site-logo {
 /* ---------- responsive ---------- */
 
 @media (max-width: 900px) {
-  .main { padding-left: 0; }
-  body.home .main { padding-left: 0; }
+  /* keep the left rail reserved so the floating menu pill never overlaps
+     the featured cards or content (the pill is still shown down to 620px) */
+  .main { padding-left: var(--rail-safe); }
+  body.home .main { padding-left: var(--rail-safe); }
   body.home .shell { padding: 0 var(--gutter); }
   body.home .hero { margin-left: 0; }
   .hero, .footer-brand { margin-left: 0; }
@@ -1967,7 +1975,7 @@ html.home-intro .site-logo {
   .menu-dock a, .menu-dock button { height: 54px; padding: 0 22px; font-size: 19px; }
   .site-logo { top: 22px; left: 20px; }
   .logo-squircle { width: 44px; height: 44px; }
-  .logo-wordmark { font-size: 42px; }
+  .logo-wordmark { font-size: 65px; }
   .menu-btn { bottom: 20px; left: 20px; }
   .hero { min-height: 78vh; }
   .prev-next { grid-template-columns: 1fr 1fr; }
@@ -1984,6 +1992,9 @@ html.home-intro .site-logo {
 }
 
 @media (max-width: 620px) {
+  /* floating menu pill is replaced by the bottom bar here — reclaim the
+     left rail so content goes full-width again */
+  .main, body.home .main { padding-left: 0; }
   .footer-panel { padding-top: 64px; }
   .footer-cta h2 { font-size: clamp(40px, 13vw, 58px); }
   /* Trust-style mobile footer: centered CTA, socials row, wordmark last */

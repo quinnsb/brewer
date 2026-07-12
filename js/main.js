@@ -102,9 +102,22 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".split").forEach((el) => {
     // hero headline rises in slowly (~2s); other headlines stagger faster
     const step = el.classList.contains("h-display") ? 0.14 : 0.055;
-    const words = el.textContent.trim().split(/\s+/);
+    // collect words, preserving explicit <br> line breaks as tokens
+    const tokens = [];
+    el.childNodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.textContent.trim().split(/\s+/).filter(Boolean).forEach((w) => tokens.push(w));
+      } else if (node.nodeName === "BR") {
+        tokens.push("<br>");
+      }
+    });
     el.textContent = "";
-    words.forEach((w, i) => {
+    let i = 0;
+    tokens.forEach((w) => {
+      if (w === "<br>") {
+        el.appendChild(document.createElement("br"));
+        return;
+      }
       const outer = document.createElement("span");
       outer.className = "word";
       const inner = document.createElement("span");
@@ -113,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       outer.appendChild(inner);
       el.appendChild(outer);
       el.appendChild(document.createTextNode(" "));
+      i += 1;
     });
   });
 
