@@ -164,6 +164,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* ----- case-study browser prototype ----- */
+  document.querySelectorAll("[data-site-window]").forEach((windowEl) => {
+    const buttons = windowEl.querySelectorAll("[data-browser-view]");
+    const screens = windowEl.querySelectorAll("[data-browser-screen]");
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const view = button.dataset.browserView;
+        buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+        screens.forEach((screen) => screen.classList.toggle("is-active", screen.dataset.browserScreen === view));
+      });
+    });
+  });
+
   /* ----- multi-step contact form: final step opens a pre-filled email ----- */
   const form = document.querySelector(".form-card form");
   if (form) {
