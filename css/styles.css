@@ -213,7 +213,7 @@ body.home .testimonial-section {
 /* ---------- fixed chrome: logo + menu ---------- */
 
 .site-logo {
-  --logo-height: 52px;
+  --logo-height: 44px;
   position: fixed;
   top: 34px;
   left: var(--page-edge);
@@ -452,7 +452,7 @@ body.menu-closing .menu-dock button {
 .hero .h-display {
   max-width: none;
   font-size: clamp(48px, 11.2vw, 240px);
-  line-height: 0.96;
+  line-height: 0.91;
   letter-spacing: -0.035em;
 }
 
