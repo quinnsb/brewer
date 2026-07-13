@@ -177,6 +177,131 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* ===== M&S mini-site replica interactions (case-study home screen) ===== */
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* rotating hero word: type-on / delete like the production site */
+  const rotateTarget = document.querySelector("[data-rotate-word]");
+  if (rotateTarget && !prefersReduced) {
+    const words = ["technology", "people", "AI", "process"];
+    let wi = 0;
+    let count = words[0].length;
+    let deleting = false;
+    const step = () => {
+      const word = words[wi];
+      const full = count === word.length;
+      const empty = count === 0;
+      let delay = deleting ? 55 : 85;
+      if (!deleting && full) {
+        deleting = true;
+        delay = 1450;
+      } else if (deleting && empty) {
+        deleting = false;
+        wi = (wi + 1) % words.length;
+        delay = 85;
+      } else {
+        count += deleting ? -1 : 1;
+      }
+      rotateTarget.textContent = words[wi].slice(0, count);
+      window.setTimeout(step, delay);
+    };
+    window.setTimeout(step, 1450);
+  }
+
+  /* "Three ways to engage" tabbed rail */
+  const engage = document.querySelector("[data-engage]");
+  if (engage) {
+    const PHASES = [
+      {
+        title: "Advisory",
+        desc: "We assess where you are, identify the right path forward, and deliver a strategy that works, grounded in decades of delivery experience across government and enterprise.",
+        bullets: ["Technology roadmaps", "Architecture review", "Program assessment", "Culture of excellence"],
+      },
+      {
+        title: "Implementation",
+        desc: "We embed alongside your team and execute. From enterprise system rollouts to cloud migrations, our consultants are hands-on from kickoff to go-live.",
+        bullets: ["Execution and delivery", "Programs and projects", "Full-stack integration", "Outcome accountability"],
+      },
+      {
+        title: "Managed Services",
+        desc: "After launch, we stay to run it. Our managed services practice provides continuous operations, optimization, and support, so your team can focus on the mission.",
+        bullets: ["Continuous operations", "Service desk support", "Platform optimization", "SLA-backed delivery"],
+      },
+    ];
+    const tabs = engage.querySelectorAll("[data-engage-tab]");
+    const panel = engage.querySelector(".msr-engage-panel");
+    const ghost = engage.querySelector("[data-engage-ghost]");
+    const kicker = engage.querySelector("[data-engage-kicker]");
+    const desc = engage.querySelector("[data-engage-desc]");
+    const bullets = engage.querySelector("[data-engage-bullets]");
+    const render = (i) => {
+      const p = PHASES[i];
+      const n = `0${i + 1}`;
+      ghost.textContent = n;
+      kicker.textContent = `${n} / ${p.title.toUpperCase()}`;
+      desc.textContent = p.desc;
+      bullets.innerHTML = p.bullets.map((b) => `<li>${b}</li>`).join("");
+    };
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const i = Number(tab.dataset.engageTab);
+        if (tab.classList.contains("is-active")) return;
+        tabs.forEach((t) => t.classList.toggle("is-active", t === tab));
+        panel.style.opacity = "0";
+        window.setTimeout(() => {
+          render(i);
+          panel.style.opacity = "1";
+        }, 160);
+      });
+    });
+  }
+
+  /* testimonial carousel with autoplay + progress bar */
+  const quotes = document.querySelector("[data-quotes]");
+  if (quotes) {
+    const cards = [...quotes.querySelectorAll("blockquote")];
+    const progress = quotes.querySelector("[data-quote-progress]");
+    const AUTOPLAY = 7000;
+    let active = 0;
+    let timer;
+    const restartProgress = () => {
+      if (!progress) return;
+      progress.classList.remove("is-running");
+      // force reflow so the width transition replays
+      void progress.offsetWidth;
+      if (!prefersReduced) progress.classList.add("is-running");
+    };
+    const goTo = (idx) => {
+      const next = (idx + cards.length) % cards.length;
+      if (next === active) return;
+      const prev = cards[active];
+      prev.classList.remove("is-active");
+      prev.classList.add("is-exiting");
+      window.setTimeout(() => prev.classList.remove("is-exiting"), 700);
+      cards[next].classList.add("is-active");
+      active = next;
+      restartProgress();
+    };
+    const schedule = () => {
+      window.clearTimeout(timer);
+      if (prefersReduced) return;
+      timer = window.setTimeout(() => {
+        goTo(active + 1);
+        schedule();
+      }, AUTOPLAY);
+    };
+    quotes.querySelector("[data-quote-next]")?.addEventListener("click", () => {
+      goTo(active + 1);
+      schedule();
+    });
+    quotes.querySelector("[data-quote-prev]")?.addEventListener("click", () => {
+      goTo(active - 1);
+      schedule();
+    });
+    restartProgress();
+    schedule();
+  }
+
   /* ----- multi-step contact form: final step opens a pre-filled email ----- */
   const form = document.querySelector(".form-card form");
   if (form) {
