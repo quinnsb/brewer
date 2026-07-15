@@ -228,6 +228,15 @@ body.home .testimonial-section {
     opacity 0.45s ease,
     transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
+/* case-study pages get a larger mark, sized to overlay the full-bleed hero,
+   and it stays pinned top-left instead of fading out on scroll */
+.case-page .site-logo { --logo-height: clamp(64px, 6.5vw, 118px); }
+.case-page .site-logo.is-scrolled {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
 .site-logo.is-scrolled {
   opacity: 0;
   transform: translateY(-24px);
@@ -1615,6 +1624,48 @@ body.blog .site-footer { --footer-shift: 0px; }
   position: relative;
 }
 .case-hero .tile { aspect-ratio: 16 / 9; }
+
+/* full-bleed case-study heroes: these sections sit outside .main, directly
+   on <body>, so they span the viewport with the fixed logo overlaid */
+body > .case-hero,
+body > .work-hero,
+body > .ms-project-cover {
+  margin-top: 0;
+  height: calc(100svh * 5 / 6);
+  min-height: 420px;
+  border-radius: 0;
+}
+body > .case-hero .tile {
+  aspect-ratio: auto;
+  height: 100%;
+  border-radius: 0;
+  display: grid;
+  place-items: center;
+}
+body > .case-hero .ghost {
+  font-family: var(--sans-display);
+  font-weight: 500;
+  font-size: clamp(40px, 6vw, 96px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  opacity: 0.18;
+  text-align: center;
+  padding: 0 6vw;
+}
+body > .case-hero .ph-tag,
+body > .ms-project-cover .ph-tag {
+  position: absolute;
+  right: 26px;
+  top: 28px;
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+body > .case-hero .badge { bottom: clamp(20px, 4vw, 60px); }
+body > .ms-project-cover { aspect-ratio: auto; }
+.case-page .case-study { padding-top: 0; }
 .case-hero .badge {
   position: absolute;
   right: clamp(20px, 4vw, 60px);

@@ -10,24 +10,20 @@
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="../css/ccn-case.css" />
 </head>
-<body class="ccn-page">
+<body class="case-page ccn-page">
   <a class="site-logo" href="../index.html" aria-label="Brewer home"><span class="logo-squircle"></span><span class="logo-wordmark">Quinn Brewer</span></a>
   <button class="menu-btn" aria-label="Open menu">Menu</button>
   <div class="menu-bar"><a class="menu-bar-logo" href="../index.html" aria-label="Brewer home"></a><button class="menu-btn" aria-label="Open menu">Menu</button></div>
   <nav class="menu-dock" aria-label="Main menu"><a href="../about.html">About Me</a><a href="../work.html">Work</a><a href="../contact.html">Let's Talk</a><a href="../blog.html">Blog</a><button class="menu-close">Close</button></nav>
 
+  <div class="ccn-hero-media reveal">
+    <img src="../images/ahmed-q_5LnpFAWXo-unsplash.jpg" alt="Students gathered together outside on a sunny day" />
+    <span class="ccn-frame-number">01</span>
+  </div>
+
   <main class="main">
     <article class="shell ccn-case">
-      <header class="ccn-hero">
-        <div class="ccn-placeholder ccn-hero-media reveal" role="img" aria-label="Placeholder for Collegiate Church Network hero photography">
-          <span class="ccn-placeholder-label">Hero photography / network in motion</span>
-          <span class="ccn-frame-number">01</span>
-        </div>
-        <div class="ccn-title-wrap" aria-label="Collegiate Church Network">
-          <h1 class="ccn-title reveal">COLLEGIATE</h1>
-          <div class="ccn-title-foot reveal d1"><span>Church Network</span><span>Marketing direction · 2022—present</span></div>
-        </div>
-      </header>
+      <h1 class="visually-hidden">Collegiate Church Network</h1>
 
       <section class="ccn-intro">
         <div class="ccn-lede reveal">
@@ -98,10 +94,12 @@
           <div class="reveal d1"><p>A static PDF felt like a missed opportunity. I researched nonprofit reporting practices, defined what success should look like, collected the data, selected the photography, helped shape the copy, and designed the full experience.</p><p>I then built and shipped the site myself with AI-assisted development, GitHub, and Vercel. It was my first end-to-end web build—and a more compelling way for supporters to understand the scale and humanity of the network.</p></div>
         </div>
 
-        <a class="ccn-browser reveal" href="https://collegiate.report/" target="_blank" rel="noopener" aria-label="Open the 2025 Collegiate Church Network annual report">
-          <div class="ccn-browser-bar"><i></i><i></i><i></i><span>collegiate.report</span><b>↗</b></div>
-          <div class="ccn-placeholder ccn-browser-screen"><span class="ccn-placeholder-label">Live annual report / responsive scroll capture</span><span class="ccn-report-year">2025</span></div>
-        </a>
+        <div class="ccn-browser reveal">
+          <div class="ccn-browser-bar"><i></i><i></i><i></i><span>collegiate.report</span><a href="https://collegiate.report/" target="_blank" rel="noopener" aria-label="Open the live annual report in a new tab">↗</a></div>
+          <div class="ccn-browser-screen">
+            <iframe src="https://collegiate.report/" title="The 2025 Collegiate Church Network annual report" loading="lazy"></iframe>
+          </div>
+        </div>
 
         <div class="ccn-three-up">
           <div class="ccn-placeholder reveal" role="img" aria-label="Placeholder for annual report storytelling section"><span class="ccn-placeholder-label">Story-led section</span></div>
@@ -117,7 +115,9 @@
           <div class="reveal d1"><p>Leadership Training is one of the network’s central student programs. I developed print materials for students and parents, supported its donor-development story, and created a promotional film from the ground up.</p><p>I traveled to Colorado, assembled the gear, filmed the program, and handled the edit and delivery. The finished piece gave staff and students a vivid way to share an experience that is difficult to explain in a brochure alone.</p></div>
         </div>
 
-        <div class="ccn-placeholder ccn-video reveal" role="img" aria-label="Placeholder for Leadership Training promotional film"><span class="ccn-placeholder-label">Leadership Training promotional film</span><button type="button" tabindex="-1" aria-hidden="true">Play film <span>▶</span></button></div>
+        <div class="ccn-video reveal">
+          <iframe src="https://www.youtube-nocookie.com/embed/HH8qMai1Lfg?rel=0&amp;cc_load_policy=0&amp;modestbranding=1&amp;playsinline=1" title="What If You Said Yes? — Leadership Training promotional film" loading="lazy" allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="ccn-asym-grid ccn-lt-grid">
           <div class="ccn-placeholder ccn-landscape reveal" role="img" aria-label="Placeholder for Leadership Training brochure spread"><span class="ccn-placeholder-label">Student + parent brochure</span></div>
           <div class="ccn-placeholder ccn-portrait reveal d1" role="img" aria-label="Placeholder for a production still from Colorado"><span class="ccn-placeholder-label">Colorado production still</span></div>
@@ -174,6 +174,6 @@
       </footer>
     </article>
   </main>
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js?v=2"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 .ccn-page {
-  --ccn-bg: #170b09;
+  --ccn-bg: #1f7d31;
   --ccn-paper: #eee9dc;
   --ccn-ink: #1c100d;
   --ccn-mid: #777873;
@@ -12,23 +12,35 @@
 .ccn-page .menu-dock { background: var(--ccn-bg); }
 
 .ccn-case {
-  padding-top: clamp(96px, 9vw, 138px);
+  padding-top: 0;
   max-width: 1640px;
 }
 
+/* full-bleed hero: lives outside .main so it spans the whole viewport */
 .ccn-hero-media {
-  min-height: clamp(460px, 53vw, 840px);
-  clip-path: polygon(8% 0, 100% 0, 100% 86%, 93% 100%, 0 100%, 0 11%);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: calc(100svh * 5 / 6);
+  min-height: 420px;
+}
+.ccn-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .ccn-title-wrap { margin-top: clamp(18px, 2.3vw, 36px); }
-.ccn-title {
-  font: 500 clamp(64px, 10.9vw, 174px)/.72 var(--sans-display);
-  letter-spacing: -.055em;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   white-space: nowrap;
 }
 .ccn-title-foot {
-  margin-top: clamp(23px, 2.6vw, 40px);
+  margin-top: 0;
   display: flex;
   justify-content: space-between;
   gap: 24px;
@@ -195,22 +207,22 @@
 .ccn-episode { min-height: 0; aspect-ratio: 6 / 5; display: grid; place-items: center; background: #a8aaa5; }
 .ccn-wave { width: 72%; height: 34%; background: repeating-linear-gradient(90deg, rgba(23,11,9,.55) 0 3px, transparent 3px 11px); clip-path: polygon(0 44%,4% 45%,4% 28%,8% 28%,8% 61%,12% 61%,12% 39%,16% 39%,16% 10%,20% 10%,20% 69%,24% 69%,24% 27%,28% 27%,28% 82%,32% 82%,32% 46%,36% 46%,36% 18%,40% 18%,40% 64%,44% 64%,44% 34%,48% 34%,48% 73%,52% 73%,52% 22%,56% 22%,56% 57%,60% 57%,60% 7%,64% 7%,64% 78%,68% 78%,68% 29%,72% 29%,72% 64%,76% 64%,76% 40%,80% 40%,80% 20%,84% 20%,84% 70%,88% 70%,88% 38%,92% 38%,92% 57%,96% 57%,96% 43%,100% 43%,100% 100%,0 100%); }
 
-.ccn-browser { display: block; overflow: hidden; color: var(--ccn-ink); text-decoration: none; background: #d9d7cf; box-shadow: 0 24px 80px rgba(0,0,0,.2); }
+.ccn-browser { display: block; overflow: hidden; color: var(--ccn-ink); text-decoration: none; background: #d9d7cf; box-shadow: 0 24px 80px rgba(0,0,0,.2); border-radius: 10px; }
 .ccn-browser-bar { height: 44px; display: flex; align-items: center; gap: 7px; padding: 0 15px; background: #e5e2da; }
 .ccn-browser-bar i { width: 9px; height: 9px; border-radius: 50%; background: #96958f; }
 .ccn-browser-bar span { margin: 0 auto; padding: 4px 13px; min-width: min(45%, 340px); text-align: center; border-radius: 4px; background: #f0eee8; font: 10px var(--sans); color: #77756f; }
-.ccn-browser-bar b { font: 15px var(--sans); }
-.ccn-browser-screen { min-height: clamp(560px, 68vw, 980px); display: grid; place-items: center; background: #7d7f7b; }
-.ccn-report-year { font: 500 clamp(150px, 27vw, 420px)/.7 var(--sans-display); letter-spacing: -.07em; color: rgba(238,233,220,.72); }
+.ccn-browser-bar a { margin-left: auto; font: 15px var(--sans); text-decoration: none; color: #77756f; }
+.ccn-browser-bar a:hover { color: var(--ccn-ink); }
+.ccn-browser-screen { height: clamp(560px, 68vw, 980px); background: #fff; }
+.ccn-browser-screen iframe { width: 100%; height: 100%; border: 0; display: block; }
 .ccn-three-up { display: grid; grid-template-columns: 1.2fr .9fr .68fr; gap: 10px; margin-top: 10px; }
 .ccn-three-up > * { min-height: clamp(350px, 39vw, 600px); }
 .ccn-three-up > :nth-child(1) { background: #aaa9a2; }
 .ccn-three-up > :nth-child(2) { background: #60615e; }
 .ccn-three-up > :nth-child(3) { background: #8d8e89; }
 
-.ccn-video { min-height: clamp(520px, 57vw, 860px); display: grid; place-items: center; background: #555653; }
-.ccn-video button { position: relative; z-index: 2; display: flex; align-items: center; gap: 13px; border: 1px solid rgba(255,255,255,.5); border-radius: 999px; padding: 12px 18px; background: transparent; color: #fff; font: 500 14px var(--sans); }
-.ccn-video button span { font-size: 11px; }
+.ccn-video { overflow: hidden; width: 100%; background: #000; aspect-ratio: 16 / 9; }
+.ccn-video iframe { width: 100%; height: 100%; border: 0; display: block; }
 .ccn-lt-grid { grid-template-columns: 1.35fr .65fr; }
 .ccn-landscape { min-height: clamp(470px, 57vw, 850px); background: #a6a7a2; }
 .ccn-lt-grid .ccn-portrait { min-height: clamp(470px, 57vw, 850px); background: #72736f; }
@@ -253,7 +265,6 @@
 .ccn-case .site-footer { --footer-shift: clamp(0px, 4.35vw, 72px); }
 
 @media (max-width: 1000px) {
-  .ccn-title { font-size: clamp(58px, 10.5vw, 106px); }
   .ccn-intro,
   .ccn-copy-row { gap: 55px; }
   .ccn-paper-board > div { align-items: flex-start; flex-direction: column; }
@@ -272,9 +283,7 @@
 }
 
 @media (max-width: 620px) {
-  .ccn-case { padding-top: 82px; }
-  .ccn-hero-media { min-height: 61vh; clip-path: polygon(12% 0,100% 0,100% 89%,88% 100%,0 100%,0 8%); }
-  .ccn-title { font-size: clamp(44px, 15.2vw, 94px); letter-spacing: -.06em; }
+  .ccn-case { padding-top: 0; }
   .ccn-title-foot { align-items: flex-start; flex-direction: column; gap: 7px; }
   .ccn-intro { margin-top: 74px; }
   .ccn-lede h2,
@@ -302,7 +311,6 @@
   .ccn-podcast-mark { width: 88px; border-radius: 22px; }
   .ccn-three-up > :nth-child(3),
   .ccn-three-up > * { grid-column: auto; min-height: 65vh; }
-  .ccn-video { min-height: 72vh; }
   .ccn-conference-board h2 { font-size: clamp(62px, 21vw, 104px); }
   .ccn-mosaic-wide { grid-column: auto; }
   .ccn-mosaic > * { min-height: 65vh; }
