@@ -156,6 +156,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1750);
   }
 
+  /* Respect reduced-motion preferences while preserving the video as a still. */
+  const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const collegiateVideos = document.querySelectorAll(".ccn-card-video");
+  const syncCollegiateVideoMotion = () => {
+    collegiateVideos.forEach((video) => {
+      if (motionQuery.matches) {
+        video.pause();
+      } else {
+        video.play().catch(() => {});
+      }
+    });
+  };
+  syncCollegiateVideoMotion();
+  motionQuery.addEventListener?.("change", syncCollegiateVideoMotion);
+
   /* ----- back to top ----- */
   document.querySelectorAll(".s-top").forEach((link) => {
     link.addEventListener("click", (e) => {

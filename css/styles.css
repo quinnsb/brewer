@@ -546,6 +546,7 @@ body.menu-closing .menu-dock button {
    tile so the bar tucks cleanly into the card. */
 .tile-caption {
   position: absolute;
+  z-index: 3;
   left: 0;
   right: 0;
   bottom: 0;
@@ -664,8 +665,8 @@ body.menu-closing .menu-dock button {
 }
 .project-card:hover .ms-shader-tile .ms-shader-logo { transform: translate(-50%, -50%) scale(1.03); }
 
-/* Featured Collegiate Church Network card: a simple editorial placeholder
-   treatment that mirrors the case-study layout until real project media lands. */
+/* Featured Collegiate Church Network card: Leadership Training footage with
+   the network lockup held above it. */
 .ccn-work-tile {
   background: #170b09;
   color: #eee9dc;
@@ -674,63 +675,34 @@ body.menu-closing .menu-dock button {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 12% 16%, rgba(238, 233, 220, 0.16), transparent 23%),
-    linear-gradient(135deg, transparent 49.8%, rgba(238, 233, 220, 0.06) 50%, transparent 50.2%);
-  z-index: 0;
-}
-.ccn-card-media {
-  position: absolute;
-  inset: clamp(22px, 3.2vw, 54px);
-  display: grid;
-  grid-template-columns: 1.08fr 0.78fr;
-  grid-template-rows: 1fr 0.55fr;
-  gap: clamp(8px, 1vw, 16px);
+  background: linear-gradient(180deg, rgba(15, 7, 5, 0.12), rgba(15, 7, 5, 0.34));
   z-index: 1;
-  opacity: 0.8;
+  pointer-events: none;
+}
+.ccn-card-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  z-index: 0;
   transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.project-card:hover .ccn-card-media { transform: scale(1.015); }
-.ccn-card-frame {
-  display: block;
-  min-width: 0;
-  background: #777873;
-}
-.ccn-card-frame-hero {
-  grid-column: 1 / -1;
-  clip-path: polygon(7% 0, 100% 0, 100% 83%, 92% 100%, 0 100%, 0 13%);
-}
-.ccn-card-frame-paper { background: #eee9dc; }
-.ccn-card-frame-mini { background: #aaa9a2; transform: translateY(18%); }
+.project-card:hover .ccn-card-video { transform: scale(1.02); }
 .ccn-card-lockup {
   position: absolute;
-  left: clamp(30px, 5vw, 86px);
-  right: clamp(30px, 5vw, 86px);
+  left: 50%;
   top: 50%;
+  width: min(44%, 460px);
+  height: auto;
   z-index: 2;
-  transform: translateY(-50%);
-  color: #eee9dc;
-  text-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 14px 32px rgba(0, 0, 0, 0.42));
   transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.project-card:hover .ccn-card-lockup { transform: translateY(-50%) scale(1.01); }
-.ccn-card-lockup span {
-  display: block;
-  font: 500 clamp(44px, 9.4vw, 156px)/0.76 var(--sans-display);
-  letter-spacing: -0.055em;
-  white-space: nowrap;
-}
-.ccn-card-lockup small {
-  display: flex;
-  justify-content: flex-end;
-  border-top: 1px solid rgba(238, 233, 220, 0.42);
-  margin-top: clamp(12px, 1.7vw, 25px);
-  padding-top: 9px;
-  font: 10px/1.4 "Space Mono", monospace;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(238, 233, 220, 0.72);
-}
+.project-card:hover .ccn-card-lockup { transform: translate(-50%, -50%) scale(1.025); }
 
 /* ---------- promo card (year in review) ---------- */
 
@@ -1351,6 +1323,84 @@ body.blog .site-footer { --footer-shift: 0px; }
   line-height: 1.55;
   letter-spacing: 0.02em;
 }
+.footer-legal a {
+  color: inherit;
+  font-weight: 700;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+}
+.footer-legal a:hover { text-decoration-thickness: 2px; }
+
+/* ---------- privacy policy ---------- */
+
+.privacy-hero {
+  max-width: 1040px;
+  padding-top: clamp(180px, 21vw, 330px);
+  padding-bottom: clamp(72px, 9vw, 130px);
+}
+.privacy-hero .eyebrow { margin-bottom: clamp(28px, 4vw, 56px); }
+.privacy-hero h1 {
+  font-family: var(--sans-display);
+  font-size: clamp(64px, 10vw, 158px);
+  line-height: 0.82;
+  letter-spacing: -0.045em;
+  max-width: 8ch;
+}
+.privacy-intro {
+  max-width: 760px;
+  margin-top: clamp(38px, 5vw, 70px);
+  font-family: var(--serif);
+  font-size: clamp(22px, 2vw, 32px);
+  line-height: 1.28;
+}
+.privacy-policy {
+  width: 100%;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1px;
+  background: rgba(245, 240, 231, 0.18);
+  border: 1px solid rgba(245, 240, 231, 0.18);
+}
+.privacy-policy section {
+  min-width: 0;
+  background: var(--bg);
+  padding: clamp(30px, 4.5vw, 68px);
+}
+.privacy-policy h2 {
+  font-family: var(--sans-display);
+  font-size: clamp(32px, 4vw, 58px);
+  line-height: 0.96;
+  margin-bottom: 18px;
+}
+.privacy-policy p,
+.privacy-policy li {
+  max-width: 72ch;
+  font-family: var(--serif);
+  font-size: clamp(17px, 1.25vw, 20px);
+  line-height: 1.55;
+}
+.privacy-policy p + p { margin-top: 1em; }
+.privacy-policy ul { padding-left: 1.2em; }
+.privacy-policy li + li { margin-top: 0.55em; }
+.privacy-policy a { color: inherit; text-underline-offset: 0.2em; }
+.privacy-contact-note {
+  margin-top: clamp(64px, 8vw, 120px);
+  max-width: 760px;
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.5vw, 38px);
+  line-height: 1.2;
+}
+.privacy-contact-note a { color: var(--yellow); text-underline-offset: 0.18em; }
+.form-privacy {
+  max-width: 62ch;
+  margin-top: 18px;
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  line-height: 1.55;
+  opacity: 0.68;
+}
+.form-privacy a { color: inherit; text-underline-offset: 0.18em; }
 
 /* ---------- about page ---------- */
 
@@ -2093,19 +2143,7 @@ html.home-intro .site-logo {
   .tile-caption { min-height: 88px; padding: 14px 20px; }
   .tile-caption p { display: none; }
   .tile-caption h3 { font-size: clamp(22px, 7vw, 30px); margin-bottom: 0; }
-  .ccn-card-media { inset: 22px; gap: 8px; }
-  .ccn-card-lockup {
-    left: 26px;
-    right: 26px;
-  }
-  .ccn-card-lockup span {
-    font-size: clamp(32px, 12vw, 74px);
-    white-space: normal;
-  }
-  .ccn-card-lockup small {
-    justify-content: flex-start;
-    font-size: 8px;
-  }
+  .ccn-card-lockup { width: min(56%, 260px); }
   .giant-wordmark { width: clamp(200px, 63vw, 380px); }
   .about-teaser,
   .about-hero,
@@ -2144,6 +2182,14 @@ html.home-intro .site-logo {
   /* floating menu pill is replaced by the bottom bar here — reclaim the
      left rail so content goes full-width again */
   .main, body.home .main { padding-left: 0; }
+  body.privacy .main,
+  body.privacy .shell,
+  .privacy-hero,
+  .privacy-policy { width: 100%; max-width: 100%; min-width: 0; }
+  body.privacy .shell { padding-left: 20px; padding-right: 20px; }
+  .privacy-hero .eyebrow { font-size: 10px; line-height: 1.6; }
+  .privacy-policy h2,
+  .privacy-policy p { overflow-wrap: anywhere; }
   .ms-project-cover { margin-top:88px; aspect-ratio:4/3; }
   .site-logo { --logo-height: clamp(34px, 10.7vw, 42px); top: 16px; left: 16px; max-width: calc(100vw - 32px); }
   .footer-panel { padding-top: 64px; }
@@ -2156,7 +2202,6 @@ html.home-intro .site-logo {
   .footer-side { width: 100%; align-items: center; }
   .socials { flex-direction: row; justify-content: center; gap: 10px; width: 100%; }
   .socials a { width: clamp(64px, 19.5vw, 84px); }
-  .footer-legal { min-height: 112px; }
   .work-hero { min-height: 70vh; }
   .case-duo,
   .case-duo.asymmetric,

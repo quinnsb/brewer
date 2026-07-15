@@ -90,19 +90,22 @@
     }
 
     var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    // The shader's pattern repeats every PERIOD in `time`, with a lively sweep
-    // around the start and a long dark stretch [DARK_START, DARK_END]. Run
-    // forward continuously (seamless loop) but crawl through the bright sweep
-    // and fast-forward through the dark part so the gap before it comes back
-    // around is short.
+    // The shader's pattern repeats every PERIOD in `time`. It crawls through
+    // the visible sweep and travels faster through the dark portion, with long
+    // rounded ramps between those speeds so the motion never snaps.
     var PERIOD = 20.0;
-    var DARK_START = 6.5;
-    var DARK_END = 19.5;
-    var SLOW = 0.011;
-    var FAST = 0.075;
+    var SLOW = 0.013;
+    var FAST = 0.086;
     var time = 0.0;
+    var motionAge = 0.0;
+    var lastFrame = null;
     var raf = null;
     var visible = true;
+
+    function smootherstep(edge0, edge1, value) {
+      var x = Math.max(0, Math.min(1, (value - edge0) / (edge1 - edge0)));
+      return x * x * x * (x * (x * 6.0 - 15.0) + 10.0);
+    }
 
     function draw() {
       resize();
@@ -110,10 +113,20 @@
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     }
 
-    function loop() {
+    function loop(now) {
       var p = time % PERIOD;
-      var inDark = p > DARK_START && p < DARK_END;
-      time += inDark ? FAST : SLOW;
+      var rampIntoDark = smootherstep(4.5, 9.0, p);
+      var rampOutOfDark = 1.0 - smootherstep(15.5, PERIOD, p);
+      var darkMix = rampIntoDark * rampOutOfDark;
+      var speed = SLOW + (FAST - SLOW) * darkMix;
+
+      // Normalize to the original 60fps pace and gently enter motion on load.
+      // Capping the delta also prevents a jump after returning to a background tab.
+      var frameScale = lastFrame == null ? 1.0 : Math.min((now - lastFrame) / (1000 / 60), 2.0);
+      lastFrame = now;
+      motionAge += frameScale / 60.0;
+      var introEase = smootherstep(0.0, 1.8, motionAge);
+      time += speed * frameScale * introEase;
       draw();
       raf = requestAnimationFrame(loop);
     }
@@ -125,6 +138,7 @@
       if (raf != null) {
         cancelAnimationFrame(raf);
         raf = null;
+        lastFrame = null;
       }
     }
 
