@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brewer — Marketing, web branding, writing, and all things design.</title>
+  <title>Brewer · Marketing, web branding, writing, and all things design.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script>document.documentElement.classList.add("home-intro");</script>
 </head>
@@ -43,12 +43,34 @@
       <section>
         <div class="project-stack">
           <a class="project-card reveal" href="projects/ms-consulting.html">
-            <div class="tile ms-work-tile">
-              <img class="tile-img" src="images/projects/ms-consulting/ms-featured-done-better-together.jpg" alt="M&amp;S Consulting team collaboration" loading="eager" fetchpriority="high" />
+            <div class="tile ms-work-tile ms-shader-tile">
+              <canvas class="ms-shader" aria-hidden="true"></canvas>
+              <img class="ms-shader-logo" src="images/projects/ms-consulting/logo-h-white.png" alt="M&amp;S Consulting" />
               <div class="tile-caption">
                 <div>
                   <h3>M&amp;S Consulting</h3>
                   <p>Building a marketing engine that makes a consultancy more human, discoverable, and connected.</p>
+                </div>
+                <span class="arr"><svg class="tile-arrow-svg" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 12h44M34 2l10 10-10 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card reveal" href="projects/collegiate-church-network.html">
+            <div class="tile ccn-work-tile">
+              <div class="ccn-card-media" aria-hidden="true">
+                <span class="ccn-card-frame ccn-card-frame-hero"></span>
+                <span class="ccn-card-frame ccn-card-frame-paper"></span>
+                <span class="ccn-card-frame ccn-card-frame-mini"></span>
+              </div>
+              <div class="ccn-card-lockup" aria-hidden="true">
+                <span>COLLEGIATE</span>
+                <small>Church Network</small>
+              </div>
+              <div class="tile-caption">
+                <div>
+                  <h3>Collegiate Church Network</h3>
+                  <p>Building the communications engine behind email, podcast, annual-report, video, and donor-development work.</p>
                 </div>
                 <span class="arr"><svg class="tile-arrow-svg" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 12h44M34 2l10 10-10 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               </div>
@@ -74,7 +96,7 @@
         </div>
         <div class="teaser-card reveal d1">
           <h2>I'm Quinn Brewer</h2>
-          <p class="body-copy">I believe in strategy and craft — the foundational pieces that turn a pretty logo into a powerful design system that can grow and evolve for years to come. Great work, work that lasts, comes from embedding myself in each project and each client, so I can design things that feel like their brand and write things that sound like their voice. I bring brand visions to life, even the ones that are hard to articulate, and I craft warm, beautiful design with my own two hands.</p>
+          <p class="body-copy">I believe in strategy and craft, the foundational pieces that turn a pretty logo into a powerful design system that can grow and evolve for years to come. Great work, work that lasts, comes from embedding myself in each project and each client, so I can design things that feel like their brand and write things that sound like their voice. I bring brand visions to life, even the ones that are hard to articulate, and I craft warm, beautiful design with my own two hands.</p>
           <a class="arrow-link" href="about.html">More about me <span class="arr">&#8594;</span></a>
         </div>
       </section>
@@ -176,13 +198,13 @@
       <section class="section">
         <div class="press-cards reveal">
           <div class="press-card">
-            <div class="press-thumb"><span>Placeholder — podcast art</span></div>
+            <div class="press-thumb"><span>Placeholder · podcast art</span></div>
             <h3>Creative Questions: In Brewer We Believe!</h3>
             <p>A great conversation on the Creative Questions podcast. We talk creativity, AI, running a one-person studio, and a lifelong obsession with print.</p>
             <a class="arrow-link" href="contact.html">Watch Here <span class="arr">&#8594;</span></a>
           </div>
           <div class="press-card">
-            <div class="press-thumb"><span>Placeholder — video still</span></div>
+            <div class="press-thumb"><span>Placeholder · video still</span></div>
             <h3>Adobe Spotlight: Video Interview</h3>
             <p>I sat down with the Adobe Live crew to chat about who I am, how Brewer got started, and the systems that keep a solo studio running smoothly.</p>
             <a class="arrow-link" href="contact.html">Watch Here <span class="arr">&#8594;</span></a>
@@ -228,5 +250,6 @@
   <script src="https://cdn.prod.website-files.com/gsap/3.15.0/InertiaPlugin.min.js"></script>
   <script src="js/testimonial.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/ms-shader.js"></script>
 </body>
 </html>

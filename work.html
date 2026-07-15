@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work — Brewer</title>
+  <title>Work · Brewer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -36,12 +36,34 @@
       <section class="work-grid">
         <div class="project-stack">
           <a class="project-card reveal" href="projects/ms-consulting.html">
-            <div class="tile ms-work-tile">
-              <img class="tile-img" src="images/projects/ms-consulting/ms-featured-done-better-together.jpg" alt="M&amp;S Consulting team collaboration" loading="lazy" />
+            <div class="tile ms-work-tile ms-shader-tile">
+              <canvas class="ms-shader" aria-hidden="true"></canvas>
+              <img class="ms-shader-logo" src="images/projects/ms-consulting/logo-h-white.png" alt="M&amp;S Consulting" />
               <div class="tile-caption">
                 <div>
                   <h3>M&amp;S Consulting</h3>
                   <p>Building a marketing engine that makes a consultancy more human, discoverable, and connected.</p>
+                </div>
+                <span class="arr"><svg class="tile-arrow-svg" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 12h44M34 2l10 10-10 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card reveal" href="projects/collegiate-church-network.html">
+            <div class="tile ccn-work-tile">
+              <div class="ccn-card-media" aria-hidden="true">
+                <span class="ccn-card-frame ccn-card-frame-hero"></span>
+                <span class="ccn-card-frame ccn-card-frame-paper"></span>
+                <span class="ccn-card-frame ccn-card-frame-mini"></span>
+              </div>
+              <div class="ccn-card-lockup" aria-hidden="true">
+                <span>COLLEGIATE</span>
+                <small>Church Network</small>
+              </div>
+              <div class="tile-caption">
+                <div>
+                  <h3>Collegiate Church Network</h3>
+                  <p>Building the communications engine behind email, podcast, annual-report, video, and donor-development work.</p>
                 </div>
                 <span class="arr"><svg class="tile-arrow-svg" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 12h44M34 2l10 10-10 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               </div>
@@ -85,5 +107,6 @@
   </main>
 
   <script src="js/main.js"></script>
+  <script src="js/ms-shader.js"></script>
 </body>
 </html>

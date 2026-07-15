@@ -569,11 +569,13 @@ body.menu-closing .menu-dock button {
   opacity: 1;
   transform: translateY(0);
 }
-/* no hover on touch devices — captions must be visible or the tiles are anonymous */
+/* Keep the desktop reveal as a true hover interaction. On tablet/touch layouts,
+   suppress the caption instead of leaving the hover state permanently open. */
 @media (hover: none), (max-width: 980px) {
-  .tile-caption {
-    opacity: 1;
-    transform: translateY(0);
+  .project-card:hover .tile-caption,
+  .project-card:focus-visible .tile-caption {
+    opacity: 0;
+    transform: translateY(100%);
   }
 }
 .tile-caption h3 {
@@ -634,6 +636,101 @@ body.menu-closing .menu-dock button {
 .ms-work-tile { background: #dad9d4; color: #1b2544; }
 .ms-work-tile::before { content: none; }
 .ms-work-tile .tile-img { z-index: 0; object-position: center; }
+
+/* Featured M&S card: animated WebGL shader background with the M&S logo
+   centered on top. The <canvas> fills the tile behind everything; the logo
+   floats above it and the caption bar slides up over both on hover. */
+.ms-shader-tile { background: #000; }
+.ms-shader-tile .ms-shader {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+}
+.ms-shader-tile .ms-shader-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(46%, 460px);
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  /* soft dark halo keeps the white lockup legible where the bright band sweeps under it */
+  filter: drop-shadow(0 0 18px rgba(0, 0, 0, 0.55)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-card:hover .ms-shader-tile .ms-shader-logo { transform: translate(-50%, -50%) scale(1.03); }
+
+/* Featured Collegiate Church Network card: a simple editorial placeholder
+   treatment that mirrors the case-study layout until real project media lands. */
+.ccn-work-tile {
+  background: #170b09;
+  color: #eee9dc;
+}
+.ccn-work-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(238, 233, 220, 0.16), transparent 23%),
+    linear-gradient(135deg, transparent 49.8%, rgba(238, 233, 220, 0.06) 50%, transparent 50.2%);
+  z-index: 0;
+}
+.ccn-card-media {
+  position: absolute;
+  inset: clamp(22px, 3.2vw, 54px);
+  display: grid;
+  grid-template-columns: 1.08fr 0.78fr;
+  grid-template-rows: 1fr 0.55fr;
+  gap: clamp(8px, 1vw, 16px);
+  z-index: 1;
+  opacity: 0.8;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-card:hover .ccn-card-media { transform: scale(1.015); }
+.ccn-card-frame {
+  display: block;
+  min-width: 0;
+  background: #777873;
+}
+.ccn-card-frame-hero {
+  grid-column: 1 / -1;
+  clip-path: polygon(7% 0, 100% 0, 100% 83%, 92% 100%, 0 100%, 0 13%);
+}
+.ccn-card-frame-paper { background: #eee9dc; }
+.ccn-card-frame-mini { background: #aaa9a2; transform: translateY(18%); }
+.ccn-card-lockup {
+  position: absolute;
+  left: clamp(30px, 5vw, 86px);
+  right: clamp(30px, 5vw, 86px);
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  color: #eee9dc;
+  text-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-card:hover .ccn-card-lockup { transform: translateY(-50%) scale(1.01); }
+.ccn-card-lockup span {
+  display: block;
+  font: 500 clamp(44px, 9.4vw, 156px)/0.76 var(--sans-display);
+  letter-spacing: -0.055em;
+  white-space: nowrap;
+}
+.ccn-card-lockup small {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(238, 233, 220, 0.42);
+  margin-top: clamp(12px, 1.7vw, 25px);
+  padding-top: 9px;
+  font: 10px/1.4 "Space Mono", monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(238, 233, 220, 0.72);
+}
 
 /* ---------- promo card (year in review) ---------- */
 
@@ -1996,6 +2093,19 @@ html.home-intro .site-logo {
   .tile-caption { min-height: 88px; padding: 14px 20px; }
   .tile-caption p { display: none; }
   .tile-caption h3 { font-size: clamp(22px, 7vw, 30px); margin-bottom: 0; }
+  .ccn-card-media { inset: 22px; gap: 8px; }
+  .ccn-card-lockup {
+    left: 26px;
+    right: 26px;
+  }
+  .ccn-card-lockup span {
+    font-size: clamp(32px, 12vw, 74px);
+    white-space: normal;
+  }
+  .ccn-card-lockup small {
+    justify-content: flex-start;
+    font-size: 8px;
+  }
   .giant-wordmark { width: clamp(200px, 63vw, 380px); }
   .about-teaser,
   .about-hero,
@@ -2037,9 +2147,9 @@ html.home-intro .site-logo {
   .ms-project-cover { margin-top:88px; aspect-ratio:4/3; }
   .site-logo { --logo-height: clamp(34px, 10.7vw, 42px); top: 16px; left: 16px; max-width: calc(100vw - 32px); }
   .footer-panel { padding-top: 64px; }
-  .footer-cta h2 { font-size: clamp(40px, 13vw, 58px); }
+  .footer-cta h2 { font-size: clamp(36px, 11vw, 52px); }
   /* Trust-style mobile footer: centered CTA, socials row, wordmark last */
-  .footer-cta h2 { text-align: center; margin: 0 auto; }
+  .footer-cta h2 { max-width: 8.5ch; text-align: center; margin: 0 auto; }
   .footer-cta .pill-btn { width: 100%; min-width: 0; margin: 0 auto; }
   .footer-brand { flex-direction: column-reverse; align-items: center; gap: 64px; margin-top: 110px; }
   .giant-wordmark { width: min(88vw, 400px); }
