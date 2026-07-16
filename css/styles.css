@@ -1631,7 +1631,7 @@ body.blog .site-footer { --footer-shift: 0px; }
   place-items: center;
   padding: 9rem 0 7rem;
 }
-.testimonial-card {
+.testimonial-page .testimonial-card {
   width: min(100%, 900px);
   margin: 0 auto;
   padding: 4rem;
@@ -1763,7 +1763,7 @@ body.blog .site-footer { --footer-shift: 0px; }
 }
 
 @media (max-width: 900px) {
-  .testimonial-card {
+  .testimonial-page .testimonial-card {
     padding: 3rem;
   }
   .testimonial-card-head h1,
@@ -1776,7 +1776,7 @@ body.blog .site-footer { --footer-shift: 0px; }
   .testimonial-collect {
     padding: 6.5rem 0 4rem;
   }
-  .testimonial-card {
+  .testimonial-page .testimonial-card {
     padding: 1.5rem;
   }
   .testimonial-card-head {
