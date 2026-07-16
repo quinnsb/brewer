@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/mainlogoicon.png" />
+  <title>Share a Testimonial · Brewer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="testimonial-page">
+  <a class="site-logo" href="./" aria-label="Brewer home">
+    <span class="logo-squircle"></span>
+    <span class="logo-wordmark">Quinn Brewer</span>
+  </a>
+
+  <button class="menu-btn" aria-label="Open menu">Menu</button>
+  <div class="menu-bar">
+    <a class="menu-bar-logo" href="./" aria-label="Brewer home"></a>
+    <button class="menu-btn" aria-label="Open menu">Menu</button>
+  </div>
+  <nav class="menu-dock" aria-label="Main menu">
+    <a href="about.html">About Me</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html">Let's Talk</a>
+    <a href="blog.html">Blog</a>
+    <button class="menu-close">Close</button>
+  </nav>
+
+  <main class="main">
+    <div class="shell">
+      <section class="testimonial-collect">
+        <div class="testimonial-collect-copy reveal">
+          <p class="eyebrow">Testimonial request</p>
+          <h1>Would you write a few words about working with me?</h1>
+          <p class="body-copy">A short note helps future clients understand what the process feels like, what changed because of the work, and where I was most useful. Specifics are gold, but warmth counts too.</p>
+          <p class="testimonial-note">Answer what feels easy. I may lightly trim for length, but I will not change the meaning.</p>
+        </div>
+
+        <div class="testimonial-form-card reveal d1">
+          <div class="testimonial-success" data-form-success hidden>
+            <p class="step">&#10003;</p>
+            <h2>Thank you. This means a lot.</h2>
+            <p>I received your testimonial and will follow up before using it publicly if anything needs clarifying.</p>
+          </div>
+
+          <form class="testimonial-form" action="https://formspree.io/f/xzdldjql" method="POST" data-formspree-ajax>
+            <input type="hidden" name="_subject" value="New testimonial for Brewer" />
+            <input type="hidden" name="form_type" value="Testimonial" />
+
+            <div class="testimonial-grid">
+              <label>
+                <span>Your name *</span>
+                <input name="name" type="text" autocomplete="name" placeholder="Jane Smith" required />
+              </label>
+              <label>
+                <span>Email *</span>
+                <input name="email" type="email" autocomplete="email" placeholder="jane@example.com" required />
+              </label>
+            </div>
+
+            <label>
+              <span>Role, company, or context</span>
+              <input name="context" type="text" placeholder="Executive Director, collaborator, client, etc." />
+            </label>
+
+            <label>
+              <span>What should people know about working with me? *</span>
+              <textarea name="message" rows="8" placeholder="Quinn helped us..." required></textarea>
+            </label>
+
+            <label>
+              <span>Any result, moment, or detail you would want me to include?</span>
+              <textarea name="proof_point" rows="4" placeholder="A launch, a campaign, a clearer system, a smoother process..." ></textarea>
+            </label>
+
+            <fieldset class="testimonial-permission">
+              <legend>Permission</legend>
+              <label class="check-row">
+                <input name="permission_to_publish" type="checkbox" value="Yes, Quinn may use this testimonial publicly" required />
+                <span>You may use this testimonial on your portfolio, proposals, or social channels.</span>
+              </label>
+              <label class="check-row">
+                <input name="use_name_title" type="checkbox" value="Yes, name/title may be included" />
+                <span>You may include my name and role/context with it.</span>
+              </label>
+            </fieldset>
+
+            <p class="testimonial-error" data-form-error hidden>Something did not send. Please try again or email me directly at quinnsb@gmail.com.</p>
+
+            <button class="testimonial-submit" type="submit" data-submit-label="Send testimonial">Send testimonial</button>
+          </form>
+
+          <p class="form-privacy">This form is for people 13 and older. Your answers are sent through Formspree so I can receive and respond to them. <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+      </section>
+
+      <footer class="site-footer testimonial-footer">
+        <div class="footer-legal"><p class="fine-print">&copy; BREWER 2026 | <a href="privacy.html">Privacy Policy</a> | Thank you for taking the time to help me tell the story honestly.</p></div>
+      </footer>
+    </div>
+  </main>
+
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>

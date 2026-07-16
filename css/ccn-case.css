@@ -24,6 +24,11 @@
   height: calc(100svh * 5 / 6);
   min-height: 420px;
 }
+.ccn-hero-media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .ccn-hero-media img {
   width: 100%;
   height: 100%;
@@ -214,10 +219,53 @@
   height: 100%;
   object-fit: cover;
 }
-.ccn-big-number { position: absolute; inset: 0; display: grid; place-items: center; font: 500 clamp(130px, 23vw, 360px)/1 var(--sans-display); color: rgba(238,233,220,.75); }
-.ccn-episode { min-height: 0; aspect-ratio: 6 / 5; display: grid; place-items: center; background: #a8aaa5; }
-.ccn-wave { width: 72%; height: 34%; background: repeating-linear-gradient(90deg, rgba(23,11,9,.55) 0 3px, transparent 3px 11px); clip-path: polygon(0 44%,4% 45%,4% 28%,8% 28%,8% 61%,12% 61%,12% 39%,16% 39%,16% 10%,20% 10%,20% 69%,24% 69%,24% 27%,28% 27%,28% 82%,32% 82%,32% 46%,36% 46%,36% 18%,40% 18%,40% 64%,44% 64%,44% 34%,48% 34%,48% 73%,52% 73%,52% 22%,56% 22%,56% 57%,60% 57%,60% 7%,64% 7%,64% 78%,68% 78%,68% 29%,72% 29%,72% 64%,76% 64%,76% 40%,80% 40%,80% 20%,84% 20%,84% 70%,88% 70%,88% 38%,92% 38%,92% 57%,96% 57%,96% 43%,100% 43%,100% 100%,0 100%); }
-
+.ccn-growth-chart {
+  position: relative;
+  margin: 0;
+  min-height: 0;
+  aspect-ratio: 6 / 5;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255,255,255,.88), transparent 28%),
+    linear-gradient(180deg, #fbfaf5, var(--ccn-paper));
+  box-shadow: inset 0 0 0 1px rgba(28,16,13,.08);
+}
+.ccn-growth-chart::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(102deg, transparent 0 54%, rgba(31,125,49,.045) 54.2% 61%, transparent 61.2%),
+    repeating-linear-gradient(0deg, rgba(28,16,13,.018) 0 1px, transparent 1px 6px);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+.ccn-growth-chart svg {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ccn-chart-grid path {
+  fill: none;
+  stroke: rgba(28,16,13,.12);
+  stroke-width: 1.5;
+}
+.ccn-chart-area { fill: url("#ccn-chart-fill"); }
+.ccn-chart-line {
+  fill: none;
+  stroke: #19a329;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.ccn-chart-ticks path {
+  fill: none;
+  stroke: rgba(28,16,13,.24);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
 .ccn-browser { display: block; overflow: hidden; color: var(--ccn-ink); text-decoration: none; background: #d9d7cf; box-shadow: 0 24px 80px rgba(0,0,0,.2); border-radius: 10px; }
 .ccn-browser-bar { height: 44px; display: flex; align-items: center; gap: 7px; padding: 0 15px; background: #e5e2da; }
 .ccn-browser-bar i { width: 9px; height: 9px; border-radius: 50%; background: #96958f; }
@@ -316,7 +364,7 @@
   .ccn-landscape,
   .ccn-lt-grid .ccn-portrait { min-height: 68vh; }
   .ccn-square,
-  .ccn-episode { aspect-ratio: 1; }
+  .ccn-growth-chart { aspect-ratio: 1; }
   .ccn-paper-board { min-height: 75vh; padding: 32px 24px; }
   .ccn-paper-board h2 { font-size: clamp(45px, 15vw, 75px); }
   .ccn-podcast-mark { width: 88px; border-radius: 22px; }

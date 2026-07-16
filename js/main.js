@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
     schedule();
   }
 
-  /* ----- multi-step contact form: final step opens a pre-filled email ----- */
+  /* ----- multi-step contact form: final step posts to Formspree ----- */
   const form = document.querySelector(".form-card form");
   if (form) {
     const steps = [...form.querySelectorAll(".form-step")];
@@ -326,17 +326,57 @@ document.addEventListener("DOMContentLoaded", () => {
       steps.forEach((s, j) => (s.style.display = j === i ? "block" : "none"));
       steps[i]?.querySelector("input")?.focus();
     };
+    const setStatus = (heading, detail, isError = false) => {
+      const final = steps[steps.length - 1];
+      const icon = final.querySelector(".step:first-child");
+      const title = final.querySelector("h3");
+      const note = final.querySelector(".step:last-child");
+      if (icon) icon.textContent = isError ? "!" : "\u2713";
+      if (title) title.textContent = heading;
+      if (note) note.textContent = detail;
+    };
     show(0);
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
+      const activeInputs = [...steps[current].querySelectorAll("input, textarea")];
+      const invalidInput = activeInputs.find((input) => !input.checkValidity());
+      if (invalidInput) {
+        invalidInput.reportValidity();
+        return;
+      }
       if (current === steps.length - 2) {
         const val = (id) => form.querySelector(`#${id}`)?.value.trim() ?? "";
+        const submitButton = steps[current].querySelector("button[type='submit']");
+        const originalText = submitButton?.textContent;
+        const data = new FormData(form);
         const name = `${val("first")} ${val("last")}`.trim();
-        const subject = encodeURIComponent(name ? `Project inquiry — ${name}` : "Project inquiry");
-        const body = encodeURIComponent(
-          `Hi Quinn,\n\n${val("about") || "(tell me about your project)"}\n\n— ${name || "(your name)"}\n${val("email")}`
-        );
-        window.location.href = `mailto:quinnsb@gmail.com?subject=${subject}&body=${body}`;
+        data.set("name", name);
+        data.set("_replyto", val("email"));
+        data.set("_subject", name ? `Portfolio inquiry from ${name}` : "Portfolio inquiry from Brewer");
+        submitButton?.setAttribute("disabled", "true");
+        if (submitButton) submitButton.textContent = "Sending...";
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            headers: { Accept: "application/json" },
+            body: data,
+          });
+          if (!response.ok) throw new Error("Formspree submission failed");
+          form.reset();
+          setStatus(
+            "Thanks! Your message is on its way, and I'll be in touch within a day or two.",
+            "Need to add something else? Email me directly at quinnsb@gmail.com."
+          );
+        } catch {
+          setStatus(
+            "Something did not send. Please email me directly instead.",
+            "You can reach me at quinnsb@gmail.com.",
+            true
+          );
+        } finally {
+          submitButton?.removeAttribute("disabled");
+          if (submitButton && originalText) submitButton.textContent = originalText;
+        }
       }
       if (current < steps.length - 1) {
         current += 1;
@@ -344,4 +384,41 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  /* ----- simple Formspree forms, used by the testimonial collection page ----- */
+  document.querySelectorAll("[data-formspree-ajax]").forEach((ajaxForm) => {
+    ajaxForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!ajaxForm.checkValidity()) {
+        ajaxForm.reportValidity();
+        return;
+      }
+      const submit = ajaxForm.querySelector("button[type='submit']");
+      const success = document.querySelector("[data-form-success]");
+      const error = ajaxForm.querySelector("[data-form-error]");
+      const originalText = submit?.dataset.submitLabel || submit?.textContent || "Send";
+      submit?.setAttribute("disabled", "true");
+      if (submit) submit.textContent = "Sending...";
+      if (error) error.hidden = true;
+      try {
+        const data = new FormData(ajaxForm);
+        const sender = String(data.get("email") || "").trim();
+        if (sender) data.set("_replyto", sender);
+        const response = await fetch(ajaxForm.action, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: data,
+        });
+        if (!response.ok) throw new Error("Formspree submission failed");
+        ajaxForm.reset();
+        ajaxForm.hidden = true;
+        if (success) success.hidden = false;
+      } catch {
+        if (error) error.hidden = false;
+      } finally {
+        submit?.removeAttribute("disabled");
+        if (submit) submit.textContent = originalText;
+      }
+    });
+  });
 });

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/mainlogoicon.png" />
   <title>Let's Talk · Brewer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,37 +41,38 @@
           <p class="body-copy reveal" style="margin-top: 36px;">Do you have a passion project? A new business? An established company? Let me walk alongside you and build something unique, beautiful, and effective.</p>
         </div>
         <div class="form-card reveal d1">
-          <form>
+          <form action="https://formspree.io/f/xzdldjql" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Portfolio inquiry from Brewer" />
             <div class="form-step">
               <p class="step">1 &#8594;</p>
               <h3>What should I call you? *</h3>
               <label for="first">First name</label>
-              <input id="first" type="text" placeholder="Jane" autocomplete="given-name" />
+              <input id="first" name="first_name" type="text" placeholder="Jane" autocomplete="given-name" required />
               <label for="last">Last name</label>
-              <input id="last" type="text" placeholder="Smith" autocomplete="family-name" />
+              <input id="last" name="last_name" type="text" placeholder="Smith" autocomplete="family-name" required />
               <div class="ok-row"><button class="ok-btn" type="submit">OK</button><span class="step">press Enter &#8629;</span></div>
             </div>
             <div class="form-step">
               <p class="step">2 &#8594;</p>
               <h3>Where can I reach you? *</h3>
               <label for="email">Email</label>
-              <input id="email" type="email" placeholder="jane@example.com" autocomplete="email" />
+              <input id="email" name="email" type="email" placeholder="jane@example.com" autocomplete="email" required />
               <div class="ok-row"><button class="ok-btn" type="submit">OK</button><span class="step">press Enter &#8629;</span></div>
             </div>
             <div class="form-step">
               <p class="step">3 &#8594;</p>
               <h3>Tell me about your project.</h3>
               <label for="about">The more detail, the better</label>
-              <input id="about" type="text" placeholder="We're launching a..." />
-              <div class="ok-row"><button class="ok-btn" type="submit">OK</button><span class="step">press Enter &#8629;</span></div>
+              <input id="about" name="message" type="text" placeholder="We're launching a..." required />
+              <div class="ok-row"><button class="ok-btn" type="submit">Send</button><span class="step">press Enter &#8629;</span></div>
             </div>
-            <div class="form-step">
+            <div class="form-step" role="status" aria-live="polite">
               <p class="step">&#10003;</p>
-              <h3>Thanks! Your email app just opened with everything filled in &mdash; hit send and I'll be in touch within a day or two.</h3>
-              <p class="step">Nothing opened? Email me directly at quinnsb@gmail.com.</p>
+              <h3>Thanks! Your message is on its way, and I'll be in touch within a day or two.</h3>
+              <p class="step">Something weird? Email me directly at quinnsb@gmail.com.</p>
             </div>
           </form>
-          <p class="form-privacy">This contact flow is for people 13 and older. The site does not store your answers; continuing opens your email app so you can choose whether to send them. <a href="privacy.html">Privacy Policy</a></p>
+          <p class="form-privacy">This contact flow is for people 13 and older. Your answers are sent through Formspree so I can reply by email. <a href="privacy.html">Privacy Policy</a></p>
           <p class="powered">Powered by good intentions</p>
         </div>
       </section>
@@ -110,7 +112,7 @@
       <footer class="site-footer">
         <div class="footer-panel">
           <div class="footer-cta reveal">
-            <h2>I'd love to chat about your design needs.</h2>
+            <h2>I'd love to chat about your marketing needs.</h2>
             <a class="pill-btn maroon" href="mailto:quinnsb@gmail.com">Let's Talk Shop</a>
           </div>
           <div class="footer-brand reveal">

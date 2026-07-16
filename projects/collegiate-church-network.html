@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../images/mainlogoicon.png" />
   <title>Collegiate Church Network · Brewer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +18,10 @@
   <nav class="menu-dock" aria-label="Main menu"><a href="../about.html">About Me</a><a href="../work.html">Work</a><a href="../contact.html">Let's Talk</a><a href="../blog.html">Blog</a><button class="menu-close">Close</button></nav>
 
   <div class="ccn-hero-media reveal">
-    <img src="../images/ahmed-q_5LnpFAWXo-unsplash.jpg" alt="Students gathered together outside on a sunny day" />
+    <picture>
+      <source srcset="../images/projects/collegiate/hero-students.webp" type="image/webp" />
+      <img src="../images/projects/collegiate/hero-students.jpg" alt="Students gathered together outside on a sunny day" width="2400" height="1600" fetchpriority="high" />
+    </picture>
     <span class="ccn-frame-number">01</span>
   </div>
 
@@ -86,7 +90,42 @@
           <figure class="ccn-podcast-cover ccn-square reveal">
             <img src="../images/collegiatepodart.png" alt="The Collegiate Church Podcast cover art" loading="lazy" />
           </figure>
-          <div class="ccn-placeholder ccn-episode reveal d1" role="img" aria-label="Placeholder for episode artwork and audio production"><span class="ccn-placeholder-label">Episode system + production details</span><div class="ccn-wave" aria-hidden="true"></div></div>
+          <figure class="ccn-growth-chart reveal d1" role="img" aria-label="A stylized green area chart showing steady podcast audience growth">
+            <svg viewBox="0 0 1200 720" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="ccn-chart-fill" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#35bd4b" stop-opacity=".28" />
+                  <stop offset="72%" stop-color="#35bd4b" stop-opacity=".09" />
+                  <stop offset="100%" stop-color="#35bd4b" stop-opacity=".03" />
+                </linearGradient>
+              </defs>
+              <g class="ccn-chart-grid">
+                <path d="M70 120H1160" />
+                <path d="M70 240H1160" />
+                <path d="M70 360H1160" />
+                <path d="M70 480H1160" />
+                <path d="M70 600H1160" />
+                <path d="M70 82V630" />
+              </g>
+              <path class="ccn-chart-area" d="M70 600 C120 570 150 535 195 510 C240 485 258 455 292 405 C326 355 358 330 405 315 C452 300 508 268 555 220 C602 172 658 170 712 164 C766 158 804 158 852 156 C900 154 938 142 972 112 C1006 82 1038 58 1082 58 C1126 58 1138 42 1160 38 L1160 630 L70 630 Z" />
+              <path class="ccn-chart-line" d="M70 600 C120 570 150 535 195 510 C240 485 258 455 292 405 C326 355 358 330 405 315 C452 300 508 268 555 220 C602 172 658 170 712 164 C766 158 804 158 852 156 C900 154 938 142 972 112 C1006 82 1038 58 1082 58 C1126 58 1138 42 1160 38" />
+              <g class="ccn-chart-ticks">
+                <path d="M94 652L72 674" />
+                <path d="M178 652L156 674" />
+                <path d="M262 652L240 674" />
+                <path d="M346 652L324 674" />
+                <path d="M430 652L408 674" />
+                <path d="M514 652L492 674" />
+                <path d="M598 652L576 674" />
+                <path d="M682 652L660 674" />
+                <path d="M766 652L744 674" />
+                <path d="M850 652L828 674" />
+                <path d="M934 652L912 674" />
+                <path d="M1018 652L996 674" />
+                <path d="M1102 652L1080 674" />
+              </g>
+            </svg>
+          </figure>
         </div>
       </section>
 
@@ -164,7 +203,7 @@
 
       <footer class="site-footer">
         <div class="footer-panel">
-          <div class="footer-cta reveal"><h2>I'd love to chat about your design needs.</h2><a class="pill-btn maroon" href="../contact.html">Let's Talk Shop</a></div>
+          <div class="footer-cta reveal"><h2>I'd love to chat about your marketing needs.</h2><a class="pill-btn maroon" href="../contact.html">Let's Talk Shop</a></div>
           <div class="footer-brand reveal"><img class="giant-wordmark" src="../images/brewer-script.png" alt="Brewer" /><div class="footer-side"><div class="socials">
             <a class="s-top" href="#" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20.5V3.5M12 3.5l-7.5 7.5M12 3.5l7.5 7.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <a class="s-dribbble" href="https://dribbble.com" target="_blank" rel="noopener" aria-label="Dribbble"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32M8.56 2.75c4.37 6 6 9.42 8 17.72" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
