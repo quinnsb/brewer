@@ -385,7 +385,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ----- simple Formspree forms, used by the testimonial collection page ----- */
+  /* ----- simple Formspree forms ----- */
   document.querySelectorAll("[data-formspree-ajax]").forEach((ajaxForm) => {
     ajaxForm.addEventListener("submit", async (event) => {
       event.preventDefault();

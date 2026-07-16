@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=4" />
 </head>
 <body class="testimonial-page">
   <a class="site-logo" href="./" aria-label="Brewer home">
@@ -32,77 +32,73 @@
   <main class="main">
     <div class="shell">
       <section class="testimonial-collect">
-        <div class="testimonial-collect-copy reveal">
-          <p class="eyebrow">Testimonial request</p>
-          <h1>Would you write a few words about working with me?</h1>
-          <p class="body-copy">A short note helps future clients understand what the process feels like, what changed because of the work, and where I was most useful. Specifics are gold, but warmth counts too.</p>
-          <p class="testimonial-note">Answer what feels easy. I may lightly trim for length, but I will not change the meaning.</p>
-        </div>
-
-        <div class="testimonial-form-card reveal d1">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-card-head">
+            <p class="eyebrow">Testimonial request</p>
+            <h1>Share a few words about working with me.</h1>
+            <p>A short note helps future clients understand the process, the result, and where I was most useful. Specifics are gold, but warmth counts too.</p>
+          </div>
           <div class="testimonial-success" data-form-success hidden>
             <p class="step">&#10003;</p>
             <h2>Thank you. This means a lot.</h2>
-            <p>I received your testimonial and will follow up before using it publicly if anything needs clarifying.</p>
+            <p>I received your testimonial and will follow up if anything needs clarifying.</p>
+            <a class="testimonial-home-link" href="./">Back to Brewer</a>
           </div>
 
-          <form class="testimonial-form" action="https://formspree.io/f/xzdldjql" method="POST" data-formspree-ajax>
+          <form class="testimonial-form" action="https://formspree.io/f/xzdldjql" method="POST" data-formspree-ajax novalidate>
             <input type="hidden" name="_subject" value="New testimonial for Brewer" />
             <input type="hidden" name="form_type" value="Testimonial" />
-
-            <div class="testimonial-grid">
-              <label>
-                <span>Your name *</span>
-                <input name="name" type="text" autocomplete="name" placeholder="Jane Smith" required />
+            <div class="testimonial-fields">
+              <label for="testimonial-name">
+                <span>Name</span>
+                <input id="testimonial-name" name="name" type="text" autocomplete="name" placeholder="Jane Smith" required />
               </label>
-              <label>
-                <span>Email *</span>
-                <input name="email" type="email" autocomplete="email" placeholder="jane@example.com" required />
+              <label for="testimonial-email">
+                <span>Email</span>
+                <input id="testimonial-email" name="email" type="email" autocomplete="email" placeholder="jane@example.com" required />
               </label>
             </div>
-
-            <label>
-              <span>Role, company, or context</span>
-              <input name="context" type="text" placeholder="Executive Director, collaborator, client, etc." />
+            <label for="testimonial-message">
+              <span>Testimonial</span>
+              <textarea id="testimonial-message" name="message" rows="7" placeholder="Quinn helped us..." required></textarea>
             </label>
-
-            <label>
-              <span>What should people know about working with me? *</span>
-              <textarea name="message" rows="8" placeholder="Quinn helped us..." required></textarea>
-            </label>
-
-            <label>
-              <span>Any result, moment, or detail you would want me to include?</span>
-              <textarea name="proof_point" rows="4" placeholder="A launch, a campaign, a clearer system, a smoother process..." ></textarea>
-            </label>
-
-            <fieldset class="testimonial-permission">
-              <legend>Permission</legend>
-              <label class="check-row">
-                <input name="permission_to_publish" type="checkbox" value="Yes, Quinn may use this testimonial publicly" required />
-                <span>You may use this testimonial on your portfolio, proposals, or social channels.</span>
-              </label>
-              <label class="check-row">
-                <input name="use_name_title" type="checkbox" value="Yes, name/title may be included" />
-                <span>You may include my name and role/context with it.</span>
-              </label>
-            </fieldset>
-
             <p class="testimonial-error" data-form-error hidden>Something did not send. Please try again or email me directly at quinnsb@gmail.com.</p>
-
             <button class="testimonial-submit" type="submit" data-submit-label="Send testimonial">Send testimonial</button>
           </form>
-
-          <p class="form-privacy">This form is for people 13 and older. Your answers are sent through Formspree so I can receive and respond to them. <a href="privacy.html">Privacy Policy</a></p>
         </div>
       </section>
 
-      <footer class="site-footer testimonial-footer">
-        <div class="footer-legal"><p class="fine-print">&copy; BREWER 2026 | <a href="privacy.html">Privacy Policy</a> | Thank you for taking the time to help me tell the story honestly.</p></div>
+      <footer class="site-footer">
+        <div class="footer-panel">
+          <div class="footer-cta reveal">
+            <h2>I'd love to chat about your marketing needs.</h2>
+            <a class="pill-btn maroon" href="mailto:quinnsb@gmail.com">Let's Talk Shop</a>
+          </div>
+          <div class="footer-brand reveal">
+            <img class="giant-wordmark" src="images/brewer-script.png" alt="Brewer" />
+            <div class="footer-side">
+              <div class="socials">
+                <a class="s-top" href="#" aria-label="Back to top">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20.5V3.5M12 3.5l-7.5 7.5M12 3.5l7.5 7.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a class="s-dribbble" href="https://dribbble.com" target="_blank" rel="noopener" aria-label="Dribbble">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32M8.56 2.75c4.37 6 6 9.42 8 17.72" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </a>
+                <a class="s-instagram" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>
+                </a>
+                <a class="s-linkedin" href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" transform="translate(1.32 1.32) scale(0.89)" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-legal"><p class="fine-print">&copy; BREWER 2026 | <a href="privacy.html">Privacy Policy</a> | This site was hand-built with plain old HTML &amp; CSS. It features Degular from OhNo Type Co and Mackinac from P22 Foundry, and none of it would exist without my awesome friends &amp; clients. Thanks for visiting.</p></div>
       </footer>
     </div>
   </main>
 
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>
