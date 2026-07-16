@@ -713,6 +713,36 @@ body.menu-closing .menu-dock button {
 }
 .project-card:hover .ccn-card-lockup { transform: translate(-50%, -50%) scale(1.025); }
 
+.tfi-work-tile {
+  background: #171812;
+  color: #f7f2e8;
+}
+.tfi-work-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(10, 13, 10, 0.02) 38%, rgba(10, 13, 10, 0.76));
+  pointer-events: none;
+}
+.tfi-card-image {
+  object-position: center 48%;
+  filter: saturate(0.88) contrast(0.96);
+}
+.tfi-card-title {
+  position: absolute;
+  left: clamp(26px, 4vw, 64px);
+  bottom: clamp(28px, 4vw, 64px);
+  z-index: 2;
+  max-width: 10ch;
+  font: 600 clamp(40px, 5.8vw, 90px) / 0.84 var(--sans-display);
+  letter-spacing: 0;
+  color: #f7f2e8;
+  text-shadow: 0 6px 28px rgba(0, 0, 0, 0.42);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-card:hover .tfi-card-title { transform: translateY(-5px); }
+
 /* ---------- promo card (year in review) ---------- */
 
 .promo-card {
@@ -2393,6 +2423,7 @@ html.home-intro .site-logo {
   .tile-caption { min-height: 88px; padding: 14px 20px; }
   .tile-caption p { display: none; }
   .tile-caption h3 { font-size: clamp(22px, 7vw, 30px); margin-bottom: 0; }
+  .tfi-card-title { font-size: clamp(36px, 8vw, 68px); }
   .ccn-card-lockup { width: min(56%, 260px); }
   .giant-wordmark { width: clamp(200px, 63vw, 380px); }
   .about-teaser,
@@ -2443,6 +2474,7 @@ html.home-intro .site-logo {
   .ms-project-cover { margin-top:88px; aspect-ratio:4/3; }
   .site-logo { --logo-height: clamp(34px, 10.7vw, 42px); top: 16px; left: 16px; max-width: calc(100vw - 32px); }
   .case-page .site-logo { position: absolute; }
+  .tfi-card-title { left: 22px; bottom: 22px; font-size: clamp(32px, 11vw, 52px); }
   .footer-panel { padding-top: 64px; }
   .footer-cta h2 { font-size: clamp(36px, 11vw, 52px); }
   /* Trust-style mobile footer: centered CTA, socials row, wordmark last */
