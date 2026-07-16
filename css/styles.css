@@ -1631,7 +1631,7 @@ body.blog .site-footer { --footer-shift: 0px; }
   place-items: center;
   padding: 9rem 0 7rem;
 }
-.testimonial-page .testimonial-card {
+.collect-card {
   width: min(100%, 900px);
   margin: 0 auto;
   padding: 4rem;
@@ -1640,20 +1640,20 @@ body.blog .site-footer { --footer-shift: 0px; }
   color: var(--ink);
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.18);
 }
-.testimonial-card-head {
+.collect-card-head {
   padding-bottom: 2.5rem;
   border-bottom: 1px solid rgba(30, 28, 25, 0.16);
 }
-.testimonial-card-head .eyebrow {
+.collect-card-head .eyebrow {
   color: var(--maroon);
 }
-.testimonial-card-head h1 {
+.collect-card-head h1 {
   max-width: 13ch;
   margin-top: 1.25rem;
   font: 600 4.5rem/.94 var(--sans-display);
   letter-spacing: 0;
 }
-.testimonial-card-head > p:last-child {
+.collect-card-head > p:last-child {
   max-width: 58ch;
   margin-top: 1.5rem;
   color: rgba(30, 28, 25, 0.68);
@@ -1763,10 +1763,10 @@ body.blog .site-footer { --footer-shift: 0px; }
 }
 
 @media (max-width: 900px) {
-  .testimonial-page .testimonial-card {
+  .collect-card {
     padding: 3rem;
   }
-  .testimonial-card-head h1,
+  .collect-card-head h1,
   .testimonial-success h2 {
     font-size: 3.75rem;
   }
@@ -1776,13 +1776,13 @@ body.blog .site-footer { --footer-shift: 0px; }
   .testimonial-collect {
     padding: 6.5rem 0 4rem;
   }
-  .testimonial-page .testimonial-card {
+  .collect-card {
     padding: 1.5rem;
   }
-  .testimonial-card-head {
+  .collect-card-head {
     padding-bottom: 2rem;
   }
-  .testimonial-card-head h1,
+  .collect-card-head h1,
   .testimonial-success h2 {
     font-size: 2.7rem;
     line-height: 0.98;
