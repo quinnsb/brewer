@@ -203,6 +203,17 @@
 .ccn-paper-board .ccn-board-note { color: rgba(28,16,13,.52); }
 .ccn-podcast-grid { grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); }
 .ccn-square { min-height: 0; aspect-ratio: 1; background: #4f504d; }
+.ccn-podcast-cover {
+  margin: 0;
+  overflow: hidden;
+  background: var(--ccn-paper);
+}
+.ccn-podcast-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .ccn-big-number { position: absolute; inset: 0; display: grid; place-items: center; font: 500 clamp(130px, 23vw, 360px)/1 var(--sans-display); color: rgba(238,233,220,.75); }
 .ccn-episode { min-height: 0; aspect-ratio: 6 / 5; display: grid; place-items: center; background: #a8aaa5; }
 .ccn-wave { width: 72%; height: 34%; background: repeating-linear-gradient(90deg, rgba(23,11,9,.55) 0 3px, transparent 3px 11px); clip-path: polygon(0 44%,4% 45%,4% 28%,8% 28%,8% 61%,12% 61%,12% 39%,16% 39%,16% 10%,20% 10%,20% 69%,24% 69%,24% 27%,28% 27%,28% 82%,32% 82%,32% 46%,36% 46%,36% 18%,40% 18%,40% 64%,44% 64%,44% 34%,48% 34%,48% 73%,52% 73%,52% 22%,56% 22%,56% 57%,60% 57%,60% 7%,64% 7%,64% 78%,68% 78%,68% 29%,72% 29%,72% 64%,76% 64%,76% 40%,80% 40%,80% 20%,84% 20%,84% 70%,88% 70%,88% 38%,92% 38%,92% 57%,96% 57%,96% 43%,100% 43%,100% 100%,0 100%); }
