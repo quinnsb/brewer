@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="images/mainlogoicon.png" />
   <title>The Brewer Blog</title>
+  <meta name="description" content="Notes on design, branding, taste, and studio life from independent designer Quinn Brewer." />
+  <link rel="canonical" href="https://brewer-fawn.vercel.app/blog.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Brewer Blog" />
+  <meta property="og:description" content="Notes on design, branding, taste, and studio life from independent designer Quinn Brewer." />
+  <meta property="og:url" content="https://brewer-fawn.vercel.app/blog.html" />
+  <meta property="og:image" content="https://brewer-fawn.vercel.app/images/quinn-headshot.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6R6FGT3QD"></script>
   <script>
@@ -17,159 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css?v=5" />
-  <style>
-    /* Blog: cream newspaper-style layout */
-    body.blog {
-      background: #f1ece3;
-      color: #1e1c19;
-    }
-    .paper {
-      max-width: 1560px;
-      margin: 0 auto;
-      border-left: 2px solid #1e1c19;
-      border-right: 2px solid #1e1c19;
-      min-height: 100vh;
-    }
-    .paper-top {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 20px 28px;
-      border-bottom: 2px solid #1e1c19;
-      font-family: var(--serif);
-      font-size: 17px;
-    }
-    .paper-top a {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-      color: #1e1c19;
-    }
-    .paper-top .logo-squircle {
-      width: 40px;
-      height: 40px;
-      color: #1e1c19;
-    }
-    .masthead {
-      text-align: center;
-      padding: clamp(30px, 5vw, 70px) 20px;
-      border-bottom: 2px solid #1e1c19;
-    }
-    .masthead h1 {
-      font-family: var(--sans-display);
-      font-size: clamp(60px, 12.5vw, 210px);
-      letter-spacing: -0.03em;
-      line-height: 0.9;
-    }
-    .dingbats {
-      display: flex;
-      justify-content: center;
-      gap: 34px;
-      padding: 22px;
-      border-bottom: 2px solid #1e1c19;
-      font-size: 26px;
-    }
-    .paper-body {
-      display: grid;
-      grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
-    }
-    .post-list { border-right: 2px solid #1e1c19; }
-    .post {
-      display: block;
-      text-decoration: none;
-      color: #1e1c19;
-      padding: clamp(30px, 4vw, 60px);
-      border-bottom: 2px solid #1e1c19;
-      transition: background 0.25s;
-    }
-    .post .post-meta {
-      display: flex;
-      justify-content: space-between;
-      font-family: var(--serif);
-      font-size: 16px;
-      margin-bottom: 26px;
-    }
-    .post h2 {
-      font-size: clamp(30px, 4vw, 58px);
-      letter-spacing: -0.02em;
-      margin-bottom: 30px;
-      max-width: 18ch;
-    }
-    .post .post-thumb {
-      aspect-ratio: 16 / 8;
-      border-radius: 14px;
-      background: linear-gradient(150deg, #ddd6c8, #cbc3b1);
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-    }
-    .post .post-thumb img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      filter: saturate(0.88) contrast(1.04);
-    }
-    .post .post-thumb span {
-      font-family: "Space Mono", monospace;
-      font-size: 11px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(30, 28, 25, 0.4);
-    }
-    .post .post-excerpt { margin-top: 26px; max-width: 68ch; font-size: 18px; }
-    .blog-side { position: relative; }
-    .side-card {
-      padding: clamp(28px, 3vw, 48px);
-      border-bottom: 2px solid #1e1c19;
-    }
-    .side-card h3 {
-      font-family: var(--serif);
-      font-weight: 600;
-      font-size: 26px;
-      line-height: 1.2;
-      margin-bottom: 18px;
-    }
-    .side-card p { font-size: 16.5px; margin-bottom: 26px; }
-    .side-card .contact-btn {
-      display: block;
-      text-align: center;
-      font-family: var(--serif);
-      font-size: 18px;
-      color: #1e1c19;
-      text-decoration: none;
-      border: 1.5px solid #1e1c19;
-      border-radius: 8px;
-      padding: 14px;
-      transition: background 0.2s, color 0.2s;
-    }
-    .side-card .contact-btn:hover { background: #1e1c19; color: #f1ece3; }
-    .side-card .cat-list { list-style: none; }
-    .side-card .cat-list li {
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: 20px;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(30, 28, 25, 0.2);
-    }
-    .side-card .cat-list li:last-child { border-bottom: 0; }
-    .paper-foot {
-      border-top: 2px solid #1e1c19;
-      text-align: center;
-      padding: 26px;
-      font-family: var(--serif);
-      font-size: 14px;
-    }
-    body.blog .menu-btn { background: #1e1c19; color: #f1ece3; }
-    body.blog .menu-bar { background: #1e1c19; }
-    body.blog .menu-bar-logo { color: #f1ece3; }
-    body.blog .menu-bar .menu-btn { background: #f1ece3; color: #1e1c19; }
-    @media (max-width: 900px) {
-      .paper-body { grid-template-columns: 1fr; }
-      .post-list { border-right: 0; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/blog.css?v=5" />
 </head>
 <body class="blog">
 
@@ -204,47 +60,21 @@
     <div class="paper-body">
       <div class="post-list">
 
-        <article class="post reveal">
+        <a class="post reveal" href="posts/better-taste.html">
           <div class="post-meta"><span>Ideas</span><span>July 2, 2026</span></div>
           <h2>The future of creative work isn't fewer ideas. It's better taste.</h2>
           <div class="post-thumb"><img src="images/stock/tommy-pascale-Y09hiNYLRug-unsplash.jpg" alt="A hand reaching into a hazy red light, photographed with a film-like texture" /></div>
           <p class="post-excerpt">AI can make the first draft nearly free. That doesn't make creative people obsolete; it makes judgment, curiosity, and knowing what deserves to exist more valuable than ever.</p>
-        </article>
+        </a>
 
-        <article class="post reveal">
-          <div class="post-meta"><span>Education</span><span>April 25, 2026</span></div>
-          <h2>5 pro tips to improve your custom merch</h2>
-          <div class="post-thumb"><span>Placeholder · post artwork</span></div>
-          <p class="post-excerpt">Brand-focused or design-focused? Screen print or embroidery? Before you print 500 tees, here are the five decisions that separate merch people actually wear from merch that lives in a drawer.</p>
-        </article>
-
-        <article class="post reveal">
-          <div class="post-meta"><span>Studio Life</span><span>January 12, 2026</span></div>
-          <h2>A Year in Review: 2025</h2>
-          <div class="post-thumb"><span>Placeholder · post artwork</span></div>
-          <p class="post-excerpt">Brands launched, websites shipped, lessons learned the hard way, and one extremely questionable decision involving a risograph. The annual look back at everything Brewer.</p>
-        </article>
-
-        <article class="post reveal">
+        <a class="post reveal" href="posts/what-birding-taught-me-about-design.html">
           <div class="post-meta"><span>Field Notes</span><span>September 18, 2025</span></div>
           <h2>What birding taught me about design</h2>
           <div class="post-thumb"><img src="images/stock/aleksandr-artiushenko-gBqiiFuP8FY-unsplash.jpg" alt="A lone bird flying above a foggy forest in a grainy 35mm photograph" loading="lazy" /></div>
-          <p class="post-excerpt">Most of birding is looking carefully, being wrong, and looking again. Conveniently, that's also most of design—plus fewer mosquitoes and considerably more PDFs.</p>
-        </article>
+          <p class="post-excerpt">Most of birding is looking carefully, being wrong, and looking again. Conveniently, that's also most of design, plus fewer mosquitoes and considerably more PDFs.</p>
+        </a>
 
-        <article class="post reveal">
-          <div class="post-meta"><span>Process</span><span>May 8, 2025</span></div>
-          <h2>What a brand strategy actually buys you</h2>
-          <div class="post-thumb"><span>Placeholder · post artwork</span></div>
-          <p class="post-excerpt">Strategy can feel like the broccoli of branding: everyone says you need it, nobody wants to pay for it. Here's what changes when you do it right, with real examples from real projects.</p>
-        </article>
-
-        <article class="post reveal">
-          <div class="post-meta"><span>Education</span><span>November 14, 2024</span></div>
-          <h2>Naming things is hard. Here's my process.</h2>
-          <div class="post-thumb"><span>Placeholder · post artwork</span></div>
-          <p class="post-excerpt">Every naming project starts with three hundred bad ideas. The trick is knowing how to generate them fast, kill them faster, and recognize the keeper when it finally shows up.</p>
-        </article>
+        <p class="post-soon">More posts are brewing. Check back soon, or say hi in the meantime.</p>
 
       </div>
 
@@ -253,17 +83,6 @@
           <h3>Did I mention I'm a designer?</h3>
           <p>Despite my skill and prolific output, this blog is just a side gig. If you or someone you know needs design work (big or small), reach out! I'd love to talk, no strings attached.</p>
           <a class="contact-btn" href="contact.html">Contact Me!</a>
-        </div>
-        <div class="side-card">
-          <h3>Categories</h3>
-          <ul class="cat-list">
-            <li>Education</li>
-            <li>Process</li>
-            <li>Ideas</li>
-            <li>Field Notes</li>
-            <li>Studio Life</li>
-            <li>Announcements</li>
-          </ul>
         </div>
       </aside>
     </div>
