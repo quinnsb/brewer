@@ -685,8 +685,8 @@ body.menu-closing .menu-dock button {
 }
 .project-card:hover .ms-shader-tile .ms-shader-logo { transform: translate(-50%, -50%) scale(1.03); }
 
-/* Featured Collegiate Church Network card: Leadership Training footage with
-   the network lockup held above it. */
+/* Featured Collegiate Church Network card: green collage with a center scrim
+   so the white network lockup stays legible. */
 .ccn-work-tile {
   background: #170b09;
   color: #eee9dc;
@@ -695,10 +695,25 @@ body.menu-closing .menu-dock button {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15, 7, 5, 0.12), rgba(15, 7, 5, 0.34));
+  background:
+    radial-gradient(ellipse 60% 55% at 50% 50%, rgba(8, 8, 6, 0.42), rgba(8, 8, 6, 0) 70%),
+    linear-gradient(180deg, rgba(8, 8, 6, 0.1), rgba(8, 8, 6, 0.35));
   z-index: 1;
   pointer-events: none;
 }
+.ccn-card-collage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  z-index: 0;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-card:hover .ccn-card-collage { transform: scale(1.02); }
+/* Kept for work-lab Option D (video baseline) */
 .ccn-card-video {
   position: absolute;
   inset: 0;

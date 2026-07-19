@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <link rel="stylesheet" href="css/styles.css?v=6" />
   <style>
     /* --- lab-only styling --- */
     .lab-intro { margin: clamp(24px, 4vw, 56px) 0 clamp(28px, 3vw, 44px); }
@@ -26,7 +26,8 @@
     }
     .lab-rgb-tile { background: #000; }
     .lab-rgb-blue-tile { background: #001f65; }
-    /* CCN collage experiments */
+    /* CCN collage experiments — Option E keeps a lighter edge-only gradient
+       so it can still be compared against the live center-scrim treatment. */
     .lab-ccn-collage {
       position: absolute;
       inset: 0;
@@ -39,11 +40,8 @@
       transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .project-card:hover .lab-ccn-collage { transform: scale(1.02); }
-    /* stronger scrim variant so the white lockup reads over the busy collage */
-    .lab-ccn-scrim::before {
-      background:
-        radial-gradient(ellipse 60% 55% at 50% 50%, rgba(8, 8, 6, 0.42), rgba(8, 8, 6, 0) 70%),
-        linear-gradient(180deg, rgba(8, 8, 6, 0.1), rgba(8, 8, 6, 0.35));
+    .lab-ccn-plain::before {
+      background: linear-gradient(180deg, rgba(15, 7, 5, 0.12), rgba(15, 7, 5, 0.34));
     }
     .lab-rgb-shader {
       position: absolute;
@@ -145,7 +143,7 @@
 
       <!-- OPTION D: current CCN video card (baseline) -->
       <section class="lab-block">
-        <p class="lab-label">Option D · CCN Leadership Training footage (current)</p>
+        <p class="lab-label">Option D · CCN Leadership Training footage (previous)</p>
         <div class="project-stack">
           <div class="project-card">
             <div class="tile ccn-work-tile">
@@ -170,7 +168,7 @@
         <p class="lab-label">Option E · Collage background</p>
         <div class="project-stack">
           <div class="project-card">
-            <div class="tile ccn-work-tile">
+            <div class="tile ccn-work-tile lab-ccn-plain">
               <img class="lab-ccn-collage" src="images/lab/ccn-collage.jpg" alt="" aria-hidden="true" />
               <img class="ccn-card-lockup" src="images/collegiatelogowhite.png" alt="" aria-hidden="true" />
               <div class="tile-caption">
@@ -187,11 +185,11 @@
 
       <!-- OPTION F: collage with a center scrim so the lockup reads -->
       <section class="lab-block">
-        <p class="lab-label">Option F · Collage + center scrim behind the lockup</p>
+        <p class="lab-label">Option F · Collage + center scrim behind the lockup (now live)</p>
         <div class="project-stack">
           <div class="project-card">
-            <div class="tile ccn-work-tile lab-ccn-scrim">
-              <img class="lab-ccn-collage" src="images/lab/ccn-collage.jpg" alt="" aria-hidden="true" />
+            <div class="tile ccn-work-tile">
+              <img class="ccn-card-collage" src="images/lab/ccn-collage.jpg" alt="" aria-hidden="true" />
               <img class="ccn-card-lockup" src="images/collegiatelogowhite.png" alt="" aria-hidden="true" />
               <div class="tile-caption">
                 <div>
