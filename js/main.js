@@ -324,7 +324,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let current = 0;
     const show = (i) => {
       steps.forEach((s, j) => (s.style.display = j === i ? "block" : "none"));
-      steps[i]?.querySelector("input")?.focus();
+      steps[i]?.querySelector("input, textarea")?.focus();
     };
     const setStatus = (heading, detail, isError = false) => {
       const final = steps[steps.length - 1];

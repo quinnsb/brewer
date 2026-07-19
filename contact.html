@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=5" />
 </head>
 <body>
 
@@ -71,8 +71,8 @@
               <p class="step">3 &#8594;</p>
               <h3>Tell me about your project.</h3>
               <label for="about">The more detail, the better</label>
-              <input id="about" name="message" type="text" placeholder="We're launching a..." required />
-              <div class="ok-row"><button class="ok-btn" type="submit">Send</button><span class="step">press Enter &#8629;</span></div>
+              <textarea id="about" name="message" rows="4" placeholder="We're launching a..." required></textarea>
+              <div class="ok-row"><button class="ok-btn" type="submit">Send</button></div>
             </div>
             <div class="form-step" role="status" aria-live="polite">
               <p class="step">&#10003;</p>
@@ -149,6 +149,6 @@
     </div>
   </main>
 
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 </html>

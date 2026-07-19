@@ -1483,9 +1483,11 @@ body.blog .site-footer { --footer-shift: 0px; }
   color: var(--ink);
   border-radius: 0;
 }
+.form-card textarea { resize: vertical; line-height: 1.35; }
 .form-card input:focus,
 .form-card textarea:focus { border-bottom-color: var(--maroon); }
-.form-card input::placeholder { color: rgba(30, 28, 25, 0.28); }
+.form-card input::placeholder,
+.form-card textarea::placeholder { color: rgba(30, 28, 25, 0.28); }
 .form-card .ok-row { display: flex; align-items: center; gap: 16px; }
 .form-card .ok-btn {
   background: var(--maroon);
