@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/mainlogoicon.png" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Hero Cut Reveal Lab · Brewer (unlisted)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/hero-cut-reveal-lab.css" />
+  <script>document.documentElement.classList.add("vcr-lab-intro");</script>
+</head>
+<body class="home hero-cut-lab">
+  <a class="site-logo" href="./" aria-label="Brewer home">
+    <span class="logo-squircle"></span>
+    <span class="logo-wordmark" data-collapse="true">Quinn Brewer</span>
+  </a>
+
+  <button class="menu-btn" aria-label="Open menu">Menu</button>
+  <div class="menu-bar">
+    <a class="menu-bar-logo" href="./" aria-label="Brewer home"></a>
+    <button class="menu-btn" aria-label="Open menu">Menu</button>
+  </div>
+  <nav class="menu-dock" aria-label="Main menu">
+    <a href="about.html">About Me</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html">Let's Talk</a>
+    <a href="blog.html">Blog</a>
+    <button class="menu-close">Close</button>
+  </nav>
+
+  <button class="lab-replay" type="button" data-vcr-replay aria-label="Replay heading animation" title="Replay heading animation">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M20 11a8 8 0 0 0-14.8-4M4 4v5h5M4 13a8 8 0 0 0 14.8 4M20 20v-5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <main class="main">
+    <div class="shell">
+      <section class="hero">
+        <h1 class="h-display vcr-heading" data-vertical-cut-reveal data-vcr-stagger="22">Marketing, web branding, writing, <br />and all things design.</h1>
+      </section>
+
+      <section aria-label="Featured work preview">
+        <div class="project-stack">
+          <a class="project-card reveal" href="projects/ms-consulting.html">
+            <div class="tile ms-work-tile ms-shader-tile">
+              <canvas class="ms-shader" aria-hidden="true"></canvas>
+              <img class="ms-shader-logo" src="images/projects/ms-consulting/logo-h-white.png" alt="M&amp;S Consulting" />
+              <div class="tile-caption">
+                <div>
+                  <h3>M&amp;S Consulting</h3>
+                  <p>Building a marketing engine that makes a consultancy more human, discoverable, and connected.</p>
+                </div>
+                <span class="arr"><svg class="tile-arrow-svg" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 12h44M34 2l10 10-10 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/main.js?v=2"></script>
+  <script src="js/ms-shader.js"></script>
+  <script src="js/vertical-cut-reveal.js"></script>
+</body>
+</html>
