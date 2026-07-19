@@ -26,6 +26,25 @@
     }
     .lab-rgb-tile { background: #000; }
     .lab-rgb-blue-tile { background: #001f65; }
+    /* CCN collage experiments */
+    .lab-ccn-collage {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      z-index: 0;
+      transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .project-card:hover .lab-ccn-collage { transform: scale(1.02); }
+    /* stronger scrim variant so the white lockup reads over the busy collage */
+    .lab-ccn-scrim::before {
+      background:
+        radial-gradient(ellipse 60% 55% at 50% 50%, rgba(8, 8, 6, 0.42), rgba(8, 8, 6, 0) 70%),
+        linear-gradient(180deg, rgba(8, 8, 6, 0.1), rgba(8, 8, 6, 0.35));
+    }
     .lab-rgb-shader {
       position: absolute;
       inset: 0;
@@ -116,6 +135,68 @@
                 <div>
                   <h3>M&amp;S Consulting</h3>
                   <p>Building a marketing engine that makes a consultancy more human, discoverable, and connected.</p>
+                </div>
+                <span class="arr"><svg class="tile-arrow-svg" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 12h44M34 2l10 10-10 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPTION D: current CCN video card (baseline) -->
+      <section class="lab-block">
+        <p class="lab-label">Option D · CCN Leadership Training footage (current)</p>
+        <div class="project-stack">
+          <div class="project-card">
+            <div class="tile ccn-work-tile">
+              <video class="ccn-card-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+                <source src="images/leadership-training-legacy-web.mp4" type="video/mp4" />
+              </video>
+              <img class="ccn-card-lockup" src="images/collegiatelogowhite.png" alt="" aria-hidden="true" />
+              <div class="tile-caption">
+                <div>
+                  <h3>Collegiate Church Network</h3>
+                  <p>Building the communications engine behind email, podcast, annual-report, video, and donor-development work.</p>
+                </div>
+                <span class="arr"><svg class="tile-arrow-svg" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 12h44M34 2l10 10-10 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPTION E: green collage background, straight -->
+      <section class="lab-block">
+        <p class="lab-label">Option E · Collage background</p>
+        <div class="project-stack">
+          <div class="project-card">
+            <div class="tile ccn-work-tile">
+              <img class="lab-ccn-collage" src="images/lab/ccn-collage.jpg" alt="" aria-hidden="true" />
+              <img class="ccn-card-lockup" src="images/collegiatelogowhite.png" alt="" aria-hidden="true" />
+              <div class="tile-caption">
+                <div>
+                  <h3>Collegiate Church Network</h3>
+                  <p>Building the communications engine behind email, podcast, annual-report, video, and donor-development work.</p>
+                </div>
+                <span class="arr"><svg class="tile-arrow-svg" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 12h44M34 2l10 10-10 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPTION F: collage with a center scrim so the lockup reads -->
+      <section class="lab-block">
+        <p class="lab-label">Option F · Collage + center scrim behind the lockup</p>
+        <div class="project-stack">
+          <div class="project-card">
+            <div class="tile ccn-work-tile lab-ccn-scrim">
+              <img class="lab-ccn-collage" src="images/lab/ccn-collage.jpg" alt="" aria-hidden="true" />
+              <img class="ccn-card-lockup" src="images/collegiatelogowhite.png" alt="" aria-hidden="true" />
+              <div class="tile-caption">
+                <div>
+                  <h3>Collegiate Church Network</h3>
+                  <p>Building the communications engine behind email, podcast, annual-report, video, and donor-development work.</p>
                 </div>
                 <span class="arr"><svg class="tile-arrow-svg" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 12h44M34 2l10 10-10 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               </div>
