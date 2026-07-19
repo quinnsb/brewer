@@ -352,7 +352,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const name = `${val("first")} ${val("last")}`.trim();
         data.set("name", name);
         data.set("_replyto", val("email"));
-        data.set("_subject", name ? `Portfolio inquiry from ${name}` : "Portfolio inquiry from Brewer");
+        data.set("_subject", name ? `Portfolio inquiry from ${name}` : "Portfolio inquiry");
         submitButton?.setAttribute("disabled", "true");
         if (submitButton) submitButton.textContent = "Sending...";
         try {
