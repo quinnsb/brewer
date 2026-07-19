@@ -1432,9 +1432,8 @@ body.menu-closing .menu-dock button {
   min-height: 88vh;
   padding-top: 130px;
 }
-/* sized so "I'm Quinn Brewer." always holds a single line in the hero column,
-   at every viewport width (verified 320px through 1800px) */
-.about-hero .h-display { font-size: clamp(30px, 4.7vw, 82px); }
+/* full h-display scale; the explicit <br /> in the markup keeps "I'm" with
+   "Quinn", so the name wraps as "I'm Quinn / Brewer." when it must */
 
 /* Trust-style mission statement: big sans copy spanning the full shell */
 .mission {
