@@ -321,7 +321,6 @@
 .ccn-close-grid p { font-size: 15px; line-height: 1.55; color: rgba(242,235,222,.65); }
 
 .ccn-case .prev-next { margin-top: clamp(120px, 15vw, 230px); }
-.ccn-case .site-footer { --footer-shift: clamp(0px, 4.35vw, 72px); }
 
 @media (max-width: 1000px) {
   .ccn-intro,
@@ -380,7 +379,6 @@
   .ccn-close-grid article + article { padding: 28px 0 34px; border-right: 0; border-bottom: 1px solid var(--ccn-line); }
   .ccn-close-grid article:last-child { border-bottom: 0; }
   .ccn-close-grid h3 { margin-top: 30px; }
-  .ccn-case .site-footer { --footer-shift: 0px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -158,6 +158,10 @@ body.blog .menu-bar .menu-btn { background: #f1ece3; color: #1e1c19; }
   .paper-body { grid-template-columns: 1fr; }
   .post-list { border-right: 0; }
 }
+@media (max-width: 620px) {
+  /* keep the article hero from swallowing the first phone screen */
+  .article-hero img { max-height: 52vh; }
+}
 
 /* ----- article pages ----- */
 .article-head {
