@@ -18,6 +18,153 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css?v=5" />
+  <style>
+    /* --- 404-only styling --- */
+    .lost-wrap {
+      min-height: 92vh;
+      display: grid;
+      align-content: center;
+      position: relative;
+      overflow: visible;
+    }
+    .lost-eyebrow {
+      font-family: "Space Mono", monospace;
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      margin-bottom: 18px;
+    }
+    .lost-big {
+      font-family: var(--sans-display);
+      font-size: clamp(110px, 24vw, 380px);
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+      margin: 0 0 10px -0.04em;
+    }
+    .lost-big .zero { color: var(--maroon); }
+    .lost-sub {
+      font-size: clamp(26px, 4vw, 52px);
+      letter-spacing: -0.02em;
+      max-width: 16ch;
+      margin-bottom: 26px;
+    }
+    .lost-copy { max-width: 52ch; }
+    .lost-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      margin-top: 40px;
+    }
+    .lost-actions .arrow-link { font-size: 18px; }
+    .retry-btn {
+      background: transparent;
+      border: 1.5px solid currentColor;
+      border-radius: 999px;
+      color: inherit;
+      font: inherit;
+      font-size: 16px;
+      padding: 12px 22px;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .retry-btn:active { transform: scale(0.97); }
+    .retry-btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+
+    /* missing-page poster */
+    .poster {
+      position: absolute;
+      right: clamp(0px, 4vw, 60px);
+      top: 50%;
+      transform: translateY(-58%) rotate(3.5deg);
+      width: clamp(230px, 24vw, 330px);
+      background: var(--cream, #f1ece3);
+      color: #1e1c19;
+      border-radius: 6px;
+      padding: 26px 24px 22px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+      font-family: "Space Mono", monospace;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .poster::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-2deg);
+      width: 92px;
+      height: 26px;
+      background: rgba(255, 185, 0, 0.75);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    }
+    .poster h2 {
+      font-family: inherit;
+      font-size: 24px;
+      letter-spacing: 0.14em;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .poster dl { margin: 0; }
+    .poster dt {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 10px;
+      opacity: 0.55;
+      margin-top: 12px;
+    }
+    .poster dd { margin: 2px 0 0; }
+    .poster .tear {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1.5px dashed rgba(30, 28, 25, 0.35);
+      text-align: center;
+      font-size: 11px;
+      opacity: 0.65;
+    }
+    @media (min-width: 981px) {
+      .lost-wrap { padding-right: clamp(280px, 30vw, 420px); }
+    }
+    @media (max-width: 980px) {
+      .poster {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: rotate(2deg);
+        margin: 56px auto 0;
+      }
+      .lost-wrap { padding-top: 110px; padding-bottom: 40px; }
+    }
+
+    /* the culprit */
+    .bird {
+      position: fixed;
+      top: 18vh;
+      left: -80px;
+      width: 46px;
+      height: auto;
+      opacity: 0.9;
+      pointer-events: none;
+      z-index: 5;
+      animation: flyby 14s linear infinite;
+      animation-delay: 2s;
+    }
+    .bird svg { display: block; width: 100%; height: auto; }
+    .bird .wing { animation: flap 0.5s ease-in-out infinite alternate; transform-origin: 50% 55%; }
+    @keyframes flyby {
+      0% { transform: translate(0, 0) rotate(4deg); }
+      45% { transform: translate(60vw, -9vh) rotate(-3deg); }
+      100% { transform: translate(120vw, -16vh) rotate(2deg); }
+    }
+    @keyframes flap {
+      from { transform: scaleY(1); }
+      to { transform: scaleY(0.35); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .bird { display: none; }
+    }
+  </style>
 </head>
 <body>
 
@@ -26,12 +173,44 @@
     <span class="logo-wordmark">Quinn Brewer</span>
   </a>
 
+  <div class="bird" aria-hidden="true">
+    <svg viewBox="0 0 46 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 20 C10 16, 20 14, 30 15 L44 12 L34 19 C26 24, 14 24, 6 22 Z" fill="currentColor"/>
+      <path class="wing" d="M22 16 C24 8, 30 3, 38 2 C33 8, 29 13, 27 17 Z" fill="currentColor"/>
+      <circle cx="40" cy="13.4" r="0.9" fill="var(--maroon, #5E1E10)"/>
+    </svg>
+  </div>
+
   <main class="main">
     <div class="shell">
-      <section class="section" style="min-height: 65vh; display: grid; align-content: center;">
-        <h1 class="h-display split">Well, this page flew off.</h1>
-        <p class="body-copy reveal" style="margin-top: 24px; max-width: 48ch;">Whatever used to live here has migrated. Let's get you somewhere warmer.</p>
-        <p class="reveal" style="margin-top: 36px;"><a class="pill-btn maroon" href="/">Back to the homepage</a></p>
+      <section class="lost-wrap">
+        <p class="lost-eyebrow reveal">Error 404 &middot; Rare sighting</p>
+        <h1 class="lost-big reveal" aria-label="404">4<span class="zero">0</span>4</h1>
+        <p class="lost-sub split">This page flew the coop.</p>
+        <p class="body-copy lost-copy reveal">Possible explanations: the page migrated, the link molted, or I deleted it and told no one. Field experts agree it was probably that last one.</p>
+        <div class="lost-actions reveal">
+          <a class="pill-btn maroon" href="/">Back to the homepage</a>
+          <a class="arrow-link" href="/work.html">See the work <span class="arr">&#8594;</span></a>
+          <a class="arrow-link" href="/blog.html">Read the blog <span class="arr">&#8594;</span></a>
+          <button class="retry-btn" type="button" data-retry>Refresh, that always works</button>
+        </div>
+
+        <aside class="poster reveal d1" aria-label="Missing page poster">
+          <h2>MISSING</h2>
+          <dl>
+            <dt>Species</dt>
+            <dd>One (1) web page</dd>
+            <dt>Answers to</dt>
+            <dd class="poster-url">this exact URL</dd>
+            <dt>Last seen</dt>
+            <dd>Looking gorgeous, honestly</dd>
+            <dt>Distinguishing marks</dt>
+            <dd>None. That is the whole problem.</dd>
+            <dt>Reward</dt>
+            <dd>My sincere gratitude and one firm handshake</dd>
+          </dl>
+          <p class="tear">if found, please clear your cache and speak softly</p>
+        </aside>
       </section>
 
       <footer class="site-footer">
@@ -41,5 +220,35 @@
   </main>
 
   <script src="/js/main.js?v=5"></script>
+  <script>
+    (() => {
+      /* the poster lists the path the visitor actually tried */
+      const slot = document.querySelector(".poster-url");
+      if (slot && window.location.pathname && window.location.pathname !== "/404.html") {
+        slot.textContent = window.location.pathname;
+      }
+
+      /* the refresh button slowly comes to terms with reality */
+      const btn = document.querySelector("[data-retry]");
+      if (!btn) return;
+      const stages = [
+        "Nope.",
+        "Still nothing.",
+        "Third time's not the charm.",
+        "It's really gone. I'm sorry.",
+        "Please. Go home. It's nicer there.",
+      ];
+      let i = 0;
+      btn.addEventListener("click", () => {
+        if (i < stages.length) {
+          btn.textContent = stages[i];
+          i += 1;
+        }
+        if (i === stages.length) {
+          btn.setAttribute("disabled", "true");
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
