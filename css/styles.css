@@ -230,7 +230,8 @@ body.home .testimonial-section {
 }
 /* case-study pages get a larger mark, sized to overlay the full-bleed hero,
    and it stays pinned top-left instead of fading out on scroll */
-.case-page .site-logo { --logo-height: clamp(64px, 6.5vw, 118px); }
+.case-page .site-logo,
+.about-page .site-logo { --logo-height: clamp(64px, 6.5vw, 118px); }
 .case-page .site-logo.is-scrolled {
   opacity: 1;
   transform: none;
