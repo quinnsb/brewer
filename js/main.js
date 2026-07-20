@@ -412,7 +412,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!response.ok) throw new Error("Formspree submission failed");
         ajaxForm.reset();
         ajaxForm.hidden = true;
-        if (success) success.hidden = false;
+        if (success) {
+          success.hidden = false;
+          // Deferred so the gif only costs bandwidth once someone actually submits.
+          success.querySelectorAll("img[data-gif-src]").forEach((gif) => {
+            if (!gif.src) gif.src = gif.dataset.gifSrc;
+          });
+        }
       } catch {
         if (error) error.hidden = false;
       } finally {
