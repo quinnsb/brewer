@@ -1773,16 +1773,22 @@ body.menu-closing .menu-dock button {
   justify-content: center;
 }
 .testimonial-success h2 {
-  max-width: 10ch;
-  margin-top: 1rem;
-  font: 600 4.5rem/.94 var(--sans-display);
+  max-width: 40ch;
+  margin-top: 1.25rem;
+  font: 600 20px/1.3 var(--sans);
   letter-spacing: 0;
 }
 .testimonial-success p:not(.step) {
   max-width: 46ch;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   color: rgba(30, 28, 25, 0.68);
-  font: 18px/1.55 var(--sans);
+  font: 16px/1.55 var(--sans);
+}
+.testimonial-success-gif {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 14px;
 }
 .testimonial-home-link {
   width: fit-content;
@@ -1796,8 +1802,7 @@ body.menu-closing .menu-dock button {
   .collect-card {
     padding: 3rem;
   }
-  .collect-card-head h1,
-  .testimonial-success h2 {
+  .collect-card-head h1 {
     font-size: 3.75rem;
   }
 }
@@ -1812,8 +1817,7 @@ body.menu-closing .menu-dock button {
   .collect-card-head {
     padding-bottom: 2rem;
   }
-  .collect-card-head h1,
-  .testimonial-success h2 {
+  .collect-card-head h1 {
     font-size: 2.7rem;
     line-height: 0.98;
   }
