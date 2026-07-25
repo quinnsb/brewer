@@ -117,12 +117,13 @@
 .ccn-lede p + p,
 .ccn-copy-row p + p { margin-top: 1.2em; }
 .ccn-meta { display: grid; gap: 34px; font-family: var(--sans); }
-.ccn-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.ccn-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+/* matches the focus pills on the other case pages */
 .ccn-tags span {
   border: 1px solid rgba(242,235,222,.45);
-  border-radius: 999px;
-  padding: 5px 10px 6px;
-  font-size: 12px;
+  border-radius: 0.8em;
+  padding: 0.72em 1.25em;
+  font-size: 14px;
   line-height: 1;
 }
 .ccn-meta dl {

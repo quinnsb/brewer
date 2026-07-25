@@ -1,0 +1,144 @@
+/* ============================================================
+   LAB — homepage typography + palette experiment
+   A duplicate of the real homepage with three changes:
+   Degular swapped for Helvetica Bold, headings set all-caps,
+   and the warm dark theme swapped for a neutral near-black ground
+   carrying the nine-swatch reference palette.
+   Loaded only by homepage-lab.html and scoped to .lab-home so
+   nothing here can reach the production pages.
+   ============================================================ */
+
+.lab-home {
+  /* palette pairs, read off the reference grid left-to-right, top-to-bottom.
+     each line is a background and the mark colour that sits on it. */
+  --lab-sand: #cfc7b6;      --lab-sand-ink: #0d0d0d;
+  --lab-lime: #d7f0a2;      --lab-lime-ink: #0b4a26;
+  --lab-navy: #111c3e;      --lab-navy-ink: #a9f0e7;
+  --lab-brown: #5c4415;     --lab-brown-ink: #f7e63e;
+  --lab-burgundy: #4a0518;  --lab-burgundy-ink: #f2a9c1;
+  --lab-green: #05612f;     --lab-green-ink: #99ef99;
+  --lab-red: #fb3c41;       --lab-red-ink: #3a0518;
+  --lab-blue: #1e9ce9;      --lab-blue-ink: #0c1b3c;
+  --lab-pink: #f4aec5;      --lab-pink-ink: #fa3c41;
+
+  /* Neutral near-black ground so the palette blocks read as pure colour against
+     it. Sand carries body text; aqua handles accents. */
+  --lab-ground: #171717;
+  --bg: var(--lab-ground);
+  --cream: var(--lab-sand);
+  --cream-dim: rgba(207, 199, 182, 0.68);
+  --ink: var(--lab-blue-ink);
+  --card: #202020;
+  --card-2: #292929;
+  --placeholder: #202020;
+  --placeholder-2: #292929;
+  --orange: var(--lab-red);
+  --blurple: var(--lab-blue);
+  --yellow: var(--lab-brown-ink);
+  --lavender: var(--lab-pink);
+  --green: var(--lab-green);
+  --maroon: var(--lab-burgundy);
+
+  /* Helvetica Bold in place of Degular, for both text and display */
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html:has(.lab-home),
+.lab-home { background: var(--lab-ground); }
+
+/* ---------- type ---------- */
+
+/* Degular carries its weight in the design; Helvetica needs pushing to bold to
+   hold the same presence. Headings are set all-caps, so the tight tracking that
+   suits lowercase display type is relaxed back toward neutral. */
+.lab-home h1,
+.lab-home h2,
+.lab-home h3,
+.lab-home h4,
+.lab-home .h-display,
+.lab-home .tile-caption h3,
+.lab-home .footer-cta h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+}
+.lab-home .logo-wordmark,
+.lab-home .pill-btn,
+.lab-home .menu-btn,
+.lab-home .menu-dock a,
+.lab-home .menu-dock button,
+.lab-home .pn-name,
+.lab-home .contact-btn { font-weight: 700; }
+
+/* the lockup is sized to the "Q" of the wordmark, and Helvetica's Q is both
+   taller and shallower-tailed than Degular's, so the base ratios are re-measured
+   here rather than inherited */
+.lab-home .site-logo {
+  --q-cap: calc(var(--wordmark-size) * 0.731);
+  --q-tail: calc(var(--wordmark-size) * 0.066);
+}
+
+/* ---------- chrome ---------- */
+
+.lab-home .site-logo { color: var(--lab-sand); }
+.lab-home .menu-btn { background: var(--lab-navy-ink); color: var(--lab-navy); }
+.lab-home .menu-bar { background: var(--lab-ground); color: var(--lab-sand); }
+.lab-home .menu-bar-logo { color: var(--lab-sand); }
+.lab-home .menu-dock { background: var(--lab-burgundy); }
+.lab-home .menu-dock a,
+.lab-home .menu-dock button { background: var(--lab-burgundy-ink); color: var(--lab-burgundy); }
+
+/* ---------- colour-blocked sections ---------- */
+
+.lab-home .capabilities-section {
+  background: var(--lab-lime);
+  color: var(--lab-lime-ink);
+  border-radius: var(--radius);
+  padding: clamp(48px, 6vw, 96px);
+}
+/* every descendant, so nothing inherits the sand meant for the dark ground */
+.lab-home .capabilities-section :where(h2, h3, h4, p, li, a, span, strong, em) { color: var(--lab-lime-ink); }
+.lab-home .caps-grid li:hover { color: var(--lab-lime-ink); }
+
+.lab-home .about-teaser {
+  background: var(--lab-sand);
+  color: var(--lab-sand-ink);
+  border-radius: var(--radius);
+  padding: clamp(48px, 6vw, 96px);
+}
+.lab-home .about-teaser :where(h2, h3, h4, p, li, a, span, strong, em) { color: var(--lab-sand-ink); }
+
+/* one pair per testimonial card, so the carousel steps through the palette */
+.lab-home .testimonial-section { background: var(--lab-ground); }
+.lab-home .testimonial-card.card-1 { background: var(--lab-burgundy); color: var(--lab-burgundy-ink); }
+.lab-home .testimonial-card.card-2 { background: var(--lab-green); color: var(--lab-green-ink); }
+.lab-home .testimonial-card.card-3 { background: var(--lab-blue); color: var(--lab-blue-ink); }
+.lab-home .testimonial-attribution a { color: inherit; }
+
+.lab-home .site-footer,
+.lab-home .footer-panel { background: var(--lab-brown); color: var(--lab-brown-ink); }
+.lab-home .footer-cta h2 { color: var(--lab-brown-ink); }
+.lab-home .footer-cta .pill-btn { background: var(--lab-brown-ink); color: var(--lab-brown); }
+.lab-home .footer-legal .fine-print,
+.lab-home .footer-legal a { color: var(--lab-brown-ink); }
+.lab-home .socials a { background: var(--lab-brown-ink); color: var(--lab-brown); }
+
+/* work tiles keep their own artwork; the caption picks up the palette */
+.lab-home .tile-caption { background: var(--lab-sand); color: var(--lab-sand-ink); }
+.lab-home .tile-caption h3 { color: var(--lab-sand-ink); }
+.lab-home .tile-caption p { color: rgba(13, 13, 13, 0.78); }
+/* red takes the dark burgundy mark it is paired with in the grid; sand on red
+   only reaches 2.2:1 and fails at any size */
+.lab-home .arr { background: var(--lab-red); color: var(--lab-red-ink); }
+
+.lab-home .pill-btn { background: var(--lab-red); color: var(--lab-red-ink); }
+.lab-home .pill-btn.maroon { background: var(--lab-burgundy); color: var(--lab-burgundy-ink); }
+.lab-home .pill-arrow { background: var(--lab-red); color: var(--lab-red-ink); }
+
+/* aqua eyebrows on the dark ground; :where keeps this weak enough that the
+   colour-blocked sections above always override it */
+.lab-home :where(.eyebrow) { color: var(--lab-navy-ink); }
+
+/* selected text inherits the red/sand pair otherwise, which lands at 2.2:1 */
+.lab-home ::selection { background: var(--lab-red); color: var(--lab-red-ink); }
