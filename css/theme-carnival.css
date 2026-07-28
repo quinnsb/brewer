@@ -385,6 +385,16 @@ html:has(.theme-carnival),
    on the image — cream rather than a colour that competes with the work. */
 .theme-carnival .tile-caption { background: var(--t-ink); color: var(--t-ground); }
 
+/* Collegiate is the exception: its caption takes the client's own green with
+   white type. #1f7d31 is the green the CCN case study runs on (--ccn-bg), and
+   it clears AA against white at 5.2:1 — the brighter green inside the collage
+   (#33a846) only manages 3.07:1, which the description copy would fail. The
+   description sits at 90% rather than the usual 75% to hold 4.5:1. */
+.theme-carnival .ccn-work-tile .tile-caption { background: #1f7d31; color: #fff; }
+.theme-carnival .ccn-work-tile .tile-caption p {
+  color: color-mix(in srgb, currentColor 90%, transparent);
+}
+
 /* eyebrows on the dark ground; :where keeps this weak enough that the
    colour-blocked sections above always override it */
 .theme-carnival :where(.eyebrow) { color: var(--t-a2); }
