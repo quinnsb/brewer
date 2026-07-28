@@ -196,8 +196,8 @@ html:has(.theme-carnival),
 
 /* the mobile bar is a light pill floating on the ground, so it keeps a
    light fill and dark mark rather than inverting to the ground colour */
-.theme-carnival .menu-bar { background: var(--t-a3); color: var(--t-a3-on); }
-.theme-carnival .menu-bar-logo { color: var(--t-a3-on); }
+.theme-carnival .menu-bar { background: var(--t-ink); color: var(--t-ground); }
+.theme-carnival .menu-bar-logo { color: var(--t-ground); }
 .theme-carnival .menu-bar .menu-btn { background: var(--t-a1); color: var(--t-a1-on); }
 
 /* the dock itself stays transparent — it is a fixed container the pills
@@ -221,6 +221,11 @@ html:has(.theme-carnival),
   border-radius: var(--radius);
   padding: clamp(48px, 6vw, 96px);
 }
+/* 48px a side is a sixth of a 375px screen spent on padding. Pulling it back
+   returns that width to the list, which is the thing that was short. */
+@media (max-width: 620px) {
+  .theme-carnival .capabilities-section { padding: clamp(28px, 7vw, 48px); }
+}
 /* every descendant, so nothing inherits the type colour meant for the ground */
 .theme-carnival .capabilities-section :where(h2, h3, h4, p, li, a, span, strong, em) { color: var(--t-panel-on); }
 .theme-carnival .caps-grid li:hover { color: var(--t-panel-on); }
@@ -231,13 +236,11 @@ html:has(.theme-carnival),
    One declaration pair. Everything inside the card inherits from it, so the
    fill and the ink move together by construction. Do not add per-descendant
    colours here — that is exactly how a surface ends up light-on-light. */
-.theme-carnival .teaser-card { background: var(--t-a3); color: var(--t-a3-on); }
-
-/* The one deliberate exception to the rule above: the display heading is set
-   in the near-black rather than the card's navy on-colour. 6.4:1 on this blue
-   — the strongest contrast of the three options tried here (cream was 2.3:1,
-   the navy 5.4:1), so it is both the loudest and the most legible. */
-.theme-carnival .teaser-card h2 { color: var(--t-surface); }
+/* the deep maroon carrying its pink — 8.0:1, and the one pairing in the
+   palette built to be read this way round. The heading takes no override of
+   its own: on this fill the near-black it used to use would sit at 1.2:1, so
+   it inherits the pink with everything else in the card. */
+.theme-carnival .teaser-card { background: var(--t-cta); color: var(--t-cta-on); }
 
 /* "More about me" was a bare text link that disappeared into the card. As the
    only action on the panel it gets a filled pill in the yellow accent, which

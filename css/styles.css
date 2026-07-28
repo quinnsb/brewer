@@ -2537,7 +2537,6 @@ html.home-intro .site-logo {
      photo goes back to setting its own shape — and the desktop height cap
      goes with it, or it would crop the 6/7 ratio it just asked for */
   .about-teaser .photo-ph { aspect-ratio: 6 / 7; height: auto; max-height: none; }
-  .caps-grid { grid-template-columns: 1fr 1fr; }
   .menu-dock { gap: 0; padding: 20px; }
   .menu-dock a, .menu-dock button { height: 54px; padding: 0 22px; font-size: 19px; }
   .site-logo { --logo-height: 44px; top: 22px; left: 20px; max-width: calc(100vw - 40px); }
@@ -2565,6 +2564,13 @@ html.home-intro .site-logo {
 }
 
 @media (max-width: 620px) {
+  /* Two columns stop working here. Inside the panel's padding there is only
+     ~240px of usable width, and `1fr` refuses to shrink below the longest
+     word, so the pair came out lopsided (145px against 109px) with nearly
+     every entry wrapping onto a second line. One column per group gives each
+     entry the full measure and the wrapping goes away. */
+  .caps-grid { grid-template-columns: 1fr; gap: 30px; }
+
   /* floating menu pill is replaced by the bottom bar here — reclaim the
      left rail so content goes full-width again */
   .main, body.home .main { padding-left: 0; }
