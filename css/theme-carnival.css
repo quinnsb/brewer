@@ -80,6 +80,10 @@
 
   --t-tint-1: #f2b5cd;
   --t-tint-2: #e79db8;
+
+  /* warm brown, added for the about-teaser card. Not from the original
+     pairing sheet — it takes the tint-1 pink as its ink at 6.3:1. */
+  --t-brown: #51381d;    --t-brown-on: #f2b5cd;
 }
 
 /* ============================================================
@@ -236,11 +240,10 @@ html:has(.theme-carnival),
    One declaration pair. Everything inside the card inherits from it, so the
    fill and the ink move together by construction. Do not add per-descendant
    colours here — that is exactly how a surface ends up light-on-light. */
-/* the deep maroon carrying its pink — 8.0:1, and the one pairing in the
-   palette built to be read this way round. The heading takes no override of
-   its own: on this fill the near-black it used to use would sit at 1.2:1, so
-   it inherits the pink with everything else in the card. */
-.theme-carnival .teaser-card { background: var(--t-cta); color: var(--t-cta-on); }
+/* warm brown carrying the pink — 6.3:1. The heading takes no override of its
+   own: on this fill the near-black it once used would sit at 1.4:1, so it
+   inherits the pink with everything else in the card. */
+.theme-carnival .teaser-card { background: var(--t-brown); color: var(--t-brown-on); }
 
 /* "More about me" was a bare text link that disappeared into the card. As the
    only action on the panel it gets a filled pill in the yellow accent, which
