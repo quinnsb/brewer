@@ -19,8 +19,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet" />
+  <!-- Roboto Flex: variable grotesk with weight + slant axes, for the cursor-proximity hero -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:slnt,wght@-10..0,100..1000&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css?v=16" />
-  <link rel="stylesheet" href="css/homepage-lab.css?v=26" />
+  <link rel="stylesheet" href="css/homepage-lab.css?v=27" />
   <script>document.documentElement.classList.add("home-intro");</script>
 </head>
 <body class="home lab-home" data-lab-theme="original" data-lab-font="degular">
@@ -51,8 +53,20 @@
     <div class="shell">
 
       <!-- HERO -->
+      <!-- LAB: variable-font cursor-proximity effect. Tweak the data-* knobs to
+           mess with it: radius (px falloff), weight range, slant range, and the
+           falloff exponent (>1 = tighter hotspot, <1 = broader). -->
       <section class="hero">
-        <h1 class="h-display split">Marketing, web branding, writing, <br />and all things design.</h1>
+        <h1
+          class="h-display vf-proximity"
+          data-vf-proximity
+          data-vf-radius="200"
+          data-vf-wght-from="400"
+          data-vf-wght-to="900"
+          data-vf-slnt-from="0"
+          data-vf-slnt-to="-10"
+          data-vf-falloff="1"
+        >Marketing, web branding, writing, <br />and all things design.</h1>
       </section>
 
       <!-- FEATURED WORK -->
@@ -259,5 +273,6 @@
   <script src="js/main.js?v=5"></script>
   <script src="js/ms-shader.js"></script>
   <script src="js/lab-theme.js?v=11"></script>
+  <script src="js/vf-proximity.js?v=1"></script>
 </body>
 </html>

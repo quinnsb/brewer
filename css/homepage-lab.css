@@ -861,3 +861,24 @@ html:has(.lab-themed),
   /* switcher sits at the bottom on mobile, so open the list upward */
   .lab-select-menu { top: auto; bottom: calc(100% + 6px); }
 }
+
+/* ============================================================
+   LAB — variable-font cursor-proximity hero (js/vf-proximity.js)
+   Roboto Flex carries the 'wght' + 'slnt' axes the effect drives.
+   ============================================================ */
+.lab-home .hero .vf-proximity {
+  font-family: "Roboto Flex", var(--sans-display);
+  font-weight: 400;
+  font-variation-settings: "wght" 400, "slnt" 0;
+}
+.vf-proximity .vf-char {
+  display: inline-block;
+  font-variation-settings: inherit;
+  /* short ease so the weight/slant glides toward the cursor and settles back
+     smoothly rather than snapping frame to frame */
+  transition: font-variation-settings 0.12s ease-out;
+  will-change: font-variation-settings;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vf-proximity .vf-char { transition: none; }
+}
