@@ -196,7 +196,9 @@ html:has(.theme-carnival),
 /* ---------- chrome ---------- */
 
 .theme-carnival .site-logo { color: var(--t-ink); }
-.theme-carnival .menu-btn { background: var(--t-a2); color: var(--t-a2-on); }
+/* cream fill with the charcoal ground as its mark (13.5:1), matching the
+   light-pill treatment used on the mobile menu bar */
+.theme-carnival .menu-btn { background: var(--t-ink); color: var(--t-ground); }
 
 /* the mobile bar is a light pill floating on the ground, so it keeps a
    light fill and dark mark rather than inverting to the ground colour */
