@@ -475,7 +475,8 @@ html:has(.lab-themed),
 .lab-themed .footer-panel { background: var(--t-surface); color: var(--t-surface-on); }
 .lab-themed .footer-cta h2 { color: var(--t-surface-on); }
 .lab-themed .footer-legal .fine-print,
-.lab-themed .footer-legal .fine-print a { color: var(--t-strip-on); }
+.lab-themed .footer-legal .fine-print a,
+.lab-themed .footer-legal .footer-nav a { color: var(--t-strip-on); }
 
 /* Four social buttons in a row, so four distinct fills. These pull a1..a4,
    which the contract guarantees are distinct from each other — the graphic

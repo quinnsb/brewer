@@ -1440,8 +1440,33 @@ p + .case-btn { margin-top: 34px; }
   min-height: clamp(92px, 9vw, 126px);
   display: grid;
   place-items: center;
-  padding: 24px max(var(--gutter), calc((100vw - var(--content-max)) / 2 + var(--gutter)));
+  gap: clamp(14px, 1.6vw, 22px);
+  padding: 28px max(var(--gutter), calc((100vw - var(--content-max)) / 2 + var(--gutter)));
   color: var(--ink);
+}
+/* quick nav in the sub-footer: the floating menu button hides near the
+   bottom of the page, so these give a reliable way back into the site */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 26px;
+  font-family: "Space Mono", monospace;
+  font-size: clamp(11px, 0.9vw, 14px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.footer-nav a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+}
+.footer-nav a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 .fine-print {
   max-width: 1280px;
