@@ -312,7 +312,9 @@ html:has(.theme-carnival),
   z-index: 0;
   overflow: hidden;
   width: auto;
-  justify-self: start;
+  /* .footer-cta and .footer-brand are the same box, so ending the button at
+     the grid's right edge lands it flush with the social icons below it */
+  justify-self: end;
   padding: clamp(18px, 1.9vw, 26px) clamp(26px, 2.6vw, 40px);
   transition: border-radius 0.8s cubic-bezier(0.65, 0, 0.35, 1), color 0.3s ease;
 }
