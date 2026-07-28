@@ -74,7 +74,9 @@
   --t-panel: #d4ee97;    --t-panel-on: #0e4d2e;  /* lime / forest 7.8:1 */
   --t-graphic: #9fe39a;  --t-graphic-on: #0c5a2f;  /* light green / forest */
   --t-cta: #470a1d;      --t-cta-on: #e8a6c0;  /* maroon pill on lime, pink arrow */
-  --t-strip: #cdc5b2;    --t-strip-on: #141414;  /* sand / black 10.7:1 */
+  /* the bottom strip is the last colour the page leaves you on, so it takes a
+     tint rather than the neutral sand it used to — near-black on it is 10.8:1 */
+  --t-strip: #f2b5cd;    --t-strip-on: #141414;  /* pink / black 10.8:1 */
 
   --t-tint-1: #f2b5cd;
   --t-tint-2: #e79db8;
@@ -204,8 +206,12 @@ html:has(.theme-carnival),
 .theme-carnival .menu-dock a:nth-child(1) { background: var(--t-a3); color: var(--t-a3-on); }
 .theme-carnival .menu-dock a:nth-child(2) { background: var(--t-a2); color: var(--t-a2-on); }
 .theme-carnival .menu-dock a:nth-child(3) { background: var(--t-a1); color: var(--t-a1-on); }
-.theme-carnival .menu-dock a:nth-child(4) { background: var(--t-a4); color: var(--t-a4-on); }
-.theme-carnival .menu-dock .menu-close { background: var(--t-a3); color: var(--t-a3-on); }
+.theme-carnival .menu-dock a:nth-child(4) { background: var(--t-graphic); color: var(--t-graphic-on); }
+/* Close is the cream twin of the coloured pills. Its hover reveal has to move
+   off cream or it would slide cream over cream and read as nothing happening,
+   so it inverts to the red instead; the dark label holds at 4.6:1 on it. */
+.theme-carnival .menu-dock .menu-close { background: var(--t-ink); color: var(--t-ground); }
+.theme-carnival .menu-dock .menu-close::before { background: var(--t-a1); }
 
 /* ---------- colour-blocked sections ---------- */
 
@@ -227,11 +233,35 @@ html:has(.theme-carnival),
    colours here — that is exactly how a surface ends up light-on-light. */
 .theme-carnival .teaser-card { background: var(--t-a3); color: var(--t-a3-on); }
 
+/* The one deliberate exception to the rule above: the display heading is set
+   in the near-black rather than the card's navy on-colour. 6.4:1 on this blue
+   — the strongest contrast of the three options tried here (cream was 2.3:1,
+   the navy 5.4:1), so it is both the loudest and the most legible. */
+.theme-carnival .teaser-card h2 { color: var(--t-surface); }
+
+/* "More about me" was a bare text link that disappeared into the card. As the
+   only action on the panel it gets a filled pill in the yellow accent, which
+   is the loudest thing available against this blue. */
+.theme-carnival .teaser-card .arrow-link {
+  background: var(--t-a2);
+  color: var(--t-a2-on);
+  padding: 14px 26px;
+  border-radius: 0.6em;
+  align-self: flex-start;
+  font-size: clamp(17px, 1.3vw, 21px);
+  transition: transform 0.22s;
+}
+.theme-carnival .teaser-card .arrow-link:hover { transform: translateY(-2px); }
+
 /* one pair per testimonial card, so the carousel steps through the palette */
 .theme-carnival .testimonial-section { background: var(--t-ground); }
 .theme-carnival .testimonial-card.card-1 { background: var(--t-a2); color: var(--t-a2-on); }
 .theme-carnival .testimonial-card.card-2 { background: var(--t-a3); color: var(--t-a3-on); }
-.theme-carnival .testimonial-card.card-3 { background: var(--t-a1); color: var(--t-a1-on); }
+/* card 3 is the forest green from the graphic pairing, carrying the pink tint
+   as its ink — 4.9:1, so it holds for the quote as well as the attribution.
+   The tint is a decorative slot everywhere else, so it is named explicitly
+   here rather than pulled through an -on variable that does not mean this. */
+.theme-carnival .testimonial-card.card-3 { background: var(--t-graphic-on); color: var(--t-tint-1); }
 .theme-carnival .testimonial-attribution a { color: inherit; }
 /* hover underline on testimonial credits is a hardcoded amber in the base */
 .theme-carnival .testimonial-attribution a:hover { text-decoration-color: currentColor; }
@@ -251,17 +281,50 @@ html:has(.theme-carnival),
    which the contract guarantees are distinct from each other — the graphic
    slot is not used here, since a theme may legitimately point it at the same
    value as an accent. */
-.theme-carnival .socials .s-top       { background: var(--t-a3); color: var(--t-a3-on); }
+/* LinkedIn takes the blue, so the back-to-top arrow moves off it to the green
+   graphic slot — the four still resolve to four distinct fills. */
+.theme-carnival .socials .s-top       { background: var(--t-graphic); color: var(--t-graphic-on); }
 .theme-carnival .socials .s-dribbble  { background: var(--t-a1); color: var(--t-a1-on); }
 .theme-carnival .socials .s-instagram { background: var(--t-a2); color: var(--t-a2-on); }
-/* base hardcodes a LinkedIn blue here, so it needs an explicit override */
-.theme-carnival .socials .s-linkedin  { background: var(--t-a4); color: var(--t-a4-on); }
+.theme-carnival .socials .s-linkedin  { background: var(--t-a3); color: var(--t-a3-on); }
 
 /* ---------- buttons ---------- */
 
 .theme-carnival .pill-btn { background: var(--t-a1); color: var(--t-a1-on); }
 .theme-carnival .pill-btn.maroon { background: var(--t-a2); color: var(--t-a2-on); }
-.theme-carnival .footer-cta .pill-btn { background: var(--t-a2); color: var(--t-a2-on); }
+/* "Let's Talk Shop". The base stretches this to width:100% of its grid column
+   and centres the label, which leaves a wide margin of fill either side of the
+   words. Sizing it to its own content removes that without touching the type.
+   Hover is the menu dock's interaction rather than the base's scale: a fill
+   sliding up from the bottom edge plus a corner-radius morph. z-index:0 is
+   load-bearing — it makes the button its own stacking context so the ::before
+   at -1 sits above the button's fill instead of behind it. */
+.theme-carnival .footer-cta .pill-btn {
+  background: var(--t-a2);
+  color: var(--t-a2-on);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  width: auto;
+  justify-self: start;
+  padding: clamp(18px, 1.9vw, 26px) clamp(26px, 2.6vw, 40px);
+  transition: border-radius 0.8s cubic-bezier(0.65, 0, 0.35, 1), color 0.3s ease;
+}
+.theme-carnival .footer-cta .pill-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--t-ink);
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.theme-carnival .footer-cta .pill-btn:hover::before { transform: translateY(0); }
+/* the base scales this button on hover; the dock morphs its corners instead */
+.theme-carnival .footer-cta .pill-btn:hover {
+  transform: none;
+  border-radius: 1em;
+}
 
 /* icon-only button on the ground, so the graphic slot is fair game */
 .theme-carnival .pill-arrow { background: var(--t-graphic); color: var(--t-graphic-on); }
@@ -279,8 +342,10 @@ html:has(.theme-carnival),
 .theme-carnival .cta-pill:hover svg path { stroke: var(--t-cta); }
 
 /* work tiles keep their own client artwork; only the caption is themed.
-   Same rule as the teaser card: one pair, everything inside inherits. */
-.theme-carnival .tile-caption { background: var(--t-a3); color: var(--t-a3-on); }
+   Same rule as the teaser card: one pair, everything inside inherits.
+   The caption slides up over the artwork on hover, so it reads as paper laid
+   on the image — cream rather than a colour that competes with the work. */
+.theme-carnival .tile-caption { background: var(--t-ink); color: var(--t-ground); }
 
 /* eyebrows on the dark ground; :where keeps this weak enough that the
    colour-blocked sections above always override it */

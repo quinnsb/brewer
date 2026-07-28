@@ -885,12 +885,23 @@ p + .case-btn { margin-top: 34px; }
   aspect-ratio: auto;
   height: 100%;
   border-radius: clamp(48px, 11vw, 170px);
+  /* The headshot is a 2:3 portrait, so once this column is wide enough its
+     intrinsic height runs away — at a 1920px viewport it resolves to ~1000px
+     and, because the row is `stretch`, drags the card up with it and leaves a
+     void under the text. Capping the photo caps the row: the img is
+     object-fit:cover, so the extra just crops. The card's own content is the
+     floor, so this can never squeeze the copy. */
+  max-height: clamp(460px, 64vh, 700px);
 }
 .photo-ph img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  /* 40% rather than 20%: the frame is near-square and the source is a 2:3
+     portrait, so cover always scales to width and crops only vertically —
+     the horizontal value is inert here. Pushing the window down centres the
+     subject in the crop instead of hugging the top of the frame. */
+  object-position: center 40%;
   display: block;
 }
 .photo-ph.wide { aspect-ratio: 4 / 3; }
@@ -2518,8 +2529,9 @@ html.home-intro .site-logo {
   .footer-inner,
   .case-2up { grid-template-columns: 1fr; }
   /* stacked: there is no text column alongside to take height from, so the
-     photo goes back to setting its own shape */
-  .about-teaser .photo-ph { aspect-ratio: 6 / 7; height: auto; }
+     photo goes back to setting its own shape — and the desktop height cap
+     goes with it, or it would crop the 6/7 ratio it just asked for */
+  .about-teaser .photo-ph { aspect-ratio: 6 / 7; height: auto; max-height: none; }
   .caps-grid { grid-template-columns: 1fr 1fr; }
   .menu-dock { gap: 0; padding: 20px; }
   .menu-dock a, .menu-dock button { height: 54px; padding: 0 22px; font-size: 19px; }
