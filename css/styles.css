@@ -881,6 +881,11 @@ p + .case-btn { margin-top: 34px; }
 /* home teaser photo: generously rounded near-square. Height is driven by the
    text column beside it rather than an aspect ratio, so the two always end
    flush; the img's object-fit handles the resulting crop. */
+/* this photo is a pre-cropped square already centred on the subject, so it
+   wants the plain centre rather than the 40% the tall portraits elsewhere
+   need — there is barely any overflow to position anyway */
+.about-teaser .photo-ph img { object-position: center; }
+
 .about-teaser .photo-ph {
   aspect-ratio: auto;
   height: 100%;
