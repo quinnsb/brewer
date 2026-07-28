@@ -36,14 +36,6 @@
 }
 
 .ccn-title-wrap { margin-top: clamp(18px, 2.3vw, 36px); }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-}
 .ccn-title-foot {
   margin-top: 0;
   display: flex;

@@ -10,26 +10,13 @@
   --tfi-ink: #17171b;
 }
 
+/* Same photo and same grade as the homepage card, so the card and the page it
+   opens read as one image. The hero carries no title now, so it keeps only the
+   site's default scrim instead of the heavy bottom wash that title needed. */
 .tfi-work-hero img {
-  object-position: 46% center;
-  filter: saturate(0.8) contrast(0.93);
+  object-position: center 48%;
+  filter: saturate(0.88) contrast(0.96);
 }
-
-.tfi-page .tfi-work-hero::after {
-  background: linear-gradient(180deg, rgba(8, 17, 18, 0.05) 28%, rgba(8, 17, 18, 0.76));
-}
-
-.tfi-work-hero .work-hero-mark {
-  inset: auto auto clamp(38px, 5vw, 76px) max(var(--logo-gutter), var(--rail-safe));
-  display: block;
-  width: min(84vw, 1280px);
-  padding: 0 32px 0 0;
-  text-align: left;
-  font-size: clamp(58px, 10vw, 162px);
-  line-height: 0.76;
-}
-
-.tfi-work-hero .work-hero-mark small { margin: 24px 0 0 5px; }
 
 .tfi-case {
   --case-accent: var(--tfi-mauve);
@@ -219,20 +206,6 @@
 
 @media (max-width: 640px) {
   .tfi-page .logo-wordmark { display: none; }
-
-  .tfi-work-hero .work-hero-mark {
-    left: 20px;
-    bottom: 40px;
-    width: calc(100vw - 40px);
-    font-size: clamp(48px, 17vw, 74px);
-    line-height: 0.79;
-  }
-
-  .tfi-work-hero .work-hero-mark small {
-    max-width: 28ch;
-    margin-top: 17px;
-    font-size: 9px;
-  }
 
   .tfi-placeholder::after { inset: 9px; }
   .tfi-ph-primary { min-height: 62vh; }

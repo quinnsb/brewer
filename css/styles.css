@@ -95,6 +95,9 @@
   --gutter: clamp(20px, 4vw, 48px);
   --logo-gutter: clamp(0px, 8vw, 130px);
   --page-edge: clamp(30px, 3.2vw, 62px);
+  /* Top inset of the fixed logo mark. Shared so page content that wants to sit
+     on the mark's top edge (the work index grid) tracks it across breakpoints. */
+  --logo-top: 34px;
   /* Minimum left inset that keeps content clear of the fixed bottom-left
      menu pill (page-edge + pill width + gap) while that pill is visible. */
   --rail-safe: 120px;
@@ -210,6 +213,17 @@ body.home .testimonial-section {
 .body-copy + .body-copy { margin-top: 1.4em; }
 .body-copy strong { font-weight: 600; }
 
+/* Carries a page's h1 for screen readers and search when the design has no
+   visible title — case-study heroes that are pure image, for instance. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 /* ---------- fixed chrome: logo + menu ---------- */
 
 .site-logo {
@@ -224,7 +238,7 @@ body.home .testimonial-section {
   --mark-h: calc(var(--q-cap) + var(--q-tail));
   --mark-shift: var(--q-tail);
   position: fixed;
-  top: 34px;
+  top: var(--logo-top);
   left: var(--page-edge);
   z-index: 60;
   display: flex;
@@ -2177,10 +2191,11 @@ body > .ms-project-cover { aspect-ratio: auto; }
 .case-study.atlas { --case-accent: #ea73de; }
 .case-study.ridgeline { --case-accent: #9b4934; }
 
-/* work index: no heading — the grid starts at the top, clearing the fixed
-   logo mark so the first card sits top-justified with it. */
+/* Work index has no heading, so the first card starts flush with the top of the
+   fixed logo mark. It can share the mark's top inset because the mark sits out
+   in the left rail here, beside the card rather than over it. */
 .work-grid {
-  padding-top: clamp(112px, 14vh, 156px);
+  padding-top: var(--logo-top);
 }
 
 .work-hero {
@@ -2552,6 +2567,7 @@ html.home-intro .site-logo {
 /* ---------- responsive ---------- */
 
 @media (max-width: 900px) {
+  :root { --logo-top: 22px; }
   /* keep the left rail reserved so the floating menu pill never overlaps
      the featured cards or content (the pill is still shown down to 620px) */
   .main { padding-left: var(--rail-safe); }
@@ -2579,7 +2595,7 @@ html.home-intro .site-logo {
   .about-teaser .photo-ph { aspect-ratio: 6 / 7; height: auto; max-height: none; }
   .menu-dock { gap: 0; padding: 20px; }
   .menu-dock a, .menu-dock button { height: 54px; padding: 0 22px; font-size: 19px; }
-  .site-logo { --logo-height: 44px; top: 22px; left: 20px; max-width: calc(100vw - 40px); }
+  .site-logo { --logo-height: 44px; left: 20px; max-width: calc(100vw - 40px); }
   .menu-btn { bottom: 20px; left: 20px; }
   .hero { min-height: 78vh; }
   /* the M&S cover photo has "done better, together." and the lockup baked in;
@@ -2604,6 +2620,7 @@ html.home-intro .site-logo {
 }
 
 @media (max-width: 620px) {
+  :root { --logo-top: 16px; }
   /* Two columns stop working here. Inside the panel's padding there is only
      ~240px of usable width, and `1fr` refuses to shrink below the longest
      word, so the pair came out lopsided (145px against 109px) with nearly
@@ -2614,6 +2631,9 @@ html.home-intro .site-logo {
   /* floating menu pill is replaced by the bottom bar here — reclaim the
      left rail so content goes full-width again */
   .main, body.home .main { padding-left: 0; }
+  /* with the rail gone the cards run under the logo mark, so the work grid
+     drops back to clearing it instead of aligning to its top edge */
+  .work-grid { padding-top: clamp(96px, 14vh, 128px); }
   body.privacy .main,
   body.privacy .shell,
   .privacy-hero,
@@ -2629,7 +2649,7 @@ html.home-intro .site-logo {
   .privacy-policy h2,
   .privacy-policy p { overflow-wrap: anywhere; }
   .ms-project-cover { margin-top:88px; aspect-ratio:4/3; }
-  .site-logo { --logo-height: clamp(34px, 10.7vw, 42px); top: 16px; left: 16px; max-width: calc(100vw - 32px); }
+  .site-logo { --logo-height: clamp(34px, 10.7vw, 42px); left: 16px; max-width: calc(100vw - 32px); }
   /* keep the lockup inside the viewport: the wordmark's 1.46x ratio outgrows
      small screens, so cap it against viewport width. Set the shared variable so
      the mark keeps tracking the Q instead of drifting off the clamped type. */
