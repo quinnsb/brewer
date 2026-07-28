@@ -278,7 +278,11 @@ html:has(.theme-carnival),
    so it is what the very bottom of the page reads as. Keeping it distinct
    from the panel is the point — do not collapse these two. */
 .theme-carnival .site-footer { background: var(--t-strip); color: var(--t-strip-on); }
-.theme-carnival .footer-panel { background: var(--t-surface); color: var(--t-surface-on); }
+/* The panel takes the page ground rather than the darker surface slab, so
+   there is no seam where the content ends and the footer begins — the page
+   simply continues. Its rounded bottom corners still cut into the strip
+   below, which is the only edge left in the footer. */
+.theme-carnival .footer-panel { background: var(--t-ground); color: var(--t-surface-on); }
 .theme-carnival .footer-cta h2 { color: var(--t-surface-on); }
 .theme-carnival .footer-legal .fine-print,
 .theme-carnival .footer-legal .fine-print a { color: var(--t-strip-on); }
