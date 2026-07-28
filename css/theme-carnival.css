@@ -309,8 +309,7 @@ html:has(.theme-carnival),
 .theme-carnival .footer-panel { background: var(--t-ground); color: var(--t-surface-on); }
 .theme-carnival .footer-cta h2 { color: var(--t-surface-on); }
 .theme-carnival .footer-legal .fine-print,
-.theme-carnival .footer-legal .fine-print a,
-.theme-carnival .footer-legal .footer-nav a { color: var(--t-strip-on); }
+.theme-carnival .footer-legal .fine-print a { color: var(--t-strip-on); }
 
 /* Four social buttons in a row, so four distinct fills. These pull a1..a4,
    which the contract guarantees are distinct from each other — the graphic
