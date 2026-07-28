@@ -255,9 +255,31 @@ html:has(.theme-carnival),
   border-radius: 0.6em;
   align-self: flex-start;
   font-size: clamp(17px, 1.3vw, 21px);
-  transition: transform 0.22s;
+  /* joins the button family: an off-white fill sweeps up while the corners
+     round out and the arrow nudges forward (arrow motion lives in the base
+     .arrow-link rule). z-index:0 makes the pill its own stacking context so
+     the ::before at -1 sits above the fill, matching the footer button. */
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 }
-.theme-carnival .teaser-card .arrow-link:hover { transform: translateY(-2px); }
+.theme-carnival .teaser-card .arrow-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--t-ink);
+  transform: translateY(101%);
+  transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.theme-carnival .teaser-card .arrow-link:hover {
+  transform: translateY(-2px);
+  border-radius: 1.2em;
+}
+.theme-carnival .teaser-card .arrow-link:hover::before { transform: translateY(0); }
 
 /* one pair per testimonial card, so the carousel steps through the palette */
 .theme-carnival .testimonial-section { background: var(--t-ground); }
@@ -320,7 +342,9 @@ html:has(.theme-carnival),
      the grid's right edge lands it flush with the social icons below it */
   justify-self: end;
   padding: clamp(18px, 1.9vw, 26px) clamp(26px, 2.6vw, 40px);
-  transition: border-radius 0.8s cubic-bezier(0.65, 0, 0.35, 1), color 0.3s ease;
+  /* snappier than the original 0.8s/0.5s so the fill + corner morph read
+     quickly on hover */
+  transition: border-radius 0.4s cubic-bezier(0.65, 0, 0.35, 1), color 0.3s ease;
 }
 .theme-carnival .footer-cta .pill-btn::before {
   content: "";
@@ -329,7 +353,7 @@ html:has(.theme-carnival),
   z-index: -1;
   background: var(--t-ink);
   transform: translateY(100%);
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .theme-carnival .footer-cta .pill-btn:hover::before { transform: translateY(0); }
 /* the base scales this button on hover; the dock morphs its corners instead */

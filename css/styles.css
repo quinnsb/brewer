@@ -485,12 +485,6 @@ body.menu-closing .menu-dock button {
   letter-spacing: -0.035em;
 }
 
-/* Give animated letterforms room for descenders and wide terminals. */
-.hero .split .word {
-  padding: 0 0.035em 0.14em;
-  margin: 0 -0.035em -0.14em;
-}
-
 .hero {
   min-height: 88vh;
   display: flex;
@@ -518,9 +512,16 @@ body.menu-closing .menu-dock button {
   border-radius: 0.6em; /* rounded rect, matches .menu-btn and the dock buttons */
   border: 0;
   cursor: pointer;
-  transition: transform 0.22s;
+  /* snappy edge-morph: corners round out on hover. The themed footer button
+     layers a fill sweep on top of this (see theme-carnival.css). */
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 0.35s cubic-bezier(0.65, 0, 0.35, 1);
 }
-.pill-btn:hover { transform: scale(1.05); }
+.pill-btn:hover {
+  transform: scale(1.04);
+  border-radius: 1.4em;
+}
 
 /* compact outline button for case-study sidebars and story sections; shares the
    soft-cornered geometry of the focus pills */
@@ -560,8 +561,10 @@ p + .case-btn { margin-top: 34px; }
   text-decoration: none;
   color: var(--cream);
 }
-.arrow-link .arr { transition: transform 0.25s; }
-.arrow-link:hover .arr { transform: translateX(8px); }
+.arrow-link .arr {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.arrow-link:hover .arr { transform: translateX(10px); }
 
 /* ---------- project tiles ---------- */
 
@@ -657,10 +660,11 @@ p + .case-btn { margin-top: 34px; }
   flex: 0 0 auto;
   width: clamp(40px, 2.8vw, 56px);
   color: inherit;
-  transition: transform 0.25s;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .tile-caption .arr svg { width: 100%; height: auto; display: block; }
-.project-card:hover .tile-caption .arr { transform: translateX(8px); }
+.project-card:hover .tile-caption .arr,
+.project-card:focus-visible .tile-caption .arr { transform: translateX(12px); }
 
 /* see all work row */
 .see-all {
@@ -683,10 +687,21 @@ p + .case-btn { margin-top: 34px; }
   border-radius: 999px;
   width: clamp(84px, 8.5vw, 124px);
   height: clamp(46px, 4.6vw, 60px);
-  transition: transform 0.25s;
+  /* same edge-morph family: the full pill squares off a touch while the
+     arrow nudges forward */
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 }
-.pill-arrow:hover { transform: scale(1.07); }
-.pill-arrow svg { width: 44%; }
+.pill-arrow:hover {
+  transform: scale(1.06);
+  border-radius: 1.1em;
+}
+.pill-arrow svg {
+  width: 44%;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.pill-arrow:hover svg { transform: translateX(6px); }
 
 /* variant placeholder tints so tiles feel distinct while staying gray */
 .tile.t1 { background: linear-gradient(150deg, #3d3833 0%, #4d453c 100%); }
@@ -1218,8 +1233,8 @@ p + .case-btn { margin-top: 34px; }
   place-items: center;
   text-decoration: none;
   transition:
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    border-radius 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 }
 .cta-pill::before {
   content: "";
@@ -1228,7 +1243,7 @@ p + .case-btn { margin-top: 34px; }
   z-index: 0;
   background: var(--cream);
   transform: translateY(100%);
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .cta-pill:hover {
   transform: scale(1.06);
@@ -1242,7 +1257,7 @@ p + .case-btn { margin-top: 34px; }
   z-index: 1;
   width: 42%;
   transition:
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
     filter 0.3s ease;
 }
 .cta-pill svg path {
@@ -1387,14 +1402,22 @@ p + .case-btn { margin-top: 34px; }
   place-items: center;
   text-decoration: none;
   color: var(--ink);
-  transition: transform 0.2s;
+  transition: transform 0.26s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.socials a:hover { transform: scale(1.1); }
+.socials a:hover { transform: translateY(-4px) scale(1.06); }
 .socials a svg {
   width: 46%;
   height: 46%;
   display: block;
+  /* springy overshoot gives each icon a little pop on hover */
+  transition: transform 0.34s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+/* each icon gets a signature motion: the back-to-top arrow launches up, the
+   Dribbble ball spins, the Instagram lens zooms, and LinkedIn tilts */
+.socials .s-top:hover svg { transform: translateY(-3px); }
+.socials .s-dribbble:hover svg { transform: rotate(32deg); }
+.socials .s-instagram:hover svg { transform: scale(1.14); }
+.socials .s-linkedin:hover svg { transform: translateY(-2px) rotate(-6deg); }
 .socials .s-top {
   background: var(--lavender);
   color: var(--ink);
@@ -2480,15 +2503,25 @@ html.home-intro body.home .project-stack .project-card:first-child {
   transform: translateY(46px);
 }
 
-/* per-word split reveal */
+/* per-word split reveal.
+   overflow:hidden hides each word below its box while its span slides up on
+   reveal. Display headings run tight line-heights (~0.98–1.02), so descenders
+   (g, y, j, p, q) fall ~0.12em below the word box and would otherwise be
+   clipped once the animation settles. The bottom padding gives them room; the
+   matching negative margin cancels it from layout so line spacing is unchanged.
+   Horizontal padding does the same for wide terminals. */
 .split .word {
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
+  padding: 0 0.035em 0.18em;
+  margin: 0 -0.035em -0.18em;
 }
 .split .word > span {
   display: inline-block;
-  transform: translateY(110%);
+  /* 125% (not 110%) keeps the word fully hidden below the box that the
+     descender padding above enlarged, so nothing peeks before reveal. */
+  transform: translateY(125%);
   transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--wd, 0s);
 }
