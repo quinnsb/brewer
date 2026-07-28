@@ -515,7 +515,7 @@ body.menu-closing .menu-dock button {
   font-size: 18px;
   text-decoration: none;
   padding: 16px 32px;
-  border-radius: 999px;
+  border-radius: 0.6em; /* rounded rect, matches .menu-btn and the dock buttons */
   border: 0;
   cursor: pointer;
   transition: transform 0.22s;
@@ -648,14 +648,15 @@ p + .case-btn { margin-top: 34px; }
   font-family: var(--serif);
   font-size: clamp(16px, 1.02vw, 20px);
   line-height: 1.25;
-  color: rgba(30, 28, 25, 0.75);
+  /* derived from the caption's own colour — see .teaser-card .body-copy */
+  color: color-mix(in srgb, currentColor 75%, transparent);
   max-width: 72ch;
 }
 .tile-caption .arr {
   display: block;
   flex: 0 0 auto;
   width: clamp(40px, 2.8vw, 56px);
-  color: var(--ink);
+  color: inherit;
   transition: transform 0.25s;
 }
 .tile-caption .arr svg { width: 100%; height: auto; display: block; }
@@ -863,9 +864,9 @@ p + .case-btn { margin-top: 34px; }
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: clamp(28px, 3vw, 48px);
-  /* Trust-style: cream card sits vertically centered against the
-     slightly taller photo */
-  align-items: center;
+  /* the photo matches the text block's height exactly — stretch rather than
+     centre, so the two columns share one baseline top and bottom */
+  align-items: stretch;
 }
 
 .photo-ph {
@@ -877,10 +878,12 @@ p + .case-btn { margin-top: 34px; }
   position: relative;
   overflow: hidden;
 }
-/* home teaser photo: generously rounded near-square, a touch taller
-   than the cream card beside it */
+/* home teaser photo: generously rounded near-square. Height is driven by the
+   text column beside it rather than an aspect ratio, so the two always end
+   flush; the img's object-fit handles the resulting crop. */
 .about-teaser .photo-ph {
-  aspect-ratio: 6 / 7;
+  aspect-ratio: auto;
+  height: 100%;
   border-radius: clamp(48px, 11vw, 170px);
 }
 .photo-ph img {
@@ -921,11 +924,14 @@ p + .case-btn { margin-top: 34px; }
   line-height: 1;
   margin-bottom: clamp(22px, 2.4vw, 34px);
 }
+/* Everything inside the card derives from the card's own `color`, so the fill
+   and the ink can never be changed independently and end up light-on-light.
+   currentColor here resolves to the same #1e1c19 the literal used to name. */
 .teaser-card .body-copy {
-  color: rgba(30, 28, 25, 0.85);
+  color: color-mix(in srgb, currentColor 85%, transparent);
 }
 .teaser-card .arrow-link {
-  color: var(--ink);
+  color: inherit;
   font-size: 20px;
   margin-top: clamp(30px, 3vw, 44px);
 }
@@ -2511,6 +2517,9 @@ html.home-intro .site-logo {
   .about-photos,
   .footer-inner,
   .case-2up { grid-template-columns: 1fr; }
+  /* stacked: there is no text column alongside to take height from, so the
+     photo goes back to setting its own shape */
+  .about-teaser .photo-ph { aspect-ratio: 6 / 7; height: auto; }
   .caps-grid { grid-template-columns: 1fr 1fr; }
   .menu-dock { gap: 0; padding: 20px; }
   .menu-dock a, .menu-dock button { height: 54px; padding: 0 22px; font-size: 19px; }

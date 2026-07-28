@@ -1,0 +1,305 @@
+/* ============================================================
+   CARNIVAL CHARCOAL + AEONIK  — production theme
+   ------------------------------------------------------------
+   Promoted out of the lab (css/homepage-lab.css, theme
+   "carnival-charcoal" + font set "aeonik"). Everything here was
+   scoped to .lab-themed / .lab-home[data-lab-font="aeonik"]
+   there; it is re-scoped to a single .theme-carnival class so a
+   page opts in with one body class and one <link>.
+
+   Load AFTER css/styles.css — it overrides that stylesheet's
+   :root tokens and a handful of its hardcoded colours.
+
+   TO REMOVE: drop the <link> and the body class. styles.css is
+   untouched, so the site returns to its original look.
+
+   FONT LICENSING: Aeonik ships here as self-hosted .otf, at the
+   owner's direction. Degular and Mackinac remain the licensed
+   production faces; Aeonik needs a web licence to ship this way.
+   ============================================================ */
+
+/* ---- Aeonik ------------------------------------------------
+   Two cuts, because the page uses this family at more than one
+   weight. The capabilities list sets at 400 and everything else
+   at 500/600, so a single Medium mapped across the whole range
+   would render that list semi-bold. */
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Regular.otf") format("opentype");
+  font-weight: 100 450;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Medium.otf") format("opentype");
+  /* 451+ so the 500 UI text and the 600 headings both land on
+     Medium, which is the cut this set is built around */
+  font-weight: 451 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   1. TOKENS  — the carnival-charcoal palette.
+
+   Built from a 9-tile brand pairing sheet; each accent carries
+   its own on-colour, so a tile maps onto a slot. The charcoal
+   ground is a neutral canvas and the accents do the colour work.
+
+     panel   lime / forest        13.1:1 on ground
+     a1      red  / maroon          4.6:1  (pill + large text)
+     a2      yellow / olive         6.5:1  (eyebrow on charcoal 12.5)
+     a3      blue / navy            5.4:1
+     a4      sand / near-black     10.7:1
+     graphic light green / forest  (icon; 11.0:1 on ground)
+     cta     maroon / pink on lime  arrow 8.0, shape 12.4
+     strip   sand / near-black     10.7:1
+
+   The sheet's pink/red tile is decorative only (2.1:1, tuned for
+   a giant monogram, not text), so it lives in the placeholder
+   slots where nothing sits on it.
+   ============================================================ */
+.theme-carnival {
+  --t-ground: #1e1e20;   /* charcoal */
+  --t-ink: #eae7e0;      /* warm off-white      13.5:1 */
+  --t-surface: #141415;  /* deeper charcoal slab: footer panel + cards */
+  --t-surface-on: #eae7e0;                     /* 14.9:1 */
+
+  --t-a1: #f5414b;  --t-a1-on: #470a1d;  /* red / maroon    4.6:1 */
+  --t-a2: #f5e23c;  --t-a2-on: #5a4a1f;  /* yellow / olive  6.5:1 */
+  --t-a3: #1ba1e9;  --t-a3-on: #16233f;  /* blue / navy     5.4:1 */
+  --t-a4: #cdc5b2;  --t-a4-on: #141414;  /* sand / black   10.7:1 */
+
+  --t-panel: #d4ee97;    --t-panel-on: #0e4d2e;  /* lime / forest 7.8:1 */
+  --t-graphic: #9fe39a;  --t-graphic-on: #0c5a2f;  /* light green / forest */
+  --t-cta: #470a1d;      --t-cta-on: #e8a6c0;  /* maroon pill on lime, pink arrow */
+  --t-strip: #cdc5b2;    --t-strip-on: #141414;  /* sand / black 10.7:1 */
+
+  --t-tint-1: #f2b5cd;
+  --t-tint-2: #e79db8;
+}
+
+/* ============================================================
+   2. TYPE  — Aeonik replaces Degular wherever Degular is used:
+   headings, wordmark, menu, buttons, tile captions, testimonial
+   credits. --serif is left alone: the body prose and pull quotes
+   are P22 Mackinac, which is not Degular.
+   ============================================================ */
+.theme-carnival {
+  --sans: "Aeonik", "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --sans-display: "Aeonik", "Degular Display", "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --serif: "P22 Mackinac Pro", "Fraunces", Georgia, serif;
+}
+
+/* The wordmark picks up --sans automatically. The MARK does not:
+   styles.css locks it to the wordmark's "Q", sizing it to that
+   letter's cap-plus-tail span and nudging it down by the tail
+   depth, using ratios measured off Degular. Measured the same way
+   at 600 weight, Aeonik's Q rises 0.706em and drops just 0.006em —
+   taller in the cap and effectively flat-bottomed, where Degular
+   is 0.613 / 0.095. Without re-measuring, the icon and the
+   lettering come out different heights and the lockup reads as
+   broken. The two totals are near-identical (0.712 vs 0.708), so
+   the icon keeps its size; what changes is that the mark now sits
+   on the baseline instead of hanging below it. */
+.theme-carnival .site-logo {
+  --q-cap: calc(var(--wordmark-size) * 0.706);
+  --q-tail: calc(var(--wordmark-size) * 0.006);
+}
+
+/* Aeonik's display tracking is looser than Degular's; the base
+   -0.02em on section headings closes it up too far. */
+.theme-carnival .h-display,
+.theme-carnival .teaser-card h2,
+.theme-carnival .footer-cta h2 {
+  letter-spacing: -0.012em;
+}
+
+/* The hero does NOT use the generic .h-display scale — it has its
+   own, much larger clamp (11.2vw) and tighter tracking (-0.035em).
+   Both are adjusted relative to those hero values, not the generic
+   ones, and at a higher specificity so this wins rather than the
+   rule above flattening the hero. Aeonik sets wider than Degular,
+   so the size comes down ~14%. */
+.theme-carnival .hero .h-display {
+  font-size: clamp(44px, 9.6vw, 206px);
+  letter-spacing: -0.026em;
+}
+/* styles.css re-sizes the hero under 620px; this stylesheet loads
+   after it, so without a matching override the desktop clamp would
+   leak onto mobile. */
+@media (max-width: 620px) {
+  .theme-carnival .hero .h-display {
+    font-size: clamp(42px, 14.2vw, 64px);
+    letter-spacing: -0.022em;
+  }
+}
+
+/* Aeonik sets noticeably wider than Degular, and the capabilities
+   grid holds 5 fixed columns from 901px up (styles.css collapses it
+   to 2 only below 900px). In Degular the longest items ("Communications
+   Planning", "WordPress & Squarespace") just fit; in Aeonik they
+   overflow their column between ~901px and ~1300px. Extending the
+   base stylesheet's own reflow logic, that band drops to 3 columns.
+   Above 1320px the 5-up fits in Aeonik unchanged, so it is left alone. */
+@media (min-width: 901px) and (max-width: 1320px) {
+  .theme-carnival .caps-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ============================================================
+   3. STRUCTURE  — consumes tokens only, no literal colours.
+   ============================================================ */
+
+/* map the theme onto the stylesheet's own variables, so every
+   base rule that already reads --bg / --cream / --orange picks
+   the theme up without being restated here */
+.theme-carnival {
+  --bg: var(--t-ground);
+  --cream: var(--t-ink);
+  --cream-dim: color-mix(in srgb, var(--t-ink) 66%, transparent);
+  --ink: var(--t-surface);
+
+  --card: var(--t-surface);
+  --card-2: var(--t-tint-1);
+  --placeholder: var(--t-tint-1);
+  --placeholder-2: var(--t-tint-2);
+
+  --orange: var(--t-a1);
+  --yellow: var(--t-a2);
+  --lavender: var(--t-a3);
+
+  /* --blurple / --green / --maroon must stay DARK.
+     The lab only ever themed the homepage, where these three are
+     unused, so it could point them all at light accents. Site-wide
+     that breaks: styles.css pairs each of them with `color:
+     var(--cream)` as a button/band fill (.pill-btn.blurple,
+     .pill-btn.maroon, .form-card .ok-btn, .case-band.blurple,
+     .menu-dock), and --maroon doubles as dark TEXT on the light
+     form cards (contact + testimonial). A light fill under cream
+     text renders at ~1.4:1 — illegible. Mapped to the palette's
+     genuinely dark hues, both roles hold at once. */
+  --blurple: #16233f;   /* navy   — 12.6:1 vs the off-white ink */
+  --green: #0c5a2f;     /* forest —  6.8:1 */
+  --maroon: #470a1d;    /* maroon — 12.8:1, as a fill under ink OR as text on a cream card */
+}
+
+html:has(.theme-carnival),
+.theme-carnival { background: var(--t-ground); }
+
+/* ---------- chrome ---------- */
+
+.theme-carnival .site-logo { color: var(--t-ink); }
+.theme-carnival .menu-btn { background: var(--t-a2); color: var(--t-a2-on); }
+
+/* the mobile bar is a light pill floating on the ground, so it keeps a
+   light fill and dark mark rather than inverting to the ground colour */
+.theme-carnival .menu-bar { background: var(--t-a3); color: var(--t-a3-on); }
+.theme-carnival .menu-bar-logo { color: var(--t-a3-on); }
+.theme-carnival .menu-bar .menu-btn { background: var(--t-a1); color: var(--t-a1-on); }
+
+/* the dock itself stays transparent — it is a fixed container the pills
+   float in, so giving it a background paints a slab across the page.
+   The four pills sit side by side, so they take the four accents. */
+.theme-carnival .menu-dock a:nth-child(1) { background: var(--t-a3); color: var(--t-a3-on); }
+.theme-carnival .menu-dock a:nth-child(2) { background: var(--t-a2); color: var(--t-a2-on); }
+.theme-carnival .menu-dock a:nth-child(3) { background: var(--t-a1); color: var(--t-a1-on); }
+.theme-carnival .menu-dock a:nth-child(4) { background: var(--t-a4); color: var(--t-a4-on); }
+.theme-carnival .menu-dock .menu-close { background: var(--t-a3); color: var(--t-a3-on); }
+
+/* ---------- colour-blocked sections ---------- */
+
+.theme-carnival .capabilities-section {
+  background: var(--t-panel);
+  color: var(--t-panel-on);
+  border-radius: var(--radius);
+  padding: clamp(48px, 6vw, 96px);
+}
+/* every descendant, so nothing inherits the type colour meant for the ground */
+.theme-carnival .capabilities-section :where(h2, h3, h4, p, li, a, span, strong, em) { color: var(--t-panel-on); }
+.theme-carnival .caps-grid li:hover { color: var(--t-panel-on); }
+
+/* The about teaser is NOT a colour-blocked panel — there is no box wrapping
+   the photo and the card together. The card itself keeps its fill; it just
+   sits on the ground rather than inside another panel.
+   One declaration pair. Everything inside the card inherits from it, so the
+   fill and the ink move together by construction. Do not add per-descendant
+   colours here — that is exactly how a surface ends up light-on-light. */
+.theme-carnival .teaser-card { background: var(--t-a3); color: var(--t-a3-on); }
+
+/* one pair per testimonial card, so the carousel steps through the palette */
+.theme-carnival .testimonial-section { background: var(--t-ground); }
+.theme-carnival .testimonial-card.card-1 { background: var(--t-a2); color: var(--t-a2-on); }
+.theme-carnival .testimonial-card.card-2 { background: var(--t-a3); color: var(--t-a3-on); }
+.theme-carnival .testimonial-card.card-3 { background: var(--t-a1); color: var(--t-a1-on); }
+.theme-carnival .testimonial-attribution a { color: inherit; }
+/* hover underline on testimonial credits is a hardcoded amber in the base */
+.theme-carnival .testimonial-attribution a:hover { text-decoration-color: currentColor; }
+
+/* ---------- footer ---------- */
+
+/* .site-footer is the strip that shows below the panel's rounded corners,
+   so it is what the very bottom of the page reads as. Keeping it distinct
+   from the panel is the point — do not collapse these two. */
+.theme-carnival .site-footer { background: var(--t-strip); color: var(--t-strip-on); }
+.theme-carnival .footer-panel { background: var(--t-surface); color: var(--t-surface-on); }
+.theme-carnival .footer-cta h2 { color: var(--t-surface-on); }
+.theme-carnival .footer-legal .fine-print,
+.theme-carnival .footer-legal .fine-print a { color: var(--t-strip-on); }
+
+/* Four social buttons in a row, so four distinct fills. These pull a1..a4,
+   which the contract guarantees are distinct from each other — the graphic
+   slot is not used here, since a theme may legitimately point it at the same
+   value as an accent. */
+.theme-carnival .socials .s-top       { background: var(--t-a3); color: var(--t-a3-on); }
+.theme-carnival .socials .s-dribbble  { background: var(--t-a1); color: var(--t-a1-on); }
+.theme-carnival .socials .s-instagram { background: var(--t-a2); color: var(--t-a2-on); }
+/* base hardcodes a LinkedIn blue here, so it needs an explicit override */
+.theme-carnival .socials .s-linkedin  { background: var(--t-a4); color: var(--t-a4-on); }
+
+/* ---------- buttons ---------- */
+
+.theme-carnival .pill-btn { background: var(--t-a1); color: var(--t-a1-on); }
+.theme-carnival .pill-btn.maroon { background: var(--t-a2); color: var(--t-a2-on); }
+.theme-carnival .footer-cta .pill-btn { background: var(--t-a2); color: var(--t-a2-on); }
+
+/* icon-only button on the ground, so the graphic slot is fair game */
+.theme-carnival .pill-arrow { background: var(--t-graphic); color: var(--t-graphic-on); }
+
+/* .arr is a bare arrow with no fill behind it in the base design, and it now
+   inherits the ink of whatever surface it sits on, so it needs no rule here. */
+
+/* The big CTA pill hardcodes a blue background and an inline #ffb900 arrow
+   stroke, so neither passes through a token. The inline stroke is a
+   presentation attribute, which CSS outranks. It sits on the panel, so it
+   uses the dedicated cta slot (>=3:1 on --t-panel); hover inverts the pair. */
+.theme-carnival .cta-pill { background: var(--t-cta); }
+.theme-carnival .cta-pill svg path { stroke: var(--t-cta-on); }
+.theme-carnival .cta-pill::before { background: var(--t-cta-on); }
+.theme-carnival .cta-pill:hover svg path { stroke: var(--t-cta); }
+
+/* work tiles keep their own client artwork; only the caption is themed.
+   Same rule as the teaser card: one pair, everything inside inherits. */
+.theme-carnival .tile-caption { background: var(--t-a3); color: var(--t-a3-on); }
+
+/* eyebrows on the dark ground; :where keeps this weak enough that the
+   colour-blocked sections above always override it */
+.theme-carnival :where(.eyebrow) { color: var(--t-a2); }
+
+/* case-study blocks carry their own paper/ink pair */
+.theme-carnival .case-hero,
+.theme-carnival .case-band,
+.theme-carnival [class*="case-"] {
+  --case-paper: var(--t-a3);
+  --case-ink: var(--t-a3-on);
+}
+
+/* .case-band.orange fills with --orange and lets the band's big pull quote
+   inherit the page ink. Carnival's a1 red is lighter than the base orange it
+   replaces, so off-white on it lands at 2.96:1 — a hair under the 3:1 this
+   26-52px text needs. The red's own on-colour (maroon) takes it to 4.6:1.
+   .case-band.blurple needs nothing: --blurple is navy here, 12.6:1 under the
+   inherited ink. Used by foxglove, homefield, nix and rally. */
+.theme-carnival .case-band.orange { color: var(--t-a1-on); }
+
+.theme-carnival ::selection { background: var(--t-a1); color: var(--t-a1-on); }

@@ -19,11 +19,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=8" />
-  <link rel="stylesheet" href="css/homepage-lab.css?v=1" />
+  <link rel="stylesheet" href="css/styles.css?v=12" />
+  <link rel="stylesheet" href="css/homepage-lab.css?v=26" />
   <script>document.documentElement.classList.add("home-intro");</script>
 </head>
-<body class="home lab-home">
+<body class="home lab-home" data-lab-theme="original" data-lab-font="degular">
+  <!-- LAB: apply the stored theme and font before first paint, so switching does not flash.
+       "original" is the live design, and is the one theme that does not get .lab-themed. -->
+  <script>try{var t=localStorage.getItem("lab-theme")||"original";document.body.setAttribute("data-lab-theme",t);document.body.classList.toggle("lab-themed",t!=="original");var f=localStorage.getItem("lab-font");if(f)document.body.setAttribute("data-lab-font",f);}catch(e){}</script>
 
   <a class="site-logo" href="./" aria-label="Quinn Brewer home">
     <span class="logo-squircle"></span>
@@ -255,5 +258,6 @@
   <script src="js/testimonial.js"></script>
   <script src="js/main.js?v=5"></script>
   <script src="js/ms-shader.js"></script>
+  <script src="js/lab-theme.js?v=11"></script>
 </body>
 </html>

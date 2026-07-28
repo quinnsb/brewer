@@ -1,144 +1,863 @@
 /* ============================================================
-   LAB — homepage typography + palette experiment
-   A duplicate of the real homepage with three changes:
-   Degular swapped for Helvetica Bold, headings set all-caps,
-   and the warm dark theme swapped for a neutral near-black ground
-   carrying the nine-swatch reference palette.
-   Loaded only by homepage-lab.html and scoped to .lab-home so
-   nothing here can reach the production pages.
+   LAB — homepage colour themes
+   Loaded only by homepage-lab.html. Every selector is scoped to
+   .lab-home, so nothing here can reach the production pages.
+
+   THREE LAYERS, in order:
+     1. TOKEN CONTRACT  — the 20 variables every theme must set.
+     2. THEMES          — one block per theme. Add a theme here.
+     3. STRUCTURE       — written once, consumes tokens only.
+                          You should not need to touch this to add
+                          a theme. Scoped to .lab-themed, which the
+                          switcher withholds for the "original"
+                          theme so the live design shows through.
+
+   To add a theme see docs/lab-themes.md.
    ============================================================ */
 
-.lab-home {
-  /* palette pairs, read off the reference grid left-to-right, top-to-bottom.
-     each line is a background and the mark colour that sits on it. */
-  --lab-sand: #cfc7b6;      --lab-sand-ink: #0d0d0d;
-  --lab-lime: #d7f0a2;      --lab-lime-ink: #0b4a26;
-  --lab-navy: #111c3e;      --lab-navy-ink: #a9f0e7;
-  --lab-brown: #5c4415;     --lab-brown-ink: #f7e63e;
-  --lab-burgundy: #4a0518;  --lab-burgundy-ink: #f2a9c1;
-  --lab-green: #05612f;     --lab-green-ink: #99ef99;
-  --lab-red: #fb3c41;       --lab-red-ink: #3a0518;
-  --lab-blue: #1e9ce9;      --lab-blue-ink: #0c1b3c;
-  --lab-pink: #f4aec5;      --lab-pink-ink: #fa3c41;
+/* ============================================================
+   1. TOKEN CONTRACT
+   ------------------------------------------------------------
+   --t-ground      page background
+   --t-ink         type on the ground                    (>=4.5:1 on ground)
+   --t-surface     raised panel: footer body, dark cards
+   --t-surface-on  type on that surface                  (>=4.5:1 on surface)
+   --t-a1..--t-a4  four accents that carry TEXT
+   --t-aN-on       type on accent N                      (>=4.5:1 on aN)
+   --t-panel       the big capabilities panel. Its own slot, because the
+                   largest block of colour on the page is a composition
+                   decision, not automatically the primary accent.
+   --t-panel-on    body copy on it                       (>=4.5:1 on panel)
+   --t-graphic     the icon-only button sitting on the GROUND. May repeat an
+                   accent value; nothing else depends on it being unique.
+   --t-graphic-on  the glyph colour                      (>=3:1 on graphic)
+   --t-cta         the big CTA pill, which sits on the a1 PANEL, not the
+                   ground — so it needs its own value      (>=3:1 on a1)
+   --t-cta-on      the arrow inside it                    (>=3:1 on cta)
+   --t-strip       the strip at the very bottom of the footer
+   --t-strip-on    fine print on it                      (>=4.5:1 on strip)
 
-  /* Neutral near-black ground so the palette blocks read as pure colour against
-     it. Sand carries body text; aqua handles accents. */
-  --lab-ground: #171717;
-  --bg: var(--lab-ground);
-  --cream: var(--lab-sand);
-  --cream-dim: rgba(207, 199, 182, 0.68);
-  --ink: var(--lab-blue-ink);
-  --card: #202020;
-  --card-2: #292929;
-  --placeholder: #202020;
-  --placeholder-2: #292929;
-  --orange: var(--lab-red);
-  --blurple: var(--lab-blue);
-  --yellow: var(--lab-brown-ink);
-  --lavender: var(--lab-pink);
-  --green: var(--lab-green);
-  --maroon: var(--lab-burgundy);
+   The four accents must be visually distinct from each other:
+   they are dealt out to the menu pills and the social icons,
+   which sit side by side.
+   ============================================================ */
 
-  /* Helvetica Bold in place of Degular, for both text and display */
-  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --sans-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* ============================================================
+   2. THEMES
+   ============================================================ */
+
+/* ---- original ---------------------------------------------
+   The live site, untouched. It defines no tokens on purpose.
+
+   Everything in section 3 is scoped to .lab-themed, a class the
+   switcher adds for every theme EXCEPT this one. So "original"
+   is not an approximation of the production palette assembled
+   out of tokens — it is the lab with all of its restyling
+   switched off, which is the only way it can be guaranteed to
+   match. Use it as the reference to compare the others against.
+   ------------------------------------------------------------ */
+
+/* ---- graphite ---------------------------------------------
+   Graphite ground, Soft Linen type, Coral and Tuscan Sun warm,
+   Alabaster Grey cool, Carbon Black under the ground. */
+.lab-home[data-lab-theme="graphite"] {
+  --t-ground: #333533;
+  --t-ink: #e8eddf;
+  --t-surface: #242423;
+  --t-surface-on: #e8eddf;
+
+  --t-a1: #ff7247;  --t-a1-on: #242423;  /* coral      5.8:1 */
+  --t-a2: #f5cb5c;  --t-a2-on: #242423;  /* sun       10.1:1 */
+  --t-a3: #cfdbd5;  --t-a3-on: #242423;  /* alabaster 10.8:1 */
+  --t-a4: #e8eddf;  --t-a4-on: #242423;  /* linen     13.2:1 */
+
+  --t-panel: #ff7247;    --t-panel-on: #242423;  /* coral      5.8:1 */
+  --t-graphic: #ff7247;  --t-graphic-on: #242423;
+  --t-cta: #242423;      --t-cta-on: #f5cb5c;  /* carbon on coral 5.8:1 */
+  --t-strip: #f5cb5c;    --t-strip-on: #242423;
+
+  --t-tint-1: #3d403d;
+  --t-tint-2: #4b4e4b;
 }
 
-html:has(.lab-home),
-.lab-home { background: var(--lab-ground); }
+/* ---- ilm --------------------------------------------------
+   From the ILM brand sheet. Forrest Green ground with Panther
+   Black under it, Roger Rabbit as the type, Aztec Gold as the
+   lead accent and Strange Red held back for the footer strip.
 
-/* ---------- type ---------- */
+   Only swatches whose hex could be trusted were used — see
+   docs/lab-themes.md for which ones on that sheet are wrong.
+   The blues are all in that unreliable set, so this theme is
+   built from the greens, warms and neutrals. */
+.lab-home[data-lab-theme="ilm"] {
+  --t-ground: #1f2e2b;   /* Forrest Green */
+  --t-ink: #f3ede6;      /* Roger Rabbit   12.3:1 */
+  --t-surface: #000000;  /* Panther Black */
+  --t-surface-on: #f3ede6;                /* 18.1:1 */
 
-/* Degular carries its weight in the design; Helvetica needs pushing to bold to
-   hold the same presence. Headings are set all-caps, so the tight tracking that
-   suits lowercase display type is relaxed back toward neutral. */
-.lab-home h1,
-.lab-home h2,
-.lab-home h3,
-.lab-home h4,
-.lab-home .h-display,
-.lab-home .tile-caption h3,
-.lab-home .footer-cta h2 {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -0.005em;
+  --t-a1: #e7b34e;  --t-a1-on: #1f2e2b;  /* Aztec Gold    7.4:1 */
+  --t-a2: #749267;  --t-a2-on: #000000;  /* Grogu Green   6.1:1 */
+  --t-a3: #f3ede6;  --t-a3-on: #1f2e2b;  /* Roger Rabbit 12.3:1 */
+  --t-a4: #cdcdcd;  --t-a4-on: #1f2e2b;  /* T-1000        9.1:1 */
+
+  /* Jurassic Green panel keeps the largest block tonal with the ground and
+     lets the gold CTA carry the contrast, rather than putting a light slab
+     in the middle of a dark page. */
+  --t-panel: #36504b;    --t-panel-on: #f3ede6;  /* Jurassic     7.5:1 */
+  /* Nivellan Brown is a mid-tone: 3.4:1 on Roger Rabbit and 3.7:1 on the
+     ground. Fine for an icon-only button, never for text. */
+  --t-graphic: #c46647;  --t-graphic-on: #f3ede6;
+  --t-cta: #e7b34e;      --t-cta-on: #1f2e2b;  /* gold on Jurassic 4.5:1 */
+  --t-strip: #801b08;    --t-strip-on: #f3ede6;  /* Strange Red  8.7:1 */
+
+  --t-tint-1: #2a3d39;
+  --t-tint-2: #354b46;
 }
-.lab-home .logo-wordmark,
-.lab-home .pill-btn,
-.lab-home .menu-btn,
-.lab-home .menu-dock a,
-.lab-home .menu-dock button,
-.lab-home .pn-name,
-.lab-home .contact-btn { font-weight: 700; }
 
-/* the lockup is sized to the "Q" of the wordmark, and Helvetica's Q is both
-   taller and shallower-tailed than Degular's, so the base ratios are re-measured
-   here rather than inherited */
-.lab-home .site-logo {
-  --q-cap: calc(var(--wordmark-size) * 0.731);
-  --q-tail: calc(var(--wordmark-size) * 0.066);
+/* ---- ilm2 (ILM 2) -----------------------------------------
+   A refresh of ilm, remapped so each accent lines up with the hue
+   it stands in for on the original palette: Panther Black is the
+   page ground, Nivellan Brown reads as the orange, Aztec Gold as
+   the yellow, Grogu Green as the green and Roger Rabbit as the
+   white/cream. Forrest Green drops from the ground to the raised
+   surface so the footer panel still reads on the black.
+
+   The warms, greens and neutrals are trusted sheet swatches. Every
+   blue on the ILM sheet is in the corrupted set (see
+   docs/lab-themes.md), so the "blue" accent is a representative
+   royal blue (#1d4ed8, echoing the original blurple) rather than a
+   sheet value; swap it if a trustworthy ILM blue turns up. */
+.lab-home[data-lab-theme="ilm2"] {
+  --t-ground: #000000;   /* Panther Black — now the ground */
+  --t-ink: #f3ede6;      /* Roger Rabbit  18.1:1 */
+  --t-surface: #1f2e2b;  /* Forrest Green — raised panels / dark cards */
+  --t-surface-on: #f3ede6;                /* 12.3:1 */
+
+  --t-a1: #c46647;  --t-a1-on: #000000;  /* Nivellan Brown (orange) 5.3:1 */
+  --t-a2: #e7b34e;  --t-a2-on: #1f2e2b;  /* Aztec Gold (yellow)     7.4:1 */
+  --t-a3: #749267;  --t-a3-on: #000000;  /* Grogu Green (green)     6.1:1 */
+  --t-a4: #1d4ed8;  --t-a4-on: #f3ede6;  /* Screen Blue (blue)      5.8:1 */
+
+  /* Jurassic Green panel keeps the largest block tonal with the ground and
+     lets the gold CTA carry the contrast, rather than putting a light slab
+     in the middle of a dark page. */
+  --t-panel: #36504b;    --t-panel-on: #f3ede6;  /* Jurassic     7.5:1 */
+  /* Nivellan Brown reused as the on-ground icon fill (same as a1). Mid-tone:
+     3.4:1 on Roger Rabbit, fine for an icon-only button, never for text. */
+  --t-graphic: #c46647;  --t-graphic-on: #f3ede6;
+  --t-cta: #e7b34e;      --t-cta-on: #1f2e2b;  /* gold on Jurassic 4.5:1 */
+  --t-strip: #801b08;    --t-strip-on: #f3ede6;  /* Strange Red  8.7:1 */
+
+  --t-tint-1: #2a3d39;
+  --t-tint-2: #354b46;
 }
+
+/* ---- plum -------------------------------------------------
+   Subject Plum ground with the cream/blue/red trio on top.
+   Olive is a mid-tone: against both cream and plum it lands
+   near 3.5:1, so it is the graphic-only slot and never carries
+   small text. The two tints are the ground darkened, since the
+   palette has no second brown. */
+.lab-home[data-lab-theme="plum"] {
+  --t-ground: #4c201b;
+  --t-ink: #faeece;
+  --t-surface: #3a1814;
+  --t-surface-on: #faeece;
+
+  --t-a1: #c22a15;  --t-a1-on: #faeece;  /* feature red  4.9:1 */
+  --t-a2: #b9d0d4;  --t-a2-on: #4c201b;  /* pale blue    8.7:1 */
+  --t-a3: #faeece;  --t-a3-on: #4c201b;  /* cream       11.7:1 */
+  /* olive is the palette's mid-tone: against cream it reaches 3.6:1, which
+     clears the 3:1 bar for UI shapes but is UNDER AA for the dock's 14px
+     label. Kept deliberately — it is the only 4th distinct hue the palette
+     offers without inventing a brown. See docs/lab-themes.md. */
+  --t-a4: #857b4c;  --t-a4-on: #faeece;  /* olive        3.6:1 */
+
+  /* The palette calls #C22A15 "Feature Red". Using it for the largest block
+     on the page contradicts that, so the panel takes cream and the red comes
+     back as the CTA pill sitting on it. */
+  --t-panel: #faeece;    --t-panel-on: #4c201b;  /* cream     11.7:1 */
+  --t-graphic: #857b4c;  --t-graphic-on: #faeece;  /* olive 3.6:1 */
+  --t-cta: #c22a15;      --t-cta-on: #faeece;  /* red on cream 4.9:1 */
+  --t-strip: #c22a15;    --t-strip-on: #faeece;
+
+  --t-tint-1: #5c2c25;
+  --t-tint-2: #6d3a31;
+}
+
+/* ---- almanac ----------------------------------------------
+   A warm, LIGHT-ground set — the first here — from a citrus-and-
+   sea swatch card: cream ground under pomelo, sky, leather,
+   tangerine and ocean. Accents sit as filled shapes carrying
+   dark text, the way that card reads, rather than popping off a
+   dark page.
+
+   Ocean is the darkest hue, so it does double duty: the eyebrow
+   colour on the ground (a2) and the big capabilities panel.
+   Leather is the palette mid-tone — 3.6:1 on the ground — so it
+   takes the graphic-only slot and never carries small text, the
+   same call plum's olive gets. Light accents (pomelo, sky) have
+   low edge contrast on cream by nature; that softness is the
+   look, not a defect. See docs/lab-themes.md. */
+.lab-home[data-lab-theme="almanac"] {
+  --t-ground: #e9e4db;   /* cream */
+  --t-ink: #241f1a;      /* warm charcoal        12.9:1 */
+  --t-surface: #2b2621;  /* dark slab: footer panel + cards */
+  --t-surface-on: #fbf4e4;                     /* 13.7:1 */
+
+  --t-a1: #dd7f38;  --t-a1-on: #241f1a;  /* tangerine  5.6:1 */
+  --t-a2: #517295;  --t-a2-on: #fbf4e4;  /* ocean      4.6:1; eyebrow on ground 4.0:1 */
+  --t-a3: #b3d0de;  --t-a3-on: #241f1a;  /* sky       10.1:1 */
+  --t-a4: #d7cc62;  --t-a4-on: #241f1a;  /* pomelo     9.9:1 */
+
+  /* Ocean panel anchors the middle of the warm page; cream text
+     on it clears AA at 4.6:1. */
+  --t-panel: #517295;    --t-panel-on: #fbf4e4;  /* ocean    4.6:1 */
+  /* Leather mid-tone: fine for an icon-only shape, never text. */
+  --t-graphic: #907237;  --t-graphic-on: #fbf4e4;  /* leather 3.6:1 */
+  /* Pomelo CTA on the ocean panel: 3.0:1 shape, dark arrow 9.9:1. */
+  --t-cta: #d7cc62;      --t-cta-on: #241f1a;
+  --t-strip: #dd7f38;    --t-strip-on: #241f1a;  /* tangerine 5.6:1 */
+
+  /* placeholders / card-2: cream nudged warmer + darker, since the
+     palette carries no neutral tints of its own. */
+  --t-tint-1: #dad3c6;
+  --t-tint-2: #cdc4b4;
+}
+
+/* ---- almanac-dark -----------------------------------------
+   The same citrus-and-sea palette on a warm espresso ground —
+   the night side of almanac. The role map is inverted from the
+   light one: on a dark page the eyebrow accent has to be LIGHT
+   (pomelo, a2, 10.3:1 on the ground), and the big capabilities
+   panel is a bright SKY block carrying dark text, mirroring the
+   light theme's deep-ocean panel.
+
+   Leather stays the graphic-only mid-tone (3.8:1 on the ground);
+   ocean is the one dark accent, so it takes cream text (#fbf4e4,
+   4.6:1) rather than the charcoal the light accents use. */
+.lab-home[data-lab-theme="almanac-dark"] {
+  --t-ground: #201c17;   /* warm espresso */
+  --t-ink: #f3ecdd;      /* warm cream           14.4:1 */
+  --t-surface: #16130f;  /* deeper slab: footer panel + cards */
+  --t-surface-on: #fbf4e4;                     /* 15.7:1 */
+
+  --t-a1: #dd7f38;  --t-a1-on: #201c17;  /* tangerine  5.8:1 */
+  --t-a2: #d7cc62;  --t-a2-on: #201c17;  /* pomelo    10.3:1; eyebrow on ground 10.3:1 */
+  --t-a3: #b3d0de;  --t-a3-on: #201c17;  /* sky       10.5:1 */
+  --t-a4: #517295;  --t-a4-on: #fbf4e4;  /* ocean      4.6:1 */
+
+  /* Sky panel is the bright block anchoring the dark page; dark
+     text on it is a comfortable 10.5:1. */
+  --t-panel: #b3d0de;    --t-panel-on: #201c17;  /* sky     10.5:1 */
+  /* Leather mid-tone: fine for an icon-only shape, never text. */
+  --t-graphic: #907237;  --t-graphic-on: #fbf4e4;  /* leather 3.8:1 */
+  /* Ocean CTA on the sky panel: 3.1:1 shape, cream arrow 4.6:1. */
+  --t-cta: #517295;      --t-cta-on: #fbf4e4;
+  --t-strip: #dd7f38;    --t-strip-on: #201c17;  /* tangerine 5.8:1 */
+
+  /* placeholders / card-2: the ground lifted a little, warm. */
+  --t-tint-1: #2c2721;
+  --t-tint-2: #383029;
+}
+
+/* ---- carnival ---------------------------------------------
+   Built from a 9-tile brand pairing sheet — each tile proves a
+   ground + mark combination, and the token system gives every
+   accent its own on-colour, so one tile maps cleanly onto one
+   slot. A neutral sand ground (the sheet's one quiet tile) keeps
+   the page readable while the vibrant pairs carry the sections:
+
+     panel   lime / forest green    7.8:1
+     surface navy / aqua           11.8:1
+     a1      red  / maroon          4.3:1  (pill + large text)
+     a2      navy / aqua           11.8:1  (eyebrow navy-on-sand 9.1)
+     a3      blue / navy            5.4:1
+     a4      maroon / pink          8.0:1
+     graphic olive / yellow         6.5:1
+     cta     maroon / pink on lime  arrow 8.0, shape 12.4
+     strip   forest / light green   5.5:1
+
+   The sheet's pink/red tile is decorative only (2.1:1, tuned for
+   a giant monogram, not text), so it goes to the image
+   placeholders where nothing sits on it. Saturated pills have
+   soft edges on sand by nature — that flatness is the poster
+   look, and the on-text inside each carries the contrast.
+   See docs/lab-themes.md. */
+.lab-home[data-lab-theme="carnival"] {
+  --t-ground: #cdc5b2;   /* sand */
+  --t-ink: #141414;      /* near-black          10.7:1 */
+  --t-surface: #16233f;  /* navy footer panel + cards */
+  --t-surface-on: #a7ede0;                     /* aqua 11.8:1 */
+
+  --t-a1: #f5414b;  --t-a1-on: #470a1d;  /* red / maroon   4.3:1 */
+  --t-a2: #16233f;  --t-a2-on: #a7ede0;  /* navy / aqua   11.8:1; eyebrow on sand 9.1 */
+  --t-a3: #1ba1e9;  --t-a3-on: #16233f;  /* blue / navy    5.4:1 */
+  --t-a4: #470a1d;  --t-a4-on: #e8a6c0;  /* maroon / pink  8.0:1 */
+
+  --t-panel: #d4ee97;    --t-panel-on: #0e4d2e;  /* lime / forest 7.8:1 */
+  --t-graphic: #5a4a1f;  --t-graphic-on: #f5e23c;  /* olive / yellow 6.5:1 */
+  --t-cta: #470a1d;      --t-cta-on: #e8a6c0;  /* maroon pill on lime, pink arrow */
+  --t-strip: #0c5a2f;    --t-strip-on: #9fe39a;  /* forest / light green 5.5:1 */
+
+  /* the sheet's decorative pink/red tile lives here, behind
+     images, where its 2.1:1 pairing never has to carry text. */
+  --t-tint-1: #f2b5cd;
+  --t-tint-2: #e79db8;
+}
+
+/* ---- carnival-dark ----------------------------------------
+   The night side of carnival, from the same pairing sheet. It
+   flips to the sheet's own dark tile — navy ground with aqua ink
+   (11.8:1) — and mirrors the light theme's structure: the quiet
+   navy/aqua pair carries the chrome while the vibrant pairs carry
+   the sections. The eyebrow accent (a2) becomes a LIGHT colour
+   (yellow, 11.8:1 on the ground) the way the dark page needs.
+
+     panel   lime / forest         12.2:1 on ground
+     a1      red  / maroon           4.3:1  (pill + large text)
+     a2      yellow / olive          6.5:1  (eyebrow yellow-on-navy 11.8)
+     a3      blue / navy             5.4:1
+     a4      sand / near-black      10.7:1
+     graphic light green / forest   (icon; 10.4:1 on ground)
+     cta     maroon / pink on lime   arrow 8.0, shape 12.4
+     strip   sand / near-black      10.7:1
+
+   Surface is a hair-darker navy — a subtle slab, the same call
+   almanac-dark's footer makes. The decorative pink/red tile again
+   goes to the image placeholders. See docs/lab-themes.md. */
+.lab-home[data-lab-theme="carnival-dark"] {
+  --t-ground: #16233f;   /* navy */
+  --t-ink: #a7ede0;      /* aqua                11.8:1 */
+  --t-surface: #0e1729;  /* deeper navy slab: footer panel + cards */
+  --t-surface-on: #a7ede0;                     /* 13.5:1 */
+
+  --t-a1: #f5414b;  --t-a1-on: #470a1d;  /* red / maroon    4.3:1 */
+  --t-a2: #f5e23c;  --t-a2-on: #5a4a1f;  /* yellow / olive  6.5:1; eyebrow on navy 11.8 */
+  --t-a3: #1ba1e9;  --t-a3-on: #16233f;  /* blue / navy     5.4:1 */
+  --t-a4: #cdc5b2;  --t-a4-on: #141414;  /* sand / black   10.7:1 */
+
+  --t-panel: #d4ee97;    --t-panel-on: #0e4d2e;  /* lime / forest 7.8:1 */
+  --t-graphic: #9fe39a;  --t-graphic-on: #0c5a2f;  /* light green / forest */
+  --t-cta: #470a1d;      --t-cta-on: #e8a6c0;  /* maroon pill on lime, pink arrow */
+  --t-strip: #cdc5b2;    --t-strip-on: #141414;  /* sand / black 10.7:1 */
+
+  /* decorative pink/red tile, behind images only. */
+  --t-tint-1: #f2b5cd;
+  --t-tint-2: #e79db8;
+}
+
+/* ---- carnival-charcoal ------------------------------------
+   A third cut of carnival: the same vibrant accent pairs, but on
+   a neutral charcoal ground instead of carnival-dark's navy. The
+   ground turns into a true neutral canvas, so — like light
+   carnival's black-on-sand — a plain off-white ink carries the
+   text and the accents do all the colour work. (The navy/aqua
+   pairing steps aside here: aqua only ever served as ink, so it
+   drops out with the ground swap.)
+
+     panel   lime / forest        13.1:1 on ground
+     a1      red  / maroon          4.6:1  (pill + large text)
+     a2      yellow / olive         6.5:1  (eyebrow yellow-on-charcoal 12.5)
+     a3      blue / navy            5.4:1
+     a4      sand / near-black     10.7:1
+     graphic light green / forest  (icon; 11.0:1 on ground)
+     cta     maroon / pink on lime  arrow 8.0, shape 12.4
+     strip   sand / near-black     10.7:1
+
+   Surface is a hair-darker charcoal — a subtle slab, as in the
+   other dark themes. See docs/lab-themes.md. */
+.lab-home[data-lab-theme="carnival-charcoal"] {
+  --t-ground: #1e1e20;   /* charcoal */
+  --t-ink: #eae7e0;      /* warm off-white      13.5:1 */
+  --t-surface: #141415;  /* deeper charcoal slab: footer panel + cards */
+  --t-surface-on: #eae7e0;                     /* 14.9:1 */
+
+  --t-a1: #f5414b;  --t-a1-on: #470a1d;  /* red / maroon    4.6:1 */
+  --t-a2: #f5e23c;  --t-a2-on: #5a4a1f;  /* yellow / olive  6.5:1; eyebrow on charcoal 12.5 */
+  --t-a3: #1ba1e9;  --t-a3-on: #16233f;  /* blue / navy     5.4:1 */
+  --t-a4: #cdc5b2;  --t-a4-on: #141414;  /* sand / black   10.7:1 */
+
+  --t-panel: #d4ee97;    --t-panel-on: #0e4d2e;  /* lime / forest 7.8:1 */
+  --t-graphic: #9fe39a;  --t-graphic-on: #0c5a2f;  /* light green / forest */
+  --t-cta: #470a1d;      --t-cta-on: #e8a6c0;  /* maroon pill on lime, pink arrow */
+  --t-strip: #cdc5b2;    --t-strip-on: #141414;  /* sand / black 10.7:1 */
+
+  /* decorative pink/red tile, behind images only. */
+  --t-tint-1: #f2b5cd;
+  --t-tint-2: #e79db8;
+}
+
+/* ============================================================
+   3. STRUCTURE  — consumes tokens only, no literal colours.
+   ============================================================ */
+
+/* map the theme onto the stylesheet's own variables, so every
+   base rule that already reads --bg / --cream / --orange picks
+   the theme up without being restated here */
+.lab-themed {
+  --bg: var(--t-ground);
+  --cream: var(--t-ink);
+  --cream-dim: color-mix(in srgb, var(--t-ink) 66%, transparent);
+  --ink: var(--t-surface);
+
+  --card: var(--t-surface);
+  --card-2: var(--t-tint-1);
+  --placeholder: var(--t-tint-1);
+  --placeholder-2: var(--t-tint-2);
+
+  --orange: var(--t-a1);
+  --yellow: var(--t-a2);
+  --lavender: var(--t-a3);
+  --blurple: var(--t-a4);
+  --green: var(--t-a3);
+  --maroon: var(--t-a4);
+}
+
+html:has(.lab-themed),
+.lab-themed { background: var(--t-ground); }
 
 /* ---------- chrome ---------- */
 
-.lab-home .site-logo { color: var(--lab-sand); }
-.lab-home .menu-btn { background: var(--lab-navy-ink); color: var(--lab-navy); }
-.lab-home .menu-bar { background: var(--lab-ground); color: var(--lab-sand); }
-.lab-home .menu-bar-logo { color: var(--lab-sand); }
-.lab-home .menu-dock { background: var(--lab-burgundy); }
-.lab-home .menu-dock a,
-.lab-home .menu-dock button { background: var(--lab-burgundy-ink); color: var(--lab-burgundy); }
+.lab-themed .site-logo { color: var(--t-ink); }
+.lab-themed .menu-btn { background: var(--t-a2); color: var(--t-a2-on); }
+
+/* the mobile bar is a light pill floating on the ground, so it keeps a
+   light fill and dark mark rather than inverting to the ground colour */
+.lab-themed .menu-bar { background: var(--t-a3); color: var(--t-a3-on); }
+.lab-themed .menu-bar-logo { color: var(--t-a3-on); }
+.lab-themed .menu-bar .menu-btn { background: var(--t-a1); color: var(--t-a1-on); }
+
+/* the dock itself stays transparent — it is a fixed container the pills
+   float in, so giving it a background paints a slab across the page.
+   The four pills sit side by side, so they take the four accents. */
+.lab-themed .menu-dock a:nth-child(1) { background: var(--t-a3); color: var(--t-a3-on); }
+.lab-themed .menu-dock a:nth-child(2) { background: var(--t-a2); color: var(--t-a2-on); }
+.lab-themed .menu-dock a:nth-child(3) { background: var(--t-a1); color: var(--t-a1-on); }
+.lab-themed .menu-dock a:nth-child(4) { background: var(--t-a4); color: var(--t-a4-on); }
+.lab-themed .menu-dock .menu-close { background: var(--t-a3); color: var(--t-a3-on); }
 
 /* ---------- colour-blocked sections ---------- */
 
-.lab-home .capabilities-section {
-  background: var(--lab-lime);
-  color: var(--lab-lime-ink);
+.lab-themed .capabilities-section {
+  background: var(--t-panel);
+  color: var(--t-panel-on);
   border-radius: var(--radius);
   padding: clamp(48px, 6vw, 96px);
 }
-/* every descendant, so nothing inherits the sand meant for the dark ground */
-.lab-home .capabilities-section :where(h2, h3, h4, p, li, a, span, strong, em) { color: var(--lab-lime-ink); }
-.lab-home .caps-grid li:hover { color: var(--lab-lime-ink); }
+/* every descendant, so nothing inherits the type colour meant for the ground */
+.lab-themed .capabilities-section :where(h2, h3, h4, p, li, a, span, strong, em) { color: var(--t-panel-on); }
+.lab-themed .caps-grid li:hover { color: var(--t-panel-on); }
 
-.lab-home .about-teaser {
-  background: var(--lab-sand);
-  color: var(--lab-sand-ink);
-  border-radius: var(--radius);
-  padding: clamp(48px, 6vw, 96px);
-}
-.lab-home .about-teaser :where(h2, h3, h4, p, li, a, span, strong, em) { color: var(--lab-sand-ink); }
+/* The about teaser is NOT a colour-blocked panel — there is no box wrapping
+   the photo and the card together. The card itself keeps its fill; it just
+   sits on the ground rather than inside another panel. */
+/* One declaration pair. Everything inside the card inherits from it, so the
+   fill and the ink move together by construction. Do not add per-descendant
+   colours here — that is exactly how a surface ends up light-on-light. */
+.lab-themed .teaser-card { background: var(--t-a3); color: var(--t-a3-on); }
 
 /* one pair per testimonial card, so the carousel steps through the palette */
-.lab-home .testimonial-section { background: var(--lab-ground); }
-.lab-home .testimonial-card.card-1 { background: var(--lab-burgundy); color: var(--lab-burgundy-ink); }
-.lab-home .testimonial-card.card-2 { background: var(--lab-green); color: var(--lab-green-ink); }
-.lab-home .testimonial-card.card-3 { background: var(--lab-blue); color: var(--lab-blue-ink); }
-.lab-home .testimonial-attribution a { color: inherit; }
+.lab-themed .testimonial-section { background: var(--t-ground); }
+.lab-themed .testimonial-card.card-1 { background: var(--t-a2); color: var(--t-a2-on); }
+.lab-themed .testimonial-card.card-2 { background: var(--t-a3); color: var(--t-a3-on); }
+.lab-themed .testimonial-card.card-3 { background: var(--t-a1); color: var(--t-a1-on); }
+.lab-themed .testimonial-attribution a { color: inherit; }
+/* hover underline on testimonial credits is a hardcoded amber in the base */
+.lab-themed .testimonial-attribution a:hover { text-decoration-color: currentColor; }
 
-.lab-home .site-footer,
-.lab-home .footer-panel { background: var(--lab-brown); color: var(--lab-brown-ink); }
-.lab-home .footer-cta h2 { color: var(--lab-brown-ink); }
-.lab-home .footer-cta .pill-btn { background: var(--lab-brown-ink); color: var(--lab-brown); }
-.lab-home .footer-legal .fine-print,
-.lab-home .footer-legal a { color: var(--lab-brown-ink); }
-.lab-home .socials a { background: var(--lab-brown-ink); color: var(--lab-brown); }
+/* ---------- footer ---------- */
 
-/* work tiles keep their own artwork; the caption picks up the palette */
-.lab-home .tile-caption { background: var(--lab-sand); color: var(--lab-sand-ink); }
-.lab-home .tile-caption h3 { color: var(--lab-sand-ink); }
-.lab-home .tile-caption p { color: rgba(13, 13, 13, 0.78); }
-/* red takes the dark burgundy mark it is paired with in the grid; sand on red
-   only reaches 2.2:1 and fails at any size */
-.lab-home .arr { background: var(--lab-red); color: var(--lab-red-ink); }
+/* .site-footer is the strip that shows below the panel's rounded corners,
+   so it is what the very bottom of the page reads as. Keeping it distinct
+   from the panel is the point — do not collapse these two. */
+.lab-themed .site-footer { background: var(--t-strip); color: var(--t-strip-on); }
+.lab-themed .footer-panel { background: var(--t-surface); color: var(--t-surface-on); }
+.lab-themed .footer-cta h2 { color: var(--t-surface-on); }
+.lab-themed .footer-legal .fine-print,
+.lab-themed .footer-legal .fine-print a { color: var(--t-strip-on); }
 
-.lab-home .pill-btn { background: var(--lab-red); color: var(--lab-red-ink); }
-.lab-home .pill-btn.maroon { background: var(--lab-burgundy); color: var(--lab-burgundy-ink); }
-.lab-home .pill-arrow { background: var(--lab-red); color: var(--lab-red-ink); }
+/* Four social buttons in a row, so four distinct fills. These pull a1..a4,
+   which the contract guarantees are distinct from each other — the graphic
+   slot is not used here, since a theme may legitimately point it at the same
+   value as an accent. */
+.lab-themed .socials .s-top       { background: var(--t-a3); color: var(--t-a3-on); }
+.lab-themed .socials .s-dribbble  { background: var(--t-a1); color: var(--t-a1-on); }
+.lab-themed .socials .s-instagram { background: var(--t-a2); color: var(--t-a2-on); }
+/* base hardcodes a LinkedIn blue here, so it needs an explicit override */
+.lab-themed .socials .s-linkedin  { background: var(--t-a4); color: var(--t-a4-on); }
 
-/* aqua eyebrows on the dark ground; :where keeps this weak enough that the
+/* ---------- buttons ---------- */
+
+.lab-themed .pill-btn { background: var(--t-a1); color: var(--t-a1-on); }
+.lab-themed .pill-btn.maroon { background: var(--t-a2); color: var(--t-a2-on); }
+.lab-themed .footer-cta .pill-btn { background: var(--t-a2); color: var(--t-a2-on); }
+
+/* icon-only button on the ground, so the graphic slot is fair game */
+.lab-themed .pill-arrow { background: var(--t-graphic); color: var(--t-graphic-on); }
+
+/* .arr is a bare arrow with no fill behind it in the base design, and it now
+   inherits the ink of whatever surface it sits on, so it needs no rule here. */
+
+/* The big CTA pill hardcodes a blue background and an inline #ffb900 arrow
+   stroke, so neither passes through a token. The inline stroke is a
+   presentation attribute, which CSS outranks. It sits on the a1 panel, so it
+   uses the dedicated cta slot (>=3:1 on --t-panel); hover inverts the pair. */
+.lab-themed .cta-pill { background: var(--t-cta); }
+.lab-themed .cta-pill svg path { stroke: var(--t-cta-on); }
+.lab-themed .cta-pill::before { background: var(--t-cta-on); }
+.lab-themed .cta-pill:hover svg path { stroke: var(--t-cta); }
+
+/* work tiles keep their own client artwork; only the caption is themed.
+   Same rule as the teaser card: one pair, everything inside inherits. */
+.lab-themed .tile-caption { background: var(--t-a3); color: var(--t-a3-on); }
+
+/* eyebrows on the dark ground; :where keeps this weak enough that the
    colour-blocked sections above always override it */
-.lab-home :where(.eyebrow) { color: var(--lab-navy-ink); }
+.lab-themed :where(.eyebrow) { color: var(--t-a2); }
 
-/* selected text inherits the red/sand pair otherwise, which lands at 2.2:1 */
-.lab-home ::selection { background: var(--lab-red); color: var(--lab-red-ink); }
+/* case-study blocks carry their own paper/ink pair */
+.lab-themed .case-hero,
+.lab-themed .case-band,
+.lab-themed [class*="case-"] {
+  --case-paper: var(--t-a3);
+  --case-ink: var(--t-a3-on);
+}
+
+.lab-themed ::selection { background: var(--t-a1); color: var(--t-a1-on); }
+
+/* ============================================================
+   FONT SETS
+   ------------------------------------------------------------
+   Independent of the colour themes — pick a theme and a font set
+   in any combination. The whole stylesheet already routes type
+   through three variables, so a set only has to redefine them:
+
+     --sans          body and UI
+     --sans-display  the big hero / heading face
+     --serif         pull quotes and the testimonial carousel
+
+   TO ADD A SET: add a block here, add the family to the <link>
+   in homepage-lab.html if it needs loading, and add one entry to
+   FONT_SETS in js/lab-theme.js.
+
+   --lab-display-tighten nudges heading tracking, since these
+   faces do not all want Degular's tight display letter-spacing.
+   ============================================================ */
+
+/* byte-identical to the :root values in styles.css, so "Original + Degular"
+   is the live site exactly rather than merely close */
+.lab-home[data-lab-font="degular"] {
+  --sans: "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --sans-display: "Degular Display", "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --serif: "P22 Mackinac Pro", "Fraunces", Georgia, serif;
+}
+
+/* Aeonik replaces Degular wherever Degular is used — headings, wordmark, menu,
+   buttons, tile captions, testimonial credits. --serif is left alone: the body
+   prose and pull quotes are P22 Mackinac, which is not Degular.
+
+   Two cuts, because the page uses this family at more than one weight. The
+   capabilities list sets at 400 and everything else at 500/600, so a single
+   Medium mapped across the whole range would render that list semi-bold. */
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Regular.otf") format("opentype");
+  font-weight: 100 450;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Medium.otf") format("opentype");
+  /* 451+ so the 500 UI text and the 600 headings both land on Medium, which
+     is the cut this set is built around */
+  font-weight: 451 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.lab-home[data-lab-font="aeonik"] {
+  --sans: "Aeonik", "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --sans-display: "Aeonik", "Degular Display", "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --serif: "P22 Mackinac Pro", "Fraunces", Georgia, serif;
+}
+/* The wordmark picks up --sans automatically. The MARK does not: styles.css
+   locks it to the wordmark's "Q", sizing it to that letter's cap-plus-tail
+   span and nudging it down by the tail depth, using ratios measured off
+   Degular. Measured the same way at 600 weight, Aeonik's Q rises 0.706em and
+   drops just 0.006em — taller in the cap and effectively flat-bottomed, where
+   Degular is 0.613 / 0.095. Without re-measuring, the icon and the lettering
+   come out different heights and the lockup reads as broken.
+   The two totals are near-identical (0.712 vs 0.708), so the icon keeps its
+   size; what changes is that the mark now sits on the baseline instead of
+   hanging below it. */
+.lab-home[data-lab-font="aeonik"] .site-logo {
+  --q-cap: calc(var(--wordmark-size) * 0.706);
+  --q-tail: calc(var(--wordmark-size) * 0.006);
+}
+
+/* Aeonik's display tracking is looser than Degular's; the base -0.02em on
+   section headings closes it up too far. */
+.lab-home[data-lab-font="aeonik"] .h-display,
+.lab-home[data-lab-font="aeonik"] .teaser-card h2,
+.lab-home[data-lab-font="aeonik"] .footer-cta h2 {
+  letter-spacing: -0.012em;
+}
+
+/* The hero does NOT use the generic .h-display scale — it has its own, much
+   larger clamp (11.2vw) and tighter tracking (-0.035em). Both are adjusted
+   here relative to those hero values, not the generic ones, and at a higher
+   specificity so this wins rather than the rule above flattening the hero.
+   Aeonik sets wider than Degular, so the size comes down ~14%. */
+.lab-home[data-lab-font="aeonik"] .hero .h-display {
+  font-size: clamp(44px, 9.6vw, 206px);
+  letter-spacing: -0.026em;
+}
+/* styles.css re-sizes the hero under 620px; this stylesheet loads after it, so
+   without a matching override the desktop clamp would leak onto mobile. */
+@media (max-width: 620px) {
+  .lab-home[data-lab-font="aeonik"] .hero .h-display {
+    font-size: clamp(42px, 14.2vw, 64px);
+    letter-spacing: -0.022em;
+  }
+}
+
+/* ---- display-face sets ------------------------------------
+   Poleno Bold, ITC Avant Garde Gothic Pro Bold, FatFrank and
+   Metallophile Sp8 Medium — display faces from Adobe Fonts,
+   copied into fonts/ for the lab only.
+
+   LICENSING: these are Adobe Fonts. Self-hosting them like this
+   is fine for the noindex lab, but they must NOT ship this way to
+   production — a live site has to load them through Adobe's own
+   web project / kit. Do not promote these @font-face rules into
+   styles.css.
+
+   Each set drives --sans-display (hero + section headings) and,
+   via --display-ui below, the build's chrome too — wordmark, nav,
+   capabilities headings, work-tile hover captions and text buttons.
+   Body prose stays on Mackinac (--serif) and the capabilities list
+   items stay on Degular (--sans), since these are display cuts, not
+   text cuts. Each single cut is mapped across the whole weight range
+   because it is only ever asked for at heading/UI weights. */
+@font-face {
+  font-family: "Poleno";
+  src: url("../fonts/Poleno-Bold.otf") format("opentype");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "ITC Avant Garde Gothic Pro";
+  src: url("../fonts/ITCAvantGardePro-Bold.otf") format("opentype");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "FatFrank";
+  src: url("../fonts/FatFrank.otf") format("opentype");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Metallophile Sp8";
+  src: url("../fonts/MetallophileSp8-Medium.otf") format("opentype");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Wise Sans";
+  src: url("../fonts/WiseSans.otf") format("opentype");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+
+.lab-home[data-lab-font="poleno"] {
+  --sans: "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --sans-display: "Poleno", "Degular Display", "Degular", "Helvetica Neue", Arial, sans-serif;
+  --serif: "P22 Mackinac Pro", "Fraunces", Georgia, serif;
+}
+.lab-home[data-lab-font="avantgarde"] {
+  --sans: "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --sans-display: "ITC Avant Garde Gothic Pro", "Degular Display", "Degular", "Helvetica Neue", Arial, sans-serif;
+  --serif: "P22 Mackinac Pro", "Fraunces", Georgia, serif;
+}
+.lab-home[data-lab-font="fatfrank"] {
+  --sans: "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --sans-display: "FatFrank", "Degular Display", "Degular", "Helvetica Neue", Arial, sans-serif;
+  --serif: "P22 Mackinac Pro", "Fraunces", Georgia, serif;
+}
+.lab-home[data-lab-font="metallophile"] {
+  --sans: "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --sans-display: "Metallophile Sp8", "Degular Display", "Degular", "Helvetica Neue", Arial, sans-serif;
+  --serif: "P22 Mackinac Pro", "Fraunces", Georgia, serif;
+}
+.lab-home[data-lab-font="wisesans"] {
+  --sans: "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --sans-display: "Wise Sans", "Degular Display", "Degular", "Helvetica Neue", Arial, sans-serif;
+  --serif: "P22 Mackinac Pro", "Fraunces", Georgia, serif;
+}
+
+/* ---- carry the display face through the chrome -------------
+   By default a font set only restyles the hero and section headings.
+   --display-ui is the face the build's chrome uses. It falls back to
+   --sans, so Degular and Aeonik (whose --sans already IS the theme face)
+   are untouched; only the display-only sets redirect it to their face. */
+.lab-home[data-lab-font="poleno"],
+.lab-home[data-lab-font="avantgarde"],
+.lab-home[data-lab-font="fatfrank"],
+.lab-home[data-lab-font="metallophile"],
+.lab-home[data-lab-font="wisesans"] {
+  --display-ui: var(--sans-display);
+}
+
+/* Chrome that normally sits on --sans (Degular) follows --display-ui:
+   the wordmark, the desktop dock + mobile bar nav, the capabilities
+   category headings, the work-tile hover caption title, and the text
+   buttons. The capabilities LIST items and body prose are left out on
+   purpose. */
+.lab-home .logo-wordmark,
+.lab-home .menu-bar-logo,
+.lab-home .menu-btn,
+.lab-home .menu-dock a,
+.lab-home .menu-dock button,
+.lab-home .caps-grid h3,
+.lab-home .tile-caption h3,
+.lab-home .pill-btn,
+.lab-home .case-btn,
+.lab-home .arrow-link {
+  font-family: var(--display-ui, var(--sans));
+}
+
+/* The ⓑ mark is locked to the wordmark's "Q" — its cap+tail span, nudged
+   down by the tail depth. Those ratios are face-specific, so a wordmark in
+   a new face needs them re-measured or the mark and lettering come out
+   different heights. Measured at 600 the same way Degular's 0.613 / 0.095
+   baseline was (see docs/lab-themes.md). */
+.lab-home[data-lab-font="poleno"] .site-logo {
+  --q-cap: calc(var(--wordmark-size) * 0.625);
+  --q-tail: calc(var(--wordmark-size) * 0.223);
+}
+.lab-home[data-lab-font="avantgarde"] .site-logo {
+  --q-cap: calc(var(--wordmark-size) * 0.754);
+  --q-tail: calc(var(--wordmark-size) * 0.015);
+}
+.lab-home[data-lab-font="fatfrank"] .site-logo {
+  --q-cap: calc(var(--wordmark-size) * 0.706);
+  --q-tail: calc(var(--wordmark-size) * 0.079);
+}
+.lab-home[data-lab-font="metallophile"] .site-logo {
+  --q-cap: calc(var(--wordmark-size) * 0.611);
+  --q-tail: calc(var(--wordmark-size) * 0.062);
+}
+.lab-home[data-lab-font="wisesans"] .site-logo {
+  --q-cap: calc(var(--wordmark-size) * 0.712);
+  --q-tail: calc(var(--wordmark-size) * 0.129);
+}
+
+/* ============================================================
+   THEME SWITCHER  — lab tooling, not part of any theme.
+   Deliberately uses literal colours so it stays legible on top
+   of whatever the theme underneath is doing.
+   ============================================================ */
+
+.lab-theme-switch {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 16px;
+  background: rgba(16, 16, 16, 0.82);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  font-family: "Space Mono", ui-monospace, monospace;
+}
+.lab-switch-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* legend, fixed-width so both dropdowns line up under each other */
+.lab-switch-row > span {
+  flex: 0 0 auto;
+  min-width: 42px;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.lab-select { position: relative; flex: 1 1 auto; }
+/* an open dropdown has to paint above the OTHER row — without this the
+   later row in the DOM (Type) draws over the Theme menu and bleeds through. */
+.lab-select.open { z-index: 5; }
+
+.lab-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  min-width: 132px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.lab-select-trigger:hover { background: rgba(255, 255, 255, 0.18); }
+.lab-select-trigger:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; }
+.lab-select-caret { font-size: 8px; opacity: 0.7; transition: transform 0.18s; }
+.lab-select.open .lab-select-caret { transform: rotate(180deg); }
+
+.lab-select-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  /* reach back over the legend column (42px + 8px gap) so the open panel
+     covers the whole row width, not just the trigger */
+  left: -50px;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 5px;
+  border-radius: 14px;
+  /* fully opaque: a translucent panel let the bright trigger beneath bleed through */
+  background: #1b1b1b;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+.lab-select.open .lab-select-menu { display: flex; }
+
+.lab-select-option {
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.75);
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.14s, color 0.14s;
+}
+.lab-select-option:hover { background: rgba(255, 255, 255, 0.12); color: #ffffff; }
+.lab-select-option.is-selected { background: #ffffff; color: #111111; }
+.lab-select-option:focus-visible { outline: 2px solid #ffffff; outline-offset: -2px; }
+
+@media (max-width: 900px) {
+  /* clear of the logo, and out of the mobile bar's way at the bottom */
+  .lab-theme-switch { top: auto; bottom: 92px; right: 10px; transform: scale(0.92); transform-origin: bottom right; }
+  /* switcher sits at the bottom on mobile, so open the list upward */
+  .lab-select-menu { top: auto; bottom: calc(100% + 6px); }
+}
