@@ -1,13 +1,17 @@
-/* The Forgotten Initiative case study */
+/* The Forgotten Initiative case study
+   Layout and pacing only. Brand tokens live in tfi-brand.css, which must be
+   loaded first.
 
-.tfi-page {
-  --tfi-navy: #123440;
-  --tfi-blue: #638b9a;
-  --tfi-cobalt: #5276a5;
-  --tfi-yellow: #ffb61c;
-  --tfi-mauve: #b993a2;
-  --tfi-paper: #f1ece2;
-  --tfi-ink: #17171b;
+   The old block here defined --tfi-navy/--tfi-yellow/--tfi-ink by eye. Those
+   are gone: --tfi-navy and --tfi-yellow were approximations of colors we can
+   now sample exactly (--tfi-ink #063042, --tfi-gold #fdb414), and because this
+   file loads after tfi-brand.css its --tfi-ink: #17171b was quietly winning
+   and reverting the brand navy to near-black. */
+
+.tfi-case {
+  /* Body copy stays near-black. This is a reading color, not a brand color,
+     so it is deliberately not --tfi-ink. */
+  --tfi-text: #17171b;
 }
 
 /* Same photo and same grade as the homepage card, so the card and the page it
@@ -18,10 +22,26 @@
   filter: saturate(0.88) contrast(0.96);
 }
 
+/* TFI's own lockup, reversed out over the photograph. The file on disk is
+   navy on transparent, which sinks straight into the grass, and there is no
+   light variant - brightness(0) invert(1) flattens it to solid white rather
+   than shipping a second, altered copy of someone else's logo. It sits above
+   .work-hero::after, so it needs its own z-index and a little scrim of its
+   own via the drop shadow. */
+.tfi-work-hero .tfi-hero-logo {
+  position: absolute;
+  inset: auto auto clamp(24px, 3.6vw, 60px) clamp(24px, 3.6vw, 60px);
+  z-index: 2;
+  width: clamp(196px, 24vw, 400px);
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 20px rgba(0, 0, 0, 0.5));
+}
+
 .tfi-case {
   --case-accent: var(--tfi-mauve);
   --case-paper: var(--tfi-paper);
-  --case-ink: var(--tfi-ink);
+  --case-ink: var(--tfi-text);
 }
 
 .tfi-case .case-intro-v2 {
@@ -34,95 +54,85 @@
   font-size: clamp(34px, 4.2vw, 66px);
 }
 
-.tfi-placeholder {
+/* Real assets replaced the labelled placeholders. The per-slot background
+   colors below are kept deliberately: they still tint each frame while the
+   SVG streams in, so the board never flashes white, and they matched the
+   artwork's own ground colors on purpose. */
+.tfi-asset {
   position: relative;
-  display: grid;
-  place-items: center;
   overflow: hidden;
   background: #d9d4cb;
-  color: rgba(23, 23, 27, 0.58);
 }
 
-.tfi-placeholder::after {
-  content: "";
-  position: absolute;
-  inset: 14px;
-  border: 1px solid currentColor;
-  opacity: 0.18;
-  pointer-events: none;
+.tfi-asset img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.tfi-placeholder > span {
-  position: relative;
-  z-index: 1;
-  padding: 14px;
-  font: 10px / 1.45 "Space Mono", monospace;
-  letter-spacing: 0.12em;
-  text-align: center;
-  text-transform: uppercase;
-}
+/* Generated identity work is composed edge to edge, so it must never be
+   cropped - cover on a 4:3 board inside a 1.6:1 stage was clipping the mark
+   off the top and the caption off the bottom. Photographs still cover. */
+.tfi-asset img[src$=".svg"] { object-fit: contain; }
 
-.tfi-ph-primary {
+/* Each slot's background is set to its artwork's own ground colour below, so
+   the letterboxing that contain introduces is invisible - the frame simply
+   reads as more of the same field. */
+
+.tfi-ph-primary {                      /* campaign-identity.svg */
   min-height: clamp(500px, 62vw, 920px);
-  background: #df8bdd;
-  color: rgba(38, 17, 38, 0.6);
+  background: var(--tfi-paper);
 }
 
-.tfi-ph-symbol {
-  background: #080707;
-  color: rgba(255, 255, 255, 0.54);
-}
+/* The identity-mark study, the brand-system board, and the signage panel are
+   gone from the page. Quinn produced communications for TFI; he did not brand
+   it, and presenting a mark study, a type specimen, and a colour system as his
+   work implied otherwise. Their styles went with them. */
 
-.tfi-statement { background: #98523f; }
+.tfi-resource-collage .tfi-asset:nth-child(1) { background: var(--tfi-paper-dim); }  /* guide-cover */
+.tfi-resource-collage .tfi-asset:nth-child(2) { background: #c7d8db; }
+.tfi-resource-collage .tfi-asset:nth-child(3) { background: var(--tfi-ink); }        /* video-stills */
+.tfi-resource-collage .tfi-asset:nth-child(4) { background: var(--tfi-gold); }       /* next-steps */
 
-.tfi-statement blockquote {
-  max-width: 14ch;
-  color: #fff;
-}
-
-.tfi-statement em { color: #f4ddd0; }
-
-.tfi-board {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: clamp(12px, 1.5vw, 24px);
-  overflow: hidden;
-}
-
-.tfi-board .tfi-placeholder { min-height: clamp(260px, 32vw, 500px); }
-.tfi-board .tfi-ph-board-wide { grid-column: 1 / -1; min-height: clamp(420px, 56vw, 820px); background: var(--tfi-paper); }
-.tfi-board .tfi-placeholder:nth-child(2) { grid-column: span 5; background: #080707; color: rgba(255, 255, 255, 0.52); }
-.tfi-board .tfi-placeholder:nth-child(3) { grid-column: span 7; background: #e8e4dc; }
-.tfi-board .tfi-placeholder:nth-child(4) { grid-column: span 7; background: var(--tfi-blue); color: rgba(255, 255, 255, 0.7); }
-.tfi-board .tfi-placeholder:nth-child(5) { grid-column: span 5; background: var(--tfi-mauve); }
-
-.tfi-ph-landscape {
-  min-height: clamp(520px, 64vw, 940px);
-  background: #557761;
-  color: rgba(255, 255, 255, 0.68);
-}
-
-.tfi-resource-collage .tfi-placeholder:nth-child(1) { background: var(--tfi-paper); }
-.tfi-resource-collage .tfi-placeholder:nth-child(2) { background: #c7d8db; }
-.tfi-resource-collage .tfi-placeholder:nth-child(3) { background: var(--tfi-navy); color: rgba(255, 255, 255, 0.64); }
-.tfi-resource-collage .tfi-placeholder:nth-child(4) { background: var(--tfi-yellow); }
-
-.tfi-ph-panorama {
+.tfi-ph-panorama {                     /* campaign-in-context.svg */
   min-height: clamp(540px, 67vw, 980px);
-  background: #253f4a;
-  color: rgba(255, 255, 255, 0.66);
+  background: #223d48;
 }
 
-.tfi-podcast-duo > * { min-height: clamp(520px, 56vw, 820px); }
-.tfi-podcast-duo .tfi-placeholder { background: #080707; color: rgba(255, 255, 255, 0.58); }
+/* Both halves are square so the downloads panel is the same shape as the cover
+   beside it - two records side by side rather than a picture and a sidebar.
+   aspect-ratio rather than min-height, so the pair stays square at every width
+   instead of only at the one where the clamp happens to land. */
+/* .case-duo .case-media sets its own min-height at the same specificity, so
+   this selector carries the extra class to beat it rather than relying on
+   source order alone. */
+.case-duo.tfi-podcast-duo > * {
+  min-height: 0;
+  aspect-ratio: 1;
+}
+
+.tfi-podcast-duo .tfi-asset { background: var(--tfi-paper); }   /* podcast-cover.webp */
+
+/* The released cover is square and carries its own margins, so it is contained
+   rather than cropped. Its cream field is the same paper as the slot behind it,
+   which makes the letterboxing read as more of the same ground. */
+.tfi-podcast-duo .tfi-asset img { object-fit: contain; }
+
+/* Two episodes stacked full width under the cover. */
+.tfi-podcast-videos {
+  display: grid;
+  gap: clamp(16px, 2.2vw, 34px);
+  margin-top: clamp(16px, 2.2vw, 34px);
+}
 
 .tfi-podcast-proof {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: clamp(36px, 6vw, 92px);
-  background: var(--tfi-yellow);
-  color: var(--tfi-navy);
+  background: var(--tfi-gold);
+  color: var(--tfi-ink);
 }
 
 .tfi-podcast-proof span {
@@ -158,72 +168,87 @@
   border: 0;
 }
 
-.tfi-video-caption {
-  display: grid;
-  grid-template-columns: minmax(160px, 3fr) minmax(0, 7fr);
-  gap: clamp(28px, 6vw, 100px);
-  padding: 20px clamp(4px, 1.2vw, 20px) 0;
-}
-
-.tfi-video-caption span {
-  color: var(--cream-dim);
-  font: 10px "Space Mono", monospace;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.tfi-video-caption p {
-  max-width: 65ch;
-  color: var(--cream-dim);
-  font-size: clamp(16px, 1.15vw, 19px);
-  line-height: 1.55;
-}
-
-.tfi-video-caption em { color: var(--cream); }
 .tfi-podcast-copy { margin-top: clamp(72px, 9vw, 136px); }
 
-.tfi-production-collage .tfi-placeholder:nth-child(1) { background: #ced5d0; }
-.tfi-production-collage .tfi-placeholder:nth-child(2) { background: var(--tfi-mauve); }
-.tfi-production-collage .tfi-placeholder:nth-child(3) { background: #080707; color: rgba(255, 255, 255, 0.58); }
-.tfi-production-collage .tfi-placeholder:nth-child(4) { background: var(--tfi-cobalt); color: rgba(255, 255, 255, 0.68); }
-
-.tfi-leadership-duo { margin-bottom: clamp(88px, 12vw, 176px); }
-.tfi-leadership-duo .tfi-placeholder:first-child { background: var(--tfi-paper); }
-.tfi-leadership-duo .tfi-placeholder:last-child { background: #9a513e; color: rgba(255, 255, 255, 0.7); }
-
-.tfi-closing-quote {
-  min-height: clamp(560px, 70vw, 940px);
-  background: var(--tfi-cobalt);
+/* Facade embeds. The poster and the play button are ours; the YouTube iframe
+   is only injected on click, with autoplay, so the player arrives already
+   running. That is what removes the pre-roll chrome - the title bar, channel
+   avatar, subscribe button, and "Watch on YouTube" all live on the *paused*
+   player, and there is no way to switch them off with embed parameters
+   (modestbranding stopped doing anything in 2023). Skipping the paused state
+   is the only reliable answer. It also means nothing is requested from
+   youtube.com until a visitor asks for it. */
+.yt-lite {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  appearance: none;
 }
 
-.tfi-closing-quote blockquote { max-width: 16ch; color: #fff; }
-.tfi-closing-quote em { color: var(--tfi-yellow); }
-.tfi-retrospective { margin-bottom: 0; }
-
-@media (max-width: 900px) {
-  .tfi-board .tfi-placeholder:nth-child(n + 2) { grid-column: span 6; }
+.yt-lite img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.yt-lite-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(62px, 6.6vw, 94px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--tfi-gold);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.34);
+}
+
+/* Triangle drawn in CSS rather than shipped as an asset, nudged right of
+   centre so it reads as centred - a triangle balanced on its bounding box
+   always looks like it is sitting too far left. */
+.yt-lite-play::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  border-top: clamp(11px, 1.2vw, 17px) solid transparent;
+  border-bottom: clamp(11px, 1.2vw, 17px) solid transparent;
+  border-left: clamp(19px, 2vw, 28px) solid var(--tfi-ink);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .yt-lite-play { transition: transform 320ms cubic-bezier(0.2, 0.7, 0.2, 1); }
+}
+
+.yt-lite:hover .yt-lite-play,
+.yt-lite:focus-visible .yt-lite-play { transform: translate(-50%, -50%) scale(1.09); }
+
+.tfi-production-collage .tfi-asset:nth-child(1) { background: #ced5d0; }
+.tfi-production-collage .tfi-asset:nth-child(2) { background: var(--tfi-sage); }     /* production-plan */
+.tfi-production-collage .tfi-asset:nth-child(3) { background: #080707; color: rgba(255, 255, 255, 0.58); }
+.tfi-production-collage .tfi-asset:nth-child(4) { background: #0a0909; }             /* video-frames */
+
+/* Last section before prev/next now, so it carries the closing gap. */
+.tfi-leadership-duo { margin-bottom: 0; }
+.tfi-leadership-duo .tfi-asset:first-child { background: var(--tfi-paper); }
+.tfi-leadership-duo .tfi-asset:last-child { background: #9a513e; }   /* workstreams */
 
 @media (max-width: 640px) {
   .tfi-page .logo-wordmark { display: none; }
 
-  .tfi-placeholder::after { inset: 9px; }
   .tfi-ph-primary { min-height: 62vh; }
-
-  .tfi-board { grid-template-columns: 1fr; }
-  .tfi-board .tfi-ph-board-wide,
-  .tfi-board .tfi-placeholder:nth-child(n + 2) { grid-column: 1; }
-  .tfi-board .tfi-placeholder { min-height: 54vh; }
-
-  .tfi-ph-landscape,
   .tfi-ph-panorama { min-height: 68vh; }
 
-  .tfi-video-caption {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .tfi-podcast-duo > * { min-height: 68vh; }
-  .tfi-podcast-proof strong { font-size: clamp(100px, 42vw, 170px); }
-  .tfi-podcast-proof p { font-size: 34px; }
+  /* Stays square stacked, same as the pair does side by side. */
+  .tfi-podcast-proof strong { font-size: clamp(72px, 26vw, 150px); }
+  .tfi-podcast-proof p { font-size: 28px; }
 }

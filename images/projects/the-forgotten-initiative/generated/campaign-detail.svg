@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 1150" width="1150" height="1150" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="cast" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#000000" flood-opacity="0.30"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+    <filter id="castsm" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.24"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.055"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="gutter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#000" stop-opacity="0.26"/>
+      <stop offset="58%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+<rect width="1150" height="1150" fill="#d1c7bb"/>
+<circle cx="851.0" cy="253.0" r="215" fill="#fdb414" opacity="0.6"/>
+<text x="80" y="132" font-size="18" font-weight="400" letter-spacing="5.3999999999999995" fill="#063042" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">GUIDING PRINCIPLE</text>
+<text x="80" y="340" font-size="122" font-weight="700" letter-spacing="-5" fill="#063042" text-anchor="start">Feel</text>
+<text x="80" y="478" font-size="122" font-weight="700" letter-spacing="-5" fill="#063042" text-anchor="start">seen.</text>
+<text x="80" y="616" font-size="122" font-weight="700" letter-spacing="-5" fill="#063042" text-anchor="start">Understand.</text>
+<text x="80" y="754" font-size="122" font-weight="700" letter-spacing="-5" fill="#b28d35" text-anchor="start">Respond.</text>
+<rect x="80" y="940" width="280" height="7" fill="#063042" opacity="0.32"/>
+<text x="80" y="1020" font-size="17" font-weight="400" letter-spacing="5.1" fill="#063042" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">THE FORGOTTEN INITIATIVE</text>
+<rect width="1150" height="1150" filter="url(#grain)" fill="none"/>
+</svg>

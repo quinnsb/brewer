@@ -130,6 +130,108 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* ----- facade YouTube embeds -----
+     Swap the poster for a real player on click, autoplaying so the player
+     never shows its paused state. The paused state is where YouTube puts the
+     title bar, channel avatar, subscribe button and "Watch on YouTube" link,
+     and no embed parameter turns those off any more, so arriving mid-play is
+     what keeps them away. Side benefit: youtube.com is not contacted at all
+     until someone shows intent.
+
+     This goes through the IFrame Player API rather than a bare iframe because
+     two of the things we want have no URL parameter at all. Volume is only
+     reachable through setVolume(), and cc_load_policy=0 is advisory - the
+     player quietly ignores it when the viewer has captions forced on, so the
+     captions module gets unloaded on ready as well. */
+  const ytFacades = document.querySelectorAll(".yt-lite");
+
+  if (ytFacades.length) {
+    let ytApi = null;
+
+    const loadYouTubeApi = () => {
+      if (ytApi) return ytApi;
+      ytApi = new Promise((resolve, reject) => {
+        if (window.YT && window.YT.Player) {
+          resolve(window.YT);
+          return;
+        }
+        const previous = window.onYouTubeIframeAPIReady;
+        window.onYouTubeIframeAPIReady = () => {
+          if (typeof previous === "function") previous();
+          resolve(window.YT);
+        };
+        const script = document.createElement("script");
+        script.src = "https://www.youtube.com/iframe_api";
+        script.onerror = reject;
+        document.head.appendChild(script);
+      });
+      return ytApi;
+    };
+
+    ytFacades.forEach((facade) => {
+      // Fetch the API on intent rather than on click. Waiting until the click
+      // puts a network round trip between the gesture and the play() call,
+      // which is long enough for some browsers to stop treating the play as
+      // user-initiated and block the autoplay.
+      facade.addEventListener("pointerenter", loadYouTubeApi, { once: true });
+      facade.addEventListener("focus", loadYouTubeApi, { once: true });
+
+      facade.addEventListener("click", () => {
+        const id = facade.dataset.yt;
+        if (!id) return;
+
+        const label = (facade.getAttribute("aria-label") || "").replace(/^Play\s+/, "");
+        const host = document.createElement("div");
+        facade.replaceWith(host);
+
+        loadYouTubeApi().then(
+          (YT) => {
+            new YT.Player(host, {
+              videoId: id,
+              host: "https://www.youtube-nocookie.com",
+              playerVars: {
+                autoplay: 1,
+                rel: 0,
+                playsinline: 1,
+                cc_load_policy: 0,
+              },
+              events: {
+                onReady: (event) => {
+                  const player = event.target;
+                  // "captions" is the current module name, "cc" the legacy
+                  // one; which is live depends on which player build loads.
+                  player.unloadModule("captions");
+                  player.unloadModule("cc");
+                  player.unMute();
+                  player.setVolume(75);
+                  player.playVideo();
+                  const frame = player.getIframe();
+                  if (frame) frame.title = label;
+                },
+              },
+            });
+          },
+          () => {
+            // API blocked or offline: fall back to a plain embed so the video
+            // still plays. Volume and captions then follow YouTube's defaults.
+            const frame = document.createElement("iframe");
+            frame.src =
+              "https://www.youtube-nocookie.com/embed/" +
+              encodeURIComponent(id) +
+              "?autoplay=1&rel=0&playsinline=1&cc_load_policy=0";
+            frame.title = label;
+            frame.referrerPolicy = "strict-origin-when-cross-origin";
+            frame.allow =
+              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+            frame.allowFullscreen = true;
+            frame.setAttribute("frameborder", "0");
+            host.replaceWith(frame);
+          }
+        );
+      });
+    });
+  }
+
   /* ----- scroll reveals ----- */
   const io = new IntersectionObserver(
     (entries) => {

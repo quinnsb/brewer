@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 1200" width="1900" height="1200" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="cast" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#000000" flood-opacity="0.30"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+    <filter id="castsm" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.24"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.055"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="gutter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#000" stop-opacity="0.26"/>
+      <stop offset="58%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+<rect width="1900" height="1200" fill="#c7d8db"/>
+<g transform="rotate(-0.8 950.0 600.0)" filter="url(#cast)">
+<rect x="170.0" y="110" width="1560" height="980" rx="3" fill="#f1ece2"/>
+<text x="240" y="220" font-size="18" font-weight="400" letter-spacing="5.3999999999999995" fill="#b28d35" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">SESSION TWO</text>
+<text x="240" y="318" font-size="74" font-weight="700" letter-spacing="-2.5" fill="#063042" text-anchor="start">Belief into</text>
+<text x="240" y="396" font-size="74" font-weight="700" letter-spacing="-2.5" fill="#063042" text-anchor="start">action.</text>
+<rect x="240.0" y="436" width="132" height="6" fill="#fdb414"/>
+<rect x="240.0" y="500" width="640" height="11" rx="5" fill="#063042" opacity="0.12"/>
+<rect x="240.0" y="540" width="640" height="11" rx="5" fill="#063042" opacity="0.12"/>
+<rect x="240.0" y="580" width="640" height="11" rx="5" fill="#063042" opacity="0.12"/>
+<rect x="240.0" y="620" width="640" height="11" rx="5" fill="#063042" opacity="0.12"/>
+<rect x="240.0" y="660" width="530" height="11" rx="5" fill="#063042" opacity="0.12"/>
+<rect x="240.0" y="700" width="640" height="11" rx="5" fill="#063042" opacity="0.12"/>
+<rect x="240.0" y="740" width="640" height="11" rx="5" fill="#063042" opacity="0.12"/>
+<rect x="240.0" y="780" width="640" height="11" rx="5" fill="#063042" opacity="0.12"/>
+<rect x="240.0" y="820" width="640" height="11" rx="5" fill="#063042" opacity="0.12"/>
+<rect x="240.0" y="860" width="530" height="11" rx="5" fill="#063042" opacity="0.12"/>
+<rect x="240.0" y="920" width="640" height="112" rx="6" fill="#cae4db" opacity="0.65"/>
+<text x="274" y="976" font-size="16" font-weight="400" letter-spacing="4.8" fill="#063042" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">DISCUSS</text>
+<rect x="274.0" y="998" width="540" height="9" rx="4" fill="#063042" opacity="0.2"/>
+<rect x="274.0" y="1022" width="450" height="9" rx="4" fill="#063042" opacity="0.2"/>
+<text x="1020" y="220" font-size="18" font-weight="400" letter-spacing="5.3999999999999995" fill="#b28d35" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">NOTES</text>
+<line x1="1020.0" y1="280" x2="1660.0" y2="280" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="326" x2="1660.0" y2="326" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="372" x2="1660.0" y2="372" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="418" x2="1660.0" y2="418" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="464" x2="1660.0" y2="464" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="510" x2="1660.0" y2="510" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="556" x2="1660.0" y2="556" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="602" x2="1660.0" y2="602" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="648" x2="1660.0" y2="648" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="694" x2="1660.0" y2="694" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="740" x2="1660.0" y2="740" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="786" x2="1660.0" y2="786" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="832" x2="1660.0" y2="832" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="878" x2="1660.0" y2="878" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<line x1="1020.0" y1="924" x2="1660.0" y2="924" stroke="#063042" stroke-opacity="0.12" stroke-width="2"/>
+<rect x="1020.0" y="972" width="640" height="104" rx="6" fill="#fdb414"/>
+<text x="1054" y="1038" font-size="40" font-weight="700" letter-spacing="-1" fill="#063042" text-anchor="start">What is my next step?</text>
+<rect x="860.0" y="110" width="180" height="980" fill="url(#gutter)"/>
+</g>
+</svg>

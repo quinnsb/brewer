@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1080" width="1350" height="1080" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="cast" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#000000" flood-opacity="0.30"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+    <filter id="castsm" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.24"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.055"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="gutter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#000" stop-opacity="0.26"/>
+      <stop offset="58%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+<rect width="1350" height="1080" fill="#aab9a8"/>
+<g transform="rotate(-1.4 675.0 540.0)" filter="url(#cast)">
+<rect x="150" y="90" width="1050" height="900" rx="3" fill="#f1ece2"/>
+<text x="210" y="180" font-size="17" font-weight="400" letter-spacing="5.1" fill="#b28d35" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">FIELD PRODUCTION   /   KENTUCKY</text>
+<text x="210" y="276" font-size="62" font-weight="700" letter-spacing="-2" fill="#063042" text-anchor="start">Two days inside</text>
+<text x="210" y="344" font-size="62" font-weight="700" letter-spacing="-2" fill="#063042" text-anchor="start">Florence Baptist.</text>
+<line x1="210" y1="390" x2="1140" y2="390" stroke="#063042" stroke-opacity="0.2"/>
+<text x="210" y="462" font-size="15" font-weight="400" letter-spacing="4.5" fill="#b28d35" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">DAY 01</text>
+<text x="370" y="466" font-size="38" font-weight="600" letter-spacing="-0.8" fill="#063042" text-anchor="start">Pastor interview</text>
+<text x="370" y="504" font-size="24" font-weight="400" letter-spacing="0" fill="#063042" text-anchor="start" opacity="0.55">Ministry context, the church's own beginning</text>
+<line x1="210" y1="534" x2="1140" y2="534" stroke="#063042" stroke-opacity="0.1"/>
+<text x="210" y="584" font-size="15" font-weight="400" letter-spacing="4.5" fill="#b28d35" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">DAY 01</text>
+<text x="370" y="588" font-size="38" font-weight="600" letter-spacing="-0.8" fill="#063042" text-anchor="start">B-roll, sanctuary</text>
+<text x="370" y="626" font-size="24" font-weight="400" letter-spacing="0" fill="#063042" text-anchor="start" opacity="0.55">Space, light, the ordinary week</text>
+<line x1="210" y1="656" x2="1140" y2="656" stroke="#063042" stroke-opacity="0.1"/>
+<text x="210" y="706" font-size="15" font-weight="400" letter-spacing="4.5" fill="#b28d35" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">DAY 02</text>
+<text x="370" y="710" font-size="38" font-weight="600" letter-spacing="-0.8" fill="#063042" text-anchor="start">Advocate interview</text>
+<text x="370" y="748" font-size="24" font-weight="400" letter-spacing="0" fill="#063042" text-anchor="start" opacity="0.55">The local agency relationship</text>
+<line x1="210" y1="778" x2="1140" y2="778" stroke="#063042" stroke-opacity="0.1"/>
+<text x="210" y="828" font-size="15" font-weight="400" letter-spacing="4.5" fill="#b28d35" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">DAY 02</text>
+<text x="370" y="832" font-size="38" font-weight="600" letter-spacing="-0.8" fill="#063042" text-anchor="start">Pickups + stills</text>
+<text x="370" y="870" font-size="24" font-weight="400" letter-spacing="0" fill="#063042" text-anchor="start" opacity="0.55">Assets for social, email, and the launch film</text>
+<line x1="210" y1="900" x2="1140" y2="900" stroke="#063042" stroke-opacity="0.1"/>
+<rect x="210" y="966" width="930" height="92" rx="6" fill="#cae4db" opacity="0.7"/>
+<text x="248" y="1024" font-size="30" font-weight="600" letter-spacing="-0.5" fill="#063042" text-anchor="start">Emotionally honest, never exploitative.</text>
+</g>
+</svg>

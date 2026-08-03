@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 1450" width="1150" height="1450" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="cast" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#000000" flood-opacity="0.30"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+    <filter id="castsm" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.24"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.055"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="gutter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#000" stop-opacity="0.26"/>
+      <stop offset="58%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+<rect width="1150" height="1450" fill="#0a0909"/>
+<text x="72" y="104" font-size="20" font-weight="400" letter-spacing="6.0" fill="#ffffff" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">COLOR</text>
+<text x="72" y="142" font-size="16" font-weight="400" letter-spacing="4.8" fill="rgba(255,255,255,0.4)" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">SAMPLED FROM THE MARK</text>
+<g transform="rotate(0.4 575.0 300)" filter="url(#castsm)"><rect x="72" y="210" width="1006" height="180" rx="3" fill="#063042"/><rect x="72" y="210" width="1006" height="180" rx="3" fill="url(#sheen)"/><text x="110" y="290" font-size="46" font-weight="700" letter-spacing="-1" fill="#ffffff" text-anchor="start">Ink</text><text x="110" y="340" font-size="22" font-weight="400" letter-spacing="2.2" fill="#ffffff" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace" opacity="0.72">#063042</text></g>
+<g transform="rotate(-0.5 575.0 500)" filter="url(#castsm)"><rect x="72" y="410" width="1006" height="180" rx="3" fill="#fdb414"/><rect x="72" y="410" width="1006" height="180" rx="3" fill="url(#sheen)"/><text x="110" y="490" font-size="46" font-weight="700" letter-spacing="-1" fill="#063042" text-anchor="start">Gold</text><text x="110" y="540" font-size="22" font-weight="400" letter-spacing="2.2" fill="#063042" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace" opacity="0.72">#FDB414</text></g>
+<g transform="rotate(-0.5 575.0 700)" filter="url(#castsm)"><rect x="72" y="610" width="1006" height="180" rx="3" fill="#cae4db"/><rect x="72" y="610" width="1006" height="180" rx="3" fill="url(#sheen)"/><text x="110" y="690" font-size="46" font-weight="700" letter-spacing="-1" fill="#063042" text-anchor="start">Mint</text><text x="110" y="740" font-size="22" font-weight="400" letter-spacing="2.2" fill="#063042" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace" opacity="0.72">#CAE4DB</text></g>
+<g transform="rotate(0.4 575.0 900)" filter="url(#castsm)"><rect x="72" y="810" width="1006" height="180" rx="3" fill="#d1c7bb"/><rect x="72" y="810" width="1006" height="180" rx="3" fill="url(#sheen)"/><text x="110" y="890" font-size="46" font-weight="700" letter-spacing="-1" fill="#063042" text-anchor="start">Tan</text><text x="110" y="940" font-size="22" font-weight="400" letter-spacing="2.2" fill="#063042" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace" opacity="0.72">#D1C7BB</text></g>
+<g transform="rotate(-0.5 575.0 1100)" filter="url(#castsm)"><rect x="72" y="1010" width="1006" height="180" rx="3" fill="#b28d35"/><rect x="72" y="1010" width="1006" height="180" rx="3" fill="url(#sheen)"/><text x="110" y="1090" font-size="46" font-weight="700" letter-spacing="-1" fill="#ffffff" text-anchor="start">Gold / Tan</text><text x="110" y="1140" font-size="22" font-weight="400" letter-spacing="2.2" fill="#ffffff" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace" opacity="0.72">#B28D35</text></g>
+<g transform="rotate(-0.5 575.0 1300)" filter="url(#castsm)"><rect x="72" y="1210" width="1006" height="180" rx="3" fill="#aab9a8"/><rect x="72" y="1210" width="1006" height="180" rx="3" fill="url(#sheen)"/><text x="110" y="1290" font-size="46" font-weight="700" letter-spacing="-1" fill="#063042" text-anchor="start">Mint / Tan</text><text x="110" y="1340" font-size="22" font-weight="400" letter-spacing="2.2" fill="#063042" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace" opacity="0.72">#AAB9A8</text></g>
+</svg>

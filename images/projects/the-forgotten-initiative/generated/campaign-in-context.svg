@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2100 1200" width="2100" height="1200" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="cast" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#000000" flood-opacity="0.30"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+    <filter id="castsm" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.24"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.055"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="gutter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#000" stop-opacity="0.26"/>
+      <stop offset="58%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+<rect width="2100" height="1200" fill="#223d48"/>
+<g filter="url(#cast)">
+<rect x="210" y="150" width="1230" height="790" rx="14" fill="#f1ece2"/>
+<path d="M210 164 a14,14 0 0 1 14,-14 h1202 a14,14 0 0 1 14,14 v44 h-1230 z" fill="#e2dbcd"/>
+<circle cx="246" cy="179" r="7" fill="#063042" opacity="0.28"/>
+<circle cx="274" cy="179" r="7" fill="#063042" opacity="0.28"/>
+<circle cx="302" cy="179" r="7" fill="#063042" opacity="0.28"/>
+
+  <g opacity="1.0">
+    <clipPath id="cg11"><rect x="260.96" y="282.12" width="68.08" height="17.76"/></clipPath>
+    <clipPath id="cm11"><rect x="286.12" y="256.96" width="17.76" height="68.08"/></clipPath>
+    <clipPath id="cc11"><rect x="286.12" y="282.12" width="17.76" height="17.76"/></clipPath>
+    <rect x="260.96" y="282.12" width="68.08" height="17.76" fill="#fdb414"/>
+    <rect x="286.12" y="256.96" width="17.76" height="68.08" fill="#cae4db"/>
+    <rect x="286.12" y="282.12" width="17.76" height="17.76" fill="#c8a111"/>
+    <rect x="260.96" y="282.12" width="68.08" height="17.76" transform="rotate(-45 295.00 291.00)" fill="#d1c7bb"/>
+    <g clip-path="url(#cg11)"><rect x="260.96" y="282.12" width="68.08" height="17.76" transform="rotate(-45 295.00 291.00)" fill="#b28d35"/></g>
+    <g clip-path="url(#cm11)"><rect x="260.96" y="282.12" width="68.08" height="17.76" transform="rotate(-45 295.00 291.00)" fill="#aab9a8"/></g>
+    <g clip-path="url(#cc11)"><rect x="260.96" y="282.12" width="68.08" height="17.76" transform="rotate(-45 295.00 291.00)" fill="#a47e0c"/></g>
+  </g>
+<text x="366" y="308" font-size="38" font-weight="700" letter-spacing="-1" fill="#063042" text-anchor="start">Foster Care &amp; The Church</text>
+<rect x="258" y="390" width="1134" height="310" rx="8" fill="#063042"/>
+<circle cx="825.0" cy="545" r="50" fill="#fdb414"/>
+<path d="M810.0 520 L810.0 570 L853.0 545 Z" fill="#063042"/>
+<rect x="258.0" y="740" width="352.0" height="150" rx="8" fill="#cae4db" opacity="0.9"/>
+<rect x="636.0" y="740" width="352.0" height="150" rx="8" fill="#d1c7bb" opacity="0.9"/>
+<rect x="1014.0" y="740" width="352.0" height="150" rx="8" fill="#fdb414" opacity="0.9"/>
+</g>
+<g transform="rotate(2.5 1700 620)" filter="url(#cast)">
+<rect x="1540" y="300" width="320" height="650" rx="38" fill="#0d1b21"/>
+<rect x="1551" y="311" width="298" height="628" rx="29" fill="#fdb414"/>
+
+  <g opacity="1.0">
+    <clipPath id="cg12"><rect x="1655.84" y="428.48" width="88.32" height="23.04"/></clipPath>
+    <clipPath id="cm12"><rect x="1688.48" y="395.84" width="23.04" height="88.32"/></clipPath>
+    <clipPath id="cc12"><rect x="1688.48" y="428.48" width="23.04" height="23.04"/></clipPath>
+    <rect x="1655.84" y="428.48" width="88.32" height="23.04" fill="#fdb414"/>
+    <rect x="1688.48" y="395.84" width="23.04" height="88.32" fill="#cae4db"/>
+    <rect x="1688.48" y="428.48" width="23.04" height="23.04" fill="#c8a111"/>
+    <rect x="1655.84" y="428.48" width="88.32" height="23.04" transform="rotate(-45 1700.00 440.00)" fill="#d1c7bb"/>
+    <g clip-path="url(#cg12)"><rect x="1655.84" y="428.48" width="88.32" height="23.04" transform="rotate(-45 1700.00 440.00)" fill="#b28d35"/></g>
+    <g clip-path="url(#cm12)"><rect x="1655.84" y="428.48" width="88.32" height="23.04" transform="rotate(-45 1700.00 440.00)" fill="#aab9a8"/></g>
+    <g clip-path="url(#cc12)"><rect x="1655.84" y="428.48" width="88.32" height="23.04" transform="rotate(-45 1700.00 440.00)" fill="#a47e0c"/></g>
+  </g>
+<text x="1700" y="600" font-size="29" font-weight="700" letter-spacing="-1" fill="#063042" text-anchor="middle">Foster Care</text>
+<text x="1700" y="638" font-size="29" font-weight="700" letter-spacing="-1" fill="#063042" text-anchor="middle">&amp; The Church</text>
+<rect x="1584" y="712" width="232" height="60" rx="30" fill="#063042"/>
+<text x="1700" y="752" font-size="25" font-weight="600" letter-spacing="0" fill="#ffffff" text-anchor="middle">Get the kit</text>
+</g>
+</svg>

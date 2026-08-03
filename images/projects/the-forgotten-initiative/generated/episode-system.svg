@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1150" width="1700" height="1150" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="cast" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#000000" flood-opacity="0.30"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+    <filter id="castsm" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.24"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.055"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="gutter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#000" stop-opacity="0.26"/>
+      <stop offset="58%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+<rect width="1700" height="1150" fill="#f1ece2"/>
+<text x="80" y="106" font-size="18" font-weight="400" letter-spacing="5.3999999999999995" fill="#b28d35" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">EPISODE GRAPHICS SYSTEM</text>
+<text x="80" y="196" font-size="62" font-weight="700" letter-spacing="-2.2" fill="#063042" text-anchor="start">296 episodes, one grid.</text>
+<g filter="url(#castsm)">
+<rect x="80" y="280" width="1160" height="250" rx="5" fill="#063042"/>
+<rect x="80" y="280" width="200" height="250" rx="5" fill="#000" opacity="0.10"/>
+
+  <g opacity="1.0">
+    <clipPath id="cg1"><rect x="130.32" y="392.04" width="99.36" height="25.92"/></clipPath>
+    <clipPath id="cm1"><rect x="167.04" y="355.32" width="25.92" height="99.36"/></clipPath>
+    <clipPath id="cc1"><rect x="167.04" y="392.04" width="25.92" height="25.92"/></clipPath>
+    <rect x="130.32" y="392.04" width="99.36" height="25.92" fill="#fdb414"/>
+    <rect x="167.04" y="355.32" width="25.92" height="99.36" fill="#cae4db"/>
+    <rect x="167.04" y="392.04" width="25.92" height="25.92" fill="#c8a111"/>
+    <rect x="130.32" y="392.04" width="99.36" height="25.92" transform="rotate(-45 180.00 405.00)" fill="#d1c7bb"/>
+    <g clip-path="url(#cg1)"><rect x="130.32" y="392.04" width="99.36" height="25.92" transform="rotate(-45 180.00 405.00)" fill="#b28d35"/></g>
+    <g clip-path="url(#cm1)"><rect x="130.32" y="392.04" width="99.36" height="25.92" transform="rotate(-45 180.00 405.00)" fill="#aab9a8"/></g>
+    <g clip-path="url(#cc1)"><rect x="130.32" y="392.04" width="99.36" height="25.92" transform="rotate(-45 180.00 405.00)" fill="#a47e0c"/></g>
+  </g>
+<text x="330" y="368" font-size="22" font-weight="400" letter-spacing="5.5" fill="#ffffff" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace" opacity="0.7">EPISODE 296</text>
+<text x="330" y="432" font-size="44" font-weight="700" letter-spacing="-1.4" fill="#ffffff" text-anchor="start">Coping with a</text>
+<text x="330" y="484" font-size="44" font-weight="700" letter-spacing="-1.4" fill="#ffffff" text-anchor="start">Dangerous Child</text>
+<circle cx="1162" cy="405.0" r="34" fill="#ffffff" opacity="0.9"/>
+<path d="M1152 388.0 L1152 422.0 L1182 405.0 Z" fill="#063042"/>
+</g>
+<g filter="url(#castsm)">
+<rect x="140" y="560" width="1160" height="250" rx="5" fill="#fdb414"/>
+<rect x="140" y="560" width="200" height="250" rx="5" fill="#000" opacity="0.10"/>
+
+  <g opacity="1.0">
+    <clipPath id="cg2"><rect x="190.32" y="672.04" width="99.36" height="25.92"/></clipPath>
+    <clipPath id="cm2"><rect x="227.04" y="635.32" width="25.92" height="99.36"/></clipPath>
+    <clipPath id="cc2"><rect x="227.04" y="672.04" width="25.92" height="25.92"/></clipPath>
+    <rect x="190.32" y="672.04" width="99.36" height="25.92" fill="#fdb414"/>
+    <rect x="227.04" y="635.32" width="25.92" height="99.36" fill="#cae4db"/>
+    <rect x="227.04" y="672.04" width="25.92" height="25.92" fill="#c8a111"/>
+    <rect x="190.32" y="672.04" width="99.36" height="25.92" transform="rotate(-45 240.00 685.00)" fill="#d1c7bb"/>
+    <g clip-path="url(#cg2)"><rect x="190.32" y="672.04" width="99.36" height="25.92" transform="rotate(-45 240.00 685.00)" fill="#b28d35"/></g>
+    <g clip-path="url(#cm2)"><rect x="190.32" y="672.04" width="99.36" height="25.92" transform="rotate(-45 240.00 685.00)" fill="#aab9a8"/></g>
+    <g clip-path="url(#cc2)"><rect x="190.32" y="672.04" width="99.36" height="25.92" transform="rotate(-45 240.00 685.00)" fill="#a47e0c"/></g>
+  </g>
+<text x="390" y="648" font-size="22" font-weight="400" letter-spacing="5.5" fill="#063042" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace" opacity="0.7">EPISODE 295</text>
+<text x="390" y="712" font-size="44" font-weight="700" letter-spacing="-1.4" fill="#063042" text-anchor="start">Overcoming Fears of</text>
+<text x="390" y="764" font-size="44" font-weight="700" letter-spacing="-1.4" fill="#063042" text-anchor="start">Saying Yes to Autism</text>
+<circle cx="1222" cy="685.0" r="34" fill="#063042" opacity="0.9"/>
+<path d="M1212 668.0 L1212 702.0 L1242 685.0 Z" fill="#fdb414"/>
+</g>
+<g filter="url(#castsm)">
+<rect x="200" y="840" width="1160" height="250" rx="5" fill="#cae4db"/>
+<rect x="200" y="840" width="200" height="250" rx="5" fill="#000" opacity="0.10"/>
+
+  <g opacity="1.0">
+    <clipPath id="cg3"><rect x="250.32" y="952.04" width="99.36" height="25.92"/></clipPath>
+    <clipPath id="cm3"><rect x="287.04" y="915.32" width="25.92" height="99.36"/></clipPath>
+    <clipPath id="cc3"><rect x="287.04" y="952.04" width="25.92" height="25.92"/></clipPath>
+    <rect x="250.32" y="952.04" width="99.36" height="25.92" fill="#fdb414"/>
+    <rect x="287.04" y="915.32" width="25.92" height="99.36" fill="#cae4db"/>
+    <rect x="287.04" y="952.04" width="25.92" height="25.92" fill="#c8a111"/>
+    <rect x="250.32" y="952.04" width="99.36" height="25.92" transform="rotate(-45 300.00 965.00)" fill="#d1c7bb"/>
+    <g clip-path="url(#cg3)"><rect x="250.32" y="952.04" width="99.36" height="25.92" transform="rotate(-45 300.00 965.00)" fill="#b28d35"/></g>
+    <g clip-path="url(#cm3)"><rect x="250.32" y="952.04" width="99.36" height="25.92" transform="rotate(-45 300.00 965.00)" fill="#aab9a8"/></g>
+    <g clip-path="url(#cc3)"><rect x="250.32" y="952.04" width="99.36" height="25.92" transform="rotate(-45 300.00 965.00)" fill="#a47e0c"/></g>
+  </g>
+<text x="450" y="928" font-size="22" font-weight="400" letter-spacing="5.5" fill="#063042" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace" opacity="0.7">EPISODE 294</text>
+<text x="450" y="992" font-size="44" font-weight="700" letter-spacing="-1.4" fill="#063042" text-anchor="start">Supporting My Child's</text>
+<text x="450" y="1044" font-size="44" font-weight="700" letter-spacing="-1.4" fill="#063042" text-anchor="start">Sensory Needs</text>
+<circle cx="1282" cy="965.0" r="34" fill="#063042" opacity="0.9"/>
+<path d="M1272 948.0 L1272 982.0 L1302 965.0 Z" fill="#cae4db"/>
+</g>
+<text x="80" y="1090" font-size="17" font-weight="400" letter-spacing="5.1" fill="#063042" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">YOUTUBE  /  SPOTIFY  /  APPLE  /  SOCIAL</text>
+</svg>

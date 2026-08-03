@@ -1,0 +1,101 @@
+/* ==========================================================================
+   TFI Brand System
+   Extracted from The Forgotten Initiative's own assets, not invented.
+
+   Source of truth:
+     - Mark + wordmark colors sampled from images/projects/the-forgotten-initiative/
+       logo-horizontal.png (opaque-pixel frequency analysis, alpha > 230)
+     - Live-site assets confirmed at theforgotteninitiative.org, filtered to
+       /wp-content/uploads/2021/* .. /2024/05/* so everything matches Quinn's
+       tenure (June 2021 - March 2024) rather than the later redesign.
+
+   These tokens supersede the eyeballed values previously in tfi-case.css.
+   Old --tfi-navy #123440  ->  actual #063042
+   Old --tfi-yellow #ffb61c ->  actual #fdb414
+   ========================================================================== */
+
+.tfi-page {
+  /* --- Core brand, sampled ------------------------------------------------ */
+  --tfi-ink: #063042;        /* wordmark navy - 10,150 px, the single dominant hue */
+  --tfi-gold: #fdb414;       /* mark horizontal bar */
+  --tfi-mint: #cae4db;       /* mark vertical bar */
+  --tfi-tan: #d1c7bb;        /* mark diagonal bar */
+
+  /* --- Overlap colors, sampled from where the bars cross ------------------ */
+  /* These are real multiply results in the logo, so reusing them keeps any
+     generated artwork consistent with how the mark actually behaves. */
+  --tfi-gold-deep: #b28d35;  /* gold x tan */
+  --tfi-gold-mid: #d4962a;   /* gold x tan, lighter pass */
+  --tfi-sage: #aab9a8;       /* mint x tan */
+
+  /* --- Derived neutrals --------------------------------------------------- */
+  --tfi-deep: #041f2c;       /* ink shaded, for full-bleed dark panels */
+  --tfi-paper: #f1ece2;      /* warm paper, ties to --tfi-tan */
+  --tfi-paper-dim: #e2dbcd;
+  --tfi-line: rgba(6, 48, 66, 0.16);
+
+  /* --- Supporting hues carried over from the case-study layout ------------ */
+  --tfi-blue: #638b9a;
+  --tfi-cobalt: #5276a5;
+  --tfi-mauve: #b993a2;
+
+  /* --- Type ---------------------------------------------------------------
+     TFI's wordmark is a bold neo-grotesque. Generated SVG assets use a
+     web-safe grotesque stack so they render identically everywhere without
+     embedding a licensed face. Page chrome keeps Quinn's own type. */
+  --tfi-brand-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* --- Ratios ------------------------------------------------------------- */
+  --tfi-radius: 14px;
+}
+
+/* Mark geometry, reusable as a CSS-only badge.
+   Three bars crossing at center: gold horizontal, mint vertical, tan at 45deg,
+   multiplied so the intersections produce the sampled overlap colors. */
+.tfi-mark {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  isolation: isolate;
+}
+
+.tfi-mark::before,
+.tfi-mark::after,
+.tfi-mark > i {
+  content: "";
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: multiply;
+}
+
+/* gold horizontal */
+.tfi-mark::before {
+  top: 38%;
+  bottom: 38%;
+  left: 4%;
+  right: 4%;
+  background: var(--tfi-gold);
+}
+
+/* mint vertical */
+.tfi-mark::after {
+  left: 38%;
+  right: 38%;
+  top: 4%;
+  bottom: 4%;
+  background: var(--tfi-mint);
+}
+
+/* tan diagonal */
+.tfi-mark > i {
+  top: 38%;
+  bottom: 38%;
+  left: 4%;
+  right: 4%;
+  background: var(--tfi-tan);
+  transform: rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tfi-mark { transition: transform 400ms cubic-bezier(0.2, 0.7, 0.2, 1); }
+}

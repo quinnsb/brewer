@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1150" width="1700" height="1150" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="cast" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#000000" flood-opacity="0.30"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+    <filter id="castsm" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.24"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.055"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="gutter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#000" stop-opacity="0.26"/>
+      <stop offset="58%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+<rect width="1700" height="1150" fill="#e2dbcd"/>
+<g transform="rotate(-1.4 330.0 360.0)" filter="url(#cast)">
+<rect x="100.0" y="130" width="460" height="460" rx="4" fill="#063042"/>
+<text x="142" y="238" font-size="50" font-weight="700" letter-spacing="-1.6" fill="#ffffff" text-anchor="start">You don't have</text>
+<text x="142" y="300" font-size="50" font-weight="700" letter-spacing="-1.6" fill="#ffffff" text-anchor="start">to foster to</text>
+<text x="142" y="362" font-size="50" font-weight="700" letter-spacing="-1.6" fill="#ffffff" text-anchor="start">make a</text>
+<text x="142" y="424" font-size="50" font-weight="700" letter-spacing="-1.6" fill="#ffffff" text-anchor="start">difference.</text>
+<rect x="142.0" y="494" width="76" height="6" fill="#fdb414"/>
+
+  <g opacity="1.0">
+    <clipPath id="cg6"><rect x="458.48" y="505.56" width="57.04" height="14.88"/></clipPath>
+    <clipPath id="cm6"><rect x="479.56" y="484.48" width="14.88" height="57.04"/></clipPath>
+    <clipPath id="cc6"><rect x="479.56" y="505.56" width="14.88" height="14.88"/></clipPath>
+    <rect x="458.48" y="505.56" width="57.04" height="14.88" fill="#fdb414"/>
+    <rect x="479.56" y="484.48" width="14.88" height="57.04" fill="#cae4db"/>
+    <rect x="479.56" y="505.56" width="14.88" height="14.88" fill="#c8a111"/>
+    <rect x="458.48" y="505.56" width="57.04" height="14.88" transform="rotate(-45 487.00 513.00)" fill="#d1c7bb"/>
+    <g clip-path="url(#cg6)"><rect x="458.48" y="505.56" width="57.04" height="14.88" transform="rotate(-45 487.00 513.00)" fill="#b28d35"/></g>
+    <g clip-path="url(#cm6)"><rect x="458.48" y="505.56" width="57.04" height="14.88" transform="rotate(-45 487.00 513.00)" fill="#aab9a8"/></g>
+    <g clip-path="url(#cc6)"><rect x="458.48" y="505.56" width="57.04" height="14.88" transform="rotate(-45 487.00 513.00)" fill="#a47e0c"/></g>
+  </g>
+</g>
+<g transform="rotate(0.8 850.0 360.0)" filter="url(#cast)">
+<rect x="620.0" y="130" width="460" height="460" rx="4" fill="#fdb414"/>
+<text x="662" y="238" font-size="50" font-weight="700" letter-spacing="-1.6" fill="#063042" text-anchor="start">Awareness is</text>
+<text x="662" y="300" font-size="50" font-weight="700" letter-spacing="-1.6" fill="#063042" text-anchor="start">where it</text>
+<text x="662" y="362" font-size="50" font-weight="700" letter-spacing="-1.6" fill="#063042" text-anchor="start">starts. Not</text>
+<text x="662" y="424" font-size="50" font-weight="700" letter-spacing="-1.6" fill="#063042" text-anchor="start">where it ends.</text>
+<rect x="662.0" y="494" width="76" height="6" fill="#063042"/>
+
+  <g opacity="1.0">
+    <clipPath id="cg7"><rect x="978.48" y="505.56" width="57.04" height="14.88"/></clipPath>
+    <clipPath id="cm7"><rect x="999.56" y="484.48" width="14.88" height="57.04"/></clipPath>
+    <clipPath id="cc7"><rect x="999.56" y="505.56" width="14.88" height="14.88"/></clipPath>
+    <rect x="978.48" y="505.56" width="57.04" height="14.88" fill="#fdb414"/>
+    <rect x="999.56" y="484.48" width="14.88" height="57.04" fill="#cae4db"/>
+    <rect x="999.56" y="505.56" width="14.88" height="14.88" fill="#c8a111"/>
+    <rect x="978.48" y="505.56" width="57.04" height="14.88" transform="rotate(-45 1007.00 513.00)" fill="#d1c7bb"/>
+    <g clip-path="url(#cg7)"><rect x="978.48" y="505.56" width="57.04" height="14.88" transform="rotate(-45 1007.00 513.00)" fill="#b28d35"/></g>
+    <g clip-path="url(#cm7)"><rect x="978.48" y="505.56" width="57.04" height="14.88" transform="rotate(-45 1007.00 513.00)" fill="#aab9a8"/></g>
+    <g clip-path="url(#cc7)"><rect x="978.48" y="505.56" width="57.04" height="14.88" transform="rotate(-45 1007.00 513.00)" fill="#a47e0c"/></g>
+  </g>
+</g>
+<g transform="rotate(-0.6 1370.0 360.0)" filter="url(#cast)">
+<rect x="1140.0" y="130" width="460" height="460" rx="4" fill="#cae4db"/>
+<text x="1182" y="238" font-size="50" font-weight="700" letter-spacing="-1.6" fill="#063042" text-anchor="start">Your church is</text>
+<text x="1182" y="300" font-size="50" font-weight="700" letter-spacing="-1.6" fill="#063042" text-anchor="start">closer to this</text>
+<text x="1182" y="362" font-size="50" font-weight="700" letter-spacing="-1.6" fill="#063042" text-anchor="start">than you</text>
+<text x="1182" y="424" font-size="50" font-weight="700" letter-spacing="-1.6" fill="#063042" text-anchor="start">think.</text>
+<rect x="1182.0" y="494" width="76" height="6" fill="#b28d35"/>
+
+  <g opacity="1.0">
+    <clipPath id="cg8"><rect x="1498.48" y="505.56" width="57.04" height="14.88"/></clipPath>
+    <clipPath id="cm8"><rect x="1519.56" y="484.48" width="14.88" height="57.04"/></clipPath>
+    <clipPath id="cc8"><rect x="1519.56" y="505.56" width="14.88" height="14.88"/></clipPath>
+    <rect x="1498.48" y="505.56" width="57.04" height="14.88" fill="#fdb414"/>
+    <rect x="1519.56" y="484.48" width="14.88" height="57.04" fill="#cae4db"/>
+    <rect x="1519.56" y="505.56" width="14.88" height="14.88" fill="#c8a111"/>
+    <rect x="1498.48" y="505.56" width="57.04" height="14.88" transform="rotate(-45 1527.00 513.00)" fill="#d1c7bb"/>
+    <g clip-path="url(#cg8)"><rect x="1498.48" y="505.56" width="57.04" height="14.88" transform="rotate(-45 1527.00 513.00)" fill="#b28d35"/></g>
+    <g clip-path="url(#cm8)"><rect x="1498.48" y="505.56" width="57.04" height="14.88" transform="rotate(-45 1527.00 513.00)" fill="#aab9a8"/></g>
+    <g clip-path="url(#cc8)"><rect x="1498.48" y="505.56" width="57.04" height="14.88" transform="rotate(-45 1527.00 513.00)" fill="#a47e0c"/></g>
+  </g>
+</g>
+<text x="100" y="1070" font-size="19" font-weight="400" letter-spacing="5.7" fill="#063042" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">SOCIAL CAMPAIGN SYSTEM</text>
+</svg>

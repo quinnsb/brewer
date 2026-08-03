@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1100" width="1400" height="1100" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="cast" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#000000" flood-opacity="0.30"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+    <filter id="castsm" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.24"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.055"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="gutter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#000" stop-opacity="0.26"/>
+      <stop offset="58%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+<rect width="1400" height="1100" fill="#fdb414"/>
+<text x="90" y="130" font-size="19" font-weight="400" letter-spacing="5.7" fill="#063042" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">AWARENESS HAD TO LEAD SOMEWHERE</text>
+<text x="90" y="340" font-size="210" font-weight="700" letter-spacing="-8" fill="#063042" text-anchor="start">Pick</text>
+<text x="90" y="540" font-size="210" font-weight="700" letter-spacing="-8" fill="#063042" text-anchor="start">one next</text>
+<text x="90" y="740" font-size="210" font-weight="700" letter-spacing="-8" fill="#063042" text-anchor="start">step.</text>
+<rect x="90" y="820" width="360" height="8" fill="#063042" opacity="0.5"/>
+<text x="90" y="930" font-size="34" font-weight="500" letter-spacing="-0.5" fill="#063042" text-anchor="start" opacity="0.75">Advocate. Host the series. Support a caseworker. Give.</text>
+
+  <g opacity="1.0">
+    <clipPath id="cg10"><rect x="1108.00" y="876.00" width="184.00" height="48.00"/></clipPath>
+    <clipPath id="cm10"><rect x="1176.00" y="808.00" width="48.00" height="184.00"/></clipPath>
+    <clipPath id="cc10"><rect x="1176.00" y="876.00" width="48.00" height="48.00"/></clipPath>
+    <rect x="1108.00" y="876.00" width="184.00" height="48.00" fill="#fdb414"/>
+    <rect x="1176.00" y="808.00" width="48.00" height="184.00" fill="#cae4db"/>
+    <rect x="1176.00" y="876.00" width="48.00" height="48.00" fill="#c8a111"/>
+    <rect x="1108.00" y="876.00" width="184.00" height="48.00" transform="rotate(-45 1200.00 900.00)" fill="#d1c7bb"/>
+    <g clip-path="url(#cg10)"><rect x="1108.00" y="876.00" width="184.00" height="48.00" transform="rotate(-45 1200.00 900.00)" fill="#b28d35"/></g>
+    <g clip-path="url(#cm10)"><rect x="1108.00" y="876.00" width="184.00" height="48.00" transform="rotate(-45 1200.00 900.00)" fill="#aab9a8"/></g>
+    <g clip-path="url(#cc10)"><rect x="1108.00" y="876.00" width="184.00" height="48.00" transform="rotate(-45 1200.00 900.00)" fill="#a47e0c"/></g>
+  </g>
+<rect width="1400" height="1100" filter="url(#grain)" fill="none"/>
+</svg>

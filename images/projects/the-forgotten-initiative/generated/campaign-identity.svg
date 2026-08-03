@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1500" width="2000" height="1500" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="cast" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#000000" flood-opacity="0.30"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+    <filter id="castsm" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.24"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.055"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="gutter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#000" stop-opacity="0.26"/>
+      <stop offset="58%" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+<rect width="2000" height="1500" fill="#f1ece2"/>
+<circle cx="1680.0" cy="330.0" r="330" fill="#cae4db" opacity="0.62"/>
+<circle cx="1900.0" cy="600.0" r="175" fill="#fdb414" opacity="0.45"/>
+
+  <g opacity="1.0">
+    <clipPath id="cg4"><rect x="138.40" y="219.80" width="193.20" height="50.40"/></clipPath>
+    <clipPath id="cm4"><rect x="209.80" y="148.40" width="50.40" height="193.20"/></clipPath>
+    <clipPath id="cc4"><rect x="209.80" y="219.80" width="50.40" height="50.40"/></clipPath>
+    <rect x="138.40" y="219.80" width="193.20" height="50.40" fill="#fdb414"/>
+    <rect x="209.80" y="148.40" width="50.40" height="193.20" fill="#cae4db"/>
+    <rect x="209.80" y="219.80" width="50.40" height="50.40" fill="#c8a111"/>
+    <rect x="138.40" y="219.80" width="193.20" height="50.40" transform="rotate(-45 235.00 245.00)" fill="#d1c7bb"/>
+    <g clip-path="url(#cg4)"><rect x="138.40" y="219.80" width="193.20" height="50.40" transform="rotate(-45 235.00 245.00)" fill="#b28d35"/></g>
+    <g clip-path="url(#cm4)"><rect x="138.40" y="219.80" width="193.20" height="50.40" transform="rotate(-45 235.00 245.00)" fill="#aab9a8"/></g>
+    <g clip-path="url(#cc4)"><rect x="138.40" y="219.80" width="193.20" height="50.40" transform="rotate(-45 235.00 245.00)" fill="#a47e0c"/></g>
+  </g>
+<text x="130" y="720" font-size="216" font-weight="700" letter-spacing="-9" fill="#063042" text-anchor="start">Foster Care</text>
+<text x="130" y="930" font-size="216" font-weight="700" letter-spacing="-9" fill="#063042" text-anchor="start">&amp; The Church</text>
+<rect x="130" y="1010" width="640" height="7" fill="#fdb414"/>
+<text x="130" y="1130" font-size="44" font-weight="400" letter-spacing="-0.5" fill="#063042" text-anchor="start" opacity="0.72">Growing awareness for meaningful engagement.</text>
+<text x="130" y="1330" font-size="19" font-weight="400" letter-spacing="5.7" fill="#063042" text-anchor="start" font-family="Space Mono, ui-monospace, SFMono-Regular, Menlo, monospace">THE FORGOTTEN INITIATIVE   /   FOUR-PART RESOURCE</text>
+<rect width="2000" height="1500" filter="url(#grain)" fill="none"/>
+</svg>
