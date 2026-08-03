@@ -30,12 +30,14 @@
    own via the drop shadow. */
 .tfi-work-hero .tfi-hero-logo {
   position: absolute;
-  inset: auto auto clamp(24px, 3.6vw, 60px) clamp(24px, 3.6vw, 60px);
+  left: 50%;
+  top: 50%;
   z-index: 2;
-  width: clamp(196px, 24vw, 400px);
+  width: min(56%, 620px);
   height: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1) drop-shadow(0 2px 20px rgba(0, 0, 0, 0.5));
+  transform: translate(-50%, -50%);
+  filter: brightness(0) invert(1) drop-shadow(0 8px 24px rgba(0, 0, 0, 0.48));
 }
 
 .tfi-case {
@@ -112,12 +114,14 @@
   aspect-ratio: 1;
 }
 
-.tfi-podcast-duo .tfi-asset { background: var(--tfi-paper); }   /* podcast-cover.webp */
+/* Warm mid-tone from the photograph, so the frame tints rather than flashes
+   white while the image streams in. */
+.tfi-podcast-duo .tfi-asset { background: #b4633a; }   /* podcast-mockup.webp */
 
-/* The released cover is square and carries its own margins, so it is contained
-   rather than cropped. Its cream field is the same paper as the slot behind it,
-   which makes the letterboxing read as more of the same ground. */
-.tfi-podcast-duo .tfi-asset img { object-fit: contain; }
+/* A photograph, and already cropped square to match the square slot, so it
+   fills the frame. The flat cover this replaced was contained instead - it
+   carried its own margins and would have been cropped into. */
+.tfi-podcast-duo .tfi-asset img { object-fit: cover; }
 
 /* Two episodes stacked full width under the cover. */
 .tfi-podcast-videos {
@@ -127,6 +131,7 @@
 }
 
 .tfi-podcast-proof {
+  container-type: inline-size;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -141,9 +146,22 @@
   text-transform: uppercase;
 }
 
+/* "1 Million+" is a far wider string than "1M+" was, and the panel is square,
+   so panel width - not the viewport - is what actually constrains the type.
+   Sizing in cqw makes the fit width-independent: "1 Million+" measures about
+   4.03x its font-size, and cqw resolves against the container's *content* box,
+   so anything under ~24.8cqw holds on one line at every breakpoint. 23 leaves
+   ~7% slack for font-metric variance. Go higher and it wraps after the "1",
+   stranding the numeral on a line of its own. The vw clamp is only a fallback
+   where container queries are unsupported. */
 .tfi-podcast-proof strong {
   margin-top: auto;
-  font: 600 clamp(100px, 14vw, 220px) / 0.7 var(--sans-display);
+  font: 600 clamp(40px, 6.6vw, 130px) / 0.94 var(--sans-display);
+  text-wrap: nowrap;
+}
+
+@supports (font-size: 1cqw) {
+  .tfi-podcast-proof strong { font-size: 23cqw; }
 }
 
 .tfi-podcast-proof p {
@@ -245,10 +263,12 @@
 @media (max-width: 640px) {
   .tfi-page .logo-wordmark { display: none; }
 
+  /* Same step-down the work card takes at this width. */
+  .tfi-work-hero .tfi-hero-logo { width: min(72%, 300px); }
+
   .tfi-ph-primary { min-height: 62vh; }
   .tfi-ph-panorama { min-height: 68vh; }
 
-  /* Stays square stacked, same as the pair does side by side. */
-  .tfi-podcast-proof strong { font-size: clamp(72px, 26vw, 150px); }
+  /* The number sizes off the panel now, so it needs no override here. */
   .tfi-podcast-proof p { font-size: 28px; }
 }
