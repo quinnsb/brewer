@@ -265,8 +265,8 @@ html:has(.theme-carnival),
   z-index: 0;
   overflow: hidden;
   transition:
-    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
-    border-radius 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    transform var(--nudge-dur) var(--ease-out),
+    border-radius var(--edge-dur) var(--ease-morph);
 }
 .theme-carnival .teaser-card .arrow-link::before {
   content: "";
@@ -275,7 +275,7 @@ html:has(.theme-carnival),
   z-index: -1;
   background: var(--t-ink);
   transform: translateY(101%);
-  transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform var(--fill-dur) var(--ease-out);
 }
 .theme-carnival .teaser-card .arrow-link:hover {
   transform: translateY(-2px);
@@ -346,7 +346,7 @@ html:has(.theme-carnival),
   padding: clamp(18px, 1.9vw, 26px) clamp(26px, 2.6vw, 40px);
   /* snappier than the original 0.8s/0.5s so the fill + corner morph read
      quickly on hover */
-  transition: border-radius 0.4s cubic-bezier(0.65, 0, 0.35, 1), color 0.3s ease;
+  transition: border-radius var(--edge-dur) var(--ease-morph), color 0.2s ease;
 }
 .theme-carnival .footer-cta .pill-btn::before {
   content: "";
@@ -355,7 +355,7 @@ html:has(.theme-carnival),
   z-index: -1;
   background: var(--t-ink);
   transform: translateY(100%);
-  transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform var(--fill-dur) var(--ease-out);
 }
 .theme-carnival .footer-cta .pill-btn:hover::before { transform: translateY(0); }
 /* the base scales this button on hover; the dock morphs its corners instead */
@@ -364,8 +364,15 @@ html:has(.theme-carnival),
   border-radius: 1em;
 }
 
-/* icon-only button on the ground, so the graphic slot is fair game */
+/* icon-only button on the ground, so the graphic slot is fair game.
+   The base sweep is --cream, which would be off-white on this light green and
+   barely register, so the pair inverts instead: the forest sweeps up and the
+   arrow flips to the light green on top of it. The arrow's stroke is a
+   hardcoded literal in the markup, and CSS outranks a presentation attribute. */
 .theme-carnival .pill-arrow { background: var(--t-graphic); color: var(--t-graphic-on); }
+.theme-carnival .pill-arrow::before { background: var(--t-graphic-on); }
+.theme-carnival .pill-arrow svg path { stroke: var(--t-graphic-on); }
+.theme-carnival .pill-arrow:hover svg path { stroke: var(--t-graphic); }
 
 /* .arr is a bare arrow with no fill behind it in the base design, and it now
    inherits the ink of whatever surface it sits on, so it needs no rule here. */
