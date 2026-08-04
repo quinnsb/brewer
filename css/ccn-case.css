@@ -199,10 +199,17 @@
 .ccn-paper-board h2 em { font-family: var(--serif); font-weight: 400; }
 .ccn-podcast-mark { width: clamp(84px, 13vw, 200px); aspect-ratio: 1; display: grid; place-items: center; border-radius: 28%; background: var(--ccn-ink); color: var(--ccn-paper); font: 600 clamp(40px, 6vw, 96px)/1 var(--sans-display); letter-spacing: -.1em; }
 .ccn-paper-board .ccn-board-note { color: rgba(28,16,13,.52); }
-.ccn-podcast-grid { grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); }
-.ccn-square { min-height: 0; aspect-ratio: 1; background: #4f504d; }
+/* Podcast chapter: cover art left, headline + body right. The cover stays a
+   square; the copy column sits beside it and stacks below it on narrow screens. */
+.ccn-podcast-split {
+  display: grid;
+  grid-template-columns: minmax(0, min(42%, 520px)) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 72px);
+  align-items: center;
+}
 .ccn-podcast-cover {
   margin: 0;
+  aspect-ratio: 1;
   overflow: hidden;
   background: var(--ccn-paper);
 }
@@ -212,6 +219,23 @@
   height: 100%;
   object-fit: cover;
 }
+.ccn-podcast-copy h2 {
+  margin: 0 0 22px;
+  max-width: 16ch;
+  font: 500 clamp(34px, 3.4vw, 54px)/.94 var(--sans-display);
+  letter-spacing: -.025em;
+}
+.ccn-podcast-copy p {
+  max-width: 48ch;
+  font-size: clamp(16px, 1.25vw, 19px);
+  line-height: 1.55;
+  color: rgba(242, 235, 222, .84);
+}
+.ccn-podcast-copy p + p { margin-top: 1.2em; }
+.ccn-podcast-copy .ccn-text-link { margin-top: 28px; }
+/* Kept for the parked growth-chart layout if it comes back */
+.ccn-podcast-grid { grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); }
+.ccn-square { min-height: 0; aspect-ratio: 1; background: #4f504d; }
 .ccn-growth-chart {
   position: relative;
   margin: 0;
@@ -273,8 +297,13 @@
 .ccn-three-up > :nth-child(2) { background: #60615e; }
 .ccn-three-up > :nth-child(3) { background: #8d8e89; }
 
-.ccn-video { overflow: hidden; width: 100%; background: #000; aspect-ratio: 16 / 9; }
-.ccn-video iframe { width: 100%; height: 100%; border: 0; display: block; }
+/* Facade embed, same as the M&S and TFI cases (.case-video-frame carries the
+   ratio and the poster/play behaviour). Square corners here, because every
+   other piece of media on this page is square except the browser mock. The
+   paper disc and green mark keep the button inside the CCN palette. The disc
+   sits low and left because this poster puts "What if you said yes?" across
+   the middle of the frame, and a centred button lands on top of the type. */
+.ccn-video { --yt-play-fill: var(--ccn-paper); --yt-play-mark: var(--ccn-bg); --yt-play-x: 13%; --yt-play-y: 76%; border-radius: 0; background: #000; }
 .ccn-lt-grid { grid-template-columns: 1.35fr .65fr; }
 .ccn-landscape { min-height: clamp(470px, 57vw, 850px); background: #a6a7a2; }
 .ccn-lt-grid .ccn-portrait { min-height: clamp(470px, 57vw, 850px); background: #72736f; }
@@ -287,21 +316,6 @@
 .ccn-mosaic-wide { grid-column: 1 / -1; min-height: clamp(540px, 62vw, 930px); background: #62635f; }
 .ccn-mosaic > :nth-child(2) { background: #aaa9a2; }
 .ccn-mosaic > :nth-child(3) { background: #878883; }
-
-.ccn-testimonial {
-  min-height: clamp(500px, 61vw, 900px);
-  margin-top: clamp(130px, 17vw, 270px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: clamp(32px, 6vw, 92px);
-  background: var(--ccn-paper);
-  color: var(--ccn-ink);
-}
-.ccn-testimonial > span,
-.ccn-testimonial small { font: 9px "Space Mono", monospace; letter-spacing: .14em; text-transform: uppercase; }
-.ccn-testimonial p { max-width: 22ch; margin: auto; font: 400 clamp(38px, 6.4vw, 98px)/.95 var(--serif); letter-spacing: -.03em; }
-.ccn-testimonial small { align-self: flex-end; }
 
 .ccn-close { margin: clamp(130px, 17vw, 270px) auto 0; max-width: 1250px; }
 .ccn-close > div > h2 { max-width: 14ch; margin-top: 16px; }
@@ -324,6 +338,9 @@
 @media (max-width: 900px) {
   .ccn-intro,
   .ccn-copy-row { grid-template-columns: 1fr; }
+  .ccn-podcast-split { grid-template-columns: 1fr; gap: 36px; }
+  .ccn-podcast-cover { max-width: min(100%, 420px); }
+  .ccn-podcast-copy h2 { max-width: none; }
   .ccn-intro { padding-left: 0; }
   .ccn-facts { grid-template-columns: 1fr 1fr; }
   .ccn-facts div:nth-child(2) { border-right: 0; }
@@ -365,8 +382,6 @@
   .ccn-conference-board h2 { font-size: clamp(62px, 21vw, 104px); }
   .ccn-mosaic-wide { grid-column: auto; }
   .ccn-mosaic > * { min-height: 65vh; }
-  .ccn-testimonial { min-height: 77vh; }
-  .ccn-testimonial p { font-size: clamp(37px, 11vw, 54px); }
   .ccn-close-grid { grid-template-columns: 1fr; }
   .ccn-close-grid article,
   .ccn-close-grid article + article { padding: 28px 0 34px; border-right: 0; border-bottom: 1px solid var(--ccn-line); }

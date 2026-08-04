@@ -300,7 +300,11 @@ document.addEventListener("DOMContentLoaded", () => {
   /* rotating hero word: type-on / delete like the production site */
   const rotateTarget = document.querySelector("[data-rotate-word]");
   if (rotateTarget && !prefersReduced) {
-    const words = ["technology", "people", "AI", "process"];
+    /* The markup ships the first word so the line is readable before this
+       runs, which means the cycle has to *start* on that word. Starting on a
+       different one made the hero swap the whole word in a single frame,
+       with no typing, the first time round. */
+    const words = ["people", "AI", "process", "technology"];
     let wi = 0;
     let count = words[0].length;
     let deleting = false;

@@ -2151,7 +2151,22 @@ body > .ms-project-cover { aspect-ratio: auto; }
 .ms-story-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, .9fr); gap: clamp(35px, 7vw, 120px); align-items: center; }.ms-story-copy h2, .ms-ugc h2, .ms-web-heading h2 { font: 600 clamp(42px, 5.2vw, 75px)/.94 var(--sans-display); letter-spacing: -.035em; margin: 20px 0 28px; }
 .podcast-art-display { margin: 0; aspect-ratio: 1; overflow: hidden; border-radius: var(--radius); box-shadow: 0 28px 70px rgba(0,0,0,.24); }
 .podcast-art-display img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.ms-ugc { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 6vw, 100px); padding: clamp(34px, 5vw, 76px); border-radius: var(--radius); background: var(--ms-paper); color: var(--ink); position:relative; overflow:hidden; }.ms-ugc .eyebrow { color: var(--ms-navy); }.ms-ugc .body-copy { font-size: clamp(17px, 1.35vw, 20px); }/* real employee posts, framed like screenshots pinned to the page. The source
+/* the episode sits directly under the Human Coded block, so it pulls up to
+   read as part of that section rather than as a section of its own */
+.ms-video { margin-top: clamp(38px, 5vw, 76px); }
+.ms-video-frame { --yt-play-fill: var(--ms-blue); --yt-play-mark: var(--ms-navy); background: #0a0f1c; }
+/* the two beats after the episode embed: production discipline, then what the
+   show fed. Two columns so the section reads as a pair of notes rather than a
+   second wall of body copy. */
+.ms-podcast-copy { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 6vw, 90px); margin-top: clamp(54px, 7vw, 96px); }
+.ms-podcast-copy h3 { font: 600 clamp(24px, 2.3vw, 33px)/1.1 var(--sans-display); letter-spacing: -.02em; margin: 0 0 18px; max-width: 22ch; }
+.ms-podcast-copy .body-copy + .body-copy { margin-top: 16px; }
+@media (max-width: 860px) { .ms-podcast-copy { grid-template-columns: 1fr; } }
+.ms-film-note { margin-top: 20px; font: 12px "Space Mono", monospace; text-transform: uppercase; letter-spacing: .13em; color: var(--cream-dim); }
+/* the M&S navy carries the white text at 15.6:1; the pale --ms-blue is a
+   highlight colour and cannot (white on it is 1.7:1), so it moves to the
+   eyebrow, where it reads as the accent against the navy. */
+.ms-ugc { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 6vw, 100px); padding: clamp(34px, 5vw, 76px); border-radius: var(--radius); background: var(--ms-navy); color: #fff; position:relative; overflow:hidden; }.ms-ugc .eyebrow { color: var(--ms-blue); }.ms-ugc .body-copy { font-size: clamp(17px, 1.35vw, 20px); }/* real employee posts, framed like screenshots pinned to the page. The source
    captures are tall portraits, so the windows are portrait too and crop from the
    top, where the author and the opening line of each post sit. The staggered
    offsets are cosmetic; the margin below absorbs the lowest one. */
@@ -2162,7 +2177,86 @@ body > .ms-project-cover { aspect-ratio: auto; }
   .ugc-grid { grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 0; }
   .ugc-grid figure:nth-child(n) { transform: none; }
 }
-.ms-web-section { margin-bottom: clamp(100px, 13vw, 180px); }.ms-web-heading { max-width: 800px; margin-bottom: 46px; }.site-window { overflow:hidden; border: 1px solid rgba(156,204,245,.35); border-radius: 18px; background:#f4f1ec; color:#14224d; box-shadow: 0 28px 70px rgba(0,0,0,.25); }.browser-top { height: 38px; display:flex; align-items:center; gap:7px; padding:0 14px; background:#e2e1dc; }.browser-top > span { width:9px; height:9px; border-radius:50%; background:#a5a5a2; }.browser-address { margin:0 auto; width:min(46%, 380px); padding:3px 12px; border-radius:4px; background:#f2f1ed; text-align:center; color:#7b7c81; font:10px var(--sans); }.browser-top b { font: 15px var(--sans); }.browser-sitebar { height:72px; display:flex; align-items:center; padding:0 clamp(18px, 3vw, 42px); gap:clamp(18px, 3vw, 50px); background:#fff; }.browser-sitebar strong { font:600 clamp(28px, 3vw, 42px)/1 var(--sans-display); letter-spacing:-.07em; }.browser-sitebar strong span { color:#2583cd; }.browser-sitebar nav { display:flex; gap:clamp(12px, 2vw, 30px); }.browser-sitebar nav span { color:#526078; font: 12px var(--sans); }.browser-cta { margin-left:auto; padding:9px 14px; border-radius:999px !important; background:#0a1e4e !important; color:white !important; font-size:12px; font-weight:600; white-space:nowrap; }.browser-body { min-height: 510px; position:relative; }.browser-screen { display:none; min-height:510px; animation: browserIn .35s ease both; }.browser-screen.is-active { display:flex; }@keyframes browserIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }.browser-copy { width:55%; padding:clamp(38px, 6vw, 92px) clamp(26px, 6vw, 85px); background:#0a1e4e; color:#fff; }.browser-copy small,.browser-work-title small,.browser-podcast-copy small { font: 10px "Space Mono", monospace; letter-spacing:.14em; color:#9dccf5; }.browser-copy h3,.browser-work-title h3,.browser-podcast-copy h3 { margin:20px 0; font:400 clamp(32px, 4.3vw, 67px)/.94 var(--serif); letter-spacing:-.035em; }.browser-copy h3 em { color:#9dccf5; }.browser-copy p,.browser-podcast-copy p { font: 14px/1.5 var(--sans); color:rgba(255,255,255,.75); max-width:35ch; }.browser-copy button,.browser-podcast-copy button { margin-top:25px; padding:10px 15px; border:0; border-radius:999px; background:#9dccf5; color:#0a1e4e; font:600 12px var(--sans); }.browser-visual { flex:1; display:grid; place-items:center; background:linear-gradient(145deg,#a8bdcf,#dfe3e5); color:rgba(10,30,78,.48); text-align:center; font:11px "Space Mono", monospace; text-transform:uppercase; line-height:1.7; letter-spacing:.1em; }.browser-work-title { padding:clamp(45px, 6vw, 85px) clamp(28px, 7vw, 120px) 20px; }.browser-work-title h3 { color:#0a1e4e; max-width:10ch; }.browser-service-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; padding:20px clamp(28px, 7vw, 120px) 60px; }.browser-service-cards article { min-height:170px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; border-radius:8px; background:#d8e3ec; }.browser-service-cards article:nth-child(2){background:#f0dcc3}.browser-service-cards article:nth-child(3){background:#d9d7e6}.browser-service-cards b { font:11px "Space Mono",monospace; }.browser-service-cards h4 { font:500 23px/1 var(--serif); }.browser-service-cards p { font:12px var(--sans); }.browser-podcast-art { width:42%; margin:clamp(30px, 5vw, 70px); aspect-ratio:1; padding:clamp(24px, 4vw, 52px); display:flex; flex-direction:column; background:#9dccf5; color:#0a1e4e; font:600 clamp(34px, 4.6vw, 66px)/.76 var(--sans-display); letter-spacing:-.07em; }.browser-podcast-art em { font-family:var(--serif); font-weight:400; }.browser-podcast-art small { margin-top:auto; font:10px "Space Mono",monospace; letter-spacing:.14em; text-transform:uppercase; }.browser-podcast-copy { flex:1; align-self:center; padding:20px 40px 20px 0; }.browser-podcast-copy h3 { font-size:clamp(27px, 3.4vw, 52px); color:#0a1e4e; }.browser-podcast-copy p { color:#596378; }
+.ms-web-section { margin-bottom: clamp(100px, 13vw, 180px); }.ms-web-heading { max-width: 800px; margin-bottom: 46px; }.ms-web-heading .body-copy + .body-copy { margin-top: 18px; }.ms-web-heading .case-btn { margin-top: 30px; }
+/* closing note under the window: the line and the button share a baseline on
+   wide screens and stack once there is no room for both */
+.ms-web-outro { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; margin-top: 34px; }.ms-web-outro p { max-width: 52ch; font: 14px/1.6 var(--sans); color: var(--cream-dim); }.site-window { overflow:hidden; border: 1px solid rgba(156,204,245,.35); border-radius: 18px; background:#f4f1ec; color:#14224d; box-shadow: 0 28px 70px rgba(0,0,0,.25); }.browser-top { height: 38px; display:flex; align-items:center; gap:7px; padding:0 14px; background:#e2e1dc; }.browser-top > span { width:9px; height:9px; border-radius:50%; background:#a5a5a2; }.browser-address { margin:0 auto; width:min(46%, 380px); padding:3px 12px; border-radius:4px; background:#f2f1ed; text-align:center; color:#7b7c81; font:10px var(--sans); }.browser-top b { font: 15px var(--sans); }.browser-sitebar { height:72px; display:flex; align-items:center; padding:0 clamp(18px, 3vw, 42px); gap:clamp(18px, 3vw, 50px); background:#fff; }.browser-sitebar strong { font:600 clamp(28px, 3vw, 42px)/1 var(--sans-display); letter-spacing:-.07em; }.browser-sitebar strong span { color:#2583cd; }.browser-sitebar nav { display:flex; gap:clamp(12px, 2vw, 30px); }.browser-sitebar nav span { color:#526078; font: 12px var(--sans); }.browser-cta { margin-left:auto; padding:9px 14px; border-radius:999px !important; background:#0a1e4e !important; color:white !important; font-size:12px; font-weight:600; white-space:nowrap; }.browser-body { min-height: 510px; position:relative; }.browser-screen { display:none; min-height:510px; animation: browserIn .35s ease both; }.browser-screen.is-active { display:flex; }@keyframes browserIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }.browser-copy { width:55%; padding:clamp(38px, 6vw, 92px) clamp(26px, 6vw, 85px); background:#0a1e4e; color:#fff; }.browser-copy small,.browser-work-title small,.browser-podcast-copy small { font: 10px "Space Mono", monospace; letter-spacing:.14em; color:#9dccf5; }.browser-copy h3,.browser-work-title h3,.browser-podcast-copy h3 { margin:20px 0; font:400 clamp(32px, 4.3vw, 67px)/.94 var(--serif); letter-spacing:-.035em; }.browser-copy h3 em { color:#9dccf5; }.browser-copy p,.browser-podcast-copy p { font: 14px/1.5 var(--sans); color:rgba(255,255,255,.75); max-width:35ch; }.browser-copy button,.browser-podcast-copy button { margin-top:25px; padding:10px 15px; border:0; border-radius:999px; background:#9dccf5; color:#0a1e4e; font:600 12px var(--sans); }.browser-visual { flex:1; display:grid; place-items:center; background:linear-gradient(145deg,#a8bdcf,#dfe3e5); color:rgba(10,30,78,.48); text-align:center; font:11px "Space Mono", monospace; text-transform:uppercase; line-height:1.7; letter-spacing:.1em; }.browser-work-title { padding:clamp(45px, 6vw, 85px) clamp(28px, 7vw, 120px) 20px; }.browser-work-title h3 { color:#0a1e4e; max-width:10ch; }.browser-service-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; padding:20px clamp(28px, 7vw, 120px) 60px; }.browser-service-cards article { min-height:170px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; border-radius:8px; background:#d8e3ec; }.browser-service-cards article:nth-child(2){background:#f0dcc3}.browser-service-cards article:nth-child(3){background:#d9d7e6}.browser-service-cards b { font:11px "Space Mono",monospace; }.browser-service-cards h4 { font:500 23px/1 var(--serif); }.browser-service-cards p { font:12px var(--sans); }.browser-podcast-art { width:42%; margin:clamp(30px, 5vw, 70px); aspect-ratio:1; padding:clamp(24px, 4vw, 52px); display:flex; flex-direction:column; background:#9dccf5; color:#0a1e4e; font:600 clamp(34px, 4.6vw, 66px)/.76 var(--sans-display); letter-spacing:-.07em; }.browser-podcast-art em { font-family:var(--serif); font-weight:400; }.browser-podcast-art small { margin-top:auto; font:10px "Space Mono",monospace; letter-spacing:.14em; text-transform:uppercase; }.browser-podcast-copy { flex:1; align-self:center; padding:20px 40px 20px 0; }.browser-podcast-copy h3 { font-size:clamp(27px, 3.4vw, 52px); color:#0a1e4e; }.browser-podcast-copy p { color:#596378; }
+
+/* ---- shared video embeds (TFI + M&S case pages) ---- */
+.case-video-frame {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #0b0a09;
+}
+.case-video-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+/* Facade embeds. The poster and the play button are ours; the YouTube iframe
+   is only injected on click, with autoplay, so the player arrives already
+   running. That is what removes the pre-roll chrome - the title bar, channel
+   avatar, subscribe button, and "Watch on YouTube" all live on the *paused*
+   player, and there is no way to switch them off with embed parameters
+   (modestbranding stopped doing anything in 2023). Skipping the paused state
+   is the only reliable answer. It also means nothing is requested from
+   youtube.com until a visitor asks for it. */
+.yt-lite {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.yt-lite img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Each case sets --yt-play-fill / --yt-play-mark on its frame; the site
+   yellow is the fallback so a new page gets a usable button for free.
+   --yt-play-x/y move the disc off centre for posters that already carry
+   their title in the middle of the frame, without any page having to
+   restate the centring transform (the hover scale depends on it). */
+.yt-lite-play {
+  position: absolute;
+  top: var(--yt-play-y, 50%);
+  left: var(--yt-play-x, 50%);
+  width: clamp(62px, 6.6vw, 94px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--yt-play-fill, var(--yellow));
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.34);
+}
+
+/* Triangle drawn in CSS rather than shipped as an asset, nudged right of
+   centre so it reads as centred - a triangle balanced on its bounding box
+   always looks like it is sitting too far left. */
+.yt-lite-play::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  border-top: clamp(11px, 1.2vw, 17px) solid transparent;
+  border-bottom: clamp(11px, 1.2vw, 17px) solid transparent;
+  border-left: clamp(19px, 2vw, 28px) solid var(--yt-play-mark, #1e1c19);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .yt-lite-play { transition: transform 320ms cubic-bezier(0.2, 0.7, 0.2, 1); }
+}
+
+.yt-lite:hover .yt-lite-play,
+.yt-lite:focus-visible .yt-lite-play { transform: translate(-50%, -50%) scale(1.09); }
 
 .prev-next {
   display: grid;

@@ -101,7 +101,10 @@
 .msr-hero-copy { position: relative; max-width: 30em; }
 .msr-hero-copy .msr-eyebrow { color: var(--accent); }
 .msr-hero-copy h3 { font: 500 clamp(30px, 3.8vw, 46px)/1.05 var(--serif); margin: 0 0 16px; }
-.msr-rotate { color: var(--accent); display: inline-flex; align-items: baseline; min-width: 6.2ch; }
+/* The slot has to be wide enough for the LONGEST word in the cycle
+   ("technology"), or the words after it slide left and right on every
+   keystroke. The production site reserves 10ch for the same reason. */
+.msr-rotate { color: var(--accent); display: inline-flex; align-items: baseline; min-width: 10ch; }
 .msr-caret {
   display: inline-block;
   width: 2px; height: 0.78em;

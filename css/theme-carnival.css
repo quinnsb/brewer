@@ -204,7 +204,12 @@ html:has(.theme-carnival),
    light fill and dark mark rather than inverting to the ground colour */
 .theme-carnival .menu-bar { background: var(--t-ink); color: var(--t-ground); }
 .theme-carnival .menu-bar-logo { color: var(--t-ground); }
-.theme-carnival .menu-bar .menu-btn { background: var(--t-a1); color: var(--t-a1-on); }
+/* brown/pink rather than the a1 red: the dock's first pill is already the a3
+   blue and its third is the a1 red, so both of those would have the trigger
+   echoing a pill sitting inches below it once the menu opens. The brown is
+   the only dark fill in the palette that nothing else in the chrome uses, and
+   its pink ink clears AA on it at 6.3:1. */
+.theme-carnival .menu-bar .menu-btn { background: var(--t-brown); color: var(--t-brown-on); }
 
 /* the dock itself stays transparent — it is a fixed container the pills
    float in, so giving it a background paints a slab across the page.
