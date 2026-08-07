@@ -193,6 +193,36 @@
 .tfi-leadership-duo .tfi-asset:first-child { background: var(--tfi-paper); }
 .tfi-leadership-duo .tfi-asset:last-child { background: #9a513e; }   /* workstreams */
 
+/* Merch and collateral. Real product photos with their own aspect ratios, so
+   each frame matches its artwork rather than forcing a single grid shape - the
+   two apparel shots keep a 4:5 portrait, the booklet its native landscape, the
+   box its square. The tints below are sampled from each photo's own ground so a
+   frame never flashes white while the image streams in. */
+.tfi-merch-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(16px, 2.2vw, 34px);
+  margin-bottom: 0;
+}
+
+.tfi-merch-grid .case-media { min-width: 0; border-radius: var(--radius); }
+
+.tfi-merch-tall { grid-column: span 6; aspect-ratio: 4 / 5; }
+.tfi-merch-tall:nth-of-type(1) { background: #b9c4d3; }   /* people tee, blue on warm wall */
+.tfi-merch-tall:nth-of-type(2) { background: #2f322c; }   /* neighbor hoodie, dark on campus green */
+
+.tfi-merch-wide,
+.tfi-merch-square { min-height: clamp(300px, 34vw, 520px); }
+.tfi-merch-wide { grid-column: span 7; background: var(--tfi-paper-dim); }   /* relay booklet */
+.tfi-merch-square { grid-column: span 5; background: #dbe7dd; }              /* one day box, mint ground */
+
+@media (max-width: 640px) {
+  .tfi-merch-tall,
+  .tfi-merch-wide,
+  .tfi-merch-square { grid-column: 1 / -1; }
+  .tfi-merch-tall { aspect-ratio: 4 / 5; }
+}
+
 @media (max-width: 640px) {
   .tfi-page .logo-wordmark { display: none; }
 
