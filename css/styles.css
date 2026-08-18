@@ -1464,10 +1464,10 @@ p + .case-btn { margin-top: 34px; }
   transition: transform var(--nudge-dur) var(--ease-spring);
 }
 /* each icon gets a signature motion: the back-to-top arrow launches up, the
-   Dribbble ball spins, the Instagram lens zooms, and LinkedIn tilts */
+   Dribbble ball spins, the Substack mark grows, and LinkedIn tilts */
 .socials .s-top:hover svg { transform: translateY(-3px); }
 .socials .s-dribbble:hover svg { transform: rotate(32deg); }
-.socials .s-instagram:hover svg { transform: scale(1.14); }
+.socials .s-substack:hover svg { transform: scale(1.14); }
 .socials .s-linkedin:hover svg { transform: translateY(-2px) rotate(-6deg); }
 .socials .s-top {
   background: var(--lavender);
@@ -1478,7 +1478,7 @@ p + .case-btn { margin-top: 34px; }
   background: var(--orange);
   color: var(--cream);
 }
-.socials .s-instagram {
+.socials .s-substack {
   background: var(--yellow);
   color: var(--ink);
 }

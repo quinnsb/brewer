@@ -324,7 +324,7 @@ html:has(.theme-carnival),
    graphic slot — the four still resolve to four distinct fills. */
 .theme-carnival .socials .s-top       { background: var(--t-graphic); color: var(--t-graphic-on); }
 .theme-carnival .socials .s-dribbble  { background: var(--t-a1); color: var(--t-a1-on); }
-.theme-carnival .socials .s-instagram { background: var(--t-a2); color: var(--t-a2-on); }
+.theme-carnival .socials .s-substack { background: var(--t-a2); color: var(--t-a2-on); }
 .theme-carnival .socials .s-linkedin  { background: var(--t-a3); color: var(--t-a3-on); }
 
 /* ---------- buttons ---------- */
