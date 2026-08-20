@@ -11,7 +11,7 @@
    ============================================================ */
 
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js";
-import { openItem } from "./library.js?v=coverflow-final2";
+import { openItem } from "./library.js?v=inline-details1";
 
 const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 /* Keep in step with --card in css/library.css. */

@@ -193,7 +193,11 @@ body.library {
   border: 0; padding: 0; cursor: pointer; overflow: hidden;
   background: var(--cover); color: var(--ink);
   border-radius: 1px 2px 2px 1px;
-  transition: flex-basis 0.62s var(--ease);
+  transform: translateY(0);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.22s ease,
+              flex-basis 0.62s var(--ease);
+  will-change: transform;
   box-shadow: inset -7px 0 13px -8px rgba(0, 0, 0, 0.75),
               inset 5px 0 8px -6px rgba(255, 255, 255, 0.22),
               0 7px 16px -10px rgba(0, 0, 0, 0.9);
@@ -233,6 +237,15 @@ body.library {
 .spine[data-spine-style="4"] .spine-txt { gap: 7px; }
 .spine[data-spine-style="4"] .spine-txt .t { font-size: 14px; font-weight: 400; }
 .spine[data-spine-style="4"] .spine-rule { left: 35%; right: 35%; height: 5px; border-radius: 50%; }
+
+.spine:hover:not(.is-open) {
+  z-index: 2;
+  transform: translateY(-8px);
+  box-shadow: inset -7px 0 13px -8px rgba(0, 0, 0, 0.75),
+              inset 5px 0 8px -6px rgba(255, 255, 255, 0.22),
+              0 14px 22px -10px rgba(0, 0, 0, 0.94);
+}
+.spine:focus-visible:not(.is-open) { z-index: 2; transform: translateY(-8px); }
 
 /* ---------- ALBUMS: coverflow ---------- */
 .coverflow {
@@ -289,6 +302,7 @@ body.library {
 
 @media (prefers-reduced-motion: reduce) {
   .spine, .spine-cover, .poster, .tile { transition: none; }
+  .spine:hover, .spine:focus-visible { transform: none; }
 }
 
 /* ---------- expand in place ----------
@@ -299,6 +313,7 @@ body.library {
 .spine.is-open .spine-txt { opacity: 0; }
 .spine.is-open .spine-cover { opacity: 1; transform: none; }
 .spine.is-open .spine-rule, .spine.is-open .spine-band, .spine.is-open .spine-mark { opacity: 0; }
+.coverflow-slide.is-open[aria-current="true"] { box-shadow: 0 0 0 3px var(--hero-verb), 0 28px 58px -24px rgba(0, 0, 0, 0.98); }
 .poster.is-open, .tile.is-open { transform: translateY(-7px); }
 
 .detail {
@@ -358,58 +373,6 @@ body.library {
 
 @media (max-width: 720px) { .detail { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .detail { transition: none; } }
-
-/* ---------- album dialog ---------- */
-.album-dialog {
-  width: min(880px, calc(100vw - 40px)); max-width: none; padding: 0; border: 0;
-  overflow: visible; background: transparent; color: var(--lib-fg);
-}
-.album-dialog::backdrop { background: rgba(0, 0, 0, 0.78); backdrop-filter: blur(10px); }
-.album-dialog[open] { animation: album-dialog-in 0.24s ease both; }
-.album-dialog-card {
-  position: relative; display: grid; grid-template-columns: minmax(280px, 0.92fr) minmax(320px, 1.08fr);
-  overflow: hidden; border: 1px solid rgba(216, 214, 209, 0.18); border-radius: 18px;
-  background: #121214; box-shadow: 0 40px 100px rgba(0, 0, 0, 0.62);
-}
-.album-dialog-art { aspect-ratio: 1; align-self: center; overflow: hidden; background: #09090a; }
-.album-dialog-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.album-dialog-body { padding: clamp(28px, 5vw, 54px); align-self: center; }
-.album-dialog-kicker {
-  margin: 0 0 14px; color: var(--hero-verb); font-family: "Space Mono", ui-monospace, monospace;
-  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
-}
-.album-dialog h2 {
-  margin: 0; font-family: "Aeonik", system-ui, sans-serif; font-size: clamp(30px, 4vw, 48px);
-  font-weight: 500; line-height: 0.98; letter-spacing: -0.035em;
-}
-.album-dialog-creator { margin: 10px 0 0; color: var(--lib-dim); font-size: 17px; }
-.album-dialog .src {
-  display: inline-block; margin-top: 14px; color: var(--lib-dim);
-  font-family: "Space Mono", ui-monospace, monospace; font-size: 10.5px;
-}
-.album-dialog .src:hover { color: var(--hero-verb); }
-.album-dialog-close {
-  position: absolute; top: 14px; right: 14px; z-index: 2; width: 40px; height: 40px;
-  border: 1px solid rgba(216, 214, 209, 0.24); border-radius: 50%; padding: 0; cursor: pointer;
-  background: rgba(11, 11, 12, 0.76); color: var(--lib-fg); font-size: 25px; line-height: 1;
-}
-.album-dialog-close:hover, .album-dialog-close:focus-visible { color: var(--hero-verb); border-color: var(--hero-verb); }
-.album-dialog-close:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 2px; }
-.album-dialog-ghost { position: fixed; z-index: 2147483647; object-fit: cover; pointer-events: none; transform-origin: top left; }
-@keyframes album-dialog-in { from { opacity: 0; transform: translateY(12px) scale(0.985); } }
-
-@media (max-width: 720px) {
-  .album-dialog { width: min(520px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); }
-  .album-dialog-card { display: block; max-height: calc(100dvh - 24px); overflow-y: auto; border-radius: 14px; }
-  .album-dialog-art { width: 100%; }
-  .album-dialog-body { padding: 28px 24px 32px; }
-  .album-dialog h2 { font-size: 34px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .album-dialog[open], .rating-star { animation: none; transition: none; }
-  .album-dialog::backdrop { backdrop-filter: none; }
-}
 
 @media (max-width: 560px) {
   .coverflow { --cf-card: clamp(148px, 48vw, 190px); padding-top: 32px; }

@@ -266,11 +266,11 @@ function wireCoverflow(items, frame, stage, status, root) {
       } else {
         event.preventDefault();
         event.stopPropagation();
-        openAlbumDialog(items[index], node);
+        toggleExpansion(items[index], node, root);
       }
     });
     coverflowById.set(items[index].id, {
-      open: () => goTo(index, () => openAlbumDialog(items[index], node)),
+      open: () => goTo(index, () => toggleExpansion(items[index], node, root)),
     });
   });
 
@@ -417,82 +417,6 @@ function factsNode(item) {
   return list.childElementCount ? list : null;
 }
 
-let albumDialog = null;
-let albumDialogTrigger = null;
-
-function ensureAlbumDialog() {
-  if (albumDialog) return albumDialog;
-  albumDialog = el("dialog", "album-dialog", { "aria-labelledby": "album-dialog-title" });
-  albumDialog.addEventListener("click", (event) => {
-    if (event.target === albumDialog) albumDialog.close();
-  });
-  albumDialog.addEventListener("close", () => {
-    albumDialogTrigger?.focus({ preventScroll: true });
-    albumDialogTrigger = null;
-  });
-  document.body.append(albumDialog);
-  return albumDialog;
-}
-
-function openAlbumDialog(item, trigger) {
-  const dialog = ensureAlbumDialog();
-  if (dialog.open) dialog.close();
-  albumDialogTrigger = trigger;
-
-  const card = el("article", "album-dialog-card");
-  const close = el("button", "album-dialog-close", { type: "button", "aria-label": "Close details" });
-  close.textContent = "×";
-  close.addEventListener("click", () => dialog.close());
-
-  const imageWrap = el("div", "album-dialog-art");
-  const image = coverImg(item);
-  image.alt = `${item.title} album cover`;
-  image.loading = "eager";
-  imageWrap.append(image);
-
-  const body = el("div", "album-dialog-body");
-  const kicker = Object.assign(el("p", "album-dialog-kicker"), { textContent: "Album" });
-  const title = Object.assign(el("h2"), { id: "album-dialog-title", textContent: item.title });
-  const creator = Object.assign(el("p", "album-dialog-creator"), { textContent: item.creator || "Unknown artist" });
-  body.append(kicker, title, creator);
-  const facts = factsNode(item);
-  if (facts) body.append(facts);
-  body.append(ratingControl(item));
-  if (item.sourceUrl) {
-    const source = el("a", "src", { href: item.sourceUrl, target: "_blank", rel: "noopener" });
-    source.textContent = "View catalog source";
-    body.append(source);
-  }
-  card.append(close, imageWrap, body);
-  dialog.replaceChildren(card);
-  dialog.showModal();
-
-  if (REDUCED || !trigger?.getBoundingClientRect) return;
-  const from = trigger.getBoundingClientRect();
-  requestAnimationFrame(() => {
-    const to = image.getBoundingClientRect();
-    if (!from.width || !to.width) return;
-    image.style.opacity = "0";
-    const ghost = image.cloneNode();
-    ghost.className = "album-dialog-ghost";
-    Object.assign(ghost.style, {
-      left: `${from.left}px`, top: `${from.top}px`, width: `${from.width}px`, height: `${from.height}px`,
-    });
-    document.body.append(ghost);
-    const animation = ghost.animate([
-      { transform: "translate3d(0,0,0)", borderRadius: "2px" },
-      {
-        transform: `translate3d(${to.left - from.left}px, ${to.top - from.top}px, 0) scale(${to.width / from.width})`,
-        borderRadius: "12px",
-      },
-    ], { duration: 280, easing: "cubic-bezier(.2,.8,.2,1)", fill: "forwards" });
-    animation.finished.finally(() => {
-      image.style.opacity = "";
-      ghost.remove();
-    });
-  });
-}
-
 /* ---------- expand in place ---------- */
 
 let openId = null;
@@ -547,6 +471,24 @@ function closeAll(root) {
   openId = null;
 }
 
+function toggleExpansion(item, node, root) {
+  const wasOpen = openId === item.id;
+  closeAll(root);
+  if (wasOpen) return;
+
+  node.classList.add("is-open");
+  node.setAttribute("aria-expanded", "true");
+  /* open width = the jacket at its true aspect ratio */
+  if (item.type === "book") {
+    node.style.setProperty("--open-w", `${Math.round(spineHeight(item) * item.aspect)}px`);
+  }
+
+  const d = detailNode(item);
+  node.closest(".shelf-block").append(d);
+  requestAnimationFrame(() => d.classList.add("is-in"));
+  openId = item.id;
+}
+
 export function wireExpansion(items, root) {
   const byId = new Map(items.map((i) => [i.id, i]));
 
@@ -555,32 +497,11 @@ export function wireExpansion(items, root) {
     if (!node) return;
     const item = byId.get(node.dataset.id);
     if (!item) return;
-    if (item.type === "album") return;
-
-    const wasOpen = openId === item.id;
-    closeAll(root);
-    if (wasOpen) return;
-
-    node.classList.add("is-open");
-    node.setAttribute("aria-expanded", "true");
-    /* open width = the jacket at its true aspect ratio */
-    if (item.type === "book") {
-      node.style.setProperty("--open-w", `${Math.round(spineHeight(item) * item.aspect)}px`);
-    }
-
-    const d = detailNode(item);
-    node.closest(".shelf-block").append(d);
-    requestAnimationFrame(() => d.classList.add("is-in"));
-    openId = item.id;
+    toggleExpansion(item, node, root);
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key !== "Escape") return;
-    if (albumDialog?.open) {
-      albumDialog.close();
-      return;
-    }
-    if (openId) closeAll(root);
+    if (e.key === "Escape" && openId) closeAll(root);
   });
 
   document.addEventListener("click", (e) => {
@@ -619,7 +540,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=coverflow-final2");
+  const { initHero } = await import("./library-hero.js?v=inline-details1");
   initHero(items);
 }
 
