@@ -33,6 +33,7 @@
   --lib-faint: rgba(216, 214, 209, 0.3);
   --lib-line: rgba(216, 214, 209, 0.18);
   --lib-accent: #e8531c;
+  --hero-verb: #f3c844;
   --gutter: clamp(20px, 4vw, 56px);
   --shell: 1240px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -74,7 +75,8 @@ body.library {
 .hero-line .stem { display: block; }
 .hero-line .slot {
   position: relative; display: flex; justify-content: center;
-  color: var(--lib-accent); white-space: nowrap;
+  margin-top: 0.58em;
+  color: var(--hero-verb); white-space: nowrap;
 }
 
 /* Reveal: blur and rise, fired when the ring finishes forming. */
@@ -196,8 +198,14 @@ body.library {
               inset 5px 0 8px -6px rgba(255, 255, 255, 0.22),
               0 7px 16px -10px rgba(0, 0, 0, 0.9);
 }
+.spine-cover {
+  position: absolute; inset: 0; z-index: 1;
+  width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transform: scale(1.025);
+  transition: opacity 0.36s var(--ease), transform 0.62s var(--ease);
+}
 .spine-txt {
-  position: absolute; inset: 0;
+  position: absolute; inset: 0; z-index: 2;
   display: flex; align-items: center; justify-content: center; gap: 12px;
   writing-mode: vertical-rl; text-orientation: mixed; /* top-to-bottom, US convention */
   padding: 16px 0; white-space: nowrap; overflow: hidden;
@@ -208,29 +216,46 @@ body.library {
   overflow: hidden; text-overflow: ellipsis;
 }
 .spine-txt .a { font-size: 9.5px; opacity: 0.68; letter-spacing: 0.05em; text-transform: uppercase; }
-.spine-rule { position: absolute; left: 18%; right: 18%; height: 2px; background: var(--accent); }
+.spine-rule { position: absolute; z-index: 2; left: 18%; right: 18%; height: 2px; background: var(--accent); transition: opacity 0.2s ease; }
 .spine-rule.top { top: 15px; }
 .spine-rule.bot { bottom: 15px; }
 
-/* ---------- ALBUMS: crate ---------- */
-.crate { overflow-x: auto; overflow-y: hidden; padding-bottom: 4px; }
-.crate-box {
-  position: relative; padding: 26px 30px 16px;
-  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.28));
-  border: 1px solid var(--lib-line); border-radius: 3px;
+/* ---------- ALBUMS: coverflow ---------- */
+.coverflow {
+  --cf-card: clamp(158px, 22vw, 260px);
+  position: relative; overflow: hidden;
+  padding: clamp(28px, 5vw, 52px) 0 14px;
+  perspective: calc(var(--cf-card) * 3);
+  cursor: grab; touch-action: pan-y;
 }
-/* The lean pivots on bottom-left, so each sleeve's top corner swings ~58px
-   outward. Without this padding the first record is sliced by the crate wall. */
-.crate-inner { display: flex; align-items: flex-end; padding-left: 68px; min-height: 190px; }
-.sleeve {
-  flex: 0 0 108px; width: 168px; height: 168px; border: 0; padding: 0; cursor: pointer;
-  background: var(--cover); border-radius: 2px; overflow: hidden;
-  transform: rotate(-32deg) skewY(6deg); transform-origin: bottom left;
-  transition: flex-basis 0.5s var(--ease), transform 0.5s var(--ease);
-  box-shadow: -8px 6px 16px -10px rgba(0,0,0,.9);
+.coverflow:active { cursor: grabbing; }
+.coverflow-stage {
+  position: relative; height: var(--cf-card);
+  transform-style: preserve-3d; user-select: none; pointer-events: none;
 }
-.sleeve img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.sleeve:hover, .sleeve:focus-visible { transform: rotate(-24deg) skewY(4deg) translateY(-8px); }
+.coverflow-slide {
+  position: absolute; top: 0; left: 50%;
+  width: var(--cf-card); aspect-ratio: 1;
+  border: 0; border-radius: 2px; padding: 0; overflow: hidden;
+  background: var(--cover); cursor: pointer; pointer-events: auto;
+  transform-style: preserve-3d; will-change: transform, opacity;
+  box-shadow: 0 22px 45px -24px rgba(0, 0, 0, 0.95);
+}
+.coverflow-slide img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+.coverflow-slide[aria-current="true"] {
+  box-shadow: 0 0 0 2px var(--hero-verb), 0 28px 58px -24px rgba(0, 0, 0, 0.98);
+}
+.coverflow-slide:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 4px; }
+.coverflow-caption { min-height: 50px; margin-top: 20px; text-align: center; pointer-events: none; }
+.coverflow-title {
+  margin: 0; font-family: "Aeonik", system-ui, sans-serif;
+  font-size: clamp(18px, 2vw, 24px); letter-spacing: -0.015em;
+}
+.coverflow-meta {
+  margin: 6px 0 0; color: var(--lib-dim);
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 10px; letter-spacing: 0.04em;
+}
 
 /* ---------- FILMS: rack ----------
    No lean. The old deterministic tilt from the id read as noise, not handling. */
@@ -254,12 +279,12 @@ body.library {
 .tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .tile:hover, .tile:focus-visible { transform: translateY(-5px); }
 
-.spine:focus-visible, .sleeve:focus-visible, .poster:focus-visible, .tile:focus-visible {
+.spine:focus-visible, .poster:focus-visible, .tile:focus-visible {
   outline: 2px solid var(--lib-accent); outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .spine, .sleeve, .poster, .tile { transition: none; }
+  .spine, .spine-cover, .poster, .tile { transition: none; }
 }
 
 /* ---------- expand in place ----------
@@ -268,7 +293,9 @@ body.library {
 
 .spine.is-open { flex-basis: var(--open-w); }
 .spine.is-open .spine-txt { opacity: 0; }
-.sleeve.is-open { flex-basis: 188px; transform: rotate(0deg) skewY(0deg) translateY(-10px); }
+.spine.is-open .spine-cover { opacity: 1; transform: none; }
+.spine.is-open .spine-rule { opacity: 0; }
+.coverflow-slide.is-open[aria-current="true"] { box-shadow: 0 0 0 3px var(--hero-verb), 0 28px 58px -24px rgba(0, 0, 0, 0.98); }
 .poster.is-open, .tile.is-open { transform: translateY(-7px); }
 
 .detail {
@@ -302,3 +329,8 @@ body.library {
 
 @media (max-width: 720px) { .detail { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .detail { transition: none; } }
+
+@media (max-width: 560px) {
+  .coverflow { --cf-card: clamp(148px, 48vw, 190px); padding-top: 32px; }
+  .coverflow-caption { margin-top: 16px; }
+}

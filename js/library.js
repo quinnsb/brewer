@@ -2,9 +2,8 @@
    LIBRARY — shelves and expand-in-place detail
 
    Four media types, four physics. They do not share one treatment because
-   the objects do not: books stand as spines, records lean front-facing in a
-   crate, posters sit in a rack, podcasts are flat art with no physical
-   object to fake.
+   the objects do not: books stand as spines, records move through a
+   coverflow, posters sit in a rack, and podcasts are flat art.
    ============================================================ */
 
 import { spineWidth, spineHeight } from "./lib/geometry.js";
@@ -13,7 +12,7 @@ const DATA_URL = "data/library.json";
 
 const TYPE_LABEL = {
   book: ["Books", "spine shelf"],
-  album: ["Albums", "crate, front facing"],
+  album: ["Albums", "drag, scroll, or use arrow keys"],
   film: ["Films", "poster rack"],
   other: ["Podcasts", "tiles"],
 };
@@ -33,11 +32,12 @@ function paint(node, item) {
   node.setAttribute("aria-expanded", "false");
 }
 
-function coverImg(item) {
-  const img = el("img");
+function coverImg(item, cls = "") {
+  const img = el("img", cls);
   img.src = item.cover;
   img.alt = "";
   img.loading = "lazy";
+  img.draggable = false;
   return img;
 }
 
@@ -45,9 +45,7 @@ const label = (item) =>
   `${item.title}${item.creator ? `, ${item.creator}` : ""}${item.year ? `, ${item.year}` : ""}`;
 
 const BUILDERS = {
-  /* Generated spine: palette ground, vertical type, accent rules. The cover
-     image is deliberately absent here; a 30px slice of a jacket is a smear,
-     not a spine. The real cover shows in the expanded state. */
+  /* Generated spine at rest, real jacket when the book opens. */
   book(item) {
     const btn = el("button", "spine", { type: "button", "aria-label": label(item) });
     paint(btn, item);
@@ -58,11 +56,20 @@ const BUILDERS = {
       Object.assign(el("span", "t"), { textContent: item.title }),
       Object.assign(el("span", "a"), { textContent: item.creator || "" })
     );
-    btn.append(el("span", "spine-rule top"), txt, el("span", "spine-rule bot"));
+    btn.append(
+      coverImg(item, "spine-cover"),
+      el("span", "spine-rule top"),
+      txt,
+      el("span", "spine-rule bot")
+    );
     return btn;
   },
   album(item) {
-    const btn = el("button", "sleeve", { type: "button", "aria-label": label(item) });
+    const btn = el("button", "coverflow-slide", {
+      type: "button",
+      "aria-label": label(item),
+      "aria-roledescription": "slide",
+    });
     paint(btn, item);
     btn.append(coverImg(item));
     return btn;
@@ -88,14 +95,17 @@ const CONTAINER = {
     rail.append(mount);
     return { rail, mount };
   },
-  /* crate = scroll viewport > box (floor, lip, wall) > inner (the records) */
   album() {
-    const rail = el("div", "crate");
-    const box = el("div", "crate-box");
-    const mount = el("div", "crate-inner");
-    box.append(mount);
-    rail.append(box);
-    return { rail, mount };
+    const rail = el("div", "coverflow", {
+      role: "region",
+      "aria-roledescription": "carousel",
+      "aria-label": "Album covers",
+    });
+    const mount = el("div", "coverflow-stage");
+    const caption = el("div", "coverflow-caption", { "aria-live": "polite" });
+    caption.append(el("p", "coverflow-title"), el("p", "coverflow-meta"));
+    rail.append(mount, caption);
+    return { rail, mount, caption };
   },
   film() {
     const rail = el("div", "shelf-rail");
@@ -125,7 +135,7 @@ export function renderShelves(items, root) {
     lab.append(document.createTextNode(name), Object.assign(el("span"), { textContent: sub }));
     block.append(lab);
 
-    const { rail, mount } = CONTAINER[type]();
+    const { rail, mount, caption } = CONTAINER[type]();
     for (const item of list) {
       const node = BUILDERS[type](item);
       node.dataset.id = item.id;
@@ -133,7 +143,202 @@ export function renderShelves(items, root) {
     }
     block.append(rail);
     root.append(block);
+    if (type === "album") wireCoverflow(list, rail, mount, caption, root);
   }
+}
+
+/* ---------- albums: native coverflow ---------- */
+
+const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const coverflowById = new Map();
+
+function wireCoverflow(items, frame, stage, caption, root) {
+  const nodes = [...stage.querySelectorAll(".coverflow-slide")];
+  const count = nodes.length;
+  const title = caption.querySelector(".coverflow-title");
+  const meta = caption.querySelector(".coverflow-meta");
+  const gap = 0.05;
+  let width = 0;
+  let pos = 0;
+  let target = 0;
+  let selected = -1;
+  let raf = 0;
+  let drag = null;
+  let suppressClick = false;
+  let wheelTimer = 0;
+
+  const indexAt = (value) => ((Math.round(value) % count) + count) % count;
+  const clamp = (value) => value;
+
+  function foldedOffset(index, value = pos) {
+    let offset = index - value;
+    offset = ((offset % count) + count) % count;
+    if (offset > count / 2) offset -= count;
+    return offset;
+  }
+
+  function announce(index) {
+    if (index === selected) return;
+    const hadSlideFocus = document.activeElement?.classList.contains("coverflow-slide");
+    selected = index;
+    const item = items[index];
+    title.textContent = item.title;
+    meta.textContent = `${item.creator || "Unknown"}${item.year ? ` · ${item.year}` : ""}  ${String(index + 1).padStart(2, "0")} / ${String(count).padStart(2, "0")}`;
+    nodes.forEach((node, i) => {
+      node.setAttribute("aria-current", String(i === index));
+      node.tabIndex = i === index ? 0 : -1;
+    });
+    if (hadSlideFocus) nodes[index].focus({ preventScroll: true });
+    if (openId && openId !== item.id) closeAll(root);
+  }
+
+  function paint() {
+    if (!width) return;
+    const pitch = width * (1 + gap);
+    for (let index = 0; index < count; index++) {
+      const node = nodes[index];
+      const offset = foldedOffset(index);
+      const distance = Math.abs(offset);
+      const ramp = distance ** 0.56;
+      const tilt = Math.min(44 * ramp, 82) * Math.sign(offset);
+      const edge = Math.min(1, Math.max(0, count / 2 - distance));
+      node.style.transform =
+        `translateX(calc(-50% + ${offset * pitch}px)) ` +
+        `translateZ(${-0.6 * width * ramp}px) rotateY(${-tilt}deg)`;
+      node.style.opacity = String(Math.max(0, 1 - 0.1 * distance) * edge);
+      node.style.zIndex = String(100 - Math.round(distance));
+    }
+    announce(indexAt(pos));
+  }
+
+  function settle(next, done) {
+    if (raf) cancelAnimationFrame(raf);
+    target = clamp(next);
+    announce(indexAt(target));
+    if (REDUCED) {
+      pos = target;
+      paint();
+      done?.();
+      return;
+    }
+    const step = () => {
+      const remaining = target - pos;
+      if (Math.abs(remaining) < 0.0004) {
+        pos = target;
+        paint();
+        raf = 0;
+        done?.();
+        return;
+      }
+      pos += remaining * 0.16;
+      paint();
+      raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+  }
+
+  function goTo(index, done) {
+    const next = index + Math.round((target - index) / count) * count;
+    settle(next, done);
+  }
+
+  function nudge(by) {
+    settle(Math.round(target) + by);
+  }
+
+  nodes.forEach((node, index) => {
+    node.setAttribute("aria-label", `${label(items[index])}, ${index + 1} of ${count}`);
+    node.addEventListener("click", (event) => {
+      if (suppressClick) {
+        event.preventDefault();
+        event.stopPropagation();
+        return;
+      }
+      if (Math.abs(foldedOffset(index)) > 0.12) {
+        event.preventDefault();
+        event.stopPropagation();
+        goTo(index);
+      }
+    });
+    coverflowById.set(items[index].id, {
+      open: () => goTo(index, () => node.click()),
+    });
+  });
+
+  frame.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      nudge(-1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      nudge(1);
+    }
+  });
+
+  frame.addEventListener("pointerdown", (event) => {
+    if (raf) cancelAnimationFrame(raf);
+    raf = 0;
+    target = pos;
+    drag = {
+      id: event.pointerId,
+      x: event.clientX,
+      pos,
+      velocity: 0,
+      time: performance.now(),
+      moved: false,
+    };
+  });
+
+  frame.addEventListener("pointermove", (event) => {
+    if (!drag || drag.id !== event.pointerId || !width) return;
+    const now = performance.now();
+    const previous = pos;
+    pos = clamp(drag.pos - (event.clientX - drag.x) / (width * (1 + gap)));
+    drag.velocity = ((pos - previous) / Math.max(now - drag.time, 1)) * 1000;
+    drag.time = now;
+    drag.moved ||= Math.abs(event.clientX - drag.x) > 4;
+    if (drag.moved && !frame.hasPointerCapture(event.pointerId)) {
+      frame.setPointerCapture(event.pointerId);
+    }
+    target = pos;
+    paint();
+  });
+
+  const endDrag = (event) => {
+    if (!drag || drag.id !== event.pointerId) return;
+    const moved = drag.moved;
+    const carried = Math.max(-2, Math.min(2, drag.velocity * 0.18));
+    drag = null;
+    if (moved) {
+      suppressClick = true;
+      setTimeout(() => (suppressClick = false), 0);
+    }
+    settle(Math.round(pos + carried));
+  };
+  frame.addEventListener("pointerup", endDrag);
+  frame.addEventListener("pointercancel", endDrag);
+
+  frame.addEventListener("wheel", (event) => {
+    const horizontal = Math.abs(event.deltaX) > Math.abs(event.deltaY);
+    if (!horizontal && !event.shiftKey) return;
+    event.preventDefault();
+    if (!width) return;
+    if (raf) cancelAnimationFrame(raf);
+    raf = 0;
+    const delta = horizontal ? event.deltaX : event.deltaY;
+    pos = clamp(pos + delta / (width * (1 + gap)));
+    target = pos;
+    paint();
+    clearTimeout(wheelTimer);
+    wheelTimer = setTimeout(() => settle(Math.round(pos)), 90);
+  }, { passive: false });
+
+  const measure = () => {
+    width = nodes[0]?.offsetWidth || 0;
+    paint();
+  };
+  measure();
+  new ResizeObserver(measure).observe(frame);
 }
 
 /* ---------- expand in place ---------- */
@@ -224,7 +429,7 @@ export function wireExpansion(items, root) {
   root.addEventListener("keydown", (e) => {
     if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
     const cur = e.target.closest("[data-id]");
-    if (!cur) return;
+    if (!cur || cur.closest(".coverflow")) return;
     const sibs = [...cur.parentElement.querySelectorAll("[data-id]")];
     const next = sibs[sibs.indexOf(cur) + (e.key === "ArrowRight" ? 1 : -1)];
     if (next) {
@@ -238,8 +443,10 @@ export function wireExpansion(items, root) {
 export function openItem(id) {
   const node = document.querySelector(`#shelves [data-id="${CSS.escape(id)}"]`);
   if (!node) return;
-  node.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
-  node.click();
+  node.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "center", inline: "center" });
+  const coverflow = coverflowById.get(id);
+  if (coverflow) coverflow.open();
+  else node.click();
 }
 
 async function main() {
@@ -250,7 +457,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js");
+  const { initHero } = await import("./library-hero.js?v=coverflow-final2");
   initHero(items);
 }
 

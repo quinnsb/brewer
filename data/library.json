@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T21:14:27.672Z",
+  "generatedAt": "2026-08-20T21:36:43.831Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -8,22 +8,22 @@
       "aspect": 0.66,
       "title": "The Left Hand of Darkness",
       "creator": "Ursula K. Le Guin",
-      "year": 1976,
-      "detail": null,
+      "year": 1969,
+      "detail": "304 pages",
       "cover": "images/library/book-the-left-hand-of-darkness.jpg",
-      "sourceUrl": "https://books.apple.com/us/book/the-left-hand-of-darkness/id998749472?uo=4",
-      "height": 0.89,
+      "sourceUrl": "https://openlibrary.org/works/OL59800W",
+      "height": 0.498,
       "thickness": 0.913,
       "starred": false,
-      "width": 636,
-      "height_px": 1000,
-      "palette": {
-        "cover": "#51767d",
-        "accent": "#59c8dc",
-        "ink": "#f1ece3"
-      },
       "finished": null,
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 302,
+      "height_px": 475,
+      "palette": {
+        "cover": "#57767c",
+        "accent": "#5bbfd3",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-gravitys-rainbow",
@@ -33,21 +33,21 @@
       "title": "Gravity's Rainbow",
       "creator": "Thomas Pynchon",
       "year": 1973,
-      "detail": "810 pages",
+      "detail": null,
       "cover": "images/library/book-gravitys-rainbow.jpg",
-      "sourceUrl": "https://openlibrary.org/works/OL2636675W",
-      "height": 0.884,
+      "sourceUrl": "https://books.apple.com/us/book/gravitys-rainbow/id534574459?uo=4",
+      "height": 0.47,
       "thickness": 0.825,
       "starred": false,
-      "width": 328,
-      "height_px": 500,
-      "palette": {
-        "cover": "#243288",
-        "accent": "#1934be",
-        "ink": "#f1ece3"
-      },
       "finished": null,
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 658,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#372862",
+        "accent": "#351776",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-the-dispossessed",
@@ -60,18 +60,18 @@
       "detail": "352 pages",
       "cover": "images/library/book-the-dispossessed.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL59863W",
-      "height": 0.887,
+      "height": 0.481,
       "thickness": 1.215,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 312,
       "height_px": 475,
       "palette": {
         "cover": "#712712",
         "accent": "#da400c",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "book-blood-meridian",
@@ -84,18 +84,18 @@
       "detail": "353 pages",
       "cover": "images/library/book-blood-meridian.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL40879W",
-      "height": 0.915,
+      "height": 0.612,
       "thickness": 1.012,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 307,
       "height_px": 475,
       "palette": {
         "cover": "#32342a",
         "accent": "#655e2d",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "book-housekeeping",
@@ -108,18 +108,18 @@
       "detail": "224 pages",
       "cover": "images/library/book-housekeeping.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL1875010W",
-      "height": 0.963,
+      "height": 0.829,
       "thickness": 0.828,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 334,
       "height_px": 500,
       "palette": {
         "cover": "#5a6482",
         "accent": "#7196d7",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "book-the-sellout",
@@ -132,18 +132,18 @@
       "detail": "304 pages",
       "cover": "images/library/book-the-sellout.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL17616758W",
-      "height": 0.935,
+      "height": 0.704,
       "thickness": 1.246,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 333,
       "height_px": 500,
       "palette": {
         "cover": "#a7a1a1",
         "accent": "#d8bac3",
         "ink": "#141210"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "book-cloud-atlas",
@@ -156,18 +156,18 @@
       "detail": "537 pages",
       "cover": "images/library/book-cloud-atlas.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL482454W",
-      "height": 0.917,
+      "height": 0.618,
       "thickness": 1.401,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 321,
       "height_px": 500,
       "palette": {
         "cover": "#7e725a",
         "accent": "#e49e74",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "book-a-visit-from-the-goon-squad",
@@ -180,210 +180,306 @@
       "detail": "359 pages",
       "cover": "images/library/book-a-visit-from-the-goon-squad.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL15026613W",
-      "height": 0.962,
+      "height": 0.825,
       "thickness": 1.191,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 185,
       "height_px": 276,
       "palette": {
         "cover": "#417e81",
         "accent": "#59cfd7",
         "ink": "#141210"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
-      "id": "album-in-rainbows",
+      "id": "album-coloring-book",
       "type": "album",
       "shape": "sleeve",
       "aspect": 1,
-      "title": "In Rainbows",
-      "creator": "Radiohead",
-      "year": 2007,
-      "detail": "10 tracks",
-      "cover": "images/library/album-in-rainbows.jpg",
-      "sourceUrl": "https://music.apple.com/us/album/in-rainbows/1109714933?uo=4",
-      "height": 0.926,
-      "thickness": 1.024,
-      "starred": false,
-      "width": 1000,
-      "height_px": 1000,
-      "palette": {
-        "cover": "#493322",
-        "accent": "#ea7c2d",
-        "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
-    },
-    {
-      "id": "album-to-pimp-a-butterfly",
-      "type": "album",
-      "shape": "sleeve",
-      "aspect": 1,
-      "title": "To Pimp a Butterfly",
-      "creator": "Kendrick Lamar",
-      "year": 2015,
-      "detail": "17 tracks",
-      "cover": "images/library/album-to-pimp-a-butterfly.jpg",
-      "sourceUrl": "https://music.apple.com/us/album/to-pimp-a-butterfly/1440871877?uo=4",
-      "height": 0.896,
-      "thickness": 1.272,
-      "starred": false,
-      "width": 1000,
-      "height_px": 1000,
-      "palette": {
-        "cover": "#6f6d6e",
-        "accent": "#e5e5e7",
-        "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
-    },
-    {
-      "id": "album-illinois",
-      "type": "album",
-      "shape": "sleeve",
-      "aspect": 1,
-      "title": "Illinois",
-      "creator": "Sufjan Stevens",
-      "year": 2005,
-      "detail": "26 tracks",
-      "cover": "images/library/album-illinois.jpg",
-      "sourceUrl": "https://music.apple.com/us/album/illinois/328074546?uo=4",
-      "height": 0.918,
-      "thickness": 1.173,
-      "starred": false,
-      "width": 900,
-      "height_px": 900,
-      "palette": {
-        "cover": "#535a55",
-        "accent": "#d5bb5e",
-        "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
-    },
-    {
-      "id": "album-blue",
-      "type": "album",
-      "shape": "sleeve",
-      "aspect": 1,
-      "title": "Blue",
-      "creator": "Joni Mitchell",
-      "year": 1971,
-      "detail": "10 tracks",
-      "cover": "images/library/album-blue.jpg",
-      "sourceUrl": "https://music.apple.com/us/album/blue/1492263092?uo=4",
-      "height": 0.929,
-      "thickness": 1.156,
-      "starred": false,
-      "width": 1000,
-      "height_px": 1000,
-      "palette": {
-        "cover": "#091d4c",
-        "accent": "#002061",
-        "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
-    },
-    {
-      "id": "album-kid-a",
-      "type": "album",
-      "shape": "sleeve",
-      "aspect": 1,
-      "title": "Kid A",
-      "creator": "Radiohead",
-      "year": 2000,
-      "detail": "11 tracks",
-      "cover": "images/library/album-kid-a.jpg",
-      "sourceUrl": "https://music.apple.com/us/album/kid-a/1097862870?uo=4",
-      "height": 0.96,
-      "thickness": 0.789,
-      "starred": false,
-      "width": 1000,
-      "height_px": 1000,
-      "palette": {
-        "cover": "#525355",
-        "accent": "#1a3454",
-        "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
-    },
-    {
-      "id": "album-we-got-it-from-here-thank-you-4-your-service",
-      "type": "album",
-      "shape": "sleeve",
-      "aspect": 1,
-      "title": "We got it from Here... Thank You 4 Your service",
-      "creator": "A Tribe Called Quest",
+      "title": "Coloring Book",
+      "creator": "Chance the Rapper",
       "year": 2016,
-      "detail": "16 tracks",
-      "cover": "images/library/album-we-got-it-from-here-thank-you-4-your-service.jpg",
-      "sourceUrl": "https://music.apple.com/us/album/we-got-it-from-here-thank-you-4-your-service/1174628861?uo=4",
-      "height": 0.881,
-      "thickness": 1.298,
-      "starred": false,
-      "width": 1000,
-      "height_px": 1000,
-      "palette": {
-        "cover": "#4c453f",
-        "accent": "#f2ebdc",
-        "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
-    },
-    {
-      "id": "album-for-emma-forever-ago",
-      "type": "album",
-      "shape": "sleeve",
-      "aspect": 1,
-      "title": "For Emma, Forever Ago",
-      "creator": "Bon Iver",
-      "year": 2007,
       "detail": "Album",
-      "cover": "images/library/album-for-emma-forever-ago.jpg",
-      "sourceUrl": "https://musicbrainz.org/release-group/187935b5-a0a4-3e6f-9684-48b67a5190a1",
-      "height": 0.948,
-      "thickness": 0.832,
+      "cover": "images/library/album-coloring-book.jpg",
+      "sourceUrl": "https://musicbrainz.org/release-group/2e93b949-f480-475b-a1bd-bbf9723ba13d",
+      "height": 0.531,
+      "thickness": 1.224,
       "starred": false,
-      "width": 500,
-      "height_px": 496,
-      "palette": {
-        "cover": "#6d6c6a",
-        "accent": "#777763",
-        "ink": "#f1ece3"
-      },
       "finished": null,
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 500,
+      "height_px": 500,
+      "palette": {
+        "cover": "#803d4e",
+        "accent": "#fe5169",
+        "ink": "#f1ece3"
+      }
     },
     {
-      "id": "album-voodoo",
+      "id": "album-where-the-light-is-john-mayer-live-in-los-angeles",
       "type": "album",
       "shape": "sleeve",
       "aspect": 1,
-      "title": "Voodoo",
-      "creator": "D'Angelo",
-      "year": 2000,
-      "detail": "13 tracks",
-      "cover": "images/library/album-voodoo.jpg",
-      "sourceUrl": "https://music.apple.com/us/album/voodoo/1443829916?uo=4",
-      "height": 0.983,
-      "thickness": 1.004,
+      "title": "Where the Light Is: John Mayer Live in Los Angeles",
+      "creator": "John Mayer",
+      "year": 2008,
+      "detail": "Album",
+      "cover": "images/library/album-where-the-light-is-john-mayer-live-in-los-angeles.jpg",
+      "sourceUrl": "https://musicbrainz.org/release-group/7c12144f-8c2a-30e5-a635-13cd3f3eadec",
+      "height": 0.656,
+      "thickness": 1.23,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 500,
+      "height_px": 500,
+      "palette": {
+        "cover": "#1a1919",
+        "accent": "#1b231f",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-in-between-dreams",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "In Between Dreams",
+      "creator": "Jack Johnson",
+      "year": 2005,
+      "detail": "16 tracks",
+      "cover": "images/library/album-in-between-dreams.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/in-between-dreams-bonus-track-version/1440857781?uo=4",
+      "height": 0.694,
+      "thickness": 1.018,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 900,
+      "height_px": 810,
+      "palette": {
+        "cover": "#736008",
+        "accent": "#ffd600",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-blonde-on-blonde",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Blonde on Blonde",
+      "creator": "Bob Dylan",
+      "year": 1966,
+      "detail": "14 tracks",
+      "cover": "images/library/album-blonde-on-blonde.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/blonde-on-blonde/178049863?uo=4",
+      "height": 0.631,
+      "thickness": 1.485,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 1000,
       "height_px": 1000,
       "palette": {
-        "cover": "#423a38",
-        "accent": "#7c4a32",
+        "cover": "#685740",
+        "accent": "#eab591",
         "ink": "#f1ece3"
-      },
+      }
+    },
+    {
+      "id": "album-kind-of-blue",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Kind of Blue",
+      "creator": "Miles Davis",
+      "year": 1959,
+      "detail": "5 tracks",
+      "cover": "images/library/album-kind-of-blue.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/kind-of-blue/268443092?uo=4",
+      "height": 0.931,
+      "thickness": 0.958,
+      "starred": false,
       "finished": null,
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 600,
+      "height_px": 600,
+      "palette": {
+        "cover": "#1f2020",
+        "accent": "#354040",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-transatlanticism",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Transatlanticism",
+      "creator": "Death Cab for Cutie",
+      "year": 2003,
+      "detail": "11 tracks",
+      "cover": "images/library/album-transatlanticism.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/transatlanticism/718938040?uo=4",
+      "height": 0.544,
+      "thickness": 0.947,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#825933",
+        "accent": "#f9b462",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-reading-writing-and-arithmetic",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Reading, Writing and Arithmetic",
+      "creator": "The Sundays",
+      "year": 1990,
+      "detail": "10 tracks",
+      "cover": "images/library/album-reading-writing-and-arithmetic.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/reading-writing-and-arithmetic/1707465605?uo=4",
+      "height": 0.804,
+      "thickness": 1.144,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#2e3234",
+        "accent": "#3d4649",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-night-train",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Night Train",
+      "creator": "Oscar Peterson Trio",
+      "year": 1963,
+      "detail": "11 tracks",
+      "cover": "images/library/album-night-train.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/night-train/1440761118?uo=4",
+      "height": 0.527,
+      "thickness": 1.377,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#202940",
+        "accent": "#5d7cdc",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-a-boy-named-charlie-brown",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "A Boy Named Charlie Brown",
+      "creator": "Vince Guaraldi Trio",
+      "year": 1969,
+      "detail": "11 tracks",
+      "cover": "images/library/album-a-boy-named-charlie-brown.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/a-boy-named-charlie-brown-original-1969-movie-soundtrack/1577461095?uo=4",
+      "height": 0.635,
+      "thickness": 1.273,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#989d8f",
+        "accent": "#51983b",
+        "ink": "#141210"
+      }
+    },
+    {
+      "id": "album-gordon",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Gordon",
+      "creator": "Barenaked Ladies",
+      "year": 1992,
+      "detail": "15 tracks",
+      "cover": "images/library/album-gordon.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/gordon/283789996?uo=4",
+      "height": 0.931,
+      "thickness": 1.385,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#1d1f28",
+        "accent": "#283a6f",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-come-away-with-me",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Come Away with Me",
+      "creator": "Norah Jones",
+      "year": 2002,
+      "detail": "44 tracks",
+      "cover": "images/library/album-come-away-with-me.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/come-away-with-me-super-deluxe-edition/1625058458?uo=4",
+      "height": 0.81,
+      "thickness": 1.23,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#253046",
+        "accent": "#1551a0",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-mr-finish-line",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Mr. Finish Line",
+      "creator": "Vulfpeck",
+      "year": 2017,
+      "detail": "10 tracks",
+      "cover": "images/library/album-mr-finish-line.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/mr-finish-line/1877223421?uo=4",
+      "height": 0.763,
+      "thickness": 1.419,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#726e6e",
+        "accent": "#a7675d",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-there-will-be-blood",
@@ -396,18 +492,18 @@
       "detail": "Film",
       "cover": "images/library/film-there-will-be-blood.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/There_Will_Be_Blood",
-      "height": 0.994,
+      "height": 0.971,
       "thickness": 0.972,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 250,
       "height_px": 370,
       "palette": {
         "cover": "#0d0d0d",
         "accent": "#11242d",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "film-in-the-mood-for-love",
@@ -420,18 +516,18 @@
       "detail": "Film",
       "cover": "images/library/film-in-the-mood-for-love.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/In_the_Mood_for_Love",
-      "height": 0.998,
+      "height": 0.99,
       "thickness": 1.039,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 265,
       "height_px": 376,
       "palette": {
         "cover": "#6a3626",
         "accent": "#e16c0f",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "film-paris-texas-film",
@@ -444,18 +540,18 @@
       "detail": "Film",
       "cover": "images/library/film-paris-texas-film.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Paris%2C_Texas_(film)",
-      "height": 0.988,
+      "height": 0.943,
       "thickness": 1.205,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 255,
       "height_px": 393,
       "palette": {
         "cover": "#362f26",
         "accent": "#eabe92",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "film-burning-2018-film",
@@ -468,18 +564,18 @@
       "detail": "Film",
       "cover": "images/library/film-burning-2018-film.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Burning_(2018_film)",
-      "height": 0.916,
+      "height": 0.615,
       "thickness": 1.351,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 260,
       "height_px": 371,
       "palette": {
         "cover": "#342c31",
         "accent": "#d69e8b",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "film-the-master-2012-film",
@@ -492,18 +588,18 @@
       "detail": "Film",
       "cover": "images/library/film-the-master-2012-film.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/The_Master_(2012_film)",
-      "height": 0.902,
+      "height": 0.55,
       "thickness": 0.625,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 220,
       "height_px": 326,
       "palette": {
         "cover": "#1f4f7f",
         "accent": "#0167ab",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "film-moonlight",
@@ -516,18 +612,18 @@
       "detail": "Film",
       "cover": "images/library/film-moonlight.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Moonlight",
-      "height": 0.973,
+      "height": 0.875,
       "thickness": 1.12,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 960,
       "height_px": 1021,
       "palette": {
         "cover": "#47414a",
         "accent": "#2b1a36",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "film-chungking-express",
@@ -540,18 +636,18 @@
       "detail": "Film",
       "cover": "images/library/film-chungking-express.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Chungking_Express",
-      "height": 0.92,
+      "height": 0.632,
       "thickness": 0.707,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 259,
       "height_px": 383,
       "palette": {
         "cover": "#9e9e9f",
         "accent": "#faeb82",
         "ink": "#141210"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "film-first-reformed",
@@ -564,18 +660,18 @@
       "detail": "Film",
       "cover": "images/library/film-first-reformed.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/First_Reformed",
-      "height": 0.992,
+      "height": 0.966,
       "thickness": 1.131,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 220,
       "height_px": 326,
       "palette": {
         "cover": "#0c0706",
         "accent": "#451f11",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "other-99-invisible",
@@ -588,18 +684,18 @@
       "detail": "824 tracks",
       "cover": "images/library/other-99-invisible.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/99-invisible/id394775318?uo=4",
-      "height": 0.93,
+      "height": 0.679,
       "thickness": 1.275,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 1000,
       "height_px": 1000,
       "palette": {
         "cover": "#272423",
         "accent": "#5a4f1f",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "other-design-matters-with-debbie-millman",
@@ -612,18 +708,18 @@
       "detail": "687 tracks",
       "cover": "images/library/other-design-matters-with-debbie-millman.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/design-matters-with-debbie-millman/id328074695?uo=4",
-      "height": 0.965,
+      "height": 0.839,
       "thickness": 0.748,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 1000,
       "height_px": 1000,
       "palette": {
         "cover": "#404746",
         "accent": "#7ebebc",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "other-song-exploder",
@@ -636,18 +732,18 @@
       "detail": "374 tracks",
       "cover": "images/library/other-song-exploder.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/song-exploder/id788236947?uo=4",
-      "height": 0.973,
+      "height": 0.876,
       "thickness": 1.372,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 1000,
       "height_px": 1000,
       "palette": {
         "cover": "#1e1b1b",
         "accent": "#ac6708",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     },
     {
       "id": "other-the-rest-is-history",
@@ -660,18 +756,18 @@
       "detail": "974 tracks",
       "cover": "images/library/other-the-rest-is-history.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/the-rest-is-history/id1537788786?uo=4",
-      "height": 0.931,
+      "height": 0.684,
       "thickness": 1.23,
       "starred": false,
+      "finished": null,
+      "reviewHtml": null,
       "width": 1000,
       "height_px": 1000,
       "palette": {
         "cover": "#6e4e58",
         "accent": "#8e1f44",
         "ink": "#f1ece3"
-      },
-      "finished": null,
-      "reviewHtml": null
+      }
     }
   ]
 }

@@ -54,14 +54,30 @@ const SEED = {
     "A Visit from the Goon Squad Jennifer Egan",
   ],
   album: [
-    "In Rainbows Radiohead",
-    "To Pimp a Butterfly Kendrick Lamar",
-    "Illinois Sufjan Stevens",
-    "Blue Joni Mitchell",
-    "Kid A Radiohead",
-    "The Low End Theory A Tribe Called Quest",
-    "For Emma Forever Ago Bon Iver",
-    "Voodoo D'Angelo",
+    {
+      query: "Coloring Book Chance the Rapper",
+      title: "Coloring Book",
+      creator: "Chance the Rapper",
+      year: 2016,
+      releaseGroupId: "2e93b949-f480-475b-a1bd-bbf9723ba13d",
+    },
+    {
+      query: "Where the Light Is John Mayer Live in Los Angeles",
+      title: "Where the Light Is: John Mayer Live in Los Angeles",
+      creator: "John Mayer",
+      year: 2008,
+      releaseGroupId: "7c12144f-8c2a-30e5-a635-13cd3f3eadec",
+    },
+    { query: "In Between Dreams Jack Johnson", title: "In Between Dreams", creator: "Jack Johnson" },
+    { query: "Blonde on Blonde Bob Dylan", title: "Blonde on Blonde", creator: "Bob Dylan" },
+    { query: "Kind of Blue Miles Davis", title: "Kind of Blue", creator: "Miles Davis" },
+    { query: "Transatlanticism Death Cab for Cutie", title: "Transatlanticism", creator: "Death Cab for Cutie" },
+    { query: "Reading Writing and Arithmetic The Sundays", title: "Reading, Writing and Arithmetic", creator: "The Sundays" },
+    { query: "Night Train Oscar Peterson Trio", title: "Night Train", creator: "Oscar Peterson Trio" },
+    { query: "A Boy Named Charlie Brown Vince Guaraldi Trio", title: "A Boy Named Charlie Brown", creator: "Vince Guaraldi Trio" },
+    { query: "Gordon Barenaked Ladies", title: "Gordon", creator: "Barenaked Ladies" },
+    { query: "Come Away with Me Norah Jones", title: "Come Away with Me", creator: "Norah Jones" },
+    { query: "Mr. Finish Line Vulfpeck", title: "Mr. Finish Line", creator: "Vulfpeck" },
   ],
   film: [
     "There Will Be Blood",
@@ -187,6 +203,17 @@ async function resolveCoverArtArchive(query) {
   };
 }
 
+function knownReleaseGroup(entry) {
+  return {
+    title: entry.title,
+    creator: entry.creator,
+    year: entry.year ?? null,
+    detail: "Album",
+    coverUrl: `https://coverartarchive.org/release-group/${entry.releaseGroupId}/front-500`,
+    sourceUrl: `https://musicbrainz.org/release-group/${entry.releaseGroupId}`,
+  };
+}
+
 /* Wikipedia carries the fair-use poster in the infobox; Wikidata carries
    clean structured year + director. One page call, two Wikidata calls. */
 async function resolveFilm(query) {
@@ -270,11 +297,21 @@ async function main() {
   const items = [];
   const failures = [];
 
-  for (const [type, queries] of Object.entries(SEED)) {
-    for (const query of queries) {
+  for (const [type, entries] of Object.entries(SEED)) {
+    for (const entry of entries) {
+      const seed = typeof entry === "string" ? { query: entry } : entry;
+      const { query } = seed;
       try {
-        const meta = await RESOLVERS[type](query);
+        const meta = seed.releaseGroupId
+          ? knownReleaseGroup(seed)
+          : await RESOLVERS[type](query);
         if (!meta) throw new Error("no result");
+
+        /* Curated display names win over storefront edition suffixes such as
+           "Bonus Track Version" or "Super Deluxe Edition". */
+        if (seed.title) meta.title = seed.title;
+        if (seed.creator) meta.creator = seed.creator;
+        if (seed.year) meta.year = seed.year;
 
         const id = `${type}-${slug(meta.title)}`;
         const file = `${id}.jpg`;
@@ -292,7 +329,7 @@ async function main() {
           cover: `images/library/${file}`,
           sourceUrl: meta.sourceUrl,
           /* physical variation, deterministic per id */
-          height: Number((0.88 + rand() * 0.12).toFixed(3)),
+          height: Number((0.45 + rand() * 0.55).toFixed(3)),
           thickness: Number((0.6 + rand() * 0.9).toFixed(3)),
           /* filled in later: dominant colour, starred, note */
           starred: false,

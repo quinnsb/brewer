@@ -11,7 +11,7 @@
    ============================================================ */
 
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js";
-import { openItem } from "./library.js";
+import { openItem } from "./library.js?v=coverflow-final2";
 
 const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 /* Keep in step with --card in css/library.css. */
@@ -204,7 +204,9 @@ export function initHero(items) {
     const maxApexY = h / 2 - extent / 2 - arcR * edgeDrop;
 
     return {
-      circleR: Math.min(Math.min(w, h) * 0.35, 350),
+      mobile,
+      circleR: Math.min(mobile ? w * 0.39 : Math.min(w, h) * 0.35, h * 0.35, 350),
+      circleScale: mobile ? 0.82 : 1,
       arcR,
       /* Distance from the STAGE CENTRE down to the arc apex, not from the
          top of the viewport. Cards are positioned at top:50%/left:50%, so
@@ -241,18 +243,29 @@ export function initHero(items) {
     }
 
     for (let i = 0; i < total; i++) {
+      const hiddenOnMobile = g.mobile && i % 2 === 1;
+      if (hiddenOnMobile) {
+        nodes[i].style.opacity = "0";
+        nodes[i].style.pointerEvents = "none";
+        nodes[i].tabIndex = -1;
+        continue;
+      }
+      nodes[i].style.pointerEvents = "";
+      nodes[i].tabIndex = 0;
+      const layoutIndex = g.mobile ? i / 2 : i;
+      const layoutTotal = g.mobile ? Math.ceil(total / 2) : total;
       let target;
       if (phase === "scatter") {
         target = scatter[i];
       } else if (phase === "line") {
         const spacing = 78;
         target = {
-          x: i * spacing - (total * spacing) / 2,
+          x: layoutIndex * spacing - (layoutTotal * spacing) / 2,
           y: 0, rotation: 0, scale: 1, opacity: 1,
         };
       } else {
-        const c = circlePosition(i, total, g.circleR);
-        const a = arcPosition(i, total, {
+        const c = circlePosition(layoutIndex, layoutTotal, g.circleR);
+        const a = arcPosition(layoutIndex, layoutTotal, {
           radius: g.arcR,
           centerY: g.apexY + g.arcR,
           spread: g.spread,
@@ -262,7 +275,7 @@ export function initHero(items) {
           x: lerp(c.x, a.x + parallax, p),
           y: lerp(c.y, a.y, p),
           rotation: lerp(c.rotation, a.rotation, p),
-          scale: lerp(1, g.scale, p),
+          scale: lerp(g.circleScale, g.scale, p),
           opacity: 1,
         };
       }
