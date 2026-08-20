@@ -27,7 +27,7 @@ Two tiers, honestly separated:
 - **Unit tests (`node --test`)** cover pure logic: frontmatter parsing, markdown rendering, merge/override resolution, spine dimensions, circle and arc geometry, spring integration. These are the parts where a silent wrong answer is invisible.
 - **Browser verification** covers DOM rendering, layout, and motion via the preview tools (`read_page`, `read_console_messages`, screenshots). Asserting on rendered pixels in a unit test would be theater.
 
-Run all unit tests: `node --test tools/__tests__/`
+Run all unit tests: `node --test tools/__tests__/*.test.mjs`
 
 ---
 
@@ -711,7 +711,7 @@ Expected: PASS, 10 tests
 
 - [ ] **Step 5: Run the whole suite**
 
-Run: `node --test tools/__tests__/`
+Run: `node --test tools/__tests__/*.test.mjs`
 Expected: PASS, 29 tests total
 
 - [ ] **Step 6: Commit**
@@ -1598,7 +1598,7 @@ git commit -m "Add scroll-driven hero with rotating verb"
 
 - [ ] **Step 1: Run the full unit suite**
 
-Run: `node --test tools/__tests__/`
+Run: `node --test tools/__tests__/*.test.mjs`
 Expected: PASS, 29 tests, 0 failures
 
 - [ ] **Step 2: Check for console errors and failed requests**
