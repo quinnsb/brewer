@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="images/brewerfavicon.svg" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Thumbnail Lab · Brewer (unlisted)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=26" />
+  <link rel="stylesheet" href="css/theme-carnival.css?v=16" />
+  <link rel="stylesheet" href="css/thumbnail-lab.css?v=1" />
+</head>
+<body class="theme-carnival lab-thumbs">
+
+  <a class="site-logo" href="./" aria-label="Quinn Brewer home">
+    <span class="logo-squircle"></span>
+    <span class="logo-wordmark">Quinn Brewer</span>
+  </a>
+
+  <button class="menu-btn" aria-label="Open menu">Menu</button>
+  <div class="menu-bar">
+    <a class="menu-bar-logo" href="./" aria-label="Quinn Brewer home"></a>
+    <button class="menu-btn" aria-label="Open menu">Menu</button>
+  </div>
+  <nav class="menu-dock" aria-label="Main menu">
+    <a href="about.html">About Me</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html">Let's Talk</a>
+    <button class="menu-close">Close</button>
+  </nav>
+
+  <main class="main">
+    <div class="shell">
+
+      <section class="lab-intro">
+        <h1>Thumbnail Lab</h1>
+        <p>Directions for the image on the LinkedIn featured link, all built from the footer palette. Each one is drawn at 1200 by 627, the size LinkedIn crops a link preview to, then scaled down here. Large fits one to a row at whatever width the window allows. Switch to LinkedIn size to see them all at the width they actually appear, and turn on crop guides to check what survives if a surface squares the image off.</p>
+
+        <div class="tn-controls">
+          <span class="tn-legend">Size</span>
+          <div class="tn-group" role="group" aria-label="Preview size">
+            <button class="tn-btn" type="button" data-scale="fit" aria-pressed="true">Large</button>
+            <button class="tn-btn" type="button" data-scale="0.5" aria-pressed="false">Half</button>
+            <button class="tn-btn" type="button" data-scale="0.28" aria-pressed="false">LinkedIn size</button>
+            <button class="tn-btn" type="button" data-scale="0.14" aria-pressed="false">Tiny</button>
+          </div>
+          <span class="tn-legend">Guides</span>
+          <div class="tn-group">
+            <button class="tn-btn" type="button" id="tn-safe-toggle" aria-pressed="false">Crop guides</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="tn-section">
+        <h2>Set one. The footer palette</h2>
+        <p>Straight lockups. The mark, the name, and one accent doing the work.</p>
+      </div>
+
+      <div class="tn-grid">
+
+        <!-- ---------- A ---------- -->
+        <figure class="tn-item">
+          <div class="tn-stage">
+            <div class="tn-frame tn-a">
+              <div class="tn-a-top">
+                <span class="tn-mark" aria-hidden="true"></span>
+                <span class="tn-mono">Portfolio</span>
+              </div>
+              <div class="tn-type">Quinn<br />Brewer</div>
+            </div>
+            <div class="tn-safe" aria-hidden="true"><span class="tn-safe-43"></span><span class="tn-safe-1x1"></span></div>
+          </div>
+          <figcaption>
+            <div class="tn-name">Option A</div>
+            <h2>Footer Strip</h2>
+            <p>The pink strip at the very bottom of the site, which is the last color anyone sees before they leave. Name set as big as the frame allows, mark and label along the top.</p>
+          </figcaption>
+        </figure>
+
+        <!-- ---------- B ---------- -->
+        <figure class="tn-item">
+          <div class="tn-stage">
+            <div class="tn-frame tn-b">
+              <span class="tn-b-name">Quinn</span>
+              <span class="tn-script" aria-hidden="true"></span>
+              <div class="tn-b-bar" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="tn-safe" aria-hidden="true"><span class="tn-safe-43"></span><span class="tn-safe-1x1"></span></div>
+          </div>
+          <figcaption>
+            <div class="tn-name">Option B</div>
+            <h2>Script on Charcoal</h2>
+            <p>The footer lockup with almost nothing changed. Script wordmark on the page ground, with the four social button fills laid along the bottom edge as a bar.</p>
+          </figcaption>
+        </figure>
+
+        <!-- ---------- C ---------- -->
+        <figure class="tn-item">
+          <div class="tn-stage">
+            <div class="tn-frame tn-c">
+              <div class="tn-c-mark"><span class="tn-mark" aria-hidden="true"></span></div>
+              <div class="tn-c-name"><div class="tn-type">Quinn<br />Brewer</div></div>
+              <div class="tn-c-strip">
+                <div><span class="tn-mono">Brand</span></div>
+                <div><span class="tn-mono">Web</span></div>
+                <div><span class="tn-mono">Writing</span></div>
+              </div>
+            </div>
+            <div class="tn-safe" aria-hidden="true"><span class="tn-safe-43"></span><span class="tn-safe-1x1"></span></div>
+          </div>
+          <figcaption>
+            <div class="tn-name">Option C</div>
+            <h2>Color Block</h2>
+            <p>The pairing sheet the palette came from, used as the layout itself. Lime, red, yellow and blue all in one frame, with each word sitting on the ink that color was measured against.</p>
+          </figcaption>
+        </figure>
+
+        <!-- ---------- D ---------- -->
+        <figure class="tn-item">
+          <div class="tn-stage">
+            <div class="tn-frame tn-d">
+              <span class="tn-mark" aria-hidden="true"></span>
+              <div>
+                <div class="tn-type">Quinn<br />Brewer</div>
+                <div class="tn-d-sub">Portfolio site</div>
+              </div>
+            </div>
+            <div class="tn-safe" aria-hidden="true"><span class="tn-safe-43"></span><span class="tn-safe-1x1"></span></div>
+          </div>
+          <figcaption>
+            <div class="tn-name">Option D</div>
+            <h2>The Mark</h2>
+            <p>Mark as large as it will go, name beside it, and the one line that says what the link is. This is the option that holds up best under a square crop, since the mark owns the left half.</p>
+          </figcaption>
+        </figure>
+
+        <!-- ---------- E ---------- -->
+        <figure class="tn-item">
+          <div class="tn-stage">
+            <div class="tn-frame tn-e">
+              <div class="tn-e-1"><span class="tn-type">Quinn</span></div>
+              <div class="tn-e-2"><span class="tn-type">Brewer</span></div>
+              <div class="tn-e-3">
+                <span class="tn-type">Portfolio</span>
+                <span class="tn-mark" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="tn-safe" aria-hidden="true"><span class="tn-safe-43"></span><span class="tn-safe-1x1"></span></div>
+          </div>
+          <figcaption>
+            <div class="tn-name">Option E</div>
+            <h2>Stacked Bands</h2>
+            <p>Three fills, one word each, nothing to squint at. The loudest of the six and the only one still readable when the preview shrinks to a thumbnail in a feed.</p>
+          </figcaption>
+        </figure>
+
+        <!-- ---------- F ---------- -->
+        <figure class="tn-item">
+          <div class="tn-stage">
+            <div class="tn-frame tn-f">
+              <div class="tn-f-card">
+                <div class="tn-f-top">
+                  <span class="tn-mark" aria-hidden="true"></span>
+                  <span class="tn-f-pill">Portfolio</span>
+                </div>
+                <div class="tn-f-foot">
+                  <span class="tn-type">Quinn Brewer</span>
+                  <span class="tn-mono">quinnbrewer.com</span>
+                </div>
+              </div>
+            </div>
+            <div class="tn-safe" aria-hidden="true"><span class="tn-safe-43"></span><span class="tn-safe-1x1"></span></div>
+          </div>
+          <figcaption>
+            <div class="tn-name">Option F</div>
+            <h2>Card</h2>
+            <p>The site's own component language, borrowed whole. A rounded lime panel inset on the charcoal ground, with the same maroon pill the footer CTA already uses.</p>
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <div class="tn-section">
+        <h2>Set two. Cropped repeat</h2>
+        <p>After the St Paul's Cathedral system. The name set far too large, repeated down the frame with each row offset, so it runs off both edges and gets cut mid-letter. A hard split crosses the whole thing and the two colors swap sides. The letterforms line up exactly across that seam because both sides are the same type block, clipped rather than redrawn.</p>
+      </div>
+
+      <div class="tn-grid">
+
+        <!-- ---------- G ---------- -->
+        <figure class="tn-item">
+          <div class="tn-stage">
+            <div class="tn-frame tn-crop-sans tn-split duo-strip" role="img" aria-label="Quinn Brewer">
+              <div class="tn-lyr tn-lyr-base" aria-hidden="true">
+                <div class="tn-rows">
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                </div>
+              </div>
+              <div class="tn-lyr tn-lyr-inv" aria-hidden="true">
+                <div class="tn-rows">
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                </div>
+              </div>
+            </div>
+            <div class="tn-safe" aria-hidden="true"><span class="tn-safe-43"></span><span class="tn-safe-1x1"></span></div>
+          </div>
+          <figcaption>
+            <div class="tn-name">Option G</div>
+            <h2>Split Invert</h2>
+            <p>The reference layout in Aeonik and the footer pink. One vertical cut at 54 percent, everything past it flipped to charcoal. Closest to the site as it stands today, since the typeface never changes.</p>
+          </figcaption>
+        </figure>
+
+        <!-- ---------- H ---------- -->
+        <figure class="tn-item">
+          <div class="tn-stage">
+            <div class="tn-frame tn-crop-serif tn-serif tn-quad duo-lime" role="img" aria-label="Quinn Brewer">
+              <div class="tn-lyr tn-lyr-base" aria-hidden="true">
+                <div class="tn-rows">
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                </div>
+              </div>
+              <div class="tn-lyr tn-lyr-tr" aria-hidden="true">
+                <div class="tn-rows">
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                </div>
+              </div>
+              <div class="tn-lyr tn-lyr-bl" aria-hidden="true">
+                <div class="tn-rows">
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                </div>
+              </div>
+            </div>
+            <div class="tn-safe" aria-hidden="true"><span class="tn-safe-43"></span><span class="tn-safe-1x1"></span></div>
+          </div>
+          <figcaption>
+            <div class="tn-name">Option H</div>
+            <h2>Quadrant</h2>
+            <p>Both cuts, vertical and horizontal, so the frame inverts four ways like the reference. Set in Mackinac, which is already the serif on your case study pages, so this is an existing face used at a size it has never been used at.</p>
+          </figcaption>
+        </figure>
+
+        <!-- ---------- I ---------- -->
+        <figure class="tn-item">
+          <div class="tn-stage">
+            <div class="tn-frame tn-i tn-serif" role="img" aria-label="Quinn Brewer">
+              <div class="tn-lyr" aria-hidden="true">
+                <div class="tn-rows">
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                </div>
+              </div>
+            </div>
+            <div class="tn-safe" aria-hidden="true"><span class="tn-safe-43"></span><span class="tn-safe-1x1"></span></div>
+          </div>
+          <figcaption>
+            <div class="tn-name">Option I</div>
+            <h2>Marquee</h2>
+            <p>No split, four rows, one duotone. This is the lamppost banner from the third reference, in the light green and the warm brown the site already carries. Quietest of the set and the one that tiles best if you ever need a wider or taller crop.</p>
+          </figcaption>
+        </figure>
+
+        <!-- ---------- J ---------- -->
+        <figure class="tn-item">
+          <div class="tn-stage">
+            <div class="tn-frame tn-crop-serif tn-serif tn-split duo-rose" role="img" aria-label="Quinn Brewer">
+              <div class="tn-lyr tn-lyr-base" aria-hidden="true">
+                <div class="tn-rows">
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                </div>
+              </div>
+              <div class="tn-lyr tn-lyr-inv" aria-hidden="true">
+                <div class="tn-rows">
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                </div>
+              </div>
+            </div>
+            <div class="tn-safe" aria-hidden="true"><span class="tn-safe-43"></span><span class="tn-safe-1x1"></span></div>
+          </div>
+          <figcaption>
+            <div class="tn-name">Option J</div>
+            <h2>Tote</h2>
+            <p>The red on pink from the second reference. Worth flagging: that pair is 2.1 to 1, which the palette notes already mark as decorative only. It works here for the same reason it works on the bag, because there is nothing to read at small size, but it is the weakest of the set on a phone.</p>
+          </figcaption>
+        </figure>
+
+        <!-- ---------- K ---------- -->
+        <figure class="tn-item">
+          <div class="tn-stage">
+            <div class="tn-frame tn-k">
+              <div class="tn-k-mark"><span class="tn-mark" aria-hidden="true"></span></div>
+              <div class="tn-k-crop">
+                <div class="tn-rows">
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                  <span>QUINN BREWER. QUINN BREWER. QUINN BREWER. </span>
+                </div>
+              </div>
+            </div>
+            <div class="tn-safe" aria-hidden="true"><span class="tn-safe-43"></span><span class="tn-safe-1x1"></span></div>
+          </div>
+          <figcaption>
+            <div class="tn-name">Option K</div>
+            <h2>Mark Against the Crop</h2>
+            <p>The split does the same job but one side is held solid for the mark, so there is a fixed point to read against all that texture. The only one in this set that carries the mark, which is what makes it read as yours rather than as anyone's.</p>
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <div class="tn-section">
+        <h2>Set three. The same two cuts across the palette</h2>
+        <p>H, J and K are all the same drawing with the colors swapped, so here they are against twelve pairings the site already carries. These grids hold their own size, three across, because the point is comparing them rather than blowing one up. The ratio under each tile is measured off the rendered pixels, not written down, so it stays honest. Anything under 3 to 1 is flagged, since that is the floor for large text.</p>
+      </div>
+
+      <div class="tn-section tn-section-sub">
+        <h2>Quadrant, after Option H</h2>
+      </div>
+      <div class="tn-grid tn-grid-variants" data-layout="quad"></div>
+
+      <div class="tn-section tn-section-sub">
+        <h2>Split, after Option J</h2>
+      </div>
+      <div class="tn-grid tn-grid-variants" data-layout="split"></div>
+
+      <div class="tn-section tn-section-sub">
+        <h2>Mark against the crop, after Option K</h2>
+      </div>
+      <div class="tn-grid tn-grid-variants" data-layout="mark"></div>
+
+    </div>
+  </main>
+
+  <script>
+    // Size control. Every frame is laid out at 1200x627 and scaled by a single
+    // custom property, so switching size is one variable rather than a set of
+    // breakpoints per option.
+    //
+    // "fit" is the exception, because it has no fixed value: the scale is
+    // measured off the grid's own width so a frame lands exactly one to a row,
+    // as large as the window allows. That measurement has to be redone on
+    // resize, which is why the mode is held in a variable rather than just
+    // written to the property once.
+    var scaleBtns = document.querySelectorAll(".tn-btn[data-scale]");
+    var grid = document.querySelector(".tn-grid");
+    var fitMode = true;
+
+    function applyFit() {
+      if (!fitMode) return;
+      document.body.style.setProperty("--tn-scale", (grid.clientWidth / 1200).toFixed(4));
+    }
+
+    scaleBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        scaleBtns.forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
+        fitMode = btn.dataset.scale === "fit";
+        if (fitMode) applyFit();
+        else document.body.style.setProperty("--tn-scale", btn.dataset.scale);
+      });
+    });
+
+    window.addEventListener("resize", applyFit);
+    applyFit();
+
+    // ----------------------------------------------------------------
+    // Set three. Both cuts across every pairing the palette carries.
+    //
+    // Built from a list rather than written out, because a tile is a
+    // layout class plus a duo class and nothing else. Eighteen of them by
+    // hand would be two thousand lines of markup that all say the same
+    // thing, and adding a pairing would mean editing it twice.
+    // ----------------------------------------------------------------
+    var DUOS = [
+      { cls: "duo-bone",   name: "Sand / Black" },
+      { cls: "duo-lime",   name: "Lime / Forest" },
+      { cls: "duo-navy",   name: "Navy / Mint" },
+      { cls: "duo-brown",  name: "Brown / Yellow" },
+      { cls: "duo-clay",   name: "Brown / Pink" },
+      { cls: "duo-maroon", name: "Maroon / Pink" },
+      { cls: "duo-forest", name: "Forest / Green" },
+      { cls: "duo-ink",    name: "Charcoal / Off-white" },
+      { cls: "duo-yellow", name: "Yellow / Olive" },
+      { cls: "duo-red",    name: "Red / Maroon" },
+      { cls: "duo-blue",   name: "Blue / Navy" },
+      { cls: "duo-rose",   name: "Pink / Red" }
+    ];
+
+    var LINE = "QUINN BREWER. QUINN BREWER. QUINN BREWER. ";
+
+    function rowsHTML(n) {
+      var s = "";
+      for (var i = 0; i < n; i++) s += "<span>" + LINE + "</span>";
+      return '<div class="tn-rows">' + s + "</div>";
+    }
+
+    function wrap(inner, duo) {
+      return '<figure class="tn-item">' +
+        '<div class="tn-stage">' + inner +
+          '<div class="tn-safe" aria-hidden="true"><span class="tn-safe-43"></span><span class="tn-safe-1x1"></span></div>' +
+        "</div>" +
+        '<figcaption class="tn-var-cap"><span class="tn-var-name">' + duo.name + "</span>" +
+        '<span class="tn-var-ratio"></span></figcaption>' +
+        "</figure>";
+    }
+
+    function tileHTML(layout, duo) {
+      // K holds one side solid for the mark, so its cut is the column edge
+      // and it needs no clipped layer at all. Four rows rather than three,
+      // because the type is smaller in the narrower column.
+      if (layout === "mark") {
+        return wrap(
+          '<div class="tn-frame tn-k ' + duo.cls + '" role="img" aria-label="Quinn Brewer">' +
+            '<div class="tn-k-mark"><span class="tn-mark" aria-hidden="true"></span></div>' +
+            '<div class="tn-k-crop">' + rowsHTML(4) + "</div>" +
+          "</div>", duo);
+      }
+
+      // The quadrant needs two clipped layers to invert opposite corners; the
+      // single cut needs one. Everything else about them is identical.
+      var clipped = layout === "quad"
+        ? '<div class="tn-lyr tn-lyr-tr" aria-hidden="true">' + rowsHTML(4) + "</div>" +
+          '<div class="tn-lyr tn-lyr-bl" aria-hidden="true">' + rowsHTML(4) + "</div>"
+        : '<div class="tn-lyr tn-lyr-inv" aria-hidden="true">' + rowsHTML(4) + "</div>";
+
+      return wrap(
+        '<div class="tn-frame tn-crop-serif tn-serif tn-' + layout + " " + duo.cls + '" role="img" aria-label="Quinn Brewer">' +
+          '<div class="tn-lyr tn-lyr-base" aria-hidden="true">' + rowsHTML(4) + "</div>" + clipped +
+        "</div>", duo);
+    }
+
+    // WCAG relative luminance, run against the colours the browser actually
+    // resolved. Reading it back off the rendered layer rather than off the
+    // token list means the number can never disagree with the tile above it.
+    function channel(v) {
+      v = v / 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    }
+    function luminance(color) {
+      var p = color.match(/\d+(\.\d+)?/g).map(Number);
+      return 0.2126 * channel(p[0]) + 0.7152 * channel(p[1]) + 0.0722 * channel(p[2]);
+    }
+    function contrast(a, b) {
+      var la = luminance(a), lb = luminance(b);
+      return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
+    }
+
+    var variantGrids = document.querySelectorAll(".tn-grid-variants");
+
+    variantGrids.forEach(function (vgrid) {
+      vgrid.innerHTML = DUOS.map(function (duo) {
+        return tileHTML(vgrid.dataset.layout, duo);
+      }).join("");
+
+      vgrid.querySelectorAll(".tn-item").forEach(function (item) {
+        // whichever element actually carries type on a fill, which is the
+        // base layer on the clipped layouts and the crop column on K
+        var base = item.querySelector(".tn-lyr-base, .tn-k-crop");
+        var cs = getComputedStyle(base);
+        var r = contrast(cs.backgroundColor, cs.color);
+        var out = item.querySelector(".tn-var-ratio");
+        out.textContent = r.toFixed(1) + ":1";
+        // 3:1 is the floor for large text, which is all these frames hold
+        if (r < 3) out.classList.add("is-low");
+      });
+    });
+
+    // These grids are for comparing pairings, so they stay three across and
+    // ignore the page's size control.
+    function fitVariants() {
+      variantGrids.forEach(function (vgrid) {
+        var gap = parseFloat(getComputedStyle(vgrid).columnGap) || 0;
+        // three tiles plus two gaps that sum to exactly the container width
+        // will still wrap, because both measurements are fractional. The 3px
+        // is the margin that keeps the row at three.
+        var w = (vgrid.clientWidth - gap * 2 - 3) / 3;
+        vgrid.style.setProperty("--tn-scale", (w / 1200).toFixed(4));
+      });
+    }
+    window.addEventListener("resize", fitVariants);
+    fitVariants();
+
+    var safeBtn = document.getElementById("tn-safe-toggle");
+    safeBtn.addEventListener("click", function () {
+      var on = document.body.classList.toggle("show-safe");
+      safeBtn.setAttribute("aria-pressed", String(on));
+    });
+  </script>
+  <script src="js/main.js?v=9"></script>
+</body>
+</html>

@@ -14,6 +14,8 @@ import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js
 import { openItem } from "./library.js";
 
 const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+/* Keep in step with --card in css/library.css. */
+const CARD = 72;
 const VERBS = ["read", "listen to", "watch", "play", "whatever"];
 
 function card(item) {
@@ -174,6 +176,7 @@ export function initHero(items) {
     const h = innerHeight;
     const mobile = w < 768;
     const spread = 150;
+    const scale = mobile ? 0.9 : 1.25;
 
     /* Derive the radius from the viewport rather than picking one, so the
        whole fan always fits on screen. A chord of 2R*sin(spread/2) is the
@@ -181,17 +184,28 @@ export function initHero(items) {
        end cards reachable. The reference hard-coded a radius and let the
        ends run off-screen, which only worked because it had a scroll-driven
        shuffle to rotate hidden cards into view. This has no shuffle, so an
-       off-screen card is simply an item nobody can ever see. */
-    const chord = w * 0.9;
+       off-screen card is simply an item nobody can ever see.
+
+       The chord positions card CENTRES, so the end cards still stick out by
+       their own half-diagonal (they are rotated to sit normal to the arc).
+       Subtracting that extent is what stops them being sliced by the
+       viewport edge, and it matters most on narrow screens where a card is
+       a large fraction of the width. */
+    const extent = CARD * scale * 1.45;
+    const chord = Math.max(w - extent, w * 0.45);
     const arcR = chord / (2 * Math.sin(((spread / 2) * Math.PI) / 180));
 
     return {
       circleR: Math.min(Math.min(w, h) * 0.35, 350),
       arcR,
-      /* apex below the headline so the fan never covers the type */
-      apexY: h * 0.56,
+      /* Distance from the STAGE CENTRE down to the arc apex, not from the
+         top of the viewport. Cards are positioned at top:50%/left:50%, so
+         every offset here is already relative to the middle. Treating this
+         as a from-the-top value (as the reference does) double-counts half
+         a viewport and drops the whole arc below the fold. */
+      apexY: h * 0.08,
       spread,
-      scale: mobile ? 0.9 : 1.25,
+      scale,
     };
   };
 
@@ -208,6 +222,15 @@ export function initHero(items) {
     ({ value: parallax, velocity: parallaxV } = springStep(
       parallax, parallaxTarget, parallaxV, dt, 30, 20
     ));
+
+    /* The headline lives at the centre of the ring, which is exactly where
+       the arc sweeps through. Retire it as the arc forms rather than let
+       the two fight over the same space. */
+    if (!REDUCED) {
+      const fade = 1 - Math.min(Math.max((p - 0.2) / 0.35, 0), 1);
+      line.style.opacity = fade.toFixed(3);
+      line.style.pointerEvents = fade < 0.05 ? "none" : "";
+    }
 
     for (let i = 0; i < total; i++) {
       let target;

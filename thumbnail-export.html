@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Thumbnail Export · Brewer (unlisted)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=26" />
+  <link rel="stylesheet" href="css/theme-carnival.css?v=16" />
+  <link rel="stylesheet" href="css/thumbnail-lab.css?v=1" />
+  <style>
+    /* Export target only. One frame, no page around it, no scaling: the
+       viewport IS the artboard, so a 1200x627 window screenshots the file
+       one to one. Everything the lab page adds for browsing is stripped. */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1200px;
+      height: 627px;
+      overflow: hidden;
+      background: transparent;
+    }
+    .lab-thumbs { --tn-scale: 1; }
+    .tn-frame {
+      position: relative;
+      width: 1200px;
+      height: 627px;
+      transform: none;
+    }
+  </style>
+</head>
+<body class="theme-carnival lab-thumbs">
+
+  <script>
+    // ?layout=split&duo=duo-bone
+    // Same markup the lab builds its comparison tiles from, so an export is
+    // the tile rather than a second drawing of it. If these ever disagree,
+    // the export is wrong by definition.
+    var q = new URLSearchParams(location.search);
+    var layout = q.get("layout") || "split";
+    var duo = q.get("duo") || "duo-lime";
+
+    var LINE = "QUINN BREWER. QUINN BREWER. QUINN BREWER. ";
+
+    function rowsHTML(n) {
+      var s = "";
+      for (var i = 0; i < n; i++) s += "<span>" + LINE + "</span>";
+      return '<div class="tn-rows">' + s + "</div>";
+    }
+
+    var html;
+    if (layout === "mark") {
+      html = '<div class="tn-frame tn-k ' + duo + '" role="img" aria-label="Quinn Brewer">' +
+        '<div class="tn-k-mark"><span class="tn-mark" aria-hidden="true"></span></div>' +
+        '<div class="tn-k-crop">' + rowsHTML(4) + "</div></div>";
+    } else {
+      var clipped = layout === "quad"
+        ? '<div class="tn-lyr tn-lyr-tr" aria-hidden="true">' + rowsHTML(4) + "</div>" +
+          '<div class="tn-lyr tn-lyr-bl" aria-hidden="true">' + rowsHTML(4) + "</div>"
+        : '<div class="tn-lyr tn-lyr-inv" aria-hidden="true">' + rowsHTML(4) + "</div>";
+      html = '<div class="tn-frame tn-crop-serif tn-serif tn-' + layout + " " + duo +
+        '" role="img" aria-label="Quinn Brewer">' +
+        '<div class="tn-lyr tn-lyr-base" aria-hidden="true">' + rowsHTML(4) + "</div>" +
+        clipped + "</div>";
+    }
+    document.body.insertAdjacentHTML("beforeend", html);
+
+    // The capture waits on this rather than on load, because the masked mark
+    // and the two .otf faces resolve after the document is already complete
+    // and a screenshot taken at load fires on fallback type.
+    document.fonts.ready.then(function () {
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { document.documentElement.dataset.ready = "1"; });
+      });
+    });
+  </script>
+</body>
+</html>

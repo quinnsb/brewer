@@ -858,7 +858,10 @@ p + .case-btn { margin-top: 34px; }
   background: linear-gradient(180deg, rgba(10, 13, 10, 0.16), rgba(10, 13, 10, 0.58));
   pointer-events: none;
 }
+/* The TFI key art is a looping silent clip; it carries the still frame as its
+   poster so the tile is never blank while the file loads. */
 .tfi-card-image {
+  display: block;
   object-position: center 48%;
   filter: saturate(0.88) contrast(0.96);
 }

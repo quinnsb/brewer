@@ -1,0 +1,506 @@
+/* ============================================================
+   HEADER LAB  — LinkedIn profile banners, carnival palette
+   ------------------------------------------------------------
+   Drawn at 1584 x 396, the size LinkedIn takes for a personal
+   profile cover. That is a 4:1 letterbox, which is a different
+   problem from the 1.91:1 thumbnail: there is almost no vertical
+   room, so everything is a single band of content, and the
+   bottom left corner is not usable at all because the profile
+   photo sits on top of it.
+
+   Every layout here therefore starts its content at x=460 or
+   holds the left third solid. See .hd-guides for the zones.
+
+   Deliberately self-contained rather than sharing the thumbnail
+   lab's stylesheet. The two labs share ideas but not code: this
+   one is free to change without re-verifying eleven approved
+   thumbnails, which is worth more than the ~80 duplicated lines
+   of stage-and-scale plumbing.
+
+   Loads after css/styles.css + css/theme-carnival.css, and the
+   page carries .theme-carnival, so type is Aeonik and colour
+   comes from the --t-* tokens.
+   ============================================================ */
+
+.lab-headers {
+  --hd-w: 1584px;
+  --hd-h: 396px;
+  --hd-scale: 0.5;
+  /* Left inset clears the profile photo. Right inset holds content inside
+     the band that survives LinkedIn's narrower mobile crop, which is the
+     constraint people forget: the photo eats the left, the crop eats BOTH
+     edges, and what is left is only 870px of the 1584. Every line below is
+     sized to fit that, not the full frame. */
+  --hd-safe-l: 460px;
+  --hd-safe-r: 254px;
+}
+
+/* ---------- page furniture ---------- */
+
+.lab-headers .lab-intro { margin: clamp(24px, 4vw, 56px) 0 clamp(24px, 3vw, 40px); }
+.lab-headers .lab-intro h1 { font-size: clamp(30px, 5vw, 52px); line-height: 1.02; margin-bottom: 12px; }
+.lab-headers .lab-intro p { max-width: 64ch; opacity: 0.75; }
+.lab-headers .lab-intro p + p { margin-top: 12px; }
+
+.hd-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 26px; }
+.hd-controls .hd-group { display: flex; gap: 6px; padding: 6px; border-radius: 999px; background: var(--t-surface); }
+.hd-legend {
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-right: 4px;
+}
+.hd-btn {
+  border: 0;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  padding: 11px 18px;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--t-ink);
+  transition: background var(--fill-dur) var(--ease-out), color var(--fill-dur) var(--ease-out);
+}
+.hd-btn:hover { background: color-mix(in srgb, var(--t-ink) 14%, transparent); }
+.hd-btn[aria-pressed="true"] { background: var(--t-panel); color: var(--t-panel-on); }
+
+.hd-section {
+  border-top: 1px solid color-mix(in srgb, var(--t-ink) 18%, transparent);
+  padding-top: 22px;
+  margin-bottom: clamp(24px, 3vw, 36px);
+}
+.hd-section h2 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(24px, 2.6vw, 34px);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.hd-section p { max-width: 64ch; font-size: 16px; line-height: 1.55; opacity: 0.72; }
+
+/* ---------- stage ---------- */
+
+.hd-list { display: flex; flex-direction: column; gap: clamp(30px, 3.4vw, 56px); margin-bottom: clamp(48px, 6vw, 96px); }
+.hd-item { width: calc(var(--hd-w) * var(--hd-scale)); max-width: 100%; }
+
+.hd-stage {
+  position: relative;
+  width: calc(var(--hd-w) * var(--hd-scale));
+  height: calc(var(--hd-h) * var(--hd-scale));
+  outline: 1px solid color-mix(in srgb, var(--t-ink) 18%, transparent);
+}
+.hd-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--hd-w);
+  height: var(--hd-h);
+  transform: scale(var(--hd-scale));
+  transform-origin: 0 0;
+  overflow: hidden;
+  font-family: var(--sans);
+}
+
+/* ---------- guides ----------
+
+   APPROXIMATE, and worth saying so plainly: LinkedIn does not publish
+   coordinates for where the profile photo lands, and it has moved more than
+   once. These are drawn from measuring a live desktop profile, so treat them
+   as a zone to design against rather than a spec. The safe habit is the one
+   every layout below follows: nothing that has to be read goes in the left
+   third or the bottom third.
+
+   The guides sit on the stage rather than inside the frame so their strokes
+   stay 1px at any scale. */
+
+.hd-guides { position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 0.2s ease; }
+.lab-headers.show-guides .hd-guides { opacity: 1; }
+
+/* where the profile photo covers the banner */
+.hd-guides .hd-avatar {
+  position: absolute;
+  left: 5.6%;
+  top: 46%;
+  width: 16.4%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px dashed color-mix(in srgb, #f5414b 90%, transparent);
+  background: color-mix(in srgb, #f5414b 12%, transparent);
+}
+/* the inset every layout keeps its content behind */
+.hd-guides .hd-inset {
+  position: absolute;
+  left: 29.04%;
+  top: 0;
+  bottom: 0;
+  border-left: 1px dashed color-mix(in srgb, #f5e23c 90%, transparent);
+}
+/* roughly what survives LinkedIn's narrower mobile crop */
+.hd-guides .hd-mobile {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 16%;
+  right: 16%;
+  border-left: 1px dashed color-mix(in srgb, #1ba1e9 90%, transparent);
+  border-right: 1px dashed color-mix(in srgb, #1ba1e9 90%, transparent);
+}
+
+.hd-item figcaption { margin-top: 16px; }
+.hd-name {
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--t-a2);
+  margin-bottom: 6px;
+}
+.hd-item figcaption h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.hd-formula {
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+.hd-item figcaption p { font-size: 15px; line-height: 1.5; max-width: 62ch; opacity: 0.72; }
+
+/* ============================================================
+   SHARED PIECES
+   ============================================================ */
+
+.hd-mark {
+  display: block;
+  background-color: currentColor;
+  -webkit-mask: url("../images/mainlogoicon.png") center / contain no-repeat;
+  mask: url("../images/mainlogoicon.png") center / contain no-repeat;
+  aspect-ratio: 332 / 440;
+}
+.hd-script {
+  display: block;
+  background-color: currentColor;
+  -webkit-mask: url("../images/footerlogo2.svg") center / contain no-repeat;
+  mask: url("../images/footerlogo2.svg") center / contain no-repeat;
+  aspect-ratio: 1173.31 / 235.99;
+}
+
+.hd-frame .hd-say {
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.022em;
+}
+.hd-frame .hd-mono {
+  font-family: "Space Mono", monospace;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* the four social fills as a bar, same device as thumbnail Option B */
+.hd-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.hd-bar i:nth-child(1) { background: var(--t-graphic); }
+.hd-bar i:nth-child(2) { background: var(--t-a1); }
+.hd-bar i:nth-child(3) { background: var(--t-a2); }
+.hd-bar i:nth-child(4) { background: var(--t-a3); }
+
+/* ============================================================
+   A — SCRIPT BAR   (closest to thumbnail Option B)
+   ============================================================ */
+
+.hd-a {
+  position: relative;
+  background: var(--t-ground);
+  color: var(--t-ink);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 var(--hd-safe-r) 20px var(--hd-safe-l);
+}
+.hd-a .hd-script { width: 470px; }
+.hd-a .hd-say { font-size: 40px; font-weight: 500; letter-spacing: -0.01em; text-align: right; }
+
+/* ============================================================
+   B — BIG STATEMENT
+   ============================================================ */
+
+.hd-b {
+  background: var(--t-strip);
+  color: var(--t-strip-on);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--hd-safe-r) 0 var(--hd-safe-l);
+}
+.hd-b .hd-say { font-size: 84px; }  /* longest line 787px */
+
+/* ============================================================
+   C — PRINCIPLE
+   ============================================================ */
+
+.hd-c {
+  background: var(--t-panel);
+  color: var(--t-panel-on);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  padding: 0 var(--hd-safe-r) 0 var(--hd-safe-l);
+}
+.hd-c .hd-mono { font-size: 26px; opacity: 0.7; }
+.hd-c .hd-say { font-size: 70px; }  /* longest line 806px */
+
+/* ============================================================
+   D — CAPABILITY BANDS
+   ============================================================ */
+
+/* Bands 1 to 3 are fixed so band 4 can absorb the remainder and bleed off the
+   right edge. Equal fifths put band 4's label at x=1315, outside the crop.
+   This way every label sits inside the safe band and only colour runs past
+   it, which is what should be croppable. */
+.hd-d { display: grid; grid-template-columns: 380px repeat(3, 237px) 1fr; }
+.hd-d .hd-d-left {
+  background: var(--t-ground);
+  color: var(--t-ink);
+  display: flex;
+  align-items: flex-start;
+  /* clear of the mobile crop on the left, above the photo vertically */
+  padding: 42px 0 0 270px;
+}
+.hd-d .hd-d-left .hd-mark { height: 92px; }
+.hd-d > div + div { display: flex; align-items: flex-end; padding: 0 0 34px 32px; }
+.hd-d .hd-mono { font-size: 27px; }
+.hd-d .hd-d-1 { background: var(--t-panel); color: var(--t-panel-on); }
+.hd-d .hd-d-2 { background: var(--t-a1); color: var(--t-a1-on); }
+.hd-d .hd-d-3 { background: var(--t-a2); color: var(--t-a2-on); }
+.hd-d .hd-d-4 { background: var(--t-a3); color: var(--t-a3-on); }
+
+/* ============================================================
+   E — TICKER
+   The strip runs the full width along the TOP, which is the one
+   band the profile photo never reaches.
+   ============================================================ */
+
+.hd-e {
+  position: relative;
+  background: var(--t-ground);
+  color: var(--t-ink);
+  display: flex;
+  align-items: flex-end;
+  padding: 0 var(--hd-safe-r) 62px var(--hd-safe-l);
+}
+.hd-e .hd-e-strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 74px;
+  background: var(--t-a2);
+  color: var(--t-a2-on);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hd-e .hd-e-strip span {
+  white-space: nowrap;
+  font-family: "Space Mono", monospace;
+  font-size: 30px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transform: translateX(-120px);
+}
+.hd-e .hd-say { font-size: 56px; font-weight: 500; }  /* longest line 754px */
+
+/* ============================================================
+   F — CROPPED REPEAT
+   The thumbnail set's language at 4:1, so the banner and the
+   featured link read as one system.
+   ============================================================ */
+
+.hd-f { position: relative; overflow: hidden; }
+.hd-f .hd-lyr { position: absolute; inset: 0; overflow: hidden; }
+.hd-f .hd-lyr-base { background: var(--t-panel); color: var(--t-panel-on); }
+.hd-f .hd-lyr-inv {
+  background: var(--t-panel-on);
+  color: var(--t-panel);
+  clip-path: inset(0 0 0 50%);
+}
+.hd-f .hd-rows { position: absolute; top: -8px; left: 0; width: 100%; }
+.hd-f .hd-rows > span {
+  display: block;
+  white-space: nowrap;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 140px;
+  line-height: 0.95;
+  letter-spacing: -0.005em;
+}
+/* unit is 1177px against a 1584px frame, so better than one whole repeat
+   shows per row and both words read whichever phase a row lands on */
+.hd-f .hd-rows > span:nth-child(1) { transform: translateX(-300px); }
+.hd-f .hd-rows > span:nth-child(2) { transform: translateX(-692px); }
+.hd-f .hd-rows > span:nth-child(3) { transform: translateX(-1084px); }
+
+/* ============================================================
+   G — POWERED BY
+   ============================================================ */
+
+.hd-g {
+  background: var(--t-brown);
+  color: var(--t-strip);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 var(--hd-safe-r) 0 var(--hd-safe-l);
+}
+.hd-g .hd-say { font-size: 80px; }  /* longest line 726px */
+.hd-g .hd-g-sub {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--t-a2);
+}
+
+/* ============================================================
+   H — MARK AND RULE
+   ============================================================ */
+
+.hd-h {
+  background: var(--t-a4);
+  color: var(--t-a4-on);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 0 var(--hd-safe-r) 0 var(--hd-safe-l);
+}
+.hd-h .hd-say { font-size: 56px; font-weight: 500; }  /* 3 lines, longest 588px */
+.hd-h .hd-mark { height: 196px; flex: 0 0 auto; }
+
+/* ============================================================
+   I — THREE PRINCIPLES
+   ============================================================ */
+
+.hd-i {
+  background: var(--t-ground);
+  color: var(--t-ink);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 0 var(--hd-safe-r) 0 var(--hd-safe-l);
+}
+.hd-i .hd-i-line { display: flex; align-items: center; gap: 22px; }
+.hd-i .hd-i-line i { width: 26px; height: 26px; border-radius: 9px; flex: 0 0 auto; display: block; }
+.hd-i .hd-i-line:nth-child(1) i { background: var(--t-graphic); }
+.hd-i .hd-i-line:nth-child(2) i { background: var(--t-a1); }
+.hd-i .hd-i-line:nth-child(3) i { background: var(--t-a3); }
+.hd-i .hd-say { font-size: 48px; font-weight: 500; letter-spacing: -0.012em; }
+
+/* ============================================================
+   COPY BANK
+   ============================================================ */
+
+.hd-bank { display: grid; gap: clamp(20px, 2.4vw, 34px); margin-bottom: clamp(48px, 6vw, 96px); }
+@media (min-width: 900px) { .hd-bank { grid-template-columns: repeat(3, 1fr); } }
+.hd-bank-col h3 {
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--t-a2);
+  margin-bottom: 14px;
+}
+.hd-bank-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.hd-bank-col li {
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.35;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: var(--t-surface);
+}
+.hd-bank-col li em { font-style: normal; opacity: 0.5; }
+
+@media (max-width: 900px) {
+  .lab-headers { --hd-scale: 0.34; }
+}
+
+/* ============================================================
+   EXPORT MODE  (?only=a)
+   The page reduced to a single banner at true size, so a
+   1584x396 headless window captures it one to one. Same markup
+   as the lab, so an export cannot drift from the preview.
+   ============================================================ */
+
+body.hd-export {
+  margin: 0;
+  padding: 0;
+  width: 1584px;
+  height: 396px;
+  overflow: hidden;
+  background: transparent;
+}
+body.hd-export .hd-frame {
+  position: relative;
+  transform: none;
+  width: 1584px;
+  height: 396px;
+}
+
+/* ---------- what not to use ----------
+   Sits under the bank rather than inside it: these are lines to move away
+   from, so they must not read as a fourth column of options. */
+
+.hd-bank-note {
+  border-top: 1px solid color-mix(in srgb, var(--t-ink) 18%, transparent);
+  padding-top: 22px;
+  margin-bottom: clamp(48px, 6vw, 96px);
+}
+.hd-bank-note h3 {
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--t-a1);
+  margin-bottom: 12px;
+}
+.hd-bank-note > p { max-width: 64ch; font-size: 16px; line-height: 1.55; opacity: 0.72; margin-bottom: 18px; }
+.hd-bank-note ul { list-style: none; display: flex; flex-direction: column; gap: 10px; max-width: 78ch; }
+.hd-bank-note li {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.45;
+  padding: 13px 18px;
+  border-radius: 12px;
+  background: var(--t-surface);
+  opacity: 0.85;
+}
+/* the retired line itself, struck through so the verdict is visible before
+   the reason is read */
+.hd-bank-note li span {
+  display: block;
+  font-weight: 500;
+  text-decoration: line-through;
+  text-decoration-color: color-mix(in srgb, var(--t-a1) 80%, transparent);
+  text-decoration-thickness: 2px;
+  margin-bottom: 3px;
+}

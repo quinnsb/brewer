@@ -1,0 +1,613 @@
+/* ============================================================
+   THUMBNAIL LAB  — link-preview thumbnails, carnival palette
+   ------------------------------------------------------------
+   Six directions for the image that sits on the LinkedIn
+   featured link. Everything is drawn at the real export size,
+   1200 x 627 (the 1.91:1 ratio LinkedIn crops a link preview
+   to), then scaled down for the page. So every px value in a
+   .tn-frame is an export pixel: what reads here reads there.
+
+   Loads after css/styles.css + css/theme-carnival.css, and the
+   page carries .theme-carnival, so the type is Aeonik and the
+   colours come from the --t-* tokens rather than being restated.
+   ============================================================ */
+
+.lab-thumbs {
+  --tn-w: 1200px;
+  --tn-h: 627px;
+  /* set by the size control; 0.5 puts a frame at 600px wide */
+  --tn-scale: 0.5;
+}
+
+/* ---------- page furniture ---------- */
+
+.lab-thumbs .lab-intro { margin: clamp(24px, 4vw, 56px) 0 clamp(24px, 3vw, 40px); }
+.lab-thumbs .lab-intro h1 { font-size: clamp(30px, 5vw, 52px); line-height: 1.02; margin-bottom: 12px; }
+.lab-thumbs .lab-intro p { max-width: 62ch; opacity: 0.75; }
+
+.tn-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 26px;
+}
+.tn-controls .tn-group {
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 999px;
+  background: var(--t-surface);
+}
+.tn-controls .tn-legend {
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-right: 4px;
+}
+.tn-btn {
+  border: 0;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  padding: 11px 18px;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--t-ink);
+  transition: background var(--fill-dur) var(--ease-out), color var(--fill-dur) var(--ease-out);
+}
+.tn-btn:hover { background: color-mix(in srgb, var(--t-ink) 14%, transparent); }
+.tn-btn[aria-pressed="true"] { background: var(--t-panel); color: var(--t-panel-on); }
+
+/* ---------- the grid of options ---------- */
+
+.tn-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(28px, 3vw, 52px);
+  margin-bottom: clamp(48px, 6vw, 96px);
+}
+/* An item is exactly its frame's post-scale width, so how many fit per row is
+   decided by the scale alone. At the "Large" setting the scale is measured to
+   the grid's own width, which makes the row hold exactly one. */
+.tn-item { width: calc(var(--tn-w) * var(--tn-scale)); }
+
+.tn-section {
+  border-top: 1px solid color-mix(in srgb, var(--t-ink) 18%, transparent);
+  padding-top: 22px;
+  margin-bottom: clamp(26px, 3vw, 40px);
+}
+.tn-section h2 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(24px, 2.6vw, 34px);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.tn-section p { max-width: 62ch; font-size: 16px; line-height: 1.55; opacity: 0.72; }
+/* a heading inside a set, so it takes no rule of its own */
+.tn-section-sub { border-top: 0; padding-top: 0; margin-bottom: 18px; }
+.tn-section-sub h2 { font-size: clamp(18px, 1.6vw, 21px); margin-bottom: 0; opacity: 0.85; }
+
+/* The stage is the frame's post-scale footprint. The frame itself is
+   absolutely positioned inside it at full 1200x627 and scaled from its top
+   left corner, so the stage has to carry the laid-out size or the flex row
+   would reserve space for the unscaled box. */
+.tn-stage {
+  position: relative;
+  width: calc(var(--tn-w) * var(--tn-scale));
+  height: calc(var(--tn-h) * var(--tn-scale));
+  outline: 1px solid color-mix(in srgb, var(--t-ink) 18%, transparent);
+  outline-offset: 0;
+}
+.tn-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--tn-w);
+  height: var(--tn-h);
+  transform: scale(var(--tn-scale));
+  transform-origin: 0 0;
+  overflow: hidden;
+  /* square corners on purpose: the export is a flat rectangle, and a rounded
+     preview would hide type running too close to the crop */
+  font-family: var(--sans);
+}
+
+/* Crop guides. LinkedIn shows this image at 1.91:1 in the feed but squares it
+   in some surfaces, so both the centre square and a centre 4:3 are drawn.
+   They live on the stage, not the frame, so the lines stay 1px at any scale. */
+.tn-safe { position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 0.2s ease; }
+.lab-thumbs.show-safe .tn-safe { opacity: 1; }
+.tn-safe span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px dashed color-mix(in srgb, #f5414b 90%, transparent);
+}
+.tn-safe .tn-safe-43 { width: calc(var(--tn-h) * var(--tn-scale) * 4 / 3); border-color: color-mix(in srgb, #1ba1e9 90%, transparent); }
+.tn-safe .tn-safe-1x1 { width: calc(var(--tn-h) * var(--tn-scale)); }
+
+.tn-item figcaption { margin-top: 16px; }
+.tn-name {
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--t-a2);
+  margin-bottom: 6px;
+}
+.tn-item figcaption h2 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.tn-item figcaption p {
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 46ch;
+  opacity: 0.72;
+}
+
+/* ============================================================
+   SHARED PIECES  — the two brand marks, recoloured per tile.
+
+   Both are single-colour art, so they are painted as CSS masks
+   over currentColor rather than dropped in as <img>. That way a
+   tile sets `color` once and the mark lands in that tile's ink.
+   ============================================================ */
+
+.tn-mark {
+  display: block;
+  background-color: currentColor;
+  -webkit-mask: url("../images/mainlogoicon.png") center / contain no-repeat;
+  mask: url("../images/mainlogoicon.png") center / contain no-repeat;
+  aspect-ratio: 332 / 440;
+}
+.tn-script {
+  display: block;
+  background-color: currentColor;
+  -webkit-mask: url("../images/footerlogo2.svg") center / contain no-repeat;
+  mask: url("../images/footerlogo2.svg") center / contain no-repeat;
+  aspect-ratio: 1173.31 / 235.99;
+}
+
+/* Display type inside a frame. Aeonik at 600 with the hero's tracking. */
+.tn-frame .tn-type {
+  font-weight: 600;
+  line-height: 0.86;
+  letter-spacing: -0.03em;
+}
+.tn-frame .tn-mono {
+  font-family: "Space Mono", monospace;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   A — FOOTER STRIP
+   The pink bottom strip of the site, which is the last colour a
+   visitor is left on. Charcoal on it is 10.8:1.
+   ============================================================ */
+
+.tn-a {
+  background: var(--t-strip);
+  color: var(--t-strip-on);
+  padding: 66px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tn-a .tn-a-top { display: flex; align-items: center; justify-content: space-between; }
+.tn-a .tn-mark { height: 92px; }
+.tn-a .tn-mono { font-size: 27px; opacity: 0.72; }
+.tn-a .tn-type { font-size: 176px; }
+
+/* ============================================================
+   B — SCRIPT ON CHARCOAL
+   The footer lockup almost verbatim: the script wordmark on the
+   page ground, with the four social fills reduced to dots.
+   ============================================================ */
+
+.tn-b {
+  position: relative;
+  background: var(--t-ground);
+  color: var(--t-ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  /* extra bottom padding so the lockup optically centres in the space ABOVE
+     the colour bar rather than in the frame as a whole */
+  padding: 60px 60px 96px;
+}
+.tn-b .tn-b-name { font-size: 64px; font-weight: 500; letter-spacing: -0.012em; }
+.tn-b .tn-script { width: 830px; }
+/* the four social fills as one bar along the bottom edge, which is the shape
+   the footer already leaves you on */
+.tn-b .tn-b-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.tn-b .tn-b-bar i:nth-child(1) { background: var(--t-graphic); }
+.tn-b .tn-b-bar i:nth-child(2) { background: var(--t-a1); }
+.tn-b .tn-b-bar i:nth-child(3) { background: var(--t-a2); }
+.tn-b .tn-b-bar i:nth-child(4) { background: var(--t-a3); }
+
+/* ============================================================
+   C — COLOUR BLOCK
+   The pairing sheet the palette came from, used as the layout.
+   Every block is one token pair, so nothing sits on a colour it
+   was not measured against.
+   ============================================================ */
+
+.tn-c {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  grid-template-rows: 330px 1fr;
+  background: var(--t-ground);
+}
+.tn-c .tn-c-mark {
+  grid-row: 1 / 3;
+  background: var(--t-panel);
+  color: var(--t-panel-on);
+  display: grid;
+  place-items: center;
+}
+.tn-c .tn-c-mark .tn-mark { height: 300px; }
+.tn-c .tn-c-name {
+  background: var(--t-ground);
+  color: var(--t-ink);
+  display: flex;
+  align-items: center;
+  padding: 0 56px;
+}
+.tn-c .tn-c-name .tn-type { font-size: 124px; }
+.tn-c .tn-c-strip { display: grid; grid-template-columns: repeat(3, 1fr); }
+.tn-c .tn-c-strip div { display: flex; align-items: flex-end; padding: 26px 28px; }
+.tn-c .tn-c-strip .tn-mono { font-size: 26px; }
+.tn-c .tn-c-strip div:nth-child(1) { background: var(--t-a1); color: var(--t-a1-on); }
+.tn-c .tn-c-strip div:nth-child(2) { background: var(--t-a2); color: var(--t-a2-on); }
+.tn-c .tn-c-strip div:nth-child(3) { background: var(--t-a3); color: var(--t-a3-on); }
+
+/* ============================================================
+   D — THE MARK
+   Biggest possible mark, name beside it. The one that survives
+   the hardest crop, because the mark is the left half.
+   ============================================================ */
+
+.tn-d {
+  background: var(--t-panel);
+  color: var(--t-panel-on);
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  padding: 80px 84px;
+}
+.tn-d .tn-mark { height: 396px; flex: 0 0 auto; }
+.tn-d .tn-type { font-size: 146px; }
+.tn-d .tn-d-sub {
+  margin-top: 26px;
+  padding-top: 24px;
+  border-top: 5px solid var(--t-cta);
+  color: var(--t-cta);
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* ============================================================
+   E — STACKED BANDS
+   Three fills, one word each, no image to read. This is the one
+   that still says something at 40px tall in a search result.
+   ============================================================ */
+
+.tn-e { display: grid; grid-template-rows: repeat(3, 1fr); }
+.tn-e > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+}
+.tn-e .tn-type { font-size: 134px; }
+.tn-e .tn-e-1 { background: var(--t-a2); color: var(--t-a2-on); }
+.tn-e .tn-e-2 { background: var(--t-a1); color: var(--t-a1-on); }
+.tn-e .tn-e-3 { background: var(--t-a3); color: var(--t-a3-on); }
+.tn-e .tn-mark { height: 148px; }
+
+/* ============================================================
+   F — CARD
+   The site's own component language: a rounded panel inset on
+   the charcoal ground, with the maroon-on-lime pill the footer
+   CTA already uses.
+   ============================================================ */
+
+.tn-f { background: var(--t-ground); padding: 54px; }
+.tn-f .tn-f-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 34px;
+  background: var(--t-panel);
+  color: var(--t-panel-on);
+  padding: 54px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tn-f .tn-f-top { display: flex; align-items: flex-start; justify-content: space-between; }
+.tn-f .tn-mark { height: 104px; }
+.tn-f .tn-f-pill {
+  background: var(--t-cta);
+  color: var(--t-cta-on);
+  border-radius: 999px;
+  padding: 18px 34px;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.tn-f .tn-type { font-size: 132px; }
+/* "Quinn Brewer" wraps to two lines at this size, so the URL aligns to the
+   block's bottom edge and is nudged up onto the last line's baseline. */
+.tn-f .tn-f-foot { display: flex; align-items: flex-end; justify-content: space-between; }
+.tn-f .tn-f-foot .tn-mono { padding-bottom: 16px; }
+.tn-f .tn-mono { font-size: 26px; opacity: 0.78; }
+
+/* ============================================================
+   SET TWO  — cropped repeat type
+
+   After the St Paul's Cathedral identity: the name set far too
+   large, repeated down the frame, each row offset so the words
+   run off both edges and get cut mid-letter. A hard split then
+   crosses the whole thing and the two colours swap sides.
+
+   The swap is done by stacking two identical type layers and
+   clipping the top one, rather than by colouring letters
+   individually. Both layers lay out from the same markup at the
+   same size, so the letterforms line up exactly across the split
+   and the seam reads as one cut rather than two drawings.
+   ============================================================ */
+
+.tn-lyr { position: absolute; inset: 0; overflow: hidden; }
+
+.tn-rows {
+  position: absolute;
+  top: var(--rows-top, -16px);
+  left: 0;
+  width: 100%;
+}
+.tn-rows > span {
+  display: block;
+  white-space: nowrap;
+  font-size: var(--rows-size, 210px);
+  line-height: var(--rows-lh, 1);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+/* Each row starts at a different point in the repeat, which is what makes the
+   block read as one continuous run of the name rather than three stacked
+   copies of it. */
+.tn-rows > span:nth-child(1) { transform: translateX(var(--o1, 0)); }
+.tn-rows > span:nth-child(2) { transform: translateX(var(--o2, 0)); }
+.tn-rows > span:nth-child(3) { transform: translateX(var(--o3, 0)); }
+.tn-rows > span:nth-child(4) { transform: translateX(var(--o4, 0)); }
+
+/* Mackinac is already a production face here (body prose, pull quotes), so
+   the serif cut of this idea is not a new typeface, just an existing one used
+   at a size it has never been used at. */
+.tn-serif .tn-rows > span {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+/* ---------- the two cut geometries ----------
+
+   Both read their split position from --split-x / --split-y, and both derive
+   the far edge with calc(100% - …) rather than taking a second hardcoded
+   number, so moving a cut is one value and the quadrants cannot drift apart.
+   inset() takes top right bottom left. */
+
+.tn-split .tn-lyr-inv { clip-path: inset(0 0 0 var(--split-x, 57%)); }
+/* upper right */
+.tn-quad .tn-lyr-tr {
+  clip-path: inset(0 0 calc(100% - var(--split-y, 47%)) var(--split-x, 52%));
+}
+/* lower left */
+.tn-quad .tn-lyr-bl {
+  clip-path: inset(var(--split-y, 47%) calc(100% - var(--split-x, 52%)) 0 0);
+}
+
+/* ---------- the duotone ----------
+
+   A pair is two values and nothing else. The base layer takes them one way
+   round and every clipped layer takes them the other, which is the whole
+   mechanism: no layer knows which colour it is, only which side of the cut
+   it is on. Adding a pairing is one .duo-* rule. */
+
+.tn-lyr-base { background: var(--duo-a); color: var(--duo-b); }
+.tn-lyr-inv,
+.tn-lyr-tr,
+.tn-lyr-bl { background: var(--duo-b); color: var(--duo-a); }
+
+.duo-bone   { --duo-a: var(--t-a4);        --duo-b: var(--t-surface); }
+.duo-lime   { --duo-a: var(--t-panel);     --duo-b: var(--t-panel-on); }
+.duo-navy   { --duo-a: var(--t-a3-on);     --duo-b: var(--t-graphic); }
+.duo-brown  { --duo-a: var(--t-brown);     --duo-b: var(--t-a2); }
+.duo-maroon { --duo-a: var(--t-cta);       --duo-b: var(--t-strip); }
+.duo-forest { --duo-a: var(--t-graphic-on); --duo-b: var(--t-graphic); }
+.duo-red    { --duo-a: var(--t-a1);        --duo-b: var(--t-a1-on); }
+.duo-blue   { --duo-a: var(--t-a3);        --duo-b: var(--t-a3-on); }
+.duo-rose   { --duo-a: var(--t-strip);     --duo-b: var(--t-a1); }
+.duo-strip  { --duo-a: var(--t-strip);     --duo-b: var(--t-strip-on); }
+/* pink on brown, which the palette already pairs for the about-teaser card */
+.duo-clay   { --duo-a: var(--t-brown);     --duo-b: var(--t-strip); }
+/* the site's own two colours, which every other pairing is a departure from */
+.duo-ink    { --duo-a: var(--t-ground);    --duo-b: var(--t-ink); }
+.duo-yellow { --duo-a: var(--t-a2);        --duo-b: var(--t-a2-on); }
+
+/* ---------- row metrics for each cut ---------- */
+
+/* Aeonik sets smaller on the cap than Mackinac at the same size, so the sans
+   cut needs its own numbers rather than sharing the serif's. */
+.tn-crop-sans {
+  --split-x: 54%;
+  --rows-size: 214px;
+  --rows-top: -12px;
+  --o1: -130px;
+  --o2: -760px;
+  --o3: -410px;
+}
+/* Four rows rather than three, so both halves of the name can read whole.
+
+   At the old 232px the repeating unit set 1951px against a 1200px frame,
+   about 1.6 frames per repeat. Three rows at that ratio can only alternate:
+   a row wide enough to hold QUINN whole cannot also hold BREWER, and the
+   next row lands back on the same word. Dropping to 172px puts the unit at
+   1446px and buys a fourth row, which is what makes room for both.
+
+   Measured at 172px: QUINN sets 587.5px and BREWER 741.7px, so each fits a
+   1200px frame with room to spare. Row 2 starts at 306px, centring QUINN on
+   a cut at 600px. The rows step 361.6px, a quarter of the unit, so four rows
+   walk through exactly one cycle of the repeat and no two land alike:
+
+     row 1   EWER. QUIN
+     row 2   QUINN            <- whole, centred on the cut
+     row 3   UINN BREW
+     row 4   BREWER           <- whole, and near enough centred to take the cut too
+
+   Smaller type is also the cheaper fix for this set's real weakness, which
+   was always legibility at thumbnail size.
+*/
+.tn-crop-serif {
+  --rows-size: 172px;
+  --rows-lh: 0.95;
+  --rows-top: -13px;
+  --o1: -779px;
+  --o2: -1140px;
+  --o3: -1502px;
+  --o4: -1863px;
+}
+/* Both cuts are aimed rather than left to fall where they may. The rows
+   above put QUINN on row 2 and BREWER on row 4, so:
+
+   The vertical cut sits at 50%, which is where both of those words are
+   centred. Each reads whole and takes both colours, instead of a stem
+   meeting the cut by accident.
+
+   The horizontal cut is pulled to 63% so it crosses row 3, which is texture.
+   At the old 47% it ran through row 2 and quartered QUINN, which is a fine
+   effect on a word nobody needs to read and the wrong one on this word. */
+.tn-crop-serif.tn-split { --split-x: 50%; }
+.tn-crop-serif.tn-quad { --split-x: 50%; --split-y: 63%; }
+
+/* ---------- I. marquee, no split ---------- */
+
+.tn-i {
+  --rows-size: 168px;
+  --rows-lh: 0.98;
+  --rows-top: -10px;
+  --o1: -70px;
+  --o2: -600px;
+  --o3: -280px;
+  --o4: -840px;
+  background: var(--t-graphic);
+  color: var(--t-brown);
+}
+
+/* ---------- K. mark against the crop ---------- */
+
+/* The cut here is the column edge rather than a clip, so the mark panel and
+   the type panel are the two sides of it and take the pair opposite ways.
+
+   Aimed the same way as the split. The crop column is 764px wide and "QUINN"
+   sets 451.9px in it, leaving 312px spare, so row 2 starts at 156px and the
+   name lands centred in the column with a clear margin either side. The other
+   rows step 288px, a quarter of the 1151.3px unit, which spreads four rows
+   evenly through one cycle of the repeat:
+
+     row 1   EWER. QUIN
+     row 2   ER. QUINN B      <- the whole name, centred in the column
+     row 3   UINN BREW
+     row 4   N BREWER. Q      <- and the whole surname, for balance
+*/
+.tn-k {
+  display: grid;
+  grid-template-columns: 436px 1fr;
+  --rows-size: 152px;
+  --rows-lh: 1.04;
+  --rows-top: -7px;
+  --o1: -707px;
+  --o2: -995px;
+  --o3: -1283px;
+  --o4: -1571px;
+}
+/* The fallbacks are what the original Option K is: lime panel, charcoal crop.
+   Add a duo class and both halves switch to that pairing instead, which is
+   how the variant grid drives this layout without a second set of rules. */
+.tn-k .tn-k-mark {
+  background: var(--duo-a, var(--t-panel));
+  color: var(--duo-b, var(--t-panel-on));
+  display: grid;
+  place-items: center;
+}
+.tn-k .tn-k-mark .tn-mark { height: 300px; }
+.tn-k .tn-k-crop {
+  position: relative;
+  overflow: hidden;
+  background: var(--duo-b, var(--t-ground));
+  color: var(--duo-a, var(--t-ink));
+}
+
+/* ============================================================
+   SET THREE  — the same two cuts across the palette
+
+   A comparison grid, so it holds its own scale rather than
+   following the page's size control: three across at whatever
+   width the window gives, which is how the pairings are meant to
+   be read against each other.
+
+   Every tile is generated from one duo class plus one layout
+   class. The ratio under each is measured off the rendered
+   pixels at runtime rather than written down here, so it cannot
+   fall out of step with the colours above it.
+   ============================================================ */
+
+.tn-grid-variants { gap: clamp(16px, 1.4vw, 24px); }
+.tn-grid-variants .tn-stage { outline: none; }
+.tn-grid-variants figcaption { margin-top: 10px; }
+
+.tn-var-cap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.tn-var-name { opacity: 0.8; }
+.tn-var-ratio { opacity: 0.5; flex: 0 0 auto; }
+/* anything under 3:1 will not hold large text, so it is called out rather
+   than left for the eye to catch */
+.tn-var-ratio.is-low { color: var(--t-a1); opacity: 1; }
+
+/* ---------- small screens: one option per row ---------- */
+
+@media (max-width: 900px) {
+  .lab-thumbs { --tn-scale: 0.34; }
+}

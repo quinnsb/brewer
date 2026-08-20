@@ -1,0 +1,54 @@
+/* hero-lab.css
+   Scratch stylesheet for hero-lab.html, an unlisted clone of the homepage
+   used to try new hero sections against the real page below them.
+
+   Loaded after styles.css and theme-carnival.css, so anything here wins.
+
+   Every rule in this file must be scoped under .hero-lab. That class only
+   exists on the lab page, so nothing written here can reach the live site.
+   Ported-back rules get their scope stripped when they move to styles.css. */
+
+/* ============================================================
+   Image-trail hero
+   Name centred in the hero, cursor drops a trail of images behind
+   it. .hero-trail is the interaction surface (fills the hero and
+   clips the images to it); .hero-name sits on top, clicks-through.
+   ============================================================ */
+.hero-lab .hero.hero-image-trail {
+  min-height: 88vh;
+  padding-top: 140px;
+  padding-bottom: clamp(32px, 5vh, 64px);
+  /* undo the homepage's gutter breakout so the name centres on the page */
+  margin-left: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-lab .hero-trail {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-lab .hero-trail-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(84px, 8vw, 128px);
+  height: clamp(72px, 7vw, 108px);
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  will-change: transform, opacity;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.hero-lab .hero-name {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  pointer-events: none;
+}

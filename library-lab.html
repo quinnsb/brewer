@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/svg+xml" href="images/brewerfavicon.svg" />
+  <title>Library Lab — renderer comparison</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/library-lab.css" />
+</head>
+<body class="library-lab">
+  <div class="lab-wrap">
+
+    <header class="lab-head">
+      <h1>Library Lab</h1>
+      <p>
+        Three renderers over one data file. Every shelf below reads
+        <code>data/library.json</code>, built by <code>tools/library-sync.mjs</code>
+        from keyless public sources, with palettes extracted by
+        <code>tools/library-colors.mjs</code>. Twenty-eight real items with real cover art.
+      </p>
+    </header>
+
+    <div class="lab-tabs" role="tablist">
+      <button class="lab-tab" role="tab" data-panel="p-css" aria-selected="true">A · CSS physics</button>
+      <button class="lab-tab" role="tab" data-panel="p-webgl" aria-selected="false">B · WebGL</button>
+      <button class="lab-tab" role="tab" data-panel="p-tiered" aria-selected="false">C · Tiered</button>
+    </div>
+
+    <!-- ============ A ============ -->
+    <section class="lab-panel" id="p-css" role="tabpanel">
+      <p class="lab-note">
+        <strong>Four media types, four physics.</strong> Books stand as spines because book
+        spines are designed to be read on a shelf. Albums do not: a vinyl spine is blank
+        card, so they lean forward in a crate you flip through. Films sit in a poster rack.
+        Podcasts tile, because there is no physical object worth faking. Toggle the spine
+        labels to see the fallback for anything whose art is missing or unreadable at
+        sliver width.
+      </p>
+
+      <div class="lab-controls">
+        <label><input type="checkbox" id="toggle-labels" /> Show generated spine labels</label>
+        <label>Crate physics
+          <select id="crate-mode">
+            <option value="lean">Leaned</option>
+            <option value="stack">Face-on stack</option>
+          </select>
+        </label>
+        <label>Sort
+          <select id="sort">
+            <option value="default">Curated</option>
+            <option value="title">Title</option>
+            <option value="creator">Creator</option>
+            <option value="year">Year, newest</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="r-css"></div>
+      <div class="detail" id="d-css" hidden></div>
+    </section>
+
+    <!-- ============ B ============ -->
+    <section class="lab-panel" id="p-webgl" role="tabpanel" hidden>
+      <p class="lab-note">
+        <strong>Deliberately simplified.</strong> One mesh per item, cover art on the front
+        face, palette colour on the sides, damped virtual scroll, raycast picking. Scroll to
+        move along the shelf, click a volume to pull it out. For scale: complete-shelf runs
+        roughly 2,200 lines and side-one runs 11,433, both for seven items. This is a few
+        hundred for twenty-eight, so judge the <em>feel</em>, not the finish.
+      </p>
+      <div class="gl-stage" id="gl-stage"></div>
+      <div class="gl-hud">scroll to browse · click to pull out</div>
+      <div class="detail" id="d-gl" hidden></div>
+    </section>
+
+    <!-- ============ C ============ -->
+    <section class="lab-panel" id="p-tiered" role="tabpanel" hidden>
+      <p class="lab-note">
+        <strong>Content tiering and render tiering as one decision.</strong> You said full
+        writeups for a starred few and metadata for the rest. This mirrors that in the
+        rendering: starred items get presence and space, everything else packs into a dense
+        browsable shelf. Nothing is arbitrary because both tiers come from the same
+        editorial call.
+      </p>
+      <div id="r-tiered"></div>
+      <div class="detail" id="d-tiered" hidden></div>
+    </section>
+
+  </div>
+  <script src="js/library-lab.js"></script>
+</body>
+</html>

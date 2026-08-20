@@ -1,0 +1,346 @@
+/* ============================================================
+   LIBRARY LAB — three renderers for the media library, side by side
+
+   Lab tooling. Only library-lab.html loads this.
+
+   RENDERER A  css      per-type physics in pure CSS/DOM
+   RENDERER B  webgl    Three.js, one mesh per item
+   RENDERER C  tiered   CSS index + a WebGL hero for starred items
+
+   The four media types do NOT share one physics. Books stand as
+   spines, albums lean in a crate, films sit in a poster rack, and
+   podcasts tile. Each has its own block below.
+   ============================================================ */
+
+:root {
+  --lab-bg: #1e1c19;
+  --lab-cream: #f1ece3;
+  --lab-dim: rgba(241, 236, 227, 0.62);
+  --lab-faint: rgba(241, 236, 227, 0.28);
+  --lab-card: #292622;
+  --lab-line: rgba(241, 236, 227, 0.14);
+  --shelf-h: 300px;
+}
+
+* { box-sizing: border-box; }
+
+body.library-lab {
+  margin: 0;
+  background: var(--lab-bg);
+  color: var(--lab-cream);
+  font-family: "Degular", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.lab-wrap { max-width: 1240px; margin: 0 auto; padding: 40px 28px 120px; }
+
+.lab-head { border-bottom: 1px solid var(--lab-line); padding-bottom: 22px; margin-bottom: 8px; }
+.lab-head h1 {
+  font-family: "Degular Display", system-ui, sans-serif;
+  font-weight: 600; font-size: clamp(30px, 4vw, 46px);
+  margin: 0 0 10px; letter-spacing: -0.02em;
+}
+.lab-head p { margin: 0; color: var(--lab-dim); max-width: 62ch; line-height: 1.55; font-size: 15px; }
+.lab-head code {
+  font-family: "Space Mono", ui-monospace, monospace; font-size: 12px;
+  background: rgba(241,236,227,.08); padding: 2px 6px; border-radius: 4px;
+}
+
+/* ---------- renderer switcher ---------- */
+
+.lab-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 26px 0 10px; }
+.lab-tab {
+  appearance: none; cursor: pointer;
+  background: transparent; color: var(--lab-dim);
+  border: 1px solid var(--lab-line); border-radius: 999px;
+  padding: 9px 16px; font: inherit; font-size: 13px; letter-spacing: .01em;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.lab-tab:hover { color: var(--lab-cream); border-color: rgba(241,236,227,.34); }
+.lab-tab[aria-selected="true"] { background: var(--lab-cream); color: #17150f; border-color: var(--lab-cream); }
+
+.lab-note {
+  font-size: 13px; line-height: 1.6; color: var(--lab-dim);
+  border-left: 2px solid var(--lab-faint); padding: 2px 0 2px 14px;
+  margin: 18px 0 34px; max-width: 76ch;
+}
+.lab-note strong { color: var(--lab-cream); font-weight: 500; }
+
+.lab-panel[hidden] { display: none; }
+
+/* ---------- shared shelf furniture ---------- */
+
+.shelf-block { margin: 0 0 58px; }
+.shelf-label {
+  display: flex; align-items: baseline; gap: 12px;
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--lab-faint); margin-bottom: 16px;
+}
+.shelf-label span { color: var(--lab-dim); letter-spacing: 0; text-transform: none; font-size: 12px; }
+
+/* the wood line every shelf sits on */
+.shelf-rail { position: relative; }
+.shelf-rail::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+  background: linear-gradient(180deg, rgba(241,236,227,.22), rgba(241,236,227,.04));
+  border-radius: 2px;
+}
+
+/* ============================================================
+   BOOKS — spine shelf
+   Cover art clipped to a sliver. The button is narrow with
+   overflow:hidden while the <img> renders at full height and
+   auto width, so only the left edge of the jacket shows. On
+   open, flex-basis animates out to reveal cover + info.
+   ============================================================ */
+
+.spine-shelf {
+  display: flex; align-items: flex-end; gap: 2px;
+  overflow-x: auto; overflow-y: hidden;
+  padding: 0 0 3px; min-height: var(--shelf-h);
+  scrollbar-width: thin; scrollbar-color: var(--lab-faint) transparent;
+}
+.spine-shelf::-webkit-scrollbar { height: 6px; }
+.spine-shelf::-webkit-scrollbar-thumb { background: var(--lab-faint); border-radius: 3px; }
+
+.spine {
+  position: relative; flex: 0 0 var(--spine-w, 34px);
+  height: var(--spine-h, 260px);
+  border: 0; padding: 0; cursor: pointer;
+  background: var(--cover, #33302b);
+  overflow: hidden; border-radius: 1px 3px 3px 1px;
+  transform-origin: bottom center;
+  transition: flex-basis .62s cubic-bezier(.16,1,.3,1);
+  box-shadow: inset -6px 0 12px -6px rgba(0,0,0,.7), 0 6px 14px -8px rgba(0,0,0,.8);
+}
+.spine img {
+  height: 100%; width: auto; max-width: none; display: block;
+  opacity: .82; object-fit: cover;
+}
+/* printed-cloth grain, so the sliver does not read as a flat crop */
+.spine::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.16), transparent 14%),
+    linear-gradient(270deg, rgba(0,0,0,.42), transparent 32%);
+}
+.spine-title {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  writing-mode: vertical-rl; text-orientation: mixed;
+  font-size: 11px; letter-spacing: .04em; color: var(--ink, #f1ece3);
+  padding: 12px 0; opacity: 0; transition: opacity .3s ease;
+  text-shadow: 0 1px 2px rgba(0,0,0,.55); pointer-events: none;
+}
+.spine-shelf[data-labels="on"] .spine-title { opacity: .92; }
+.spine-shelf[data-labels="on"] .spine img { opacity: .34; }
+
+.spine:hover, .spine.is-open { flex-basis: var(--open-w, 190px); }
+.spine:hover img, .spine.is-open img { opacity: 1; }
+.spine:focus-visible { outline: 2px solid var(--lab-cream); outline-offset: 3px; }
+
+/* ============================================================
+   ALBUMS — crate
+   Records are not shelved edge-on; a vinyl spine is blank card.
+   You flip through them front-facing at a lean.
+
+   Two things had to be true before this read as a crate rather
+   than a rank of strips:
+     1. PITCH. At a 40deg lean and an 80px pitch each sleeve was
+        clipped to a sliver, which is exactly the spine shelf we
+        are trying not to be. 32deg at a 108px pitch keeps the
+        artwork legible, which is the whole point for albums.
+     2. CONTAINMENT. Records in a crate sit *inside* something.
+        Without a box they just float in a diagonal line, so the
+        crate gets a floor, a front lip, and a back wall.
+   ============================================================ */
+
+.crate {
+  position: relative; height: calc(var(--shelf-h) + 26px);
+  perspective: 1500px; perspective-origin: 34% 66%;
+  overflow-x: auto; overflow-y: hidden;
+  scrollbar-width: thin; scrollbar-color: var(--lab-faint) transparent;
+}
+.crate::-webkit-scrollbar { height: 6px; }
+.crate::-webkit-scrollbar-thumb { background: var(--lab-faint); border-radius: 3px; }
+
+/* the box the records sit in */
+.crate-box { position: relative; width: max-content; height: 100%; }
+.crate-box::before {
+  /* back wall + floor, so the lean has something to lean against */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 26px; height: 190px;
+  background: linear-gradient(180deg, rgba(0,0,0,.34), rgba(0,0,0,.06));
+  border-radius: 3px 3px 0 0;
+}
+.crate-box::after {
+  /* front lip, drawn over the sleeves so they sit inside the box */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 34px; z-index: 5;
+  background: linear-gradient(180deg, #4a4038 0%, #322c25 46%, #221e1a 100%);
+  border-radius: 2px;
+  box-shadow: 0 -10px 20px -10px rgba(0,0,0,.9), inset 0 1px 0 rgba(241,236,227,.12);
+}
+
+.crate-inner {
+  position: relative; z-index: 2;
+  display: flex; align-items: flex-end; height: 100%;
+  padding: 34px 26% 34px 16px; width: max-content;
+}
+
+.sleeve {
+  position: relative; flex: 0 0 auto;
+  width: 212px; height: 212px; margin-right: -104px;
+  border: 0; padding: 0; cursor: pointer; background: var(--cover, #33302b);
+  transform-style: preserve-3d; transform-origin: left center;
+  transform: rotateY(-32deg);
+  transition: transform .5s cubic-bezier(.2,.9,.25,1), margin-right .5s cubic-bezier(.2,.9,.25,1);
+  box-shadow: 0 22px 34px -20px rgba(0,0,0,.95);
+}
+.sleeve img { width: 100%; height: 100%; display: block; object-fit: cover; }
+/* the lean throws a shadow across the sleeve behind it */
+.sleeve::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgba(0,0,0,.46), rgba(0,0,0,0) 68%);
+  transition: opacity .5s ease;
+}
+.sleeve:hover, .sleeve.is-open {
+  transform: rotateY(-3deg) translateZ(90px) translateY(-10px); margin-right: -8px;
+}
+.sleeve:hover::after, .sleeve.is-open::after { opacity: .1; }
+.sleeve:focus-visible { outline: 2px solid var(--lab-cream); outline-offset: 4px; }
+
+/* ============================================================
+   FILMS — poster rack
+   Posters in a bin: bottom-aligned, alternating slight lean,
+   overlapping. Closer to flipping a rack than reading spines.
+   ============================================================ */
+
+.rack {
+  display: flex; align-items: flex-end; gap: 0;
+  overflow-x: auto; overflow-y: hidden; min-height: var(--shelf-h);
+  padding: 20px 0 3px; perspective: 1200px;
+  scrollbar-width: thin; scrollbar-color: var(--lab-faint) transparent;
+}
+.rack::-webkit-scrollbar { height: 6px; }
+.rack::-webkit-scrollbar-thumb { background: var(--lab-faint); border-radius: 3px; }
+
+.poster {
+  flex: 0 0 auto; width: 158px; height: 234px; margin-right: -30px;
+  border: 0; padding: 0; cursor: pointer; background: var(--cover, #33302b);
+  transform-origin: bottom center;
+  transform: rotate(var(--lean, -2deg));
+  transition: transform .45s cubic-bezier(.16,1,.3,1), margin-right .45s cubic-bezier(.16,1,.3,1);
+  box-shadow: 0 14px 26px -14px rgba(0,0,0,.9); border-radius: 2px; overflow: hidden;
+}
+.poster img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.poster:hover, .poster.is-open {
+  transform: rotate(0deg) translateY(-18px) scale(1.06); margin-right: -12px; z-index: 3;
+}
+.poster:focus-visible { outline: 2px solid var(--lab-cream); outline-offset: 3px; }
+
+/* ============================================================
+   OTHER — tiles
+   Square art, no physical metaphor worth faking.
+   ============================================================ */
+
+.tiles { display: flex; gap: 14px; overflow-x: auto; padding-bottom: 6px; }
+.tile {
+  flex: 0 0 auto; width: 140px; height: 140px; border: 0; padding: 0; cursor: pointer;
+  border-radius: 8px; overflow: hidden; background: var(--cover, #33302b);
+  transition: transform .35s cubic-bezier(.16,1,.3,1);
+  box-shadow: 0 10px 22px -14px rgba(0,0,0,.9);
+}
+.tile img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.tile:hover, .tile.is-open { transform: translateY(-8px) scale(1.04); }
+.tile:focus-visible { outline: 2px solid var(--lab-cream); outline-offset: 3px; }
+
+/* ============================================================
+   DETAIL PANEL — shared by every renderer
+   ============================================================ */
+
+.detail {
+  display: grid; grid-template-columns: 132px 1fr; gap: 22px; align-items: start;
+  border-top: 1px solid var(--lab-line); margin-top: 30px; padding-top: 24px;
+  min-height: 150px;
+}
+.detail[hidden] { display: none; }
+.detail-art { width: 132px; border-radius: 3px; overflow: hidden; background: var(--lab-card); }
+.detail-art img { width: 100%; display: block; }
+.detail h3 {
+  font-family: "P22 Mackinac Pro", Georgia, serif; font-weight: 500;
+  font-size: 25px; margin: 0 0 6px; letter-spacing: -0.01em;
+}
+.detail .meta { color: var(--lab-dim); font-size: 14px; margin: 0 0 14px; }
+.detail .swatches { display: flex; gap: 8px; align-items: center; }
+.detail .sw {
+  width: 26px; height: 26px; border-radius: 4px; border: 1px solid rgba(255,255,255,.16);
+}
+.detail .swatch-label {
+  font-family: "Space Mono", ui-monospace, monospace; font-size: 10px;
+  color: var(--lab-faint); letter-spacing: .06em;
+}
+.detail a.src {
+  display: inline-block; margin-top: 14px; color: var(--lab-dim);
+  font-size: 13px; text-underline-offset: 3px;
+}
+.detail a.src:hover { color: var(--lab-cream); }
+
+/* ---------- controls ---------- */
+
+.lab-controls { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; margin-bottom: 22px; }
+.lab-controls label {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 12.5px; color: var(--lab-dim); cursor: pointer;
+}
+.lab-controls select {
+  background: var(--lab-card); color: var(--lab-cream); font: inherit; font-size: 12.5px;
+  border: 1px solid var(--lab-line); border-radius: 6px; padding: 5px 8px;
+}
+
+/* ---------- webgl ---------- */
+
+.gl-stage {
+  position: relative; width: 100%; height: 480px;
+  border: 1px solid var(--lab-line); border-radius: 8px; overflow: hidden;
+  background: radial-gradient(120% 90% at 50% 20%, #262320 0%, #17150f 100%);
+}
+.gl-stage canvas { display: block; width: 100%; height: 100%; }
+.gl-hud {
+  position: absolute; left: 14px; bottom: 12px;
+  font-family: "Space Mono", ui-monospace, monospace; font-size: 11px;
+  color: var(--lab-faint); letter-spacing: .06em; pointer-events: none;
+}
+.gl-fallback {
+  position: absolute; inset: 0; display: grid; place-content: center; text-align: center;
+  padding: 30px; color: var(--lab-dim); font-size: 14px; line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .lab-wrap { padding: 28px 18px 90px; }
+  .detail { grid-template-columns: 92px 1fr; gap: 16px; }
+  .detail-art { width: 92px; }
+  .gl-stage { height: 360px; }
+}
+
+
+/* ---------- crate mode B: face-on stack ----------
+   The uniform lean is only one way to read a crate. This is the other:
+   sleeves square to the viewer, overlapping like a bin you flip front to
+   back. It loses the dimensional cue but keeps far more of the artwork,
+   which for albums is the entire point. */
+
+.crate[data-mode="stack"] { perspective: none; }
+/* no lean means no box: a face-on stack is not sitting in a crate,
+   it is a fanned pile, and drawing a lip under it just misaligns. */
+.crate[data-mode="stack"] .crate-box::before,
+.crate[data-mode="stack"] .crate-box::after { display: none; }
+.crate[data-mode="stack"] .sleeve {
+  transform: none; margin-right: -104px; transform-origin: center center;
+  box-shadow: -10px 0 20px -8px rgba(0,0,0,.9), 0 16px 26px -18px rgba(0,0,0,.9);
+}
+.crate[data-mode="stack"] .sleeve::after {
+  background: linear-gradient(90deg, rgba(0,0,0,.52), rgba(0,0,0,0) 34%);
+}
+.crate[data-mode="stack"] .sleeve:hover,
+.crate[data-mode="stack"] .sleeve.is-open {
+  transform: translateY(-16px); margin-right: -22px;
+}
