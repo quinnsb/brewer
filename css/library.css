@@ -54,23 +54,42 @@ body.library {
 .hero-track { height: 200vh; }
 .hero-sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; }
 
+/* The headline sits inside the ring of cards, so it is centred on the stage
+   rather than flowing above it. The verb lives on its own line underneath,
+   which is what lets the whole lockup be centre justified: with nothing
+   beside it, a verb that changes width cannot shove the stem around. */
 .hero-inner {
-  max-width: var(--shell); margin: 0 auto;
-  padding: clamp(60px, 12vh, 140px) var(--gutter) 0;
-  position: relative; z-index: 2;
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(540px, 66vw);
+  z-index: 2; pointer-events: none;
 }
 
 .hero-line {
   font-family: "Aeonik", system-ui, sans-serif; font-weight: 500;
-  font-size: clamp(30px, 5.2vw, 62px); letter-spacing: -0.025em;
-  margin: 0; display: flex; align-items: baseline; gap: 0.28em;
-  text-align: left; /* the stem never re-centres when the verb resizes */
+  font-size: clamp(25px, 3.5vw, 44px); letter-spacing: -0.025em; line-height: 1.12;
+  margin: 0; display: flex; flex-direction: column; align-items: center;
+  text-align: center;
 }
-.hero-line .stem { flex: none; }
-.hero-line .slot { position: relative; flex: none; color: var(--lib-accent); white-space: nowrap; }
+.hero-line .stem { display: block; }
+.hero-line .slot {
+  position: relative; display: flex; justify-content: center;
+  color: var(--lib-accent); white-space: nowrap;
+}
+
+/* Reveal: blur and rise, fired when the ring finishes forming. */
+.hero-line .stem, .hero-line .slot {
+  opacity: 0; transform: translateY(20px); filter: blur(10px);
+  transition: opacity 1s ease, transform 1s ease, filter 1s ease;
+}
+.hero-line.is-in .stem,
+.hero-line.is-in .slot { opacity: 1; transform: none; filter: blur(0); }
+.hero-line.is-in .slot { transition-delay: 0.2s; }
 
 .word { display: inline-flex; }
-.word.out { position: absolute; left: 0; top: 0; }
+/* Centred, not left-pinned: the outgoing word leaves the flow so the
+   incoming one owns the width immediately, and both stay centred. */
+.word.out { position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
 .mask { display: inline-block; overflow: hidden; padding-bottom: 0.14em; }
 .mask .ch {
   display: inline-block; white-space: pre;
@@ -145,6 +164,9 @@ body.library {
 
 @media (prefers-reduced-motion: reduce) {
   .mask .ch, .hcard-flip { transition: none; }
+  .hero-line .stem, .hero-line .slot {
+    opacity: 1; transform: none; filter: none; transition: none;
+  }
 }
 
 /* ---------- BOOKS: spine shelf ----------
@@ -236,3 +258,44 @@ body.library {
 @media (prefers-reduced-motion: reduce) {
   .spine, .sleeve, .poster, .tile { transition: none; }
 }
+
+/* ---------- expand in place ----------
+   One easing across the growth and the content arrival so it reads as a
+   single gesture rather than two stacked animations. */
+
+.spine.is-open { flex-basis: var(--open-w); }
+.spine.is-open .spine-txt { opacity: 0; }
+.sleeve.is-open { flex-basis: 188px; transform: rotate(0deg) skewY(0deg) translateY(-10px); }
+.poster.is-open, .tile.is-open { transform: translateY(-7px); }
+
+.detail {
+  display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 1fr); gap: 26px;
+  margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--lib-line);
+  opacity: 0; transform: translateY(10px);
+  transition: opacity 0.42s var(--ease), transform 0.42s var(--ease);
+}
+.detail.is-in { opacity: 1; transform: none; }
+.detail img { width: 100%; height: auto; border-radius: 3px; display: block; }
+.detail h2 {
+  font-family: "Aeonik", system-ui, sans-serif; font-weight: 500;
+  font-size: 26px; letter-spacing: -0.02em; margin: 0 0 4px;
+}
+.detail .meta {
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 11px; color: var(--lib-dim); margin: 0 0 16px;
+}
+.detail .review { font-size: 15.5px; line-height: 1.62; color: var(--lib-fg); max-width: 62ch; }
+.detail .review p { margin: 0 0 0.9em; }
+.detail .review a { color: var(--lib-accent); }
+.detail .empty {
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 11.5px; color: var(--lib-faint); margin: 0;
+}
+.detail .src {
+  display: inline-block; margin-top: 14px;
+  font-family: "Space Mono", ui-monospace, monospace; font-size: 11px; color: var(--lib-dim);
+}
+.detail .src:hover { color: var(--lib-accent); }
+
+@media (max-width: 720px) { .detail { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .detail { transition: none; } }

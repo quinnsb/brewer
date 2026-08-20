@@ -136,10 +136,122 @@ export function renderShelves(items, root) {
   }
 }
 
+/* ---------- expand in place ---------- */
+
+let openId = null;
+
+function detailNode(item) {
+  const d = el("div", "detail");
+
+  const fig = el("div");
+  const img = el("img");
+  img.src = item.cover;
+  img.alt = "";
+  fig.append(img);
+
+  const body = el("div");
+  body.append(Object.assign(el("h2"), { textContent: item.title }));
+
+  const bits = [item.creator, item.year, item.finished ? `finished ${item.finished}` : null];
+  body.append(
+    Object.assign(el("p", "meta"), { textContent: bits.filter(Boolean).join("  ·  ") })
+  );
+
+  if (item.reviewHtml) {
+    const r = el("div", "review");
+    /* Built at build time from Quinn's own markdown, where the source text
+       was escaped before any inline rule ran. */
+    r.innerHTML = item.reviewHtml;
+    body.append(r);
+  } else {
+    body.append(Object.assign(el("p", "empty"), { textContent: "No writeup yet." }));
+  }
+
+  if (item.sourceUrl) {
+    const a = el("a", "src", { href: item.sourceUrl, target: "_blank", rel: "noopener" });
+    a.textContent = "Source";
+    body.append(a);
+  }
+
+  d.append(fig, body);
+  return d;
+}
+
+function closeAll(root) {
+  for (const n of root.querySelectorAll(".is-open")) {
+    n.classList.remove("is-open");
+    n.setAttribute("aria-expanded", "false");
+  }
+  for (const d of root.querySelectorAll(".detail")) d.remove();
+  openId = null;
+}
+
+export function wireExpansion(items, root) {
+  const byId = new Map(items.map((i) => [i.id, i]));
+
+  root.addEventListener("click", (e) => {
+    const node = e.target.closest("[data-id]");
+    if (!node) return;
+    const item = byId.get(node.dataset.id);
+    if (!item) return;
+
+    const wasOpen = openId === item.id;
+    closeAll(root);
+    if (wasOpen) return;
+
+    node.classList.add("is-open");
+    node.setAttribute("aria-expanded", "true");
+    /* open width = the jacket at its true aspect ratio */
+    if (item.type === "book") {
+      node.style.setProperty("--open-w", `${Math.round(spineHeight(item) * item.aspect)}px`);
+    }
+
+    const d = detailNode(item);
+    node.closest(".shelf-block").append(d);
+    requestAnimationFrame(() => d.classList.add("is-in"));
+    openId = item.id;
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && openId) closeAll(root);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (openId && !e.target.closest(".shelf-block")) closeAll(root);
+  });
+
+  /* arrow keys walk a shelf */
+  root.addEventListener("keydown", (e) => {
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    const cur = e.target.closest("[data-id]");
+    if (!cur) return;
+    const sibs = [...cur.parentElement.querySelectorAll("[data-id]")];
+    const next = sibs[sibs.indexOf(cur) + (e.key === "ArrowRight" ? 1 : -1)];
+    if (next) {
+      next.focus();
+      e.preventDefault();
+    }
+  });
+}
+
+/* Used by the hero: jump to an item's shelf and open it. */
+export function openItem(id) {
+  const node = document.querySelector(`#shelves [data-id="${CSS.escape(id)}"]`);
+  if (!node) return;
+  node.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+  node.click();
+}
+
 async function main() {
   const { items } = await (await fetch(DATA_URL)).json();
   const root = document.getElementById("shelves");
   renderShelves(items, root);
+  wireExpansion(items, root);
+
+  /* Deferred so this module finishes evaluating first: library-hero.js
+     imports openItem back from here. */
+  const { initHero } = await import("./library-hero.js");
+  initHero(items);
 }
 
 main();
