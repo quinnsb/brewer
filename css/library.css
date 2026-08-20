@@ -1,0 +1,238 @@
+/* ============================================================
+   LIBRARY — standalone page, Archive direction
+
+   Deliberately does NOT import css/styles.css. This page may move to a
+   subdomain, so it has to travel by copying files.
+   ============================================================ */
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Regular.otf") format("opentype");
+  font-weight: 400; font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Medium.otf") format("opentype");
+  font-weight: 500; font-display: swap;
+}
+@font-face {
+  font-family: "Degular";
+  src: url("../fonts/Degular-Regular.otf") format("opentype");
+  font-weight: 400; font-display: swap;
+}
+@font-face {
+  font-family: "Degular";
+  src: url("../fonts/Degular-Semibold.otf") format("opentype");
+  font-weight: 600; font-display: swap;
+}
+
+:root {
+  --lib-bg: #0b0b0c;
+  --lib-fg: #d8d6d1;
+  --lib-dim: rgba(216, 214, 209, 0.52);
+  --lib-faint: rgba(216, 214, 209, 0.3);
+  --lib-line: rgba(216, 214, 209, 0.18);
+  --lib-accent: #e8531c;
+  --gutter: clamp(20px, 4vw, 56px);
+  --shell: 1240px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --card: 72px;
+}
+
+* { box-sizing: border-box; }
+
+body.library {
+  margin: 0;
+  background: var(--lib-bg);
+  color: var(--lib-fg);
+  font-family: "Degular", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- hero ---------- */
+
+.hero-track { height: 200vh; }
+.hero-sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+
+.hero-inner {
+  max-width: var(--shell); margin: 0 auto;
+  padding: clamp(60px, 12vh, 140px) var(--gutter) 0;
+  position: relative; z-index: 2;
+}
+
+.hero-line {
+  font-family: "Aeonik", system-ui, sans-serif; font-weight: 500;
+  font-size: clamp(30px, 5.2vw, 62px); letter-spacing: -0.025em;
+  margin: 0; display: flex; align-items: baseline; gap: 0.28em;
+  text-align: left; /* the stem never re-centres when the verb resizes */
+}
+.hero-line .stem { flex: none; }
+.hero-line .slot { position: relative; flex: none; color: var(--lib-accent); white-space: nowrap; }
+
+.word { display: inline-flex; }
+.word.out { position: absolute; left: 0; top: 0; }
+.mask { display: inline-block; overflow: hidden; padding-bottom: 0.14em; }
+.mask .ch {
+  display: inline-block; white-space: pre;
+  transition: transform 0.44s cubic-bezier(0.22, 1, 0.3, 1),
+              opacity 0.44s cubic-bezier(0.22, 1, 0.3, 1);
+}
+.mask .ch.enter { transform: translateY(110%); opacity: 0; }
+.mask .ch.leave { transform: translateY(-130%); opacity: 0; }
+
+.hero-stage { position: absolute; inset: 0; z-index: 1; }
+
+.hcard {
+  position: absolute; top: 50%; left: 50%;
+  width: var(--card); height: var(--card);
+  margin: calc(var(--card) / -2) 0 0 calc(var(--card) / -2);
+  perspective: 1000px; cursor: pointer; border: 0; padding: 0; background: none;
+  will-change: transform;
+}
+.hcard-flip {
+  position: relative; display: block; width: 100%; height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s var(--ease);
+}
+.hcard:hover .hcard-flip, .hcard:focus-visible .hcard-flip { transform: rotateY(180deg); }
+.hcard-face {
+  position: absolute; inset: 0; backface-visibility: hidden;
+  border-radius: 3px; overflow: hidden;
+  box-shadow: 0 8px 20px -12px rgba(0, 0, 0, 0.9);
+}
+.hcard-face img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hcard-back {
+  transform: rotateY(180deg);
+  background: var(--lib-bg); border: 1px solid var(--lib-line);
+  display: flex; flex-direction: column; justify-content: center; gap: 3px;
+  padding: 7px; text-align: left;
+  font-family: "Space Mono", ui-monospace, monospace;
+}
+.hcard-back .t { font-size: 8px; line-height: 1.25; color: var(--lib-fg); }
+.hcard-back .c { font-size: 7px; line-height: 1.2; color: var(--lib-dim); }
+.hcard:focus-visible { outline: 2px solid var(--lib-accent); outline-offset: 3px; }
+
+/* ---------- shelves ---------- */
+
+.shelves {
+  max-width: var(--shell); margin: 0 auto;
+  padding: 0 var(--gutter) 140px;
+  position: relative; z-index: 3; background: var(--lib-bg);
+}
+.shelf-block { margin-bottom: 68px; }
+
+.shelf-label {
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--lib-dim); border-top: 1px solid var(--lib-line);
+  padding-top: 10px; margin-bottom: 18px;
+  display: flex; gap: 12px; align-items: baseline;
+}
+.shelf-label span { text-transform: none; letter-spacing: 0.04em; font-size: 11px; opacity: 0.62; }
+
+.lib-foot {
+  border-top: 1px solid var(--lib-line); padding: 26px var(--gutter) 60px;
+  max-width: var(--shell); margin: 0 auto;
+  font-family: "Space Mono", ui-monospace, monospace; font-size: 11px; color: var(--lib-faint);
+  position: relative; z-index: 3; background: var(--lib-bg);
+}
+.lib-foot p { margin: 0; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mask .ch, .hcard-flip { transition: none; }
+}
+
+/* ---------- BOOKS: spine shelf ----------
+   Spines are GENERATED, not cropped. No public API serves spine artwork, and
+   the old approach (front cover at height:100% inside a 30px overflow box)
+   showed the leftmost ~18% of the jacket, which reads as a smear. */
+
+.shelf-rail {
+  overflow-x: auto; overflow-y: hidden;
+  scrollbar-width: thin; scrollbar-color: var(--lib-faint) transparent;
+}
+.shelf-rail::-webkit-scrollbar { height: 6px; }
+.shelf-rail::-webkit-scrollbar-thumb { background: var(--lib-faint); border-radius: 3px; }
+
+.spine-shelf { display: flex; align-items: flex-end; gap: 2px; padding-bottom: 3px; }
+
+.spine {
+  position: relative; flex: 0 0 var(--spine-w); height: var(--spine-h);
+  border: 0; padding: 0; cursor: pointer; overflow: hidden;
+  background: var(--cover); color: var(--ink);
+  border-radius: 1px 2px 2px 1px;
+  transition: flex-basis 0.62s var(--ease);
+  box-shadow: inset -7px 0 13px -8px rgba(0, 0, 0, 0.75),
+              inset 5px 0 8px -6px rgba(255, 255, 255, 0.22),
+              0 7px 16px -10px rgba(0, 0, 0, 0.9);
+}
+.spine-txt {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  writing-mode: vertical-rl; text-orientation: mixed; /* top-to-bottom, US convention */
+  padding: 16px 0; white-space: nowrap; overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+.spine-txt .t {
+  font-family: "Degular", system-ui; font-weight: 600; font-size: 12.5px;
+  overflow: hidden; text-overflow: ellipsis;
+}
+.spine-txt .a { font-size: 9.5px; opacity: 0.68; letter-spacing: 0.05em; text-transform: uppercase; }
+.spine-rule { position: absolute; left: 18%; right: 18%; height: 2px; background: var(--accent); }
+.spine-rule.top { top: 15px; }
+.spine-rule.bot { bottom: 15px; }
+
+/* ---------- ALBUMS: crate ---------- */
+.crate { overflow-x: auto; overflow-y: hidden; padding-bottom: 4px; }
+.crate-box {
+  position: relative; padding: 26px 30px 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.28));
+  border: 1px solid var(--lib-line); border-radius: 3px;
+}
+/* The lean pivots on bottom-left, so each sleeve's top corner swings ~58px
+   outward. Without this padding the first record is sliced by the crate wall. */
+.crate-inner { display: flex; align-items: flex-end; padding-left: 68px; min-height: 190px; }
+.sleeve {
+  flex: 0 0 108px; width: 168px; height: 168px; border: 0; padding: 0; cursor: pointer;
+  background: var(--cover); border-radius: 2px; overflow: hidden;
+  transform: rotate(-32deg) skewY(6deg); transform-origin: bottom left;
+  transition: flex-basis 0.5s var(--ease), transform 0.5s var(--ease);
+  box-shadow: -8px 6px 16px -10px rgba(0,0,0,.9);
+}
+.sleeve img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sleeve:hover, .sleeve:focus-visible { transform: rotate(-24deg) skewY(4deg) translateY(-8px); }
+
+/* ---------- FILMS: rack ----------
+   No lean. The old deterministic tilt from the id read as noise, not handling. */
+.rack { display: flex; align-items: flex-end; gap: 9px; padding-bottom: 3px; }
+.poster {
+  flex: 0 0 auto; border: 0; padding: 0; cursor: pointer; background: var(--cover);
+  border-radius: 2px; overflow: hidden; height: 232px;
+  transition: transform 0.4s var(--ease);
+  box-shadow: 0 8px 18px -10px rgba(0,0,0,.85);
+}
+.poster img { height: 232px; width: auto; display: block; }
+.poster:hover, .poster:focus-visible { transform: translateY(-7px); }
+
+/* ---------- PODCASTS: tiles ---------- */
+.tiles { display: flex; gap: 12px; flex-wrap: wrap; }
+.tile {
+  width: 132px; height: 132px; border: 0; padding: 0; cursor: pointer;
+  background: var(--cover); border-radius: 3px; overflow: hidden;
+  transition: transform 0.4s var(--ease);
+}
+.tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tile:hover, .tile:focus-visible { transform: translateY(-5px); }
+
+.spine:focus-visible, .sleeve:focus-visible, .poster:focus-visible, .tile:focus-visible {
+  outline: 2px solid var(--lib-accent); outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spine, .sleeve, .poster, .tile { transition: none; }
+}
