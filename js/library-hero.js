@@ -193,7 +193,15 @@ export function initHero(items) {
        a large fraction of the width. */
     const extent = CARD * scale * 1.45;
     const chord = Math.max(w - extent, w * 0.45);
-    const arcR = chord / (2 * Math.sin(((spread / 2) * Math.PI) / 180));
+    const halfSpread = ((spread / 2) * Math.PI) / 180;
+    const edgeDrop = 1 - Math.cos(halfSpread);
+    const widthRadius = chord / (2 * Math.sin(halfSpread));
+    /* On a very wide viewport, fitting the chord alone can make the arc too
+       tall for the stage. Cap its radius only when needed so the apex and
+       both end cards can still occupy the same viewport. */
+    const heightRadius = Math.max(0, h - extent) / edgeDrop;
+    const arcR = Math.min(widthRadius, heightRadius);
+    const maxApexY = h / 2 - extent / 2 - arcR * edgeDrop;
 
     return {
       circleR: Math.min(Math.min(w, h) * 0.35, 350),
@@ -203,7 +211,7 @@ export function initHero(items) {
          every offset here is already relative to the middle. Treating this
          as a from-the-top value (as the reference does) double-counts half
          a viewport and drops the whole arc below the fold. */
-      apexY: h * 0.08,
+      apexY: Math.min(h * 0.08, maxApexY),
       spread,
       scale,
     };

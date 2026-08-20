@@ -163,6 +163,9 @@ body.library {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  /* The reduced-motion resting arc occupies the lower half immediately.
+     Lift the static headline clear of it so both remain readable. */
+  .hero-inner { top: 22%; }
   .mask .ch, .hcard-flip { transition: none; }
   .hero-line .stem, .hero-line .slot {
     opacity: 1; transform: none; filter: none; transition: none;
