@@ -107,7 +107,9 @@ throttled to `requestAnimationFrame`. Past that point the sticky section
 releases and the shelves scroll up normally. Native scrolling throughout:
 keyboard, trackpad, and touch all work without special handling.
 
-Mouse parallax translates the arc horizontally by up to ±100px, spring-damped.
+The arc remains horizontally centred. Page scroll adds a restrained vertical
+parallax drift of up to 72px while the hero is sticky, spring-damped through the
+same card motion system.
 
 ### Headline
 
@@ -256,7 +258,7 @@ hand-authored ones never share a path.
 Under `prefers-reduced-motion: reduce`:
 
 - the hero skips scatter/line/circle and renders directly at its resting arc
-- mouse parallax is disabled
+- scroll parallax is disabled
 - the verb stops rotating and shows the first verb
 - detail expansion is instant
 

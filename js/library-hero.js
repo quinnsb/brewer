@@ -11,7 +11,7 @@
    ============================================================ */
 
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js";
-import { openItem } from "./library.js?v=inline-details1";
+import { openItem } from "./library.js?v=centered-parallax1";
 
 const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 /* Keep in step with --card in css/library.css. */
@@ -176,15 +176,6 @@ export function initHero(items) {
   }
 
   const state = scatter.map((s) => ({ ...s, v: { x: 0, y: 0, r: 0, s: 0 } }));
-  let parallax = 0;
-  let parallaxV = 0;
-  let parallaxTarget = 0;
-
-  if (!REDUCED) {
-    addEventListener("mousemove", (e) => {
-      parallaxTarget = ((e.clientX / innerWidth) * 2 - 1) * 100;
-    });
-  }
 
   const geom = () => {
     const w = innerWidth;
@@ -229,6 +220,9 @@ export function initHero(items) {
          as a from-the-top value (as the reference does) double-counts half
          a viewport and drops the whole arc below the fold. */
       apexY: Math.min(h * 0.08, maxApexY),
+      /* The sticky stage supplies the depth cue: as the page advances, the
+         rainbow drifts upward more slowly than the document beneath it. */
+      parallaxTravel: Math.min(72, h * 0.09),
       spread,
       scale,
     };
@@ -244,9 +238,7 @@ export function initHero(items) {
 
     const g = geom();
     const p = progress();
-    ({ value: parallax, velocity: parallaxV } = springStep(
-      parallax, parallaxTarget, parallaxV, dt, 30, 20
-    ));
+    const scrollParallaxY = REDUCED ? 0 : -p * g.parallaxTravel;
 
     /* The headline lives at the centre of the ring, which is exactly where
        the arc sweeps through. Retire it as the arc forms rather than let
@@ -287,8 +279,10 @@ export function initHero(items) {
           offset: 0,
         });
         target = {
-          x: lerp(c.x, a.x + parallax, p),
-          y: lerp(c.y, a.y, p),
+          /* Both layouts are centred on x=0. Keeping scroll motion on the
+             vertical axis prevents the rainbow from wandering sideways. */
+          x: lerp(c.x, a.x, p),
+          y: lerp(c.y, a.y, p) + scrollParallaxY,
           rotation: lerp(c.rotation, a.rotation, p),
           scale: lerp(g.circleScale, g.scale, p),
           opacity: 1,

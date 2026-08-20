@@ -540,7 +540,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=inline-details1");
+  const { initHero } = await import("./library-hero.js?v=centered-parallax1");
   initHero(items);
 }
 
