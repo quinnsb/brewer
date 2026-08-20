@@ -128,7 +128,22 @@ export function initHero(items) {
   const startRotating = rotateVerb(slot, sr);
   const line = document.getElementById("hero-heading");
 
-  const nodes = items.map((item) => {
+  /* The shelf can grow without turning the hero into confetti. Keep its
+     original 32-card density and sample books across the full collection. */
+  const evenSample = (list, limit) => {
+    if (list.length <= limit) return list;
+    return Array.from({ length: limit }, (_, index) =>
+      list[Math.round(index * (list.length - 1) / (limit - 1))]
+    );
+  };
+  const heroItems = [
+    ...evenSample(items.filter((item) => item.type === "book"), 8),
+    ...evenSample(items.filter((item) => item.type === "album"), 12),
+    ...evenSample(items.filter((item) => item.type === "film"), 8),
+    ...evenSample(items.filter((item) => item.type === "other"), 4),
+  ];
+
+  const nodes = heroItems.map((item) => {
     const n = card(item);
     n.addEventListener("click", () => openItem(item.id));
     stage.append(n);

@@ -44,11 +44,18 @@ function coverImg(item, cls = "") {
 const label = (item) =>
   `${item.title}${item.creator ? `, ${item.creator}` : ""}${item.year ? `, ${item.year}` : ""}`;
 
+const visualVariant = (id, count) => {
+  let value = 0;
+  for (const char of id) value = (Math.imul(value, 31) + char.charCodeAt(0)) >>> 0;
+  return value % count;
+};
+
 const BUILDERS = {
   /* Generated spine at rest, real jacket when the book opens. */
   book(item) {
     const btn = el("button", "spine", { type: "button", "aria-label": label(item) });
     paint(btn, item);
+    btn.dataset.spineStyle = String(visualVariant(item.id, 5));
     btn.style.setProperty("--spine-w", `${spineWidth(item)}px`);
     btn.style.setProperty("--spine-h", `${spineHeight(item)}px`);
     const txt = el("span", "spine-txt");
@@ -58,9 +65,11 @@ const BUILDERS = {
     );
     btn.append(
       coverImg(item, "spine-cover"),
+      el("span", "spine-band"),
       el("span", "spine-rule top"),
       txt,
-      el("span", "spine-rule bot")
+      el("span", "spine-rule bot"),
+      el("span", "spine-mark")
     );
     return btn;
   },
@@ -102,10 +111,9 @@ const CONTAINER = {
       "aria-label": "Album covers",
     });
     const mount = el("div", "coverflow-stage");
-    const caption = el("div", "coverflow-caption", { "aria-live": "polite" });
-    caption.append(el("p", "coverflow-title"), el("p", "coverflow-meta"));
-    rail.append(mount, caption);
-    return { rail, mount, caption };
+    const status = el("p", "sr-only", { "aria-live": "polite" });
+    rail.append(mount, status);
+    return { rail, mount, status };
   },
   film() {
     const rail = el("div", "shelf-rail");
@@ -135,7 +143,7 @@ export function renderShelves(items, root) {
     lab.append(document.createTextNode(name), Object.assign(el("span"), { textContent: sub }));
     block.append(lab);
 
-    const { rail, mount, caption } = CONTAINER[type]();
+    const { rail, mount, status } = CONTAINER[type]();
     for (const item of list) {
       const node = BUILDERS[type](item);
       node.dataset.id = item.id;
@@ -143,7 +151,7 @@ export function renderShelves(items, root) {
     }
     block.append(rail);
     root.append(block);
-    if (type === "album") wireCoverflow(list, rail, mount, caption, root);
+    if (type === "album") wireCoverflow(list, rail, mount, status, root);
   }
 }
 
@@ -152,11 +160,9 @@ export function renderShelves(items, root) {
 const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const coverflowById = new Map();
 
-function wireCoverflow(items, frame, stage, caption, root) {
+function wireCoverflow(items, frame, stage, status, root) {
   const nodes = [...stage.querySelectorAll(".coverflow-slide")];
   const count = nodes.length;
-  const title = caption.querySelector(".coverflow-title");
-  const meta = caption.querySelector(".coverflow-meta");
   const gap = 0.05;
   let width = 0;
   let pos = 0;
@@ -182,8 +188,7 @@ function wireCoverflow(items, frame, stage, caption, root) {
     const hadSlideFocus = document.activeElement?.classList.contains("coverflow-slide");
     selected = index;
     const item = items[index];
-    title.textContent = item.title;
-    meta.textContent = `${item.creator || "Unknown"}${item.year ? ` · ${item.year}` : ""}  ${String(index + 1).padStart(2, "0")} / ${String(count).padStart(2, "0")}`;
+    status.textContent = `${item.title}, ${item.creator || "Unknown"}, ${index + 1} of ${count}`;
     nodes.forEach((node, i) => {
       node.setAttribute("aria-current", String(i === index));
       node.tabIndex = i === index ? 0 : -1;
@@ -258,10 +263,14 @@ function wireCoverflow(items, frame, stage, caption, root) {
         event.preventDefault();
         event.stopPropagation();
         goTo(index);
+      } else {
+        event.preventDefault();
+        event.stopPropagation();
+        openAlbumDialog(items[index], node);
       }
     });
     coverflowById.set(items[index].id, {
-      open: () => goTo(index, () => node.click()),
+      open: () => goTo(index, () => openAlbumDialog(items[index], node)),
     });
   });
 
@@ -341,6 +350,149 @@ function wireCoverflow(items, frame, stage, caption, root) {
   new ResizeObserver(measure).observe(frame);
 }
 
+/* ---------- details + personal ratings ---------- */
+
+const RATINGS_KEY = "quinn-library-ratings-v2";
+let ratings = {};
+try { ratings = JSON.parse(localStorage.getItem(RATINGS_KEY) || "{}"); }
+catch { ratings = {}; }
+
+function refreshRating(id) {
+  const value = Number(ratings[id] || 0);
+  document.querySelectorAll(`[data-rating-for="${CSS.escape(id)}"]`).forEach((group) => {
+    group.dataset.value = String(value);
+    group.querySelectorAll("button").forEach((button, index) => {
+      const active = index < value;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(index + 1 === value));
+    });
+    const output = group.parentElement.querySelector(".rating-value");
+    if (output) output.textContent = value ? `${value} of 5` : "Not rated";
+  });
+}
+
+function ratingControl(item) {
+  const wrap = el("div", "rating");
+  const heading = el("div", "rating-heading");
+  heading.append(
+    Object.assign(el("span"), { textContent: "Your rating" }),
+    Object.assign(el("output", "rating-value"), { textContent: "Not rated" })
+  );
+  const group = el("div", "rating-stars", {
+    role: "group",
+    "aria-label": `Rate ${item.title}`,
+    "data-rating-for": item.id,
+  });
+  for (let value = 1; value <= 5; value++) {
+    const button = el("button", "rating-star", {
+      type: "button",
+      "aria-label": `${value} star${value === 1 ? "" : "s"}`,
+      "aria-pressed": "false",
+    });
+    button.append(Object.assign(el("span", "", { "aria-hidden": "true" }), { textContent: "★" }));
+    button.addEventListener("click", () => {
+      ratings[item.id] = Number(ratings[item.id]) === value ? 0 : value;
+      localStorage.setItem(RATINGS_KEY, JSON.stringify(ratings));
+      refreshRating(item.id);
+    });
+    group.append(button);
+  }
+  wrap.append(heading, group);
+  requestAnimationFrame(() => refreshRating(item.id));
+  return wrap;
+}
+
+function factsNode(item) {
+  if (!item.facts?.length) return null;
+  const list = el("dl", "media-facts");
+  for (const [term, value] of item.facts) {
+    if (value === null || value === undefined || value === "") continue;
+    const row = el("div");
+    row.append(
+      Object.assign(el("dt"), { textContent: term }),
+      Object.assign(el("dd"), { textContent: String(value) })
+    );
+    list.append(row);
+  }
+  return list.childElementCount ? list : null;
+}
+
+let albumDialog = null;
+let albumDialogTrigger = null;
+
+function ensureAlbumDialog() {
+  if (albumDialog) return albumDialog;
+  albumDialog = el("dialog", "album-dialog", { "aria-labelledby": "album-dialog-title" });
+  albumDialog.addEventListener("click", (event) => {
+    if (event.target === albumDialog) albumDialog.close();
+  });
+  albumDialog.addEventListener("close", () => {
+    albumDialogTrigger?.focus({ preventScroll: true });
+    albumDialogTrigger = null;
+  });
+  document.body.append(albumDialog);
+  return albumDialog;
+}
+
+function openAlbumDialog(item, trigger) {
+  const dialog = ensureAlbumDialog();
+  if (dialog.open) dialog.close();
+  albumDialogTrigger = trigger;
+
+  const card = el("article", "album-dialog-card");
+  const close = el("button", "album-dialog-close", { type: "button", "aria-label": "Close details" });
+  close.textContent = "×";
+  close.addEventListener("click", () => dialog.close());
+
+  const imageWrap = el("div", "album-dialog-art");
+  const image = coverImg(item);
+  image.alt = `${item.title} album cover`;
+  image.loading = "eager";
+  imageWrap.append(image);
+
+  const body = el("div", "album-dialog-body");
+  const kicker = Object.assign(el("p", "album-dialog-kicker"), { textContent: "Album" });
+  const title = Object.assign(el("h2"), { id: "album-dialog-title", textContent: item.title });
+  const creator = Object.assign(el("p", "album-dialog-creator"), { textContent: item.creator || "Unknown artist" });
+  body.append(kicker, title, creator);
+  const facts = factsNode(item);
+  if (facts) body.append(facts);
+  body.append(ratingControl(item));
+  if (item.sourceUrl) {
+    const source = el("a", "src", { href: item.sourceUrl, target: "_blank", rel: "noopener" });
+    source.textContent = "View catalog source";
+    body.append(source);
+  }
+  card.append(close, imageWrap, body);
+  dialog.replaceChildren(card);
+  dialog.showModal();
+
+  if (REDUCED || !trigger?.getBoundingClientRect) return;
+  const from = trigger.getBoundingClientRect();
+  requestAnimationFrame(() => {
+    const to = image.getBoundingClientRect();
+    if (!from.width || !to.width) return;
+    image.style.opacity = "0";
+    const ghost = image.cloneNode();
+    ghost.className = "album-dialog-ghost";
+    Object.assign(ghost.style, {
+      left: `${from.left}px`, top: `${from.top}px`, width: `${from.width}px`, height: `${from.height}px`,
+    });
+    document.body.append(ghost);
+    const animation = ghost.animate([
+      { transform: "translate3d(0,0,0)", borderRadius: "2px" },
+      {
+        transform: `translate3d(${to.left - from.left}px, ${to.top - from.top}px, 0) scale(${to.width / from.width})`,
+        borderRadius: "12px",
+      },
+    ], { duration: 280, easing: "cubic-bezier(.2,.8,.2,1)", fill: "forwards" });
+    animation.finished.finally(() => {
+      image.style.opacity = "";
+      ghost.remove();
+    });
+  });
+}
+
 /* ---------- expand in place ---------- */
 
 let openId = null;
@@ -361,6 +513,10 @@ function detailNode(item) {
   body.append(
     Object.assign(el("p", "meta"), { textContent: bits.filter(Boolean).join("  ·  ") })
   );
+
+  const facts = factsNode(item);
+  if (facts) body.append(facts);
+  body.append(ratingControl(item));
 
   if (item.reviewHtml) {
     const r = el("div", "review");
@@ -399,6 +555,7 @@ export function wireExpansion(items, root) {
     if (!node) return;
     const item = byId.get(node.dataset.id);
     if (!item) return;
+    if (item.type === "album") return;
 
     const wasOpen = openId === item.id;
     closeAll(root);
@@ -418,7 +575,12 @@ export function wireExpansion(items, root) {
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && openId) closeAll(root);
+    if (e.key !== "Escape") return;
+    if (albumDialog?.open) {
+      albumDialog.close();
+      return;
+    }
+    if (openId) closeAll(root);
   });
 
   document.addEventListener("click", (e) => {

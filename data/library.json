@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T21:36:43.831Z",
+  "generatedAt": "2026-08-20T22:23:00.813Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -12,6 +12,24 @@
       "detail": "304 pages",
       "cover": "images/library/book-the-left-hand-of-darkness.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL59800W",
+      "facts": [
+        [
+          "Author",
+          "Ursula K. Le Guin"
+        ],
+        [
+          "First published",
+          1969
+        ],
+        [
+          "Pages",
+          304
+        ],
+        [
+          "Publisher",
+          "Harper & Row"
+        ]
+      ],
       "height": 0.498,
       "thickness": 0.913,
       "starred": false,
@@ -33,19 +51,37 @@
       "title": "Gravity's Rainbow",
       "creator": "Thomas Pynchon",
       "year": 1973,
-      "detail": null,
+      "detail": "810 pages",
       "cover": "images/library/book-gravitys-rainbow.jpg",
-      "sourceUrl": "https://books.apple.com/us/book/gravitys-rainbow/id534574459?uo=4",
+      "sourceUrl": "https://openlibrary.org/works/OL2636675W",
+      "facts": [
+        [
+          "Author",
+          "Thomas Pynchon"
+        ],
+        [
+          "First published",
+          1973
+        ],
+        [
+          "Pages",
+          810
+        ],
+        [
+          "Publisher",
+          "Penguin Random House"
+        ]
+      ],
       "height": 0.47,
       "thickness": 0.825,
       "starred": false,
       "finished": null,
       "reviewHtml": null,
-      "width": 658,
-      "height_px": 1000,
+      "width": 328,
+      "height_px": 500,
       "palette": {
-        "cover": "#372862",
-        "accent": "#351776",
+        "cover": "#243288",
+        "accent": "#1934be",
         "ink": "#f1ece3"
       }
     },
@@ -60,6 +96,24 @@
       "detail": "352 pages",
       "cover": "images/library/book-the-dispossessed.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL59863W",
+      "facts": [
+        [
+          "Author",
+          "Ursula K. Le Guin"
+        ],
+        [
+          "First published",
+          1974
+        ],
+        [
+          "Pages",
+          352
+        ],
+        [
+          "Publisher",
+          "HarperPrism"
+        ]
+      ],
       "height": 0.481,
       "thickness": 1.215,
       "starred": false,
@@ -84,6 +138,24 @@
       "detail": "353 pages",
       "cover": "images/library/book-blood-meridian.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL40879W",
+      "facts": [
+        [
+          "Author",
+          "Cormac McCarthy"
+        ],
+        [
+          "First published",
+          1985
+        ],
+        [
+          "Pages",
+          353
+        ],
+        [
+          "Publisher",
+          "Picador"
+        ]
+      ],
       "height": 0.612,
       "thickness": 1.012,
       "starred": false,
@@ -108,6 +180,24 @@
       "detail": "224 pages",
       "cover": "images/library/book-housekeeping.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL1875010W",
+      "facts": [
+        [
+          "Author",
+          "Marilynne Robinson"
+        ],
+        [
+          "First published",
+          1980
+        ],
+        [
+          "Pages",
+          224
+        ],
+        [
+          "Publisher",
+          "Picador"
+        ]
+      ],
       "height": 0.829,
       "thickness": 0.828,
       "starred": false,
@@ -132,6 +222,24 @@
       "detail": "304 pages",
       "cover": "images/library/book-the-sellout.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL17616758W",
+      "facts": [
+        [
+          "Author",
+          "Paul Beatty"
+        ],
+        [
+          "First published",
+          2015
+        ],
+        [
+          "Pages",
+          304
+        ],
+        [
+          "Publisher",
+          "imusti"
+        ]
+      ],
       "height": 0.704,
       "thickness": 1.246,
       "starred": false,
@@ -156,6 +264,24 @@
       "detail": "537 pages",
       "cover": "images/library/book-cloud-atlas.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL482454W",
+      "facts": [
+        [
+          "Author",
+          "David Mitchell"
+        ],
+        [
+          "First published",
+          2004
+        ],
+        [
+          "Pages",
+          537
+        ],
+        [
+          "Publisher",
+          "Hodder Ome"
+        ]
+      ],
       "height": 0.618,
       "thickness": 1.401,
       "starred": false,
@@ -180,6 +306,24 @@
       "detail": "359 pages",
       "cover": "images/library/book-a-visit-from-the-goon-squad.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL15026613W",
+      "facts": [
+        [
+          "Author",
+          "Jennifer Egan"
+        ],
+        [
+          "First published",
+          2010
+        ],
+        [
+          "Pages",
+          359
+        ],
+        [
+          "Publisher",
+          "Schoeffling + Co."
+        ]
+      ],
       "height": 0.825,
       "thickness": 1.191,
       "starred": false,
@@ -194,6 +338,864 @@
       }
     },
     {
+      "id": "book-piranesi",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Piranesi",
+      "creator": "Susanna Clarke",
+      "year": 2020,
+      "detail": "272 pages",
+      "cover": "images/library/book-piranesi.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL20893680W",
+      "facts": [
+        [
+          "Author",
+          "Susanna Clarke"
+        ],
+        [
+          "First published",
+          2020
+        ],
+        [
+          "Pages",
+          272
+        ],
+        [
+          "Publisher",
+          "Amsterdam"
+        ]
+      ],
+      "height": 0.554,
+      "thickness": 1.241,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 353,
+      "height_px": 500,
+      "palette": {
+        "cover": "#17110f",
+        "accent": "#311c0f",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-starclimber",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Starclimber",
+      "creator": "Kenneth Oppel",
+      "year": 2008,
+      "detail": "395 pages",
+      "cover": "images/library/book-starclimber.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL11690073W",
+      "facts": [
+        [
+          "Author",
+          "Kenneth Oppel"
+        ],
+        [
+          "First published",
+          2008
+        ],
+        [
+          "Pages",
+          395
+        ],
+        [
+          "Publisher",
+          "Beltz GmbH, Julius"
+        ]
+      ],
+      "height": 0.946,
+      "thickness": 0.978,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 300,
+      "height_px": 452,
+      "palette": {
+        "cover": "#42362c",
+        "accent": "#7a4222",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-never-let-me-go",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Never Let Me Go",
+      "creator": "Kazuo Ishiguro",
+      "year": 2005,
+      "detail": "319 pages",
+      "cover": "images/library/book-never-let-me-go.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL59038W",
+      "facts": [
+        [
+          "Author",
+          "Kazuo Ishiguro"
+        ],
+        [
+          "First published",
+          2005
+        ],
+        [
+          "Pages",
+          319
+        ],
+        [
+          "Publisher",
+          "Vintage Español"
+        ]
+      ],
+      "height": 0.747,
+      "thickness": 1.296,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 319,
+      "height_px": 500,
+      "palette": {
+        "cover": "#909456",
+        "accent": "#ffff95",
+        "ink": "#141210"
+      }
+    },
+    {
+      "id": "book-the-martian",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "The Martian",
+      "creator": "Andy Weir",
+      "year": 2011,
+      "detail": "407 pages",
+      "cover": "images/library/book-the-martian.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL17091839W",
+      "facts": [
+        [
+          "Author",
+          "Andy Weir"
+        ],
+        [
+          "First published",
+          2011
+        ],
+        [
+          "Pages",
+          407
+        ],
+        [
+          "Publisher",
+          "DreamLitt"
+        ]
+      ],
+      "height": 0.796,
+      "thickness": 0.918,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 321,
+      "height_px": 500,
+      "palette": {
+        "cover": "#772310",
+        "accent": "#d73205",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-the-bonesetters-daughter",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "The Bonesetter's Daughter",
+      "creator": "Amy Tan",
+      "year": 1990,
+      "detail": "358 pages",
+      "cover": "images/library/book-the-bonesetters-daughter.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL1843703W",
+      "facts": [
+        [
+          "Author",
+          "Amy Tan"
+        ],
+        [
+          "First published",
+          1990
+        ],
+        [
+          "Pages",
+          358
+        ],
+        [
+          "Publisher",
+          "Phoenix Books"
+        ]
+      ],
+      "height": 0.852,
+      "thickness": 1.373,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 331,
+      "height_px": 500,
+      "palette": {
+        "cover": "#34342a",
+        "accent": "#ead7ae",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-the-hobbit",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "The Hobbit",
+      "creator": "J.R.R. Tolkien",
+      "year": 1937,
+      "detail": "310 pages",
+      "cover": "images/library/book-the-hobbit.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL27482W",
+      "facts": [
+        [
+          "Author",
+          "J.R.R. Tolkien"
+        ],
+        [
+          "First published",
+          1937
+        ],
+        [
+          "Pages",
+          310
+        ],
+        [
+          "Publisher",
+          "Kedros Publishers"
+        ]
+      ],
+      "height": 0.637,
+      "thickness": 0.912,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 301,
+      "height_px": 500,
+      "palette": {
+        "cover": "#392c24",
+        "accent": "#7d3e2d",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-dawn",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Dawn",
+      "creator": "Octavia E. Butler",
+      "year": 1987,
+      "detail": "256 pages",
+      "cover": "images/library/book-dawn.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL35628W",
+      "facts": [
+        [
+          "Author",
+          "Octavia E. Butler"
+        ],
+        [
+          "First published",
+          1987
+        ],
+        [
+          "Pages",
+          256
+        ],
+        [
+          "Publisher",
+          "Heyne"
+        ]
+      ],
+      "height": 0.679,
+      "thickness": 0.757,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 284,
+      "height_px": 475,
+      "palette": {
+        "cover": "#585a52",
+        "accent": "#0c978a",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-moby-dick",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Moby-Dick",
+      "creator": "Herman Melville",
+      "year": 1851,
+      "detail": "452 pages",
+      "cover": "images/library/book-moby-dick.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL102749W",
+      "facts": [
+        [
+          "Author",
+          "Herman Melville"
+        ],
+        [
+          "First published",
+          1851
+        ],
+        [
+          "Pages",
+          452
+        ],
+        [
+          "Publisher",
+          "Dean & Son"
+        ]
+      ],
+      "height": 0.804,
+      "thickness": 1.364,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 327,
+      "height_px": 500,
+      "palette": {
+        "cover": "#675336",
+        "accent": "#cd9a3f",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-things-fall-apart",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Things Fall Apart",
+      "creator": "Chinua Achebe",
+      "year": 1958,
+      "detail": "192 pages",
+      "cover": "images/library/book-things-fall-apart.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL891786W",
+      "facts": [
+        [
+          "Author",
+          "Chinua Achebe"
+        ],
+        [
+          "First published",
+          1958
+        ],
+        [
+          "Pages",
+          192
+        ],
+        [
+          "Publisher",
+          "Suhrkamp Verlag"
+        ]
+      ],
+      "height": 0.86,
+      "thickness": 0.915,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 288,
+      "height_px": 500,
+      "palette": {
+        "cover": "#75694e",
+        "accent": "#d8c937",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-hatchet",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Hatchet",
+      "creator": "Gary Paulsen",
+      "year": 1986,
+      "detail": "192 pages",
+      "cover": "images/library/book-hatchet.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL8125760W",
+      "facts": [
+        [
+          "Author",
+          "Gary Paulsen"
+        ],
+        [
+          "First published",
+          1986
+        ],
+        [
+          "Pages",
+          192
+        ],
+        [
+          "Publisher",
+          "Fischer (Tb.), Frankfurt"
+        ]
+      ],
+      "height": 0.988,
+      "thickness": 0.848,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 330,
+      "height_px": 500,
+      "palette": {
+        "cover": "#697448",
+        "accent": "#d5e142",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-enders-game",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Ender's Game",
+      "creator": "Orson Scott Card",
+      "year": 1985,
+      "detail": "330 pages",
+      "cover": "images/library/book-enders-game.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL49488W",
+      "facts": [
+        [
+          "Author",
+          "Orson Scott Card"
+        ],
+        [
+          "First published",
+          1985
+        ],
+        [
+          "Pages",
+          330
+        ],
+        [
+          "Publisher",
+          "Fantastic Audio"
+        ]
+      ],
+      "height": 0.709,
+      "thickness": 0.662,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 316,
+      "height_px": 500,
+      "palette": {
+        "cover": "#39332e",
+        "accent": "#a38b46",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-the-fifth-season",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "The Fifth Season",
+      "creator": "N. K. Jemisin",
+      "year": 2015,
+      "detail": null,
+      "cover": "images/library/book-the-fifth-season.jpg",
+      "sourceUrl": "https://books.apple.com/us/book/the-fifth-season/id771220893?uo=4",
+      "facts": [
+        [
+          "Author",
+          "N. K. Jemisin"
+        ],
+        [
+          "Published",
+          "2015-08-04"
+        ]
+      ],
+      "height": 0.756,
+      "thickness": 0.716,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 664,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#2d352f",
+        "accent": "#84760f",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-a-day-of-fallen-night",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "A Day of Fallen Night",
+      "creator": "Samantha Shannon",
+      "year": 2023,
+      "detail": null,
+      "cover": "images/library/book-a-day-of-fallen-night.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL27820045W",
+      "facts": [
+        [
+          "Author",
+          "Samantha Shannon"
+        ],
+        [
+          "First published",
+          2023
+        ],
+        [
+          "Publisher",
+          "Bloomsbury Publishing USA"
+        ]
+      ],
+      "height": 0.579,
+      "thickness": 1.178,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 331,
+      "height_px": 500,
+      "palette": {
+        "cover": "#334345",
+        "accent": "#14879a",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-the-call-of-the-wild",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "The Call of the Wild",
+      "creator": "Jack London",
+      "year": 1903,
+      "detail": "128 pages",
+      "cover": "images/library/book-the-call-of-the-wild.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL14942956W",
+      "facts": [
+        [
+          "Author",
+          "Jack London"
+        ],
+        [
+          "First published",
+          1903
+        ],
+        [
+          "Pages",
+          128
+        ],
+        [
+          "Publisher",
+          "Happy House Books"
+        ]
+      ],
+      "height": 0.804,
+      "thickness": 1.325,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 313,
+      "height_px": 500,
+      "palette": {
+        "cover": "#52555d",
+        "accent": "#2c3852",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-the-stone-sky",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "The Stone Sky",
+      "creator": "N. K. Jemisin",
+      "year": 2017,
+      "detail": null,
+      "cover": "images/library/book-the-stone-sky.jpg",
+      "sourceUrl": "https://books.apple.com/us/book/the-stone-sky/id1182872712?uo=4",
+      "facts": [
+        [
+          "Author",
+          "N. K. Jemisin"
+        ],
+        [
+          "Published",
+          "2017-08-15"
+        ]
+      ],
+      "height": 0.851,
+      "thickness": 0.984,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 659,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#2a413a",
+        "accent": "#256a88",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-heart-of-darkness",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Heart of Darkness",
+      "creator": "Joseph Conrad",
+      "year": 1899,
+      "detail": "136 pages",
+      "cover": "images/library/book-heart-of-darkness.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL38663W",
+      "facts": [
+        [
+          "Author",
+          "Joseph Conrad"
+        ],
+        [
+          "First published",
+          1899
+        ],
+        [
+          "Pages",
+          136
+        ],
+        [
+          "Publisher",
+          "Pan Macmillan"
+        ]
+      ],
+      "height": 0.624,
+      "thickness": 1.443,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 309,
+      "height_px": 500,
+      "palette": {
+        "cover": "#2f2e40",
+        "accent": "#2e3059",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-pretty-as-a-picture",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Pretty as a Picture",
+      "creator": "Elizabeth Little",
+      "year": 2020,
+      "detail": "352 pages",
+      "cover": "images/library/book-pretty-as-a-picture.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL20648802W",
+      "facts": [
+        [
+          "Author",
+          "Elizabeth Little"
+        ],
+        [
+          "First published",
+          2020
+        ],
+        [
+          "Pages",
+          352
+        ],
+        [
+          "Publisher",
+          "Cengage Gale"
+        ]
+      ],
+      "height": 0.493,
+      "thickness": 1.284,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 144,
+      "height_px": 218,
+      "palette": {
+        "cover": "#2e3133",
+        "accent": "#291a1e",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-ready-player-two",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Ready Player Two",
+      "creator": "Ernest Cline",
+      "year": 2019,
+      "detail": "464 pages",
+      "cover": "images/library/book-ready-player-two.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL20907281W",
+      "facts": [
+        [
+          "Author",
+          "Ernest Cline"
+        ],
+        [
+          "First published",
+          2019
+        ],
+        [
+          "Pages",
+          464
+        ],
+        [
+          "Publisher",
+          "Century Books, Lincoln"
+        ]
+      ],
+      "height": 0.588,
+      "thickness": 1.494,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 500,
+      "height_px": 500,
+      "palette": {
+        "cover": "#192b2d",
+        "accent": "#54959d",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-normal-people",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Normal People",
+      "creator": "Sally Rooney",
+      "year": 2018,
+      "detail": "304 pages",
+      "cover": "images/library/book-normal-people.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL20150260W",
+      "facts": [
+        [
+          "Author",
+          "Sally Rooney"
+        ],
+        [
+          "First published",
+          2018
+        ],
+        [
+          "Pages",
+          304
+        ],
+        [
+          "Publisher",
+          "Random House Large Print"
+        ]
+      ],
+      "height": 0.94,
+      "thickness": 1.338,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 331,
+      "height_px": 500,
+      "palette": {
+        "cover": "#56715e",
+        "accent": "#83b247",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-feed",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Feed",
+      "creator": "M. T. Anderson",
+      "year": 2016,
+      "detail": "231 pages",
+      "cover": "images/library/book-feed.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL20037648W",
+      "facts": [
+        [
+          "Author",
+          "Pat R. Scales"
+        ],
+        [
+          "First published",
+          2016
+        ],
+        [
+          "Pages",
+          231
+        ]
+      ],
+      "height": 0.987,
+      "thickness": 1.287,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 328,
+      "height_px": 500,
+      "palette": {
+        "cover": "#a1a29e",
+        "accent": "#eeefea",
+        "ink": "#141210"
+      }
+    },
+    {
+      "id": "book-the-fellowship-of-the-ring",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "The Fellowship of the Ring",
+      "creator": "J.R.R. Tolkien",
+      "year": 1954,
+      "detail": "1193 pages",
+      "cover": "images/library/book-the-fellowship-of-the-ring.jpg",
+      "sourceUrl": "https://openlibrary.org/works/OL27448W",
+      "facts": [
+        [
+          "Author",
+          "J.R.R. Tolkien"
+        ],
+        [
+          "First published",
+          1954
+        ],
+        [
+          "Pages",
+          1193
+        ],
+        [
+          "Publisher",
+          "RUSCONI"
+        ]
+      ],
+      "height": 0.711,
+      "thickness": 0.806,
+      "starred": false,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 269,
+      "height_px": 500,
+      "palette": {
+        "cover": "#381312",
+        "accent": "#4f0307",
+        "ink": "#f1ece3"
+      }
+    },
+    {
       "id": "album-coloring-book",
       "type": "album",
       "shape": "sleeve",
@@ -201,9 +1203,31 @@
       "title": "Coloring Book",
       "creator": "Chance the Rapper",
       "year": 2016,
-      "detail": "Album",
+      "detail": "1 tracks",
       "cover": "images/library/album-coloring-book.jpg",
       "sourceUrl": "https://musicbrainz.org/release-group/2e93b949-f480-475b-a1bd-bbf9723ba13d",
+      "facts": [
+        [
+          "Artist",
+          "Chance the Rapper"
+        ],
+        [
+          "Released",
+          "2016-05-13"
+        ],
+        [
+          "Tracks",
+          14
+        ],
+        [
+          "Genre",
+          "Hip-hop / gospel"
+        ],
+        [
+          "Label",
+          "Self-released"
+        ]
+      ],
       "height": 0.531,
       "thickness": 1.224,
       "starred": false,
@@ -225,9 +1249,31 @@
       "title": "Where the Light Is: John Mayer Live in Los Angeles",
       "creator": "John Mayer",
       "year": 2008,
-      "detail": "Album",
+      "detail": "15 tracks",
       "cover": "images/library/album-where-the-light-is-john-mayer-live-in-los-angeles.jpg",
       "sourceUrl": "https://musicbrainz.org/release-group/7c12144f-8c2a-30e5-a635-13cd3f3eadec",
+      "facts": [
+        [
+          "Artist",
+          "John Mayer"
+        ],
+        [
+          "Released",
+          "2008-07-01"
+        ],
+        [
+          "Tracks",
+          22
+        ],
+        [
+          "Genre",
+          "Blues rock"
+        ],
+        [
+          "Label",
+          "Columbia"
+        ]
+      ],
       "height": 0.656,
       "thickness": 1.23,
       "starred": false,
@@ -252,6 +1298,28 @@
       "detail": "16 tracks",
       "cover": "images/library/album-in-between-dreams.jpg",
       "sourceUrl": "https://music.apple.com/us/album/in-between-dreams-bonus-track-version/1440857781?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Jack Johnson"
+        ],
+        [
+          "Released",
+          "2005-03-01"
+        ],
+        [
+          "Tracks",
+          14
+        ],
+        [
+          "Genre",
+          "Singer-songwriter"
+        ],
+        [
+          "Label",
+          "Brushfire"
+        ]
+      ],
       "height": 0.694,
       "thickness": 1.018,
       "starred": false,
@@ -276,6 +1344,28 @@
       "detail": "14 tracks",
       "cover": "images/library/album-blonde-on-blonde.jpg",
       "sourceUrl": "https://music.apple.com/us/album/blonde-on-blonde/178049863?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Bob Dylan"
+        ],
+        [
+          "Released",
+          "1966-06-20"
+        ],
+        [
+          "Tracks",
+          14
+        ],
+        [
+          "Genre",
+          "Rock"
+        ],
+        [
+          "Label",
+          "Columbia"
+        ]
+      ],
       "height": 0.631,
       "thickness": 1.485,
       "starred": false,
@@ -300,6 +1390,28 @@
       "detail": "5 tracks",
       "cover": "images/library/album-kind-of-blue.jpg",
       "sourceUrl": "https://music.apple.com/us/album/kind-of-blue/268443092?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Miles Davis"
+        ],
+        [
+          "Released",
+          "1959-08-17"
+        ],
+        [
+          "Tracks",
+          5
+        ],
+        [
+          "Genre",
+          "Modal jazz"
+        ],
+        [
+          "Label",
+          "Columbia"
+        ]
+      ],
       "height": 0.931,
       "thickness": 0.958,
       "starred": false,
@@ -324,6 +1436,28 @@
       "detail": "11 tracks",
       "cover": "images/library/album-transatlanticism.jpg",
       "sourceUrl": "https://music.apple.com/us/album/transatlanticism/718938040?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Death Cab for Cutie"
+        ],
+        [
+          "Released",
+          "2003-10-07"
+        ],
+        [
+          "Tracks",
+          11
+        ],
+        [
+          "Genre",
+          "Indie rock"
+        ],
+        [
+          "Label",
+          "Barsuk"
+        ]
+      ],
       "height": 0.544,
       "thickness": 0.947,
       "starred": false,
@@ -348,6 +1482,28 @@
       "detail": "10 tracks",
       "cover": "images/library/album-reading-writing-and-arithmetic.jpg",
       "sourceUrl": "https://music.apple.com/us/album/reading-writing-and-arithmetic/1707465605?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "The Sundays"
+        ],
+        [
+          "Released",
+          "1990-01-15"
+        ],
+        [
+          "Tracks",
+          10
+        ],
+        [
+          "Genre",
+          "Jangle pop"
+        ],
+        [
+          "Label",
+          "Rough Trade"
+        ]
+      ],
       "height": 0.804,
       "thickness": 1.144,
       "starred": false,
@@ -372,6 +1528,28 @@
       "detail": "11 tracks",
       "cover": "images/library/album-night-train.jpg",
       "sourceUrl": "https://music.apple.com/us/album/night-train/1440761118?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Oscar Peterson Trio"
+        ],
+        [
+          "Released",
+          "1963-01-01"
+        ],
+        [
+          "Tracks",
+          11
+        ],
+        [
+          "Genre",
+          "Jazz"
+        ],
+        [
+          "Label",
+          "Verve"
+        ]
+      ],
       "height": 0.527,
       "thickness": 1.377,
       "starred": false,
@@ -396,6 +1574,28 @@
       "detail": "11 tracks",
       "cover": "images/library/album-a-boy-named-charlie-brown.jpg",
       "sourceUrl": "https://music.apple.com/us/album/a-boy-named-charlie-brown-original-1969-movie-soundtrack/1577461095?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Vince Guaraldi Trio"
+        ],
+        [
+          "Released",
+          "1969-12-04"
+        ],
+        [
+          "Tracks",
+          11
+        ],
+        [
+          "Genre",
+          "Jazz soundtrack"
+        ],
+        [
+          "Label",
+          "Fantasy"
+        ]
+      ],
       "height": 0.635,
       "thickness": 1.273,
       "starred": false,
@@ -420,6 +1620,28 @@
       "detail": "15 tracks",
       "cover": "images/library/album-gordon.jpg",
       "sourceUrl": "https://music.apple.com/us/album/gordon/283789996?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Barenaked Ladies"
+        ],
+        [
+          "Released",
+          "1992-07-28"
+        ],
+        [
+          "Tracks",
+          15
+        ],
+        [
+          "Genre",
+          "Alternative rock"
+        ],
+        [
+          "Label",
+          "Sire / Reprise"
+        ]
+      ],
       "height": 0.931,
       "thickness": 1.385,
       "starred": false,
@@ -444,6 +1666,28 @@
       "detail": "44 tracks",
       "cover": "images/library/album-come-away-with-me.jpg",
       "sourceUrl": "https://music.apple.com/us/album/come-away-with-me-super-deluxe-edition/1625058458?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Norah Jones"
+        ],
+        [
+          "Released",
+          "2002-02-26"
+        ],
+        [
+          "Tracks",
+          14
+        ],
+        [
+          "Genre",
+          "Jazz pop"
+        ],
+        [
+          "Label",
+          "Blue Note"
+        ]
+      ],
       "height": 0.81,
       "thickness": 1.23,
       "starred": false,
@@ -468,6 +1712,28 @@
       "detail": "10 tracks",
       "cover": "images/library/album-mr-finish-line.jpg",
       "sourceUrl": "https://music.apple.com/us/album/mr-finish-line/1877223421?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Vulfpeck"
+        ],
+        [
+          "Released",
+          "2017-11-07"
+        ],
+        [
+          "Tracks",
+          10
+        ],
+        [
+          "Genre",
+          "Funk"
+        ],
+        [
+          "Label",
+          "Vulf Records"
+        ]
+      ],
       "height": 0.763,
       "thickness": 1.419,
       "starred": false,
@@ -492,6 +1758,32 @@
       "detail": "Film",
       "cover": "images/library/film-there-will-be-blood.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/There_Will_Be_Blood",
+      "facts": [
+        [
+          "Director",
+          "Paul Thomas Anderson"
+        ],
+        [
+          "Writer",
+          "Paul Thomas Anderson"
+        ],
+        [
+          "Producer",
+          "Paul Thomas Anderson, JoAnne Sellar, Daniel Lupi"
+        ],
+        [
+          "Starring",
+          "Daniel Day-Lewis, Paul Dano, Kevin J. O'Connor"
+        ],
+        [
+          "Released",
+          "2007-12-26"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
       "height": 0.971,
       "thickness": 0.972,
       "starred": false,
@@ -516,6 +1808,32 @@
       "detail": "Film",
       "cover": "images/library/film-in-the-mood-for-love.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/In_the_Mood_for_Love",
+      "facts": [
+        [
+          "Director",
+          "Wong Kar-wai"
+        ],
+        [
+          "Writer",
+          "Wong Kar-wai"
+        ],
+        [
+          "Producer",
+          "Wong Kar-wai"
+        ],
+        [
+          "Starring",
+          "Maggie Cheung, Tony Leung, Joe Cheung Tung-joe"
+        ],
+        [
+          "Released",
+          "2000-05-20"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
       "height": 0.99,
       "thickness": 1.039,
       "starred": false,
@@ -540,6 +1858,32 @@
       "detail": "Film",
       "cover": "images/library/film-paris-texas-film.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Paris%2C_Texas_(film)",
+      "facts": [
+        [
+          "Director",
+          "Wim Wenders"
+        ],
+        [
+          "Writer",
+          "Sam Shepard, L. M. Kit Carson"
+        ],
+        [
+          "Producer",
+          "Anatole Dauman"
+        ],
+        [
+          "Starring",
+          "Harry Dean Stanton, Nastassja Kinski, Dean Stockwell"
+        ],
+        [
+          "Released",
+          "1984-05-19"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
       "height": 0.943,
       "thickness": 1.205,
       "starred": false,
@@ -564,6 +1908,32 @@
       "detail": "Film",
       "cover": "images/library/film-burning-2018-film.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Burning_(2018_film)",
+      "facts": [
+        [
+          "Director",
+          "Lee Chang-dong"
+        ],
+        [
+          "Writer",
+          "Lee Chang-dong"
+        ],
+        [
+          "Producer",
+          "Lee Chang-dong"
+        ],
+        [
+          "Starring",
+          "Yoo Ah-in, Steven Yeun, Jeon Jong-seo"
+        ],
+        [
+          "Released",
+          "2018-05-17"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
       "height": 0.615,
       "thickness": 1.351,
       "starred": false,
@@ -588,6 +1958,32 @@
       "detail": "Film",
       "cover": "images/library/film-the-master-2012-film.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/The_Master_(2012_film)",
+      "facts": [
+        [
+          "Director",
+          "Paul Thomas Anderson"
+        ],
+        [
+          "Writer",
+          "Paul Thomas Anderson"
+        ],
+        [
+          "Producer",
+          "Paul Thomas Anderson, Megan Ellison, Daniel Lupi, JoAnne Sellar"
+        ],
+        [
+          "Starring",
+          "Joaquin Phoenix, Philip Seymour Hoffman, Amy Adams"
+        ],
+        [
+          "Released",
+          "2012-09-11"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
       "height": 0.55,
       "thickness": 0.625,
       "starred": false,
@@ -612,6 +2008,32 @@
       "detail": "Film",
       "cover": "images/library/film-moonlight.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Moonlight",
+      "facts": [
+        [
+          "Director",
+          "Barry Jenkins"
+        ],
+        [
+          "Writer",
+          "Barry Jenkins"
+        ],
+        [
+          "Producer",
+          "Adele Romanski, Dede Gardner, Jeremy Kleiner"
+        ],
+        [
+          "Starring",
+          "Trevante Rhodes, André Holland, Janelle Monáe"
+        ],
+        [
+          "Released",
+          "2016-09-02"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
       "height": 0.875,
       "thickness": 1.12,
       "starred": false,
@@ -636,6 +2058,32 @@
       "detail": "Film",
       "cover": "images/library/film-chungking-express.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Chungking_Express",
+      "facts": [
+        [
+          "Director",
+          "Wong Kar-wai"
+        ],
+        [
+          "Writer",
+          "Wong Kar-wai"
+        ],
+        [
+          "Producer",
+          "Jeffrey Lau"
+        ],
+        [
+          "Starring",
+          "Brigitte Lin, Tony Leung, Faye Wong"
+        ],
+        [
+          "Released",
+          "1994-07-14"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
       "height": 0.632,
       "thickness": 0.707,
       "starred": false,
@@ -660,6 +2108,32 @@
       "detail": "Film",
       "cover": "images/library/film-first-reformed.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/First_Reformed",
+      "facts": [
+        [
+          "Director",
+          "Paul Schrader"
+        ],
+        [
+          "Writer",
+          "Paul Schrader"
+        ],
+        [
+          "Producer",
+          "Christine Vachon"
+        ],
+        [
+          "Starring",
+          "Ethan Hawke, Amanda Seyfried, Michael Gaston"
+        ],
+        [
+          "Released",
+          "2017"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
       "height": 0.966,
       "thickness": 1.131,
       "starred": false,
@@ -684,6 +2158,24 @@
       "detail": "824 tracks",
       "cover": "images/library/other-99-invisible.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/99-invisible/id394775318?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "Roman Mars"
+        ],
+        [
+          "Released",
+          "2026-08-25"
+        ],
+        [
+          "Episodes",
+          824
+        ],
+        [
+          "Genre",
+          "Design"
+        ]
+      ],
       "height": 0.679,
       "thickness": 1.275,
       "starred": false,
@@ -708,6 +2200,24 @@
       "detail": "687 tracks",
       "cover": "images/library/other-design-matters-with-debbie-millman.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/design-matters-with-debbie-millman/id328074695?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "Design Matters Media"
+        ],
+        [
+          "Released",
+          "2026-08-17"
+        ],
+        [
+          "Episodes",
+          687
+        ],
+        [
+          "Genre",
+          "Design"
+        ]
+      ],
       "height": 0.839,
       "thickness": 0.748,
       "starred": false,
@@ -732,6 +2242,24 @@
       "detail": "374 tracks",
       "cover": "images/library/other-song-exploder.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/song-exploder/id788236947?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "Hrishikesh Hirway"
+        ],
+        [
+          "Released",
+          "2026-08-19"
+        ],
+        [
+          "Episodes",
+          374
+        ],
+        [
+          "Genre",
+          "Music"
+        ]
+      ],
       "height": 0.876,
       "thickness": 1.372,
       "starred": false,
@@ -756,6 +2284,24 @@
       "detail": "974 tracks",
       "cover": "images/library/other-the-rest-is-history.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/the-rest-is-history/id1537788786?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "Goalhanger"
+        ],
+        [
+          "Released",
+          "2026-08-26"
+        ],
+        [
+          "Episodes",
+          974
+        ],
+        [
+          "Genre",
+          "History"
+        ]
+      ],
       "height": 0.684,
       "thickness": 1.23,
       "starred": false,
