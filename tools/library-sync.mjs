@@ -131,6 +131,18 @@ const SEED = {
     "Design Matters with Debbie Millman",
     "Song Exploder",
     "The Rest Is History",
+    "The Big Picture The Ringer",
+    "Radio Ambulante Daniel Alarcon",
+    "The Anthropocene Reviewed John Green",
+    "My Brother My Brother and Me",
+    "The Adventure Zone",
+    "Wonderful Rachel and Griffin McElroy",
+    "The Besties Video Games",
+    {
+      query: "Revisionist History Malcolm Gladwell",
+      title: "Revisionist History",
+      creator: "Pushkin Industries",
+    },
   ],
 };
 

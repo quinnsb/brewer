@@ -14,6 +14,7 @@ export function mergeItem(raw, noteText, hasOverrideCover) {
     creator: data.creator ?? raw.creator,
     year: data.year ?? raw.year,
     starred: data.starred === true,
+    rating: data.rating ?? raw.rating ?? null,
     finished: data.finished ?? null,
     reviewHtml: html || null,
   };

@@ -55,3 +55,8 @@ test("finished is null when absent", () => {
   assert.equal(mergeItem(RAW, null, false).finished, null);
   assert.equal(mergeItem(RAW, "---\nfinished: 2026-03\n---\n", false).finished, "2026-03");
 });
+
+test("rating is author-owned frontmatter and defaults to null", () => {
+  assert.equal(mergeItem(RAW, null, false).rating, null);
+  assert.equal(mergeItem(RAW, "---\nrating: 4.5\n---\n", false).rating, 4.5);
+});

@@ -11,12 +11,14 @@
    ============================================================ */
 
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js";
-import { openItem } from "./library.js?v=centered-parallax1";
+import { openItem } from "./library.js?v=feedback4";
 
-const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const REDUCED =
+  matchMedia("(prefers-reduced-motion: reduce)").matches ||
+  new URLSearchParams(location.search).get("motion") === "reduce";
 /* Keep in step with --card in css/library.css. */
 const CARD = 72;
-const VERBS = ["read", "listen to", "watch", "play", "whatever"];
+const VERBS = ["read", "listen to", "watch"];
 
 function card(item) {
   const btn = document.createElement("button");
@@ -25,29 +27,14 @@ function card(item) {
   btn.setAttribute("aria-label", item.title);
   btn.dataset.id = item.id;
 
-  const flip = document.createElement("span");
-  flip.className = "hcard-flip";
-
-  const front = document.createElement("span");
-  front.className = "hcard-face";
+  const media = document.createElement("span");
+  media.className = "hcard-media";
   const img = document.createElement("img");
   img.src = item.cover;
   img.alt = "";
   img.loading = "lazy";
-  front.append(img);
-
-  const back = document.createElement("span");
-  back.className = "hcard-face hcard-back";
-  const t = document.createElement("span");
-  t.className = "t";
-  t.textContent = item.title;
-  const c = document.createElement("span");
-  c.className = "c";
-  c.textContent = [item.creator, item.year].filter(Boolean).join(", ");
-  back.append(t, c);
-
-  flip.append(front, back);
-  btn.append(flip);
+  media.append(img);
+  btn.append(media);
   return btn;
 }
 
@@ -115,6 +102,7 @@ function rotateVerb(slot, sr) {
 
 export function initHero(items) {
   const stage = document.getElementById("hero-stage");
+  const cutoff = document.getElementById("hero-cutoff");
   const slot = document.getElementById("verb-slot");
   if (!stage || !slot) return;
 
@@ -162,17 +150,15 @@ export function initHero(items) {
   /* Cards land first, then the headline blurs in at the centre of the ring
      they just formed. Rotating the verb before that would animate type
      nobody can see yet. */
-  let phase = REDUCED ? "circle" : "scatter";
+  let phase = "circle";
   if (REDUCED) {
     line.classList.add("is-in");
     startRotating();
   } else {
-    setTimeout(() => (phase = "line"), 500);
     setTimeout(() => {
-      phase = "circle";
       line.classList.add("is-in");
-      setTimeout(startRotating, 1200);
-    }, 2500);
+      setTimeout(startRotating, 1100);
+    }, 220);
   }
 
   const state = scatter.map((s) => ({ ...s, v: { x: 0, y: 0, r: 0, s: 0 } }));
@@ -180,7 +166,7 @@ export function initHero(items) {
   const geom = () => {
     const w = innerWidth;
     const h = innerHeight;
-    const mobile = w < 768;
+    const mobile = w < 768 || h < 600;
     const spread = 150;
     const scale = mobile ? 0.9 : 1.25;
 
@@ -211,8 +197,8 @@ export function initHero(items) {
 
     return {
       mobile,
-      circleR: Math.min(mobile ? w * 0.39 : Math.min(w, h) * 0.35, h * 0.35, 350),
-      circleScale: mobile ? 0.82 : 1,
+      circleR: Math.min(mobile ? w * 0.42 : Math.min(w, h) * 0.35, h * 0.35, 350),
+      circleScale: mobile ? 0.58 : 1,
       arcR,
       /* Distance from the STAGE CENTRE down to the arc apex, not from the
          top of the viewport. Cards are positioned at top:50%/left:50%, so
@@ -232,6 +218,7 @@ export function initHero(items) {
   const progress = () => (REDUCED ? 1 : Math.min(Math.max(scrollY / innerHeight, 0), 1));
 
   let last = performance.now();
+  let initialized = false;
   function frame(now) {
     const dt = Math.min((now - last) / 1000, 1 / 30);
     last = now;
@@ -239,6 +226,9 @@ export function initHero(items) {
     const g = geom();
     const p = progress();
     const scrollParallaxY = REDUCED ? 0 : -p * g.parallaxTravel;
+    const release = REDUCED ? 0 : Math.min(Math.max((p - 0.7) / 0.3, 0), 1);
+    const easedRelease = release * release * (3 - 2 * release);
+    if (cutoff) cutoff.style.transform = `translateY(${((1 - easedRelease) * 100).toFixed(2)}%)`;
 
     /* The headline lives at the centre of the ring, which is exactly where
        the arc sweeps through. Retire it as the arc forms rather than let
@@ -293,6 +283,17 @@ export function initHero(items) {
       if (REDUCED) {
         Object.assign(s, target);
       } else {
+        /* Paint the ring at its real starting geometry, then fade it in. The
+           old scatter and line transit left covers crossing the headline for
+           several seconds on narrow screens. */
+        if (!initialized) {
+          s.x = target.x;
+          s.y = target.y;
+          s.rotation = target.rotation;
+          s.scale = target.scale;
+          s.opacity = 0;
+          s.v = { x: 0, y: 0, r: 0, s: 0 };
+        }
         ({ value: s.x, velocity: s.v.x } = springStep(s.x, target.x, s.v.x, dt, 40, 15));
         ({ value: s.y, velocity: s.v.y } = springStep(s.y, target.y, s.v.y, dt, 40, 15));
         ({ value: s.rotation, velocity: s.v.r } = springStep(s.rotation, target.rotation, s.v.r, dt, 40, 15));
@@ -306,6 +307,7 @@ export function initHero(items) {
       nodes[i].style.opacity = s.opacity.toFixed(3);
     }
 
+    initialized = true;
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);

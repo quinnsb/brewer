@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T22:23:00.813Z",
+  "generatedAt": "2026-08-21T00:13:37.476Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -33,6 +33,7 @@
       "height": 0.498,
       "thickness": 0.913,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 302,
@@ -75,6 +76,7 @@
       "height": 0.47,
       "thickness": 0.825,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 328,
@@ -117,6 +119,7 @@
       "height": 0.481,
       "thickness": 1.215,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 312,
@@ -159,6 +162,7 @@
       "height": 0.612,
       "thickness": 1.012,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 307,
@@ -201,6 +205,7 @@
       "height": 0.829,
       "thickness": 0.828,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 334,
@@ -243,6 +248,7 @@
       "height": 0.704,
       "thickness": 1.246,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 333,
@@ -285,6 +291,7 @@
       "height": 0.618,
       "thickness": 1.401,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 321,
@@ -327,6 +334,7 @@
       "height": 0.825,
       "thickness": 1.191,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 185,
@@ -369,6 +377,7 @@
       "height": 0.554,
       "thickness": 1.241,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 353,
@@ -411,6 +420,7 @@
       "height": 0.946,
       "thickness": 0.978,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 300,
@@ -453,6 +463,7 @@
       "height": 0.747,
       "thickness": 1.296,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 319,
@@ -495,6 +506,7 @@
       "height": 0.796,
       "thickness": 0.918,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 321,
@@ -537,6 +549,7 @@
       "height": 0.852,
       "thickness": 1.373,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 331,
@@ -579,6 +592,7 @@
       "height": 0.637,
       "thickness": 0.912,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 301,
@@ -621,6 +635,7 @@
       "height": 0.679,
       "thickness": 0.757,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 284,
@@ -663,6 +678,7 @@
       "height": 0.804,
       "thickness": 1.364,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 327,
@@ -705,6 +721,7 @@
       "height": 0.86,
       "thickness": 0.915,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 288,
@@ -747,6 +764,7 @@
       "height": 0.988,
       "thickness": 0.848,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 330,
@@ -789,6 +807,7 @@
       "height": 0.709,
       "thickness": 0.662,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 316,
@@ -823,6 +842,7 @@
       "height": 0.756,
       "thickness": 0.716,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 664,
@@ -861,6 +881,7 @@
       "height": 0.579,
       "thickness": 1.178,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 331,
@@ -903,6 +924,7 @@
       "height": 0.804,
       "thickness": 1.325,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 313,
@@ -937,6 +959,7 @@
       "height": 0.851,
       "thickness": 0.984,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 659,
@@ -979,6 +1002,7 @@
       "height": 0.624,
       "thickness": 1.443,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 309,
@@ -1021,6 +1045,7 @@
       "height": 0.493,
       "thickness": 1.284,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 144,
@@ -1063,6 +1088,7 @@
       "height": 0.588,
       "thickness": 1.494,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 500,
@@ -1105,6 +1131,7 @@
       "height": 0.94,
       "thickness": 1.338,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 331,
@@ -1143,6 +1170,7 @@
       "height": 0.987,
       "thickness": 1.287,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 328,
@@ -1185,6 +1213,7 @@
       "height": 0.711,
       "thickness": 0.806,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 269,
@@ -1231,6 +1260,7 @@
       "height": 0.531,
       "thickness": 1.224,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 500,
@@ -1277,6 +1307,7 @@
       "height": 0.656,
       "thickness": 1.23,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 500,
@@ -1323,6 +1354,7 @@
       "height": 0.694,
       "thickness": 1.018,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 900,
@@ -1369,6 +1401,7 @@
       "height": 0.631,
       "thickness": 1.485,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 1000,
@@ -1415,6 +1448,7 @@
       "height": 0.931,
       "thickness": 0.958,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 600,
@@ -1461,6 +1495,7 @@
       "height": 0.544,
       "thickness": 0.947,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 1000,
@@ -1507,6 +1542,7 @@
       "height": 0.804,
       "thickness": 1.144,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 1000,
@@ -1553,6 +1589,7 @@
       "height": 0.527,
       "thickness": 1.377,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 1000,
@@ -1599,6 +1636,7 @@
       "height": 0.635,
       "thickness": 1.273,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 1000,
@@ -1645,6 +1683,7 @@
       "height": 0.931,
       "thickness": 1.385,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 1000,
@@ -1691,6 +1730,7 @@
       "height": 0.81,
       "thickness": 1.23,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 1000,
@@ -1737,6 +1777,7 @@
       "height": 0.763,
       "thickness": 1.419,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 1000,
@@ -1787,6 +1828,7 @@
       "height": 0.971,
       "thickness": 0.972,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 250,
@@ -1837,6 +1879,7 @@
       "height": 0.99,
       "thickness": 1.039,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 265,
@@ -1887,6 +1930,7 @@
       "height": 0.943,
       "thickness": 1.205,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 255,
@@ -1937,6 +1981,7 @@
       "height": 0.615,
       "thickness": 1.351,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 260,
@@ -1987,6 +2032,7 @@
       "height": 0.55,
       "thickness": 0.625,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 220,
@@ -2037,6 +2083,7 @@
       "height": 0.875,
       "thickness": 1.12,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 960,
@@ -2087,6 +2134,7 @@
       "height": 0.632,
       "thickness": 0.707,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 259,
@@ -2137,6 +2185,7 @@
       "height": 0.966,
       "thickness": 1.131,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 220,
@@ -2179,6 +2228,7 @@
       "height": 0.679,
       "thickness": 1.275,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 1000,
@@ -2221,6 +2271,7 @@
       "height": 0.839,
       "thickness": 0.748,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 1000,
@@ -2263,6 +2314,7 @@
       "height": 0.876,
       "thickness": 1.372,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 1000,
@@ -2305,6 +2357,7 @@
       "height": 0.684,
       "thickness": 1.23,
       "starred": false,
+      "rating": null,
       "finished": null,
       "reviewHtml": null,
       "width": 1000,
@@ -2312,6 +2365,350 @@
       "palette": {
         "cover": "#6e4e58",
         "accent": "#8e1f44",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "other-the-big-picture",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "The Big Picture",
+      "creator": "The Ringer",
+      "year": 2026,
+      "detail": "962 tracks",
+      "cover": "images/library/other-the-big-picture.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/the-big-picture/id1439252196?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "The Ringer"
+        ],
+        [
+          "Released",
+          "2026-08-18"
+        ],
+        [
+          "Episodes",
+          962
+        ],
+        [
+          "Genre",
+          "TV & Film"
+        ]
+      ],
+      "height": 0.992,
+      "thickness": 0.793,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#186156",
+        "accent": "#0577fb",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "other-radio-ambulante",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "Radio Ambulante",
+      "creator": "My Cultura, Radio Ambulante and iHeartPodcasts",
+      "year": 2026,
+      "detail": "367 tracks",
+      "cover": "images/library/other-radio-ambulante.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/radio-ambulante/id527614348?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "My Cultura, Radio Ambulante and iHeartPodcasts"
+        ],
+        [
+          "Released",
+          "2026-07-14"
+        ],
+        [
+          "Episodes",
+          367
+        ],
+        [
+          "Genre",
+          "Documentary"
+        ]
+      ],
+      "height": 0.749,
+      "thickness": 0.67,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#6a8d91",
+        "accent": "#a7e0e4",
+        "ink": "#141210"
+      }
+    },
+    {
+      "id": "other-the-anthropocene-reviewed",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "The Anthropocene Reviewed",
+      "creator": "Complexly, John Green",
+      "year": 2021,
+      "detail": "37 tracks",
+      "cover": "images/library/other-the-anthropocene-reviewed.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/the-anthropocene-reviewed/id1342003491?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "Complexly, John Green"
+        ],
+        [
+          "Released",
+          "2021-08-26"
+        ],
+        [
+          "Episodes",
+          37
+        ],
+        [
+          "Genre",
+          "Personal Journals"
+        ]
+      ],
+      "height": 0.509,
+      "thickness": 1.184,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#1d1e3b",
+        "accent": "#121a44",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "other-my-brother-my-brother-and-me",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "My Brother, My Brother And Me",
+      "creator": "The McElroys",
+      "year": 2026,
+      "detail": "842 tracks",
+      "cover": "images/library/other-my-brother-my-brother-and-me.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/my-brother-my-brother-and-me/id367330921?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "The McElroys"
+        ],
+        [
+          "Released",
+          "2026-08-17"
+        ],
+        [
+          "Episodes",
+          842
+        ],
+        [
+          "Genre",
+          "Comedy"
+        ]
+      ],
+      "height": 0.725,
+      "thickness": 0.922,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#81746f",
+        "accent": "#d46e54",
+        "ink": "#141210"
+      }
+    },
+    {
+      "id": "other-the-adventure-zone",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "The Adventure Zone",
+      "creator": "The McElroys",
+      "year": 2026,
+      "detail": "417 tracks",
+      "cover": "images/library/other-the-adventure-zone.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/the-adventure-zone/id947899573?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "The McElroys"
+        ],
+        [
+          "Released",
+          "2026-08-20"
+        ],
+        [
+          "Episodes",
+          417
+        ],
+        [
+          "Genre",
+          "Comedy Fiction"
+        ]
+      ],
+      "height": 0.534,
+      "thickness": 0.929,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#3c2247",
+        "accent": "#874c17",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "other-wonderful",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "Wonderful!",
+      "creator": "Rachel and Griffin McElroy",
+      "year": 2026,
+      "detail": "516 tracks",
+      "cover": "images/library/other-wonderful.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/wonderful/id1078467060?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "Rachel and Griffin McElroy"
+        ],
+        [
+          "Released",
+          "2026-08-19"
+        ],
+        [
+          "Episodes",
+          516
+        ],
+        [
+          "Genre",
+          "Comedy"
+        ]
+      ],
+      "height": 0.839,
+      "thickness": 0.754,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#908a77",
+        "accent": "#f8d493",
+        "ink": "#141210"
+      }
+    },
+    {
+      "id": "other-the-besties",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "The Besties",
+      "creator": "Russ Frushtick, Chris Plante, Griffin McElroy, Justin McElroy",
+      "year": 2026,
+      "detail": "514 tracks",
+      "cover": "images/library/other-the-besties.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/the-besties/id505516789?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "Russ Frushtick, Chris Plante, Griffin McElroy, Justin McElroy"
+        ],
+        [
+          "Released",
+          "2026-08-07"
+        ],
+        [
+          "Episodes",
+          514
+        ],
+        [
+          "Genre",
+          "Video Games"
+        ]
+      ],
+      "height": 0.602,
+      "thickness": 1.444,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#ad8c33",
+        "accent": "#fdc541",
+        "ink": "#141210"
+      }
+    },
+    {
+      "id": "other-revisionist-history",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "Revisionist History",
+      "creator": "Pushkin Industries",
+      "year": 2026,
+      "detail": "220 tracks",
+      "cover": "images/library/other-revisionist-history.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/revisionist-history-the-staten-island-problem/id1119389968?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "Pushkin Industries"
+        ],
+        [
+          "Released",
+          "2026-08-06"
+        ],
+        [
+          "Episodes",
+          220
+        ],
+        [
+          "Genre",
+          "Society & Culture"
+        ]
+      ],
+      "height": 0.656,
+      "thickness": 1.014,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#6d6e63",
+        "accent": "#edecac",
         "ink": "#f1ece3"
       }
     }

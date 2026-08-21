@@ -8,7 +8,7 @@
 
 import { spineWidth, spineHeight } from "./lib/geometry.js";
 
-const DATA_URL = "data/library.json";
+const DATA_URL = "data/library.json?v=feedback4";
 
 const TYPE_LABEL = {
   book: ["Books", "spine shelf"],
@@ -17,6 +17,12 @@ const TYPE_LABEL = {
   other: ["Podcasts", "tiles"],
 };
 const ORDER = ["book", "album", "film", "other"];
+const LIST_LINK = {
+  book: ["See all book lists", "books"],
+  album: ["See all album lists", "albums"],
+  film: ["See all film lists", "films"],
+  other: ["See all podcast lists", "podcasts"],
+};
 
 const el = (tag, cls, attrs) => {
   const n = document.createElement(tag);
@@ -139,7 +145,8 @@ export function renderShelves(items, root) {
 
     const block = el("section", "shelf-block");
     const [name, sub] = TYPE_LABEL[type];
-    const lab = el("div", "shelf-label");
+    const lab = el("h2", "shelf-label", { id: `shelf-${type}-heading` });
+    block.setAttribute("aria-labelledby", lab.id);
     lab.append(document.createTextNode(name), Object.assign(el("span"), { textContent: sub }));
     block.append(lab);
 
@@ -149,7 +156,12 @@ export function renderShelves(items, root) {
       node.dataset.id = item.id;
       mount.append(node);
     }
-    block.append(rail);
+    const [linkText, anchor] = LIST_LINK[type];
+    const actions = el("div", "shelf-actions");
+    const listLink = el("a", "shelf-lists-link", { href: `library-lists.html#${anchor}` });
+    listLink.textContent = linkText;
+    actions.append(listLink);
+    block.append(rail, actions);
     root.append(block);
     if (type === "album") wireCoverflow(list, rail, mount, status, root);
   }
@@ -157,7 +169,10 @@ export function renderShelves(items, root) {
 
 /* ---------- albums: native coverflow ---------- */
 
-const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const REDUCED =
+  matchMedia("(prefers-reduced-motion: reduce)").matches ||
+  new URLSearchParams(location.search).get("motion") === "reduce";
+if (REDUCED) document.documentElement.classList.add("reduce-motion");
 const coverflowById = new Map();
 
 function wireCoverflow(items, frame, stage, status, root) {
@@ -350,55 +365,28 @@ function wireCoverflow(items, frame, stage, status, root) {
   new ResizeObserver(measure).observe(frame);
 }
 
-/* ---------- details + personal ratings ---------- */
-
-const RATINGS_KEY = "quinn-library-ratings-v2";
-let ratings = {};
-try { ratings = JSON.parse(localStorage.getItem(RATINGS_KEY) || "{}"); }
-catch { ratings = {}; }
-
-function refreshRating(id) {
-  const value = Number(ratings[id] || 0);
-  document.querySelectorAll(`[data-rating-for="${CSS.escape(id)}"]`).forEach((group) => {
-    group.dataset.value = String(value);
-    group.querySelectorAll("button").forEach((button, index) => {
-      const active = index < value;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", String(index + 1 === value));
-    });
-    const output = group.parentElement.querySelector(".rating-value");
-    if (output) output.textContent = value ? `${value} of 5` : "Not rated";
-  });
-}
-
-function ratingControl(item) {
+/* Ratings are authored with the rest of Quinn's content. The public page is
+   deliberately display-only, so a visitor cannot create a rating that looks
+   like Quinn's opinion. */
+function ratingDisplay(item) {
+  const value = Number(item.rating);
+  if (!Number.isFinite(value) || value <= 0) return null;
+  const rating = Math.min(5, Math.max(0, value));
   const wrap = el("div", "rating");
   const heading = el("div", "rating-heading");
   heading.append(
-    Object.assign(el("span"), { textContent: "Your rating" }),
-    Object.assign(el("output", "rating-value"), { textContent: "Not rated" })
+    Object.assign(el("span"), { textContent: "Quinn's rating" }),
+    Object.assign(el("span", "rating-value"), { textContent: `${rating} of 5` })
   );
-  const group = el("div", "rating-stars", {
-    role: "group",
-    "aria-label": `Rate ${item.title}`,
-    "data-rating-for": item.id,
+  const stars = el("div", "rating-stars-readonly", {
+    role: "img",
+    "aria-label": `Quinn rated ${item.title} ${rating} out of 5`,
   });
-  for (let value = 1; value <= 5; value++) {
-    const button = el("button", "rating-star", {
-      type: "button",
-      "aria-label": `${value} star${value === 1 ? "" : "s"}`,
-      "aria-pressed": "false",
-    });
-    button.append(Object.assign(el("span", "", { "aria-hidden": "true" }), { textContent: "★" }));
-    button.addEventListener("click", () => {
-      ratings[item.id] = Number(ratings[item.id]) === value ? 0 : value;
-      localStorage.setItem(RATINGS_KEY, JSON.stringify(ratings));
-      refreshRating(item.id);
-    });
-    group.append(button);
-  }
-  wrap.append(heading, group);
-  requestAnimationFrame(() => refreshRating(item.id));
+  const base = Object.assign(el("span", "", { "aria-hidden": "true" }), { textContent: "★★★★★" });
+  const fill = Object.assign(el("span", "rating-stars-fill", { "aria-hidden": "true" }), { textContent: "★★★★★" });
+  fill.style.width = `${rating * 20}%`;
+  stars.append(base, fill);
+  wrap.append(heading, stars);
   return wrap;
 }
 
@@ -440,7 +428,8 @@ function detailNode(item) {
 
   const facts = factsNode(item);
   if (facts) body.append(facts);
-  body.append(ratingControl(item));
+  const rating = ratingDisplay(item);
+  if (rating) body.append(rating);
 
   if (item.reviewHtml) {
     const r = el("div", "review");
@@ -540,7 +529,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=centered-parallax1");
+  const { initHero } = await import("./library-hero.js?v=feedback4");
   initHero(items);
 }
 

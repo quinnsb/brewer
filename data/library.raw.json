@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T22:22:50.612Z",
+  "generatedAt": "2026-08-21T00:13:13.304Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -1888,6 +1888,278 @@
       ],
       "height": 0.684,
       "thickness": 1.23,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "other-the-big-picture",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "The Big Picture",
+      "creator": "The Ringer",
+      "year": 2026,
+      "detail": "962 tracks",
+      "cover": "images/library/other-the-big-picture.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/the-big-picture/id1439252196?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "The Ringer"
+        ],
+        [
+          "Released",
+          "2026-08-18"
+        ],
+        [
+          "Episodes",
+          962
+        ],
+        [
+          "Genre",
+          "TV & Film"
+        ]
+      ],
+      "height": 0.992,
+      "thickness": 0.793,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "other-radio-ambulante",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "Radio Ambulante",
+      "creator": "My Cultura, Radio Ambulante and iHeartPodcasts",
+      "year": 2026,
+      "detail": "367 tracks",
+      "cover": "images/library/other-radio-ambulante.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/radio-ambulante/id527614348?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "My Cultura, Radio Ambulante and iHeartPodcasts"
+        ],
+        [
+          "Released",
+          "2026-07-14"
+        ],
+        [
+          "Episodes",
+          367
+        ],
+        [
+          "Genre",
+          "Documentary"
+        ]
+      ],
+      "height": 0.749,
+      "thickness": 0.67,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "other-the-anthropocene-reviewed",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "The Anthropocene Reviewed",
+      "creator": "Complexly, John Green",
+      "year": 2021,
+      "detail": "37 tracks",
+      "cover": "images/library/other-the-anthropocene-reviewed.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/the-anthropocene-reviewed/id1342003491?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "Complexly, John Green"
+        ],
+        [
+          "Released",
+          "2021-08-26"
+        ],
+        [
+          "Episodes",
+          37
+        ],
+        [
+          "Genre",
+          "Personal Journals"
+        ]
+      ],
+      "height": 0.509,
+      "thickness": 1.184,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "other-my-brother-my-brother-and-me",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "My Brother, My Brother And Me",
+      "creator": "The McElroys",
+      "year": 2026,
+      "detail": "842 tracks",
+      "cover": "images/library/other-my-brother-my-brother-and-me.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/my-brother-my-brother-and-me/id367330921?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "The McElroys"
+        ],
+        [
+          "Released",
+          "2026-08-17"
+        ],
+        [
+          "Episodes",
+          842
+        ],
+        [
+          "Genre",
+          "Comedy"
+        ]
+      ],
+      "height": 0.725,
+      "thickness": 0.922,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "other-the-adventure-zone",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "The Adventure Zone",
+      "creator": "The McElroys",
+      "year": 2026,
+      "detail": "417 tracks",
+      "cover": "images/library/other-the-adventure-zone.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/the-adventure-zone/id947899573?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "The McElroys"
+        ],
+        [
+          "Released",
+          "2026-08-20"
+        ],
+        [
+          "Episodes",
+          417
+        ],
+        [
+          "Genre",
+          "Comedy Fiction"
+        ]
+      ],
+      "height": 0.534,
+      "thickness": 0.929,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "other-wonderful",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "Wonderful!",
+      "creator": "Rachel and Griffin McElroy",
+      "year": 2026,
+      "detail": "516 tracks",
+      "cover": "images/library/other-wonderful.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/wonderful/id1078467060?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "Rachel and Griffin McElroy"
+        ],
+        [
+          "Released",
+          "2026-08-19"
+        ],
+        [
+          "Episodes",
+          516
+        ],
+        [
+          "Genre",
+          "Comedy"
+        ]
+      ],
+      "height": 0.839,
+      "thickness": 0.754,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "other-the-besties",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "The Besties",
+      "creator": "Russ Frushtick, Chris Plante, Griffin McElroy, Justin McElroy",
+      "year": 2026,
+      "detail": "514 tracks",
+      "cover": "images/library/other-the-besties.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/the-besties/id505516789?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "Russ Frushtick, Chris Plante, Griffin McElroy, Justin McElroy"
+        ],
+        [
+          "Released",
+          "2026-08-07"
+        ],
+        [
+          "Episodes",
+          514
+        ],
+        [
+          "Genre",
+          "Video Games"
+        ]
+      ],
+      "height": 0.602,
+      "thickness": 1.444,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "other-revisionist-history",
+      "type": "other",
+      "shape": "tile",
+      "aspect": 1,
+      "title": "Revisionist History",
+      "creator": "Pushkin Industries",
+      "year": 2026,
+      "detail": "220 tracks",
+      "cover": "images/library/other-revisionist-history.jpg",
+      "sourceUrl": "https://podcasts.apple.com/us/podcast/revisionist-history-the-staten-island-problem/id1119389968?uo=4",
+      "facts": [
+        [
+          "Publisher",
+          "Pushkin Industries"
+        ],
+        [
+          "Released",
+          "2026-08-06"
+        ],
+        [
+          "Episodes",
+          220
+        ],
+        [
+          "Genre",
+          "Society & Culture"
+        ]
+      ],
+      "height": 0.656,
+      "thickness": 1.014,
       "starred": false,
       "note": null
     }
