@@ -15,10 +15,12 @@ import { readFile, writeFile, readdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { mergeItem } from "./lib/merge.mjs";
+import { applyTaxonomy } from "./lib/taxonomy.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const RAW = path.join(ROOT, "data", "library.raw.json");
 const OUT = path.join(ROOT, "data", "library.json");
+const TAXONOMY = path.join(ROOT, "data", "library-taxonomy.json");
 const NOTES_DIR = path.join(ROOT, "content", "library");
 const OVERRIDE_DIR = path.join(ROOT, "images", "library", "overrides");
 
@@ -30,10 +32,12 @@ async function readNote(id) {
 
 async function main() {
   const raw = JSON.parse(await readFile(RAW, "utf8"));
+  const taxonomy = JSON.parse(await readFile(TAXONOMY, "utf8"));
+  const catalog = applyTaxonomy(raw.items, taxonomy);
   const ids = new Set(raw.items.map((i) => i.id));
 
   const items = [];
-  for (const item of raw.items) {
+  for (const item of catalog) {
     items.push(
       mergeItem(item, await readNote(item.id), existsSync(path.join(OVERRIDE_DIR, `${item.id}.jpg`)))
     );

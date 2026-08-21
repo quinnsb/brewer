@@ -8,7 +8,7 @@
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
 
-const DATA_URL = "data/library.json?v=unique-albums1";
+const DATA_URL = "data/library.json?v=catalog-taxonomy1";
 
 const TYPE_LABEL = {
   book: ["Books", "drag or scroll either direction"],
@@ -475,9 +475,12 @@ function ratingDisplay(item) {
 }
 
 function factsNode(item) {
-  if (!item.facts?.length) return null;
+  const authoredGenres = item.genres?.length ? [["Genres", item.genres.join(", ")]] : [];
+  const sourceFacts = (item.facts || []).filter(([term]) => term.toLowerCase() !== "genre");
+  const rows = [...authoredGenres, ...sourceFacts];
+  if (!rows.length) return null;
   const list = el("dl", "media-facts");
-  for (const [term, value] of item.facts) {
+  for (const [term, value] of rows) {
     if (value === null || value === undefined || value === "") continue;
     const row = el("div");
     row.append(
@@ -487,6 +490,26 @@ function factsNode(item) {
     list.append(row);
   }
   return list.childElementCount ? list : null;
+}
+
+function catalogHref(item, filter, value) {
+  const params = new URLSearchParams({ type: item.type, [filter]: value });
+  return `library-lists.html?${params.toString()}#catalog`;
+}
+
+function detailMeta(item) {
+  const meta = el("p", "media-detail-meta");
+  const creators = item.creators || [item.creator].filter(Boolean);
+  creators.forEach((creator, index) => {
+    const link = el("a", "media-detail-creator", { href: catalogHref(item, "creator", creator) });
+    link.textContent = creator;
+    meta.append(link);
+    if (index < creators.length - 1) meta.append(document.createTextNode(", "));
+  });
+  const rest = [item.year, item.finished ? `finished ${item.finished}` : null].filter(Boolean);
+  if (creators.length && rest.length) meta.append(document.createTextNode("  ·  "));
+  meta.append(document.createTextNode(rest.join("  ·  ")));
+  return meta;
 }
 
 /* ---------- immersive media detail ---------- */
@@ -619,10 +642,7 @@ function detailNode(item) {
     }),
     Object.assign(el("h2"), { id: titleId, textContent: item.title })
   );
-  const bits = [item.creator, item.year, item.finished ? `finished ${item.finished}` : null];
-  header.append(
-    Object.assign(el("p", "media-detail-meta"), { textContent: bits.filter(Boolean).join("  ·  ") })
-  );
+  header.append(detailMeta(item));
   copy.append(close, header);
 
   if (item.reviewHtml) {

@@ -7,8 +7,8 @@
   <meta name="description" content="Curated lists of Quinn Brewer's favorite books, albums, films, and podcasts." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/library.css?v=list-shelves1" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/library.css?v=catalog-stream1" />
 </head>
 <body id="top" class="library library-lists">
   <button
@@ -33,11 +33,15 @@
     </div>
   </nav>
 
-  <main class="list-page-main">
-    <header class="list-page-intro">
-      <p class="list-page-kicker"><a href="library.html">Library</a> / <span data-list-kicker>Books</span></p>
-      <h1 data-list-title>Book lists.</h1>
-      <p data-list-intro>Ranked favorites, generous recommendations, and shelves organized around an idea.</p>
+  <main id="main" class="list-page-main">
+    <header class="list-page-hero" data-stream-hero>
+      <div class="list-stream" aria-hidden="true" data-list-stream></div>
+      <div class="list-page-intro">
+        <p class="list-page-kicker"><a href="library.html">Library</a> / <span data-list-kicker>Books</span></p>
+        <h1 data-list-title>Book lists.</h1>
+        <p data-list-intro>Ranked favorites, generous recommendations, and shelves organized around an idea.</p>
+        <a class="list-page-jump" href="#catalog">Browse the catalog</a>
+      </div>
     </header>
 
     <section class="list-index-section" aria-labelledby="list-section-heading">
@@ -46,6 +50,28 @@
         <span data-list-count>3 collections</span>
       </h2>
       <div class="list-card-grid" data-list-grid></div>
+    </section>
+
+    <section id="catalog" class="catalog-section" aria-labelledby="catalog-heading">
+      <div class="catalog-heading-row">
+        <div>
+          <p class="catalog-kicker">Catalog</p>
+          <h2 id="catalog-heading" data-catalog-title>All books.</h2>
+        </div>
+        <a class="catalog-reset" href="library-lists.html?type=book" data-catalog-reset hidden>View all books</a>
+      </div>
+      <div class="catalog-directories">
+        <nav class="catalog-directory" aria-label="Browse by genre">
+          <h3>Genres</h3>
+          <div class="catalog-filter-links" data-genre-links></div>
+        </nav>
+        <nav class="catalog-directory" aria-label="Browse by creator">
+          <h3 data-creator-heading>Authors</h3>
+          <div class="catalog-filter-links" data-creator-links></div>
+        </nav>
+      </div>
+      <p class="catalog-result-count" data-catalog-count></p>
+      <div class="catalog-grid" data-catalog-grid></div>
     </section>
   </main>
 
@@ -67,6 +93,6 @@
   </footer>
 
   <script src="js/library-chrome.js?v=menu2"></script>
-  <script type="module" src="js/library-lists.js?v=list-shelves1"></script>
+  <script type="module" src="js/library-lists.js?v=catalog-stream1"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T03:05:16.569Z",
+  "generatedAt": "2026-08-21T14:06:32.722Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -33,6 +33,12 @@
       "height": 0.498,
       "thickness": 0.913,
       "starred": false,
+      "genres": [
+        "Science fiction"
+      ],
+      "creators": [
+        "Ursula K. Le Guin"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -76,6 +82,13 @@
       "height": 0.47,
       "thickness": 0.825,
       "starred": false,
+      "genres": [
+        "Postmodern fiction",
+        "Historical fiction"
+      ],
+      "creators": [
+        "Thomas Pynchon"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -119,6 +132,12 @@
       "height": 0.481,
       "thickness": 1.215,
       "starred": false,
+      "genres": [
+        "Science fiction"
+      ],
+      "creators": [
+        "Ursula K. Le Guin"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -162,6 +181,13 @@
       "height": 0.612,
       "thickness": 1.012,
       "starred": false,
+      "genres": [
+        "Western",
+        "Historical fiction"
+      ],
+      "creators": [
+        "Cormac McCarthy"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -205,6 +231,12 @@
       "height": 0.829,
       "thickness": 0.828,
       "starred": false,
+      "genres": [
+        "Literary fiction"
+      ],
+      "creators": [
+        "Marilynne Robinson"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -248,6 +280,13 @@
       "height": 0.704,
       "thickness": 1.246,
       "starred": false,
+      "genres": [
+        "Satire",
+        "Literary fiction"
+      ],
+      "creators": [
+        "Paul Beatty"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -291,6 +330,13 @@
       "height": 0.618,
       "thickness": 1.401,
       "starred": false,
+      "genres": [
+        "Literary fiction",
+        "Science fiction"
+      ],
+      "creators": [
+        "David Mitchell"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -334,6 +380,12 @@
       "height": 0.825,
       "thickness": 1.191,
       "starred": false,
+      "genres": [
+        "Literary fiction"
+      ],
+      "creators": [
+        "Jennifer Egan"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -377,6 +429,12 @@
       "height": 0.554,
       "thickness": 1.241,
       "starred": false,
+      "genres": [
+        "Fantasy"
+      ],
+      "creators": [
+        "Susanna Clarke"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -420,6 +478,13 @@
       "height": 0.946,
       "thickness": 0.978,
       "starred": false,
+      "genres": [
+        "Fantasy",
+        "Young adult"
+      ],
+      "creators": [
+        "Kenneth Oppel"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -463,6 +528,13 @@
       "height": 0.747,
       "thickness": 1.296,
       "starred": false,
+      "genres": [
+        "Science fiction",
+        "Literary fiction"
+      ],
+      "creators": [
+        "Kazuo Ishiguro"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -506,6 +578,12 @@
       "height": 0.796,
       "thickness": 0.918,
       "starred": false,
+      "genres": [
+        "Science fiction"
+      ],
+      "creators": [
+        "Andy Weir"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -549,6 +627,13 @@
       "height": 0.852,
       "thickness": 1.373,
       "starred": false,
+      "genres": [
+        "Historical fiction",
+        "Family saga"
+      ],
+      "creators": [
+        "Amy Tan"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -592,6 +677,13 @@
       "height": 0.637,
       "thickness": 0.912,
       "starred": false,
+      "genres": [
+        "Fantasy",
+        "Adventure"
+      ],
+      "creators": [
+        "J.R.R. Tolkien"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -635,6 +727,12 @@
       "height": 0.679,
       "thickness": 0.757,
       "starred": false,
+      "genres": [
+        "Science fiction"
+      ],
+      "creators": [
+        "Octavia E. Butler"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -678,6 +776,13 @@
       "height": 0.804,
       "thickness": 1.364,
       "starred": false,
+      "genres": [
+        "Adventure",
+        "Literary fiction"
+      ],
+      "creators": [
+        "Herman Melville"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -721,6 +826,13 @@
       "height": 0.86,
       "thickness": 0.915,
       "starred": false,
+      "genres": [
+        "Historical fiction",
+        "Literary fiction"
+      ],
+      "creators": [
+        "Chinua Achebe"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -764,6 +876,13 @@
       "height": 0.988,
       "thickness": 0.848,
       "starred": false,
+      "genres": [
+        "Adventure",
+        "Young adult"
+      ],
+      "creators": [
+        "Gary Paulsen"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -807,6 +926,12 @@
       "height": 0.709,
       "thickness": 0.662,
       "starred": false,
+      "genres": [
+        "Science fiction"
+      ],
+      "creators": [
+        "Orson Scott Card"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -842,6 +967,13 @@
       "height": 0.756,
       "thickness": 0.716,
       "starred": false,
+      "genres": [
+        "Fantasy",
+        "Science fiction"
+      ],
+      "creators": [
+        "N. K. Jemisin"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -881,6 +1013,12 @@
       "height": 0.579,
       "thickness": 1.178,
       "starred": false,
+      "genres": [
+        "Fantasy"
+      ],
+      "creators": [
+        "Samantha Shannon"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -924,6 +1062,12 @@
       "height": 0.804,
       "thickness": 1.325,
       "starred": false,
+      "genres": [
+        "Adventure"
+      ],
+      "creators": [
+        "Jack London"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -959,6 +1103,13 @@
       "height": 0.851,
       "thickness": 0.984,
       "starred": false,
+      "genres": [
+        "Fantasy",
+        "Science fiction"
+      ],
+      "creators": [
+        "N. K. Jemisin"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1002,6 +1153,13 @@
       "height": 0.624,
       "thickness": 1.443,
       "starred": false,
+      "genres": [
+        "Literary fiction",
+        "Novella"
+      ],
+      "creators": [
+        "Joseph Conrad"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1045,6 +1203,13 @@
       "height": 0.493,
       "thickness": 1.284,
       "starred": false,
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ],
+      "creators": [
+        "Elizabeth Little"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1088,6 +1253,12 @@
       "height": 0.588,
       "thickness": 1.494,
       "starred": false,
+      "genres": [
+        "Science fiction"
+      ],
+      "creators": [
+        "Ernest Cline"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1131,6 +1302,13 @@
       "height": 0.94,
       "thickness": 1.338,
       "starred": false,
+      "genres": [
+        "Literary fiction",
+        "Romance"
+      ],
+      "creators": [
+        "Sally Rooney"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1170,6 +1348,13 @@
       "height": 0.987,
       "thickness": 1.287,
       "starred": false,
+      "genres": [
+        "Science fiction",
+        "Young adult"
+      ],
+      "creators": [
+        "M. T. Anderson"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1213,6 +1398,13 @@
       "height": 0.711,
       "thickness": 0.806,
       "starred": false,
+      "genres": [
+        "Fantasy",
+        "Adventure"
+      ],
+      "creators": [
+        "J.R.R. Tolkien"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1260,6 +1452,13 @@
       "height": 0.531,
       "thickness": 1.224,
       "starred": false,
+      "genres": [
+        "Hip-hop",
+        "Gospel"
+      ],
+      "creators": [
+        "Chance the Rapper"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1307,6 +1506,13 @@
       "height": 0.656,
       "thickness": 1.23,
       "starred": false,
+      "genres": [
+        "Blues rock",
+        "Singer-songwriter"
+      ],
+      "creators": [
+        "John Mayer"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1354,6 +1560,13 @@
       "height": 0.694,
       "thickness": 1.018,
       "starred": false,
+      "genres": [
+        "Singer-songwriter",
+        "Folk rock"
+      ],
+      "creators": [
+        "Jack Johnson"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1401,6 +1614,13 @@
       "height": 0.631,
       "thickness": 1.485,
       "starred": false,
+      "genres": [
+        "Folk rock",
+        "Blues rock"
+      ],
+      "creators": [
+        "Bob Dylan"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1448,6 +1668,12 @@
       "height": 0.931,
       "thickness": 0.958,
       "starred": false,
+      "genres": [
+        "Modal jazz"
+      ],
+      "creators": [
+        "Miles Davis"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1495,6 +1721,12 @@
       "height": 0.544,
       "thickness": 0.947,
       "starred": false,
+      "genres": [
+        "Indie rock"
+      ],
+      "creators": [
+        "Death Cab for Cutie"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1542,6 +1774,13 @@
       "height": 0.804,
       "thickness": 1.144,
       "starred": false,
+      "genres": [
+        "Jangle pop",
+        "Dream pop"
+      ],
+      "creators": [
+        "The Sundays"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1589,6 +1828,12 @@
       "height": 0.527,
       "thickness": 1.377,
       "starred": false,
+      "genres": [
+        "Jazz"
+      ],
+      "creators": [
+        "Oscar Peterson Trio"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1636,6 +1881,13 @@
       "height": 0.635,
       "thickness": 1.273,
       "starred": false,
+      "genres": [
+        "Jazz",
+        "Soundtrack"
+      ],
+      "creators": [
+        "Vince Guaraldi Trio"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1683,6 +1935,12 @@
       "height": 0.931,
       "thickness": 1.385,
       "starred": false,
+      "genres": [
+        "Alternative rock"
+      ],
+      "creators": [
+        "Barenaked Ladies"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1730,6 +1988,13 @@
       "height": 0.81,
       "thickness": 1.23,
       "starred": false,
+      "genres": [
+        "Jazz pop",
+        "Singer-songwriter"
+      ],
+      "creators": [
+        "Norah Jones"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1777,6 +2042,12 @@
       "height": 0.763,
       "thickness": 1.419,
       "starred": false,
+      "genres": [
+        "Funk"
+      ],
+      "creators": [
+        "Vulfpeck"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1824,6 +2095,13 @@
       "height": 0.708,
       "thickness": 0.619,
       "starred": false,
+      "genres": [
+        "Pop",
+        "Singer-songwriter"
+      ],
+      "creators": [
+        "Ben Rector"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1871,6 +2149,13 @@
       "height": 0.892,
       "thickness": 1.468,
       "starred": false,
+      "genres": [
+        "Soul",
+        "Pop"
+      ],
+      "creators": [
+        "Olivia Dean"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1918,6 +2203,12 @@
       "height": 0.491,
       "thickness": 1.434,
       "starred": false,
+      "genres": [
+        "Indie rock"
+      ],
+      "creators": [
+        "Death Cab for Cutie"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -1965,6 +2256,13 @@
       "height": 0.969,
       "thickness": 1.051,
       "starred": false,
+      "genres": [
+        "Pop",
+        "R&B"
+      ],
+      "creators": [
+        "Michael Jackson"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2012,6 +2310,13 @@
       "height": 0.661,
       "thickness": 0.735,
       "starred": false,
+      "genres": [
+        "Dance-punk",
+        "Electronic"
+      ],
+      "creators": [
+        "LCD Soundsystem"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2059,6 +2364,13 @@
       "height": 0.974,
       "thickness": 1.397,
       "starred": false,
+      "genres": [
+        "Soul",
+        "R&B"
+      ],
+      "creators": [
+        "Stevie Wonder"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2106,6 +2418,13 @@
       "height": 0.994,
       "thickness": 1.373,
       "starred": false,
+      "genres": [
+        "Pop rock",
+        "Indie pop"
+      ],
+      "creators": [
+        "Djo"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2153,6 +2472,13 @@
       "height": 0.596,
       "thickness": 1.227,
       "starred": false,
+      "genres": [
+        "Synth-pop",
+        "New wave"
+      ],
+      "creators": [
+        "Yaz"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2200,6 +2526,13 @@
       "height": 0.918,
       "thickness": 1.465,
       "starred": false,
+      "genres": [
+        "Indie rock",
+        "Folk punk"
+      ],
+      "creators": [
+        "The Front Bottoms"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2247,6 +2580,12 @@
       "height": 0.852,
       "thickness": 1.417,
       "starred": false,
+      "genres": [
+        "Rock"
+      ],
+      "creators": [
+        "U2"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2294,6 +2633,13 @@
       "height": 0.693,
       "thickness": 1.435,
       "starred": false,
+      "genres": [
+        "Baroque pop",
+        "Soul"
+      ],
+      "creators": [
+        "Clairo"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2333,6 +2679,12 @@
       "height": 0.915,
       "thickness": 0.753,
       "starred": false,
+      "genres": [
+        "Alternative rock"
+      ],
+      "creators": [
+        "Arkells"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2380,6 +2732,13 @@
       "height": 0.768,
       "thickness": 1.192,
       "starred": false,
+      "genres": [
+        "Indie rock",
+        "Baroque pop"
+      ],
+      "creators": [
+        "Arcade Fire"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2431,6 +2790,13 @@
       "height": 0.971,
       "thickness": 0.972,
       "starred": false,
+      "genres": [
+        "Drama",
+        "Historical"
+      ],
+      "creators": [
+        "Paul Thomas Anderson"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2482,6 +2848,13 @@
       "height": 0.99,
       "thickness": 1.039,
       "starred": false,
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "creators": [
+        "Wong Kar-wai"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2533,6 +2906,13 @@
       "height": 0.943,
       "thickness": 1.205,
       "starred": false,
+      "genres": [
+        "Drama",
+        "Road movie"
+      ],
+      "creators": [
+        "Wim Wenders"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2584,6 +2964,13 @@
       "height": 0.615,
       "thickness": 1.351,
       "starred": false,
+      "genres": [
+        "Mystery",
+        "Drama"
+      ],
+      "creators": [
+        "Lee Chang-dong"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2635,6 +3022,12 @@
       "height": 0.55,
       "thickness": 0.625,
       "starred": false,
+      "genres": [
+        "Drama"
+      ],
+      "creators": [
+        "Paul Thomas Anderson"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2686,6 +3079,13 @@
       "height": 0.875,
       "thickness": 1.12,
       "starred": false,
+      "genres": [
+        "Drama",
+        "Coming-of-age"
+      ],
+      "creators": [
+        "Barry Jenkins"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2737,6 +3137,13 @@
       "height": 0.632,
       "thickness": 0.707,
       "starred": false,
+      "genres": [
+        "Romance",
+        "Comedy-drama"
+      ],
+      "creators": [
+        "Wong Kar-wai"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2788,6 +3195,13 @@
       "height": 0.966,
       "thickness": 1.131,
       "starred": false,
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "creators": [
+        "Paul Schrader"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2839,6 +3253,13 @@
       "height": 0.971,
       "thickness": 1.425,
       "starred": false,
+      "genres": [
+        "Comedy",
+        "Coming-of-age"
+      ],
+      "creators": [
+        "John Hughes"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2890,6 +3311,13 @@
       "height": 0.589,
       "thickness": 1.001,
       "starred": false,
+      "genres": [
+        "Science fiction",
+        "Adventure"
+      ],
+      "creators": [
+        "Irvin Kershner"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2941,6 +3369,13 @@
       "height": 0.816,
       "thickness": 0.93,
       "starred": false,
+      "genres": [
+        "Comedy-drama",
+        "Romance"
+      ],
+      "creators": [
+        "Wes Anderson"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -2992,6 +3427,13 @@
       "height": 0.58,
       "thickness": 0.867,
       "starred": false,
+      "genres": [
+        "Heist",
+        "Crime"
+      ],
+      "creators": [
+        "Steven Soderbergh"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3043,6 +3485,13 @@
       "height": 0.939,
       "thickness": 1.415,
       "starred": false,
+      "genres": [
+        "Action",
+        "Spy"
+      ],
+      "creators": [
+        "Christopher McQuarrie"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3090,6 +3539,13 @@
       "height": 0.852,
       "thickness": 0.699,
       "starred": false,
+      "genres": [
+        "Animation",
+        "Fantasy"
+      ],
+      "creators": [
+        "Hayao Miyazaki"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3141,6 +3597,13 @@
       "height": 0.818,
       "thickness": 1.165,
       "starred": false,
+      "genres": [
+        "Musical",
+        "Romance"
+      ],
+      "creators": [
+        "Damien Chazelle"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3188,6 +3651,15 @@
       "height": 0.742,
       "thickness": 1.069,
       "starred": false,
+      "genres": [
+        "Animation",
+        "Science fiction",
+        "Adventure"
+      ],
+      "creators": [
+        "John Musker",
+        "Ron Clements"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3231,6 +3703,14 @@
       "height": 0.597,
       "thickness": 1.24,
       "starred": false,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Musical"
+      ],
+      "creators": [
+        "Kevin Lima"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3278,6 +3758,14 @@
       "height": 0.803,
       "thickness": 1.389,
       "starred": false,
+      "genres": [
+        "Animation",
+        "Science fiction",
+        "Comedy"
+      ],
+      "creators": [
+        "Stephen Anderson"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3321,6 +3809,12 @@
       "height": 0.679,
       "thickness": 1.275,
       "starred": false,
+      "genres": [
+        "Design"
+      ],
+      "creators": [
+        "Roman Mars"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3364,6 +3858,13 @@
       "height": 0.839,
       "thickness": 0.748,
       "starred": false,
+      "genres": [
+        "Design",
+        "Interviews"
+      ],
+      "creators": [
+        "Design Matters Media"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3407,6 +3908,13 @@
       "height": 0.876,
       "thickness": 1.372,
       "starred": false,
+      "genres": [
+        "Music",
+        "Interviews"
+      ],
+      "creators": [
+        "Hrishikesh Hirway"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3450,6 +3958,12 @@
       "height": 0.684,
       "thickness": 1.23,
       "starred": false,
+      "genres": [
+        "History"
+      ],
+      "creators": [
+        "Goalhanger"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3493,6 +4007,12 @@
       "height": 0.992,
       "thickness": 0.793,
       "starred": false,
+      "genres": [
+        "Film"
+      ],
+      "creators": [
+        "The Ringer"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3536,6 +4056,15 @@
       "height": 0.749,
       "thickness": 0.67,
       "starred": false,
+      "genres": [
+        "Documentary",
+        "Society and culture"
+      ],
+      "creators": [
+        "My Cultura",
+        "Radio Ambulante",
+        "iHeartPodcasts"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3579,6 +4108,14 @@
       "height": 0.509,
       "thickness": 1.184,
       "starred": false,
+      "genres": [
+        "Essays",
+        "Society and culture"
+      ],
+      "creators": [
+        "Complexly",
+        "John Green"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3622,6 +4159,13 @@
       "height": 0.725,
       "thickness": 0.922,
       "starred": false,
+      "genres": [
+        "Comedy",
+        "Advice"
+      ],
+      "creators": [
+        "The McElroys"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3665,6 +4209,13 @@
       "height": 0.534,
       "thickness": 0.929,
       "starred": false,
+      "genres": [
+        "Actual play",
+        "Comedy fiction"
+      ],
+      "creators": [
+        "The McElroys"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3708,6 +4259,14 @@
       "height": 0.839,
       "thickness": 0.754,
       "starred": false,
+      "genres": [
+        "Comedy",
+        "Society and culture"
+      ],
+      "creators": [
+        "Rachel",
+        "Griffin McElroy"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3751,6 +4310,15 @@
       "height": 0.602,
       "thickness": 1.444,
       "starred": false,
+      "genres": [
+        "Video games"
+      ],
+      "creators": [
+        "Russ Frushtick",
+        "Chris Plante",
+        "Griffin McElroy",
+        "Justin McElroy"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
@@ -3794,6 +4362,13 @@
       "height": 0.656,
       "thickness": 1.014,
       "starred": false,
+      "genres": [
+        "History",
+        "Society and culture"
+      ],
+      "creators": [
+        "Pushkin Industries"
+      ],
       "rating": null,
       "finished": null,
       "reviewHtml": null,
