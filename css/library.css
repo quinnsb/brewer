@@ -85,7 +85,7 @@ body.library a { color: inherit; }
 }
 .hero-line .slot {
   position: relative; display: flex; justify-content: center;
-  margin-top: 0.5em;
+  margin-top: 0.06em;
   color: var(--hero-verb); white-space: nowrap;
 }
 
