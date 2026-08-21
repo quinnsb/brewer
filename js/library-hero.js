@@ -11,13 +11,14 @@
    ============================================================ */
 
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js";
-import { openItem } from "./library.js?v=hero-opening3";
+import { openItem } from "./library.js?v=hero-albums2";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||
   new URLSearchParams(location.search).get("motion") === "reduce";
 /* Keep in step with --card in css/library.css. */
 const CARD = 72;
+const HERO_CARD_COUNT = 28;
 const VERBS = ["read", "listen to", "watch"];
 
 function card(item) {
@@ -116,20 +117,18 @@ export function initHero(items) {
   const startRotating = rotateVerb(slot, sr);
   const line = document.getElementById("hero-heading");
 
-  /* The shelf can grow without turning the hero into confetti. Keep its
-     original 32-card density and sample books across the full collection. */
-  const evenSample = (list, limit) => {
-    if (list.length <= limit) return list;
-    return Array.from({ length: limit }, (_, index) =>
-      list[Math.round(index * (list.length - 1) / (limit - 1))]
-    );
-  };
-  const heroItems = [
-    ...evenSample(items.filter((item) => item.type === "book"), 8),
-    ...evenSample(items.filter((item) => item.type === "album"), 12),
-    ...evenSample(items.filter((item) => item.type === "film"), 8),
-    ...evenSample(items.filter((item) => item.type === "other"), 4),
-  ];
+  /* The first shipped hero contained 28 cards. Preserve that rhythm while
+     drawing exclusively from the curated album shelf. */
+  const albums = items.filter((item) => item.type === "album");
+  if (!albums.length) return;
+  const heroItems = Array.from(
+    { length: HERO_CARD_COUNT },
+    (_, index) => {
+      const pair = Math.floor(index / 2);
+      const offset = index % 2 === 0 ? 0 : Math.ceil(albums.length / 2);
+      return albums[(pair + offset) % albums.length];
+    }
+  );
 
   const nodes = heroItems.map((item) => {
     const n = card(item);

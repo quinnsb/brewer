@@ -65,10 +65,8 @@ body.library a { color: inherit; }
 .hero-track { height: 200vh; }
 .hero-sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; isolation: isolate; }
 
-/* The headline sits inside the ring of cards, so it is centred on the stage
-   rather than flowing above it. The verb lives on its own line underneath,
-   which is what lets the whole lockup be centre justified: with nothing
-   beside it, a verb that changes width cannot shove the stem around. */
+/* The headline sits inside the ring of cards, so it is centred on the stage.
+   Each part gets its own line, and the changing verb cannot move the stem. */
 .hero-inner {
   position: absolute; top: 50%; left: 50%;
   transform: translate(-50%, -50%);
@@ -82,10 +80,12 @@ body.library a { color: inherit; }
   margin: 0; display: flex; flex-direction: column; align-items: center;
   text-align: center;
 }
-.hero-line .stem { display: block; }
+.hero-line .stem {
+  display: flex; flex-direction: column; align-items: center; gap: 0.06em;
+}
 .hero-line .slot {
   position: relative; display: flex; justify-content: center;
-  margin-top: 0.78em;
+  margin-top: 0.5em;
   color: var(--hero-verb); white-space: nowrap;
 }
 
