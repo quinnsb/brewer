@@ -34,6 +34,7 @@ import { writeFile, readFile, mkdir, rename, rm } from "node:fs/promises";
 import { createWriteStream, existsSync } from "node:fs";
 import { pipeline } from "node:stream/promises";
 import path from "node:path";
+import { slug, SHAPE, shelfGeometry } from "./lib/identity.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const IMG_DIR = path.join(ROOT, "images", "library");
@@ -42,6 +43,9 @@ const REFRESH_COVERS = process.argv.includes("--refresh-covers");
 const IMPORT_FILES = [
   path.join(ROOT, "data", "library-imports-goodreads.json"),
   path.join(ROOT, "data", "library-imports-letterboxd.json"),
+  /* Anything added through the admin. Without this, a resync rebuilds the
+     catalog from SEED alone and silently drops every item added since. */
+  path.join(ROOT, "data", "library-additions.json"),
 ];
 
 /* MusicBrainz requires a descriptive UA with contact info. */
@@ -184,14 +188,6 @@ function albumFacts(artist, released, tracks, genre, label) {
 }
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-const slug = (s) =>
-  s
-    .toLowerCase()
-    .replace(/['’]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "")
-    .slice(0, 60);
 
 /* Public catalogue APIs are flaky under load (MusicBrainz especially),
    so every network call retries with backoff before giving up. */
@@ -483,34 +479,6 @@ const RESOLVERS = {
   other: (q) => firstOf(q, [(x) => itunes(x, "podcast", "podcast")]),
 };
 
-/* Shelf physics differ per type, so each carries its own aspect + geometry.
-   `shape` is what the renderers switch on. */
-const SHAPE = {
-  book:  { shape: "spine",  aspect: 0.66 },
-  album: { shape: "sleeve", aspect: 1.0  },
-  film:  { shape: "poster", aspect: 0.68 },
-  other: { shape: "tile",   aspect: 1.0  },
-};
-
-/* Deterministic pseudo-random from id, so spine widths are stable
-   across runs. Same trick complete-shelf uses (fnv1a + mulberry32). */
-function fnv1a(str) {
-  let h = 0x811c9dc5;
-  for (let i = 0; i < str.length; i++) {
-    h ^= str.charCodeAt(i);
-    h = Math.imul(h, 0x01000193);
-  }
-  return h >>> 0;
-}
-function mulberry32(a) {
-  return function () {
-    a |= 0; a = (a + 0x6d2b79f5) | 0;
-    let t = Math.imul(a ^ (a >>> 15), 1 | a);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-}
-
 async function main() {
   await mkdir(IMG_DIR, { recursive: true });
   const seedByType = Object.fromEntries(Object.entries(SEED).map(([type, entries]) => [type, [...entries]]));
@@ -563,7 +531,6 @@ async function main() {
           }
         }
 
-        const rand = mulberry32(fnv1a(id));
         items.push({
           id,
           type,
@@ -581,9 +548,10 @@ async function main() {
           finished: meta.finished ?? null,
           genres: seed.genres?.length ? seed.genres : meta.genres ?? [],
           facts: meta.facts ?? [],
-          /* physical variation, deterministic per id */
-          height: Number((0.45 + rand() * 0.55).toFixed(3)),
-          thickness: Number((0.6 + rand() * 0.9).toFixed(3)),
+          /* Physical variation, deterministic per id. Shared with the admin's
+             add path so an item added there sits on the shelf exactly where a
+             resync would put it. */
+          ...shelfGeometry(id),
           /* filled in later: dominant colour, starred, note */
           starred: false,
           note: null,

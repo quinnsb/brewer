@@ -29,3 +29,8 @@ export const library = {
   note: (id) => request(`/api/note?id=${encodeURIComponent(id)}`),
   save: (payload) => request("/api/save", { method: "POST", body: JSON.stringify(payload) }),
 };
+
+export const catalogue = {
+  search: (type, q) => request(`/api/search?type=${encodeURIComponent(type)}&q=${encodeURIComponent(q)}`),
+  add: (payload) => request("/api/add", { method: "POST", body: JSON.stringify(payload) }),
+};

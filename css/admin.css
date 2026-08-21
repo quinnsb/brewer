@@ -192,3 +192,42 @@ button.is-quiet:hover { border-color: var(--admin-cream); background: transparen
 .aw-status.is-dirty { color: var(--admin-accent); }
 .aw-status.is-good { color: var(--admin-good); }
 .aw-status.is-bad { color: var(--admin-bad); }
+
+/* ---------- add ---------- */
+
+.ad-wrap { max-width: 900px; display: grid; gap: 14px; }
+.ad-search { display: grid; grid-template-columns: 140px minmax(0, 1fr) auto; gap: 10px; }
+@media (max-width: 620px) { .ad-search { grid-template-columns: 1fr; } }
+.ad-status { margin: 0; font-family: var(--admin-mono); font-size: 11.5px; color: var(--admin-dim); }
+.ad-status.is-bad { color: var(--admin-bad); }
+
+.ad-results { display: grid; gap: 12px; }
+.ad-card {
+  display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 16px;
+  padding: 14px; border: 1px solid var(--admin-line); border-radius: 8px; background: var(--admin-panel);
+}
+.ad-card.is-already { opacity: 0.6; }
+/* aspect-ratio is set per card from the item's SHAPE, so a sleeve stays square. */
+.ad-card img { width: 84px; aspect-ratio: 0.66; object-fit: cover; border-radius: 4px; background: #000; }
+.ad-card.is-already img { filter: grayscale(1); }
+.ad-card-body { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.ad-card h3 { margin: 0; font-size: 17px; font-weight: 500; letter-spacing: -0.02em; }
+.ad-card-meta { margin: 0; font-family: var(--admin-mono); font-size: 11px; color: var(--admin-dim); }
+.ad-card-note { margin: 0; font-family: var(--admin-mono); font-size: 11px; color: var(--admin-accent); }
+.ad-card-status { margin: 0; font-family: var(--admin-mono); font-size: 11px; color: var(--admin-dim); }
+.ad-card-status.is-good { color: var(--admin-good); }
+.ad-card-status.is-bad { color: var(--admin-bad); }
+.ad-card button { justify-self: start; }
+
+.ad-genres { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.ad-genres-label {
+  font-family: var(--admin-mono); font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.14em; color: var(--admin-dim); margin-right: 4px;
+}
+.ad-genre {
+  padding: 4px 9px; font-size: 11px; border-radius: 999px;
+  background: transparent; color: var(--admin-dim); border: 1px solid var(--admin-line);
+}
+.ad-genre:hover { background: transparent; color: var(--admin-cream); border-color: var(--admin-cream); }
+.ad-genre.is-on { background: var(--admin-accent); color: var(--admin-bg); border-color: var(--admin-accent); }
+.ad-genre-new { width: 210px; padding: 5px 12px; font-size: 12px; border-radius: 999px; }
