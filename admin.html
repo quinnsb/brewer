@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Library admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/admin.css?v=admin1" />
+</head>
+<body class="admin">
+  <noscript><p class="admin-noscript">The admin needs JavaScript.</p></noscript>
+
+  <main id="app" class="admin-shell" aria-busy="true">
+    <p class="admin-booting">Checking your session</p>
+  </main>
+
+  <template id="tpl-login">
+    <section class="admin-login" aria-labelledby="login-heading">
+      <h1 id="login-heading">Library admin</h1>
+      <form data-login>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required autofocus />
+        <button type="submit" data-submit>Sign in</button>
+        <p class="admin-error" data-error role="alert" hidden></p>
+      </form>
+    </section>
+  </template>
+
+  <template id="tpl-shell">
+    <header class="admin-bar">
+      <div class="admin-bar-title">
+        <strong>Library admin</strong>
+        <span data-counts></span>
+      </div>
+      <nav class="admin-tabs" aria-label="Sections">
+        <button type="button" data-tab="write" aria-current="true">Rate &amp; write</button>
+        <button type="button" data-tab="add">Add</button>
+        <button type="button" data-tab="import">Import</button>
+        <button type="button" data-tab="lists">Lists</button>
+      </nav>
+      <div class="admin-bar-actions">
+        <a href="library.html" target="_blank" rel="noopener">View site</a>
+        <button type="button" data-logout>Sign out</button>
+      </div>
+    </header>
+    <div class="admin-body" data-panel></div>
+  </template>
+
+  <script type="module" src="js/admin/app.js?v=admin1"></script>
+</body>
+</html>

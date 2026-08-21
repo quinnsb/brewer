@@ -1,0 +1,106 @@
+/* Library admin. Deliberately plain: this is a tool, not a page, and it should
+   not compete with the site it edits. Shares the site's cream and mono so it
+   still feels like the same hand. */
+
+:root {
+  --admin-bg: #17171a;
+  --admin-panel: #202025;
+  --admin-line: rgba(241, 236, 227, 0.16);
+  --admin-cream: #f1ece3;
+  --admin-dim: rgba(241, 236, 227, 0.55);
+  --admin-accent: #f3c844;
+  --admin-bad: #ff8b7a;
+  --admin-good: #7ed3a5;
+  --admin-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+  --admin-sans: "Aeonik", system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body.admin {
+  margin: 0; min-height: 100dvh;
+  background: var(--admin-bg); color: var(--admin-cream);
+  font-family: var(--admin-sans); font-size: 15px; line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.admin-noscript, .admin-booting {
+  margin: 0; padding: 40px; font-family: var(--admin-mono);
+  font-size: 12px; color: var(--admin-dim);
+}
+
+/* ---------- login ---------- */
+
+.admin-login {
+  max-width: 340px; margin: 18vh auto 0; padding: 0 24px;
+}
+.admin-login h1 {
+  margin: 0 0 28px; font-size: 30px; font-weight: 500; letter-spacing: -0.03em;
+}
+.admin-login form { display: grid; gap: 10px; }
+.admin-login label {
+  font-family: var(--admin-mono); font-size: 10px;
+  text-transform: uppercase; letter-spacing: 0.14em; color: var(--admin-dim);
+}
+
+input, textarea, select {
+  width: 100%; padding: 11px 13px; color: var(--admin-cream);
+  background: var(--admin-panel); border: 1px solid var(--admin-line); border-radius: 6px;
+  font-family: inherit; font-size: 15px;
+}
+textarea { resize: vertical; line-height: 1.6; }
+input:focus-visible, textarea:focus-visible, select:focus-visible,
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--admin-accent); outline-offset: 2px;
+}
+
+button {
+  padding: 11px 16px; border-radius: 6px; cursor: pointer;
+  font-family: var(--admin-mono); font-size: 12px;
+  color: var(--admin-bg); background: var(--admin-cream); border: 1px solid transparent;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+button:hover { background: var(--admin-accent); }
+button:disabled { opacity: 0.45; cursor: default; background: var(--admin-cream); }
+button.is-quiet {
+  background: transparent; color: var(--admin-cream); border-color: var(--admin-line);
+}
+button.is-quiet:hover { border-color: var(--admin-cream); background: transparent; }
+
+.admin-error {
+  margin: 4px 0 0; font-family: var(--admin-mono); font-size: 12px; color: var(--admin-bad);
+}
+
+/* ---------- shell ---------- */
+
+.admin-bar {
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+  padding: 14px 22px; border-bottom: 1px solid var(--admin-line);
+  position: sticky; top: 0; z-index: 5; background: var(--admin-bg);
+}
+.admin-bar-title { display: grid; gap: 2px; margin-right: auto; }
+.admin-bar-title strong { font-weight: 500; letter-spacing: -0.02em; }
+.admin-bar-title span { font-family: var(--admin-mono); font-size: 10.5px; color: var(--admin-dim); }
+
+.admin-tabs { display: flex; gap: 4px; }
+.admin-tabs button {
+  background: transparent; color: var(--admin-dim); border-color: transparent;
+}
+.admin-tabs button:hover { color: var(--admin-cream); background: transparent; }
+.admin-tabs button[aria-current="true"] {
+  color: var(--admin-bg); background: var(--admin-cream);
+}
+
+.admin-bar-actions { display: flex; align-items: center; gap: 12px; }
+.admin-bar-actions a {
+  font-family: var(--admin-mono); font-size: 12px;
+  color: var(--admin-dim); text-decoration: none; border-bottom: 1px solid var(--admin-line);
+}
+.admin-bar-actions a:hover { color: var(--admin-cream); }
+
+.admin-body { padding: 24px 22px 80px; }
+
+.admin-placeholder {
+  margin: 0; padding: 60px 0; text-align: center;
+  font-family: var(--admin-mono); font-size: 12px; color: var(--admin-dim);
+}

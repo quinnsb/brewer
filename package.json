@@ -1,0 +1,10 @@
+{
+  "name": "brewer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node tools/dev-server.mjs",
+    "build:library": "node tools/library-build.mjs",
+    "test": "node --test tools/__tests__/*.test.mjs"
+  }
+}
