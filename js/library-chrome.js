@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const closeTargets = document.querySelectorAll("[data-menu-close]");
   const focusable = [...dock.querySelectorAll("a, button")];
-  focusable.forEach((item, index) => {
+  const links = [...dock.querySelectorAll("a")];
+  links.forEach((item, index) => {
     item.style.setProperty("--dock-delay", `${0.04 + index * 0.05}s`);
   });
 
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     trigger.setAttribute("aria-expanded", "true");
     dock.removeAttribute("inert");
     dock.setAttribute("aria-hidden", "false");
-    focusable[0]?.focus({ preventScroll: true });
+    links[0]?.focus({ preventScroll: true });
   };
 
   const close = () => {
