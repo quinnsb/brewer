@@ -18,7 +18,17 @@ const REDUCED =
   new URLSearchParams(location.search).get("motion") === "reduce";
 /* Keep in step with --card in css/library.css. */
 const CARD = 72;
-const VERBS = ["read", "listen to", "watch"];
+const VERBS = [
+  "read",
+  "listen to",
+  "watch",
+  "laugh",
+  "eat",
+  "pray",
+  "love",
+  "make",
+  "miss",
+];
 const ORBIT_DEGREES_PER_SECOND = 3;
 
 function card(item) {
