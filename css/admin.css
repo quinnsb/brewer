@@ -104,3 +104,91 @@ button.is-quiet:hover { border-color: var(--admin-cream); background: transparen
   margin: 0; padding: 60px 0; text-align: center;
   font-family: var(--admin-mono); font-size: 12px; color: var(--admin-dim);
 }
+
+/* ---------- rate & write ---------- */
+
+.aw-layout {
+  display: grid; grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  gap: 28px; align-items: start;
+}
+@media (max-width: 900px) { .aw-layout { grid-template-columns: 1fr; } }
+
+.aw-side { display: grid; gap: 10px; position: sticky; top: 78px; }
+.aw-check { display: flex; align-items: center; gap: 8px; font-family: var(--admin-mono); font-size: 11.5px; color: var(--admin-dim); }
+.aw-check input { width: auto; }
+/* Wins over `.aw-fields label`, which sets grid and would otherwise stack the
+   box above its own label. */
+.aw-fields label.aw-check-inline {
+  display: flex; flex-direction: row; align-items: center; gap: 8px;
+  align-self: end; padding-bottom: 12px; white-space: nowrap;
+}
+.aw-fields label.aw-check-inline input { width: auto; flex: none; }
+.aw-fields label.aw-check-inline span {
+  font-family: var(--admin-mono); font-size: 10px;
+  text-transform: uppercase; letter-spacing: 0.14em; color: var(--admin-dim);
+}
+.aw-summary { margin: 2px 0 0; font-family: var(--admin-mono); font-size: 10.5px; color: var(--admin-dim); }
+
+.aw-list {
+  display: grid; gap: 2px; max-height: calc(100dvh - 260px); overflow-y: auto;
+  padding-right: 4px;
+}
+.aw-row {
+  display: grid; gap: 2px; padding: 9px 11px; text-align: left; border-radius: 5px;
+  background: transparent; border: 1px solid transparent; color: var(--admin-cream);
+  font-family: var(--admin-sans); font-size: 13.5px;
+}
+.aw-row:hover { background: var(--admin-panel); }
+.aw-row.is-current { background: var(--admin-panel); border-color: var(--admin-accent); }
+.aw-row-title { font-weight: 500; }
+.aw-row-creator { font-family: var(--admin-mono); font-size: 10.5px; color: var(--admin-dim); }
+.aw-row-marks { display: flex; gap: 5px; margin-top: 3px; }
+.aw-row-marks:empty { display: none; }
+.aw-chip {
+  padding: 1px 6px; border-radius: 3px; font-family: var(--admin-mono); font-size: 9.5px;
+  background: rgba(241, 236, 227, 0.1); color: var(--admin-dim);
+}
+.aw-chip.is-rating { background: rgba(243, 200, 68, 0.16); color: var(--admin-accent); }
+.aw-chip.is-star { background: rgba(243, 200, 68, 0.16); color: var(--admin-accent); }
+.aw-chip.is-written { background: rgba(126, 211, 165, 0.14); color: var(--admin-good); }
+
+.aw-editor { min-width: 0; }
+.aw-editor-inner { display: grid; gap: 18px; max-width: 720px; }
+.aw-editor-head { display: flex; gap: 18px; align-items: flex-start; }
+.aw-editor-head img {
+  width: 84px; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 4px; flex: none;
+  background: var(--admin-panel);
+}
+.aw-editor-kicker {
+  margin: 0 0 4px; font-family: var(--admin-mono); font-size: 10px;
+  text-transform: uppercase; letter-spacing: 0.14em; color: var(--admin-accent);
+}
+.aw-editor-head h2 { margin: 0 0 6px; font-size: 26px; font-weight: 500; letter-spacing: -0.03em; }
+.aw-editor-creator { margin: 0; font-family: var(--admin-mono); font-size: 12px; color: var(--admin-dim); }
+
+.aw-fields { display: grid; grid-template-columns: 140px 160px auto; gap: 16px; align-items: end; }
+@media (max-width: 620px) { .aw-fields { grid-template-columns: 1fr 1fr; } }
+.aw-fields label, .aw-review-label { display: grid; gap: 6px; }
+.aw-fields > label > span, .aw-review-label > span {
+  font-family: var(--admin-mono); font-size: 10px;
+  text-transform: uppercase; letter-spacing: 0.14em; color: var(--admin-dim);
+}
+
+.aw-preview {
+  padding: 16px 18px; border: 1px solid var(--admin-line); border-radius: 8px;
+  background: var(--admin-panel);
+}
+.aw-preview-label {
+  margin: 0 0 10px; font-family: var(--admin-mono); font-size: 10px;
+  text-transform: uppercase; letter-spacing: 0.14em; color: var(--admin-dim);
+}
+.aw-preview p { margin: 0 0 1em; }
+.aw-preview p:last-child { margin-bottom: 0; }
+.aw-preview a { color: var(--admin-accent); }
+.aw-preview-empty { color: var(--admin-dim); font-family: var(--admin-mono); font-size: 12px; }
+
+.aw-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.aw-status { margin: 0; font-family: var(--admin-mono); font-size: 11.5px; color: var(--admin-dim); }
+.aw-status.is-dirty { color: var(--admin-accent); }
+.aw-status.is-good { color: var(--admin-good); }
+.aw-status.is-bad { color: var(--admin-bad); }
