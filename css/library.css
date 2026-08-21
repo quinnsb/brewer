@@ -200,8 +200,7 @@ html.reduce-motion { scroll-behavior: auto; }
 html.reduce-motion .hero-inner { top: 22%; }
 html.reduce-motion .mask .ch,
 html.reduce-motion .hcard-media,
-html.reduce-motion .spine,
-html.reduce-motion .spine-cover,
+html.reduce-motion .book-cover,
 html.reduce-motion .poster,
 html.reduce-motion .tile,
 html.reduce-motion .detail,
@@ -214,15 +213,12 @@ html.reduce-motion .footer-pill,
 html.reduce-motion .socials a { transition: none; }
 html.reduce-motion .hero-line .stem,
 html.reduce-motion .hero-line .slot { opacity: 1; transform: none; filter: none; transition: none; }
-html.reduce-motion .spine:hover,
-html.reduce-motion .spine:focus-visible,
+html.reduce-motion .book-cover:hover,
+html.reduce-motion .book-cover:focus-visible,
 html.reduce-motion .hcard:hover .hcard-media,
 html.reduce-motion .hcard:focus-visible .hcard-media { transform: none; }
 
-/* ---------- BOOKS: spine shelf ----------
-   Spines are GENERATED, not cropped. No public API serves spine artwork, and
-   the old approach (front cover at height:100% inside a 30px overflow box)
-   showed the leftmost ~18% of the jacket, which reads as a smear. */
+/* ---------- BOOKS: overlapping jackets ---------- */
 
 .shelf-rail {
   overflow-x: auto; overflow-y: hidden;
@@ -231,66 +227,30 @@ html.reduce-motion .hcard:focus-visible .hcard-media { transform: none; }
 .shelf-rail::-webkit-scrollbar { height: 6px; }
 .shelf-rail::-webkit-scrollbar-thumb { background: var(--lib-faint); border-radius: 3px; }
 
-.spine-shelf { display: flex; align-items: flex-end; gap: 2px; padding-bottom: 3px; }
-
-.spine {
-  position: relative; flex: 0 0 var(--spine-w); height: var(--spine-h);
-  border: 0; padding: 0; cursor: pointer; overflow: hidden;
-  background: var(--cover); color: var(--ink);
-  border-radius: 1px 2px 2px 1px;
-  transform: translateY(0);
-  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.22s ease,
-              flex-basis 0.62s var(--ease);
-  will-change: transform;
-  box-shadow: inset -7px 0 13px -8px rgba(0, 0, 0, 0.75),
-              inset 5px 0 8px -6px rgba(255, 255, 255, 0.22),
-              0 7px 16px -10px rgba(0, 0, 0, 0.9);
+.book-cover-shelf {
+  display: flex; align-items: flex-end; width: max-content; min-width: 100%;
+  padding: 28px 8px 24px 4px;
 }
-.spine-cover {
-  position: absolute; inset: 0; z-index: 1;
-  width: 100%; height: 100%; object-fit: cover;
-  opacity: 0; transform: scale(1.025);
-  transition: opacity 0.36s var(--ease), transform 0.62s var(--ease);
+.book-cover {
+  position: relative; flex: 0 0 var(--book-w); width: var(--book-w); height: var(--book-h);
+  margin-left: calc(var(--book-w) * -0.38);
+  border: 0; border-radius: 2px; padding: 0; overflow: hidden;
+  background: var(--cover); cursor: pointer;
+  transform: rotate(var(--book-tilt)); transform-origin: 50% 100%;
+  transition: transform 0.36s var(--ease), filter 0.22s ease, box-shadow 0.28s ease;
+  box-shadow: -8px 10px 24px -12px rgba(0, 0, 0, 0.96),
+              0 0 0 1px rgba(255, 255, 255, 0.08);
 }
-.spine-txt {
-  position: absolute; inset: 0; z-index: 2;
-  display: flex; align-items: center; justify-content: center; gap: 12px;
-  writing-mode: vertical-rl; text-orientation: mixed; /* top-to-bottom, US convention */
-  padding: 16px 0; white-space: nowrap; overflow: hidden;
-  transition: opacity 0.3s ease;
+.book-cover:first-child { margin-left: 0; }
+.book-cover img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.book-cover:hover,
+.book-cover:focus-visible,
+.book-cover.is-open {
+  z-index: 40; transform: translateY(-12px) rotate(0deg) scale(1.025);
+  filter: saturate(1.04) brightness(1.04);
+  box-shadow: 0 20px 34px -15px rgba(0, 0, 0, 0.98),
+              0 0 0 2px var(--hero-verb);
 }
-.spine-txt .t {
-  font-family: "Degular", system-ui; font-weight: 600; font-size: 12.5px;
-  overflow: hidden; text-overflow: ellipsis;
-}
-.spine-txt .a { font-size: 9.5px; opacity: 0.68; letter-spacing: 0.05em; text-transform: uppercase; }
-.spine-rule { position: absolute; z-index: 2; left: 18%; right: 18%; height: 2px; background: var(--accent); transition: opacity 0.2s ease; }
-.spine-rule.top { top: 15px; }
-.spine-rule.bot { bottom: 15px; }
-.spine-band, .spine-mark { position: absolute; z-index: 2; pointer-events: none; }
-.spine-band { left: 0; right: 0; height: 18px; bottom: 34px; background: var(--accent); opacity: 0; }
-.spine-mark { width: 7px; height: 7px; left: 50%; bottom: 27px; transform: translateX(-50%) rotate(45deg); background: var(--accent); opacity: 0; }
-.spine[data-spine-style="1"] .spine-txt { justify-content: flex-start; padding-top: 30px; }
-.spine[data-spine-style="1"] .spine-rule.bot { left: 0; right: 0; bottom: 30px; height: 11px; }
-.spine[data-spine-style="2"] .spine-txt .t { font-family: "Aeonik", system-ui, sans-serif; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; }
-.spine[data-spine-style="2"] .spine-band { opacity: 0.72; }
-.spine[data-spine-style="2"] .spine-rule.bot { opacity: 0; }
-.spine[data-spine-style="3"] .spine-txt { justify-content: flex-end; padding-bottom: 44px; }
-.spine[data-spine-style="3"] .spine-rule.top { left: 0; right: 0; top: 26px; height: 1px; }
-.spine[data-spine-style="3"] .spine-mark { opacity: 0.9; }
-.spine[data-spine-style="4"] .spine-txt { gap: 7px; }
-.spine[data-spine-style="4"] .spine-txt .t { font-size: 14px; font-weight: 400; }
-.spine[data-spine-style="4"] .spine-rule { left: 35%; right: 35%; height: 5px; border-radius: 50%; }
-
-.spine:hover:not(.is-open) {
-  z-index: 2;
-  transform: translateY(-8px);
-  box-shadow: inset -7px 0 13px -8px rgba(0, 0, 0, 0.75),
-              inset 5px 0 8px -6px rgba(255, 255, 255, 0.22),
-              0 14px 22px -10px rgba(0, 0, 0, 0.94);
-}
-.spine:focus-visible:not(.is-open) { z-index: 2; transform: translateY(-8px); }
 
 /* ---------- ALBUMS: coverflow ---------- */
 .coverflow {
@@ -341,23 +301,19 @@ html.reduce-motion .hcard:focus-visible .hcard-media { transform: none; }
 .tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .tile:hover, .tile:focus-visible { transform: translateY(-5px); }
 
-.spine:focus-visible, .poster:focus-visible, .tile:focus-visible {
+.book-cover:focus-visible, .poster:focus-visible, .tile:focus-visible {
   outline: 2px solid var(--lib-accent); outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .spine, .spine-cover, .poster, .tile { transition: none; }
-  .spine:hover, .spine:focus-visible { transform: none; }
+  .book-cover, .poster, .tile { transition: none; }
+  .book-cover:hover, .book-cover:focus-visible { transform: rotate(var(--book-tilt)); }
 }
 
 /* ---------- expand in place ----------
    One easing across the growth and the content arrival so it reads as a
    single gesture rather than two stacked animations. */
 
-.spine.is-open { flex-basis: var(--open-w); }
-.spine.is-open .spine-txt { opacity: 0; }
-.spine.is-open .spine-cover { opacity: 1; transform: none; }
-.spine.is-open .spine-rule, .spine.is-open .spine-band, .spine.is-open .spine-mark { opacity: 0; }
 .coverflow-slide.is-open[aria-current="true"] { box-shadow: 0 0 0 3px var(--hero-verb), 0 28px 58px -24px rgba(0, 0, 0, 0.98); }
 .poster.is-open, .tile.is-open { transform: translateY(-7px); }
 

@@ -2,16 +2,16 @@
    LIBRARY — shelves and expand-in-place detail
 
    Four media types, four physics. They do not share one treatment because
-   the objects do not: books stand as spines, records move through a
+   the objects do not: books overlap as jackets, records move through a
    coverflow, posters sit in a rack, and podcasts are flat art.
    ============================================================ */
 
-import { spineWidth, spineHeight } from "./lib/geometry.js";
+import { spineHeight as coverHeight } from "./lib/geometry.js";
 
-const DATA_URL = "data/library.json?v=feedback5";
+const DATA_URL = "data/library.json?v=unique-albums1";
 
 const TYPE_LABEL = {
-  book: ["Books", "spine shelf"],
+  book: ["Books", "overlapping covers"],
   album: ["Albums", "drag, scroll, or use arrow keys"],
   film: ["Films", "poster rack"],
   other: ["Podcasts", "tiles"],
@@ -57,26 +57,15 @@ const visualVariant = (id, count) => {
 };
 
 const BUILDERS = {
-  /* Generated spine at rest, real jacket when the book opens. */
+  /* Front-facing jackets overlap like a loose run of books on a table. */
   book(item) {
-    const btn = el("button", "spine", { type: "button", "aria-label": label(item) });
+    const btn = el("button", "book-cover", { type: "button", "aria-label": label(item) });
     paint(btn, item);
-    btn.dataset.spineStyle = String(visualVariant(item.id, 5));
-    btn.style.setProperty("--spine-w", `${spineWidth(item)}px`);
-    btn.style.setProperty("--spine-h", `${spineHeight(item)}px`);
-    const txt = el("span", "spine-txt");
-    txt.append(
-      Object.assign(el("span", "t"), { textContent: item.title }),
-      Object.assign(el("span", "a"), { textContent: item.creator || "" })
-    );
-    btn.append(
-      coverImg(item, "spine-cover"),
-      el("span", "spine-band"),
-      el("span", "spine-rule top"),
-      txt,
-      el("span", "spine-rule bot"),
-      el("span", "spine-mark")
-    );
+    const height = coverHeight(item);
+    btn.style.setProperty("--book-h", `${height}px`);
+    btn.style.setProperty("--book-w", `${Math.round(height * item.aspect)}px`);
+    btn.style.setProperty("--book-tilt", `${visualVariant(item.id, 7) - 3}deg`);
+    btn.append(coverImg(item));
     return btn;
   },
   album(item) {
@@ -106,7 +95,7 @@ const BUILDERS = {
 const CONTAINER = {
   book() {
     const rail = el("div", "shelf-rail");
-    const mount = el("div", "spine-shelf");
+    const mount = el("div", "book-cover-shelf");
     rail.append(mount);
     return { rail, mount };
   },
@@ -467,11 +456,6 @@ function toggleExpansion(item, node, root) {
 
   node.classList.add("is-open");
   node.setAttribute("aria-expanded", "true");
-  /* open width = the jacket at its true aspect ratio */
-  if (item.type === "book") {
-    node.style.setProperty("--open-w", `${Math.round(spineHeight(item) * item.aspect)}px`);
-  }
-
   const d = detailNode(item);
   node.closest(".shelf-block").append(d);
   requestAnimationFrame(() => d.classList.add("is-in"));
@@ -529,7 +513,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=list-grid1");
+  const { initHero } = await import("./library-hero.js?v=unique-albums1");
   initHero(items);
 }
 

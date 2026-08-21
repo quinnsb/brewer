@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T00:40:09.694Z",
+  "generatedAt": "2026-08-21T03:05:16.569Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -1785,6 +1785,609 @@
       "palette": {
         "cover": "#726e6e",
         "accent": "#a7675d",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-magic",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Magic",
+      "creator": "Ben Rector",
+      "year": 2018,
+      "detail": "13 tracks",
+      "cover": "images/library/album-magic.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/magic/1585841144?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Ben Rector"
+        ],
+        [
+          "Released",
+          "2018-06-22"
+        ],
+        [
+          "Tracks",
+          13
+        ],
+        [
+          "Genre",
+          "Singer/Songwriter"
+        ],
+        [
+          "Copyright",
+          "℗ 2021 OK Kid Recordings, LLC"
+        ]
+      ],
+      "height": 0.708,
+      "thickness": 0.619,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#191e1d",
+        "accent": "#3d5e6d",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-messy",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Messy",
+      "creator": "Olivia Dean",
+      "year": 2023,
+      "detail": "12 tracks",
+      "cover": "images/library/album-messy.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/messy/1676252821?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Olivia Dean"
+        ],
+        [
+          "Released",
+          "2023-06-30"
+        ],
+        [
+          "Tracks",
+          12
+        ],
+        [
+          "Genre",
+          "Pop"
+        ],
+        [
+          "Copyright",
+          "An EMI release; ℗ 2023 Universal Music Operations Limited"
+        ]
+      ],
+      "height": 0.892,
+      "thickness": 1.468,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#6e3943",
+        "accent": "#9a2e1a",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-plans",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Plans",
+      "creator": "Death Cab for Cutie",
+      "year": 2005,
+      "detail": "11 tracks",
+      "cover": "images/library/album-plans.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/plans/966379289?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Death Cab for Cutie"
+        ],
+        [
+          "Released",
+          "2005-08-29"
+        ],
+        [
+          "Tracks",
+          11
+        ],
+        [
+          "Genre",
+          "Alternative"
+        ],
+        [
+          "Copyright",
+          "℗ 2005 Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States. A Warner Music Group Company"
+        ]
+      ],
+      "height": 0.491,
+      "thickness": 1.434,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#130f0c",
+        "accent": "#4f1919",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-thriller",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Thriller",
+      "creator": "Michael Jackson",
+      "year": 1982,
+      "detail": "9 tracks",
+      "cover": "images/library/album-thriller.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/thriller/269572838?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Michael Jackson"
+        ],
+        [
+          "Released",
+          "1982-11-29"
+        ],
+        [
+          "Tracks",
+          9
+        ],
+        [
+          "Genre",
+          "Pop"
+        ],
+        [
+          "Copyright",
+          "℗ 1982 MJJ Productions Inc."
+        ]
+      ],
+      "height": 0.969,
+      "thickness": 1.051,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#4d4e4a",
+        "accent": "#ab7d5d",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-sound-of-silver",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Sound of Silver",
+      "creator": "LCD Soundsystem",
+      "year": 2007,
+      "detail": "9 tracks",
+      "cover": "images/library/album-sound-of-silver.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/sound-of-silver/742432549?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "LCD Soundsystem"
+        ],
+        [
+          "Released",
+          "2007-03-12"
+        ],
+        [
+          "Tracks",
+          9
+        ],
+        [
+          "Genre",
+          "Electronic"
+        ],
+        [
+          "Copyright",
+          "℗ 2007 DFA LLC under exclusive licence to Parlophone Records Ltd"
+        ]
+      ],
+      "height": 0.661,
+      "thickness": 0.735,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#8a8983",
+        "accent": "#ddd4c4",
+        "ink": "#141210"
+      }
+    },
+    {
+      "id": "album-songs-in-the-key-of-life",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Songs in the Key of Life",
+      "creator": "Stevie Wonder",
+      "year": 1976,
+      "detail": "22 tracks",
+      "cover": "images/library/album-songs-in-the-key-of-life.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/songs-in-the-key-of-life/1440788438?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Stevie Wonder"
+        ],
+        [
+          "Released",
+          "1976-09-28"
+        ],
+        [
+          "Tracks",
+          22
+        ],
+        [
+          "Genre",
+          "Motown"
+        ],
+        [
+          "Copyright",
+          "℗ 1976 Motown Records, a Division of UMG Recordings, Inc."
+        ]
+      ],
+      "height": 0.974,
+      "thickness": 1.397,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#954b35",
+        "accent": "#feab51",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-the-crux",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "The Crux",
+      "creator": "Djo",
+      "year": 2025,
+      "detail": "12 tracks",
+      "cover": "images/library/album-the-crux.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/the-crux/1791184860?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Djo"
+        ],
+        [
+          "Released",
+          "2025-04-04"
+        ],
+        [
+          "Tracks",
+          12
+        ],
+        [
+          "Genre",
+          "Alternative"
+        ],
+        [
+          "Copyright",
+          "℗ 2025 Djo Music under exclusive license to AWAL Recordings America, Inc."
+        ]
+      ],
+      "height": 0.994,
+      "thickness": 1.373,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#494c4e",
+        "accent": "#155da2",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-upstairs-at-erics",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Upstairs at Eric's",
+      "creator": "Yaz",
+      "year": 1982,
+      "detail": "11 tracks",
+      "cover": "images/library/album-upstairs-at-erics.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/upstairs-at-erics/62442885?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Yaz"
+        ],
+        [
+          "Released",
+          "1982-08-23"
+        ],
+        [
+          "Tracks",
+          11
+        ],
+        [
+          "Genre",
+          "Pop"
+        ],
+        [
+          "Copyright",
+          "℗ 2005 Warner Stategic Marketing"
+        ]
+      ],
+      "height": 0.596,
+      "thickness": 1.227,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#2d282b",
+        "accent": "#443430",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-talon-of-the-hawk",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Talon of the Hawk",
+      "creator": "The Front Bottoms",
+      "year": 2013,
+      "detail": "12 tracks",
+      "cover": "images/library/album-talon-of-the-hawk.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/talon-of-the-hawk/1518089263?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "The Front Bottoms"
+        ],
+        [
+          "Released",
+          "2013-05-21"
+        ],
+        [
+          "Tracks",
+          12
+        ],
+        [
+          "Genre",
+          "Rock"
+        ],
+        [
+          "Copyright",
+          "℗ 2013 Bar None Records"
+        ]
+      ],
+      "height": 0.918,
+      "thickness": 1.465,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#b1afae",
+        "accent": "#d7b997",
+        "ink": "#141210"
+      }
+    },
+    {
+      "id": "album-the-joshua-tree",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "The Joshua Tree",
+      "creator": "U2",
+      "year": 1987,
+      "detail": "12 tracks",
+      "cover": "images/library/album-the-joshua-tree.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/the-joshua-tree/1443155637?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "U2"
+        ],
+        [
+          "Released",
+          "1987-03-09"
+        ],
+        [
+          "Tracks",
+          12
+        ],
+        [
+          "Genre",
+          "Rock"
+        ],
+        [
+          "Copyright",
+          "℗ 2007 Island Records, a division of Universal Music Operations Limited"
+        ]
+      ],
+      "height": 0.852,
+      "thickness": 1.417,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#1d1d1c",
+        "accent": "#242321",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-charm",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Charm",
+      "creator": "Clairo",
+      "year": 2024,
+      "detail": "11 tracks",
+      "cover": "images/library/album-charm.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/charm/1742301413?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Clairo"
+        ],
+        [
+          "Released",
+          "2024-07-12"
+        ],
+        [
+          "Tracks",
+          11
+        ],
+        [
+          "Genre",
+          "Alternative"
+        ],
+        [
+          "Copyright",
+          "℗ 2024 Clairo Records LLC"
+        ]
+      ],
+      "height": 0.693,
+      "thickness": 1.435,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#402e18",
+        "accent": "#452e08",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "album-jackson-square",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Jackson Square",
+      "creator": "Arkells",
+      "year": 2008,
+      "detail": "Album",
+      "cover": "images/library/album-jackson-square.jpg",
+      "sourceUrl": "https://musicbrainz.org/release-group/649125e1-4479-3891-a430-b7a78337ec24",
+      "facts": [
+        [
+          "Artist",
+          "Arkells"
+        ],
+        [
+          "First released",
+          "2008-10-28"
+        ],
+        [
+          "Format",
+          "Album"
+        ]
+      ],
+      "height": 0.915,
+      "thickness": 0.753,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 500,
+      "height_px": 500,
+      "palette": {
+        "cover": "#787467",
+        "accent": "#f4e8bb",
+        "ink": "#141210"
+      }
+    },
+    {
+      "id": "album-funeral",
+      "type": "album",
+      "shape": "sleeve",
+      "aspect": 1,
+      "title": "Funeral",
+      "creator": "Arcade Fire",
+      "year": 2004,
+      "detail": "10 tracks",
+      "cover": "images/library/album-funeral.jpg",
+      "sourceUrl": "https://music.apple.com/us/album/funeral/1249417623?uo=4",
+      "facts": [
+        [
+          "Artist",
+          "Arcade Fire"
+        ],
+        [
+          "Released",
+          "2004-09-14"
+        ],
+        [
+          "Tracks",
+          10
+        ],
+        [
+          "Genre",
+          "Alternative"
+        ],
+        [
+          "Copyright",
+          "℗ 2004 Arcade Fire Music Under Exclusive License to Sony Music Entertainment"
+        ]
+      ],
+      "height": 0.768,
+      "thickness": 1.192,
+      "starred": false,
+      "rating": null,
+      "finished": null,
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#794b3f",
+        "accent": "#d0765d",
         "ink": "#f1ece3"
       }
     },

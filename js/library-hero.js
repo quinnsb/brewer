@@ -11,14 +11,13 @@
    ============================================================ */
 
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js";
-import { openItem } from "./library.js?v=list-grid1";
+import { openItem } from "./library.js?v=unique-albums1";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||
   new URLSearchParams(location.search).get("motion") === "reduce";
 /* Keep in step with --card in css/library.css. */
 const CARD = 72;
-const HERO_CARD_COUNT = 28;
 const VERBS = ["read", "listen to", "watch"];
 
 function card(item) {
@@ -117,18 +116,9 @@ export function initHero(items) {
   const startRotating = rotateVerb(slot, sr);
   const line = document.getElementById("hero-heading");
 
-  /* The first shipped hero contained 28 cards. Preserve that rhythm while
-     drawing exclusively from the curated album shelf. */
-  const albums = items.filter((item) => item.type === "album");
-  if (!albums.length) return;
-  const heroItems = Array.from(
-    { length: HERO_CARD_COUNT },
-    (_, index) => {
-      const pair = Math.floor(index / 2);
-      const offset = index % 2 === 0 ? 0 : Math.ceil(albums.length / 2);
-      return albums[(pair + offset) % albums.length];
-    }
-  );
+  /* The catalogue is the ring: every album appears once, with no clones. */
+  const heroItems = items.filter((item) => item.type === "album");
+  if (!heroItems.length) return;
 
   const nodes = heroItems.map((item) => {
     const n = card(item);

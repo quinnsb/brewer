@@ -1,7 +1,7 @@
 /* Dedicated media-list landing pages. One template serves books, albums,
    films, and podcasts while each URL keeps its own title and content. */
 
-const DATA_URL = "data/library.json?v=feedback5";
+const DATA_URL = "data/library.json?v=unique-albums1";
 
 const PAGE = {
   book: {
