@@ -1,7 +1,9 @@
 /* Media-specific list and catalog pages. The moving corridor is decorative;
    the catalog underneath owns all navigation and accessible media names. */
 
-const DATA_URL = "data/library.json?v=library-polish5";
+import { wireExpansion } from "./library.js?v=library-polish6";
+
+const DATA_URL = "data/library.json?v=library-polish6";
 
 const PAGE = {
   book: {
@@ -133,16 +135,22 @@ function preview(items, offset) {
   const frame = document.createElement("div");
   frame.className = `list-card-preview is-${type}`;
   frame.setAttribute("aria-label", `${page.singular} list preview. Scroll horizontally to browse.`);
-  frame.tabIndex = 0;
   for (let index = 0; index < 6; index += 1) {
     const item = items[(offset + index) % items.length];
+    const trigger = document.createElement("button");
+    trigger.type = "button";
+    trigger.className = "list-preview-trigger";
+    trigger.dataset.id = item.id;
+    trigger.setAttribute("aria-label", `Open ${item.title} details`);
+    trigger.setAttribute("aria-expanded", "false");
+    trigger.style.aspectRatio = String(item.aspect || 1);
     const img = document.createElement("img");
     img.src = item.cover;
     img.alt = "";
     img.loading = "lazy";
     img.draggable = false;
-    img.style.aspectRatio = String(item.aspect || 1);
-    frame.append(img);
+    trigger.append(img);
+    frame.append(trigger);
   }
   return frame;
 }
@@ -195,8 +203,12 @@ function creatorLinks(item) {
 function catalogCard(item) {
   const card = document.createElement("article");
   card.className = `catalog-card is-${type}`;
-  const imageWrap = document.createElement("div");
+  const imageWrap = document.createElement("button");
+  imageWrap.type = "button";
   imageWrap.className = "catalog-card-image";
+  imageWrap.dataset.id = item.id;
+  imageWrap.setAttribute("aria-label", `Open ${item.title} details`);
+  imageWrap.setAttribute("aria-expanded", "false");
   const img = document.createElement("img");
   img.src = item.cover;
   img.alt = `${item.title} cover`;
@@ -301,6 +313,7 @@ async function main() {
 
   renderStream(media);
   renderCatalog(media);
+  wireExpansion(media, node(".list-page-main"));
   document.title = `${page.section} | Library`;
   document.body.dataset.listType = type;
 }

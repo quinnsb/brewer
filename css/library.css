@@ -507,9 +507,14 @@ body.media-detail-open { overflow: hidden; }
   font-family: "Aeonik", system-ui, sans-serif; font-size: clamp(24px, 2.2vw, 34px);
   font-weight: 500; letter-spacing: -0.025em;
 }
-.album-player {
-  display: block; width: 100%; height: 175px; border: 0; border-radius: 12px;
+.spotify-player {
+  display: block; width: 100%; height: 352px; border: 0; border-radius: 12px;
   background: rgba(255, 255, 255, 0.04);
+}
+.album-listening h4 {
+  margin: 28px 0 8px; color: rgba(241, 236, 227, 0.62);
+  font-family: "Space Mono", ui-monospace, monospace; font-size: 10px;
+  font-weight: 400; text-transform: uppercase; letter-spacing: 0.14em;
 }
 .album-tracklist { margin: 18px 0 0; padding: 0; list-style: none; }
 .album-tracklist li {
@@ -520,6 +525,13 @@ body.media-detail-open { overflow: hidden; }
 .album-track-number, .album-track-time {
   color: rgba(241, 236, 227, 0.48); font-family: "Space Mono", ui-monospace, monospace; font-size: 11px;
 }
+.spotify-open {
+  display: inline-flex; min-height: 44px; align-items: center; margin-top: 20px;
+  border-bottom: 1px solid rgba(241, 236, 227, 0.38); color: var(--site-cream);
+  font-family: "Space Mono", ui-monospace, monospace; font-size: 10px;
+  text-decoration: none; text-transform: uppercase; letter-spacing: 0.13em;
+}
+.spotify-open:hover { color: #1ed760; border-color: #1ed760; }
 
 .media-detail-source {
   align-self: flex-start; min-height: 44px; display: inline-flex; align-items: center;
@@ -832,14 +844,21 @@ body.library-menu-open .library-menu-links a { opacity: 1; transform: none; }
   width: 100%; overflow-x: auto; overflow-y: hidden; padding: 4px 2px 18px;
   scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--lib-faint) transparent;
 }
-.list-card-preview img {
+.list-preview-trigger {
   display: block; flex: 0 0 clamp(150px, 17vw, 260px); width: auto; min-width: 0;
-  object-fit: cover; border-radius: 2px;
+  padding: 0; border: 0; border-radius: 2px; overflow: hidden;
+  background: #161618; cursor: pointer;
   scroll-snap-align: start;
+}
+.list-preview-trigger img {
+  display: block; width: 100%; height: 100%; object-fit: cover;
   filter: saturate(0.93); transition: filter 0.22s ease, transform 0.3s var(--ease);
 }
-.list-card:hover .list-card-preview img { filter: saturate(1.08) brightness(1.03); }
-.list-card:hover .list-card-preview img:nth-child(2n) { transform: translateY(-3px); }
+.list-card:hover .list-preview-trigger img { filter: saturate(1.08) brightness(1.03); }
+.list-card:hover .list-preview-trigger:nth-child(2n) img { transform: translateY(-3px); }
+.list-preview-trigger:hover img { transform: scale(1.025); }
+.list-preview-trigger:focus-visible,
+.catalog-card-image:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 4px; }
 .list-card-body {
   display: flex; align-items: flex-end; justify-content: space-between; gap: 20px;
   padding-top: 12px; border-top: 1px solid var(--lib-line); margin: 0 0 22px;
@@ -905,6 +924,7 @@ body.library-menu-open .library-menu-links a { opacity: 1; transform: none; }
 .catalog-card { min-width: 0; }
 .catalog-card-image {
   width: 100%; aspect-ratio: 0.66; overflow: hidden; border-radius: 2px;
+  display: block; padding: 0; border: 0; cursor: pointer;
   background: #161618; box-shadow: 0 18px 34px -25px rgba(0, 0, 0, 0.95);
 }
 .catalog-card.is-album .catalog-card-image,
@@ -962,7 +982,7 @@ body.library-menu-open .library-menu-links a { opacity: 1; transform: none; }
 }
 
 @media (max-width: 520px) {
-  .list-card-preview img { flex-basis: clamp(128px, 42vw, 190px); }
+  .list-preview-trigger { flex-basis: clamp(128px, 42vw, 190px); }
 }
 
 @media (max-height: 600px) and (max-width: 900px) {
@@ -975,8 +995,8 @@ body.library-menu-open .library-menu-links a { opacity: 1; transform: none; }
   .library-menu-trigger, .library-menu-scrim, .library-menu-dock,
   .library-menu-dock a, .library-menu-dock button, .socials a { transition: none; }
   .hcard:hover .hcard-media, .hcard:focus-visible .hcard-media { transform: none; }
-  .list-card-preview img { transition: none; }
-  .list-card:hover .list-card-preview img:nth-child(2n) { transform: none; }
+  .list-preview-trigger img { transition: none; }
+  .list-card:hover .list-preview-trigger:nth-child(2n) img { transform: none; }
   .list-stream-card { animation-play-state: paused; }
   .catalog-filter-link, .catalog-card-image img { transition: none; }
 }

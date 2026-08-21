@@ -8,7 +8,7 @@
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
 
-const DATA_URL = "data/library.json?v=library-polish5";
+const DATA_URL = "data/library.json?v=library-polish6";
 
 const TYPE_LABEL = {
   book: ["Books", "drag or scroll either direction"],
@@ -514,20 +514,21 @@ function detailMeta(item) {
 }
 
 function albumListeningNode(item) {
-  if (item.type !== "album" || (!item.tracks?.length && !item.listenEmbedUrl)) return null;
+  if (item.type !== "album" || (!item.tracks?.length && !item.spotifyEmbedUrl)) return null;
   const section = el("section", "album-listening", { "aria-labelledby": `album-tracks-${item.id}` });
-  section.append(Object.assign(el("h3"), { id: `album-tracks-${item.id}`, textContent: "Listen and explore" }));
-  if (item.listenEmbedUrl) {
-    const player = el("iframe", "album-player", {
-      src: item.listenEmbedUrl,
-      title: `Listen to ${item.title} by ${item.creator}`,
+  section.append(Object.assign(el("h3"), { id: `album-tracks-${item.id}`, textContent: "Listen on Spotify" }));
+  if (item.spotifyEmbedUrl) {
+    const player = el("iframe", "spotify-player", {
+      src: item.spotifyEmbedUrl,
+      title: `Play ${item.title} by ${item.creator} on Spotify`,
       loading: "lazy",
-      allow: "autoplay *; encrypted-media *; fullscreen *; clipboard-write",
-      sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation",
+      allow: "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
+      "allowfullscreen": "",
     });
     section.append(player);
   }
   if (item.tracks?.length) {
+    section.append(Object.assign(el("h4"), { textContent: "Tracklist" }));
     const list = el("ol", "album-tracklist");
     for (const track of item.tracks) {
       const row = el("li");
@@ -539,6 +540,15 @@ function albumListeningNode(item) {
       list.append(row);
     }
     section.append(list);
+  }
+  if (item.spotifyUrl) {
+    const link = el("a", "spotify-open", {
+      href: item.spotifyUrl,
+      target: "_blank",
+      rel: "noopener",
+    });
+    link.textContent = "Open in Spotify";
+    section.append(link);
   }
   return section;
 }
@@ -590,7 +600,7 @@ function svgIcon(path) {
 }
 
 function sourceNodeFor(id) {
-  const matches = [...document.querySelectorAll(`#shelves [data-id="${CSS.escape(id)}"]`)];
+  const matches = [...document.querySelectorAll(`[data-id="${CSS.escape(id)}"]`)];
   return matches.find((node) => !node.closest("[data-loop-clone]")) || matches[0] || null;
 }
 
@@ -785,7 +795,7 @@ function closeDetail({ restoreFocus = true } = {}) {
 function openDetail(item, node, { replace = false } = {}) {
   clearTimeout(detailCloseTimer);
   clearTimeout(detailSwitchTimer);
-  const source = sourceNodeFor(item.id) || node || null;
+  const source = node?.isConnected ? node : sourceNodeFor(item.id);
   const morphSource = node?.isConnected ? node : source;
   const replacement = detailNode(item);
   if (detailLayer && !replace) finishDetailClose(false);
@@ -905,8 +915,8 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-polish5");
+  const { initHero } = await import("./library-hero.js?v=library-polish6");
   initHero(items);
 }
 
-main();
+if (document.getElementById("shelves")) main();

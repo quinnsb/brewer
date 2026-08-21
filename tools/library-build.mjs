@@ -16,11 +16,13 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { mergeItem } from "./lib/merge.mjs";
 import { applyTaxonomy } from "./lib/taxonomy.mjs";
+import { applyListening } from "./lib/listening.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const RAW = path.join(ROOT, "data", "library.raw.json");
 const OUT = path.join(ROOT, "data", "library.json");
 const TAXONOMY = path.join(ROOT, "data", "library-taxonomy.json");
+const LISTENING = path.join(ROOT, "data", "library-listening.json");
 const NOTES_DIR = path.join(ROOT, "content", "library");
 const OVERRIDE_DIR = path.join(ROOT, "images", "library", "overrides");
 
@@ -33,7 +35,8 @@ async function readNote(id) {
 async function main() {
   const raw = JSON.parse(await readFile(RAW, "utf8"));
   const taxonomy = JSON.parse(await readFile(TAXONOMY, "utf8"));
-  const catalog = applyTaxonomy(raw.items, taxonomy);
+  const listening = JSON.parse(await readFile(LISTENING, "utf8"));
+  const catalog = applyTaxonomy(applyListening(raw.items, listening), taxonomy);
   const ids = new Set(raw.items.map((i) => i.id));
 
   const items = [];
