@@ -1,5 +1,5 @@
 /* ============================================================
-   LIBRARY — shelves and expand-in-place detail
+   LIBRARY — shelves and immersive media detail
 
    Four media types, four physics. They do not share one treatment because
    the objects do not: books overlap as jackets, records move through a
@@ -158,7 +158,7 @@ export function renderShelves(items, root) {
     block.append(rail, actions);
     root.append(block);
     if (type === "book") wireBookLoop(rail, mount);
-    else if (type === "album") wireCoverflow(list, rail, mount, status, root);
+    else if (type === "album") wireCoverflow(list, rail, mount, status);
   }
 }
 
@@ -260,7 +260,7 @@ const REDUCED =
 if (REDUCED) document.documentElement.classList.add("reduce-motion");
 const coverflowById = new Map();
 
-function wireCoverflow(items, frame, stage, status, root) {
+function wireCoverflow(items, frame, stage, status) {
   const nodes = [...stage.querySelectorAll(".coverflow-slide")];
   const count = nodes.length;
   const gap = 0.05;
@@ -294,7 +294,6 @@ function wireCoverflow(items, frame, stage, status, root) {
       node.tabIndex = i === index ? 0 : -1;
     });
     if (hadSlideFocus) nodes[index].focus({ preventScroll: true });
-    if (openId && openId !== item.id) closeAll(root);
   }
 
   function paint() {
@@ -366,11 +365,11 @@ function wireCoverflow(items, frame, stage, status, root) {
       } else {
         event.preventDefault();
         event.stopPropagation();
-        toggleExpansion(items[index], node, root);
+        openDetail(items[index], node);
       }
     });
     coverflowById.set(items[index].id, {
-      open: () => goTo(index, () => toggleExpansion(items[index], node, root)),
+      open: () => goTo(index, () => openDetail(items[index], node)),
     });
   });
 
@@ -490,91 +489,295 @@ function factsNode(item) {
   return list.childElementCount ? list : null;
 }
 
-/* ---------- expand in place ---------- */
+/* ---------- immersive media detail ---------- */
 
+const DETAIL_TYPE = { book: "Book", album: "Album", film: "Film", other: "Podcast" };
 let openId = null;
+let detailLayer = null;
+let detailItems = [];
+let detailRoot = null;
+let detailSource = null;
+let detailCloseTimer = 0;
+let detailSwitchTimer = 0;
+const inertBeforeDetail = new Map();
+
+function svgIcon(path) {
+  const ns = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", "0 0 24 24");
+  svg.setAttribute("fill", "none");
+  svg.setAttribute("aria-hidden", "true");
+  const line = document.createElementNS(ns, "path");
+  line.setAttribute("d", path);
+  line.setAttribute("stroke", "currentColor");
+  line.setAttribute("stroke-width", "1.8");
+  line.setAttribute("stroke-linecap", "round");
+  line.setAttribute("stroke-linejoin", "round");
+  svg.append(line);
+  return svg;
+}
+
+function sourceNodeFor(id) {
+  const matches = [...document.querySelectorAll(`#shelves [data-id="${CSS.escape(id)}"]`)];
+  return matches.find((node) => !node.closest("[data-loop-clone]")) || matches[0] || null;
+}
+
+function markExpanded(node) {
+  if (!detailRoot) return;
+  for (const current of detailRoot.querySelectorAll(".is-open")) {
+    current.classList.remove("is-open");
+    current.setAttribute("aria-expanded", "false");
+  }
+  if (node) {
+    node.classList.add("is-open");
+    node.setAttribute("aria-expanded", "true");
+  }
+}
+
+function setPageInert(active) {
+  if (active) {
+    inertBeforeDetail.clear();
+    for (const child of document.body.children) {
+      if (child === detailLayer || child.tagName === "SCRIPT") continue;
+      inertBeforeDetail.set(child, child.inert);
+      child.inert = true;
+    }
+    return;
+  }
+  for (const [child, wasInert] of inertBeforeDetail) child.inert = wasInert;
+  inertBeforeDetail.clear();
+}
+
+function detailSequence(item) {
+  const items = detailItems.filter((candidate) => candidate.type === item.type);
+  const index = Math.max(0, items.findIndex((candidate) => candidate.id === item.id));
+  return {
+    index,
+    count: items.length,
+    previous: items[(index - 1 + items.length) % items.length],
+    next: items[(index + 1) % items.length],
+  };
+}
+
+function navButton(direction, item) {
+  const button = el("button", `media-detail-nav-button is-${direction}`, {
+    type: "button",
+    "aria-label": `${direction === "previous" ? "Previous" : "Next"} ${DETAIL_TYPE[item.type].toLowerCase()}: ${item.title}`,
+  });
+  const arrow = svgIcon(direction === "previous" ? "M15 18l-6-6 6-6" : "M9 18l6-6-6-6");
+  const copy = el("span");
+  copy.append(
+    Object.assign(el("small"), { textContent: direction === "previous" ? "Previous" : "Next" }),
+    Object.assign(el("strong"), { textContent: item.title })
+  );
+  if (direction === "previous") button.append(arrow, copy);
+  else button.append(copy, arrow);
+  button.addEventListener("click", () => openDetail(item, sourceNodeFor(item.id), { replace: true }));
+  return button;
+}
 
 function detailNode(item) {
-  const d = el("div", "detail");
+  const sequence = detailSequence(item);
+  const titleId = `media-detail-title-${item.id}`;
+  const layer = el("section", `media-detail-layer is-${item.type}`, {
+    role: "dialog",
+    "aria-modal": "true",
+    "aria-labelledby": titleId,
+  });
+  layer.style.setProperty("--detail-accent", item.palette?.accent || "#f3c844");
 
-  const fig = el("div");
-  const img = el("img");
-  img.src = item.cover;
-  img.alt = "";
-  fig.append(img);
+  const art = el("div", "media-detail-art");
+  const morph = el("div", "media-detail-morph");
+  const object = el("figure", `media-detail-object is-${item.type}`);
+  const image = el("img");
+  image.src = item.cover;
+  image.alt = `${item.title} cover`;
+  image.draggable = false;
+  object.append(image);
+  morph.append(object);
+  art.append(morph);
 
-  const body = el("div");
-  body.append(Object.assign(el("h2"), { textContent: item.title }));
+  const copy = el("article", "media-detail-copy");
+  const close = el("button", "media-detail-close", {
+    type: "button",
+    "aria-label": `Close ${item.title} details`,
+  });
+  close.append(svgIcon("M6 6l12 12M18 6L6 18"));
+  close.addEventListener("click", () => closeDetail());
 
-  const bits = [item.creator, item.year, item.finished ? `finished ${item.finished}` : null];
-  body.append(
-    Object.assign(el("p", "meta"), { textContent: bits.filter(Boolean).join("  ·  ") })
+  const header = el("header", "media-detail-header");
+  header.append(
+    Object.assign(el("p", "media-detail-kicker"), {
+      textContent: `${DETAIL_TYPE[item.type]} ${String(sequence.index + 1).padStart(2, "0")} of ${String(sequence.count).padStart(2, "0")}`,
+    }),
+    Object.assign(el("h2"), { id: titleId, textContent: item.title })
   );
-
-  const facts = factsNode(item);
-  if (facts) body.append(facts);
-  const rating = ratingDisplay(item);
-  if (rating) body.append(rating);
+  const bits = [item.creator, item.year, item.finished ? `finished ${item.finished}` : null];
+  header.append(
+    Object.assign(el("p", "media-detail-meta"), { textContent: bits.filter(Boolean).join("  ·  ") })
+  );
+  copy.append(close, header);
 
   if (item.reviewHtml) {
-    const r = el("div", "review");
+    const review = el("div", "media-detail-review");
     /* Built at build time from Quinn's own markdown, where the source text
        was escaped before any inline rule ran. */
-    r.innerHTML = item.reviewHtml;
-    body.append(r);
+    review.innerHTML = item.reviewHtml;
+    copy.append(review);
   } else {
-    body.append(Object.assign(el("p", "empty"), { textContent: "No writeup yet." }));
+    copy.append(Object.assign(el("p", "media-detail-empty"), { textContent: "No writeup yet." }));
   }
+
+  const facts = factsNode(item);
+  if (facts) copy.append(facts);
+  const rating = ratingDisplay(item);
+  if (rating) copy.append(rating);
 
   if (item.sourceUrl) {
-    const a = el("a", "src", { href: item.sourceUrl, target: "_blank", rel: "noopener" });
-    a.textContent = "Source";
-    body.append(a);
+    const source = el("a", "media-detail-source", {
+      href: item.sourceUrl,
+      target: "_blank",
+      rel: "noopener",
+    });
+    source.textContent = "View source";
+    copy.append(source);
   }
 
-  d.append(fig, body);
-  return d;
+  const navigation = el("nav", "media-detail-navigation", {
+    "aria-label": `${DETAIL_TYPE[item.type]} detail navigation`,
+  });
+  navigation.append(navButton("previous", sequence.previous), navButton("next", sequence.next));
+  copy.append(navigation);
+  layer.append(art, copy);
+  return layer;
 }
 
-function closeAll(root) {
-  for (const n of root.querySelectorAll(".is-open")) {
-    n.classList.remove("is-open");
-    n.setAttribute("aria-expanded", "false");
+function setMorphOrigin(layer, source) {
+  const morph = layer.querySelector(".media-detail-morph");
+  const target = morph.getBoundingClientRect();
+  const sourceRect = source?.getBoundingClientRect();
+  const visible = sourceRect && sourceRect.width && sourceRect.height &&
+    sourceRect.right > 0 && sourceRect.left < innerWidth && sourceRect.bottom > 0 && sourceRect.top < innerHeight;
+  if (!visible || REDUCED) {
+    morph.style.setProperty("--detail-dx", "0px");
+    morph.style.setProperty("--detail-dy", "18px");
+    morph.style.setProperty("--detail-sx", "0.96");
+    morph.style.setProperty("--detail-sy", "0.96");
+    return;
   }
-  for (const d of root.querySelectorAll(".detail")) d.remove();
+  const sourceX = sourceRect.left + sourceRect.width / 2;
+  const sourceY = sourceRect.top + sourceRect.height / 2;
+  const targetX = target.left + target.width / 2;
+  const targetY = target.top + target.height / 2;
+  morph.style.setProperty("--detail-dx", `${sourceX - targetX}px`);
+  morph.style.setProperty("--detail-dy", `${sourceY - targetY}px`);
+  morph.style.setProperty("--detail-sx", String(sourceRect.width / target.width));
+  morph.style.setProperty("--detail-sy", String(sourceRect.height / target.height));
+}
+
+function finishDetailClose(restoreFocus = true) {
+  clearTimeout(detailCloseTimer);
+  clearTimeout(detailSwitchTimer);
+  detailLayer?.remove();
+  detailLayer = null;
+  document.body.classList.remove("media-detail-open");
+  setPageInert(false);
+  markExpanded(null);
   openId = null;
+  if (restoreFocus && detailSource?.isConnected) detailSource.focus({ preventScroll: true });
+  detailSource = null;
 }
 
-function toggleExpansion(item, node, root) {
-  const wasOpen = openId === item.id;
-  closeAll(root);
-  if (wasOpen) return;
+function closeDetail({ restoreFocus = true } = {}) {
+  if (!detailLayer) return;
+  clearTimeout(detailSwitchTimer);
+  if (REDUCED) {
+    finishDetailClose(restoreFocus);
+    return;
+  }
+  detailLayer.classList.add("is-closing");
+  detailLayer.classList.remove("is-in");
+  detailCloseTimer = setTimeout(() => finishDetailClose(restoreFocus), 420);
+}
 
-  node.classList.add("is-open");
-  node.setAttribute("aria-expanded", "true");
-  const d = detailNode(item);
-  node.closest(".shelf-block").append(d);
-  requestAnimationFrame(() => d.classList.add("is-in"));
+function openDetail(item, node, { replace = false } = {}) {
+  clearTimeout(detailCloseTimer);
+  clearTimeout(detailSwitchTimer);
+  const source = sourceNodeFor(item.id) || node || null;
+  const morphSource = node?.isConnected ? node : source;
+  const replacement = detailNode(item);
+  if (detailLayer && !replace) finishDetailClose(false);
   openId = item.id;
+  detailSource = source;
+  markExpanded(source);
+
+  if (detailLayer && replace) {
+    const old = detailLayer;
+    old.classList.add("is-switching");
+    const swap = () => {
+      replacement.classList.add("is-in");
+      old.replaceWith(replacement);
+      detailLayer = replacement;
+      replacement.querySelector(".media-detail-close")?.focus({ preventScroll: true });
+    };
+    if (REDUCED) swap();
+    else detailSwitchTimer = setTimeout(swap, 150);
+    return;
+  }
+
+  detailLayer = replacement;
+  document.body.append(detailLayer);
+  setMorphOrigin(detailLayer, morphSource);
+  document.body.classList.add("media-detail-open");
+  setPageInert(true);
+  requestAnimationFrame(() => {
+    detailLayer?.classList.add("is-in");
+    detailLayer?.querySelector(".media-detail-close")?.focus({ preventScroll: true });
+  });
 }
 
 export function wireExpansion(items, root) {
   const byId = new Map(items.map((i) => [i.id, i]));
+  detailItems = items;
+  detailRoot = root;
 
   root.addEventListener("click", (e) => {
     const node = e.target.closest("[data-id]");
     if (!node) return;
     const item = byId.get(node.dataset.id);
     if (!item) return;
-    toggleExpansion(item, node, root);
+    openDetail(item, node);
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && openId) closeAll(root);
-  });
-
-  document.addEventListener("click", (e) => {
-    if (openId && !e.target.closest(".shelf-block")) closeAll(root);
+    if (!detailLayer) return;
+    if (e.key === "Escape") {
+      e.preventDefault();
+      closeDetail();
+      return;
+    }
+    if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+      const current = byId.get(openId);
+      if (!current) return;
+      const sequence = detailSequence(current);
+      const item = e.key === "ArrowLeft" ? sequence.previous : sequence.next;
+      e.preventDefault();
+      openDetail(item, sourceNodeFor(item.id), { replace: true });
+      return;
+    }
+    if (e.key !== "Tab") return;
+    const focusable = [...detailLayer.querySelectorAll("button, a[href], [tabindex]:not([tabindex='-1'])")]
+      .filter((node) => !node.disabled && node.getClientRects().length);
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
   });
 
   /* arrow keys walk a shelf */
@@ -615,7 +818,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=verbs1");
+  const { initHero } = await import("./library-hero.js?v=detail-stage3");
   initHero(items);
 }
 
