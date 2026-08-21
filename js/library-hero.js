@@ -11,7 +11,7 @@
    ============================================================ */
 
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js?v=hero-orbit2";
-import { openItem } from "./library.js?v=detail-stage3";
+import { openItem } from "./library.js?v=hero-words2";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||
@@ -53,7 +53,7 @@ function card(item) {
 
 function rotateVerb(slot, sr) {
   const STAGGER = 24;
-  const DUR = 440;
+  const EXIT = 260;
   let vi = 0;
   let current = null;
 
@@ -72,30 +72,35 @@ function rotateVerb(slot, sr) {
     return w;
   };
 
-  const render = (word) => {
+  const mount = (word) => {
     /* Keep the accessible sentence in step with the visible one. Without
        this the screen-reader text is stuck on whichever verb rendered
        first, which is worse than no live text at all. */
     if (sr) sr.textContent = word;
 
-    const outgoing = current;
-    if (outgoing) {
-      /* Lift it out of flow FIRST. Otherwise its characters keep their
-         width while the incoming word is appended beside them, and the
-         verb visibly drifts right mid-transition. */
-      outgoing.classList.add("out");
-      const gone = outgoing.querySelectorAll(".ch");
-      gone.forEach((ch, i) => setTimeout(() => ch.classList.add("leave"), i * STAGGER));
-      setTimeout(() => outgoing.remove(), gone.length * STAGGER + DUR + 60);
-    }
-
     const incoming = build(word);
-    slot.append(incoming);
+    slot.replaceChildren(incoming);
     current = incoming;
     const chars = incoming.querySelectorAll(".ch");
     requestAnimationFrame(() =>
       chars.forEach((ch, i) => setTimeout(() => ch.classList.remove("enter"), i * STAGGER))
     );
+  };
+
+  const render = (word) => {
+    const outgoing = current;
+    if (!outgoing) {
+      mount(word);
+      return;
+    }
+
+    /* Finish the current word before mounting its replacement. Keeping both
+       in the slot during the cross-over made short verbs read as duplicates. */
+    outgoing.classList.add("out");
+    const gone = outgoing.querySelectorAll(".ch");
+    gone.forEach((ch, i) => setTimeout(() => ch.classList.add("leave"), i * STAGGER));
+    current = null;
+    setTimeout(() => mount(word), EXIT);
   };
 
   /* First verb is painted immediately so the reveal has something to blur
@@ -116,6 +121,9 @@ export function initHero(items) {
   const cutoff = document.getElementById("hero-cutoff");
   const slot = document.getElementById("verb-slot");
   if (!stage || !slot) return;
+  if (stage.dataset.heroInitialized === "true") return;
+  stage.dataset.heroInitialized = "true";
+  slot.replaceChildren();
 
   /* Screen readers get the sentence, not a stream of characters. The
      per-character spans are hidden from them for the same reason. */

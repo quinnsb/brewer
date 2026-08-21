@@ -818,7 +818,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=detail-stage3");
+  const { initHero } = await import("./library-hero.js?v=hero-words2");
   initHero(items);
 }
 
