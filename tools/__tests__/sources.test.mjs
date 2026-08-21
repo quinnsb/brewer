@@ -14,6 +14,8 @@ test("the cover allowlist accepts the catalogue hosts", () => {
     "https://is5-ssl.mzstatic.com/image/thumb/x/1000x1000bb.jpg",
     "https://coverartarchive.org/release/abc/front.jpg",
     "https://upload.wikimedia.org/wikipedia/en/a/b.jpg",
+    "https://i.gr-assets.com/images/S/x/7235533.jpg",
+    "https://a.ltrbxd.com/resized/film-poster/1/2/3-0-1000-0-1500-crop.jpg",
   ]) assert.equal(coverHostAllowed(url), true, url);
 });
 
@@ -25,6 +27,8 @@ test("the cover allowlist refuses everything else", () => {
     "https://localhost/secret",
     "https://evil.com/x.jpg",
     "https://covers.openlibrary.org.evil.com/x.jpg",
+    "https://gr-assets.com.evil.net/x.jpg",
+    "https://notltrbxd.com/x.jpg",
     "file:///etc/passwd",
     "not a url",
     "",

@@ -23,8 +23,14 @@ const COVER_HOSTS = [
   "ia800000.us.archive.org",
   "upload.wikimedia.org",
   "is1-ssl.mzstatic.com",
+  /* The import path: Goodreads serves book jackets and Letterboxd serves film
+     posters, both at far higher resolution than the catalogue APIs. */
+  "i.gr-assets.com",
+  "images.gr-assets.com",
+  "a.ltrbxd.com",
+  "s.ltrbxd.com",
 ];
-const COVER_SUFFIXES = [".mzstatic.com", ".us.archive.org", ".archive.org", ".wikimedia.org"];
+const COVER_SUFFIXES = [".mzstatic.com", ".us.archive.org", ".archive.org", ".wikimedia.org", ".gr-assets.com", ".ltrbxd.com"];
 
 export function coverHostAllowed(url) {
   let parsed;

@@ -62,7 +62,7 @@ export function seedFor(rawItem) {
   };
 }
 
-export function addToCatalog({ published, raw, additions, taxonomy, listening, palette, candidate, genres = [], paletteEntry }) {
+export function addToCatalog({ published, raw, additions, taxonomy, listening, palette, candidate, genres = [], paletteEntry, noteText = null }) {
   const rawItem = rawItemFor(candidate);
   if (raw.items.some((item) => item.id === rawItem.id)) {
     throw new Error(`${rawItem.title} is already in the library`);
@@ -94,7 +94,10 @@ export function addToCatalog({ published, raw, additions, taxonomy, listening, p
      item, so both maps are scoped down to this id first. */
   const scoped = (map) => (map?.[rawItem.id] === undefined ? {} : { [rawItem.id]: map[rawItem.id] });
   const catalog = applyTaxonomy(applyListening([rawItem], scoped(listening)), scoped(nextTaxonomy));
-  const merged = mergeItem(catalog[0], null, false, () => {});
+  /* An item arriving from Goodreads or Letterboxd already has a rating and a
+     date watched or read. Those live in the note, exactly as a hand-typed one
+     does, so the merge is what puts them on the item. */
+  const merged = mergeItem(catalog[0], noteText, false, () => {});
   const [item] = applyPalette([merged], nextPalette);
 
   return {

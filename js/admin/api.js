@@ -35,6 +35,14 @@ export const catalogue = {
   add: (payload) => request("/api/add", { method: "POST", body: JSON.stringify(payload) }),
 };
 
+/* Proposals from Goodreads and Letterboxd. Reading is safe; accepting goes
+   through catalogue.add, and a skip is remembered so the queue empties. */
+export const imports = {
+  pending: () => request("/api/import"),
+  skip: (id) => request("/api/import", { method: "POST", body: JSON.stringify({ op: "skip", id }) }),
+  unskip: (id) => request("/api/import", { method: "POST", body: JSON.stringify({ op: "unskip", id }) }),
+};
+
 /* Every list change is one operation, and the answer is always the whole set
    after it, so the panel never has to keep its own idea of the truth. */
 export const lists = {

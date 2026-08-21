@@ -1,0 +1,16 @@
+{
+  "goodreads": {
+    "userId": "132056152",
+    "profileUrl": "https://www.goodreads.com/user/show/132056152-quinn-brewer",
+    "label": "My Goodreads"
+  },
+  "letterboxd": {
+    "username": "quinnsb",
+    "profileUrl": "https://letterboxd.com/quinnsb/",
+    "label": "My Letterboxd"
+  },
+  "spotify": {
+    "profileUrl": "https://open.spotify.com/user/127248962",
+    "label": "My Spotify"
+  }
+}
