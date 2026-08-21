@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/library.css?v=menu2" />
+  <link rel="stylesheet" href="css/library.css?v=list-grid1" />
 </head>
 <body id="top" class="library library-lists">
   <button
@@ -35,45 +35,17 @@
 
   <main class="list-page-main">
     <header class="list-page-intro">
-      <p class="list-page-kicker"><a href="library.html">Library</a> / Lists</p>
-      <h1>Lists worth arguing about.</h1>
-      <p>This is the home for ranked favorites, odd little categories, and deep dives. The first lists will arrive here as Quinn builds them.</p>
+      <p class="list-page-kicker"><a href="library.html">Library</a> / <span data-list-kicker>Books</span></p>
+      <h1 data-list-title>Book lists.</h1>
+      <p data-list-intro>Ranked favorites, generous recommendations, and shelves organized around an idea.</p>
     </header>
 
-    <section id="books" class="list-index-section" aria-labelledby="books-heading">
-      <h2 id="books-heading">Book lists</h2>
-      <div class="list-card-grid">
-        <article class="list-card"><h3>My top 25 books</h3><p>Coming later</p></article>
-        <article class="list-card"><h3>Science fiction essentials</h3><p>Coming later</p></article>
-        <article class="list-card"><h3>Books I keep giving away</h3><p>Coming later</p></article>
-      </div>
-    </section>
-
-    <section id="albums" class="list-index-section" aria-labelledby="albums-heading">
-      <h2 id="albums-heading">Album lists</h2>
-      <div class="list-card-grid">
-        <article class="list-card"><h3>Top 10 hip-hop albums</h3><p>Coming later</p></article>
-        <article class="list-card"><h3>Records for a slow Sunday</h3><p>Coming later</p></article>
-        <article class="list-card"><h3>Perfect front-to-back albums</h3><p>Coming later</p></article>
-      </div>
-    </section>
-
-    <section id="films" class="list-index-section" aria-labelledby="films-heading">
-      <h2 id="films-heading">Film lists</h2>
-      <div class="list-card-grid">
-        <article class="list-card"><h3>20 science fiction movies</h3><p>Coming later</p></article>
-        <article class="list-card"><h3>Top 10 children's movies</h3><p>Coming later</p></article>
-        <article class="list-card"><h3>Top 10 seventies movies</h3><p>Coming later</p></article>
-      </div>
-    </section>
-
-    <section id="podcasts" class="list-index-section" aria-labelledby="podcasts-heading">
-      <h2 id="podcasts-heading">Podcast lists</h2>
-      <div class="list-card-grid">
-        <article class="list-card"><h3>Shows that make me smarter</h3><p>Coming later</p></article>
-        <article class="list-card"><h3>Long drives, better company</h3><p>Coming later</p></article>
-        <article class="list-card"><h3>Episodes worth replaying</h3><p>Coming later</p></article>
-      </div>
+    <section class="list-index-section" aria-labelledby="list-section-heading">
+      <h2 id="list-section-heading">
+        <span data-list-section>Book lists</span>
+        <span data-list-count>3 collections</span>
+      </h2>
+      <div class="list-card-grid" data-list-grid></div>
     </section>
   </main>
 
@@ -99,5 +71,6 @@
   </footer>
 
   <script src="js/library-chrome.js?v=menu2"></script>
+  <script type="module" src="js/library-lists.js?v=list-grid1"></script>
 </body>
 </html>

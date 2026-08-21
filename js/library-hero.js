@@ -11,7 +11,7 @@
    ============================================================ */
 
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js";
-import { openItem } from "./library.js?v=hero-albums2";
+import { openItem } from "./library.js?v=list-grid1";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||

@@ -18,10 +18,10 @@ const TYPE_LABEL = {
 };
 const ORDER = ["book", "album", "film", "other"];
 const LIST_LINK = {
-  book: ["See all book lists", "books"],
-  album: ["See all album lists", "albums"],
-  film: ["See all film lists", "films"],
-  other: ["See all podcast lists", "podcasts"],
+  book: ["See all book lists", "book"],
+  album: ["See all album lists", "album"],
+  film: ["See all film lists", "film"],
+  other: ["See all podcast lists", "other"],
 };
 
 const el = (tag, cls, attrs) => {
@@ -158,7 +158,7 @@ export function renderShelves(items, root) {
     }
     const [linkText, anchor] = LIST_LINK[type];
     const actions = el("div", "shelf-actions");
-    const listLink = el("a", "shelf-lists-link", { href: `library-lists.html#${anchor}` });
+    const listLink = el("a", "shelf-lists-link", { href: `library-lists.html?type=${anchor}` });
     listLink.textContent = linkText;
     actions.append(listLink);
     block.append(rail, actions);
@@ -529,7 +529,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=hero-albums2");
+  const { initHero } = await import("./library-hero.js?v=list-grid1");
   initHero(items);
 }
 
