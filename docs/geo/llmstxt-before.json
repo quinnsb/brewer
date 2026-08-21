@@ -1,0 +1,20 @@
+{
+  "url": "https://www.quinnbrewer.com/llms.txt",
+  "exists": false,
+  "format_valid": false,
+  "has_title": false,
+  "has_description": false,
+  "has_sections": false,
+  "has_links": false,
+  "section_count": 0,
+  "link_count": 0,
+  "content": "",
+  "issues": [
+    "llms.txt returned status 404"
+  ],
+  "suggestions": [],
+  "full_version": {
+    "url": "https://www.quinnbrewer.com/llms-full.txt",
+    "exists": false
+  }
+}

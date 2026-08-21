@@ -1,0 +1,57 @@
+# Quinn Brewer
+
+> Marketing and communications leader working in brand strategy, web design,
+> content, writing, and podcasting. Based in the United States, working with
+> consultancies, nonprofits, and growing companies.
+
+Quinn Brewer builds brands and the things that carry them: identity systems,
+websites, campaigns, written work, and audio. The background is filmmaking and
+visual storytelling, which is why the work tends to start with what a company
+is actually trying to say rather than with a template.
+
+## Pages
+
+- [Home](https://www.quinnbrewer.com/): What Quinn does, and the shape of a
+  working relationship.
+- [About](https://www.quinnbrewer.com/about.html): Background, capabilities, and
+  how the filmmaking roots inform the marketing work.
+- [Work](https://www.quinnbrewer.com/work.html): Selected brand, web, and
+  communications projects.
+- [Library](https://www.quinnbrewer.com/library.html): Books, records, films,
+  and podcasts worth keeping, with ratings and writeups.
+- [Blog](https://www.quinnbrewer.com/blog.html): Notes on design, marketing,
+  taste, and studio life.
+- [Contact](https://www.quinnbrewer.com/contact.html): Start a project.
+
+## Case studies
+
+- [M&S Consulting](https://www.quinnbrewer.com/projects/ms-consulting.html)
+- [Collegiate Church Network](https://www.quinnbrewer.com/projects/collegiate-church-network.html)
+- [The Forgotten Initiative](https://www.quinnbrewer.com/projects/the-forgotten-initiative.html)
+- [Atlas Ivy](https://www.quinnbrewer.com/projects/atlas-ivy.html)
+- [Foxglove](https://www.quinnbrewer.com/projects/foxglove.html)
+- [Homefield](https://www.quinnbrewer.com/projects/homefield.html)
+- [Nix](https://www.quinnbrewer.com/projects/nix.html)
+- [Rally](https://www.quinnbrewer.com/projects/rally.html)
+- [Ridgeline](https://www.quinnbrewer.com/projects/ridgeline.html)
+
+## Capabilities
+
+- Brand strategy and identity
+- Web design and build
+- Content and copywriting
+- Video production, editing, and photography
+- Podcasting
+- Event and merchandise design
+
+## Elsewhere
+
+- [Library data](https://www.quinnbrewer.com/data/library.json): The library as
+  JSON, if you would rather read it that way.
+- [Dribbble](https://dribbble.com/quinnbrewer)
+- [Substack](https://substack.com/@quinnsbrewer)
+- [LinkedIn](https://www.linkedin.com/in/quinn-brewer)
+
+## Optional
+
+- [Privacy policy](https://www.quinnbrewer.com/privacy.html)

@@ -1,0 +1,109 @@
+{
+  "url": "https://www.quinnbrewer.com/",
+  "total_blocks_analyzed": 2,
+  "average_citability_score": 33.5,
+  "optimal_length_passages": 1,
+  "grade_distribution": {
+    "A": 0,
+    "B": 0,
+    "C": 0,
+    "D": 0,
+    "F": 2
+  },
+  "top_5_citable": [
+    {
+      "heading": "Media",
+      "word_count": 54,
+      "total_score": 34,
+      "grade": "F",
+      "label": "Poor Citability",
+      "breakdown": {
+        "answer_block_quality": 15,
+        "self_containment": 11,
+        "structural_readability": 8,
+        "statistical_density": 0,
+        "uniqueness_signals": 0
+      },
+      "preview": "Video ProductionEditingPhotographyPodcastingEvent & Merch Design My favorite capability, the one that holds up all the rest, is getting genuinely invested in your team, your vision, and your needs. I take..."
+    },
+    {
+      "heading": "I'm Quinn Brewer",
+      "word_count": 150,
+      "total_score": 33,
+      "grade": "F",
+      "label": "Poor Citability",
+      "breakdown": {
+        "answer_block_quality": 6,
+        "self_containment": 17,
+        "structural_readability": 8,
+        "statistical_density": 0,
+        "uniqueness_signals": 2
+      },
+      "preview": "I believe in strategy and craft, the foundational pieces that turn a pretty logo into a powerful design system that can grow and evolve for years to come. Great work,..."
+    }
+  ],
+  "bottom_5_citable": [
+    {
+      "heading": "I'm Quinn Brewer",
+      "word_count": 150,
+      "total_score": 33,
+      "grade": "F",
+      "label": "Poor Citability",
+      "breakdown": {
+        "answer_block_quality": 6,
+        "self_containment": 17,
+        "structural_readability": 8,
+        "statistical_density": 0,
+        "uniqueness_signals": 2
+      },
+      "preview": "I believe in strategy and craft, the foundational pieces that turn a pretty logo into a powerful design system that can grow and evolve for years to come. Great work,..."
+    },
+    {
+      "heading": "Media",
+      "word_count": 54,
+      "total_score": 34,
+      "grade": "F",
+      "label": "Poor Citability",
+      "breakdown": {
+        "answer_block_quality": 15,
+        "self_containment": 11,
+        "structural_readability": 8,
+        "statistical_density": 0,
+        "uniqueness_signals": 0
+      },
+      "preview": "Video ProductionEditingPhotographyPodcastingEvent & Merch Design My favorite capability, the one that holds up all the rest, is getting genuinely invested in your team, your vision, and your needs. I take..."
+    }
+  ],
+  "all_blocks": [
+    {
+      "heading": "I'm Quinn Brewer",
+      "word_count": 150,
+      "total_score": 33,
+      "grade": "F",
+      "label": "Poor Citability",
+      "breakdown": {
+        "answer_block_quality": 6,
+        "self_containment": 17,
+        "structural_readability": 8,
+        "statistical_density": 0,
+        "uniqueness_signals": 2
+      },
+      "preview": "I believe in strategy and craft, the foundational pieces that turn a pretty logo into a powerful design system that can grow and evolve for years to come. Great work,..."
+    },
+    {
+      "heading": "Media",
+      "word_count": 54,
+      "total_score": 34,
+      "grade": "F",
+      "label": "Poor Citability",
+      "breakdown": {
+        "answer_block_quality": 15,
+        "self_containment": 11,
+        "structural_readability": 8,
+        "statistical_density": 0,
+        "uniqueness_signals": 0
+      },
+      "preview": "Video ProductionEditingPhotographyPodcastingEvent & Merch Design My favorite capability, the one that holds up all the rest, is getting genuinely invested in your team, your vision, and your needs. I take..."
+    }
+  ]
+}

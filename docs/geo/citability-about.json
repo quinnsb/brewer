@@ -1,0 +1,109 @@
+{
+  "url": "https://www.quinnbrewer.com/about.html",
+  "total_blocks_analyzed": 2,
+  "average_citability_score": 43.5,
+  "optimal_length_passages": 1,
+  "grade_distribution": {
+    "A": 0,
+    "B": 0,
+    "C": 1,
+    "D": 1,
+    "F": 0
+  },
+  "top_5_citable": [
+    {
+      "heading": "The backstory",
+      "word_count": 149,
+      "total_score": 52,
+      "grade": "C",
+      "label": "Moderate Citability",
+      "breakdown": {
+        "answer_block_quality": 20,
+        "self_containment": 22,
+        "structural_readability": 8,
+        "statistical_density": 2,
+        "uniqueness_signals": 0
+      },
+      "preview": "It started in high school with a camera. I made videos for fun, bought a serious DSLR, and found out people would pay me for senior portraits. I kept saying..."
+    },
+    {
+      "heading": "Punching above my weight",
+      "word_count": 100,
+      "total_score": 35,
+      "grade": "D",
+      "label": "Low Citability",
+      "breakdown": {
+        "answer_block_quality": 5,
+        "self_containment": 19,
+        "structural_readability": 8,
+        "statistical_density": 0,
+        "uniqueness_signals": 3
+      },
+      "preview": "I pride myself on overdelivering, doing bigger and better work than one person at a desk has any right to. When you work with me, nothing gets passed down a..."
+    }
+  ],
+  "bottom_5_citable": [
+    {
+      "heading": "Punching above my weight",
+      "word_count": 100,
+      "total_score": 35,
+      "grade": "D",
+      "label": "Low Citability",
+      "breakdown": {
+        "answer_block_quality": 5,
+        "self_containment": 19,
+        "structural_readability": 8,
+        "statistical_density": 0,
+        "uniqueness_signals": 3
+      },
+      "preview": "I pride myself on overdelivering, doing bigger and better work than one person at a desk has any right to. When you work with me, nothing gets passed down a..."
+    },
+    {
+      "heading": "The backstory",
+      "word_count": 149,
+      "total_score": 52,
+      "grade": "C",
+      "label": "Moderate Citability",
+      "breakdown": {
+        "answer_block_quality": 20,
+        "self_containment": 22,
+        "structural_readability": 8,
+        "statistical_density": 2,
+        "uniqueness_signals": 0
+      },
+      "preview": "It started in high school with a camera. I made videos for fun, bought a serious DSLR, and found out people would pay me for senior portraits. I kept saying..."
+    }
+  ],
+  "all_blocks": [
+    {
+      "heading": "Punching above my weight",
+      "word_count": 100,
+      "total_score": 35,
+      "grade": "D",
+      "label": "Low Citability",
+      "breakdown": {
+        "answer_block_quality": 5,
+        "self_containment": 19,
+        "structural_readability": 8,
+        "statistical_density": 0,
+        "uniqueness_signals": 3
+      },
+      "preview": "I pride myself on overdelivering, doing bigger and better work than one person at a desk has any right to. When you work with me, nothing gets passed down a..."
+    },
+    {
+      "heading": "The backstory",
+      "word_count": 149,
+      "total_score": 52,
+      "grade": "C",
+      "label": "Moderate Citability",
+      "breakdown": {
+        "answer_block_quality": 20,
+        "self_containment": 22,
+        "structural_readability": 8,
+        "statistical_density": 2,
+        "uniqueness_signals": 0
+      },
+      "preview": "It started in high school with a camera. I made videos for fun, bought a serious DSLR, and found out people would pay me for senior portraits. I kept saying..."
+    }
+  ]
+}
