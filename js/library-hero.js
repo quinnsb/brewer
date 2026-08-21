@@ -11,7 +11,7 @@
    ============================================================ */
 
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js";
-import { openItem } from "./library.js?v=feedback5";
+import { openItem } from "./library.js?v=hero-opening3";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||
@@ -150,15 +150,17 @@ export function initHero(items) {
   /* Cards land first, then the headline blurs in at the centre of the ring
      they just formed. Rotating the verb before that would animate type
      nobody can see yet. */
-  let phase = "circle";
+  let phase = REDUCED ? "circle" : "scatter";
   if (REDUCED) {
     line.classList.add("is-in");
     startRotating();
   } else {
+    setTimeout(() => (phase = "line"), 500);
     setTimeout(() => {
+      phase = "circle";
       line.classList.add("is-in");
-      setTimeout(startRotating, 1100);
-    }, 220);
+      setTimeout(startRotating, 1200);
+    }, 2500);
   }
 
   const state = scatter.map((s) => ({ ...s, v: { x: 0, y: 0, r: 0, s: 0 } }));
@@ -218,7 +220,6 @@ export function initHero(items) {
   const progress = () => (REDUCED ? 1 : Math.min(Math.max(scrollY / innerHeight, 0), 1));
 
   let last = performance.now();
-  let initialized = false;
   function frame(now) {
     const dt = Math.min((now - last) / 1000, 1 / 30);
     last = now;
@@ -283,17 +284,6 @@ export function initHero(items) {
       if (REDUCED) {
         Object.assign(s, target);
       } else {
-        /* Paint the ring at its real starting geometry, then fade it in. The
-           old scatter and line transit left covers crossing the headline for
-           several seconds on narrow screens. */
-        if (!initialized) {
-          s.x = target.x;
-          s.y = target.y;
-          s.rotation = target.rotation;
-          s.scale = target.scale;
-          s.opacity = 0;
-          s.v = { x: 0, y: 0, r: 0, s: 0 };
-        }
         ({ value: s.x, velocity: s.v.x } = springStep(s.x, target.x, s.v.x, dt, 40, 15));
         ({ value: s.y, velocity: s.v.y } = springStep(s.y, target.y, s.v.y, dt, 40, 15));
         ({ value: s.rotation, velocity: s.v.r } = springStep(s.rotation, target.rotation, s.v.r, dt, 40, 15));
@@ -307,7 +297,6 @@ export function initHero(items) {
       nodes[i].style.opacity = s.opacity.toFixed(3);
     }
 
-    initialized = true;
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
