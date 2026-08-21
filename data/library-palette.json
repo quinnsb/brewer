@@ -1,0 +1,842 @@
+{
+  "book-the-left-hand-of-darkness": {
+    "fingerprint": "40887:1787264223119",
+    "width": 302,
+    "height_px": 475,
+    "palette": {
+      "cover": "#57767c",
+      "accent": "#5bbfd3",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-gravitys-rainbow": {
+    "fingerprint": "25228:1787264226475",
+    "width": 328,
+    "height_px": 500,
+    "palette": {
+      "cover": "#243288",
+      "accent": "#1934be",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-the-dispossessed": {
+    "fingerprint": "35069:1787264231787",
+    "width": 312,
+    "height_px": 475,
+    "palette": {
+      "cover": "#712712",
+      "accent": "#da400c",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-blood-meridian": {
+    "fingerprint": "23249:1787264241290",
+    "width": 307,
+    "height_px": 475,
+    "palette": {
+      "cover": "#32342a",
+      "accent": "#655e2d",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-housekeeping": {
+    "fingerprint": "42492:1787264246125",
+    "width": 334,
+    "height_px": 500,
+    "palette": {
+      "cover": "#5a6482",
+      "accent": "#7196d7",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-the-sellout": {
+    "fingerprint": "45958:1787264247421",
+    "width": 333,
+    "height_px": 500,
+    "palette": {
+      "cover": "#a7a1a1",
+      "accent": "#d8bac3",
+      "ink": "#141210"
+    }
+  },
+  "book-cloud-atlas": {
+    "fingerprint": "37312:1787264256373",
+    "width": 321,
+    "height_px": 500,
+    "palette": {
+      "cover": "#7e725a",
+      "accent": "#e49e74",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-a-visit-from-the-goon-squad": {
+    "fingerprint": "11844:1787264283272",
+    "width": 185,
+    "height_px": 276,
+    "palette": {
+      "cover": "#417e81",
+      "accent": "#59cfd7",
+      "ink": "#141210"
+    }
+  },
+  "book-piranesi": {
+    "fingerprint": "49382:1787264291247",
+    "width": 353,
+    "height_px": 500,
+    "palette": {
+      "cover": "#17110f",
+      "accent": "#311c0f",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-starclimber": {
+    "fingerprint": "31551:1787264298248",
+    "width": 300,
+    "height_px": 452,
+    "palette": {
+      "cover": "#42362c",
+      "accent": "#7a4222",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-never-let-me-go": {
+    "fingerprint": "33077:1787264299968",
+    "width": 319,
+    "height_px": 500,
+    "palette": {
+      "cover": "#909456",
+      "accent": "#ffff95",
+      "ink": "#141210"
+    }
+  },
+  "book-the-martian": {
+    "fingerprint": "34759:1787264301388",
+    "width": 321,
+    "height_px": 500,
+    "palette": {
+      "cover": "#772310",
+      "accent": "#d73205",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-the-bonesetters-daughter": {
+    "fingerprint": "31754:1787264303115",
+    "width": 331,
+    "height_px": 500,
+    "palette": {
+      "cover": "#34342a",
+      "accent": "#ead7ae",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-the-hobbit": {
+    "fingerprint": "37706:1787264303951",
+    "width": 301,
+    "height_px": 500,
+    "palette": {
+      "cover": "#392c24",
+      "accent": "#7d3e2d",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-dawn": {
+    "fingerprint": "36893:1787264306638",
+    "width": 284,
+    "height_px": 475,
+    "palette": {
+      "cover": "#585a52",
+      "accent": "#0c978a",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-moby-dick": {
+    "fingerprint": "58824:1787264311086",
+    "width": 327,
+    "height_px": 500,
+    "palette": {
+      "cover": "#675336",
+      "accent": "#cd9a3f",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-things-fall-apart": {
+    "fingerprint": "50512:1787264317018",
+    "width": 288,
+    "height_px": 500,
+    "palette": {
+      "cover": "#75694e",
+      "accent": "#d8c937",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-hatchet": {
+    "fingerprint": "61276:1787264328462",
+    "width": 330,
+    "height_px": 500,
+    "palette": {
+      "cover": "#697448",
+      "accent": "#d5e142",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-enders-game": {
+    "fingerprint": "63588:1787264331316",
+    "width": 316,
+    "height_px": 500,
+    "palette": {
+      "cover": "#39332e",
+      "accent": "#a38b46",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-the-fifth-season": {
+    "fingerprint": "366251:1787264332281",
+    "width": 664,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#2d352f",
+      "accent": "#84760f",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-a-day-of-fallen-night": {
+    "fingerprint": "108307:1787264339205",
+    "width": 331,
+    "height_px": 500,
+    "palette": {
+      "cover": "#334345",
+      "accent": "#14879a",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-the-call-of-the-wild": {
+    "fingerprint": "37503:1787264353739",
+    "width": 313,
+    "height_px": 500,
+    "palette": {
+      "cover": "#52555d",
+      "accent": "#2c3852",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-the-stone-sky": {
+    "fingerprint": "393145:1787264355198",
+    "width": 659,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#2a413a",
+      "accent": "#256a88",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-heart-of-darkness": {
+    "fingerprint": "45597:1787264359865",
+    "width": 309,
+    "height_px": 500,
+    "palette": {
+      "cover": "#2f2e40",
+      "accent": "#2e3059",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-pretty-as-a-picture": {
+    "fingerprint": "15466:1787264365374",
+    "width": 144,
+    "height_px": 218,
+    "palette": {
+      "cover": "#2e3133",
+      "accent": "#291a1e",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-ready-player-two": {
+    "fingerprint": "45665:1787264373380",
+    "width": 500,
+    "height_px": 500,
+    "palette": {
+      "cover": "#192b2d",
+      "accent": "#54959d",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-normal-people": {
+    "fingerprint": "44782:1787264375108",
+    "width": 331,
+    "height_px": 500,
+    "palette": {
+      "cover": "#56715e",
+      "accent": "#83b247",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-feed": {
+    "fingerprint": "16555:1787264377296",
+    "width": 328,
+    "height_px": 500,
+    "palette": {
+      "cover": "#a1a29e",
+      "accent": "#eeefea",
+      "ink": "#141210"
+    }
+  },
+  "book-the-fellowship-of-the-ring": {
+    "fingerprint": "52313:1787264378085",
+    "width": 269,
+    "height_px": 500,
+    "palette": {
+      "cover": "#381312",
+      "accent": "#4f0307",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-coloring-book": {
+    "fingerprint": "45691:1787264151152",
+    "width": 500,
+    "height_px": 500,
+    "palette": {
+      "cover": "#803d4e",
+      "accent": "#fe5169",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-where-the-light-is-john-mayer-live-in-los-angeles": {
+    "fingerprint": "78836:1787263980056",
+    "width": 500,
+    "height_px": 500,
+    "palette": {
+      "cover": "#1a1919",
+      "accent": "#1b231f",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-in-between-dreams": {
+    "fingerprint": "300234:1787264428174",
+    "width": 900,
+    "height_px": 810,
+    "palette": {
+      "cover": "#736008",
+      "accent": "#ffd600",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-blonde-on-blonde": {
+    "fingerprint": "228838:1787264428671",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#685740",
+      "accent": "#eab591",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-kind-of-blue": {
+    "fingerprint": "61116:1787264429169",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#1f2020",
+      "accent": "#354040",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-transatlanticism": {
+    "fingerprint": "231399:1787264429660",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#825933",
+      "accent": "#f9b462",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-reading-writing-and-arithmetic": {
+    "fingerprint": "442606:1787264430187",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#2e3234",
+      "accent": "#3d4649",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-night-train": {
+    "fingerprint": "194127:1787264430715",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#202940",
+      "accent": "#5d7cdc",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-a-boy-named-charlie-brown": {
+    "fingerprint": "172311:1787264431520",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#989d8f",
+      "accent": "#51983b",
+      "ink": "#141210"
+    }
+  },
+  "album-gordon": {
+    "fingerprint": "223550:1787264432003",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#1d1f28",
+      "accent": "#283a6f",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-come-away-with-me": {
+    "fingerprint": "160902:1787264432593",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#253046",
+      "accent": "#1551a0",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-mr-finish-line": {
+    "fingerprint": "414359:1787264433248",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#726e6e",
+      "accent": "#a7675d",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-magic": {
+    "fingerprint": "303601:1787281365943",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#191e1d",
+      "accent": "#3d5e6d",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-messy": {
+    "fingerprint": "190780:1787281366520",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#6e3943",
+      "accent": "#9a2e1a",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-plans": {
+    "fingerprint": "183445:1787281367121",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#130f0c",
+      "accent": "#4f1919",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-thriller": {
+    "fingerprint": "243715:1787281367714",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#4d4e4a",
+      "accent": "#ab7d5d",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-sound-of-silver": {
+    "fingerprint": "158217:1787281368390",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#8a8983",
+      "accent": "#ddd4c4",
+      "ink": "#141210"
+    }
+  },
+  "album-songs-in-the-key-of-life": {
+    "fingerprint": "245487:1787281369033",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#954b35",
+      "accent": "#feab51",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-crux": {
+    "fingerprint": "448115:1787281489797",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#494c4e",
+      "accent": "#155da2",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-upstairs-at-erics": {
+    "fingerprint": "282675:1787281399428",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#2d282b",
+      "accent": "#443430",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-talon-of-the-hawk": {
+    "fingerprint": "105065:1787281400017",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#b1afae",
+      "accent": "#d7b997",
+      "ink": "#141210"
+    }
+  },
+  "album-the-joshua-tree": {
+    "fingerprint": "138648:1787281400598",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#1d1d1c",
+      "accent": "#242321",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-charm": {
+    "fingerprint": "270592:1787281401199",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#402e18",
+      "accent": "#452e08",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-jackson-square": {
+    "fingerprint": "71598:1787281407221",
+    "width": 500,
+    "height_px": 500,
+    "palette": {
+      "cover": "#787467",
+      "accent": "#f4e8bb",
+      "ink": "#141210"
+    }
+  },
+  "album-funeral": {
+    "fingerprint": "315926:1787281408140",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#794b3f",
+      "accent": "#d0765d",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-there-will-be-blood": {
+    "fingerprint": "98739:1787264434702",
+    "width": 250,
+    "height_px": 370,
+    "palette": {
+      "cover": "#0d0d0d",
+      "accent": "#11242d",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-in-the-mood-for-love": {
+    "fingerprint": "108748:1787264435474",
+    "width": 265,
+    "height_px": 376,
+    "palette": {
+      "cover": "#6a3626",
+      "accent": "#e16c0f",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-paris-texas-film": {
+    "fingerprint": "181901:1787264436275",
+    "width": 255,
+    "height_px": 393,
+    "palette": {
+      "cover": "#362f26",
+      "accent": "#eabe92",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-burning-2018-film": {
+    "fingerprint": "158495:1787264436955",
+    "width": 260,
+    "height_px": 371,
+    "palette": {
+      "cover": "#342c31",
+      "accent": "#d69e8b",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-master-2012-film": {
+    "fingerprint": "121402:1787264437784",
+    "width": 220,
+    "height_px": 326,
+    "palette": {
+      "cover": "#1f4f7f",
+      "accent": "#0167ab",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-moonlight": {
+    "fingerprint": "97319:1787264438280",
+    "width": 960,
+    "height_px": 1021,
+    "palette": {
+      "cover": "#47414a",
+      "accent": "#2b1a36",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-chungking-express": {
+    "fingerprint": "19780:1787264438955",
+    "width": 259,
+    "height_px": 383,
+    "palette": {
+      "cover": "#9e9e9f",
+      "accent": "#faeb82",
+      "ink": "#141210"
+    }
+  },
+  "film-first-reformed": {
+    "fingerprint": "58933:1787264439733",
+    "width": 220,
+    "height_px": 326,
+    "palette": {
+      "cover": "#0c0706",
+      "accent": "#451f11",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-ferris-buellers-day-off": {
+    "fingerprint": "48853:1787272794182",
+    "width": 254,
+    "height_px": 384,
+    "palette": {
+      "cover": "#897675",
+      "accent": "#d68375",
+      "ink": "#141210"
+    }
+  },
+  "film-the-empire-strikes-back": {
+    "fingerprint": "124913:1787272795281",
+    "width": 254,
+    "height_px": 396,
+    "palette": {
+      "cover": "#484654",
+      "accent": "#4c5c89",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-moonrise-kingdom": {
+    "fingerprint": "203492:1787272796056",
+    "width": 220,
+    "height_px": 324,
+    "palette": {
+      "cover": "#4d411f",
+      "accent": "#8d4b0b",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-oceans-eleven": {
+    "fingerprint": "146475:1787272796907",
+    "width": 220,
+    "height_px": 326,
+    "palette": {
+      "cover": "#4e251a",
+      "accent": "#f08842",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-mission-impossible-fallout": {
+    "fingerprint": "25887:1787272797703",
+    "width": 257,
+    "height_px": 386,
+    "palette": {
+      "cover": "#876f6e",
+      "accent": "#b0341d",
+      "ink": "#141210"
+    }
+  },
+  "film-kikis-delivery-service": {
+    "fingerprint": "141136:1787272798402",
+    "width": 250,
+    "height_px": 351,
+    "palette": {
+      "cover": "#40241d",
+      "accent": "#853321",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-la-la-land": {
+    "fingerprint": "346953:1787272799217",
+    "width": 260,
+    "height_px": 385,
+    "palette": {
+      "cover": "#15123e",
+      "accent": "#3d21a1",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-treasure-planet": {
+    "fingerprint": "19995:1787272800135",
+    "width": 260,
+    "height_px": 384,
+    "palette": {
+      "cover": "#383d49",
+      "accent": "#0e93ad",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-a-goofy-movie": {
+    "fingerprint": "105133:1787272800802",
+    "width": 259,
+    "height_px": 384,
+    "palette": {
+      "cover": "#335065",
+      "accent": "#0049aa",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-meet-the-robinsons": {
+    "fingerprint": "95050:1787272801570",
+    "width": 256,
+    "height_px": 379,
+    "palette": {
+      "cover": "#866123",
+      "accent": "#faaa04",
+      "ink": "#f1ece3"
+    }
+  },
+  "other-99-invisible": {
+    "fingerprint": "102979:1787264440566",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#272423",
+      "accent": "#5a4f1f",
+      "ink": "#f1ece3"
+    }
+  },
+  "other-design-matters-with-debbie-millman": {
+    "fingerprint": "96623:1787264440941",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#404746",
+      "accent": "#7ebebc",
+      "ink": "#f1ece3"
+    }
+  },
+  "other-song-exploder": {
+    "fingerprint": "63126:1787264441601",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#1e1b1b",
+      "accent": "#ac6708",
+      "ink": "#f1ece3"
+    }
+  },
+  "other-the-rest-is-history": {
+    "fingerprint": "353597:1787264441956",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#6e4e58",
+      "accent": "#8e1f44",
+      "ink": "#f1ece3"
+    }
+  },
+  "other-the-big-picture": {
+    "fingerprint": "110518:1787270910182",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#186156",
+      "accent": "#0577fb",
+      "ink": "#f1ece3"
+    }
+  },
+  "other-radio-ambulante": {
+    "fingerprint": "101376:1787270911088",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#6a8d91",
+      "accent": "#a7e0e4",
+      "ink": "#141210"
+    }
+  },
+  "other-the-anthropocene-reviewed": {
+    "fingerprint": "81590:1787270912343",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#1d1e3b",
+      "accent": "#121a44",
+      "ink": "#f1ece3"
+    }
+  },
+  "other-my-brother-my-brother-and-me": {
+    "fingerprint": "210991:1787270913372",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#81746f",
+      "accent": "#d46e54",
+      "ink": "#141210"
+    }
+  },
+  "other-the-adventure-zone": {
+    "fingerprint": "313776:1787270914590",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#3c2247",
+      "accent": "#874c17",
+      "ink": "#f1ece3"
+    }
+  },
+  "other-wonderful": {
+    "fingerprint": "255240:1787270915246",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#908a77",
+      "accent": "#f8d493",
+      "ink": "#141210"
+    }
+  },
+  "other-the-besties": {
+    "fingerprint": "85716:1787270915999",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#ad8c33",
+      "accent": "#fdc541",
+      "ink": "#141210"
+    }
+  },
+  "other-revisionist-history": {
+    "fingerprint": "383089:1787271193052",
+    "width": 1000,
+    "height_px": 1000,
+    "palette": {
+      "cover": "#6d6e63",
+      "accent": "#edecac",
+      "ink": "#f1ece3"
+    }
+  }
+}

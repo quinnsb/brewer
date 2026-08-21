@@ -66,3 +66,41 @@ test("rating is author-owned frontmatter and defaults to null", () => {
   assert.equal(mergeItem(RAW, null, false).rating, null);
   assert.equal(mergeItem(RAW, "---\nrating: 4.5\n---\n", false).rating, 4.5);
 });
+
+test("a rating outside 0 to 5 is dropped and warned about by name", () => {
+  const warnings = [];
+  const out = mergeItem(RAW, "---\nrating: 9\n---\n", false, (m) => warnings.push(m));
+  assert.equal(out.rating, null);
+  assert.equal(warnings.length, 1);
+  assert.match(warnings[0], /film-paris-texas-film/);
+  assert.match(warnings[0], /9/);
+});
+
+test("a rating off the half step is dropped and warned about", () => {
+  const warnings = [];
+  const out = mergeItem(RAW, "---\nrating: 3.7\n---\n", false, (m) => warnings.push(m));
+  assert.equal(out.rating, null);
+  assert.equal(warnings.length, 1);
+});
+
+test("a non-numeric rating is dropped and warned about", () => {
+  const warnings = [];
+  const out = mergeItem(RAW, "---\nrating: great\n---\n", false, (m) => warnings.push(m));
+  assert.equal(out.rating, null);
+  assert.equal(warnings.length, 1);
+});
+
+test("valid half-step ratings pass through without warning", () => {
+  for (const value of [0, 0.5, 3, 4.5, 5]) {
+    const warnings = [];
+    const out = mergeItem(RAW, `---\nrating: ${value}\n---\n`, false, (m) => warnings.push(m));
+    assert.equal(out.rating, value, `rating ${value} should survive`);
+    assert.deepEqual(warnings, [], `rating ${value} should not warn`);
+  }
+});
+
+test("a negative rating is dropped and warned about", () => {
+  const warnings = [];
+  assert.equal(mergeItem(RAW, "---\nrating: -1\n---\n", false, (m) => warnings.push(m)).rating, null);
+  assert.equal(warnings.length, 1);
+});

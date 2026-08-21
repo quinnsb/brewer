@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T15:16:57.945Z",
+  "generatedAt": "2026-08-21T19:32:01.523Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -44,7 +44,14 @@
       "creators": [
         "Ursula K. Le Guin"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 302,
+      "height_px": 475,
+      "palette": {
+        "cover": "#57767c",
+        "accent": "#5bbfd3",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-gravitys-rainbow",
@@ -90,7 +97,14 @@
       "creators": [
         "Thomas Pynchon"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 328,
+      "height_px": 500,
+      "palette": {
+        "cover": "#243288",
+        "accent": "#1934be",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-the-dispossessed",
@@ -135,7 +149,14 @@
       "creators": [
         "Ursula K. Le Guin"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 312,
+      "height_px": 475,
+      "palette": {
+        "cover": "#712712",
+        "accent": "#da400c",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-blood-meridian",
@@ -181,7 +202,14 @@
       "creators": [
         "Cormac McCarthy"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 307,
+      "height_px": 475,
+      "palette": {
+        "cover": "#32342a",
+        "accent": "#655e2d",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-housekeeping",
@@ -226,7 +254,14 @@
       "creators": [
         "Marilynne Robinson"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 334,
+      "height_px": 500,
+      "palette": {
+        "cover": "#5a6482",
+        "accent": "#7196d7",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-the-sellout",
@@ -272,7 +307,14 @@
       "creators": [
         "Paul Beatty"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 333,
+      "height_px": 500,
+      "palette": {
+        "cover": "#a7a1a1",
+        "accent": "#d8bac3",
+        "ink": "#141210"
+      }
     },
     {
       "id": "book-cloud-atlas",
@@ -318,7 +360,14 @@
       "creators": [
         "David Mitchell"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 321,
+      "height_px": 500,
+      "palette": {
+        "cover": "#7e725a",
+        "accent": "#e49e74",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-a-visit-from-the-goon-squad",
@@ -363,7 +412,14 @@
       "creators": [
         "Jennifer Egan"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 185,
+      "height_px": 276,
+      "palette": {
+        "cover": "#417e81",
+        "accent": "#59cfd7",
+        "ink": "#141210"
+      }
     },
     {
       "id": "book-piranesi",
@@ -408,7 +464,14 @@
       "creators": [
         "Susanna Clarke"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 353,
+      "height_px": 500,
+      "palette": {
+        "cover": "#17110f",
+        "accent": "#311c0f",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-starclimber",
@@ -454,7 +517,14 @@
       "creators": [
         "Kenneth Oppel"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 300,
+      "height_px": 452,
+      "palette": {
+        "cover": "#42362c",
+        "accent": "#7a4222",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-never-let-me-go",
@@ -500,7 +570,14 @@
       "creators": [
         "Kazuo Ishiguro"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 319,
+      "height_px": 500,
+      "palette": {
+        "cover": "#909456",
+        "accent": "#ffff95",
+        "ink": "#141210"
+      }
     },
     {
       "id": "book-the-martian",
@@ -545,7 +622,14 @@
       "creators": [
         "Andy Weir"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 321,
+      "height_px": 500,
+      "palette": {
+        "cover": "#772310",
+        "accent": "#d73205",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-the-bonesetters-daughter",
@@ -591,7 +675,14 @@
       "creators": [
         "Amy Tan"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 331,
+      "height_px": 500,
+      "palette": {
+        "cover": "#34342a",
+        "accent": "#ead7ae",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-the-hobbit",
@@ -637,7 +728,14 @@
       "creators": [
         "J.R.R. Tolkien"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 301,
+      "height_px": 500,
+      "palette": {
+        "cover": "#392c24",
+        "accent": "#7d3e2d",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-dawn",
@@ -682,7 +780,14 @@
       "creators": [
         "Octavia E. Butler"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 284,
+      "height_px": 475,
+      "palette": {
+        "cover": "#585a52",
+        "accent": "#0c978a",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-moby-dick",
@@ -728,7 +833,14 @@
       "creators": [
         "Herman Melville"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 327,
+      "height_px": 500,
+      "palette": {
+        "cover": "#675336",
+        "accent": "#cd9a3f",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-things-fall-apart",
@@ -774,7 +886,14 @@
       "creators": [
         "Chinua Achebe"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 288,
+      "height_px": 500,
+      "palette": {
+        "cover": "#75694e",
+        "accent": "#d8c937",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-hatchet",
@@ -820,7 +939,14 @@
       "creators": [
         "Gary Paulsen"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 330,
+      "height_px": 500,
+      "palette": {
+        "cover": "#697448",
+        "accent": "#d5e142",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-enders-game",
@@ -865,7 +991,14 @@
       "creators": [
         "Orson Scott Card"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 316,
+      "height_px": 500,
+      "palette": {
+        "cover": "#39332e",
+        "accent": "#a38b46",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-the-fifth-season",
@@ -903,7 +1036,14 @@
       "creators": [
         "N. K. Jemisin"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 664,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#2d352f",
+        "accent": "#84760f",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-a-day-of-fallen-night",
@@ -944,7 +1084,14 @@
       "creators": [
         "Samantha Shannon"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 331,
+      "height_px": 500,
+      "palette": {
+        "cover": "#334345",
+        "accent": "#14879a",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-the-call-of-the-wild",
@@ -989,7 +1136,14 @@
       "creators": [
         "Jack London"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 313,
+      "height_px": 500,
+      "palette": {
+        "cover": "#52555d",
+        "accent": "#2c3852",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-the-stone-sky",
@@ -1027,7 +1181,14 @@
       "creators": [
         "N. K. Jemisin"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 659,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#2a413a",
+        "accent": "#256a88",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-heart-of-darkness",
@@ -1073,7 +1234,14 @@
       "creators": [
         "Joseph Conrad"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 309,
+      "height_px": 500,
+      "palette": {
+        "cover": "#2f2e40",
+        "accent": "#2e3059",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-pretty-as-a-picture",
@@ -1119,7 +1287,14 @@
       "creators": [
         "Elizabeth Little"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 144,
+      "height_px": 218,
+      "palette": {
+        "cover": "#2e3133",
+        "accent": "#291a1e",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-ready-player-two",
@@ -1164,7 +1339,14 @@
       "creators": [
         "Ernest Cline"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 500,
+      "height_px": 500,
+      "palette": {
+        "cover": "#192b2d",
+        "accent": "#54959d",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-normal-people",
@@ -1210,7 +1392,14 @@
       "creators": [
         "Sally Rooney"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 331,
+      "height_px": 500,
+      "palette": {
+        "cover": "#56715e",
+        "accent": "#83b247",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "book-feed",
@@ -1252,7 +1441,14 @@
       "creators": [
         "M. T. Anderson"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 328,
+      "height_px": 500,
+      "palette": {
+        "cover": "#a1a29e",
+        "accent": "#eeefea",
+        "ink": "#141210"
+      }
     },
     {
       "id": "book-the-fellowship-of-the-ring",
@@ -1298,7 +1494,14 @@
       "creators": [
         "J.R.R. Tolkien"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 269,
+      "height_px": 500,
+      "palette": {
+        "cover": "#381312",
+        "accent": "#4f0307",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-coloring-book",
@@ -1351,7 +1554,14 @@
       "creators": [
         "Chance the Rapper"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 500,
+      "height_px": 500,
+      "palette": {
+        "cover": "#803d4e",
+        "accent": "#fe5169",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-where-the-light-is-john-mayer-live-in-los-angeles",
@@ -1404,7 +1614,14 @@
       "creators": [
         "John Mayer"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 500,
+      "height_px": 500,
+      "palette": {
+        "cover": "#1a1919",
+        "accent": "#1b231f",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-in-between-dreams",
@@ -1542,7 +1759,14 @@
       "creators": [
         "Jack Johnson"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 900,
+      "height_px": 810,
+      "palette": {
+        "cover": "#736008",
+        "accent": "#ffd600",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-blonde-on-blonde",
@@ -1680,7 +1904,14 @@
       "creators": [
         "Bob Dylan"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#685740",
+        "accent": "#eab591",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-kind-of-blue",
@@ -1763,7 +1994,14 @@
       "creators": [
         "Miles Davis"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 600,
+      "height_px": 600,
+      "palette": {
+        "cover": "#1f2020",
+        "accent": "#354040",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-transatlanticism",
@@ -1882,7 +2120,14 @@
       "creators": [
         "Death Cab for Cutie"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#825933",
+        "accent": "#f9b462",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-reading-writing-and-arithmetic",
@@ -1996,7 +2241,14 @@
       "creators": [
         "The Sundays"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#2e3234",
+        "accent": "#3d4649",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-night-train",
@@ -2151,7 +2403,14 @@
       "creators": [
         "Oscar Peterson Trio"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#202940",
+        "accent": "#5d7cdc",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-a-boy-named-charlie-brown",
@@ -2271,7 +2530,14 @@
       "creators": [
         "Vince Guaraldi Trio"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#989d8f",
+        "accent": "#51983b",
+        "ink": "#141210"
+      }
     },
     {
       "id": "album-gordon",
@@ -2414,7 +2680,14 @@
       "creators": [
         "Barenaked Ladies"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#1d1f28",
+        "accent": "#283a6f",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-come-away-with-me",
@@ -2552,7 +2825,14 @@
       "creators": [
         "Norah Jones"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#253046",
+        "accent": "#1551a0",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-mr-finish-line",
@@ -2665,7 +2945,14 @@
       "creators": [
         "Vulfpeck"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#726e6e",
+        "accent": "#a7675d",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-magic",
@@ -2797,7 +3084,14 @@
       "creators": [
         "Ben Rector"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#191e1d",
+        "accent": "#3d5e6d",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-messy",
@@ -2923,7 +3217,14 @@
       "creators": [
         "Olivia Dean"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#6e3943",
+        "accent": "#9a2e1a",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-plans",
@@ -3042,7 +3343,14 @@
       "creators": [
         "Death Cab for Cutie"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#130f0c",
+        "accent": "#4f1919",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-thriller",
@@ -3150,7 +3458,14 @@
       "creators": [
         "Michael Jackson"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#4d4e4a",
+        "accent": "#ab7d5d",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-sound-of-silver",
@@ -3258,7 +3573,14 @@
       "creators": [
         "LCD Soundsystem"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#8a8983",
+        "accent": "#ddd4c4",
+        "ink": "#141210"
+      }
     },
     {
       "id": "album-songs-in-the-key-of-life",
@@ -3438,7 +3760,14 @@
       "creators": [
         "Stevie Wonder"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#954b35",
+        "accent": "#feab51",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-the-crux",
@@ -3564,7 +3893,14 @@
       "creators": [
         "Djo"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#494c4e",
+        "accent": "#155da2",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-upstairs-at-erics",
@@ -3684,7 +4020,14 @@
       "creators": [
         "Yaz"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#2d282b",
+        "accent": "#443430",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-talon-of-the-hawk",
@@ -3810,7 +4153,14 @@
       "creators": [
         "The Front Bottoms"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#b1afae",
+        "accent": "#d7b997",
+        "ink": "#141210"
+      }
     },
     {
       "id": "album-the-joshua-tree",
@@ -3929,7 +4279,14 @@
       "creators": [
         "U2"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#1d1d1c",
+        "accent": "#242321",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-charm",
@@ -4049,7 +4406,14 @@
       "creators": [
         "Clairo"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#402e18",
+        "accent": "#452e08",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "album-jackson-square",
@@ -4093,7 +4457,14 @@
       "creators": [
         "Arkells"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 500,
+      "height_px": 500,
+      "palette": {
+        "cover": "#787467",
+        "accent": "#f4e8bb",
+        "ink": "#141210"
+      }
     },
     {
       "id": "album-funeral",
@@ -4207,7 +4578,14 @@
       "creators": [
         "Arcade Fire"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#794b3f",
+        "accent": "#d0765d",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-there-will-be-blood",
@@ -4261,7 +4639,14 @@
       "creators": [
         "Paul Thomas Anderson"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 250,
+      "height_px": 370,
+      "palette": {
+        "cover": "#0d0d0d",
+        "accent": "#11242d",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-in-the-mood-for-love",
@@ -4315,7 +4700,14 @@
       "creators": [
         "Wong Kar-wai"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 265,
+      "height_px": 376,
+      "palette": {
+        "cover": "#6a3626",
+        "accent": "#e16c0f",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-paris-texas-film",
@@ -4369,7 +4761,14 @@
       "creators": [
         "Wim Wenders"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 255,
+      "height_px": 393,
+      "palette": {
+        "cover": "#362f26",
+        "accent": "#eabe92",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-burning-2018-film",
@@ -4423,7 +4822,14 @@
       "creators": [
         "Lee Chang-dong"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 260,
+      "height_px": 371,
+      "palette": {
+        "cover": "#342c31",
+        "accent": "#d69e8b",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-the-master-2012-film",
@@ -4476,7 +4882,14 @@
       "creators": [
         "Paul Thomas Anderson"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 220,
+      "height_px": 326,
+      "palette": {
+        "cover": "#1f4f7f",
+        "accent": "#0167ab",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-moonlight",
@@ -4530,7 +4943,14 @@
       "creators": [
         "Barry Jenkins"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 960,
+      "height_px": 1021,
+      "palette": {
+        "cover": "#47414a",
+        "accent": "#2b1a36",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-chungking-express",
@@ -4584,7 +5004,14 @@
       "creators": [
         "Wong Kar-wai"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 259,
+      "height_px": 383,
+      "palette": {
+        "cover": "#9e9e9f",
+        "accent": "#faeb82",
+        "ink": "#141210"
+      }
     },
     {
       "id": "film-first-reformed",
@@ -4638,7 +5065,14 @@
       "creators": [
         "Paul Schrader"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 220,
+      "height_px": 326,
+      "palette": {
+        "cover": "#0c0706",
+        "accent": "#451f11",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-ferris-buellers-day-off",
@@ -4692,7 +5126,14 @@
       "creators": [
         "John Hughes"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 254,
+      "height_px": 384,
+      "palette": {
+        "cover": "#897675",
+        "accent": "#d68375",
+        "ink": "#141210"
+      }
     },
     {
       "id": "film-the-empire-strikes-back",
@@ -4746,7 +5187,14 @@
       "creators": [
         "Irvin Kershner"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 254,
+      "height_px": 396,
+      "palette": {
+        "cover": "#484654",
+        "accent": "#4c5c89",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-moonrise-kingdom",
@@ -4800,7 +5248,14 @@
       "creators": [
         "Wes Anderson"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 220,
+      "height_px": 324,
+      "palette": {
+        "cover": "#4d411f",
+        "accent": "#8d4b0b",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-oceans-eleven",
@@ -4854,7 +5309,14 @@
       "creators": [
         "Steven Soderbergh"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 220,
+      "height_px": 326,
+      "palette": {
+        "cover": "#4e251a",
+        "accent": "#f08842",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-mission-impossible-fallout",
@@ -4908,7 +5370,14 @@
       "creators": [
         "Christopher McQuarrie"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 257,
+      "height_px": 386,
+      "palette": {
+        "cover": "#876f6e",
+        "accent": "#b0341d",
+        "ink": "#141210"
+      }
     },
     {
       "id": "film-kikis-delivery-service",
@@ -4958,7 +5427,14 @@
       "creators": [
         "Hayao Miyazaki"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 250,
+      "height_px": 351,
+      "palette": {
+        "cover": "#40241d",
+        "accent": "#853321",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-la-la-land",
@@ -5012,7 +5488,14 @@
       "creators": [
         "Damien Chazelle"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 260,
+      "height_px": 385,
+      "palette": {
+        "cover": "#15123e",
+        "accent": "#3d21a1",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-treasure-planet",
@@ -5064,7 +5547,14 @@
         "John Musker",
         "Ron Clements"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 260,
+      "height_px": 384,
+      "palette": {
+        "cover": "#383d49",
+        "accent": "#0e93ad",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-a-goofy-movie",
@@ -5111,7 +5601,14 @@
       "creators": [
         "Kevin Lima"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 259,
+      "height_px": 384,
+      "palette": {
+        "cover": "#335065",
+        "accent": "#0049aa",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "film-meet-the-robinsons",
@@ -5162,7 +5659,14 @@
       "creators": [
         "Stephen Anderson"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 256,
+      "height_px": 379,
+      "palette": {
+        "cover": "#866123",
+        "accent": "#faaa04",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "other-99-invisible",
@@ -5207,7 +5711,14 @@
       "creators": [
         "Roman Mars"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#272423",
+        "accent": "#5a4f1f",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "other-design-matters-with-debbie-millman",
@@ -5253,7 +5764,14 @@
       "creators": [
         "Design Matters Media"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#404746",
+        "accent": "#7ebebc",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "other-song-exploder",
@@ -5299,7 +5817,14 @@
       "creators": [
         "Hrishikesh Hirway"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#1e1b1b",
+        "accent": "#ac6708",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "other-the-rest-is-history",
@@ -5344,7 +5869,14 @@
       "creators": [
         "Goalhanger"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#6e4e58",
+        "accent": "#8e1f44",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "other-the-big-picture",
@@ -5389,7 +5921,14 @@
       "creators": [
         "The Ringer"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#186156",
+        "accent": "#0577fb",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "other-radio-ambulante",
@@ -5437,7 +5976,14 @@
         "Radio Ambulante",
         "iHeartPodcasts"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#6a8d91",
+        "accent": "#a7e0e4",
+        "ink": "#141210"
+      }
     },
     {
       "id": "other-the-anthropocene-reviewed",
@@ -5484,7 +6030,14 @@
         "Complexly",
         "John Green"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#1d1e3b",
+        "accent": "#121a44",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "other-my-brother-my-brother-and-me",
@@ -5530,7 +6083,14 @@
       "creators": [
         "The McElroys"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#81746f",
+        "accent": "#d46e54",
+        "ink": "#141210"
+      }
     },
     {
       "id": "other-the-adventure-zone",
@@ -5576,7 +6136,14 @@
       "creators": [
         "The McElroys"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#3c2247",
+        "accent": "#874c17",
+        "ink": "#f1ece3"
+      }
     },
     {
       "id": "other-wonderful",
@@ -5623,7 +6190,14 @@
         "Rachel",
         "Griffin McElroy"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#908a77",
+        "accent": "#f8d493",
+        "ink": "#141210"
+      }
     },
     {
       "id": "other-the-besties",
@@ -5671,7 +6245,14 @@
         "Griffin McElroy",
         "Justin McElroy"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#ad8c33",
+        "accent": "#fdc541",
+        "ink": "#141210"
+      }
     },
     {
       "id": "other-revisionist-history",
@@ -5717,7 +6298,14 @@
       "creators": [
         "Pushkin Industries"
       ],
-      "reviewHtml": null
+      "reviewHtml": null,
+      "width": 1000,
+      "height_px": 1000,
+      "palette": {
+        "cover": "#6d6e63",
+        "accent": "#edecac",
+        "ink": "#f1ece3"
+      }
     }
   ]
 }
