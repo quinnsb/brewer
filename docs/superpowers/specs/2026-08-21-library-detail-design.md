@@ -102,9 +102,15 @@ and `closeDetail`, not a rewrite of either.
 
 ## Out of scope
 
-Analytics, a write-capable admin portal, and live sync from Goodreads, Letterboxd,
-and Spotify. Those need a server, secrets, and auth decisions that have nothing to
-do with the detail view. They get their own spec.
+A write-capable admin portal and live sync from Goodreads, Letterboxd, and Spotify.
+Those need secrets and auth decisions that have nothing to do with the detail view.
+They get their own spec.
+
+Decided already, so the next spec starts from here: the portal is a logged-in
+`/admin` on quinnbrewer.com for adding items, rating them, and building lists.
+Analytics is dropped. Since the site is static HTML in a GitHub repo, the shape
+that fits is a git-based CMS: log in with GitHub, edits commit markdown to
+`content/library/`, and the existing build turns it into `library.json`.
 
 Notes on feasibility, recorded so the next spec does not relitigate them:
 
