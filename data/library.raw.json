@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T00:13:13.304Z",
+  "generatedAt": "2026-08-21T00:40:05.702Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -1752,6 +1752,406 @@
       ],
       "height": 0.966,
       "thickness": 1.131,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "film-ferris-buellers-day-off",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Ferris Bueller's Day Off",
+      "creator": "John Hughes",
+      "year": 1986,
+      "detail": "Film",
+      "cover": "images/library/film-ferris-buellers-day-off.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ferris_Bueller's_Day_Off",
+      "facts": [
+        [
+          "Director",
+          "John Hughes"
+        ],
+        [
+          "Writer",
+          "John Hughes"
+        ],
+        [
+          "Producer",
+          "John Hughes"
+        ],
+        [
+          "Starring",
+          "Matthew Broderick, Mia Sara, Alan Ruck"
+        ],
+        [
+          "Released",
+          "1986-06-11"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
+      "height": 0.971,
+      "thickness": 1.425,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "film-the-empire-strikes-back",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Empire Strikes Back",
+      "creator": "Irvin Kershner",
+      "year": 1980,
+      "detail": "Film",
+      "cover": "images/library/film-the-empire-strikes-back.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/The_Empire_Strikes_Back",
+      "facts": [
+        [
+          "Director",
+          "Irvin Kershner"
+        ],
+        [
+          "Writer",
+          "Leigh Brackett, Lawrence Kasdan, George Lucas"
+        ],
+        [
+          "Producer",
+          "Gary Kurtz"
+        ],
+        [
+          "Starring",
+          "Harrison Ford, Carrie Fisher, David Prowse"
+        ],
+        [
+          "Released",
+          "1980-05-17"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
+      "height": 0.589,
+      "thickness": 1.001,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "film-moonrise-kingdom",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Moonrise Kingdom",
+      "creator": "Wes Anderson",
+      "year": 2012,
+      "detail": "Film",
+      "cover": "images/library/film-moonrise-kingdom.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Moonrise_Kingdom",
+      "facts": [
+        [
+          "Director",
+          "Wes Anderson"
+        ],
+        [
+          "Writer",
+          "Wes Anderson, Roman Coppola"
+        ],
+        [
+          "Producer",
+          "Scott Rudin, Wes Anderson, Steven Rales"
+        ],
+        [
+          "Starring",
+          "Jared Gilman, Kara Hayward"
+        ],
+        [
+          "Released",
+          "2012-05-16"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
+      "height": 0.816,
+      "thickness": 0.93,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "film-oceans-eleven",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Ocean's Eleven",
+      "creator": "Steven Soderbergh",
+      "year": 2001,
+      "detail": "Film",
+      "cover": "images/library/film-oceans-eleven.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ocean's_Eleven",
+      "facts": [
+        [
+          "Director",
+          "Steven Soderbergh"
+        ],
+        [
+          "Writer",
+          "Ted Griffin, Harry Brown, Charles Lederer"
+        ],
+        [
+          "Producer",
+          "Jerry Weintraub"
+        ],
+        [
+          "Starring",
+          "George Clooney, Brad Pitt, Bernie Mac"
+        ],
+        [
+          "Released",
+          "2001-12-05"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
+      "height": 0.58,
+      "thickness": 0.867,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "film-mission-impossible-fallout",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Mission: Impossible Fallout",
+      "creator": "Christopher McQuarrie",
+      "year": 2018,
+      "detail": "Film",
+      "cover": "images/library/film-mission-impossible-fallout.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mission%3A_Impossible_%E2%80%93_Fallout",
+      "facts": [
+        [
+          "Director",
+          "Christopher McQuarrie"
+        ],
+        [
+          "Writer",
+          "Christopher McQuarrie"
+        ],
+        [
+          "Producer",
+          "J. J. Abrams, Bryan Burk, Tom Cruise, David Ellison, Jake Myers"
+        ],
+        [
+          "Starring",
+          "Rebecca Ferguson, Henry Cavill, Simon Pegg"
+        ],
+        [
+          "Released",
+          "2018-07-27"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
+      "height": 0.939,
+      "thickness": 1.415,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "film-kikis-delivery-service",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Kiki's Delivery Service",
+      "creator": "Hayao Miyazaki",
+      "year": 1989,
+      "detail": "Film",
+      "cover": "images/library/film-kikis-delivery-service.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Kiki's_Delivery_Service",
+      "facts": [
+        [
+          "Director",
+          "Hayao Miyazaki"
+        ],
+        [
+          "Writer",
+          "Hayao Miyazaki"
+        ],
+        [
+          "Producer",
+          "Hayao Miyazaki, Tōru Hara"
+        ],
+        [
+          "Released",
+          "1989-07-29"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
+      "height": 0.852,
+      "thickness": 0.699,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "film-la-la-land",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "La La Land",
+      "creator": "Damien Chazelle",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-la-la-land.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/La_La_Land",
+      "facts": [
+        [
+          "Director",
+          "Damien Chazelle"
+        ],
+        [
+          "Writer",
+          "Damien Chazelle"
+        ],
+        [
+          "Producer",
+          "Gary Gilbert, Marc Platt, Jordan Horowitz, Fred Berger"
+        ],
+        [
+          "Starring",
+          "Emma Stone, J. K. Simmons, Finn Wittrock"
+        ],
+        [
+          "Released",
+          "2017-01-12"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
+      "height": 0.818,
+      "thickness": 1.165,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "film-treasure-planet",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Treasure Planet",
+      "creator": "John Musker, Ron Clements",
+      "year": 2002,
+      "detail": "Film",
+      "cover": "images/library/film-treasure-planet.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Treasure_Planet",
+      "facts": [
+        [
+          "Director",
+          "John Musker, Ron Clements"
+        ],
+        [
+          "Writer",
+          "Ron Clements, John Musker, Rob Edwards, Ted Elliott, Terry Rossio"
+        ],
+        [
+          "Producer",
+          "Roy Conli, John Musker, Ron Clements"
+        ],
+        [
+          "Released",
+          "2002-11-27"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
+      "height": 0.742,
+      "thickness": 1.069,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "film-a-goofy-movie",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "A Goofy Movie",
+      "creator": "Kevin Lima",
+      "year": 1995,
+      "detail": "Film",
+      "cover": "images/library/film-a-goofy-movie.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/A_Goofy_Movie",
+      "facts": [
+        [
+          "Director",
+          "Kevin Lima"
+        ],
+        [
+          "Writer",
+          "Jymn Magon, Brian Pimental, Chris Matheson"
+        ],
+        [
+          "Released",
+          "1995-04-07"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
+      "height": 0.597,
+      "thickness": 1.24,
+      "starred": false,
+      "note": null
+    },
+    {
+      "id": "film-meet-the-robinsons",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Meet the Robinsons",
+      "creator": "Stephen Anderson",
+      "year": 2007,
+      "detail": "Film",
+      "cover": "images/library/film-meet-the-robinsons.jpg",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Meet_the_Robinsons",
+      "facts": [
+        [
+          "Director",
+          "Stephen Anderson"
+        ],
+        [
+          "Writer",
+          "Stephen Anderson, Don Hall, Nathan Greno"
+        ],
+        [
+          "Producer",
+          "John Lasseter"
+        ],
+        [
+          "Released",
+          "2007-03-30"
+        ],
+        [
+          "Format",
+          "Film"
+        ]
+      ],
+      "height": 0.803,
+      "thickness": 1.389,
       "starred": false,
       "note": null
     },

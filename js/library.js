@@ -8,7 +8,7 @@
 
 import { spineWidth, spineHeight } from "./lib/geometry.js";
 
-const DATA_URL = "data/library.json?v=feedback4";
+const DATA_URL = "data/library.json?v=feedback5";
 
 const TYPE_LABEL = {
   book: ["Books", "spine shelf"],
@@ -529,7 +529,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=feedback4");
+  const { initHero } = await import("./library-hero.js?v=feedback5");
   initHero(items);
 }
 
