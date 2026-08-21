@@ -584,9 +584,16 @@ function detailNode(item) {
     "aria-modal": "true",
     "aria-labelledby": titleId,
   });
+  layer.style.setProperty("--detail-color", item.palette?.cover || "#33302b");
   layer.style.setProperty("--detail-accent", item.palette?.accent || "#f3c844");
 
   const art = el("div", "media-detail-art");
+  const backdrop = el("button", "media-detail-backdrop", {
+    type: "button",
+    tabindex: "-1",
+    "aria-label": `Close ${item.title} details`,
+  });
+  backdrop.addEventListener("click", () => closeDetail());
   const morph = el("div", "media-detail-morph");
   const object = el("figure", `media-detail-object is-${item.type}`);
   const image = el("img");
@@ -595,7 +602,7 @@ function detailNode(item) {
   image.draggable = false;
   object.append(image);
   morph.append(object);
-  art.append(morph);
+  art.append(backdrop, morph);
 
   const copy = el("article", "media-detail-copy");
   const close = el("button", "media-detail-close", {
@@ -818,7 +825,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=hero-words2");
+  const { initHero } = await import("./library-hero.js?v=detail-stage4");
   initHero(items);
 }
 
