@@ -11,7 +11,7 @@
    ============================================================ */
 
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js?v=hero-orbit2";
-import { openItem } from "./library.js?v=hero-orbit2";
+import { openItem } from "./library.js?v=book-loop2";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||

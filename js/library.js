@@ -11,7 +11,7 @@ import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
 const DATA_URL = "data/library.json?v=unique-albums1";
 
 const TYPE_LABEL = {
-  book: ["Books", "overlapping covers"],
+  book: ["Books", "drag or scroll either direction"],
   album: ["Albums", "drag, scroll, or use arrow keys"],
   film: ["Films", "poster rack"],
   other: ["Podcasts", "tiles"],
@@ -94,10 +94,15 @@ const BUILDERS = {
 
 const CONTAINER = {
   book() {
-    const rail = el("div", "shelf-rail");
+    const rail = el("div", "shelf-rail book-loop", {
+      role: "region",
+      "aria-label": "Book covers",
+    });
     const mount = el("div", "book-cover-shelf");
+    const run = el("div", "book-cover-run");
+    mount.append(run);
     rail.append(mount);
-    return { rail, mount };
+    return { rail, mount: run };
   },
   album() {
     const rail = el("div", "coverflow", {
@@ -152,8 +157,99 @@ export function renderShelves(items, root) {
     actions.append(listLink);
     block.append(rail, actions);
     root.append(block);
-    if (type === "album") wireCoverflow(list, rail, mount, status, root);
+    if (type === "book") wireBookLoop(rail, mount);
+    else if (type === "album") wireCoverflow(list, rail, mount, status, root);
   }
+}
+
+/* ---------- books: seamless looping rail ---------- */
+
+function wireBookLoop(frame, originalRun) {
+  const shelf = originalRun.parentElement;
+  const before = originalRun.cloneNode(true);
+  const after = originalRun.cloneNode(true);
+  let runWidth = 0;
+  let initialized = false;
+  let drag = null;
+  let suppressClick = false;
+
+  for (const clone of [before, after]) {
+    clone.dataset.loopClone = "true";
+    clone.setAttribute("aria-hidden", "true");
+    for (const button of clone.querySelectorAll("button")) button.tabIndex = -1;
+  }
+  shelf.prepend(before);
+  shelf.append(after);
+
+  const normalize = () => {
+    if (!runWidth) return;
+    const x = frame.scrollLeft;
+    if (x < runWidth * 0.5) frame.scrollLeft = x + runWidth;
+    else if (x >= runWidth * 1.5) frame.scrollLeft = x - runWidth;
+  };
+
+  const measure = () => {
+    const firstCoverWidth = originalRun.querySelector(".book-cover")?.getBoundingClientRect().width || 0;
+    const runStyle = getComputedStyle(originalRun);
+    const boundaryPadding = parseFloat(runStyle.paddingLeft) + parseFloat(runStyle.paddingRight);
+    shelf.style.setProperty(
+      "--book-run-overlap",
+      `${(-(firstCoverWidth * 0.22 + boundaryPadding)).toFixed(2)}px`
+    );
+    runWidth = originalRun.offsetLeft - before.offsetLeft;
+    if (!runWidth) return;
+    if (!initialized) {
+      frame.scrollLeft = runWidth;
+      initialized = true;
+    } else {
+      normalize();
+    }
+  };
+
+  frame.addEventListener("scroll", normalize, { passive: true });
+  new ResizeObserver(measure).observe(originalRun);
+  requestAnimationFrame(measure);
+
+  frame.addEventListener("pointerdown", (event) => {
+    if (event.button !== 0) return;
+    drag = { id: event.pointerId, x: event.clientX, startX: event.clientX, moved: false };
+  });
+
+  frame.addEventListener("pointermove", (event) => {
+    if (!drag || drag.id !== event.pointerId) return;
+    const delta = event.clientX - drag.x;
+    drag.x = event.clientX;
+    drag.moved ||= Math.abs(event.clientX - drag.startX) > 4;
+    if (!drag.moved) return;
+    if (!frame.hasPointerCapture(event.pointerId)) frame.setPointerCapture(event.pointerId);
+    frame.scrollLeft -= delta;
+    normalize();
+  });
+
+  const endDrag = (event) => {
+    if (!drag || drag.id !== event.pointerId) return;
+    const moved = drag.moved;
+    drag = null;
+    if (moved) {
+      suppressClick = true;
+      setTimeout(() => (suppressClick = false), 0);
+    }
+  };
+  frame.addEventListener("pointerup", endDrag);
+  frame.addEventListener("pointercancel", endDrag);
+
+  frame.addEventListener("click", (event) => {
+    if (!suppressClick) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  }, true);
+
+  frame.addEventListener("wheel", (event) => {
+    if (!event.shiftKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
+    event.preventDefault();
+    frame.scrollLeft += event.deltaY;
+    normalize();
+  }, { passive: false });
 }
 
 /* ---------- albums: native coverflow ---------- */
@@ -487,7 +583,12 @@ export function wireExpansion(items, root) {
     const cur = e.target.closest("[data-id]");
     if (!cur || cur.closest(".coverflow")) return;
     const sibs = [...cur.parentElement.querySelectorAll("[data-id]")];
-    const next = sibs[sibs.indexOf(cur) + (e.key === "ArrowRight" ? 1 : -1)];
+    const direction = e.key === "ArrowRight" ? 1 : -1;
+    const currentIndex = sibs.indexOf(cur);
+    let next = sibs[currentIndex + direction];
+    if (!next && cur.closest(".book-cover-run")) {
+      next = direction > 0 ? sibs[0] : sibs[sibs.length - 1];
+    }
     if (next) {
       next.focus();
       e.preventDefault();
@@ -497,7 +598,8 @@ export function wireExpansion(items, root) {
 
 /* Used by the hero: jump to an item's shelf and open it. */
 export function openItem(id) {
-  const node = document.querySelector(`#shelves [data-id="${CSS.escape(id)}"]`);
+  const matches = [...document.querySelectorAll(`#shelves [data-id="${CSS.escape(id)}"]`)];
+  const node = matches.find((candidate) => !candidate.closest("[data-loop-clone]")) || matches[0];
   if (!node) return;
   node.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "center", inline: "center" });
   const coverflow = coverflowById.get(id);
@@ -513,7 +615,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=hero-orbit2");
+  const { initHero } = await import("./library-hero.js?v=book-loop2");
   initHero(items);
 }
 
