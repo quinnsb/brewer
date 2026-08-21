@@ -913,6 +913,28 @@ body.library-menu-open .library-menu-links a { opacity: 1; transform: none; }
   max-width: 18ch; margin: 0; font-family: "Aeonik", system-ui, sans-serif;
   font-size: clamp(28px, 3vw, 42px); line-height: 0.94; letter-spacing: -0.03em;
 }
+/* The whole title is the way into the list, so it carries no underline until it
+   is hovered: at this size a permanent rule reads as a mistake. */
+.list-card h3 a {
+  color: inherit; text-decoration: none;
+  transition: color 0.2s ease;
+}
+.list-card h3 a:hover { color: var(--hero-verb); text-decoration: underline; text-underline-offset: 0.14em; }
+.list-card h3 a:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 4px; border-radius: 2px; }
+
+.list-empty {
+  margin: 0; padding: 18px 0 4px; border-top: 1px solid var(--lib-line);
+  color: var(--lib-faint); font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 12px; letter-spacing: 0.02em;
+}
+
+/* Rank sits above the title in a ranked list, in the same mono the rest of the
+   page uses for anything that is a number rather than a name. */
+.catalog-card-rank {
+  margin: 0 0 4px; color: var(--hero-verb);
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 10px; letter-spacing: 0.14em;
+}
 .list-card p {
   flex: 0 0 auto; margin: 0 0 2px; color: var(--lib-faint);
   font-family: "Space Mono", ui-monospace, monospace;

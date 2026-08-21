@@ -8,6 +8,7 @@ import { wireExpansion } from "./library.js?v=library-detail1";
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
 const DATA_URL = "data/library.json?v=library-detail1";
+const LISTS_URL = "data/library-lists.json?v=library-detail1";
 
 const PAGE = {
   book: {
@@ -17,7 +18,7 @@ const PAGE = {
     section: "Book lists",
     intro: "Ranked favorites, generous recommendations, and shelves organized around an idea.",
     creatorControlLabel: "Author",
-    lists: ["My top 25 books", "Science fiction essentials", "Books I keep giving away"],
+    creatorControlAll: "All authors",
   },
   album: {
     label: "Albums",
@@ -26,7 +27,7 @@ const PAGE = {
     section: "Album lists",
     intro: "Records grouped by mood, era, genre, and the ones worth playing all the way through.",
     creatorControlLabel: "Artist or band",
-    lists: ["Top 10 hip-hop albums", "Records for a slow Sunday", "Perfect front-to-back albums"],
+    creatorControlAll: "All artists",
   },
   film: {
     label: "Films",
@@ -35,7 +36,7 @@ const PAGE = {
     section: "Film lists",
     intro: "Movies gathered by genre, decade, audience, and the arguments they inspire.",
     creatorControlLabel: "Director",
-    lists: ["20 science fiction movies", "Top 10 children's movies", "Top 10 seventies movies"],
+    creatorControlAll: "All directors",
   },
   other: {
     label: "Podcasts",
@@ -44,16 +45,19 @@ const PAGE = {
     section: "Podcast lists",
     intro: "Shows and episodes for long drives, curious afternoons, and repeat listening.",
     creatorControlLabel: "Host or maker",
-    lists: ["Shows that make me smarter", "Long drives, better company", "Episodes worth replaying"],
+    creatorControlAll: "All hosts",
   },
 };
 
 const LEGACY_HASH = { books: "book", albums: "album", films: "film", podcasts: "other" };
 const params = new URLSearchParams(location.search);
 const requested = params.get("type");
+const requestedList = params.get("list");
 const legacy = LEGACY_HASH[location.hash.slice(1)];
-const type = PAGE[requested] ? requested : PAGE[legacy] ? legacy : "book";
-const page = PAGE[type];
+/* A ?list= id carries its own type, so both are settled in main() once the
+   lists file has been read. Until then this is only the ?type= reading. */
+let type = PAGE[requested] ? requested : PAGE[legacy] ? legacy : "book";
+let page = PAGE[type];
 const node = (selector) => document.querySelector(selector);
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches || params.get("motion") === "reduce";
 if (reducedMotion) document.documentElement.classList.add("reduce-motion");
@@ -135,12 +139,14 @@ function renderStream(items) {
   }
 }
 
-function preview(items, offset) {
+/* The list's own members, in the order they were put there. This used to wrap
+   round the whole catalog with a modulo, which is how a list of nothing managed
+   to show six covers. */
+function preview(items) {
   const frame = document.createElement("div");
   frame.className = `list-card-preview is-${type}`;
   frame.setAttribute("aria-label", `${page.singular} list preview. Scroll horizontally to browse.`);
-  for (let index = 0; index < 6; index += 1) {
-    const item = items[(offset + index) % items.length];
+  for (const item of items.slice(0, 6)) {
     const trigger = document.createElement("button");
     trigger.type = "button";
     trigger.className = "list-preview-trigger";
@@ -159,17 +165,25 @@ function preview(items, offset) {
   return frame;
 }
 
-function listCard(title, items, index) {
+function countLabel(count, ranked) {
+  const noun = count === 1 ? page.singular : page.label.toLowerCase();
+  return ranked ? `${count} ${noun}, ranked` : `${count} ${noun}`;
+}
+
+function listCard(list) {
   const card = document.createElement("article");
   card.className = "list-card";
   const body = document.createElement("div");
   body.className = "list-card-body";
   const heading = document.createElement("h3");
-  heading.textContent = title;
-  const status = document.createElement("p");
-  status.textContent = "List coming later";
-  body.append(heading, status);
-  card.append(body, preview(items, index * 4));
+  const link = document.createElement("a");
+  link.href = `library-lists.html?list=${encodeURIComponent(list.id)}`;
+  link.textContent = list.title;
+  heading.append(link);
+  const count = document.createElement("p");
+  count.textContent = countLabel(list.count, list.ranked);
+  body.append(heading, count);
+  card.append(body, preview(list.items));
   return card;
 }
 
@@ -204,7 +218,7 @@ function creatorLinks(item) {
   return wrap;
 }
 
-function catalogCard(item) {
+function catalogCard(item, rank) {
   const card = document.createElement("article");
   card.className = `catalog-card is-${type}`;
   const imageWrap = document.createElement("button");
@@ -238,6 +252,12 @@ function catalogCard(item) {
     link.textContent = genre;
     genres.append(link);
   }
+  if (rank) {
+    const number = document.createElement("p");
+    number.className = "catalog-card-rank";
+    number.textContent = String(rank).padStart(2, "0");
+    body.append(number);
+  }
   body.append(title, creatorLinks(item), meta, genres);
   card.append(imageWrap, body);
   return card;
@@ -257,6 +277,10 @@ function renderCatalog(media) {
   sortSelect.value = params.get("sort") || "title";
   orderSelect.value = params.get("order") || "asc";
   node("[data-creator-heading]").textContent = page.creatorControlLabel;
+  /* The heading changes per medium, so the placeholder option has to as well,
+     or the album page offers "All authors". Written out per medium rather than
+     pluralised, because "All artist or bands" is not English. */
+  creatorSelect.options[0].textContent = page.creatorControlAll;
   const reset = node("[data-catalog-reset]");
   reset.href = hrefFor();
   reset.textContent = `View all ${page.label.toLowerCase()}`;
@@ -289,7 +313,10 @@ function renderCatalog(media) {
     node("[data-catalog-title]").textContent = title;
     node("[data-catalog-count]").textContent = `${filtered.length} ${filtered.length === 1 ? page.singular : page.label.toLowerCase()} catalogued`;
     reset.hidden = !genre && !creator && sort === "title" && direction === 1;
-    const next = new URLSearchParams({ type });
+    /* Rebuilt from scratch, so anything the page arrived with has to be put
+       back deliberately. ?list= is the whole identity of a single list page:
+       drop it here and a reload, or a copied URL, silently becomes the index. */
+    const next = new URLSearchParams(requestedList ? { list: requestedList } : { type });
     if (genre) next.set("genre", genre);
     if (creator) next.set("creator", creator);
     if (sort !== "title") next.set("sort", sort);
@@ -300,26 +327,108 @@ function renderCatalog(media) {
   render();
 }
 
-async function main() {
-  const response = await fetch(DATA_URL, { cache: "no-cache" });
-  if (!response.ok) throw new Error(`Could not load catalog: ${response.status}`);
-  const { items } = await response.json();
-  const media = items.filter((item) => item.type === type);
-  const grid = node("[data-list-grid]");
-  if (!grid || !media.length) return;
-
+/* The index of every list for one medium. A list with no members is left off
+   the page rather than shown as a promise, which is what the twelve hardcoded
+   titles were. Drafts still exist in the data file and in the admin. */
+function renderIndex(lists, grid) {
+  const published = lists.filter((list) => list.count);
   node("[data-list-kicker]").textContent = page.label;
   node("[data-list-title]").textContent = page.title;
   node("[data-list-intro]").textContent = page.intro;
   node("[data-list-section]").textContent = page.section;
-  node("[data-list-count]").textContent = `${page.lists.length} collections`;
-  page.lists.forEach((title, index) => grid.append(listCard(title, media, index)));
+  node("[data-list-count]").textContent = published.length
+    ? `${published.length} ${published.length === 1 ? "collection" : "collections"}`
+    : "None yet";
 
-  renderStream(media);
+  if (!published.length) {
+    const empty = document.createElement("p");
+    empty.className = "list-empty";
+    empty.textContent = `No ${page.singular} lists yet. The catalog below has every ${page.singular}.`;
+    grid.replaceChildren(empty);
+    return;
+  }
+  grid.replaceChildren(...published.map(listCard));
+}
+
+/* One list, in its authored order, numbered when it is ranked. */
+function renderOneList(list, grid) {
+  const kicker = node("[data-list-kicker]");
+  const back = document.createElement("a");
+  back.href = `library-lists.html?type=${type}`;
+  back.textContent = page.label;
+  kicker.replaceChildren(back, document.createTextNode(` / ${list.title}`));
+
+  node("[data-list-title]").textContent = list.title;
+  const intro = node("[data-list-intro]");
+  intro.textContent = list.intro;
+  intro.hidden = !list.intro;
+
+  node("[data-list-section]").textContent = list.ranked ? "In rank order" : "On this list";
+  node("[data-list-count]").textContent = countLabel(list.count, list.ranked);
+
+  if (!list.count) {
+    const empty = document.createElement("p");
+    empty.className = "list-empty";
+    empty.textContent = "Nothing on this list yet.";
+    grid.replaceChildren(empty);
+    return;
+  }
+
+  /* Members read as catalog cards rather than the index's cover rail: on a page
+     about one list, the titles and the years are the content. */
+  grid.className = "catalog-grid";
+  grid.replaceChildren(...list.items.map((item, index) => catalogCard(item, list.ranked ? index + 1 : 0)));
+}
+
+/* A list file that will not load is not a reason to lose the catalog, which is
+   the part of this page that actually answers questions. */
+async function loadLists() {
+  try {
+    const response = await fetch(LISTS_URL, { cache: "no-cache" });
+    if (!response.ok) throw new Error(String(response.status));
+    const lists = await response.json();
+    return Array.isArray(lists) ? lists : [];
+  } catch (error) {
+    console.warn(`Could not load lists: ${error.message}`);
+    return [];
+  }
+}
+
+async function main() {
+  const [response, lists] = await Promise.all([fetch(DATA_URL, { cache: "no-cache" }), loadLists()]);
+  if (!response.ok) throw new Error(`Could not load catalog: ${response.status}`);
+  const { items } = await response.json();
+
+  /* A requested list decides the medium, so the whole page follows it. An id
+     that no longer exists falls back to the index rather than a dead end. */
+  const chosen = requestedList ? lists.find((list) => list.id === requestedList) : null;
+  if (chosen) {
+    type = chosen.type;
+    page = PAGE[type];
+  }
+
+  const media = items.filter((item) => item.type === type);
+  const grid = node("[data-list-grid]");
+  if (!grid || !media.length) return;
+
+  const byId = new Map(media.map((item) => [item.id, item]));
+  const resolve = (list) => {
+    const members = list.items.map((id) => byId.get(id)).filter(Boolean);
+    return { ...list, items: members, count: members.length };
+  };
+
+  const one = chosen ? resolve(chosen) : null;
+  if (one) renderOneList(one, grid);
+  else renderIndex(lists.filter((list) => list.type === type).map(resolve), grid);
+
+  /* The corridor is decoration, so it wants a set big enough to read as motion.
+     A three-title list would just flash the same cover past repeatedly. */
+  renderStream(one && one.count >= 3 ? one.items : media);
   renderCatalog(media);
   wireExpansion(media, node(".list-page-main"));
-  document.title = `${page.section} | Library`;
+  document.title = chosen ? `${chosen.title} | Library` : `${page.section} | Library`;
   document.body.dataset.listType = type;
+  if (chosen) document.body.dataset.listView = "single";
 }
 
 main().catch((error) => {

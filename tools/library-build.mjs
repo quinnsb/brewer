@@ -21,6 +21,7 @@ import { mergeItem } from "./lib/merge.mjs";
 import { applyTaxonomy } from "./lib/taxonomy.mjs";
 import { applyListening } from "./lib/listening.mjs";
 import { applyPalette, refreshPaletteCache } from "./lib/palette.mjs";
+import { validateLists } from "./lib/lists.mjs";
 import { coverStat, coverMeasure } from "./lib/sips.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -29,6 +30,7 @@ const OUT = path.join(ROOT, "data", "library.json");
 const TAXONOMY = path.join(ROOT, "data", "library-taxonomy.json");
 const LISTENING = path.join(ROOT, "data", "library-listening.json");
 const PALETTE = path.join(ROOT, "data", "library-palette.json");
+const LISTS = path.join(ROOT, "data", "library-lists.json");
 const NOTES_DIR = path.join(ROOT, "content", "library");
 const OVERRIDE_DIR = path.join(ROOT, "images", "library", "overrides");
 
@@ -66,6 +68,13 @@ async function main() {
   });
   const items = applyPalette(merged, cache);
 
+  /* The lists file is not rewritten here, only checked. A structural mistake
+     throws, because the page cannot render it; an id that has left the library
+     is a warning, since a list outliving one of its items is normal. */
+  const lists = await readJson(LISTS, []);
+  const { warnings } = validateLists(lists, items);
+  for (const warning of warnings) console.warn(`  WARN  ${warning}`);
+
   /* A note whose filename matches no item is a silent no-op otherwise, and
      that is exactly how a typo'd id hides a missing review for months. */
   if (existsSync(NOTES_DIR)) {
@@ -81,10 +90,12 @@ async function main() {
 
   const reviewed = items.filter((i) => i.reviewHtml).length;
   const rated = items.filter((i) => i.rating != null).length;
+  const published = lists.filter((list) => list.items.length).length;
   console.log(
     `${items.length} items -> data/library.json ` +
     `(${reviewed} with reviews, ${rated} rated, ${computed} covers sampled, ${missed} missing)`
   );
+  console.log(`${lists.length} lists (${published} with members, ${lists.length - published} still drafts)`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

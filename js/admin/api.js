@@ -34,3 +34,10 @@ export const catalogue = {
   search: (type, q) => request(`/api/search?type=${encodeURIComponent(type)}&q=${encodeURIComponent(q)}`),
   add: (payload) => request("/api/add", { method: "POST", body: JSON.stringify(payload) }),
 };
+
+/* Every list change is one operation, and the answer is always the whole set
+   after it, so the panel never has to keep its own idea of the truth. */
+export const lists = {
+  all: () => request("/api/lists"),
+  apply: (op) => request("/api/lists", { method: "POST", body: JSON.stringify(op) }),
+};

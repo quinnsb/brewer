@@ -1,0 +1,98 @@
+[
+  {
+    "id": "my-top-25-books",
+    "type": "book",
+    "title": "My top 25 books",
+    "intro": "",
+    "ranked": true,
+    "items": []
+  },
+  {
+    "id": "science-fiction-essentials",
+    "type": "book",
+    "title": "Science fiction essentials",
+    "intro": "",
+    "ranked": false,
+    "items": []
+  },
+  {
+    "id": "books-i-keep-giving-away",
+    "type": "book",
+    "title": "Books I keep giving away",
+    "intro": "",
+    "ranked": false,
+    "items": []
+  },
+  {
+    "id": "top-10-hip-hop-albums",
+    "type": "album",
+    "title": "Top 10 hip-hop albums",
+    "intro": "",
+    "ranked": true,
+    "items": []
+  },
+  {
+    "id": "records-for-a-slow-sunday",
+    "type": "album",
+    "title": "Records for a slow Sunday",
+    "intro": "",
+    "ranked": false,
+    "items": []
+  },
+  {
+    "id": "perfect-front-to-back-albums",
+    "type": "album",
+    "title": "Perfect front-to-back albums",
+    "intro": "",
+    "ranked": false,
+    "items": []
+  },
+  {
+    "id": "20-science-fiction-movies",
+    "type": "film",
+    "title": "20 science fiction movies",
+    "intro": "",
+    "ranked": true,
+    "items": []
+  },
+  {
+    "id": "top-10-childrens-movies",
+    "type": "film",
+    "title": "Top 10 children's movies",
+    "intro": "",
+    "ranked": true,
+    "items": []
+  },
+  {
+    "id": "top-10-seventies-movies",
+    "type": "film",
+    "title": "Top 10 seventies movies",
+    "intro": "",
+    "ranked": true,
+    "items": []
+  },
+  {
+    "id": "shows-that-make-me-smarter",
+    "type": "other",
+    "title": "Shows that make me smarter",
+    "intro": "",
+    "ranked": false,
+    "items": []
+  },
+  {
+    "id": "long-drives-better-company",
+    "type": "other",
+    "title": "Long drives, better company",
+    "intro": "",
+    "ranked": false,
+    "items": []
+  },
+  {
+    "id": "episodes-worth-replaying",
+    "type": "other",
+    "title": "Episodes worth replaying",
+    "intro": "",
+    "ranked": false,
+    "items": []
+  }
+]
