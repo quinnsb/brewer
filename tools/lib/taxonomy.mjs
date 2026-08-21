@@ -6,7 +6,7 @@ export function applyTaxonomy(items, taxonomy) {
   }
 
   return items.map((item) => {
-    const genres = taxonomy[item.id];
+    const genres = taxonomy[item.id] ?? item.genres;
     if (!Array.isArray(genres) || !genres.length || genres.some((genre) => typeof genre !== "string" || !genre.trim())) {
       throw new Error(`Missing genres for ${item.id}`);
     }

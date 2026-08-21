@@ -36,3 +36,8 @@ test("fails when taxonomy contains an obsolete item id", () => {
     /unknown item ids: book-old/
   );
 });
+
+test("uses imported genres when an item has no authored taxonomy yet", () => {
+  const [item] = applyTaxonomy([{ id: "book-imported", type: "book", creator: "A", genres: ["Science Fiction"] }], {});
+  assert.deepEqual(item.genres, ["Science Fiction"]);
+});
