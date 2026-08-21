@@ -7,18 +7,24 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
+import { playAlbum, stop as stopSound, soundOn } from "./library-sound.js?v=library-detail1";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
 const DATA_URL = "data/library.json?v=library-detail1";
+const SOURCES_URL = "data/library-sources.json?v=library-detail1";
+
+/* Which outside profile belongs beside which shelf. Podcasts have no single
+   home worth linking to, so they get none rather than a token one. */
+const SHELF_SOURCE = { book: "goodreads", film: "letterboxd", album: "spotify" };
 
 const TYPE_LABEL = {
   book: ["Books", "drag or scroll either direction"],
   album: ["Albums", "drag, scroll, or use arrow keys"],
-  film: ["Films", "scroll or use arrow keys"],
-  other: ["Podcasts", "scroll or use arrow keys"],
+  film: ["Films", "drag or scroll either direction"],
+  other: ["Podcasts", "drag or scroll either direction"],
 };
 const ORDER = ["book", "album", "film", "other"];
 const LIST_LINK = {
@@ -119,21 +125,29 @@ const CONTAINER = {
     rail.append(mount, status);
     return { rail, mount, status };
   },
+  /* Posters and podcast tiles get the same seamless loop the books have, which
+     needs an inner track to hold the two clones: the rail itself is the
+     scroller, so cloned runs placed directly in it would stack instead of
+     sitting end to end. */
   film() {
     const rail = el("div", "shelf-rail");
+    const track = el("div", "loop-track");
     const mount = el("div", "rack");
-    rail.append(mount);
+    track.append(mount);
+    rail.append(track);
     return { rail, mount };
   },
   other() {
     const rail = el("div", "shelf-rail");
+    const track = el("div", "loop-track");
     const mount = el("div", "tiles");
-    rail.append(mount);
+    track.append(mount);
+    rail.append(track);
     return { rail, mount };
   },
 };
 
-export function renderShelves(items, root) {
+export function renderShelves(items, root, sources = {}) {
   const byType = {};
   for (const it of items) (byType[it.type] ||= []).push(it);
 
@@ -156,19 +170,46 @@ export function renderShelves(items, root) {
     }
     const [linkText, anchor] = LIST_LINK[type];
     const actions = el("div", "shelf-actions");
-    const listLink = el("a", "shelf-lists-link", { href: `library-lists.html?type=${anchor}` });
-    listLink.textContent = linkText;
+    const listLink = el("a", "lib-btn is-primary", { href: `library-lists.html?type=${anchor}` });
+    listLink.append(
+      Object.assign(el("span"), { textContent: linkText }),
+      Object.assign(el("span", "lib-btn-arrow"), { textContent: "\u2192", "aria-hidden": "true" })
+    );
     actions.append(listLink);
+
+    /* The shelf is what Quinn owns; the profile is where the running record
+       lives. Rendered only when the sources file names one, so an unset handle
+       is an absent link rather than a dead one. */
+    const source = sources[SHELF_SOURCE[type]];
+    if (source?.profileUrl) {
+      const away = el("a", "lib-btn is-secondary", {
+        href: source.profileUrl,
+        target: "_blank",
+        rel: "noopener",
+      });
+      away.append(
+        Object.assign(el("span"), { textContent: source.label || "My profile" }),
+        Object.assign(el("span", "lib-btn-arrow"), { textContent: "\u2197", "aria-hidden": "true" })
+      );
+      actions.append(away);
+    }
     block.append(rail, actions);
     root.append(block);
-    if (type === "book") wireBookLoop(rail, mount);
-    else if (type === "album") wireCoverflow(list, rail, mount, status);
+    /* Albums have the coverflow. Everything else scrolls, and scrolling should
+       not run out: one run of covers ends and the next begins. */
+    if (type === "album") wireCoverflow(list, rail, mount, status);
+    else wireLoopRail(rail, mount, { overlap: type === "book" });
   }
 }
 
-/* ---------- books: seamless looping rail ---------- */
+/* ---------- seamless looping rails ---------- */
 
-function wireBookLoop(frame, originalRun) {
+/* One run of covers, cloned either side, with the scroll position folded back
+   to the middle whenever it strays. Dragging works too, and a drag that moved
+   swallows the click so a shove does not open whatever ended up under the
+   cursor. Used by books, films and podcasts; only books need the overlap
+   correction, since only their jackets overlap each other. */
+function wireLoopRail(frame, originalRun, { overlap = false } = {}) {
   const shelf = originalRun.parentElement;
   const before = originalRun.cloneNode(true);
   const after = originalRun.cloneNode(true);
@@ -193,13 +234,15 @@ function wireBookLoop(frame, originalRun) {
   };
 
   const measure = () => {
-    const firstCoverWidth = originalRun.querySelector(".book-cover")?.getBoundingClientRect().width || 0;
-    const runStyle = getComputedStyle(originalRun);
-    const boundaryPadding = parseFloat(runStyle.paddingLeft) + parseFloat(runStyle.paddingRight);
-    shelf.style.setProperty(
-      "--book-run-overlap",
-      `${(-(firstCoverWidth * 0.22 + boundaryPadding)).toFixed(2)}px`
-    );
+    if (overlap) {
+      const firstCoverWidth = originalRun.querySelector(".book-cover")?.getBoundingClientRect().width || 0;
+      const runStyle = getComputedStyle(originalRun);
+      const boundaryPadding = parseFloat(runStyle.paddingLeft) + parseFloat(runStyle.paddingRight);
+      shelf.style.setProperty(
+        "--book-run-overlap",
+        `${(-(firstCoverWidth * 0.22 + boundaryPadding)).toFixed(2)}px`
+      );
+    }
     runWidth = originalRun.offsetLeft - before.offsetLeft;
     if (!runWidth) return;
     if (!initialized) {
@@ -536,19 +579,46 @@ function detailMeta(item) {
   return meta;
 }
 
+/* The film equivalent of the album player. The id comes from
+   data/library-watching.json, so nothing here talks to TMDB at runtime, and the
+   embed is the nocookie host with related videos off: this is a trailer on a
+   shelf, not a way into YouTube.
+
+   Autoplay follows the same switch the records do. With sound off the trailer
+   still loads, ready to be pressed, rather than disappearing. */
+function filmTrailerNode(item) {
+  if (item.type !== "film" || !item.trailerEmbedUrl) return null;
+  const section = el("section", "film-trailer", { "aria-labelledby": `film-trailer-${item.id}` });
+  section.append(Object.assign(el("h3"), { id: `film-trailer-${item.id}`, textContent: "Trailer" }));
+
+  const frame = el("iframe", "trailer-player", {
+    src: soundOn() ? `${item.trailerEmbedUrl}&autoplay=1` : item.trailerEmbedUrl,
+    title: `Watch the trailer for ${item.title}`,
+    loading: "lazy",
+    allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+    referrerpolicy: "strict-origin-when-cross-origin",
+    "allowfullscreen": "",
+  });
+  section.append(frame);
+
+  const away = el("a", "trailer-open", { href: item.trailerUrl, target: "_blank", rel: "noopener" });
+  away.textContent = "Watch on YouTube";
+  section.append(away);
+  return section;
+}
+
 function albumListeningNode(item) {
   if (item.type !== "album" || (!item.tracks?.length && !item.spotifyEmbedUrl)) return null;
   const section = el("section", "album-listening", { "aria-labelledby": `album-tracks-${item.id}` });
   section.append(Object.assign(el("h3"), { id: `album-tracks-${item.id}`, textContent: "Listen on Spotify" }));
   if (item.spotifyEmbedUrl) {
-    const player = el("iframe", "spotify-player", {
-      src: item.spotifyEmbedUrl,
-      title: `Play ${item.title} by ${item.creator} on Spotify`,
-      loading: "lazy",
-      allow: "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
-      "allowfullscreen": "",
-    });
-    section.append(player);
+    /* An empty host rather than an iframe: library-sound.js puts the player in,
+       so it can start it, pause it when the switch flips, and stop it when this
+       panel closes. It falls back to the plain embed if Spotify's script is
+       blocked. */
+    const host = el("div", "spotify-host");
+    host.dataset.album = item.id;
+    section.append(host);
   }
   if (item.tracks?.length) {
     section.append(Object.assign(el("h4"), { textContent: "Tracklist" }));
@@ -806,6 +876,8 @@ function detailNode(item) {
   if (facts) copy.append(facts);
   const listening = albumListeningNode(item);
   if (listening) copy.append(listening);
+  const trailer = filmTrailerNode(item);
+  if (trailer) copy.append(trailer);
 
   if (item.sourceUrl) {
     const source = el("a", "media-detail-source", {
@@ -854,6 +926,9 @@ function setMorphOrigin(layer, source) {
 function finishDetailClose(restoreFocus = true) {
   clearTimeout(detailCloseTimer);
   clearTimeout(detailSwitchTimer);
+  /* Removing the iframe would silence it anyway, but the controller has to be
+     told, or Spotify keeps a destroyed player in its own book-keeping. */
+  stopSound();
   detailLayer?.remove();
   detailLayer = null;
   document.body.classList.remove("media-detail-open");
@@ -922,6 +997,7 @@ function openDetail(item, node, { replace = false, fromHistory = false } = {}) {
       detailLayer = replacement;
       fitDetailTitle(replacement);
       document.fonts?.ready.then(() => fitDetailTitle(replacement));
+      startMedia(replacement, item);
       replacement.querySelector(".media-detail-close")?.focus({ preventScroll: true });
     };
     if (REDUCED) swap();
@@ -940,6 +1016,15 @@ function openDetail(item, node, { replace = false, fromHistory = false } = {}) {
     detailLayer?.classList.add("is-in");
     detailLayer?.querySelector(".media-detail-close")?.focus({ preventScroll: true });
   });
+  startMedia(detailLayer, item);
+}
+
+/* Whatever this panel can play, started now that it is in the document. The
+   click that opened it is the gesture browsers require for autoplay, so this
+   has to happen on the way in rather than on a later tick. */
+function startMedia(layer, item) {
+  const host = layer?.querySelector(".spotify-host");
+  if (host) playAlbum(host, item);
 }
 
 export function wireExpansion(items, root) {
@@ -1038,10 +1123,24 @@ export function openItem(id) {
   else node.click();
 }
 
+/* The sources file only decides whether a couple of links render, so a failure
+   to read it must not cost the shelves. */
+async function loadSources() {
+  try {
+    const response = await fetch(SOURCES_URL, { cache: "no-cache" });
+    return response.ok ? await response.json() : {};
+  } catch {
+    return {};
+  }
+}
+
 async function main() {
-  const { items } = await (await fetch(DATA_URL, { cache: "no-cache" })).json();
+  const [{ items }, sources] = await Promise.all([
+    (await fetch(DATA_URL, { cache: "no-cache" })).json(),
+    loadSources(),
+  ]);
   const root = document.getElementById("shelves");
-  renderShelves(items, root);
+  renderShelves(items, root, sources);
   wireExpansion(items, root);
 
   /* Deferred so this module finishes evaluating first: library-hero.js

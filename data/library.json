@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T19:55:18.851Z",
+  "generatedAt": "2026-08-21T21:06:31.786Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -10,7 +10,7 @@
       "creator": "Ursula K. Le Guin",
       "year": 1969,
       "detail": "304 pages",
-      "cover": "images/library/book-the-left-hand-of-darkness.jpg",
+      "cover": "images/library/overrides/book-the-left-hand-of-darkness.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL59800W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -45,11 +45,11 @@
         "Ursula K. Le Guin"
       ],
       "reviewHtml": null,
-      "width": 302,
-      "height_px": 475,
+      "width": 1273,
+      "height_px": 2000,
       "palette": {
-        "cover": "#57767c",
-        "accent": "#5bbfd3",
+        "cover": "#51777d",
+        "accent": "#55c7dd",
         "ink": "#f1ece3"
       }
     },
@@ -62,7 +62,7 @@
       "creator": "Thomas Pynchon",
       "year": 1973,
       "detail": "810 pages",
-      "cover": "images/library/book-gravitys-rainbow.jpg",
+      "cover": "images/library/overrides/book-gravitys-rainbow.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL2636675W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -98,11 +98,11 @@
         "Thomas Pynchon"
       ],
       "reviewHtml": null,
-      "width": 328,
-      "height_px": 500,
+      "width": 1316,
+      "height_px": 2000,
       "palette": {
-        "cover": "#243288",
-        "accent": "#1934be",
+        "cover": "#362861",
+        "accent": "#351775",
         "ink": "#f1ece3"
       }
     },
@@ -115,7 +115,7 @@
       "creator": "Ursula K. Le Guin",
       "year": 1974,
       "detail": "352 pages",
-      "cover": "images/library/book-the-dispossessed.jpg",
+      "cover": "images/library/overrides/book-the-dispossessed.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL59863W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -150,12 +150,12 @@
         "Ursula K. Le Guin"
       ],
       "reviewHtml": null,
-      "width": 312,
-      "height_px": 475,
+      "width": 1334,
+      "height_px": 2000,
       "palette": {
-        "cover": "#712712",
-        "accent": "#da400c",
-        "ink": "#f1ece3"
+        "cover": "#7a7994",
+        "accent": "#9895cb",
+        "ink": "#141210"
       }
     },
     {
@@ -167,7 +167,7 @@
       "creator": "Cormac McCarthy",
       "year": 1985,
       "detail": "353 pages",
-      "cover": "images/library/book-blood-meridian.jpg",
+      "cover": "images/library/overrides/book-blood-meridian.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL40879W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -203,11 +203,11 @@
         "Cormac McCarthy"
       ],
       "reviewHtml": null,
-      "width": 307,
-      "height_px": 475,
+      "width": 1297,
+      "height_px": 2000,
       "palette": {
-        "cover": "#32342a",
-        "accent": "#655e2d",
+        "cover": "#614521",
+        "accent": "#fbd407",
         "ink": "#f1ece3"
       }
     },
@@ -220,7 +220,7 @@
       "creator": "Marilynne Robinson",
       "year": 1980,
       "detail": "224 pages",
-      "cover": "images/library/book-housekeeping.jpg",
+      "cover": "images/library/overrides/book-housekeeping.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL1875010W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -255,11 +255,11 @@
         "Marilynne Robinson"
       ],
       "reviewHtml": null,
-      "width": 334,
-      "height_px": 500,
+      "width": 1303,
+      "height_px": 2000,
       "palette": {
-        "cover": "#5a6482",
-        "accent": "#7196d7",
+        "cover": "#637484",
+        "accent": "#94b6d6",
         "ink": "#f1ece3"
       }
     },
@@ -272,7 +272,7 @@
       "creator": "Paul Beatty",
       "year": 2015,
       "detail": "304 pages",
-      "cover": "images/library/book-the-sellout.jpg",
+      "cover": "images/library/overrides/book-the-sellout.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL17616758W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -308,11 +308,11 @@
         "Paul Beatty"
       ],
       "reviewHtml": null,
-      "width": 333,
-      "height_px": 500,
+      "width": 1294,
+      "height_px": 2000,
       "palette": {
-        "cover": "#a7a1a1",
-        "accent": "#d8bac3",
+        "cover": "#aaa99d",
+        "accent": "#f5f1e3",
         "ink": "#141210"
       }
     },
@@ -325,7 +325,7 @@
       "creator": "David Mitchell",
       "year": 2004,
       "detail": "537 pages",
-      "cover": "images/library/book-cloud-atlas.jpg",
+      "cover": "images/library/overrides/book-cloud-atlas.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL482454W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -361,12 +361,12 @@
         "David Mitchell"
       ],
       "reviewHtml": null,
-      "width": 321,
-      "height_px": 500,
+      "width": 1344,
+      "height_px": 2000,
       "palette": {
-        "cover": "#7e725a",
-        "accent": "#e49e74",
-        "ink": "#f1ece3"
+        "cover": "#55919d",
+        "accent": "#20a6d1",
+        "ink": "#141210"
       }
     },
     {
@@ -378,7 +378,7 @@
       "creator": "Jennifer Egan",
       "year": 2010,
       "detail": "359 pages",
-      "cover": "images/library/book-a-visit-from-the-goon-squad.jpg",
+      "cover": "images/library/overrides/book-a-visit-from-the-goon-squad.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL15026613W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -413,11 +413,11 @@
         "Jennifer Egan"
       ],
       "reviewHtml": null,
-      "width": 185,
-      "height_px": 276,
+      "width": 1297,
+      "height_px": 2000,
       "palette": {
-        "cover": "#417e81",
-        "accent": "#59cfd7",
+        "cover": "#8e8577",
+        "accent": "#f9b3ae",
         "ink": "#141210"
       }
     },
@@ -430,7 +430,7 @@
       "creator": "Susanna Clarke",
       "year": 2020,
       "detail": "272 pages",
-      "cover": "images/library/book-piranesi.jpg",
+      "cover": "images/library/overrides/book-piranesi.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL20893680W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -465,11 +465,11 @@
         "Susanna Clarke"
       ],
       "reviewHtml": null,
-      "width": 353,
-      "height_px": 500,
+      "width": 1333,
+      "height_px": 2000,
       "palette": {
-        "cover": "#17110f",
-        "accent": "#311c0f",
+        "cover": "#353543",
+        "accent": "#c49d27",
         "ink": "#f1ece3"
       }
     },
@@ -482,7 +482,7 @@
       "creator": "Kenneth Oppel",
       "year": 2008,
       "detail": "395 pages",
-      "cover": "images/library/book-starclimber.jpg",
+      "cover": "images/library/overrides/book-starclimber.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL11690073W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -518,11 +518,11 @@
         "Kenneth Oppel"
       ],
       "reviewHtml": null,
-      "width": 300,
-      "height_px": 452,
+      "width": 528,
+      "height_px": 750,
       "palette": {
-        "cover": "#42362c",
-        "accent": "#7a4222",
+        "cover": "#453c32",
+        "accent": "#ecd8ad",
         "ink": "#f1ece3"
       }
     },
@@ -535,7 +535,7 @@
       "creator": "Kazuo Ishiguro",
       "year": 2005,
       "detail": "319 pages",
-      "cover": "images/library/book-never-let-me-go.jpg",
+      "cover": "images/library/overrides/book-never-let-me-go.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL59038W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -571,12 +571,12 @@
         "Kazuo Ishiguro"
       ],
       "reviewHtml": null,
-      "width": 319,
-      "height_px": 500,
+      "width": 1330,
+      "height_px": 2000,
       "palette": {
-        "cover": "#909456",
-        "accent": "#ffff95",
-        "ink": "#141210"
+        "cover": "#726c65",
+        "accent": "#bc9d8d",
+        "ink": "#f1ece3"
       }
     },
     {
@@ -588,7 +588,7 @@
       "creator": "Andy Weir",
       "year": 2011,
       "detail": "407 pages",
-      "cover": "images/library/book-the-martian.jpg",
+      "cover": "images/library/overrides/book-the-martian.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL17091839W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -623,11 +623,11 @@
         "Andy Weir"
       ],
       "reviewHtml": null,
-      "width": 321,
-      "height_px": 500,
+      "width": 1126,
+      "height_px": 2000,
       "palette": {
-        "cover": "#772310",
-        "accent": "#d73205",
+        "cover": "#8e4921",
+        "accent": "#f89333",
         "ink": "#f1ece3"
       }
     },
@@ -640,7 +640,7 @@
       "creator": "Amy Tan",
       "year": 1990,
       "detail": "358 pages",
-      "cover": "images/library/book-the-bonesetters-daughter.jpg",
+      "cover": "images/library/overrides/book-the-bonesetters-daughter.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL1843703W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -676,11 +676,11 @@
         "Amy Tan"
       ],
       "reviewHtml": null,
-      "width": 331,
-      "height_px": 500,
+      "width": 1334,
+      "height_px": 2000,
       "palette": {
-        "cover": "#34342a",
-        "accent": "#ead7ae",
+        "cover": "#7c5c3f",
+        "accent": "#c60000",
         "ink": "#f1ece3"
       }
     },
@@ -693,7 +693,7 @@
       "creator": "J.R.R. Tolkien",
       "year": 1937,
       "detail": "310 pages",
-      "cover": "images/library/book-the-hobbit.jpg",
+      "cover": "images/library/overrides/book-the-hobbit.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL27482W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -729,11 +729,11 @@
         "J.R.R. Tolkien"
       ],
       "reviewHtml": null,
-      "width": 301,
-      "height_px": 500,
+      "width": 1333,
+      "height_px": 2000,
       "palette": {
-        "cover": "#392c24",
-        "accent": "#7d3e2d",
+        "cover": "#181511",
+        "accent": "#973a2b",
         "ink": "#f1ece3"
       }
     },
@@ -746,7 +746,7 @@
       "creator": "Octavia E. Butler",
       "year": 1987,
       "detail": "256 pages",
-      "cover": "images/library/book-dawn.jpg",
+      "cover": "images/library/overrides/book-dawn.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL35628W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -781,11 +781,11 @@
         "Octavia E. Butler"
       ],
       "reviewHtml": null,
-      "width": 284,
-      "height_px": 475,
+      "width": 1312,
+      "height_px": 2000,
       "palette": {
-        "cover": "#585a52",
-        "accent": "#0c978a",
+        "cover": "#715538",
+        "accent": "#ff9317",
         "ink": "#f1ece3"
       }
     },
@@ -798,7 +798,7 @@
       "creator": "Herman Melville",
       "year": 1851,
       "detail": "452 pages",
-      "cover": "images/library/book-moby-dick.jpg",
+      "cover": "images/library/overrides/book-moby-dick.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL102749W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -834,12 +834,12 @@
         "Herman Melville"
       ],
       "reviewHtml": null,
-      "width": 327,
-      "height_px": 500,
+      "width": 1282,
+      "height_px": 2000,
       "palette": {
-        "cover": "#675336",
-        "accent": "#cd9a3f",
-        "ink": "#f1ece3"
+        "cover": "#62858d",
+        "accent": "#89c3d0",
+        "ink": "#141210"
       }
     },
     {
@@ -851,7 +851,7 @@
       "creator": "Chinua Achebe",
       "year": 1958,
       "detail": "192 pages",
-      "cover": "images/library/book-things-fall-apart.jpg",
+      "cover": "images/library/overrides/book-things-fall-apart.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL891786W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -887,11 +887,11 @@
         "Chinua Achebe"
       ],
       "reviewHtml": null,
-      "width": 288,
-      "height_px": 500,
+      "width": 1297,
+      "height_px": 2000,
       "palette": {
-        "cover": "#75694e",
-        "accent": "#d8c937",
+        "cover": "#813a2b",
+        "accent": "#f43d2b",
         "ink": "#f1ece3"
       }
     },
@@ -904,7 +904,7 @@
       "creator": "Gary Paulsen",
       "year": 1986,
       "detail": "192 pages",
-      "cover": "images/library/book-hatchet.jpg",
+      "cover": "images/library/overrides/book-hatchet.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL8125760W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -940,11 +940,11 @@
         "Gary Paulsen"
       ],
       "reviewHtml": null,
-      "width": 330,
-      "height_px": 500,
+      "width": 1342,
+      "height_px": 2000,
       "palette": {
-        "cover": "#697448",
-        "accent": "#d5e142",
+        "cover": "#56684c",
+        "accent": "#83a939",
         "ink": "#f1ece3"
       }
     },
@@ -957,7 +957,7 @@
       "creator": "Orson Scott Card",
       "year": 1985,
       "detail": "330 pages",
-      "cover": "images/library/book-enders-game.jpg",
+      "cover": "images/library/overrides/book-enders-game.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL49488W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -992,11 +992,11 @@
         "Orson Scott Card"
       ],
       "reviewHtml": null,
-      "width": 316,
-      "height_px": 500,
+      "width": 1223,
+      "height_px": 2000,
       "palette": {
-        "cover": "#39332e",
-        "accent": "#a38b46",
+        "cover": "#283336",
+        "accent": "#1b797e",
         "ink": "#f1ece3"
       }
     },
@@ -1054,7 +1054,7 @@
       "creator": "Samantha Shannon",
       "year": 2023,
       "detail": null,
-      "cover": "images/library/book-a-day-of-fallen-night.jpg",
+      "cover": "images/library/overrides/book-a-day-of-fallen-night.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL27820045W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -1085,11 +1085,11 @@
         "Samantha Shannon"
       ],
       "reviewHtml": null,
-      "width": 331,
-      "height_px": 500,
+      "width": 1328,
+      "height_px": 2000,
       "palette": {
-        "cover": "#334345",
-        "accent": "#14879a",
+        "cover": "#364545",
+        "accent": "#ce4f2b",
         "ink": "#f1ece3"
       }
     },
@@ -1102,7 +1102,7 @@
       "creator": "Jack London",
       "year": 1903,
       "detail": "128 pages",
-      "cover": "images/library/book-the-call-of-the-wild.jpg",
+      "cover": "images/library/overrides/book-the-call-of-the-wild.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL14942956W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -1137,12 +1137,12 @@
         "Jack London"
       ],
       "reviewHtml": null,
-      "width": 313,
-      "height_px": 500,
+      "width": 1281,
+      "height_px": 2000,
       "palette": {
-        "cover": "#52555d",
-        "accent": "#2c3852",
-        "ink": "#f1ece3"
+        "cover": "#6a83a1",
+        "accent": "#69b2ff",
+        "ink": "#141210"
       }
     },
     {
@@ -1199,7 +1199,7 @@
       "creator": "Joseph Conrad",
       "year": 1899,
       "detail": "136 pages",
-      "cover": "images/library/book-heart-of-darkness.jpg",
+      "cover": "images/library/overrides/book-heart-of-darkness.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL38663W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -1235,11 +1235,11 @@
         "Joseph Conrad"
       ],
       "reviewHtml": null,
-      "width": 309,
-      "height_px": 500,
+      "width": 665,
+      "height_px": 982,
       "palette": {
-        "cover": "#2f2e40",
-        "accent": "#2e3059",
+        "cover": "#3c3c3c",
+        "accent": "#3b3a3a",
         "ink": "#f1ece3"
       }
     },
@@ -1252,7 +1252,7 @@
       "creator": "Elizabeth Little",
       "year": 2020,
       "detail": "352 pages",
-      "cover": "images/library/book-pretty-as-a-picture.jpg",
+      "cover": "images/library/overrides/book-pretty-as-a-picture.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL20648802W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -1288,11 +1288,11 @@
         "Elizabeth Little"
       ],
       "reviewHtml": null,
-      "width": 144,
-      "height_px": 218,
+      "width": 1304,
+      "height_px": 2000,
       "palette": {
-        "cover": "#2e3133",
-        "accent": "#291a1e",
+        "cover": "#352a28",
+        "accent": "#682f2b",
         "ink": "#f1ece3"
       }
     },
@@ -1305,7 +1305,7 @@
       "creator": "Ernest Cline",
       "year": 2019,
       "detail": "464 pages",
-      "cover": "images/library/book-ready-player-two.jpg",
+      "cover": "images/library/overrides/book-ready-player-two.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL20907281W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -1340,11 +1340,11 @@
         "Ernest Cline"
       ],
       "reviewHtml": null,
-      "width": 500,
-      "height_px": 500,
+      "width": 1293,
+      "height_px": 2000,
       "palette": {
-        "cover": "#192b2d",
-        "accent": "#54959d",
+        "cover": "#473857",
+        "accent": "#240f32",
         "ink": "#f1ece3"
       }
     },
@@ -1357,7 +1357,7 @@
       "creator": "Sally Rooney",
       "year": 2018,
       "detail": "304 pages",
-      "cover": "images/library/book-normal-people.jpg",
+      "cover": "images/library/overrides/book-normal-people.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL20150260W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -1393,11 +1393,11 @@
         "Sally Rooney"
       ],
       "reviewHtml": null,
-      "width": 331,
-      "height_px": 500,
+      "width": 1299,
+      "height_px": 2000,
       "palette": {
-        "cover": "#56715e",
-        "accent": "#83b247",
+        "cover": "#47725b",
+        "accent": "#66b338",
         "ink": "#f1ece3"
       }
     },
@@ -1410,7 +1410,7 @@
       "creator": "M. T. Anderson",
       "year": 2016,
       "detail": "231 pages",
-      "cover": "images/library/book-feed.jpg",
+      "cover": "images/library/overrides/book-feed.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL20037648W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -1442,12 +1442,12 @@
         "M. T. Anderson"
       ],
       "reviewHtml": null,
-      "width": 328,
-      "height_px": 500,
+      "width": 1205,
+      "height_px": 2000,
       "palette": {
-        "cover": "#a1a29e",
-        "accent": "#eeefea",
-        "ink": "#141210"
+        "cover": "#4b4c37",
+        "accent": "#cb9200",
+        "ink": "#f1ece3"
       }
     },
     {
@@ -1459,7 +1459,7 @@
       "creator": "J.R.R. Tolkien",
       "year": 1954,
       "detail": "1193 pages",
-      "cover": "images/library/book-the-fellowship-of-the-ring.jpg",
+      "cover": "images/library/overrides/book-the-fellowship-of-the-ring.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL27448W",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -1495,11 +1495,11 @@
         "J.R.R. Tolkien"
       ],
       "reviewHtml": null,
-      "width": 269,
-      "height_px": 500,
+      "width": 1333,
+      "height_px": 2000,
       "palette": {
-        "cover": "#381312",
-        "accent": "#4f0307",
+        "cover": "#0d0c09",
+        "accent": "#463a1c",
         "ink": "#f1ece3"
       }
     },
@@ -4596,7 +4596,7 @@
       "creator": "Paul Thomas Anderson",
       "year": 2007,
       "detail": "Film",
-      "cover": "images/library/film-there-will-be-blood.jpg",
+      "cover": "images/library/overrides/film-there-will-be-blood.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/There_Will_Be_Blood",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -4632,6 +4632,9 @@
       "height": 0.971,
       "thickness": 0.972,
       "starred": false,
+      "trailerId": "-bEwlq_7f4s",
+      "trailerUrl": "https://www.youtube.com/watch?v=-bEwlq_7f4s",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/-bEwlq_7f4s?rel=0&modestbranding=1",
       "genres": [
         "Drama",
         "Historical"
@@ -4640,11 +4643,11 @@
         "Paul Thomas Anderson"
       ],
       "reviewHtml": null,
-      "width": 250,
-      "height_px": 370,
+      "width": 1600,
+      "height_px": 2400,
       "palette": {
-        "cover": "#0d0d0d",
-        "accent": "#11242d",
+        "cover": "#150d0b",
+        "accent": "#9b7534",
         "ink": "#f1ece3"
       }
     },
@@ -4657,7 +4660,7 @@
       "creator": "Wong Kar-wai",
       "year": 2000,
       "detail": "Film",
-      "cover": "images/library/film-in-the-mood-for-love.jpg",
+      "cover": "images/library/overrides/film-in-the-mood-for-love.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/In_the_Mood_for_Love",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -4693,6 +4696,9 @@
       "height": 0.99,
       "thickness": 1.039,
       "starred": false,
+      "trailerId": "rc3QleuaQMw",
+      "trailerUrl": "https://www.youtube.com/watch?v=rc3QleuaQMw",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/rc3QleuaQMw?rel=0&modestbranding=1",
       "genres": [
         "Romance",
         "Drama"
@@ -4701,11 +4707,11 @@
         "Wong Kar-wai"
       ],
       "reviewHtml": null,
-      "width": 265,
-      "height_px": 376,
+      "width": 1067,
+      "height_px": 1600,
       "palette": {
-        "cover": "#6a3626",
-        "accent": "#e16c0f",
+        "cover": "#541f17",
+        "accent": "#c65b27",
         "ink": "#f1ece3"
       }
     },
@@ -4718,7 +4724,7 @@
       "creator": "Wim Wenders",
       "year": 1984,
       "detail": "Film",
-      "cover": "images/library/film-paris-texas-film.jpg",
+      "cover": "images/library/overrides/film-paris-texas-film.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Paris%2C_Texas_(film)",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -4754,6 +4760,9 @@
       "height": 0.943,
       "thickness": 1.205,
       "starred": false,
+      "trailerId": "Nmvte2r7Z8c",
+      "trailerUrl": "https://www.youtube.com/watch?v=Nmvte2r7Z8c",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/Nmvte2r7Z8c?rel=0&modestbranding=1",
       "genres": [
         "Drama",
         "Road movie"
@@ -4762,11 +4771,11 @@
         "Wim Wenders"
       ],
       "reviewHtml": null,
-      "width": 255,
-      "height_px": 393,
+      "width": 1138,
+      "height_px": 1707,
       "palette": {
-        "cover": "#362f26",
-        "accent": "#eabe92",
+        "cover": "#302922",
+        "accent": "#eebe90",
         "ink": "#f1ece3"
       }
     },
@@ -4779,7 +4788,7 @@
       "creator": "Lee Chang-dong",
       "year": 2018,
       "detail": "Film",
-      "cover": "images/library/film-burning-2018-film.jpg",
+      "cover": "images/library/overrides/film-burning-2018-film.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Burning_(2018_film)",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -4815,6 +4824,9 @@
       "height": 0.615,
       "thickness": 1.351,
       "starred": false,
+      "trailerId": "irBLY-Ev9vo",
+      "trailerUrl": "https://www.youtube.com/watch?v=irBLY-Ev9vo",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/irBLY-Ev9vo?rel=0&modestbranding=1",
       "genres": [
         "Mystery",
         "Drama"
@@ -4823,11 +4835,11 @@
         "Lee Chang-dong"
       ],
       "reviewHtml": null,
-      "width": 260,
-      "height_px": 371,
+      "width": 2000,
+      "height_px": 3000,
       "palette": {
-        "cover": "#342c31",
-        "accent": "#d69e8b",
+        "cover": "#3b486d",
+        "accent": "#134689",
         "ink": "#f1ece3"
       }
     },
@@ -4840,7 +4852,7 @@
       "creator": "Paul Thomas Anderson",
       "year": 2012,
       "detail": "Film",
-      "cover": "images/library/film-the-master-2012-film.jpg",
+      "cover": "images/library/overrides/film-the-master-2012-film.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/The_Master_(2012_film)",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -4876,6 +4888,9 @@
       "height": 0.55,
       "thickness": 0.625,
       "starred": false,
+      "trailerId": "RApl06pYIuU",
+      "trailerUrl": "https://www.youtube.com/watch?v=RApl06pYIuU",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/RApl06pYIuU?rel=0&modestbranding=1",
       "genres": [
         "Drama"
       ],
@@ -4883,11 +4898,11 @@
         "Paul Thomas Anderson"
       ],
       "reviewHtml": null,
-      "width": 220,
-      "height_px": 326,
+      "width": 1429,
+      "height_px": 2143,
       "palette": {
-        "cover": "#1f4f7f",
-        "accent": "#0167ab",
+        "cover": "#58514c",
+        "accent": "#805741",
         "ink": "#f1ece3"
       }
     },
@@ -4936,6 +4951,9 @@
       "height": 0.875,
       "thickness": 1.12,
       "starred": false,
+      "trailerId": "9NJj12tJzqc",
+      "trailerUrl": "https://www.youtube.com/watch?v=9NJj12tJzqc",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/9NJj12tJzqc?rel=0&modestbranding=1",
       "genres": [
         "Drama",
         "Coming-of-age"
@@ -4961,7 +4979,7 @@
       "creator": "Wong Kar-wai",
       "year": 1994,
       "detail": "Film",
-      "cover": "images/library/film-chungking-express.jpg",
+      "cover": "images/library/overrides/film-chungking-express.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Chungking_Express",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -4997,6 +5015,9 @@
       "height": 0.632,
       "thickness": 0.707,
       "starred": false,
+      "trailerId": "P9Mxf_6pVA0",
+      "trailerUrl": "https://www.youtube.com/watch?v=P9Mxf_6pVA0",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/P9Mxf_6pVA0?rel=0&modestbranding=1",
       "genres": [
         "Romance",
         "Comedy-drama"
@@ -5005,12 +5026,12 @@
         "Wong Kar-wai"
       ],
       "reviewHtml": null,
-      "width": 259,
-      "height_px": 383,
+      "width": 1000,
+      "height_px": 1500,
       "palette": {
-        "cover": "#9e9e9f",
-        "accent": "#faeb82",
-        "ink": "#141210"
+        "cover": "#50614a",
+        "accent": "#d8ce52",
+        "ink": "#f1ece3"
       }
     },
     {
@@ -5022,7 +5043,7 @@
       "creator": "Paul Schrader",
       "year": 2017,
       "detail": "Film",
-      "cover": "images/library/film-first-reformed.jpg",
+      "cover": "images/library/overrides/film-first-reformed.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/First_Reformed",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -5058,6 +5079,9 @@
       "height": 0.966,
       "thickness": 1.131,
       "starred": false,
+      "trailerId": "81-yub7Om6E",
+      "trailerUrl": "https://www.youtube.com/watch?v=81-yub7Om6E",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/81-yub7Om6E?rel=0&modestbranding=1",
       "genres": [
         "Drama",
         "Thriller"
@@ -5066,11 +5090,11 @@
         "Paul Schrader"
       ],
       "reviewHtml": null,
-      "width": 220,
-      "height_px": 326,
+      "width": 2000,
+      "height_px": 3000,
       "palette": {
-        "cover": "#0c0706",
-        "accent": "#451f11",
+        "cover": "#0b0807",
+        "accent": "#3d2318",
         "ink": "#f1ece3"
       }
     },
@@ -5083,7 +5107,7 @@
       "creator": "John Hughes",
       "year": 1986,
       "detail": "Film",
-      "cover": "images/library/film-ferris-buellers-day-off.jpg",
+      "cover": "images/library/overrides/film-ferris-buellers-day-off.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Ferris_Bueller's_Day_Off",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -5119,6 +5143,9 @@
       "height": 0.971,
       "thickness": 1.425,
       "starred": false,
+      "trailerId": "0ZDbKhkLxTs",
+      "trailerUrl": "https://www.youtube.com/watch?v=0ZDbKhkLxTs",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/0ZDbKhkLxTs?rel=0&modestbranding=1",
       "genres": [
         "Comedy",
         "Coming-of-age"
@@ -5127,12 +5154,12 @@
         "John Hughes"
       ],
       "reviewHtml": null,
-      "width": 254,
-      "height_px": 384,
+      "width": 2000,
+      "height_px": 3000,
       "palette": {
-        "cover": "#897675",
-        "accent": "#d68375",
-        "ink": "#141210"
+        "cover": "#70605c",
+        "accent": "#ff6d70",
+        "ink": "#f1ece3"
       }
     },
     {
@@ -5144,7 +5171,7 @@
       "creator": "Irvin Kershner",
       "year": 1980,
       "detail": "Film",
-      "cover": "images/library/film-the-empire-strikes-back.jpg",
+      "cover": "images/library/overrides/film-the-empire-strikes-back.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/The_Empire_Strikes_Back",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -5180,6 +5207,9 @@
       "height": 0.589,
       "thickness": 1.001,
       "starred": false,
+      "trailerId": "vU6L3jXt2r8",
+      "trailerUrl": "https://www.youtube.com/watch?v=vU6L3jXt2r8",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/vU6L3jXt2r8?rel=0&modestbranding=1",
       "genres": [
         "Science fiction",
         "Adventure"
@@ -5188,11 +5218,11 @@
         "Irvin Kershner"
       ],
       "reviewHtml": null,
-      "width": 254,
-      "height_px": 396,
+      "width": 1000,
+      "height_px": 1500,
       "palette": {
-        "cover": "#484654",
-        "accent": "#4c5c89",
+        "cover": "#383d49",
+        "accent": "#123d75",
         "ink": "#f1ece3"
       }
     },
@@ -5205,7 +5235,7 @@
       "creator": "Wes Anderson",
       "year": 2012,
       "detail": "Film",
-      "cover": "images/library/film-moonrise-kingdom.jpg",
+      "cover": "images/library/overrides/film-moonrise-kingdom.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Moonrise_Kingdom",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -5241,6 +5271,9 @@
       "height": 0.816,
       "thickness": 0.93,
       "starred": false,
+      "trailerId": "RBCRe73dZb0",
+      "trailerUrl": "https://www.youtube.com/watch?v=RBCRe73dZb0",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/RBCRe73dZb0?rel=0&modestbranding=1",
       "genres": [
         "Comedy-drama",
         "Romance"
@@ -5249,11 +5282,11 @@
         "Wes Anderson"
       ],
       "reviewHtml": null,
-      "width": 220,
-      "height_px": 324,
+      "width": 1400,
+      "height_px": 2100,
       "palette": {
-        "cover": "#4d411f",
-        "accent": "#8d4b0b",
+        "cover": "#5c6a59",
+        "accent": "#4d5a19",
         "ink": "#f1ece3"
       }
     },
@@ -5266,7 +5299,7 @@
       "creator": "Steven Soderbergh",
       "year": 2001,
       "detail": "Film",
-      "cover": "images/library/film-oceans-eleven.jpg",
+      "cover": "images/library/overrides/film-oceans-eleven.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Ocean's_Eleven",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -5302,6 +5335,9 @@
       "height": 0.58,
       "thickness": 0.867,
       "starred": false,
+      "trailerId": "n3epi9hPbqQ",
+      "trailerUrl": "https://www.youtube.com/watch?v=n3epi9hPbqQ",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/n3epi9hPbqQ?rel=0&modestbranding=1",
       "genres": [
         "Heist",
         "Crime"
@@ -5310,11 +5346,11 @@
         "Steven Soderbergh"
       ],
       "reviewHtml": null,
-      "width": 220,
-      "height_px": 326,
+      "width": 2000,
+      "height_px": 3000,
       "palette": {
-        "cover": "#4e251a",
-        "accent": "#f08842",
+        "cover": "#866e6e",
+        "accent": "#dd0000",
         "ink": "#f1ece3"
       }
     },
@@ -5327,7 +5363,7 @@
       "creator": "Christopher McQuarrie",
       "year": 2018,
       "detail": "Film",
-      "cover": "images/library/film-mission-impossible-fallout.jpg",
+      "cover": "images/library/overrides/film-mission-impossible-fallout.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Mission%3A_Impossible_%E2%80%93_Fallout",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -5363,6 +5399,9 @@
       "height": 0.939,
       "thickness": 1.415,
       "starred": false,
+      "trailerId": "MEOOas3JZt0",
+      "trailerUrl": "https://www.youtube.com/watch?v=MEOOas3JZt0",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/MEOOas3JZt0?rel=0&modestbranding=1",
       "genres": [
         "Action",
         "Spy"
@@ -5371,11 +5410,11 @@
         "Christopher McQuarrie"
       ],
       "reviewHtml": null,
-      "width": 257,
-      "height_px": 386,
+      "width": 2000,
+      "height_px": 3000,
       "palette": {
-        "cover": "#876f6e",
-        "accent": "#b0341d",
+        "cover": "#867171",
+        "accent": "#ea6f69",
         "ink": "#141210"
       }
     },
@@ -5388,7 +5427,7 @@
       "creator": "Hayao Miyazaki",
       "year": 1989,
       "detail": "Film",
-      "cover": "images/library/film-kikis-delivery-service.jpg",
+      "cover": "images/library/overrides/film-kikis-delivery-service.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Kiki's_Delivery_Service",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -5420,6 +5459,9 @@
       "height": 0.852,
       "thickness": 0.699,
       "starred": false,
+      "trailerId": "nu4OX6RKeLY",
+      "trailerUrl": "https://www.youtube.com/watch?v=nu4OX6RKeLY",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/nu4OX6RKeLY?rel=0&modestbranding=1",
       "genres": [
         "Animation",
         "Fantasy"
@@ -5428,11 +5470,11 @@
         "Hayao Miyazaki"
       ],
       "reviewHtml": null,
-      "width": 250,
-      "height_px": 351,
+      "width": 2000,
+      "height_px": 3000,
       "palette": {
-        "cover": "#40241d",
-        "accent": "#853321",
+        "cover": "#345a7b",
+        "accent": "#0093d4",
         "ink": "#f1ece3"
       }
     },
@@ -5445,7 +5487,7 @@
       "creator": "Damien Chazelle",
       "year": 2017,
       "detail": "Film",
-      "cover": "images/library/film-la-la-land.jpg",
+      "cover": "images/library/overrides/film-la-la-land.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/La_La_Land",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -5481,6 +5523,9 @@
       "height": 0.818,
       "thickness": 1.165,
       "starred": false,
+      "trailerId": "_oBwwSXdO_E",
+      "trailerUrl": "https://www.youtube.com/watch?v=_oBwwSXdO_E",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/_oBwwSXdO_E?rel=0&modestbranding=1",
       "genres": [
         "Musical",
         "Romance"
@@ -5489,11 +5534,11 @@
         "Damien Chazelle"
       ],
       "reviewHtml": null,
-      "width": 260,
-      "height_px": 385,
+      "width": 2000,
+      "height_px": 3000,
       "palette": {
-        "cover": "#15123e",
-        "accent": "#3d21a1",
+        "cover": "#130c39",
+        "accent": "#340f98",
         "ink": "#f1ece3"
       }
     },
@@ -5506,7 +5551,7 @@
       "creator": "John Musker, Ron Clements",
       "year": 2002,
       "detail": "Film",
-      "cover": "images/library/film-treasure-planet.jpg",
+      "cover": "images/library/overrides/film-treasure-planet.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Treasure_Planet",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -5538,6 +5583,9 @@
       "height": 0.742,
       "thickness": 1.069,
       "starred": false,
+      "trailerId": "ajhZRL1j7a0",
+      "trailerUrl": "https://www.youtube.com/watch?v=ajhZRL1j7a0",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/ajhZRL1j7a0?rel=0&modestbranding=1",
       "genres": [
         "Animation",
         "Science fiction",
@@ -5548,11 +5596,11 @@
         "Ron Clements"
       ],
       "reviewHtml": null,
-      "width": 260,
-      "height_px": 384,
+      "width": 1000,
+      "height_px": 1500,
       "palette": {
-        "cover": "#383d49",
-        "accent": "#0e93ad",
+        "cover": "#3a414e",
+        "accent": "#0796b4",
         "ink": "#f1ece3"
       }
     },
@@ -5565,7 +5613,7 @@
       "creator": "Kevin Lima",
       "year": 1995,
       "detail": "Film",
-      "cover": "images/library/film-a-goofy-movie.jpg",
+      "cover": "images/library/overrides/film-a-goofy-movie.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/A_Goofy_Movie",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -5593,6 +5641,9 @@
       "height": 0.597,
       "thickness": 1.24,
       "starred": false,
+      "trailerId": "_IY7_iCuINo",
+      "trailerUrl": "https://www.youtube.com/watch?v=_IY7_iCuINo",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/_IY7_iCuINo?rel=0&modestbranding=1",
       "genres": [
         "Animation",
         "Comedy",
@@ -5602,11 +5653,11 @@
         "Kevin Lima"
       ],
       "reviewHtml": null,
-      "width": 259,
-      "height_px": 384,
+      "width": 2000,
+      "height_px": 3000,
       "palette": {
-        "cover": "#335065",
-        "accent": "#0049aa",
+        "cover": "#554e56",
+        "accent": "#00779d",
         "ink": "#f1ece3"
       }
     },
@@ -5619,7 +5670,7 @@
       "creator": "Stephen Anderson",
       "year": 2007,
       "detail": "Film",
-      "cover": "images/library/film-meet-the-robinsons.jpg",
+      "cover": "images/library/overrides/film-meet-the-robinsons.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Meet_the_Robinsons",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -5651,6 +5702,9 @@
       "height": 0.803,
       "thickness": 1.389,
       "starred": false,
+      "trailerId": "S396-fnLldk",
+      "trailerUrl": "https://www.youtube.com/watch?v=S396-fnLldk",
+      "trailerEmbedUrl": "https://www.youtube-nocookie.com/embed/S396-fnLldk?rel=0&modestbranding=1",
       "genres": [
         "Animation",
         "Science fiction",
@@ -5660,11 +5714,11 @@
         "Stephen Anderson"
       ],
       "reviewHtml": null,
-      "width": 256,
-      "height_px": 379,
+      "width": 1000,
+      "height_px": 1500,
       "palette": {
-        "cover": "#866123",
-        "accent": "#faaa04",
+        "cover": "#313d41",
+        "accent": "#005e9b",
         "ink": "#f1ece3"
       }
     },

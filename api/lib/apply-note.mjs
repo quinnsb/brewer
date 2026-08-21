@@ -12,6 +12,7 @@
 import { mergeItem } from "../../tools/lib/merge.mjs";
 import { applyTaxonomy } from "../../tools/lib/taxonomy.mjs";
 import { applyListening } from "../../tools/lib/listening.mjs";
+import { applyWatching } from "../../tools/lib/watching.mjs";
 import { applyPalette } from "../../tools/lib/palette.mjs";
 
 const OVERRIDE_PREFIX = "images/library/overrides/";
@@ -32,11 +33,11 @@ export function buildNote({ rating, starred, finished, creator, title, year, bod
   return `---\n${front.join("\n")}\n---\n${prose ? `\n${prose}\n` : ""}`;
 }
 
-export function itemWithNote({ items, rawItems, taxonomy, listening, palette, id, noteText }) {
+export function itemWithNote({ items, rawItems, taxonomy, listening, watching = {}, palette, id, noteText }) {
   const existing = items.find((item) => item.id === id);
   if (!existing) throw new Error(`Unknown item: ${id}`);
 
-  const catalog = applyTaxonomy(applyListening(rawItems, listening), taxonomy);
+  const catalog = applyTaxonomy(applyWatching(applyListening(rawItems, listening), watching), taxonomy);
   const raw = catalog.find((item) => item.id === id);
   if (!raw) throw new Error(`No raw entry for ${id}. Run tools/library-sync.mjs first.`);
 

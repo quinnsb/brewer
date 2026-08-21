@@ -20,6 +20,7 @@ import path from "node:path";
 import { mergeItem } from "./lib/merge.mjs";
 import { applyTaxonomy } from "./lib/taxonomy.mjs";
 import { applyListening } from "./lib/listening.mjs";
+import { applyWatching } from "./lib/watching.mjs";
 import { applyPalette, refreshPaletteCache } from "./lib/palette.mjs";
 import { validateLists } from "./lib/lists.mjs";
 import { coverStat, coverMeasure } from "./lib/sips.mjs";
@@ -29,6 +30,7 @@ const RAW = path.join(ROOT, "data", "library.raw.json");
 const OUT = path.join(ROOT, "data", "library.json");
 const TAXONOMY = path.join(ROOT, "data", "library-taxonomy.json");
 const LISTENING = path.join(ROOT, "data", "library-listening.json");
+const WATCHING = path.join(ROOT, "data", "library-watching.json");
 const PALETTE = path.join(ROOT, "data", "library-palette.json");
 const LISTS = path.join(ROOT, "data", "library-lists.json");
 const NOTES_DIR = path.join(ROOT, "content", "library");
@@ -49,7 +51,8 @@ async function main() {
   const raw = JSON.parse(await readFile(RAW, "utf8"));
   const taxonomy = JSON.parse(await readFile(TAXONOMY, "utf8"));
   const listening = JSON.parse(await readFile(LISTENING, "utf8"));
-  const catalog = applyTaxonomy(applyListening(raw.items, listening), taxonomy);
+  const watching = await readJson(WATCHING, {});
+  const catalog = applyTaxonomy(applyWatching(applyListening(raw.items, listening), watching), taxonomy);
   const ids = new Set(raw.items.map((i) => i.id));
 
   const merged = [];

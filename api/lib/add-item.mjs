@@ -17,6 +17,7 @@
 import { SHAPE, itemId, shelfGeometry } from "../../tools/lib/identity.mjs";
 import { applyTaxonomy } from "../../tools/lib/taxonomy.mjs";
 import { applyListening } from "../../tools/lib/listening.mjs";
+import { applyWatching } from "../../tools/lib/watching.mjs";
 import { applyPalette } from "../../tools/lib/palette.mjs";
 import { mergeItem } from "../../tools/lib/merge.mjs";
 
@@ -62,7 +63,7 @@ export function seedFor(rawItem) {
   };
 }
 
-export function addToCatalog({ published, raw, additions, taxonomy, listening, palette, candidate, genres = [], paletteEntry, noteText = null }) {
+export function addToCatalog({ published, raw, additions, taxonomy, listening, watching = {}, palette, candidate, genres = [], paletteEntry, noteText = null }) {
   const rawItem = rawItemFor(candidate);
   if (raw.items.some((item) => item.id === rawItem.id)) {
     throw new Error(`${rawItem.title} is already in the library`);
@@ -93,7 +94,7 @@ export function addToCatalog({ published, raw, additions, taxonomy, listening, p
      the right behaviour for a whole-catalog build and the wrong shape for one
      item, so both maps are scoped down to this id first. */
   const scoped = (map) => (map?.[rawItem.id] === undefined ? {} : { [rawItem.id]: map[rawItem.id] });
-  const catalog = applyTaxonomy(applyListening([rawItem], scoped(listening)), scoped(nextTaxonomy));
+  const catalog = applyTaxonomy(applyWatching(applyListening([rawItem], scoped(listening)), scoped(watching)), scoped(nextTaxonomy));
   /* An item arriving from Goodreads or Letterboxd already has a rating and a
      date watched or read. Those live in the note, exactly as a hand-typed one
      does, so the merge is what puts them on the item. */

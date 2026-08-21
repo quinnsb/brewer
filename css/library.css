@@ -152,10 +152,13 @@ body.library a { color: inherit; }
 
 .shelves {
   max-width: var(--shell); margin: 0 auto;
-  padding: 0 var(--gutter) 140px;
+  padding: 0 var(--gutter) 88px;
   position: relative; z-index: 3; background: var(--lib-bg);
 }
 .shelf-block { margin-bottom: 76px; }
+/* The last shelf's margin used to stack on .shelves' padding, leaving a screen
+   and a half of nothing between the podcasts and the footer. */
+.shelf-block:last-child { margin-bottom: 0; }
 
 .shelf-label {
   font-family: "Space Mono", ui-monospace, monospace;
@@ -167,19 +170,61 @@ body.library a { color: inherit; }
 }
 .shelf-label span { text-transform: none; letter-spacing: 0.04em; font-size: 11px; opacity: 0.62; }
 
-.shelf-actions { display: flex; justify-content: flex-end; margin-top: 20px; }
-.shelf-lists-link {
-  display: inline-flex; align-items: center; min-height: 44px;
-  padding: 0 2px; color: var(--lib-dim); text-decoration: none;
-  font-family: "Space Mono", ui-monospace, monospace;
-  font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em;
-  border-bottom: 1px solid var(--lib-line);
-  transition: color 0.2s ease, border-color 0.2s ease;
+/* Left, with the labels, rather than stranded on the right where nothing else
+   on the page sits. */
+.shelf-actions {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 12px; justify-content: flex-start; margin-top: 24px;
 }
-.shelf-lists-link::after { content: "\2192"; margin-left: 12px; font-size: 14px; }
-.shelf-lists-link:hover,
-.shelf-lists-link:focus-visible { color: var(--hero-verb); border-color: var(--hero-verb); }
-.shelf-lists-link:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 5px; }
+
+/* ---------- buttons, in the site's language ----------
+
+   The rest of the site says "button" one way: a rounded rectangle whose corners
+   morph wider on hover, a fill that sweeps up from below behind the label, and
+   a small scale. Same geometry, same durations and easings as .pill-btn and the
+   menu dock in styles.css, recoloured for a dark page. */
+.lib-btn {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 48px; padding: 13px 26px;
+  border: 1px solid transparent; border-radius: 0.6em;
+  cursor: pointer; text-decoration: none;
+  font-family: "Degular", system-ui, sans-serif; font-weight: 500;
+  font-size: 16px; letter-spacing: -0.01em;
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 0.35s cubic-bezier(0.65, 0, 0.35, 1),
+    color 0.3s ease, border-color 0.3s ease;
+}
+.lib-btn::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: var(--lib-fg);
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lib-btn:hover { transform: scale(1.04); border-radius: 1.4em; }
+.lib-btn:hover::before { transform: translateY(0); }
+.lib-btn:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 3px; }
+
+/* Primary: already filled, so the sweep inverts it back to the page colour. */
+.lib-btn.is-primary { background: var(--lib-fg); color: var(--lib-bg); }
+.lib-btn.is-primary::before { background: var(--lib-bg); }
+.lib-btn.is-primary:hover { color: var(--lib-fg); }
+
+/* Secondary: outlined until the fill arrives. */
+.lib-btn.is-secondary { background: transparent; color: var(--lib-fg); border-color: var(--lib-line); }
+.lib-btn.is-secondary:hover { color: var(--lib-bg); border-color: var(--lib-fg); }
+.lib-btn .lib-btn-arrow {
+  font-family: system-ui, sans-serif; font-size: 15px; line-height: 1;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.lib-btn:hover .lib-btn-arrow { transform: translate(3px, -3px); }
+
+html.reduce-motion .lib-btn,
+html.reduce-motion .lib-btn::before,
+html.reduce-motion .lib-btn .lib-btn-arrow { transition: none; }
+html.reduce-motion .lib-btn:hover { transform: none; }
+/* These are .lib-btn now; the old underlined-mono treatment is gone. */
 
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -223,12 +268,14 @@ html.reduce-motion .hcard:focus-visible .hcard-media { transform: none; }
 
 /* ---------- BOOKS: overlapping jackets ---------- */
 
+/* No scrollbar: these rails loop, so a bar showing position within a run would
+   be measuring something that does not end. Dragging and scrolling still work,
+   and the shelf label says so. */
 .shelf-rail {
   overflow-x: auto; overflow-y: hidden;
-  scrollbar-width: thin; scrollbar-color: var(--lib-faint) transparent;
+  scrollbar-width: none; -ms-overflow-style: none;
 }
-.shelf-rail::-webkit-scrollbar { height: 6px; }
-.shelf-rail::-webkit-scrollbar-thumb { background: var(--lib-faint); border-radius: 3px; }
+.shelf-rail::-webkit-scrollbar { width: 0; height: 0; display: none; }
 
 .book-cover-shelf {
   display: flex; align-items: flex-end; width: max-content; min-width: 100%;
@@ -238,12 +285,8 @@ html.reduce-motion .hcard:focus-visible .hcard-media { transform: none; }
   padding: 28px 8px 24px 4px;
 }
 .book-cover-run + .book-cover-run { margin-left: var(--book-run-overlap, 0); }
-.book-loop {
-  cursor: grab; touch-action: pan-y; user-select: none;
-  scrollbar-width: none;
-}
+.book-loop { cursor: grab; touch-action: pan-y; user-select: none; }
 .book-loop:active { cursor: grabbing; }
-.book-loop::-webkit-scrollbar { display: none; }
 .book-cover {
   position: relative; flex: 0 0 var(--book-w); width: var(--book-w); height: var(--book-h);
   margin-left: calc(var(--book-w) * -0.22);
@@ -294,6 +337,11 @@ html.reduce-motion .hcard:focus-visible .hcard-media { transform: none; }
 
 /* ---------- FILMS: rack ----------
    No lean. The old deterministic tilt from the id read as noise, not handling. */
+/* Holds the run and its two clones end to end, so the loop reads as one
+   continuous shelf rather than three. */
+.loop-track { display: flex; align-items: flex-end; width: max-content; }
+.shelf-rail:has(.loop-track) { cursor: grab; touch-action: pan-y; user-select: none; }
+.shelf-rail:has(.loop-track):active { cursor: grabbing; }
 .rack { display: flex; align-items: flex-end; gap: 12px; padding: 30px 4px 18px; width: max-content; }
 .poster {
   flex: 0 0 auto; border: 0; padding: 0; cursor: pointer; background: var(--cover);
@@ -652,25 +700,86 @@ html.reduce-motion .media-detail-art { transition: none; }
 
 /* ---------- site chrome ---------- */
 
-.library-menu-trigger {
-  position: fixed; top: 18px; right: var(--gutter); z-index: 80;
-  min-width: 44px; min-height: 44px; padding: 0 4px 0 14px;
+/* Top left, opposite the menu, because it belongs to the page rather than to
+   any one album: it decides whether the library makes noise at all. */
+.sound-toggle {
+  position: fixed; top: 18px; left: var(--gutter); z-index: 80;
+  display: inline-flex; align-items: center; gap: 8px;
+  min-width: 44px; min-height: 44px; padding: 0 6px;
   border: 0; background: transparent; color: var(--lib-fg);
   cursor: pointer; opacity: 0.74;
   font-family: "Space Mono", ui-monospace, monospace;
   font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
   transition: opacity 0.2s ease, color 0.2s ease, transform 0.25s var(--ease);
 }
-.library-menu-trigger::before {
-  content: ""; position: absolute; left: 2px; top: 50%;
-  width: 5px; height: 5px; border-radius: 50%;
-  background: var(--hero-verb); transform: translateY(-50%);
+.sound-toggle svg { width: 17px; height: 17px; flex: 0 0 auto; }
+.sound-toggle .sound-cross { opacity: 0; }
+.sound-toggle.is-off { color: var(--lib-dim); }
+.sound-toggle.is-off .sound-wave { opacity: 0; }
+.sound-toggle.is-off .sound-cross { opacity: 1; }
+.sound-toggle:hover,
+.sound-toggle:focus-visible { opacity: 1; color: var(--hero-verb); }
+.sound-toggle:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 3px; }
+/* The label is for the pointer; the icon carries it on a phone, where there is
+   no room for both this and the menu. */
+@media (max-width: 620px) { .sound-toggle .sound-toggle-text { display: none; } }
+body.library-menu-open .sound-toggle { opacity: 0; pointer-events: none; }
+
+.spotify-host { min-height: 152px; }
+
+/* The trailer sits in the detail panel like the record player does. 16:9 rather
+   than a fixed height, so it scales with the column. */
+.film-trailer { display: grid; gap: 12px; margin-top: 26px; }
+.film-trailer h3 {
+  margin: 0; font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--lib-dim);
 }
-.library-menu-trigger:hover,
-.library-menu-trigger:focus-visible { opacity: 1; color: var(--hero-verb); }
+.trailer-player {
+  width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 12px;
+  background: #000; display: block;
+}
+.trailer-open {
+  justify-self: start; color: var(--lib-dim); text-decoration: none;
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--lib-line);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.trailer-open:hover,
+.trailer-open:focus-visible { color: var(--hero-verb); border-color: var(--hero-verb); }
+.spotify-host iframe,
+.spotify-host > div { width: 100%; border: 0; border-radius: 12px; }
+
+/* The same bottom-left pill the rest of the site uses, in the same geometry and
+   with the same hover: cream fill, corners morphing wider, a small scale. It
+   used to be a bare mono label in the top right, which is the one bit of
+   chrome that did not look like the site it belongs to. */
+.library-menu-trigger {
+  position: fixed; bottom: 34px; left: var(--gutter); z-index: 86;
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 48px; padding: 14px 30px;
+  border: 0; border-radius: 0.6em;
+  background: var(--lib-fg); color: var(--lib-bg);
+  cursor: pointer;
+  font-family: "Degular", system-ui, sans-serif; font-weight: 500;
+  font-size: 17px; letter-spacing: -0.01em;
+  box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.9);
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 0.35s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 0.25s ease;
+}
+.library-menu-trigger:hover { transform: scale(1.04); border-radius: 1.4em; }
 .library-menu-trigger:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 3px; }
-body.library-menu-open .library-menu-trigger { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+/* Handing off to Close as the dock sweeps up, the way the main site does. */
+body.library-menu-open .library-menu-trigger { opacity: 0; transform: translateY(10px); pointer-events: none; }
 body.library-menu-open { overflow: hidden; }
+
+/* Nothing should end up underneath the pill. */
+.shelves { padding-bottom: 132px; }
+@media (max-width: 620px) { .library-menu-trigger { bottom: 18px; padding: 12px 24px; font-size: 15px; } }
+html.reduce-motion .library-menu-trigger { transition: opacity 0.2s ease; }
+html.reduce-motion .library-menu-trigger:hover { transform: none; }
 
 .library-menu-scrim {
   position: fixed; inset: 0; z-index: 84; pointer-events: none;
@@ -680,13 +789,14 @@ body.library-menu-open { overflow: hidden; }
 body.library-menu-open .library-menu-scrim { opacity: 1; pointer-events: auto; }
 
 .library-menu-dock {
-  position: fixed; top: 12px; right: max(12px, calc(var(--gutter) - 8px)); z-index: 90;
+  position: fixed; bottom: 24px; left: max(12px, calc(var(--gutter) - 8px)); z-index: 90;
   width: min(390px, calc(100vw - 24px)); padding: 14px;
   border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 18px;
   background: rgba(30, 29, 28, 0.97); color: var(--site-cream);
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.42);
   opacity: 0; pointer-events: none;
-  transform: translateY(-10px) scale(0.98); transform-origin: top right;
+  /* Rises from where the pill is, matching the main site's sweep. */
+  transform: translateY(14px) scale(0.98); transform-origin: bottom left;
   transition: opacity 0.2s ease, transform 0.28s var(--ease);
 }
 body.library-menu-open .library-menu-dock { opacity: 1; pointer-events: auto; transform: none; }
@@ -718,7 +828,7 @@ body.library-menu-open .library-menu-dock { opacity: 1; pointer-events: auto; tr
   color: var(--site-cream); text-decoration: none;
   font-family: "Degular", system-ui, sans-serif; font-weight: 500;
   font-size: clamp(30px, 3vw, 40px); line-height: 0.95; letter-spacing: -0.02em;
-  opacity: 0; transform: translateY(-5px);
+  opacity: 0; transform: translateY(6px);
   transition: opacity 0.22s ease var(--dock-delay, 0s), transform 0.3s var(--ease) var(--dock-delay, 0s), background 0.18s ease, color 0.18s ease;
 }
 .library-menu-links a:last-child { border-bottom: 0; }
@@ -790,7 +900,7 @@ body.library-menu-open .library-menu-links a { opacity: 1; transform: none; }
 
 .list-page-main {
   width: 100%; margin: 0;
-  padding: 0 0 clamp(110px, 12vw, 170px);
+  padding: 0 0 clamp(72px, 7vw, 104px);
 }
 .list-page-hero {
   position: relative; height: min(900px, 92svh); min-height: 660px;
@@ -941,7 +1051,7 @@ body.library-menu-open .library-menu-links a { opacity: 1; transform: none; }
   font-size: 8px; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap;
 }
 
-.catalog-section { padding-top: clamp(130px, 15vw, 220px); }
+.catalog-section { padding-top: clamp(88px, 9vw, 132px); }
 .catalog-heading-row {
   display: flex; align-items: flex-end; justify-content: space-between; gap: 24px;
   padding-top: 12px; border-top: 1px solid var(--lib-line);
