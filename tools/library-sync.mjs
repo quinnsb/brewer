@@ -24,13 +24,13 @@
      - MusicBrainz 503s under load regardless of how politely you space
        requests, so it is the fallback rather than the primary.
 
-   The picks below are PLACEHOLDER seed data for library-lab.html.
-   Replace `SEED` with a Goodreads/Letterboxd export reader once the
-   renderer is chosen. Everything downstream reads data/library.json,
-   so that swap does not touch the renderers.
+   The picks below are the curated baseline. Goodreads and Letterboxd
+   export adapters can add items through data/library-imports-*.json.
+   Everything downstream reads data/library.json, so imports do not touch
+   the renderers or any hand-written review.
    ============================================================ */
 
-import { writeFile, mkdir, rename, rm } from "node:fs/promises";
+import { writeFile, readFile, mkdir, rename, rm } from "node:fs/promises";
 import { createWriteStream, existsSync } from "node:fs";
 import { pipeline } from "node:stream/promises";
 import path from "node:path";
@@ -39,6 +39,10 @@ const ROOT = path.resolve(import.meta.dirname, "..");
 const IMG_DIR = path.join(ROOT, "images", "library");
 const OUT = path.join(ROOT, "data", "library.raw.json");
 const REFRESH_COVERS = process.argv.includes("--refresh-covers");
+const IMPORT_FILES = [
+  path.join(ROOT, "data", "library-imports-goodreads.json"),
+  path.join(ROOT, "data", "library-imports-letterboxd.json"),
+];
 
 /* MusicBrainz requires a descriptive UA with contact info. */
 const UA = "brewer-library-sync/0.1 ( https://www.quinnbrewer.com )";
@@ -242,12 +246,31 @@ async function firstOf(query, fns) {
   return null;
 }
 
-async function itunes(query, media, entity) {
+const normalizedName = (value) => String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
+async function itunes(query, media, entity, preferred = null) {
   const url =
-    `https://itunes.apple.com/search?limit=1&country=US&media=${media}` +
+    `https://itunes.apple.com/search?limit=12&country=US&media=${media}` +
     (entity ? `&entity=${entity}` : "") +
     "&term=" + encodeURIComponent(query);
-  const r = (await getJSON(url)).results?.[0];
+  const results = (await getJSON(url)).results ?? [];
+  const wanted = normalizedName(query).split(/\s+/);
+  const score = (result) => {
+    const title = normalizedName(result.collectionName ?? result.trackName);
+    const artist = normalizedName(result.artistName);
+    const haystack = `${title} ${artist}`;
+    let total = wanted.reduce((sum, word) => sum + (haystack.includes(word) ? 1 : 0), 0);
+    if (preferred?.title) {
+      const preferredTitle = normalizedName(preferred.title);
+      if (title === preferredTitle) total += 100;
+      else if (title.startsWith(preferredTitle)) total += 70 - Math.max(0, title.length - preferredTitle.length) / 4;
+      if (!/\b(single|ep)\b/.test(preferredTitle) && /\b(single|ep)\b/.test(title)) total -= 100;
+    }
+    if (preferred?.creator && artist === normalizedName(preferred.creator)) total += 50;
+    total += Math.min(Number(result.trackCount) || 0, 30) / 10;
+    return total;
+  };
+  const r = results.sort((a, b) => score(b) - score(a))[0];
   if (!r?.artworkUrl100) return null;
   return {
     title: r.collectionName ?? r.trackName ?? query,
@@ -257,6 +280,7 @@ async function itunes(query, media, entity) {
     /* mzstatic serves any square size by rewriting the path segment */
     coverUrl: r.artworkUrl100.replace(/\/\d+x\d+bb\./, "/1000x1000bb."),
     sourceUrl: r.collectionViewUrl ?? r.trackViewUrl ?? null,
+    catalogId: r.collectionId ?? null,
     facts: [
       [media === "ebook" ? "Author" : media === "podcast" ? "Publisher" : "Artist", r.artistName],
       [media === "ebook" ? "Published" : "Released", r.releaseDate?.slice(0, 10)],
@@ -265,6 +289,57 @@ async function itunes(query, media, entity) {
       [media === "ebook" ? "Publisher" : "Copyright", r.publisher ?? r.copyright],
     ].filter(([, value]) => value !== null && value !== undefined && value !== ""),
   };
+}
+
+function trackDuration(milliseconds) {
+  const seconds = Math.max(0, Math.round(Number(milliseconds) / 1000));
+  return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
+}
+
+function appleEmbedUrl(sourceUrl) {
+  if (!sourceUrl) return null;
+  try {
+    const url = new URL(sourceUrl);
+    if (url.hostname !== "music.apple.com") return null;
+    url.hostname = "embed.music.apple.com";
+    url.search = "";
+    return url.toString();
+  } catch {
+    return null;
+  }
+}
+
+async function resolveAlbum(query, preferred = null) {
+  const album = await itunes(query, "music", "album", preferred);
+  if (album && preferred?.title) {
+    const expected = normalizedName(preferred.title).split(" ").filter((word) => word.length > 2);
+    const actual = normalizedName(album.title);
+    const coverage = expected.filter((word) => actual.includes(word)).length / Math.max(expected.length, 1);
+    if (coverage < 0.6) return null;
+  }
+  if (!album?.catalogId) return album;
+  try {
+    const lookup = await getJSON(
+      `https://itunes.apple.com/lookup?id=${album.catalogId}&entity=song&country=US`
+    );
+    const tracks = (lookup.results ?? [])
+      .filter((result) => result.wrapperType === "track" && result.kind === "song")
+      .sort((a, b) => (a.discNumber - b.discNumber) || (a.trackNumber - b.trackNumber))
+      .map((track) => ({
+        number: track.trackNumber,
+        disc: track.discNumber,
+        title: track.trackName,
+        duration: trackDuration(track.trackTimeMillis),
+      }));
+    return {
+      ...album,
+      tracks,
+      listenEmbedUrl: appleEmbedUrl(album.sourceUrl),
+      detail: tracks.length ? `${tracks.length} tracks` : album.detail,
+    };
+  } catch {
+    return { ...album, listenEmbedUrl: appleEmbedUrl(album.sourceUrl) };
+  }
 }
 
 async function resolveOpenLibrary(query) {
@@ -312,7 +387,7 @@ async function resolveCoverArtArchive(query) {
 
 async function knownReleaseGroup(entry) {
   let catalog = null;
-  try { catalog = await itunes(entry.query, "music", "album"); }
+  try { catalog = await resolveAlbum(entry.query, entry); }
   catch { /* cover + core metadata below are enough */ }
   return {
     ...catalog,
@@ -362,7 +437,8 @@ async function resolveFilm(query) {
       const writerIds = claimIds("P58");
       const producerIds = claimIds("P162");
       const castIds = claimIds("P161", 3);
-      const ids = [...new Set([...dirIds, ...writerIds, ...producerIds, ...castIds])];
+      const genreIds = claimIds("P136", 4);
+      const ids = [...new Set([...dirIds, ...writerIds, ...producerIds, ...castIds, ...genreIds])];
       const people = ids.length
         ? (await getJSON(
             `https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&origin=*&props=labels&languages=en&ids=${ids.join("|")}`
@@ -373,6 +449,7 @@ async function resolveFilm(query) {
         .filter(Boolean)
         .join(", ");
       creator = names(dirIds) || creator;
+      const genres = genreIds.map((id) => people[id]?.labels?.en?.value).filter(Boolean);
       const released = dateVal?.slice(1, 11).replace(/-00-00$/, "").replace(/-00$/, "");
       facts = [
         ["Director", creator],
@@ -382,6 +459,7 @@ async function resolveFilm(query) {
         ["Released", released],
         ["Format", "Film"],
       ].filter(([, value]) => value);
+      page.genres = genres;
     } catch { /* poster is the thing that matters; metadata is best-effort */ }
   }
 
@@ -394,12 +472,13 @@ async function resolveFilm(query) {
     coverUrl: page.thumbnail.source.split("?")[0],
     sourceUrl: `https://en.wikipedia.org/wiki/${encodeURIComponent(page.title.replace(/ /g, "_"))}`,
     facts,
+    genres: page.genres ?? [],
   };
 }
 
 const RESOLVERS = {
   book:  (q) => firstOf(q, [resolveOpenLibrary, (x) => itunes(x, "ebook")]),
-  album: (q) => firstOf(q, [(x) => itunes(x, "music", "album"), resolveCoverArtArchive]),
+  album: (q) => firstOf(q, [resolveAlbum, resolveCoverArtArchive]),
   film:  (q) => firstOf(q, [resolveFilm]),
   other: (q) => firstOf(q, [(x) => itunes(x, "podcast", "podcast")]),
 };
@@ -434,17 +513,32 @@ function mulberry32(a) {
 
 async function main() {
   await mkdir(IMG_DIR, { recursive: true });
+  const seedByType = Object.fromEntries(Object.entries(SEED).map(([type, entries]) => [type, [...entries]]));
+  for (const file of IMPORT_FILES) {
+    if (!existsSync(file)) continue;
+    const imported = JSON.parse(await readFile(file, "utf8"));
+    for (const entry of imported.items || []) {
+      if (!seedByType[entry.type]) continue;
+      const duplicate = seedByType[entry.type].some((candidate) => {
+        const value = typeof candidate === "string" ? candidate : candidate.title || candidate.query;
+        return normalizedName(value).includes(normalizedName(entry.title));
+      });
+      if (!duplicate) seedByType[entry.type].push(entry);
+    }
+  }
   const items = [];
   const failures = [];
 
-  for (const [type, entries] of Object.entries(SEED)) {
+  for (const [type, entries] of Object.entries(seedByType)) {
     for (const entry of entries) {
       const seed = typeof entry === "string" ? { query: entry } : entry;
       const { query } = seed;
       try {
         const meta = seed.releaseGroupId
           ? await knownReleaseGroup(seed)
-          : await RESOLVERS[type](query);
+          : type === "album"
+            ? await firstOf(query, [(value) => resolveAlbum(value, seed), resolveCoverArtArchive])
+            : await RESOLVERS[type](query);
         if (!meta) throw new Error("no result");
 
         /* Curated display names win over storefront edition suffixes such as
@@ -453,6 +547,9 @@ async function main() {
         if (seed.creator) meta.creator = seed.creator;
         if (seed.year) meta.year = seed.year;
         if (seed.facts) meta.facts = seed.facts;
+        if (seed.rating) meta.rating = seed.rating;
+        if (seed.finished) meta.finished = seed.finished;
+        if (seed.sourceUrl && !meta.sourceUrl) meta.sourceUrl = seed.sourceUrl;
 
         const id = `${type}-${slug(meta.title)}`;
         const file = `${id}.jpg`;
@@ -477,6 +574,12 @@ async function main() {
           detail: meta.detail,
           cover: `images/library/${file}`,
           sourceUrl: meta.sourceUrl,
+          catalogId: meta.catalogId ?? null,
+          listenEmbedUrl: meta.listenEmbedUrl ?? null,
+          tracks: meta.tracks ?? [],
+          rating: meta.rating ?? null,
+          finished: meta.finished ?? null,
+          genres: seed.genres?.length ? seed.genres : meta.genres ?? [],
           facts: meta.facts ?? [],
           /* physical variation, deterministic per id */
           height: Number((0.45 + rand() * 0.55).toFixed(3)),

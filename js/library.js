@@ -8,13 +8,13 @@
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
 
-const DATA_URL = "data/library.json?v=catalog-taxonomy1";
+const DATA_URL = "data/library.json?v=library-polish4";
 
 const TYPE_LABEL = {
   book: ["Books", "drag or scroll either direction"],
   album: ["Albums", "drag, scroll, or use arrow keys"],
-  film: ["Films", "poster rack"],
-  other: ["Podcasts", "tiles"],
+  film: ["Films", "scroll or use arrow keys"],
+  other: ["Podcasts", "scroll or use arrow keys"],
 };
 const ORDER = ["book", "album", "film", "other"];
 const LIST_LINK = {
@@ -122,7 +122,7 @@ const CONTAINER = {
     return { rail, mount };
   },
   other() {
-    const rail = el("div");
+    const rail = el("div", "shelf-rail");
     const mount = el("div", "tiles");
     rail.append(mount);
     return { rail, mount };
@@ -498,18 +498,49 @@ function catalogHref(item, filter, value) {
 }
 
 function detailMeta(item) {
-  const meta = el("p", "media-detail-meta");
+  const meta = el("div", "media-detail-meta");
+  const people = el("p", "media-detail-people");
   const creators = item.creators || [item.creator].filter(Boolean);
   creators.forEach((creator, index) => {
     const link = el("a", "media-detail-creator", { href: catalogHref(item, "creator", creator) });
     link.textContent = creator;
-    meta.append(link);
-    if (index < creators.length - 1) meta.append(document.createTextNode(", "));
+    people.append(link);
+    if (index < creators.length - 1) people.append(document.createTextNode(", "));
   });
   const rest = [item.year, item.finished ? `finished ${item.finished}` : null].filter(Boolean);
-  if (creators.length && rest.length) meta.append(document.createTextNode("  ·  "));
-  meta.append(document.createTextNode(rest.join("  ·  ")));
+  if (people.childNodes.length) meta.append(people);
+  if (rest.length) meta.append(Object.assign(el("p", "media-detail-date"), { textContent: rest.join(" · ") }));
   return meta;
+}
+
+function albumListeningNode(item) {
+  if (item.type !== "album" || (!item.tracks?.length && !item.listenEmbedUrl)) return null;
+  const section = el("section", "album-listening", { "aria-labelledby": `album-tracks-${item.id}` });
+  section.append(Object.assign(el("h3"), { id: `album-tracks-${item.id}`, textContent: "Listen and explore" }));
+  if (item.listenEmbedUrl) {
+    const player = el("iframe", "album-player", {
+      src: item.listenEmbedUrl,
+      title: `Listen to ${item.title} by ${item.creator}`,
+      loading: "lazy",
+      allow: "autoplay *; encrypted-media *; fullscreen *; clipboard-write",
+      sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation",
+    });
+    section.append(player);
+  }
+  if (item.tracks?.length) {
+    const list = el("ol", "album-tracklist");
+    for (const track of item.tracks) {
+      const row = el("li");
+      row.append(
+        Object.assign(el("span", "album-track-number"), { textContent: String(track.number).padStart(2, "0") }),
+        Object.assign(el("span", "album-track-title"), { textContent: track.title }),
+        Object.assign(el("span", "album-track-time"), { textContent: track.duration || "" })
+      );
+      list.append(row);
+    }
+    section.append(list);
+  }
+  return section;
 }
 
 /* ---------- immersive media detail ---------- */
@@ -607,16 +638,20 @@ function detailNode(item) {
     "aria-modal": "true",
     "aria-labelledby": titleId,
   });
+  if (item.title.length > 34) layer.classList.add("has-extra-long-title");
+  else if (item.title.length > 20) layer.classList.add("has-long-title");
   layer.style.setProperty("--detail-color", item.palette?.cover || "#33302b");
   layer.style.setProperty("--detail-accent", item.palette?.accent || "#f3c844");
 
   const art = el("div", "media-detail-art");
+  art.addEventListener("click", (event) => {
+    if (!event.target.closest(".media-detail-morph")) closeDetail();
+  });
   const backdrop = el("button", "media-detail-backdrop", {
     type: "button",
     tabindex: "-1",
     "aria-label": `Close ${item.title} details`,
   });
-  backdrop.addEventListener("click", () => closeDetail());
   const morph = el("div", "media-detail-morph");
   const object = el("figure", `media-detail-object is-${item.type}`);
   const image = el("img");
@@ -659,6 +694,8 @@ function detailNode(item) {
   if (facts) copy.append(facts);
   const rating = ratingDisplay(item);
   if (rating) copy.append(rating);
+  const listening = albumListeningNode(item);
+  if (listening) copy.append(listening);
 
   if (item.sourceUrl) {
     const source = el("a", "media-detail-source", {
@@ -821,6 +858,7 @@ export function wireExpansion(items, root) {
     }
     if (next) {
       next.focus();
+      next.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "nearest", inline: "center" });
       e.preventDefault();
     }
   });
@@ -845,7 +883,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=detail-stage4");
+  const { initHero } = await import("./library-hero.js?v=library-polish4");
   initHero(items);
 }
 

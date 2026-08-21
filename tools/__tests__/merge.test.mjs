@@ -56,6 +56,12 @@ test("finished is null when absent", () => {
   assert.equal(mergeItem(RAW, "---\nfinished: 2026-03\n---\n", false).finished, "2026-03");
 });
 
+test("imported finished date survives unless frontmatter overrides it", () => {
+  const imported = { ...RAW, finished: "2026-08-21" };
+  assert.equal(mergeItem(imported, null, false).finished, "2026-08-21");
+  assert.equal(mergeItem(imported, "---\nfinished: 2026-08-22\n---\n", false).finished, "2026-08-22");
+});
+
 test("rating is author-owned frontmatter and defaults to null", () => {
   assert.equal(mergeItem(RAW, null, false).rating, null);
   assert.equal(mergeItem(RAW, "---\nrating: 4.5\n---\n", false).rating, 4.5);

@@ -1,7 +1,7 @@
 /* Media-specific list and catalog pages. The moving corridor is decorative;
    the catalog underneath owns all navigation and accessible media names. */
 
-const DATA_URL = "data/library.json?v=catalog-taxonomy1";
+const DATA_URL = "data/library.json?v=library-polish4";
 
 const PAGE = {
   book: {
@@ -10,7 +10,7 @@ const PAGE = {
     title: "Book lists.",
     section: "Book lists",
     intro: "Ranked favorites, generous recommendations, and shelves organized around an idea.",
-    creatorLabel: "Authors",
+    creatorControlLabel: "Author",
     lists: ["My top 25 books", "Science fiction essentials", "Books I keep giving away"],
   },
   album: {
@@ -19,7 +19,7 @@ const PAGE = {
     title: "Album lists.",
     section: "Album lists",
     intro: "Records grouped by mood, era, genre, and the ones worth playing all the way through.",
-    creatorLabel: "Artists and bands",
+    creatorControlLabel: "Artist or band",
     lists: ["Top 10 hip-hop albums", "Records for a slow Sunday", "Perfect front-to-back albums"],
   },
   film: {
@@ -28,7 +28,7 @@ const PAGE = {
     title: "Film lists.",
     section: "Film lists",
     intro: "Movies gathered by genre, decade, audience, and the arguments they inspire.",
-    creatorLabel: "Directors",
+    creatorControlLabel: "Director",
     lists: ["20 science fiction movies", "Top 10 children's movies", "Top 10 seventies movies"],
   },
   other: {
@@ -37,7 +37,7 @@ const PAGE = {
     title: "Podcast lists.",
     section: "Podcast lists",
     intro: "Shows and episodes for long drives, curious afternoons, and repeat listening.",
-    creatorLabel: "Hosts and makers",
+    creatorControlLabel: "Host or maker",
     lists: ["Shows that make me smarter", "Long drives, better company", "Episodes worth replaying"],
   },
 };
@@ -68,7 +68,7 @@ function corridorKeyframes(direction, name) {
     railExit: 44,
     fan: 3.3,
     turnBirth: 6,
-    turnExit: 28,
+    turnExit: type === "film" || type === "book" ? 14 : 24,
     stops: 24,
   };
   const steps = [];
@@ -100,12 +100,13 @@ function renderStream(items) {
 
   const stage = document.createElement("div");
   stage.className = "list-stream-stage";
-  const cards = Math.min(10, Math.max(8, items.length));
+  const cards = Math.min(10, Math.max(6, Math.ceil(items.length / 2)));
   const speed = 19;
 
   for (const [side, animation] of [["right", "list-stream-right"], ["left", "list-stream-left"]]) {
+    const sideItems = items.filter((_, index) => index % 2 === (side === "right" ? 0 : 1));
     for (let index = 0; index < cards; index += 1) {
-      const item = items[index % items.length];
+      const item = sideItems[index % sideItems.length] || items[index % items.length];
       const card = document.createElement("div");
       card.className = `list-stream-card is-${type} is-${side}`;
       card.style.setProperty("--stream-animation", animation);
@@ -131,7 +132,8 @@ function renderStream(items) {
 function preview(items, offset) {
   const frame = document.createElement("div");
   frame.className = `list-card-preview is-${type}`;
-  frame.setAttribute("aria-hidden", "true");
+  frame.setAttribute("aria-label", `${page.singular} list preview. Scroll horizontally to browse.`);
+  frame.tabIndex = 0;
   for (let index = 0; index < 6; index += 1) {
     const item = items[(offset + index) % items.length];
     const img = document.createElement("img");
@@ -167,17 +169,14 @@ function countsFor(items, values) {
   return [...counts].sort((a, b) => a[0].localeCompare(b[0]));
 }
 
-function filterLink(filter, value, count, current) {
-  const link = document.createElement("a");
-  link.href = hrefFor(filter, value);
-  link.className = "catalog-filter-link";
-  if (current === value) link.setAttribute("aria-current", "page");
-  const label = document.createElement("span");
-  label.textContent = value;
-  const total = document.createElement("small");
-  total.textContent = String(count).padStart(2, "0");
-  link.append(label, total);
-  return link;
+function addOptions(select, counts, selected) {
+  for (const [value, count] of counts) {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = `${value} (${count})`;
+    option.selected = selected?.toLowerCase() === value.toLowerCase();
+    select.append(option);
+  }
 }
 
 function creatorLinks(item) {
@@ -211,7 +210,10 @@ function catalogCard(item) {
   title.textContent = item.title;
   const meta = document.createElement("p");
   meta.className = "catalog-card-meta";
-  meta.textContent = item.year ? String(item.year) : "Year unavailable";
+  const metadata = [item.year ? String(item.year) : "Year unavailable"];
+  if (Number(item.rating) > 0) metadata.push(`Personal ${Number(item.rating).toFixed(1)} / 5`);
+  if (Number(item.externalRating) > 0) metadata.push(`IMDb ${Number(item.externalRating).toFixed(1)} / 10`);
+  meta.textContent = metadata.join(" · ");
   const genres = document.createElement("div");
   genres.className = "catalog-card-genres";
   for (const genre of item.genres) {
@@ -228,33 +230,58 @@ function catalogCard(item) {
 function renderCatalog(media) {
   const genreCounts = countsFor(media, (item) => item.genres || []);
   const creatorCounts = countsFor(media, (item) => item.creators || [item.creator]);
-  const requestedGenre = params.get("genre");
-  const requestedCreator = params.get("creator");
-  const genre = genreCounts.find(([value]) => value.toLowerCase() === requestedGenre?.toLowerCase())?.[0] || null;
-  const creator = creatorCounts.find(([value]) => value.toLowerCase() === requestedCreator?.toLowerCase())?.[0] || null;
-
-  const genreLinks = node("[data-genre-links]");
-  const creatorLinksNode = node("[data-creator-links]");
-  genreCounts.forEach(([value, count]) => genreLinks.append(filterLink("genre", value, count, genre)));
-  creatorCounts.forEach(([value, count]) => creatorLinksNode.append(filterLink("creator", value, count, creator)));
-
-  const filtered = genre
-    ? media.filter((item) => item.genres.includes(genre))
-    : creator
-      ? media.filter((item) => (item.creators || [item.creator]).includes(creator))
-      : media;
-  const title = genre ? `${genre} ${page.label.toLowerCase()}.` : creator ? `${creator}.` : `All ${page.label.toLowerCase()}.`;
-  node("[data-catalog-title]").textContent = title;
-  node("[data-catalog-count]").textContent = `${filtered.length} ${filtered.length === 1 ? page.singular : page.label.toLowerCase()} catalogued`;
-  node("[data-creator-heading]").textContent = page.creatorLabel;
-
+  const genreSelect = node("[data-catalog-genre]");
+  const creatorSelect = node("[data-catalog-creator]");
+  const sortSelect = node("[data-catalog-sort]");
+  const orderSelect = node("[data-catalog-order]");
+  const requestedGenre = params.get("genre") || "";
+  const requestedCreator = params.get("creator") || "";
+  addOptions(genreSelect, genreCounts, requestedGenre);
+  addOptions(creatorSelect, creatorCounts, requestedCreator);
+  sortSelect.value = params.get("sort") || "title";
+  orderSelect.value = params.get("order") || "asc";
+  node("[data-creator-heading]").textContent = page.creatorControlLabel;
   const reset = node("[data-catalog-reset]");
   reset.href = hrefFor();
   reset.textContent = `View all ${page.label.toLowerCase()}`;
-  reset.hidden = !genre && !creator;
-
   const grid = node("[data-catalog-grid]");
-  filtered.forEach((item) => grid.append(catalogCard(item)));
+
+  const render = () => {
+    const genre = genreSelect.value;
+    const creator = creatorSelect.value;
+    const sort = sortSelect.value;
+    const direction = orderSelect.value === "desc" ? -1 : 1;
+    const filtered = media.filter((item) =>
+      (!genre || item.genres.includes(genre)) &&
+      (!creator || (item.creators || [item.creator]).includes(creator))
+    );
+    const valueFor = (item) => {
+      if (sort === "creator") return item.creator || "";
+      if (sort === "year") return Number(item.year) || 0;
+      if (sort === "rating") return Number(item.rating) || -1;
+      if (sort === "externalRating") return Number(item.externalRating) || -1;
+      return item.title;
+    };
+    filtered.sort((a, b) => {
+      const av = valueFor(a);
+      const bv = valueFor(b);
+      const comparison = typeof av === "number" ? av - bv : av.localeCompare(bv);
+      return comparison * direction;
+    });
+    grid.replaceChildren(...filtered.map(catalogCard));
+    const title = genre ? `${genre} ${page.label.toLowerCase()}.` : creator ? `${creator}.` : `All ${page.label.toLowerCase()}.`;
+    node("[data-catalog-title]").textContent = title;
+    node("[data-catalog-count]").textContent = `${filtered.length} ${filtered.length === 1 ? page.singular : page.label.toLowerCase()} catalogued`;
+    reset.hidden = !genre && !creator && sort === "title" && direction === 1;
+    const next = new URLSearchParams({ type });
+    if (genre) next.set("genre", genre);
+    if (creator) next.set("creator", creator);
+    if (sort !== "title") next.set("sort", sort);
+    if (direction === -1) next.set("order", "desc");
+    history.replaceState(null, "", `${location.pathname}?${next.toString()}${location.hash}`);
+  };
+  node("[data-catalog-controls]").addEventListener("change", render);
+  render();
 }
 
 async function main() {

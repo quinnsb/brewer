@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/library.css?v=catalog-stream1" />
+  <link rel="stylesheet" href="css/library.css?v=library-polish4" />
 </head>
 <body id="top" class="library library-lists">
   <button
@@ -60,16 +60,33 @@
         </div>
         <a class="catalog-reset" href="library-lists.html?type=book" data-catalog-reset hidden>View all books</a>
       </div>
-      <div class="catalog-directories">
-        <nav class="catalog-directory" aria-label="Browse by genre">
-          <h3>Genres</h3>
-          <div class="catalog-filter-links" data-genre-links></div>
-        </nav>
-        <nav class="catalog-directory" aria-label="Browse by creator">
-          <h3 data-creator-heading>Authors</h3>
-          <div class="catalog-filter-links" data-creator-links></div>
-        </nav>
-      </div>
+      <form class="catalog-controls" data-catalog-controls>
+        <label>
+          <span>Genre</span>
+          <select data-catalog-genre><option value="">All genres</option></select>
+        </label>
+        <label>
+          <span data-creator-heading>Author</span>
+          <select data-catalog-creator><option value="">All authors</option></select>
+        </label>
+        <label>
+          <span>Sort by</span>
+          <select data-catalog-sort>
+            <option value="title">Title</option>
+            <option value="creator">Creator</option>
+            <option value="year">Release date</option>
+            <option value="rating">Personal rating</option>
+            <option value="externalRating">IMDb rating</option>
+          </select>
+        </label>
+        <label>
+          <span>Order</span>
+          <select data-catalog-order>
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+          </select>
+        </label>
+      </form>
       <p class="catalog-result-count" data-catalog-count></p>
       <div class="catalog-grid" data-catalog-grid></div>
     </section>
@@ -93,6 +110,6 @@
   </footer>
 
   <script src="js/library-chrome.js?v=menu2"></script>
-  <script type="module" src="js/library-lists.js?v=catalog-stream1"></script>
+  <script type="module" src="js/library-lists.js?v=library-polish4"></script>
 </body>
 </html>

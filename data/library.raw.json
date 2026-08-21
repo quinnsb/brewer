@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T03:05:09.609Z",
+  "generatedAt": "2026-08-21T14:45:48.168Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -12,6 +12,11 @@
       "detail": "304 pages",
       "cover": "images/library/book-the-left-hand-of-darkness.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL59800W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -46,6 +51,11 @@
       "detail": "810 pages",
       "cover": "images/library/book-gravitys-rainbow.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL2636675W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -80,6 +90,11 @@
       "detail": "352 pages",
       "cover": "images/library/book-the-dispossessed.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL59863W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -114,6 +129,11 @@
       "detail": "353 pages",
       "cover": "images/library/book-blood-meridian.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL40879W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -148,6 +168,11 @@
       "detail": "224 pages",
       "cover": "images/library/book-housekeeping.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL1875010W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -182,6 +207,11 @@
       "detail": "304 pages",
       "cover": "images/library/book-the-sellout.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL17616758W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -216,6 +246,11 @@
       "detail": "537 pages",
       "cover": "images/library/book-cloud-atlas.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL482454W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -250,6 +285,11 @@
       "detail": "359 pages",
       "cover": "images/library/book-a-visit-from-the-goon-squad.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL15026613W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -284,6 +324,11 @@
       "detail": "272 pages",
       "cover": "images/library/book-piranesi.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL20893680W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -318,6 +363,11 @@
       "detail": "395 pages",
       "cover": "images/library/book-starclimber.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL11690073W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -352,6 +402,11 @@
       "detail": "319 pages",
       "cover": "images/library/book-never-let-me-go.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL59038W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -386,6 +441,11 @@
       "detail": "407 pages",
       "cover": "images/library/book-the-martian.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL17091839W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -420,6 +480,11 @@
       "detail": "358 pages",
       "cover": "images/library/book-the-bonesetters-daughter.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL1843703W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -454,6 +519,11 @@
       "detail": "310 pages",
       "cover": "images/library/book-the-hobbit.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL27482W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -469,7 +539,7 @@
         ],
         [
           "Publisher",
-          "Kedros Publishers"
+          "Stock"
         ]
       ],
       "height": 0.637,
@@ -488,6 +558,11 @@
       "detail": "256 pages",
       "cover": "images/library/book-dawn.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL35628W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -522,6 +597,11 @@
       "detail": "452 pages",
       "cover": "images/library/book-moby-dick.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL102749W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -556,6 +636,11 @@
       "detail": "192 pages",
       "cover": "images/library/book-things-fall-apart.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL891786W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -590,6 +675,11 @@
       "detail": "192 pages",
       "cover": "images/library/book-hatchet.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL8125760W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -624,6 +714,11 @@
       "detail": "330 pages",
       "cover": "images/library/book-enders-game.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL49488W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -658,6 +753,11 @@
       "detail": null,
       "cover": "images/library/book-the-fifth-season.jpg",
       "sourceUrl": "https://books.apple.com/us/book/the-fifth-season/id771220893?uo=4",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -684,6 +784,11 @@
       "detail": null,
       "cover": "images/library/book-a-day-of-fallen-night.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL27820045W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -714,6 +819,11 @@
       "detail": "128 pages",
       "cover": "images/library/book-the-call-of-the-wild.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL14942956W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -729,7 +839,7 @@
         ],
         [
           "Publisher",
-          "Happy House Books"
+          "Dtv"
         ]
       ],
       "height": 0.804,
@@ -748,6 +858,11 @@
       "detail": null,
       "cover": "images/library/book-the-stone-sky.jpg",
       "sourceUrl": "https://books.apple.com/us/book/the-stone-sky/id1182872712?uo=4",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -774,6 +889,11 @@
       "detail": "136 pages",
       "cover": "images/library/book-heart-of-darkness.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL38663W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -808,6 +928,11 @@
       "detail": "352 pages",
       "cover": "images/library/book-pretty-as-a-picture.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL20648802W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -842,6 +967,11 @@
       "detail": "464 pages",
       "cover": "images/library/book-ready-player-two.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL20907281W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -876,6 +1006,11 @@
       "detail": "304 pages",
       "cover": "images/library/book-normal-people.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL20150260W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -910,6 +1045,11 @@
       "detail": "231 pages",
       "cover": "images/library/book-feed.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL20037648W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -940,6 +1080,11 @@
       "detail": "1193 pages",
       "cover": "images/library/book-the-fellowship-of-the-ring.jpg",
       "sourceUrl": "https://openlibrary.org/works/OL27448W",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Author",
@@ -971,9 +1116,14 @@
       "title": "Coloring Book",
       "creator": "Chance the Rapper",
       "year": 2016,
-      "detail": "1 tracks",
+      "detail": "Album",
       "cover": "images/library/album-coloring-book.jpg",
       "sourceUrl": "https://musicbrainz.org/release-group/2e93b949-f480-475b-a1bd-bbf9723ba13d",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1009,9 +1159,14 @@
       "title": "Where the Light Is: John Mayer Live in Los Angeles",
       "creator": "John Mayer",
       "year": 2008,
-      "detail": "15 tracks",
+      "detail": "Album",
       "cover": "images/library/album-where-the-light-is-john-mayer-live-in-los-angeles.jpg",
       "sourceUrl": "https://musicbrainz.org/release-group/7c12144f-8c2a-30e5-a635-13cd3f3eadec",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1047,9 +1202,99 @@
       "title": "In Between Dreams",
       "creator": "Jack Johnson",
       "year": 2005,
-      "detail": "16 tracks",
+      "detail": "14 tracks",
       "cover": "images/library/album-in-between-dreams.jpg",
-      "sourceUrl": "https://music.apple.com/us/album/in-between-dreams-bonus-track-version/1440857781?uo=4",
+      "sourceUrl": "https://music.apple.com/us/album/in-between-dreams/1440768692?uo=4",
+      "catalogId": 1440768692,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/in-between-dreams/1440768692",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Better Together",
+          "duration": "3:28"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Never Know",
+          "duration": "3:33"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Banana Pancakes",
+          "duration": "3:12"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Good People",
+          "duration": "3:29"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "No Other Way",
+          "duration": "3:10"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Sitting, Waiting, Wishing",
+          "duration": "3:04"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Staple It Together",
+          "duration": "3:16"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Situations",
+          "duration": "1:17"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Crying Shame",
+          "duration": "3:06"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "If I Could",
+          "duration": "2:25"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "Breakdown",
+          "duration": "3:33"
+        },
+        {
+          "number": 12,
+          "disc": 1,
+          "title": "Belle",
+          "duration": "1:43"
+        },
+        {
+          "number": 13,
+          "disc": 1,
+          "title": "Do You Remember",
+          "duration": "2:24"
+        },
+        {
+          "number": 14,
+          "disc": 1,
+          "title": "Constellations",
+          "duration": "3:22"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1088,6 +1333,96 @@
       "detail": "14 tracks",
       "cover": "images/library/album-blonde-on-blonde.jpg",
       "sourceUrl": "https://music.apple.com/us/album/blonde-on-blonde/178049863?uo=4",
+      "catalogId": 178049863,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/blonde-on-blonde/178049863",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Rainy Day Women #12 & 35",
+          "duration": "4:37"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Pledging My Time",
+          "duration": "3:50"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Visions of Johanna",
+          "duration": "7:34"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "One of Us Must Know (Sooner or Later)",
+          "duration": "4:55"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "I Want You",
+          "duration": "3:09"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Stuck Inside of Mobile with the Memphis Blues Again",
+          "duration": "7:07"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Leopard-Skin Pill-Box Hat",
+          "duration": "3:59"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Just Like a Woman",
+          "duration": "4:54"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Most Likely You Go Your Way (And I'll Go Mine)",
+          "duration": "3:30"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Temporary Like Achilles",
+          "duration": "5:03"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "Absolutely Sweet Marie",
+          "duration": "4:57"
+        },
+        {
+          "number": 12,
+          "disc": 1,
+          "title": "Fourth Time Around",
+          "duration": "4:35"
+        },
+        {
+          "number": 13,
+          "disc": 1,
+          "title": "Obviously Five Believers",
+          "duration": "3:36"
+        },
+        {
+          "number": 14,
+          "disc": 1,
+          "title": "Sad-Eyed Lady of the Lowlands",
+          "duration": "11:17"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1126,6 +1461,42 @@
       "detail": "5 tracks",
       "cover": "images/library/album-kind-of-blue.jpg",
       "sourceUrl": "https://music.apple.com/us/album/kind-of-blue/268443092?uo=4",
+      "catalogId": 268443092,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/kind-of-blue/268443092",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "So What",
+          "duration": "9:08"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Freddie Freeloader",
+          "duration": "9:48"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Blue In Green",
+          "duration": "5:36"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "All Blues",
+          "duration": "11:33"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Flamenco Sketches",
+          "duration": "9:21"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1164,6 +1535,78 @@
       "detail": "11 tracks",
       "cover": "images/library/album-transatlanticism.jpg",
       "sourceUrl": "https://music.apple.com/us/album/transatlanticism/718938040?uo=4",
+      "catalogId": 718938040,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/transatlanticism/718938040",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "The New Year",
+          "duration": "4:06"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Lightness",
+          "duration": "3:30"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Title and Registration",
+          "duration": "3:39"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Expo '86",
+          "duration": "4:11"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "The Sound of Settling",
+          "duration": "2:13"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Tiny Vessels",
+          "duration": "4:22"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Transatlanticism",
+          "duration": "7:55"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Passenger Seat",
+          "duration": "3:42"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Death of an Interior Decorator",
+          "duration": "2:57"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "We Looked Like Giants",
+          "duration": "5:33"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "A Lack of Color",
+          "duration": "3:36"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1202,6 +1645,72 @@
       "detail": "10 tracks",
       "cover": "images/library/album-reading-writing-and-arithmetic.jpg",
       "sourceUrl": "https://music.apple.com/us/album/reading-writing-and-arithmetic/1707465605?uo=4",
+      "catalogId": 1707465605,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/reading-writing-and-arithmetic/1707465605",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Skin & Bones",
+          "duration": "4:18"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Here's Where The Story Ends",
+          "duration": "3:55"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Can't Be Sure",
+          "duration": "3:22"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "I Won",
+          "duration": "4:23"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Hideous Towns",
+          "duration": "3:46"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "You're Not The Only One I Know",
+          "duration": "3:50"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "A Certain Someone",
+          "duration": "4:25"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "I Kicked A Boy",
+          "duration": "2:15"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "My Finest Hour",
+          "duration": "4:00"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Joy",
+          "duration": "4:10"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1237,9 +1746,117 @@
       "title": "Night Train",
       "creator": "Oscar Peterson Trio",
       "year": 1963,
-      "detail": "11 tracks",
+      "detail": "17 tracks",
       "cover": "images/library/album-night-train.jpg",
-      "sourceUrl": "https://music.apple.com/us/album/night-train/1440761118?uo=4",
+      "sourceUrl": "https://music.apple.com/us/album/night-train/6766275179?uo=4",
+      "catalogId": 6766275179,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/night-train/6766275179",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Easy Does It",
+          "duration": "2:46"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "This Could Be The Start Of Something",
+          "duration": "5:12"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Now Is The Time",
+          "duration": "2:37"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "My Heart Belongs To Daddy",
+          "duration": "3:58"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Happy-Go-lucky Local (Alternative Take)",
+          "duration": "5:00"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Night Train",
+          "duration": "4:53"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Hymn To Freedom",
+          "duration": "5:38"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "The Honeydripper",
+          "duration": "2:25"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Band Call",
+          "duration": "3:55"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "I Got It Bad",
+          "duration": "5:09"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "Volare",
+          "duration": "2:49"
+        },
+        {
+          "number": 12,
+          "disc": 1,
+          "title": "Bag's Groove",
+          "duration": "5:43"
+        },
+        {
+          "number": 13,
+          "disc": 1,
+          "title": "C-Jam Blues",
+          "duration": "3:26"
+        },
+        {
+          "number": 14,
+          "disc": 1,
+          "title": "Moten Swing (Rehearsal Take)",
+          "duration": "3:37"
+        },
+        {
+          "number": 15,
+          "disc": 1,
+          "title": "Things Ain't What They Used To Be",
+          "duration": "4:39"
+        },
+        {
+          "number": 16,
+          "disc": 1,
+          "title": "Moten Swing (Standard Take)",
+          "duration": "2:55"
+        },
+        {
+          "number": 17,
+          "disc": 1,
+          "title": "Georgia On My Mind",
+          "duration": "3:47"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1278,6 +1895,78 @@
       "detail": "11 tracks",
       "cover": "images/library/album-a-boy-named-charlie-brown.jpg",
       "sourceUrl": "https://music.apple.com/us/album/a-boy-named-charlie-brown-original-1969-movie-soundtrack/1577461095?uo=4",
+      "catalogId": 1577461095,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/a-boy-named-charlie-brown-original-1969-movie-soundtrack/1577461095",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Oh, Good Grief",
+          "duration": "2:25"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Pebble Beach",
+          "duration": "2:52"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Happiness Is",
+          "duration": "3:43"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Schroeder",
+          "duration": "1:55"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Charlie Brown Theme",
+          "duration": "4:26"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Linus And Lucy",
+          "duration": "3:07"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Blue Charlie Brown",
+          "duration": "7:30"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Baseball Theme",
+          "duration": "3:17"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Frieda (With The Naturally Curly Hair)",
+          "duration": "4:38"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Fly Me To The Moon",
+          "duration": "9:01"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "Baseball Theme (Alternate Take)",
+          "duration": "1:58"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1316,6 +2005,102 @@
       "detail": "15 tracks",
       "cover": "images/library/album-gordon.jpg",
       "sourceUrl": "https://music.apple.com/us/album/gordon/283789996?uo=4",
+      "catalogId": 283789996,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/gordon/283789996",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Hello City",
+          "duration": "3:22"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Enid",
+          "duration": "4:07"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Grade 9",
+          "duration": "2:55"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Brian Wilson",
+          "duration": "4:48"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Be My Yoko Ono",
+          "duration": "2:45"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Wrap Your Arms Around Me",
+          "duration": "4:35"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "What a Good Boy",
+          "duration": "3:55"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "The King of Bedside Manor",
+          "duration": "2:27"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Box/Set",
+          "duration": "4:49"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "I Love You",
+          "duration": "4:09"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "New Kid (On the Block)",
+          "duration": "4:13"
+        },
+        {
+          "number": 12,
+          "disc": 1,
+          "title": "Blame It On Me",
+          "duration": "3:54"
+        },
+        {
+          "number": 13,
+          "disc": 1,
+          "title": "The Flag",
+          "duration": "3:53"
+        },
+        {
+          "number": 14,
+          "disc": 1,
+          "title": "If I Had $1,000,000",
+          "duration": "4:27"
+        },
+        {
+          "number": 15,
+          "disc": 1,
+          "title": "Crazy",
+          "duration": "4:51"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1351,9 +2136,99 @@
       "title": "Come Away with Me",
       "creator": "Norah Jones",
       "year": 2002,
-      "detail": "44 tracks",
+      "detail": "14 tracks",
       "cover": "images/library/album-come-away-with-me.jpg",
-      "sourceUrl": "https://music.apple.com/us/album/come-away-with-me-super-deluxe-edition/1625058458?uo=4",
+      "sourceUrl": "https://music.apple.com/us/album/come-away-with-me-remastered/1624173298?uo=4",
+      "catalogId": 1624173298,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/come-away-with-me-remastered/1624173298",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Don't Know Why",
+          "duration": "3:06"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Seven Years",
+          "duration": "2:25"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Cold Cold Heart",
+          "duration": "3:39"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Feelin' the Same Way",
+          "duration": "2:57"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Come Away with Me",
+          "duration": "3:18"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Shoot the Moon",
+          "duration": "3:57"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Turn Me On",
+          "duration": "2:35"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Lonestar",
+          "duration": "3:06"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "I've Got to See You Again",
+          "duration": "4:13"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Painter Song",
+          "duration": "2:42"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "One Flight Down",
+          "duration": "3:06"
+        },
+        {
+          "number": 12,
+          "disc": 1,
+          "title": "Nightingale",
+          "duration": "4:12"
+        },
+        {
+          "number": 13,
+          "disc": 1,
+          "title": "The Long Day Is Over",
+          "duration": "2:45"
+        },
+        {
+          "number": 14,
+          "disc": 1,
+          "title": "The Nearness of You",
+          "duration": "3:08"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1392,6 +2267,72 @@
       "detail": "10 tracks",
       "cover": "images/library/album-mr-finish-line.jpg",
       "sourceUrl": "https://music.apple.com/us/album/mr-finish-line/1877223421?uo=4",
+      "catalogId": 1877223421,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/mr-finish-line/1877223421",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Birds of a Feather, We Rock Together (feat. Antwaun Stanley)",
+          "duration": "4:45"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Baby I Don't Know Oh Oh (feat. Charles Jones)",
+          "duration": "3:29"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Mr. Finish Line",
+          "duration": "3:13"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Tee Time",
+          "duration": "2:49"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Running Away",
+          "duration": "4:32"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Hero Town",
+          "duration": "3:35"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Business Casual",
+          "duration": "3:04"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Vulf Pack",
+          "duration": "2:38"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Grandma",
+          "duration": "5:06"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Captain Hook",
+          "duration": "2:41"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1430,6 +2371,90 @@
       "detail": "13 tracks",
       "cover": "images/library/album-magic.jpg",
       "sourceUrl": "https://music.apple.com/us/album/magic/1585841144?uo=4",
+      "catalogId": 1585841144,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/magic/1585841144",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Extraordinary Magic",
+          "duration": "2:53"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "I Will Always Be Yours",
+          "duration": "3:47"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Drive",
+          "duration": "3:17"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Old Friends",
+          "duration": "3:45"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Duo",
+          "duration": "3:23"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Kids",
+          "duration": "4:17"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Green",
+          "duration": "3:44"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Sometimes",
+          "duration": "3:24"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Wherever You Are",
+          "duration": "3:17"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Over and Over",
+          "duration": "3:25"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "Boxes",
+          "duration": "3:23"
+        },
+        {
+          "number": 12,
+          "disc": 1,
+          "title": "Peace",
+          "duration": "2:37"
+        },
+        {
+          "number": 13,
+          "disc": 1,
+          "title": "Love Like This",
+          "duration": "3:34"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1468,6 +2493,84 @@
       "detail": "12 tracks",
       "cover": "images/library/album-messy.jpg",
       "sourceUrl": "https://music.apple.com/us/album/messy/1676252821?uo=4",
+      "catalogId": 1676252821,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/messy/1676252821",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "UFO",
+          "duration": "2:34"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Dive",
+          "duration": "3:21"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Ladies Room",
+          "duration": "3:40"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "No Man",
+          "duration": "2:59"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Dangerously Easy",
+          "duration": "2:44"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Getting There (Interlude)",
+          "duration": "1:47"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Danger",
+          "duration": "2:56"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "The Hardest Part",
+          "duration": "2:56"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "I Could Be A Florist",
+          "duration": "1:21"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Messy",
+          "duration": "3:43"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "Everybody's Crazy",
+          "duration": "2:44"
+        },
+        {
+          "number": 12,
+          "disc": 1,
+          "title": "Carmen",
+          "duration": "4:49"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1506,6 +2609,78 @@
       "detail": "11 tracks",
       "cover": "images/library/album-plans.jpg",
       "sourceUrl": "https://music.apple.com/us/album/plans/966379289?uo=4",
+      "catalogId": 966379289,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/plans/966379289",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Marching Bands of Manhattan",
+          "duration": "4:12"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Soul Meets Body",
+          "duration": "3:51"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Summer Skin",
+          "duration": "3:14"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Different Names for the Same Thing",
+          "duration": "5:09"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "I Will Follow You Into the Dark",
+          "duration": "3:09"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Your Heart Is an Empty Room",
+          "duration": "3:39"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Someday You Will Be Loved",
+          "duration": "3:11"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Crooked Teeth",
+          "duration": "3:24"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "What Sarah Said",
+          "duration": "6:21"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Brothers On a Hotel Bed",
+          "duration": "4:31"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "Stable Song",
+          "duration": "3:42"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1544,6 +2719,66 @@
       "detail": "9 tracks",
       "cover": "images/library/album-thriller.jpg",
       "sourceUrl": "https://music.apple.com/us/album/thriller/269572838?uo=4",
+      "catalogId": 269572838,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/thriller/269572838",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Wanna Be Startin' Somethin'",
+          "duration": "6:03"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Baby Be Mine",
+          "duration": "4:20"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "The Girl Is Mine (with Paul McCartney)",
+          "duration": "3:42"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Thriller",
+          "duration": "5:59"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Beat It",
+          "duration": "4:18"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Billie Jean",
+          "duration": "4:54"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Human Nature",
+          "duration": "4:06"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "P.Y.T. (Pretty Young Thing)",
+          "duration": "3:58"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "The Lady in My Life",
+          "duration": "4:58"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1582,6 +2817,66 @@
       "detail": "9 tracks",
       "cover": "images/library/album-sound-of-silver.jpg",
       "sourceUrl": "https://music.apple.com/us/album/sound-of-silver/742432549?uo=4",
+      "catalogId": 742432549,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/sound-of-silver/742432549",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Get Innocuous!",
+          "duration": "7:12"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Time to Get Away",
+          "duration": "4:12"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "North American Scum",
+          "duration": "5:29"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Someone Great",
+          "duration": "6:30"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "All My Friends",
+          "duration": "7:42"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Us v Them",
+          "duration": "8:30"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Watch the Tapes",
+          "duration": "3:55"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Sound of Silver",
+          "duration": "7:07"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "New York, I Love You But You're Bringing Me Down",
+          "duration": "5:35"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1617,9 +2912,141 @@
       "title": "Songs in the Key of Life",
       "creator": "Stevie Wonder",
       "year": 1976,
-      "detail": "22 tracks",
+      "detail": "21 tracks",
       "cover": "images/library/album-songs-in-the-key-of-life.jpg",
       "sourceUrl": "https://music.apple.com/us/album/songs-in-the-key-of-life/1440788438?uo=4",
+      "catalogId": 1440788438,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/songs-in-the-key-of-life/1440788438",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Love's In Need of Love Today",
+          "duration": "7:06"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Have a Talk With God",
+          "duration": "2:42"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Village Ghetto Land",
+          "duration": "3:25"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Contusion",
+          "duration": "3:46"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Sir Duke",
+          "duration": "3:54"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "I Wish",
+          "duration": "4:12"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Knocks Me Off My Feet",
+          "duration": "3:36"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Pastime Paradise",
+          "duration": "3:28"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Summer Soft",
+          "duration": "4:14"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Ordinary Pain",
+          "duration": "6:23"
+        },
+        {
+          "number": 1,
+          "disc": 2,
+          "title": "Isn't She Lovely",
+          "duration": "6:34"
+        },
+        {
+          "number": 2,
+          "disc": 2,
+          "title": "Joy Inside My Tears",
+          "duration": "6:30"
+        },
+        {
+          "number": 3,
+          "disc": 2,
+          "title": "Black Man",
+          "duration": "8:31"
+        },
+        {
+          "number": 4,
+          "disc": 2,
+          "title": "Ngiculela-Es Una Historia-I Am Singing",
+          "duration": "3:49"
+        },
+        {
+          "number": 5,
+          "disc": 2,
+          "title": "If It's Magic",
+          "duration": "3:12"
+        },
+        {
+          "number": 6,
+          "disc": 2,
+          "title": "As",
+          "duration": "7:08"
+        },
+        {
+          "number": 7,
+          "disc": 2,
+          "title": "Another Star",
+          "duration": "8:25"
+        },
+        {
+          "number": 8,
+          "disc": 2,
+          "title": "Saturn",
+          "duration": "4:54"
+        },
+        {
+          "number": 9,
+          "disc": 2,
+          "title": "Ebony Eyes",
+          "duration": "4:10"
+        },
+        {
+          "number": 10,
+          "disc": 2,
+          "title": "All Day Sucker",
+          "duration": "5:06"
+        },
+        {
+          "number": 11,
+          "disc": 2,
+          "title": "Easy Goin' Evening (My Mama's Call)",
+          "duration": "4:05"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1658,6 +3085,84 @@
       "detail": "12 tracks",
       "cover": "images/library/album-the-crux.jpg",
       "sourceUrl": "https://music.apple.com/us/album/the-crux/1791184860?uo=4",
+      "catalogId": 1791184860,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/the-crux/1791184860",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Lonesome Is A State of Mind",
+          "duration": "4:20"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Basic Being Basic",
+          "duration": "2:38"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Link",
+          "duration": "3:15"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Potion",
+          "duration": "2:48"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Delete Ya",
+          "duration": "3:23"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Egg",
+          "duration": "4:36"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Fly",
+          "duration": "5:25"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Charlie's Garden",
+          "duration": "3:25"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Gap Tooth Smile",
+          "duration": "2:59"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Golden Line",
+          "duration": "3:22"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "Back On You",
+          "duration": "5:24"
+        },
+        {
+          "number": 12,
+          "disc": 1,
+          "title": "Crux",
+          "duration": "3:43"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1696,6 +3201,78 @@
       "detail": "11 tracks",
       "cover": "images/library/album-upstairs-at-erics.jpg",
       "sourceUrl": "https://music.apple.com/us/album/upstairs-at-erics/62442885?uo=4",
+      "catalogId": 62442885,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/upstairs-at-erics/62442885",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Don't Go",
+          "duration": "3:11"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Too Pieces",
+          "duration": "3:15"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Bad Connection",
+          "duration": "3:20"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "I Before E Except After C",
+          "duration": "4:43"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Midnight",
+          "duration": "4:22"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "In My Room",
+          "duration": "3:52"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Only You",
+          "duration": "3:16"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Goodbye Seventies",
+          "duration": "2:37"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Situation",
+          "duration": "5:47"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Winter Kills",
+          "duration": "4:05"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "Bring Your Love Down (Didn't I)",
+          "duration": "4:40"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1734,6 +3311,84 @@
       "detail": "12 tracks",
       "cover": "images/library/album-talon-of-the-hawk.jpg",
       "sourceUrl": "https://music.apple.com/us/album/talon-of-the-hawk/1518089263?uo=4",
+      "catalogId": 1518089263,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/talon-of-the-hawk/1518089263",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Au Revoir (Adios)",
+          "duration": "1:48"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Skeleton",
+          "duration": "3:35"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Swear To God the Devil Made Me Do It",
+          "duration": "3:32"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Twin Size Mattress",
+          "duration": "4:25"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Peach",
+          "duration": "3:06"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Santa Monica",
+          "duration": "4:08"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "The Feud",
+          "duration": "3:15"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Funny You Should Ask",
+          "duration": "3:34"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Tattooed Tears",
+          "duration": "3:51"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Lone Star",
+          "duration": "3:50"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "Backflip",
+          "duration": "3:45"
+        },
+        {
+          "number": 12,
+          "disc": 1,
+          "title": "Everything I Own",
+          "duration": "3:44"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1769,9 +3424,81 @@
       "title": "The Joshua Tree",
       "creator": "U2",
       "year": 1987,
-      "detail": "12 tracks",
+      "detail": "11 tracks",
       "cover": "images/library/album-the-joshua-tree.jpg",
       "sourceUrl": "https://music.apple.com/us/album/the-joshua-tree/1443155637?uo=4",
+      "catalogId": 1443155637,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/the-joshua-tree/1443155637",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Where the Streets Have No Name",
+          "duration": "5:38"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "I Still Haven't Found What I'm Looking For",
+          "duration": "4:37"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "With or Without You",
+          "duration": "4:56"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Bullet the Blue Sky",
+          "duration": "4:32"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Running to Stand Still",
+          "duration": "4:17"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Red Hill Mining Town",
+          "duration": "4:53"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "In God's Country",
+          "duration": "2:57"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Trip Through Your Wires",
+          "duration": "3:32"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "One Tree Hill",
+          "duration": "5:22"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Exit",
+          "duration": "4:13"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "Mothers of the Disappeared",
+          "duration": "5:14"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1810,6 +3537,78 @@
       "detail": "11 tracks",
       "cover": "images/library/album-charm.jpg",
       "sourceUrl": "https://music.apple.com/us/album/charm/1742301413?uo=4",
+      "catalogId": 1742301413,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/charm/1742301413",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Nomad",
+          "duration": "3:46"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Sexy to Someone",
+          "duration": "3:28"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Second Nature",
+          "duration": "3:47"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Slow Dance",
+          "duration": "3:55"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Thank You",
+          "duration": "3:25"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Terrapin",
+          "duration": "3:00"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Juna",
+          "duration": "3:15"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Add Up My Love",
+          "duration": "3:25"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Echo",
+          "duration": "3:50"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "Glory of the Snow",
+          "duration": "2:51"
+        },
+        {
+          "number": 11,
+          "disc": 1,
+          "title": "Pier 4",
+          "duration": "3:25"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1848,6 +3647,11 @@
       "detail": "Album",
       "cover": "images/library/album-jackson-square.jpg",
       "sourceUrl": "https://musicbrainz.org/release-group/649125e1-4479-3891-a430-b7a78337ec24",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1878,6 +3682,72 @@
       "detail": "10 tracks",
       "cover": "images/library/album-funeral.jpg",
       "sourceUrl": "https://music.apple.com/us/album/funeral/1249417623?uo=4",
+      "catalogId": 1249417623,
+      "listenEmbedUrl": "https://embed.music.apple.com/us/album/funeral/1249417623",
+      "tracks": [
+        {
+          "number": 1,
+          "disc": 1,
+          "title": "Neighborhood #1 (Tunnels)",
+          "duration": "4:48"
+        },
+        {
+          "number": 2,
+          "disc": 1,
+          "title": "Neighborhood #2 (Laika)",
+          "duration": "3:32"
+        },
+        {
+          "number": 3,
+          "disc": 1,
+          "title": "Une année sans lumière",
+          "duration": "3:41"
+        },
+        {
+          "number": 4,
+          "disc": 1,
+          "title": "Neighborhood #3 (Power Out)",
+          "duration": "5:13"
+        },
+        {
+          "number": 5,
+          "disc": 1,
+          "title": "Neighborhood #4 (7 Kettles)",
+          "duration": "4:50"
+        },
+        {
+          "number": 6,
+          "disc": 1,
+          "title": "Crown of Love",
+          "duration": "4:42"
+        },
+        {
+          "number": 7,
+          "disc": 1,
+          "title": "Wake Up",
+          "duration": "5:35"
+        },
+        {
+          "number": 8,
+          "disc": 1,
+          "title": "Haiti",
+          "duration": "4:07"
+        },
+        {
+          "number": 9,
+          "disc": 1,
+          "title": "Rebellion (Lies)",
+          "duration": "5:11"
+        },
+        {
+          "number": 10,
+          "disc": 1,
+          "title": "In the Backseat",
+          "duration": "6:20"
+        }
+      ],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Artist",
@@ -1916,6 +3786,11 @@
       "detail": "Film",
       "cover": "images/library/film-there-will-be-blood.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/There_Will_Be_Blood",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -1958,6 +3833,11 @@
       "detail": "Film",
       "cover": "images/library/film-in-the-mood-for-love.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/In_the_Mood_for_Love",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2000,6 +3880,11 @@
       "detail": "Film",
       "cover": "images/library/film-paris-texas-film.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Paris%2C_Texas_(film)",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2042,6 +3927,11 @@
       "detail": "Film",
       "cover": "images/library/film-burning-2018-film.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Burning_(2018_film)",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2084,6 +3974,11 @@
       "detail": "Film",
       "cover": "images/library/film-the-master-2012-film.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/The_Master_(2012_film)",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2126,6 +4021,11 @@
       "detail": "Film",
       "cover": "images/library/film-moonlight.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Moonlight",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2168,6 +4068,11 @@
       "detail": "Film",
       "cover": "images/library/film-chungking-express.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Chungking_Express",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2210,6 +4115,11 @@
       "detail": "Film",
       "cover": "images/library/film-first-reformed.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/First_Reformed",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2252,6 +4162,11 @@
       "detail": "Film",
       "cover": "images/library/film-ferris-buellers-day-off.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Ferris_Bueller's_Day_Off",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2294,6 +4209,11 @@
       "detail": "Film",
       "cover": "images/library/film-the-empire-strikes-back.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/The_Empire_Strikes_Back",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2336,6 +4256,11 @@
       "detail": "Film",
       "cover": "images/library/film-moonrise-kingdom.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Moonrise_Kingdom",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2378,6 +4303,11 @@
       "detail": "Film",
       "cover": "images/library/film-oceans-eleven.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Ocean's_Eleven",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2420,6 +4350,11 @@
       "detail": "Film",
       "cover": "images/library/film-mission-impossible-fallout.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Mission%3A_Impossible_%E2%80%93_Fallout",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2462,6 +4397,11 @@
       "detail": "Film",
       "cover": "images/library/film-kikis-delivery-service.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Kiki's_Delivery_Service",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2500,6 +4440,11 @@
       "detail": "Film",
       "cover": "images/library/film-la-la-land.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/La_La_Land",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2542,6 +4487,11 @@
       "detail": "Film",
       "cover": "images/library/film-treasure-planet.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Treasure_Planet",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2580,6 +4530,11 @@
       "detail": "Film",
       "cover": "images/library/film-a-goofy-movie.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/A_Goofy_Movie",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2614,6 +4569,11 @@
       "detail": "Film",
       "cover": "images/library/film-meet-the-robinsons.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Meet_the_Robinsons",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Director",
@@ -2649,9 +4609,14 @@
       "title": "99% Invisible",
       "creator": "Roman Mars",
       "year": 2026,
-      "detail": "824 tracks",
+      "detail": "826 tracks",
       "cover": "images/library/other-99-invisible.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/99-invisible/id394775318?uo=4",
+      "catalogId": 394775318,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Publisher",
@@ -2659,11 +4624,11 @@
         ],
         [
           "Released",
-          "2026-08-25"
+          "2026-08-28"
         ],
         [
           "Episodes",
-          824
+          826
         ],
         [
           "Genre",
@@ -2686,6 +4651,11 @@
       "detail": "687 tracks",
       "cover": "images/library/other-design-matters-with-debbie-millman.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/design-matters-with-debbie-millman/id328074695?uo=4",
+      "catalogId": 328074695,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Publisher",
@@ -2720,6 +4690,11 @@
       "detail": "374 tracks",
       "cover": "images/library/other-song-exploder.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/song-exploder/id788236947?uo=4",
+      "catalogId": 788236947,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Publisher",
@@ -2754,6 +4729,11 @@
       "detail": "974 tracks",
       "cover": "images/library/other-the-rest-is-history.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/the-rest-is-history/id1537788786?uo=4",
+      "catalogId": 1537788786,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Publisher",
@@ -2785,9 +4765,14 @@
       "title": "The Big Picture",
       "creator": "The Ringer",
       "year": 2026,
-      "detail": "962 tracks",
+      "detail": "963 tracks",
       "cover": "images/library/other-the-big-picture.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/the-big-picture/id1439252196?uo=4",
+      "catalogId": 1439252196,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Publisher",
@@ -2799,7 +4784,7 @@
         ],
         [
           "Episodes",
-          962
+          963
         ],
         [
           "Genre",
@@ -2822,6 +4807,11 @@
       "detail": "367 tracks",
       "cover": "images/library/other-radio-ambulante.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/radio-ambulante/id527614348?uo=4",
+      "catalogId": 527614348,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Publisher",
@@ -2856,6 +4846,11 @@
       "detail": "37 tracks",
       "cover": "images/library/other-the-anthropocene-reviewed.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/the-anthropocene-reviewed/id1342003491?uo=4",
+      "catalogId": 1342003491,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Publisher",
@@ -2890,6 +4885,11 @@
       "detail": "842 tracks",
       "cover": "images/library/other-my-brother-my-brother-and-me.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/my-brother-my-brother-and-me/id367330921?uo=4",
+      "catalogId": 367330921,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Publisher",
@@ -2924,6 +4924,11 @@
       "detail": "417 tracks",
       "cover": "images/library/other-the-adventure-zone.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/the-adventure-zone/id947899573?uo=4",
+      "catalogId": 947899573,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Publisher",
@@ -2958,6 +4963,11 @@
       "detail": "516 tracks",
       "cover": "images/library/other-wonderful.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/wonderful/id1078467060?uo=4",
+      "catalogId": 1078467060,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Publisher",
@@ -2989,9 +4999,14 @@
       "title": "The Besties",
       "creator": "Russ Frushtick, Chris Plante, Griffin McElroy, Justin McElroy",
       "year": 2026,
-      "detail": "514 tracks",
+      "detail": "515 tracks",
       "cover": "images/library/other-the-besties.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/the-besties/id505516789?uo=4",
+      "catalogId": 505516789,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Publisher",
@@ -2999,11 +5014,11 @@
         ],
         [
           "Released",
-          "2026-08-07"
+          "2026-08-21"
         ],
         [
           "Episodes",
-          514
+          515
         ],
         [
           "Genre",
@@ -3026,6 +5041,11 @@
       "detail": "220 tracks",
       "cover": "images/library/other-revisionist-history.jpg",
       "sourceUrl": "https://podcasts.apple.com/us/podcast/revisionist-history-the-staten-island-problem/id1119389968?uo=4",
+      "catalogId": 1119389968,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
       "facts": [
         [
           "Publisher",

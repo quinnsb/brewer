@@ -15,7 +15,7 @@ export function mergeItem(raw, noteText, hasOverrideCover) {
     year: data.year ?? raw.year,
     starred: data.starred === true,
     rating: data.rating ?? raw.rating ?? null,
-    finished: data.finished ?? null,
+    finished: data.finished ?? raw.finished ?? null,
     reviewHtml: html || null,
   };
   if (hasOverrideCover) merged.cover = `images/library/overrides/${raw.id}.jpg`;
