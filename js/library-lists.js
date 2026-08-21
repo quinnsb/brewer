@@ -3,6 +3,10 @@
 
 import { wireExpansion } from "./library.js?v=library-detail1";
 
+/* Revalidated on every load (see the fetch below) rather than trusted from
+   cache, because this file is rewritten by every `node tools/library-build.mjs`
+   run and the version below only moves when someone remembers to move it. The
+   cost is one conditional request that normally answers 304. */
 const DATA_URL = "data/library.json?v=library-detail1";
 
 const PAGE = {
@@ -297,7 +301,7 @@ function renderCatalog(media) {
 }
 
 async function main() {
-  const response = await fetch(DATA_URL);
+  const response = await fetch(DATA_URL, { cache: "no-cache" });
   if (!response.ok) throw new Error(`Could not load catalog: ${response.status}`);
   const { items } = await response.json();
   const media = items.filter((item) => item.type === type);

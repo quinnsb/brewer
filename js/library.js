@@ -8,6 +8,10 @@
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
 
+/* Revalidated on every load (see the fetch below) rather than trusted from
+   cache, because this file is rewritten by every `node tools/library-build.mjs`
+   run and the version below only moves when someone remembers to move it. The
+   cost is one conditional request that normally answers 304. */
 const DATA_URL = "data/library.json?v=library-detail1";
 
 const TYPE_LABEL = {
@@ -1035,7 +1039,7 @@ export function openItem(id) {
 }
 
 async function main() {
-  const { items } = await (await fetch(DATA_URL)).json();
+  const { items } = await (await fetch(DATA_URL, { cache: "no-cache" })).json();
   const root = document.getElementById("shelves");
   renderShelves(items, root);
   wireExpansion(items, root);
