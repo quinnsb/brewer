@@ -84,6 +84,7 @@ body.library a { color: inherit; }
 }
 .hero-line .slot {
   position: relative; display: flex; justify-content: center;
+  height: 1.12em;
   margin-top: 0.06em;
   color: var(--hero-verb); white-space: nowrap;
 }
@@ -97,10 +98,12 @@ body.library a { color: inherit; }
 .hero-line.is-in .slot { opacity: 1; transform: none; filter: blur(0); }
 .hero-line.is-in .slot { transition-delay: 0.2s; }
 
-.word { display: inline-flex; }
-/* Centred, not left-pinned: the outgoing word leaves the flow so the
-   incoming one owns the width immediately, and both stay centred. */
-.word.out { position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
+/* The slot owns the permanent third-row geometry. Every word animates in
+   that reserved layer, so the headline cannot collapse between swaps. */
+.word {
+  position: absolute; top: 0; left: 50%;
+  display: inline-flex; transform: translateX(-50%);
+}
 .mask { display: inline-block; overflow: hidden; padding-bottom: 0.14em; }
 .mask .ch {
   display: inline-block; white-space: pre;
