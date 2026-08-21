@@ -730,20 +730,20 @@ body.library-menu-open .library-menu-links a { opacity: 1; transform: none; }
 }
 .list-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
-  gap: clamp(42px, 5vw, 72px) clamp(18px, 2.2vw, 32px);
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(82px, 10vw, 138px);
   width: 100%; min-width: 0;
 }
 .list-card {
-  min-width: 0; padding: 0; background: transparent;
+  width: 100%; min-width: 0; padding: 0; background: transparent;
 }
 .list-card-preview {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 6px; aspect-ratio: 1.46; overflow: hidden;
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: end; gap: clamp(8px, 1.2vw, 18px);
+  width: 100%; overflow: visible;
 }
 .list-card-preview img {
-  display: block; width: 100%; height: 100%; min-width: 0;
+  display: block; width: 100%; height: auto; min-width: 0;
   object-fit: cover; border-radius: 2px;
   filter: saturate(0.93); transition: filter 0.22s ease, transform 0.3s var(--ease);
 }
@@ -751,16 +751,20 @@ body.library-menu-open .library-menu-links a { opacity: 1; transform: none; }
 .list-card:hover .list-card-preview img:nth-child(2n) { transform: translateY(-3px); }
 .list-card-body {
   display: flex; align-items: flex-end; justify-content: space-between; gap: 20px;
-  padding-top: 17px; border-top: 1px solid var(--lib-line); margin-top: 12px;
+  padding-top: 12px; border-top: 1px solid var(--lib-line); margin: 0 0 22px;
 }
 .list-card h3 {
-  max-width: 12ch; margin: 0; font-family: "Aeonik", system-ui, sans-serif;
+  max-width: 18ch; margin: 0; font-family: "Aeonik", system-ui, sans-serif;
   font-size: clamp(28px, 3vw, 42px); line-height: 0.94; letter-spacing: -0.03em;
 }
 .list-card p {
   flex: 0 0 auto; margin: 0 0 2px; color: var(--lib-faint);
   font-family: "Space Mono", ui-monospace, monospace;
   font-size: 8px; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .list-card-preview { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 720px) {
@@ -779,6 +783,10 @@ body.library-menu-open .library-menu-links a { opacity: 1; transform: none; }
   .list-page-intro { min-height: 58vh; margin-bottom: 100px; }
   .list-page-intro h1 { font-size: clamp(62px, 20vw, 96px); }
   .list-card-body { align-items: flex-start; flex-direction: column; gap: 12px; }
+}
+
+@media (max-width: 520px) {
+  .list-card-preview { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-height: 600px) and (max-width: 900px) {

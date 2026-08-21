@@ -60,6 +60,7 @@ function preview(items, offset) {
     img.alt = "";
     img.loading = "lazy";
     img.draggable = false;
+    img.style.aspectRatio = String(item.aspect || 1);
     frame.append(img);
   }
 
@@ -69,7 +70,6 @@ function preview(items, offset) {
 function listCard(title, items, index) {
   const card = document.createElement("article");
   card.className = "list-card";
-  card.append(preview(items, index * 4));
 
   const body = document.createElement("div");
   body.className = "list-card-body";
@@ -79,7 +79,7 @@ function listCard(title, items, index) {
   const status = document.createElement("p");
   status.textContent = "List coming later";
   body.append(heading, status);
-  card.append(body);
+  card.append(body, preview(items, index * 4));
   return card;
 }
 
