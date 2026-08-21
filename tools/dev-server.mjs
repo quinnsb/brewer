@@ -72,7 +72,15 @@ async function serveFile(req, res, pathname) {
 await loadEnv(ROOT);
 
 createServer(async (req, res) => {
-  const { pathname } = new URL(req.url, `http://${req.headers.host || "localhost"}`);
+  /* A request line the URL parser refuses, "//" being the easy one, used to
+     throw out here and take the whole server down with it. A dev server should
+     answer 400 and keep running. */
+  let pathname;
+  try {
+    ({ pathname } = new URL(req.url, `http://${req.headers.host || "localhost"}`));
+  } catch {
+    return send(res, 400, `Cannot parse ${req.url}`);
+  }
   if (pathname.startsWith("/api/")) return serveApi(req, res, pathname.slice(5).replace(/\/+$/, ""));
   return serveFile(req, res, pathname);
 }).listen(PORT, () => {

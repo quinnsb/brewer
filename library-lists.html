@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/library.css?v=library-detail1" />
+  <link rel="stylesheet" href="css/site-menu.css?v=1" />
+  <link rel="stylesheet" href="css/library.css?v=library-detail2" />
 </head>
 <body id="top" class="library library-lists">
   <button
@@ -18,26 +19,17 @@
     aria-label="Turn album sound off"
     data-sound-toggle
   ></button>
-  <button
-    class="library-menu-trigger"
-    type="button"
-    aria-label="Open menu"
-    aria-controls="library-menu"
-    aria-expanded="false"
-    data-menu-trigger
-  >Menu</button>
-  <div class="library-menu-scrim" data-menu-close aria-hidden="true"></div>
-  <nav id="library-menu" class="library-menu-dock" aria-label="Main menu" aria-hidden="true" inert>
-    <div class="library-menu-head">
-      <span>Navigation</span>
-      <button class="library-menu-close" type="button" data-menu-close>Close</button>
-    </div>
-    <div class="library-menu-links">
-      <a href="./">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="work.html">Work</a>
-      <a href="contact.html">Let's Talk</a>
-    </div>
+  <button class="menu-btn" aria-label="Open menu">Menu</button>
+  <div class="menu-bar">
+    <a class="menu-bar-logo" href="./" aria-label="Quinn Brewer home"></a>
+    <button class="menu-btn" aria-label="Open menu">Menu</button>
+  </div>
+  <nav class="menu-dock" aria-label="Main menu">
+    <a href="about.html">About Me</a>
+    <a href="work.html">Work</a>
+    <a href="library.html">Library</a>
+    <a href="contact.html">Let's Talk</a>
+    <button class="menu-close">Close</button>
   </nav>
 
   <main id="main" class="list-page-main">
@@ -116,7 +108,7 @@
     <div class="footer-legal"><p>&copy; QUINN BREWER 2026 | <a href="index.html">Home</a> | <a href="about.html">About Me</a> | <a href="work.html">Work</a> | <a href="contact.html">Let's Talk</a> | <a href="privacy.html">Privacy Policy</a></p></div>
   </footer>
 
-  <script src="js/library-chrome.js?v=menu3"></script>
-  <script type="module" src="js/library-lists.js?v=library-detail1"></script>
+  <script src="js/site-menu.js?v=1"></script>
+  <script type="module" src="js/library-lists.js?v=library-detail2"></script>
 </body>
 </html>

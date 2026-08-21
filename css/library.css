@@ -253,11 +253,6 @@ html.reduce-motion .tile,
 html.reduce-motion .media-detail-layer,
 html.reduce-motion .media-detail-morph,
 html.reduce-motion .media-detail-copy,
-html.reduce-motion .library-menu-trigger,
-html.reduce-motion .library-menu-scrim,
-html.reduce-motion .library-menu-dock,
-html.reduce-motion .library-menu-dock a,
-html.reduce-motion .library-menu-dock button,
 html.reduce-motion .socials a { transition: none; }
 html.reduce-motion .hero-line .stem,
 html.reduce-motion .hero-line .slot { opacity: 1; transform: none; filter: none; transition: none; }
@@ -723,7 +718,7 @@ html.reduce-motion .media-detail-art { transition: none; }
 /* The label is for the pointer; the icon carries it on a phone, where there is
    no room for both this and the menu. */
 @media (max-width: 620px) { .sound-toggle .sound-toggle-text { display: none; } }
-body.library-menu-open .sound-toggle { opacity: 0; pointer-events: none; }
+body.menu-open .sound-toggle { opacity: 0; pointer-events: none; }
 
 .spotify-host { min-height: 152px; }
 
@@ -750,108 +745,8 @@ body.library-menu-open .sound-toggle { opacity: 0; pointer-events: none; }
 .spotify-host iframe,
 .spotify-host > div { width: 100%; border: 0; border-radius: 12px; }
 
-/* The same bottom-left pill the rest of the site uses, in the same geometry and
-   with the same hover: cream fill, corners morphing wider, a small scale. It
-   used to be a bare mono label in the top right, which is the one bit of
-   chrome that did not look like the site it belongs to. */
-.library-menu-trigger {
-  position: fixed; bottom: 34px; left: var(--gutter); z-index: 86;
-  display: inline-flex; align-items: center; gap: 10px;
-  min-height: 48px; padding: 14px 30px;
-  border: 0; border-radius: 0.6em;
-  background: var(--lib-fg); color: var(--lib-bg);
-  cursor: pointer;
-  font-family: "Degular", system-ui, sans-serif; font-weight: 500;
-  font-size: 17px; letter-spacing: -0.01em;
-  box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.9);
-  transition:
-    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
-    border-radius 0.35s cubic-bezier(0.65, 0, 0.35, 1),
-    opacity 0.25s ease;
-}
-.library-menu-trigger:hover { transform: scale(1.04); border-radius: 1.4em; }
-.library-menu-trigger:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 3px; }
-/* Handing off to Close as the dock sweeps up, the way the main site does. */
-body.library-menu-open .library-menu-trigger { opacity: 0; transform: translateY(10px); pointer-events: none; }
-body.library-menu-open { overflow: hidden; }
-
-/* Nothing should end up underneath the pill. */
-.shelves { padding-bottom: 132px; }
-@media (max-width: 620px) { .library-menu-trigger { bottom: 18px; padding: 12px 24px; font-size: 15px; } }
-html.reduce-motion .library-menu-trigger { transition: opacity 0.2s ease; }
-html.reduce-motion .library-menu-trigger:hover { transform: none; }
-
-.library-menu-scrim {
-  position: fixed; inset: 0; z-index: 84; pointer-events: none;
-  background: rgba(11, 11, 12, 0.5); opacity: 0;
-  transition: opacity 0.24s ease;
-}
-body.library-menu-open .library-menu-scrim { opacity: 1; pointer-events: auto; }
-
-.library-menu-dock {
-  position: fixed; bottom: 24px; left: max(12px, calc(var(--gutter) - 8px)); z-index: 90;
-  width: min(390px, calc(100vw - 24px)); padding: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 18px;
-  background: rgba(30, 29, 28, 0.97); color: var(--site-cream);
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.42);
-  opacity: 0; pointer-events: none;
-  /* Rises from where the pill is, matching the main site's sweep. */
-  transform: translateY(14px) scale(0.98); transform-origin: bottom left;
-  transition: opacity 0.2s ease, transform 0.28s var(--ease);
-}
-body.library-menu-open .library-menu-dock { opacity: 1; pointer-events: auto; transform: none; }
-.library-menu-head {
-  display: flex; align-items: center; justify-content: space-between;
-  min-height: 40px; padding: 0 4px 10px 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
-}
-.library-menu-head > span {
-  color: rgba(255, 249, 238, 0.52);
-  font-family: "Space Mono", ui-monospace, monospace;
-  font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
-}
-.library-menu-close {
-  min-width: 44px; min-height: 44px; padding: 0 10px;
-  border: 0; border-radius: 999px; background: transparent;
-  color: rgba(255, 249, 238, 0.72); cursor: pointer;
-  font-family: "Space Mono", ui-monospace, monospace;
-  font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em;
-  transition: color 0.18s ease, background 0.18s ease;
-}
-.library-menu-close:hover { color: var(--site-cream); background: rgba(255, 255, 255, 0.08); }
-.library-menu-links { counter-reset: menu-item; }
-.library-menu-links a {
-  counter-increment: menu-item;
-  position: relative; display: grid; grid-template-columns: 34px 1fr auto; align-items: center;
-  min-height: 72px; padding: 0 12px 0 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--site-cream); text-decoration: none;
-  font-family: "Degular", system-ui, sans-serif; font-weight: 500;
-  font-size: clamp(30px, 3vw, 40px); line-height: 0.95; letter-spacing: -0.02em;
-  opacity: 0; transform: translateY(6px);
-  transition: opacity 0.22s ease var(--dock-delay, 0s), transform 0.3s var(--ease) var(--dock-delay, 0s), background 0.18s ease, color 0.18s ease;
-}
-.library-menu-links a:last-child { border-bottom: 0; }
-.library-menu-links a::before {
-  content: "0" counter(menu-item);
-  font-family: "Space Mono", ui-monospace, monospace;
-  font-size: 9px; letter-spacing: 0.06em; color: var(--hero-verb);
-}
-.library-menu-links a::after {
-  content: "\2197"; font-family: system-ui, sans-serif; font-size: 17px; font-weight: 400;
-  opacity: 0.38; transform: translate(-2px, 2px);
-  transition: opacity 0.18s ease, transform 0.22s var(--ease);
-}
-.library-menu-links a:nth-child(2)::before { color: var(--site-lavender); }
-.library-menu-links a:nth-child(3)::before { color: var(--lib-accent); }
-.library-menu-links a:nth-child(4)::before { color: #8ed66f; }
-body.library-menu-open .library-menu-links a { opacity: 1; transform: none; }
-.library-menu-links a:hover { background: rgba(255, 255, 255, 0.075); color: var(--hero-verb); }
-.library-menu-links a:hover::after { opacity: 1; transform: translate(1px, -1px); }
-.library-menu-dock a:focus-visible,
-.library-menu-dock button:focus-visible {
-  outline: 2px solid var(--hero-verb); outline-offset: -2px;
-}
+/* The menu itself lives in css/site-menu.css, shared with every other page.
+   The library used to carry its own, which is exactly why it looked different. */
 
 /* ---------- shared site footer ---------- */
 
@@ -1142,10 +1037,6 @@ body.library-menu-open .library-menu-links a { opacity: 1; transform: none; }
 @media (max-width: 720px) {
   .hero-inner { width: min(86vw, 540px); }
   .hero-line { font-size: clamp(27px, 7.5vw, 34px); }
-  .library-menu-dock {
-    top: 10px; right: 10px; width: calc(100vw - 20px); padding: 12px;
-  }
-  .library-menu-links a { min-height: 66px; font-size: 32px; }
   .footer-brand { flex-direction: column-reverse; align-items: center; gap: 64px; }
   .giant-wordmark { width: min(88vw, 400px); }
   .footer-side { width: 100%; }
@@ -1170,8 +1061,7 @@ body.library-menu-open .library-menu-links a { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .library-menu-trigger, .library-menu-scrim, .library-menu-dock,
-  .library-menu-dock a, .library-menu-dock button, .socials a { transition: none; }
+  .socials a { transition: none; }
   .hcard:hover .hcard-media, .hcard:focus-visible .hcard-media { transform: none; }
   .list-preview-trigger img { transition: none; }
   .list-card:hover .list-preview-trigger:nth-child(2n) img { transform: none; }

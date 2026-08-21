@@ -1,0 +1,256 @@
+/* ============================================================
+   SITE MENU — the one menu, on every page
+
+   Lifted out of styles.css so the library pages can load exactly this rather
+   than approximating it. styles.css imports it, so every page that already had
+   a menu keeps one with no markup change; library.css's pages link it directly.
+
+   Every palette value is written as var(--x, fallback) for that reason: on the
+   main site the theme's own tokens win, and on a page that never loads
+   styles.css the fallbacks stand in.
+   ============================================================ */
+
+/* menu pill */
+.menu-btn {
+  position: fixed;
+  bottom: 34px;
+  left: var(--page-edge, clamp(30px, 3.2vw, 62px));
+  z-index: 80;
+  border: 0;
+  cursor: pointer;
+  background: var(--cream, #f1ece3);
+  color: var(--ink, #1e1c19);
+  font-family: var(--sans, "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif);
+  font-weight: 500;
+  font-size: 17px;
+  padding: 16px 28px;
+  border-radius: 0.6em; /* rounded rect, matches the dock buttons */
+  transition: transform 0.25s, opacity 0.3s;
+}
+.menu-btn:hover { transform: scale(1.06); }
+/* on open: drift right as the dock sweeps in behind, handing off to Close */
+body.menu-open .menu-btn { opacity: 0; transform: translateX(16px); pointer-events: none; }
+/* stay hidden while the close sweep plays; fade back once it finishes */
+body.menu-closing .menu-btn { opacity: 0; pointer-events: none; }
+.menu-btn.near-footer {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* mobile bottom chrome bar — shown ≤620px, replaces the standalone pill */
+.menu-bar {
+  position: fixed;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 80;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--cream, #f1ece3);
+  border-radius: 999px;
+  padding: 9px 10px 9px 20px;
+  transition: opacity 0.3s, transform 0.25s;
+}
+.menu-bar-logo {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-color: currentColor;
+  -webkit-mask: url("../images/mainlogoicon.png") center / contain no-repeat;
+  mask: url("../images/mainlogoicon.png") center / contain no-repeat;
+  color: var(--ink, #1e1c19);
+}
+.menu-bar .menu-btn {
+  position: static;
+  background: var(--ink, #1e1c19);
+  color: var(--cream, #f1ece3);
+  font-size: 16px;
+  padding: 13px 28px;
+  border-radius: 999px; /* stays a full pill inside the bar */
+}
+body.menu-open .menu-bar,
+.menu-bar.near-footer {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* menu dock — rounded-rectangle buttons, bottom-left, touching on desktop */
+.menu-dock {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 90;
+  padding: 34px var(--page-edge, clamp(30px, 3.2vw, 62px)); /* matches .menu-btn's bottom/left so Close lands where Menu was */
+  display: flex;
+  align-items: flex-end; /* bottom-justify, so the Menu-sized Close sits on the baseline */
+  gap: 0;
+  column-gap: 0;
+  max-width: 100%;
+  transform: translateY(130%);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+body.menu-open .menu-dock { transform: translateY(0); }
+
+.menu-dock a,
+.menu-dock button {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  background: var(--cream, #f1ece3);
+  color: var(--ink, #1e1c19);
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--sans, "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif);
+  font-weight: 500;
+  font-size: clamp(24px, 2.3vw, 38px);
+  letter-spacing: -0.01em;
+  height: clamp(70px, 6.6vw, 98px);
+  padding: 0 clamp(30px, 3vw, 56px);
+  border-radius: 0.7em; /* rounded rectangle, not a pill */
+  /* intro: nudged left — clears left-to-right on open */
+  opacity: 0;
+  transform: translateX(-26px);
+  transition:
+    color 0.3s ease,
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.45s ease,
+    border-radius 0.8s cubic-bezier(0.65, 0, 0.35, 1) var(--rd, 0s);
+}
+/* cream background that slides up from the bottom on hover (behind the label) */
+.menu-dock a::before,
+.menu-dock button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--cream, #f1ece3);
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.menu-dock a:hover::before,
+.menu-dock button:hover::before { transform: translateY(0); }
+
+/* corner-radius morph on hover, staggered across the row */
+.menu-dock a:hover,
+.menu-dock button:hover { border-radius: 1em; }
+.menu-dock > :nth-child(1) { --rd: 0s; }
+.menu-dock > :nth-child(2) { --rd: 0.1s; }
+.menu-dock > :nth-child(3) { --rd: 0.2s; }
+.menu-dock > :nth-child(4) { --rd: 0.3s; }
+.menu-dock > :nth-child(5) { --rd: 0.4s; }
+
+/* colored buttons */
+.menu-dock a:nth-child(1) { background: var(--blurple, #4a4de6); color: var(--cream, #f1ece3); }
+.menu-dock a:nth-child(2) { background: var(--yellow, #f5b301); color: var(--ink, #1e1c19); }
+.menu-dock a:nth-child(3) { background: var(--orange, #e8531c); color: var(--ink, #1e1c19); }
+.menu-dock a:nth-child(4) { background: var(--green, #1b9e57); color: var(--cream, #f1ece3); }
+.menu-dock .menu-close { background: var(--cream, #f1ece3); color: var(--ink, #1e1c19); }
+
+/* Close: twin of the Menu pill, bottom-aligned via the dock's flex-end */
+.menu-dock .menu-close {
+  height: auto;
+  padding: 16px 28px;
+  font-size: 17px;
+  border-radius: 0.6em;
+}
+
+/* hover: text goes dark on the cream fill (must beat the colored-button rules) */
+.menu-dock a:nth-child(1):hover,
+.menu-dock a:nth-child(2):hover,
+.menu-dock a:nth-child(3):hover,
+.menu-dock a:nth-child(4):hover,
+.menu-dock button:hover { color: var(--ink, #1e1c19); }
+
+body.menu-open .menu-dock a,
+body.menu-open .menu-dock button {
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0s),
+    opacity 0.5s ease var(--d, 0s),
+    color 0.3s ease,
+    border-radius 0.8s cubic-bezier(0.65, 0, 0.35, 1) var(--rd, 0s);
+}
+
+/* closing: dock holds position while the pills sweep back out (reverse
+   stagger via --dout, set in JS), then the dock drops once the class clears */
+body.menu-closing .menu-dock {
+  transform: translateY(0);
+  pointer-events: none;
+}
+body.menu-closing .menu-dock a,
+body.menu-closing .menu-dock button {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1) var(--dout, 0s),
+    opacity 0.4s ease var(--dout, 0s);
+}
+
+/* ---------- the palette the site actually shows ----------
+
+   Every real page carries the carnival theme, so these are its menu colours,
+   written as the theme's own tokens with its values as fallbacks. On a themed
+   page the tokens win and nothing changes; on a page that does not load the
+   theme, the library being the one that matters, the fallbacks give the
+   identical menu. Matching by fallback rather than by copying a palette means
+   there is still one place to change it. */
+.menu-btn,
+.menu-bar { background: var(--t-ink, #eae7e0); color: var(--t-ground, #1e1e20); }
+.menu-bar-logo { color: var(--t-ground, #1e1e20); }
+.menu-bar .menu-btn { background: var(--t-brown, #51381d); color: var(--t-brown-on, #f2b5cd); }
+.menu-dock a:nth-child(1) { background: var(--t-a3, #1ba1e9); color: var(--t-a3-on, #16233f); }
+.menu-dock a:nth-child(2) { background: var(--t-a2, #f5e23c); color: var(--t-a2-on, #5a4a1f); }
+.menu-dock a:nth-child(3) { background: var(--t-a1, #f5414b); color: var(--t-a1-on, #470a1d); }
+.menu-dock a:nth-child(4) { background: var(--t-graphic, #9fe39a); color: var(--t-graphic-on, #0c5a2f); }
+.menu-dock .menu-close { background: var(--t-ink, #eae7e0); color: var(--t-ground, #1e1e20); }
+.menu-dock .menu-close::before { background: var(--t-a1, #f5414b); }
+
+/* ---------- responsive ----------
+   Moved here from styles.css with the rest of the component, or the library
+   pages would have had a desktop-only menu. */
+@media (max-width: 900px) {
+  .menu-dock { gap: 0; padding: 20px; }
+  .menu-dock a,
+  .menu-dock button { height: 54px; padding: 0 22px; font-size: 19px; }
+  .menu-btn { bottom: 20px; left: 20px; }
+}
+
+/* Full-screen takeover, and the standalone pill hands off to the bottom bar. */
+@media (max-width: 620px) {
+  .menu-dock {
+    inset: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 24px;
+    /* --bg is the main site's page colour; the fallback is the library's, so
+       the takeover does not turn transparent on a page without it. */
+    background: var(--bg, #0b0b0c);
+    transform: translateY(103%);
+  }
+  .menu-dock a,
+  .menu-dock button {
+    width: min(76vw, 330px);
+    height: 74px;
+    padding: 0;
+    font-size: 30px;
+    border-radius: 26px;
+  }
+  .menu-dock .menu-close {
+    width: auto;
+    min-width: 170px;
+    height: 52px;
+    padding: 0 30px;
+    font-size: 19px;
+    margin-top: 10px;
+    border-radius: 20px;
+  }
+  .menu-btn { display: none; }
+  .menu-bar { display: flex; }
+  .menu-bar .menu-btn { display: block; }
+}
