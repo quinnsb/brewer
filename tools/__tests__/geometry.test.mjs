@@ -38,6 +38,13 @@ test("every circle position sits exactly on the radius", () => {
   }
 });
 
+test("circle offset rotates the ring without changing its radius", () => {
+  const p = circlePosition(0, 8, 80, 90);
+  close(p.x, 0, 1e-9);
+  close(p.y, 80, 1e-9);
+  close(Math.hypot(p.x, p.y), 80, 1e-9);
+});
+
 test("arc is symmetric about its apex with no offset", () => {
   const opts = { radius: 500, centerY: 600, spread: 130, offset: 0 };
   const first = arcPosition(0, 5, opts);

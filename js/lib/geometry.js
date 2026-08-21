@@ -13,8 +13,8 @@ export const spineHeight = (item) => Math.round(212 + item.height * 74);
 
 const RAD = Math.PI / 180;
 
-export function circlePosition(i, total, radius) {
-  const deg = (i / total) * 360;
+export function circlePosition(i, total, radius, offset = 0) {
+  const deg = (i / total) * 360 + offset;
   const rad = deg * RAD;
   return { x: Math.cos(rad) * radius, y: Math.sin(rad) * radius, rotation: deg + 90 };
 }

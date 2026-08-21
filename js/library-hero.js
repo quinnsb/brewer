@@ -10,8 +10,8 @@
    viewport instead, so keyboard, trackpad, and touch all work untouched.
    ============================================================ */
 
-import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js";
-import { openItem } from "./library.js?v=unique-albums1";
+import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js?v=hero-orbit2";
+import { openItem } from "./library.js?v=hero-orbit2";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||
@@ -19,6 +19,7 @@ const REDUCED =
 /* Keep in step with --card in css/library.css. */
 const CARD = 72;
 const VERBS = ["read", "listen to", "watch"];
+const ORBIT_DEGREES_PER_SECOND = 3;
 
 function card(item) {
   const btn = document.createElement("button");
@@ -209,12 +210,20 @@ export function initHero(items) {
   const progress = () => (REDUCED ? 1 : Math.min(Math.max(scrollY / innerHeight, 0), 1));
 
   let last = performance.now();
+  let orbitAngle = 0;
   function frame(now) {
     const dt = Math.min((now - last) / 1000, 1 / 30);
     last = now;
 
     const g = geom();
     const p = progress();
+    /* Once the opening choreography has settled, the album ring makes one
+       unhurried turn every two minutes. The first scroll freezes its current
+       angle, so the circle-to-arc morph begins from the exact visible state
+       instead of snapping the covers back to their original slots. */
+    if (!REDUCED && phase === "circle" && p < 0.001) {
+      orbitAngle = (orbitAngle + ORBIT_DEGREES_PER_SECOND * dt) % 360;
+    }
     const scrollParallaxY = REDUCED ? 0 : -p * g.parallaxTravel;
     const release = REDUCED ? 0 : Math.min(Math.max((p - 0.7) / 0.3, 0), 1);
     const easedRelease = release * release * (3 - 2 * release);
@@ -251,7 +260,7 @@ export function initHero(items) {
           y: 0, rotation: 0, scale: 1, opacity: 1,
         };
       } else {
-        const c = circlePosition(layoutIndex, layoutTotal, g.circleR);
+        const c = circlePosition(layoutIndex, layoutTotal, g.circleR, orbitAngle);
         const a = arcPosition(layoutIndex, layoutTotal, {
           radius: g.arcR,
           centerY: g.apexY + g.arcR,

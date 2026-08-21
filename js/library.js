@@ -6,7 +6,7 @@
    coverflow, posters sit in a rack, and podcasts are flat art.
    ============================================================ */
 
-import { spineHeight as coverHeight } from "./lib/geometry.js";
+import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
 
 const DATA_URL = "data/library.json?v=unique-albums1";
 
@@ -513,7 +513,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=unique-albums1");
+  const { initHero } = await import("./library-hero.js?v=hero-orbit2");
   initHero(items);
 }
 
