@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
-import { itemWithNote, buildNote } from "../../api/lib/apply-note.mjs";
+import { itemWithNote, buildNote } from "../../lib/apply-note.mjs";
 import { mergeItem } from "../lib/merge.mjs";
 import { applyTaxonomy } from "../lib/taxonomy.mjs";
 import { applyListening } from "../lib/listening.mjs";

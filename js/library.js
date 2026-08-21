@@ -7,14 +7,14 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
-import { playAlbum, stop as stopSound, soundOn } from "./library-sound.js?v=library-detail1";
+import { playAlbum, stop as stopSound, soundOn } from "./library-sound.js?v=library-detail2";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail1";
-const SOURCES_URL = "data/library-sources.json?v=library-detail1";
+const DATA_URL = "data/library.json?v=library-detail2";
+const SOURCES_URL = "data/library-sources.json?v=library-detail2";
 
 /* Which outside profile belongs beside which shelf. Podcasts have no single
    home worth linking to, so they get none rather than a token one. */
@@ -33,6 +33,32 @@ const LIST_LINK = {
   film: ["See all film lists", "film"],
   other: ["See all podcast lists", "other"],
 };
+
+/* The platforms' own marks, as single-path logos, used to link out to each
+   platform. Built with createElementNS: `el` reaches for createElement, which
+   makes an HTML element called "svg" that renders nothing, which is how the
+   first attempt at these came out blank.
+
+   The paths are the canonical ones rather than traced by hand, because a logo
+   drawn from memory is a wrong logo. */
+const SOURCE_MARK = {
+  goodreads: "M17.346.026c.422-.083.859.037 1.179.325.346.284.55.705.557 1.153-.023.457-.247.88-.612 1.156l-2.182 1.748a.601.601 0 0 0-.255.43.52.52 0 0 0 .11.424 5.886 5.886 0 0 1 .832 6.58c-1.394 2.79-4.503 3.99-7.501 2.927a.792.792 0 0 0-.499-.01c-.224.07-.303.18-.453.383l-.014.02-.941 1.254s-.792.985.457.935c3.027-.119 3.817-.119 5.439-.01 2.641.18 3.806 1.903 3.806 3.275 0 1.623-1.036 3.383-3.809 3.383a117.46 117.46 0 0 0-5.517-.03c-.31.005-.597.013-.835.02-.228.006-.41.011-.52.011-.712 0-1.648-.186-1.66-1.068-.008-.729.624-1.12 1.11-1.172.43-.045.815.007 1.24.064.252.034.518.07.815.088.185.011.366.025.552.038.53.038 1.102.08 1.926.087.427.005.759.01 1.025.015.695.012.941.016 1.28-.015 1.248-.112 1.832-.61 1.832-1.376 0-.805-.584-1.264-1.698-1.414-1.564-.213-2.33-.163-3.72-.074a87.66 87.66 0 0 1-1.669.095c-.608.029-2.449.026-2.682-1.492-.053-.416-.073-1.116.807-2.325l.75-1.003c.36-.49.582-.898.053-1.559 0 0-.39-.468-.52-.638-1.215-1.587-1.512-4.08-.448-6.114 1.577-3.011 5.4-4.26 8.37-2.581.253.143.438.203.655.163.201-.032.27-.167.363-.344.02-.04.042-.082.067-.126.004-.01.241-.465.535-1.028l.734-1.41a1.493 1.493 0 0 1 1.041-.785ZM9.193 13.243c1.854.903 3.912.208 5.254-2.47 1.352-2.699.827-5.11-1.041-6.023C10.918 3.537 8.81 5.831 8.017 7.41c-1.355 2.698-.717 4.886 1.147 5.818Z",
+  letterboxd: "M8.224 14.352a4.447 4.447 0 0 1-3.775 2.092C1.992 16.444 0 14.454 0 12s1.992-4.444 4.45-4.444c1.592 0 2.988.836 3.774 2.092-.427.682-.673 1.488-.673 2.352s.246 1.67.673 2.352zM15.101 12c0-.864.247-1.67.674-2.352-.786-1.256-2.183-2.092-3.775-2.092s-2.989.836-3.775 2.092c.427.682.674 1.488.674 2.352s-.247 1.67-.674 2.352c.786 1.256 2.183 2.092 3.775 2.092s2.989-.836 3.775-2.092A4.42 4.42 0 0 1 15.1 12zm4.45-4.444a4.447 4.447 0 0 0-3.775 2.092c.427.682.673 1.488.673 2.352s-.246 1.67-.673 2.352a4.447 4.447 0 0 0 3.775 2.092C22.008 16.444 24 14.454 24 12s-1.992-4.444-4.45-4.444z",
+  spotify: "M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z",
+};
+
+function brandIcon(name) {
+  const ns = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", "0 0 24 24");
+  svg.setAttribute("aria-hidden", "true");
+  svg.setAttribute("focusable", "false");
+  const mark = document.createElementNS(ns, "path");
+  mark.setAttribute("d", SOURCE_MARK[name]);
+  mark.setAttribute("fill", "currentColor");
+  svg.append(mark);
+  return svg;
+}
 
 const el = (tag, cls, attrs) => {
   const n = document.createElement(tag);
@@ -170,7 +196,7 @@ export function renderShelves(items, root, sources = {}) {
     }
     const [linkText, anchor] = LIST_LINK[type];
     const actions = el("div", "shelf-actions");
-    const listLink = el("a", "lib-btn is-primary", { href: `library-lists.html?type=${anchor}` });
+    const listLink = el("a", `lib-btn is-shelf is-${type}`, { href: `library-lists.html?type=${anchor}` });
     listLink.append(
       Object.assign(el("span"), { textContent: linkText }),
       Object.assign(el("span", "lib-btn-arrow"), { textContent: "\u2192", "aria-hidden": "true" })
@@ -182,15 +208,15 @@ export function renderShelves(items, root, sources = {}) {
        is an absent link rather than a dead one. */
     const source = sources[SHELF_SOURCE[type]];
     if (source?.profileUrl) {
-      const away = el("a", "lib-btn is-secondary", {
+      const key = SHELF_SOURCE[type];
+      const away = el("a", "lib-icon-btn", {
         href: source.profileUrl,
         target: "_blank",
         rel: "noopener",
+        "aria-label": source.label || `My ${key} profile`,
+        title: source.label || `My ${key} profile`,
       });
-      away.append(
-        Object.assign(el("span"), { textContent: source.label || "My profile" }),
-        Object.assign(el("span", "lib-btn-arrow"), { textContent: "\u2197", "aria-hidden": "true" })
-      );
+      away.append(brandIcon(key));
       actions.append(away);
     }
     block.append(rail, actions);
@@ -209,53 +235,12 @@ export function renderShelves(items, root, sources = {}) {
    swallows the click so a shove does not open whatever ended up under the
    cursor. Used by books, films and podcasts; only books need the overlap
    correction, since only their jackets overlap each other. */
-function wireLoopRail(frame, originalRun, { overlap = false } = {}) {
-  const shelf = originalRun.parentElement;
-  const before = originalRun.cloneNode(true);
-  const after = originalRun.cloneNode(true);
-  let runWidth = 0;
-  let initialized = false;
+/* Grab and shove, with the wheel as well, and a drag that moved swallows the
+   click so a shove does not open whatever ended up under the cursor. Wanted on
+   every rail, looping or not, so it does not live inside the loop. */
+function wireDrag(frame, onScroll = () => {}) {
   let drag = null;
   let suppressClick = false;
-
-  for (const clone of [before, after]) {
-    clone.dataset.loopClone = "true";
-    clone.setAttribute("aria-hidden", "true");
-    for (const button of clone.querySelectorAll("button")) button.tabIndex = -1;
-  }
-  shelf.prepend(before);
-  shelf.append(after);
-
-  const normalize = () => {
-    if (!runWidth) return;
-    const x = frame.scrollLeft;
-    if (x < runWidth * 0.5) frame.scrollLeft = x + runWidth;
-    else if (x >= runWidth * 1.5) frame.scrollLeft = x - runWidth;
-  };
-
-  const measure = () => {
-    if (overlap) {
-      const firstCoverWidth = originalRun.querySelector(".book-cover")?.getBoundingClientRect().width || 0;
-      const runStyle = getComputedStyle(originalRun);
-      const boundaryPadding = parseFloat(runStyle.paddingLeft) + parseFloat(runStyle.paddingRight);
-      shelf.style.setProperty(
-        "--book-run-overlap",
-        `${(-(firstCoverWidth * 0.22 + boundaryPadding)).toFixed(2)}px`
-      );
-    }
-    runWidth = originalRun.offsetLeft - before.offsetLeft;
-    if (!runWidth) return;
-    if (!initialized) {
-      frame.scrollLeft = runWidth;
-      initialized = true;
-    } else {
-      normalize();
-    }
-  };
-
-  frame.addEventListener("scroll", normalize, { passive: true });
-  new ResizeObserver(measure).observe(originalRun);
-  requestAnimationFrame(measure);
 
   frame.addEventListener("pointerdown", (event) => {
     if (event.button !== 0) return;
@@ -270,7 +255,7 @@ function wireLoopRail(frame, originalRun, { overlap = false } = {}) {
     if (!drag.moved) return;
     if (!frame.hasPointerCapture(event.pointerId)) frame.setPointerCapture(event.pointerId);
     frame.scrollLeft -= delta;
-    normalize();
+    onScroll();
   });
 
   const endDrag = (event) => {
@@ -295,8 +280,92 @@ function wireLoopRail(frame, originalRun, { overlap = false } = {}) {
     if (!event.shiftKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
     event.preventDefault();
     frame.scrollLeft += event.deltaY;
-    normalize();
+    onScroll();
   }, { passive: false });
+}
+
+/* A loop needs enough to loop through. With a run only half again as wide as
+   the rail, a scroll crosses the seam within a screen and a half and the same
+   covers come straight back, which reads as the section repeating rather than
+   as an endless shelf. Twelve podcasts do exactly that. Below this ratio the
+   rail keeps the drag and simply ends, which is honest about how much is there. */
+const MIN_LOOP_RATIO = 2.2;
+
+function wireLoopRail(frame, originalRun, { overlap = false } = {}) {
+  const shelf = originalRun.parentElement;
+  const before = originalRun.cloneNode(true);
+  const after = originalRun.cloneNode(true);
+  let runWidth = 0;
+  let initialized = false;
+  /* Decided in measure() rather than here. Asking before layout has settled
+     reads a run narrower than it will be, which is how the films stopped
+     looping: their posters had no width yet. The clones stay in the DOM either
+     way and are hidden when the rail is too short to loop, so the answer can
+     change on a resize without adding or removing anything. */
+  let looping = false;
+
+  for (const clone of [before, after]) {
+    clone.dataset.loopClone = "true";
+    clone.setAttribute("aria-hidden", "true");
+    for (const button of clone.querySelectorAll("button")) button.tabIndex = -1;
+  }
+  shelf.prepend(before);
+  shelf.append(after);
+
+  const normalize = () => {
+    if (!looping || !runWidth) return;
+    const x = frame.scrollLeft;
+    if (x < runWidth * 0.5) frame.scrollLeft = x + runWidth;
+    else if (x >= runWidth * 1.5) frame.scrollLeft = x - runWidth;
+  };
+
+  const measure = () => {
+    if (overlap) {
+      const firstCoverWidth = originalRun.querySelector(".book-cover")?.getBoundingClientRect().width || 0;
+      const runStyle = getComputedStyle(originalRun);
+      const boundaryPadding = parseFloat(runStyle.paddingLeft) + parseFloat(runStyle.paddingRight);
+      shelf.style.setProperty(
+        "--book-run-overlap",
+        `${(-(firstCoverWidth * 0.22 + boundaryPadding)).toFixed(2)}px`
+      );
+    }
+    /* Measured from the run itself, never from the clones: they are hidden
+       while the rail is too short to loop, and a hidden element has no
+       offsetLeft, so deciding from their positions could never decide to
+       start. */
+    const own = originalRun.getBoundingClientRect().width;
+    if (!own) return;
+
+    const wasLooping = looping;
+    looping = own >= (frame.clientWidth || 1) * MIN_LOOP_RATIO;
+    shelf.classList.toggle("is-looping", looping);
+
+    if (!looping) {
+      runWidth = 0;
+      /* Ending the rail rather than wrapping it, so park at the real start and
+         let the first cover be the first thing seen. */
+      if (wasLooping || !initialized) frame.scrollLeft = 0;
+      initialized = true;
+      return;
+    }
+
+    /* Now that the clones are laid out again, the distance between two runs is
+       the real pitch, which is what wrapping has to step by. */
+    runWidth = originalRun.offsetLeft - before.offsetLeft;
+    if (!runWidth) return;
+    if (!initialized || !wasLooping) {
+      frame.scrollLeft = runWidth;
+      initialized = true;
+    } else {
+      normalize();
+    }
+  };
+
+  frame.addEventListener("scroll", normalize, { passive: true });
+  new ResizeObserver(measure).observe(originalRun);
+  requestAnimationFrame(measure);
+
+  wireDrag(frame, normalize);
 }
 
 /* ---------- albums: native coverflow ---------- */
@@ -646,6 +715,29 @@ function albumListeningNode(item) {
   return section;
 }
 
+/* A click on the page while focus sits inside an embed, the Spotify player or a
+   YouTube trailer, is spent handing focus back to the document, so anything
+   wired to `click` alone needed pressing twice to work. Acting on pointerdown
+   means the first press lands. The click listener stays for the keyboard, where
+   pointerdown never fires, and the latch stops one press doing the job twice. */
+function onPress(node, handler) {
+  let spent = false;
+  const run = (event) => {
+    if (spent) return;
+    spent = true;
+    /* Released on the next frame rather than never, so a button that stays on
+       the page, the prev and next arrows, still works a second time. */
+    requestAnimationFrame(() => { spent = false; });
+    handler(event);
+  };
+  node.addEventListener("pointerdown", (event) => {
+    if (event.button !== 0) return;
+    event.preventDefault();
+    run(event);
+  });
+  node.addEventListener("click", run);
+}
+
 /* ---------- immersive media detail ---------- */
 
 const DETAIL_TYPE = { book: "Book", album: "Album", film: "Film", other: "Podcast" };
@@ -782,7 +874,7 @@ function relatedNode(item) {
       Object.assign(el("span", "media-detail-related-title"), { textContent: candidate.title }),
       Object.assign(el("span", "media-detail-related-creator"), { textContent: candidate.creator })
     );
-    button.addEventListener("click", () => openDetail(candidate, sourceNodeFor(candidate.id), { replace: true }));
+    onPress(button, () => openDetail(candidate, sourceNodeFor(candidate.id), { replace: true }));
     cell.append(button);
     row.append(cell);
   }
@@ -803,7 +895,7 @@ function navButton(direction, item) {
   );
   if (direction === "previous") button.append(arrow, copy);
   else button.append(copy, arrow);
-  button.addEventListener("click", () => openDetail(item, sourceNodeFor(item.id), { replace: true }));
+  onPress(button, () => openDetail(item, sourceNodeFor(item.id), { replace: true }));
   return button;
 }
 
@@ -821,7 +913,7 @@ function detailNode(item) {
   layer.style.setProperty("--detail-accent", item.palette?.accent || "#f3c844");
 
   const art = el("div", "media-detail-art");
-  art.addEventListener("click", (event) => {
+  onPress(art, (event) => {
     if (!event.target.closest(".media-detail-morph")) closeDetail();
   });
   const backdrop = el("button", "media-detail-backdrop", {
@@ -845,7 +937,7 @@ function detailNode(item) {
     "aria-label": `Close ${item.title} details`,
   });
   close.append(svgIcon("M6 6l12 12M18 6L6 18"));
-  close.addEventListener("click", () => closeDetail());
+  onPress(close, () => closeDetail());
 
   const header = el("header", "media-detail-header");
   header.append(
@@ -1135,17 +1227,25 @@ async function loadSources() {
 }
 
 async function main() {
+  const root = document.getElementById("shelves");
+  /* A versioned import specifier is a module identity, so if any file asks for
+     a different ?v= than the page loaded, this module is evaluated twice and
+     every shelf is built twice. That is what "the sections are repeating"
+     was. The specifiers are consistent again, and this flag lives on the DOM
+     rather than in a closure so it holds across instances if they ever drift. */
+  if (root?.dataset.shelvesRendered) return;
+  if (root) root.dataset.shelvesRendered = "true";
+
   const [{ items }, sources] = await Promise.all([
     (await fetch(DATA_URL, { cache: "no-cache" })).json(),
     loadSources(),
   ]);
-  const root = document.getElementById("shelves");
   renderShelves(items, root, sources);
   wireExpansion(items, root);
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-detail1");
+  const { initHero } = await import("./library-hero.js?v=library-detail2");
   initHero(items);
 }
 

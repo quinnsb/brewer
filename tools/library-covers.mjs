@@ -40,100 +40,16 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
-import { parseGoodreads, parseLetterboxd, feedUrls } from "../api/lib/feeds.mjs";
+import { parseGoodreads, parseLetterboxd, feedUrls } from "../lib/feeds.mjs";
 import { slug } from "./lib/identity.mjs";
 import { loadEnv } from "./lib/env.mjs";
+import { imageSize, get, titlesAgree, itunesCover, tmdbPoster } from "./lib/covers.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const OVERRIDE_DIR = path.join(ROOT, "images", "library", "overrides");
 const APPLY = process.argv.includes("--apply");
 const MIN = Number(process.argv[process.argv.indexOf("--min") + 1]) || 600;
 const UA = "brewer-library-covers/0.1 ( https://www.quinnbrewer.com )";
-
-/* JPEG and PNG dimensions straight from the header, so nothing has to be
-   decoded or shelled out to just to find out how big a file is. */
-function imageSize(buffer) {
-  if (buffer.length > 24 && buffer.readUInt32BE(0) === 0x89504e47) {
-    return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
-  }
-  for (let i = 2; i < buffer.length - 9; ) {
-    if (buffer[i] !== 0xff) { i += 1; continue; }
-    const marker = buffer[i + 1];
-    if (marker >= 0xc0 && marker <= 0xcf && marker !== 0xc4 && marker !== 0xc8 && marker !== 0xcc) {
-      return { width: buffer.readUInt16BE(i + 7), height: buffer.readUInt16BE(i + 5) };
-    }
-    i += 2 + buffer.readUInt16BE(i + 2);
-  }
-  return null;
-}
-
-async function get(url, tries = 3) {
-  let last;
-  for (let attempt = 0; attempt < tries; attempt += 1) {
-    try {
-      const response = await fetch(url, {
-        headers: { "user-agent": UA },
-        signal: AbortSignal.timeout(15000),
-      });
-      if (!response.ok) throw new Error(`${response.status}`);
-      return response;
-    } catch (err) {
-      last = err;
-      if (attempt < tries - 1) await new Promise((r) => setTimeout(r, 600 * (attempt + 1)));
-    }
-  }
-  throw last;
-}
-
-const words = (value) =>
-  String(value ?? "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().split(" ").filter(Boolean);
-
-/* iTunes searches loosely, which is right for a person typing and wrong for a
-   script installing a cover unattended: asking for Coloring Book by Chance the
-   Rapper returned a TisaKorean single called Groceries, and asking for The
-   Dispossessed returned a different Le Guin novel. So the result has to prove
-   it is the same work: every word of the wanted title must appear in the name
-   that came back. "Moby-Dick" still matches "Moby Dick", and a subtitle or a
-   series suffix is still fine, but a different book is not. */
-function titlesAgree(want, got) {
-  const wanted = words(want).filter((word) => !["the", "a", "an"].includes(word));
-  if (!wanted.length) return false;
-  const found = new Set(words(got));
-  return wanted.every((word) => found.has(word));
-}
-
-/* iTunes hands back a 100px thumbnail; the same URL serves any size. Books and
-   records both work; movies are the one catalogue whose search is dead. */
-async function itunesCover(item, media) {
-  const term = encodeURIComponent(`${item.title} ${item.creator || ""}`.trim());
-  const entity = media === "music" ? "&entity=album" : "";
-  const payload = await (await get(
-    `https://itunes.apple.com/search?term=${term}&media=${media}${entity}&limit=5&country=US`
-  )).json();
-
-  for (const result of payload.results || []) {
-    const name = result.collectionName || result.trackName;
-    if (!result.artworkUrl100 || !titlesAgree(item.title, name)) continue;
-    return result.artworkUrl100.replace(/\/\d+x\d+bb\./, "/2000x2000bb.");
-  }
-  return null;
-}
-
-/* TMDB's own search, matched on title and year so a remake does not win. The
-   poster is served at any size; `original` is typically around 2000x3000. */
-async function tmdbPoster(item) {
-  const key = process.env.TMDB_API_KEY;
-  if (!key) return null;
-  const params = new URLSearchParams({ api_key: key, query: item.title });
-  if (item.year) params.set("year", String(item.year));
-  const payload = await (await get(`https://api.themoviedb.org/3/search/movie?${params}`)).json();
-
-  for (const result of payload.results || []) {
-    if (!result.poster_path || !titlesAgree(item.title, result.title)) continue;
-    return `https://image.tmdb.org/t/p/original${result.poster_path}`;
-  }
-  return null;
-}
 
 async function main() {
   await loadEnv(ROOT);

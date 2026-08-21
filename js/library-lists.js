@@ -1,14 +1,14 @@
 /* Media-specific list and catalog pages. The moving corridor is decorative;
    the catalog underneath owns all navigation and accessible media names. */
 
-import { wireExpansion } from "./library.js?v=library-detail1";
+import { wireExpansion } from "./library.js?v=library-detail2";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail1";
-const LISTS_URL = "data/library-lists.json?v=library-detail1";
+const DATA_URL = "data/library.json?v=library-detail2";
+const LISTS_URL = "data/library-lists.json?v=library-detail2";
 
 const PAGE = {
   book: {
@@ -308,7 +308,10 @@ function renderCatalog(media) {
       const comparison = typeof av === "number" ? av - bv : av.localeCompare(bv);
       return comparison * direction;
     });
-    grid.replaceChildren(...filtered.map(catalogCard));
+    /* Passed through a lambda, not straight to map: map hands the index in as
+       the second argument, which catalogCard reads as a rank, so the plain
+       catalogue numbered every card after the first. Only a ranked list ranks. */
+    grid.replaceChildren(...filtered.map((item) => catalogCard(item)));
     const title = genre ? `${genre} ${page.label.toLowerCase()}.` : creator ? `${creator}.` : `All ${page.label.toLowerCase()}.`;
     node("[data-catalog-title]").textContent = title;
     node("[data-catalog-count]").textContent = `${filtered.length} ${filtered.length === 1 ? page.singular : page.label.toLowerCase()} catalogued`;
@@ -347,7 +350,7 @@ function renderIndex(lists, grid) {
     grid.replaceChildren(empty);
     return;
   }
-  grid.replaceChildren(...published.map(listCard));
+  grid.replaceChildren(...published.map((list) => listCard(list)));
 }
 
 /* One list, in its authored order, numbered when it is ranked. */

@@ -1,8 +1,8 @@
-import { isAuthed } from "./lib/session.mjs";
-import { json, methodNotAllowed } from "./lib/http.mjs";
-import { search } from "./lib/sources.mjs";
+import { isAuthed } from "../lib/session.mjs";
+import { json, methodNotAllowed } from "../lib/http.mjs";
+import { search } from "../lib/sources.mjs";
 import { itemId } from "../tools/lib/identity.mjs";
-import { readJson } from "./lib/store.mjs";
+import { readJson } from "../lib/store.mjs";
 
 export default async function handler(req, res) {
   if (req.method !== "GET") return methodNotAllowed(res, ["GET"]);

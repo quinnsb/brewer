@@ -7,7 +7,9 @@
 
    Every palette value is written as var(--x, fallback) for that reason: on the
    main site the theme's own tokens win, and on a page that never loads
-   styles.css the fallbacks stand in.
+   styles.css the fallbacks stand in. The type fallback is Aeonik, which is what
+   the theme sets and so what every page the visitor has already seen was set
+   in.
    ============================================================ */
 
 /* menu pill */
@@ -20,7 +22,7 @@
   cursor: pointer;
   background: var(--cream, #f1ece3);
   color: var(--ink, #1e1c19);
-  font-family: var(--sans, "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif);
+  font-family: var(--sans, "Aeonik", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif);
   font-weight: 500;
   font-size: 17px;
   padding: 16px 28px;
@@ -105,7 +107,7 @@ body.menu-open .menu-dock { transform: translateY(0); }
   border: 0;
   cursor: pointer;
   text-decoration: none;
-  font-family: var(--sans, "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif);
+  font-family: var(--sans, "Aeonik", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif);
   font-weight: 500;
   font-size: clamp(24px, 2.3vw, 38px);
   letter-spacing: -0.01em;

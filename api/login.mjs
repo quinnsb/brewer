@@ -1,6 +1,6 @@
 import { createHash, timingSafeEqual } from "node:crypto";
-import { signSession, sessionCookie } from "./lib/session.mjs";
-import { readJson, json, methodNotAllowed, requireEnv, sleep } from "./lib/http.mjs";
+import { signSession, sessionCookie } from "../lib/session.mjs";
+import { readJson, json, methodNotAllowed, requireEnv, sleep } from "../lib/http.mjs";
 
 const TTL = 60 * 60 * 12;
 

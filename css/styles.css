@@ -8,37 +8,16 @@
 /* ---------- self-hosted brand fonts ---------- */
 
 @font-face {
-  font-family: "Degular Display";
-  src: url("../fonts/DegularDisplay-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Degular Display";
-  src: url("../fonts/DegularDisplay-Semibold.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Degular";
-  src: url("../fonts/Degular-Regular.otf") format("opentype");
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Degular";
-  src: url("../fonts/Degular-Medium.otf") format("opentype");
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Medium.otf") format("opentype");
   font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Degular";
-  src: url("../fonts/Degular-Semibold.otf") format("opentype");
-  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -100,8 +79,8 @@
   --ease-morph: cubic-bezier(0.65, 0, 0.35, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  --sans: "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --sans-display: "Degular Display", "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --sans: "Aeonik", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --sans-display: "Aeonik", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
   --serif: "P22 Mackinac Pro", "Fraunces", Georgia, serif;
 
   --radius: 24px;

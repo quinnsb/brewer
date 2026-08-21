@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import {
   parseGoodreads, parseLetterboxd, fullSizeGoodreadsCover, biggerLetterboxdPoster,
   feedUrls, newCandidates,
-} from "../../api/lib/feeds.mjs";
+} from "../../lib/feeds.mjs";
 
 /* Trimmed from the real feeds, keeping every shape that matters: CDATA, escaped
    entities, an unrated item, and an item with no read date. */

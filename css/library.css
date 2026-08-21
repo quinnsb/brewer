@@ -15,16 +15,6 @@
   src: url("../fonts/Aeonik-Medium.otf") format("opentype");
   font-weight: 500; font-display: swap;
 }
-@font-face {
-  font-family: "Degular";
-  src: url("../fonts/Degular-Regular.otf") format("opentype");
-  font-weight: 400; font-display: swap;
-}
-@font-face {
-  font-family: "Degular";
-  src: url("../fonts/Degular-Semibold.otf") format("opentype");
-  font-weight: 600; font-display: swap;
-}
 
 :root {
   --lib-bg: #0b0b0c;
@@ -40,6 +30,12 @@
   --site-blurple: #4a4de6;
   --site-green: #1b9e57;
   --gutter: clamp(20px, 4vw, 56px);
+  /* Left inset that keeps content clear of the fixed bottom-left menu pill, the
+     same idea as --rail-safe in styles.css: the pill's own left offset plus its
+     width plus a gap. Content uses max() with the normal gutter, so on narrow
+     screens, where the pill gives way to the full-width bottom bar and this
+     reservation would only squeeze the page, the gutter wins. */
+  --pill-safe: calc(clamp(30px, 3.2vw, 62px) + 132px);
   --shell: 1240px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --card: 72px;
@@ -51,7 +47,7 @@ body.library {
   margin: 0;
   background: var(--lib-bg);
   color: var(--lib-fg);
-  font-family: "Degular", system-ui, sans-serif;
+  font-family: "Aeonik", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -152,8 +148,19 @@ body.library a { color: inherit; }
 
 .shelves {
   max-width: var(--shell); margin: 0 auto;
-  padding: 0 var(--gutter) 88px;
+  /* Bottom clearance is the pill's offset plus its height plus a gap, so the
+     last shelf never ends underneath it. */
+  padding: 0 var(--gutter) 110px;
   position: relative; z-index: 3; background: var(--lib-bg);
+}
+
+/* Above the bottom-bar breakpoint the standalone pill is showing, so content
+   starts to the right of it and nothing ever passes underneath. */
+@media (min-width: 621px) {
+  .shelves,
+  .list-index-section,
+  .catalog-section,
+  .list-page-intro { padding-left: max(var(--gutter), var(--pill-safe)); }
 }
 .shelf-block { margin-bottom: 76px; }
 /* The last shelf's margin used to stack on .shelves' padding, leaving a screen
@@ -189,7 +196,7 @@ body.library a { color: inherit; }
   min-height: 48px; padding: 13px 26px;
   border: 1px solid transparent; border-radius: 0.6em;
   cursor: pointer; text-decoration: none;
-  font-family: "Degular", system-ui, sans-serif; font-weight: 500;
+  font-family: "Aeonik", system-ui, sans-serif; font-weight: 500;
   font-size: 16px; letter-spacing: -0.01em;
   transition:
     transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
@@ -206,14 +213,54 @@ body.library a { color: inherit; }
 .lib-btn:hover::before { transform: translateY(0); }
 .lib-btn:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 3px; }
 
-/* Primary: already filled, so the sweep inverts it back to the page colour. */
+/* Primary: one accent per shelf, in the same order the menu dock uses its four,
+   so the page reads as one set rather than four unrelated buttons. The fill
+   that sweeps up is cream, exactly as it is on the menu pills, and the label
+   goes dark on it. */
 .lib-btn.is-primary { background: var(--lib-fg); color: var(--lib-bg); }
 .lib-btn.is-primary::before { background: var(--lib-bg); }
 .lib-btn.is-primary:hover { color: var(--lib-fg); }
 
+.lib-btn.is-shelf { background: var(--btn-bg); color: var(--btn-on); }
+.lib-btn.is-shelf::before { background: var(--lib-fg); }
+.lib-btn.is-shelf:hover { color: var(--lib-bg); }
+.lib-btn.is-shelf.is-book  { --btn-bg: #1ba1e9; --btn-on: #16233f; }
+.lib-btn.is-shelf.is-album { --btn-bg: #f5e23c; --btn-on: #5a4a1f; }
+.lib-btn.is-shelf.is-film  { --btn-bg: #f5414b; --btn-on: #470a1d; }
+.lib-btn.is-shelf.is-other { --btn-bg: #9fe39a; --btn-on: #0c5a2f; }
+
 /* Secondary: outlined until the fill arrives. */
 .lib-btn.is-secondary { background: transparent; color: var(--lib-fg); border-color: var(--lib-line); }
 .lib-btn.is-secondary:hover { color: var(--lib-bg); border-color: var(--lib-fg); }
+/* Square, the same height as the text buttons beside them, so the row reads as
+   one set. The mark carries no label, so the link's aria-label and title do. */
+.lib-icon-btn {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; flex: 0 0 auto;
+  border: 1px solid var(--lib-line); border-radius: 0.6em;
+  background: transparent; color: var(--lib-fg);
+  text-decoration: none; cursor: pointer;
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 0.35s cubic-bezier(0.65, 0, 0.35, 1),
+    color 0.3s ease, border-color 0.3s ease;
+}
+.lib-icon-btn::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: var(--lib-fg);
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lib-icon-btn:hover { transform: scale(1.04); border-radius: 1.4em; border-color: var(--lib-fg); color: var(--lib-bg); }
+.lib-icon-btn:hover::before { transform: translateY(0); }
+.lib-icon-btn:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 3px; }
+.lib-icon-btn svg { width: 24px; height: 24px; display: block; }
+
+html.reduce-motion .lib-icon-btn,
+html.reduce-motion .lib-icon-btn::before { transition: none; }
+html.reduce-motion .lib-icon-btn:hover { transform: none; }
+
 .lib-btn .lib-btn-arrow {
   font-family: system-ui, sans-serif; font-size: 15px; line-height: 1;
   transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
@@ -334,7 +381,12 @@ html.reduce-motion .hcard:focus-visible .hcard-media { transform: none; }
    No lean. The old deterministic tilt from the id read as noise, not handling. */
 /* Holds the run and its two clones end to end, so the loop reads as one
    continuous shelf rather than three. */
+/* Holds the run and its two clones end to end, so the loop reads as one
+   continuous shelf rather than three. The clones only render once the rail is
+   long enough that looping does not just replay the same covers. */
 .loop-track { display: flex; align-items: flex-end; width: max-content; }
+.loop-track:not(.is-looping) > [data-loop-clone],
+.book-cover-shelf:not(.is-looping) > [data-loop-clone] { display: none; }
 .shelf-rail:has(.loop-track) { cursor: grab; touch-action: pan-y; user-select: none; }
 .shelf-rail:has(.loop-track):active { cursor: grabbing; }
 .rack { display: flex; align-items: flex-end; gap: 12px; padding: 30px 4px 18px; width: max-content; }

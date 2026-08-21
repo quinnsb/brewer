@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { commitFiles } from "../../api/lib/github.mjs";
+import { commitFiles } from "../../lib/github.mjs";
 
 /* A fake GitHub that records what it was asked to do, so the commit sequence
    can be asserted without touching the network or the real repo. */

@@ -10,11 +10,11 @@
    errors are reported alongside whatever did come back.
    ============================================================ */
 
-import { isAuthed } from "./lib/session.mjs";
-import { readJson as readBody, json, methodNotAllowed } from "./lib/http.mjs";
-import { readJson, writeFiles } from "./lib/store.mjs";
-import { withRetry } from "./lib/sources.mjs";
-import { feedUrls, parseGoodreads, parseLetterboxd, newCandidates } from "./lib/feeds.mjs";
+import { isAuthed } from "../lib/session.mjs";
+import { readJson as readBody, json, methodNotAllowed } from "../lib/http.mjs";
+import { readJson, writeFiles } from "../lib/store.mjs";
+import { withRetry } from "../lib/sources.mjs";
+import { feedUrls, parseGoodreads, parseLetterboxd, newCandidates } from "../lib/feeds.mjs";
 
 const UA = "brewer-library-admin/0.1 ( https://www.quinnbrewer.com )";
 const TIMEOUT_MS = 12000;

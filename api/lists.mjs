@@ -11,9 +11,9 @@
    re-renders from the server's answer rather than guessing.
    ============================================================ */
 
-import { isAuthed } from "./lib/session.mjs";
-import { readJson as readBody, json, methodNotAllowed } from "./lib/http.mjs";
-import { readJson, writeFiles } from "./lib/store.mjs";
+import { isAuthed } from "../lib/session.mjs";
+import { readJson as readBody, json, methodNotAllowed } from "../lib/http.mjs";
+import { readJson, writeFiles } from "../lib/store.mjs";
 import {
   validateLists, createList, updateList, deleteList,
   addToList, removeFromList, moveInList,

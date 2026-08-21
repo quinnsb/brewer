@@ -93,8 +93,8 @@
    are P22 Mackinac, which is not Degular.
    ============================================================ */
 .theme-carnival {
-  --sans: "Aeonik", "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --sans-display: "Aeonik", "Degular Display", "Degular", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --sans: "Aeonik", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --sans-display: "Aeonik", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
   --serif: "P22 Mackinac Pro", "Fraunces", Georgia, serif;
 }
 

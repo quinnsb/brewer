@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { rawItemFor, seedFor, addToCatalog } from "../../api/lib/add-item.mjs";
+import { rawItemFor, seedFor, addToCatalog } from "../../lib/add-item.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..", "..");
 const load = async (f) => JSON.parse(await readFile(path.join(ROOT, f), "utf8"));

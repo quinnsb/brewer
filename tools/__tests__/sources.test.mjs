@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import {
   coverHostAllowed, upgradeArtwork, yearOf, withRetry,
   bookCandidates, albumCandidates, filmCandidates, podcastCandidates,
-} from "../../api/lib/sources.mjs";
+} from "../../lib/sources.mjs";
 
 /* The proxy fetches whatever URL it is handed, so the allowlist is the only
    thing standing between /api/cover and a request to link-local metadata. */

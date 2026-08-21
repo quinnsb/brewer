@@ -1,7 +1,7 @@
-import { isAuthed } from "./lib/session.mjs";
-import { readJson as readBody, json, methodNotAllowed } from "./lib/http.mjs";
-import { readJson, readText, writeFiles, storeMode } from "./lib/store.mjs";
-import { itemWithNote, buildNote } from "./lib/apply-note.mjs";
+import { isAuthed } from "../lib/session.mjs";
+import { readJson as readBody, json, methodNotAllowed } from "../lib/http.mjs";
+import { readJson, readText, writeFiles, storeMode } from "../lib/store.mjs";
+import { itemWithNote, buildNote } from "../lib/apply-note.mjs";
 
 const HALF_STEP = (value) => Number.isFinite(value) && value >= 0 && value <= 5 && value * 2 === Math.round(value * 2);
 

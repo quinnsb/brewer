@@ -1,9 +1,9 @@
-import { isAuthed } from "./lib/session.mjs";
-import { readJson as readBody, json, methodNotAllowed } from "./lib/http.mjs";
-import { readJson, writeFiles } from "./lib/store.mjs";
-import { addToCatalog } from "./lib/add-item.mjs";
-import { buildNote } from "./lib/apply-note.mjs";
-import { coverHostAllowed } from "./lib/sources.mjs";
+import { isAuthed } from "../lib/session.mjs";
+import { readJson as readBody, json, methodNotAllowed } from "../lib/http.mjs";
+import { readJson, writeFiles } from "../lib/store.mjs";
+import { addToCatalog } from "../lib/add-item.mjs";
+import { buildNote } from "../lib/apply-note.mjs";
+import { coverHostAllowed } from "../lib/sources.mjs";
 
 const MAX_COVER = 8 * 1024 * 1024;
 const HALF_STEP = (value) => Number.isFinite(value) && value >= 0 && value <= 5 && value * 2 === Math.round(value * 2);

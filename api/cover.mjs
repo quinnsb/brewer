@@ -1,6 +1,6 @@
-import { isAuthed } from "./lib/session.mjs";
-import { json, methodNotAllowed } from "./lib/http.mjs";
-import { coverHostAllowed } from "./lib/sources.mjs";
+import { isAuthed } from "../lib/session.mjs";
+import { json, methodNotAllowed } from "../lib/http.mjs";
+import { coverHostAllowed } from "../lib/sources.mjs";
 
 const MAX_BYTES = 8 * 1024 * 1024;
 
