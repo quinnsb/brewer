@@ -8,7 +8,7 @@
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
 
-const DATA_URL = "data/library.json?v=library-polish6";
+const DATA_URL = "data/library.json?v=library-detail1";
 
 const TYPE_LABEL = {
   book: ["Books", "drag or scroll either direction"],
@@ -462,6 +462,7 @@ function ratingDisplay(item) {
     Object.assign(el("span"), { textContent: "Quinn's rating" }),
     Object.assign(el("span", "rating-value"), { textContent: `${rating} of 5` })
   );
+  if (item.starred) wrap.classList.add("is-starred");
   const stars = el("div", "rating-stars-readonly", {
     role: "img",
     "aria-label": `Quinn rated ${item.title} ${rating} out of 5`,
@@ -474,13 +475,31 @@ function ratingDisplay(item) {
   return wrap;
 }
 
+/* Genres are the one fact worth clicking, so they render as catalog links the
+   way the byline creators already do. */
+function genreCell(item) {
+  const cell = el("dd", "media-facts-genres");
+  item.genres.forEach((genre, index) => {
+    const link = el("a", "media-facts-genre", { href: catalogHref(item, "genre", genre) });
+    link.textContent = genre;
+    cell.append(link);
+    if (index < item.genres.length - 1) cell.append(document.createTextNode(", "));
+  });
+  return cell;
+}
+
 function factsNode(item) {
-  const authoredGenres = item.genres?.length ? [["Genres", item.genres.join(", ")]] : [];
   const sourceFacts = (item.facts || []).filter(([term]) => term.toLowerCase() !== "genre");
-  const rows = [...authoredGenres, ...sourceFacts];
-  if (!rows.length) return null;
+  const hasGenres = Boolean(item.genres?.length);
+  if (!hasGenres && !sourceFacts.length) return null;
+
   const list = el("dl", "media-facts");
-  for (const [term, value] of rows) {
+  if (hasGenres) {
+    const row = el("div");
+    row.append(Object.assign(el("dt"), { textContent: item.genres.length > 1 ? "Genres" : "Genre" }), genreCell(item));
+    list.append(row);
+  }
+  for (const [term, value] of sourceFacts) {
     if (value === null || value === undefined || value === "") continue;
     const row = el("div");
     row.append(
@@ -641,6 +660,62 @@ function detailSequence(item) {
   };
 }
 
+/* Same creator outranks any number of shared genres, since "more Le Guin" is a
+   stronger reason to click than "more science fiction". */
+function relatedItems(item, limit = 4) {
+  const creators = new Set(item.creators?.length ? item.creators : [item.creator].filter(Boolean));
+  const genres = new Set(item.genres || []);
+  if (!creators.size && !genres.size) return [];
+
+  return detailItems
+    .filter((candidate) => candidate.id !== item.id)
+    .map((candidate) => {
+      const names = candidate.creators?.length ? candidate.creators : [candidate.creator].filter(Boolean);
+      const sharedCreator = names.some((name) => creators.has(name));
+      const sharedGenres = (candidate.genres || []).filter((genre) => genres.has(genre)).length;
+      return { candidate, score: (sharedCreator ? 100 : 0) + sharedGenres };
+    })
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((entry) => entry.candidate);
+}
+
+function relatedNode(item) {
+  const related = relatedItems(item);
+  if (!related.length) return null;
+
+  const section = el("section", "media-detail-related", { "aria-labelledby": `related-${item.id}` });
+  section.append(Object.assign(el("h3", "media-detail-related-heading"), {
+    id: `related-${item.id}`,
+    textContent: "See also",
+  }));
+
+  const row = el("ul", "media-detail-related-row");
+  for (const candidate of related) {
+    const cell = el("li");
+    const button = el("button", "media-detail-related-item", {
+      type: "button",
+      "aria-label": `Open ${candidate.title} by ${candidate.creator}`,
+    });
+    const image = el("img");
+    image.src = candidate.cover;
+    image.alt = "";
+    image.loading = "lazy";
+    image.draggable = false;
+    button.append(
+      image,
+      Object.assign(el("span", "media-detail-related-title"), { textContent: candidate.title }),
+      Object.assign(el("span", "media-detail-related-creator"), { textContent: candidate.creator })
+    );
+    button.addEventListener("click", () => openDetail(candidate, sourceNodeFor(candidate.id), { replace: true }));
+    cell.append(button);
+    row.append(cell);
+  }
+  section.append(row);
+  return section;
+}
+
 function navButton(direction, item) {
   const button = el("button", `media-detail-nav-button is-${direction}`, {
     type: "button",
@@ -708,20 +783,23 @@ function detailNode(item) {
   header.append(detailMeta(item));
   copy.append(close, header);
 
+  /* Quinn's own judgment sits directly under the byline. It used to render
+     below the facts table, which put the publisher above the verdict. Both it
+     and the writeup collapse entirely when absent, so an unwritten item reads
+     as a clean short page rather than a page with holes in it. */
+  const rating = ratingDisplay(item);
+  if (rating) copy.append(rating);
+
   if (item.reviewHtml) {
     const review = el("div", "media-detail-review");
     /* Built at build time from Quinn's own markdown, where the source text
        was escaped before any inline rule ran. */
     review.innerHTML = item.reviewHtml;
     copy.append(review);
-  } else {
-    copy.append(Object.assign(el("p", "media-detail-empty"), { textContent: "No writeup yet." }));
   }
 
   const facts = factsNode(item);
   if (facts) copy.append(facts);
-  const rating = ratingDisplay(item);
-  if (rating) copy.append(rating);
   const listening = albumListeningNode(item);
   if (listening) copy.append(listening);
 
@@ -739,6 +817,8 @@ function detailNode(item) {
     "aria-label": `${DETAIL_TYPE[item.type]} detail navigation`,
   });
   navigation.append(navButton("previous", sequence.previous), navButton("next", sequence.next));
+  const related = relatedNode(item);
+  if (related) copy.append(related);
   copy.append(navigation);
   layer.append(art, copy);
   return layer;
@@ -780,8 +860,33 @@ function finishDetailClose(restoreFocus = true) {
   detailSource = null;
 }
 
-function closeDetail({ restoreFocus = true } = {}) {
+/* The overlay is the only thing on this page worth linking to, so open state
+   lives in the URL. History is written with pushState rather than by assigning
+   location.hash, because assigning it would scroll the shelf underneath. The
+   guard stops our own writes from coming back round as popstate events. */
+const ITEM_HASH = /^#item=(.+)$/;
+let syncingHistory = false;
+
+function hashItemId() {
+  return ITEM_HASH.exec(location.hash)?.[1] ?? null;
+}
+
+function writeHistory(id, { replace = false } = {}) {
+  const url = id ? `#item=${id}` : location.pathname + location.search;
+  if (id && hashItemId() === id) return;
+  if (!id && !hashItemId()) return;
+  syncingHistory = true;
+  try {
+    if (replace) history.replaceState(null, "", url);
+    else history.pushState(null, "", url);
+  } finally {
+    syncingHistory = false;
+  }
+}
+
+function closeDetail({ restoreFocus = true, fromHistory = false } = {}) {
   if (!detailLayer) return;
+  if (!fromHistory) writeHistory(null);
   clearTimeout(detailSwitchTimer);
   if (REDUCED) {
     finishDetailClose(restoreFocus);
@@ -792,13 +897,14 @@ function closeDetail({ restoreFocus = true } = {}) {
   detailCloseTimer = setTimeout(() => finishDetailClose(restoreFocus), 420);
 }
 
-function openDetail(item, node, { replace = false } = {}) {
+function openDetail(item, node, { replace = false, fromHistory = false } = {}) {
   clearTimeout(detailCloseTimer);
   clearTimeout(detailSwitchTimer);
   const source = node?.isConnected ? node : sourceNodeFor(item.id);
   const morphSource = node?.isConnected ? node : source;
   const replacement = detailNode(item);
   if (detailLayer && !replace) finishDetailClose(false);
+  if (!fromHistory) writeHistory(item.id, { replace: replace && Boolean(detailLayer) });
   openId = item.id;
   detailSource = source;
   markExpanded(source);
@@ -844,6 +950,27 @@ export function wireExpansion(items, root) {
     if (!item) return;
     openDetail(item, node);
   });
+
+  /* Back and forward drive the overlay. Anything we wrote ourselves is skipped,
+     and an unknown id in the hash is ignored rather than throwing. */
+  addEventListener("popstate", () => {
+    if (syncingHistory) return;
+    const id = hashItemId();
+    if (!id) {
+      if (detailLayer) closeDetail({ fromHistory: true });
+      return;
+    }
+    const item = byId.get(id);
+    if (!item || id === openId) return;
+    openDetail(item, sourceNodeFor(id), { replace: Boolean(detailLayer), fromHistory: true });
+  });
+
+  /* A link straight into an item has no cover on screen to morph out of, so
+     setMorphOrigin gets no source and falls back to its plain fade. */
+  const initial = hashItemId();
+  if (initial && byId.has(initial)) {
+    openDetail(byId.get(initial), null, { fromHistory: true });
+  }
 
   document.addEventListener("keydown", (e) => {
     if (!detailLayer) return;
@@ -915,7 +1042,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-polish6");
+  const { initHero } = await import("./library-hero.js?v=library-detail1");
   initHero(items);
 }
 

@@ -1,9 +1,9 @@
 /* Media-specific list and catalog pages. The moving corridor is decorative;
    the catalog underneath owns all navigation and accessible media names. */
 
-import { wireExpansion } from "./library.js?v=library-polish6";
+import { wireExpansion } from "./library.js?v=library-detail1";
 
-const DATA_URL = "data/library.json?v=library-polish6";
+const DATA_URL = "data/library.json?v=library-detail1";
 
 const PAGE = {
   book: {

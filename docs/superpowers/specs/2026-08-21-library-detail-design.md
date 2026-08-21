@@ -134,4 +134,5 @@ Notes on feasibility, recorded so the next spec does not relitigate them:
 - A malformed rating in a note is dropped and warned about by name, not passed
   through silently.
 - Opening an item changes the URL; reloading that URL opens the same item; back closes it.
-- `node --test tools/__tests__` passes.
+- `node --test tools/__tests__/*.test.mjs` passes. (Node 25 treats a bare
+  directory argument as a module, so the glob is required.)

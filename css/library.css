@@ -470,26 +470,36 @@ body.media-detail-open { overflow: hidden; }
 }
 .media-detail-review p { margin: 0 0 1em; }
 .media-detail-review a { color: var(--hero-verb); }
-.media-detail-empty {
-  margin: 0; padding: clamp(28px, 4vh, 48px) 0 8px;
-  font-family: "Space Mono", ui-monospace, monospace;
-  font-size: 13px; color: rgba(241, 236, 227, 0.52);
-}
 .media-facts {
   margin: clamp(24px, 4vh, 44px) 0 22px; max-width: none;
-  font-family: "Space Mono", ui-monospace, monospace; font-size: clamp(14px, 1vw, 16px);
+  font-family: "Space Mono", ui-monospace, monospace; font-size: clamp(12.5px, 0.86vw, 14px);
 }
 .media-facts div {
   display: grid; grid-template-columns: minmax(105px, 0.36fr) minmax(0, 1fr); gap: 18px;
-  padding: 14px 0; border-bottom: 1px solid rgba(241, 236, 227, 0.16);
+  padding: 12px 0; border-bottom: 1px solid rgba(241, 236, 227, 0.1);
 }
-.media-facts dt { color: rgba(241, 236, 227, 0.48); }
-.media-facts dd { margin: 0; color: var(--site-cream); text-align: right; }
+.media-facts dt { color: rgba(241, 236, 227, 0.4); }
+.media-facts dd { margin: 0; color: rgba(241, 236, 227, 0.82); text-align: right; }
+.media-facts-genre {
+  color: inherit; text-decoration: none;
+  border-bottom: 1px solid rgba(241, 236, 227, 0.24);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.media-facts-genre:hover,
+.media-facts-genre:focus-visible { color: var(--hero-verb); border-color: var(--hero-verb); }
+.media-facts-genre:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 3px; }
 
-.rating { margin: 22px 0 10px; }
+.rating { margin: clamp(26px, 3.6vh, 40px) 0 0; }
 .rating-heading {
-  display: flex; justify-content: space-between; align-items: baseline; max-width: 244px;
-  font-family: "Space Mono", ui-monospace, monospace; font-size: 10.5px; color: rgba(241, 236, 227, 0.48);
+  display: flex; justify-content: flex-start; align-items: baseline; gap: 14px;
+  font-family: "Space Mono", ui-monospace, monospace; font-size: 10px;
+  text-transform: uppercase; letter-spacing: 0.14em; color: rgba(241, 236, 227, 0.48);
+}
+.rating-value { color: var(--site-cream); letter-spacing: 0.08em; }
+/* A starred item is a favourite, which is a different claim from a high score,
+   so it is said in words rather than folded into the stars. */
+.rating.is-starred .rating-heading::after {
+  content: "favorite"; color: var(--hero-verb);
 }
 .rating-stars-readonly {
   position: relative; width: fit-content; margin-top: 8px;
@@ -499,6 +509,42 @@ body.media-detail-open { overflow: hidden; }
 .rating-stars-fill {
   position: absolute; inset: 0 auto 0 0; overflow: hidden;
   color: var(--hero-verb); white-space: nowrap;
+}
+
+.media-detail-related { margin-top: clamp(34px, 5vh, 58px); }
+.media-detail-related-heading {
+  margin: 0 0 16px; color: rgba(241, 236, 227, 0.48);
+  font-family: "Space Mono", ui-monospace, monospace; font-size: 10px;
+  font-weight: 400; text-transform: uppercase; letter-spacing: 0.14em;
+}
+.media-detail-related-row {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 1.4vw, 20px); margin: 0; padding: 0; list-style: none;
+}
+.media-detail-related-item {
+  display: grid; gap: 8px; width: 100%; padding: 0; text-align: left;
+  border: 0; background: transparent; color: var(--site-cream); cursor: pointer;
+  transition: transform 0.24s var(--ease), opacity 0.2s ease;
+}
+.media-detail-related-item img {
+  width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 3px;
+  background: rgba(241, 236, 227, 0.06);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.42);
+}
+.media-detail-related-item:hover { transform: translateY(-4px); }
+.media-detail-related-item:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 5px; }
+.media-detail-related-title {
+  font-family: "Aeonik", system-ui, sans-serif; font-size: 13px; line-height: 1.25;
+  overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+.media-detail-related-creator {
+  font-family: "Space Mono", ui-monospace, monospace; font-size: 10px;
+  color: rgba(241, 236, 227, 0.45);
+  overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
+@media (max-width: 720px) {
+  .media-detail-related-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .media-detail-related-row li:nth-child(4) { display: none; }
 }
 
 .album-listening { margin-top: clamp(32px, 5vh, 58px); }
