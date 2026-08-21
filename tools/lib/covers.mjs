@@ -71,20 +71,46 @@ export function titlesAgree(want, got) {
   return wanted.every((word) => found.has(word));
 }
 
-/* iTunes hands back a 100px thumbnail; the same URL serves any size. */
-export async function itunesCover({ title, creator }, media) {
+/* iTunes hands back a 100px thumbnail; the same URL serves any size, but how
+   big "any size" actually is depends on the edition that was uploaded, and the
+   search does not say. Taking the first match got Heart of Darkness at 665px
+   when the same query also offered the same book at 1500px, so this returns
+   every edition that agrees on the title and lets the caller measure a few. */
+export async function itunesCovers({ title, creator }, media, limit = 12) {
   const term = encodeURIComponent(`${title} ${creator || ""}`.trim());
   const entity = media === "music" ? "&entity=album" : "";
   const payload = await (await get(
-    `https://itunes.apple.com/search?term=${term}&media=${media}${entity}&limit=5&country=US`
+    `https://itunes.apple.com/search?term=${term}&media=${media}${entity}&limit=${limit}&country=US`
   )).json();
 
+  const urls = [];
   for (const result of payload.results || []) {
     const name = result.collectionName || result.trackName;
     if (!result.artworkUrl100 || !titlesAgree(title, name)) continue;
-    return result.artworkUrl100.replace(/\/\d+x\d+bb\./, "/2000x2000bb.");
+    /* The title alone is not enough. "Solo Wurlitzer Electric Piano: Rob Arthur
+       Performs Miles Davis' Kind of Blue" contains every word of "Kind of
+       Blue", and it is not Kind of Blue. When the item names a creator, whoever
+       the result is credited to has to be that creator. */
+    if (creator && !creatorAgrees(creator, result.artistName)) continue;
+    urls.push(result.artworkUrl100.replace(/\/\d+x\d+bb\./, "/2000x2000bb."));
   }
-  return null;
+  return urls;
+}
+
+/* A surname is enough, and has to be: catalogues write "Ursula K. Le Guin",
+   "Ursula Le Guin" and "Le Guin, Ursula K." for the same person. So the test is
+   that some distinctive word of the wanted name appears in the credited one. */
+export function creatorAgrees(want, got) {
+  const wanted = words(want).filter((word) => word.length > 2);
+  if (!wanted.length) return true;
+  const found = new Set(words(got));
+  return wanted.some((word) => found.has(word));
+}
+
+/* Kept for callers that only want one. */
+export async function itunesCover(item, media) {
+  const [first] = await itunesCovers(item, media, 5);
+  return first ?? null;
 }
 
 /* TMDB's own search, matched on title and year so a remake does not win. */
@@ -102,25 +128,37 @@ export async function tmdbPoster({ title, year }) {
   return null;
 }
 
-/* Downloads and returns the bytes only if the artwork is genuinely bigger than
-   what is already there; `minWidth` of 0 accepts anything readable. */
+const MEASURE_AT_MOST = 5;
+
+/* Downloads and returns the bytes of the biggest edition that agrees on the
+   title, and only if it beats `minWidth`; 0 accepts anything readable. */
 export async function bestCover(item, { minWidth = 0 } = {}) {
   const attempts = [];
-  if (item.type === "book") attempts.push(["iTunes", () => itunesCover(item, "ebook")]);
-  if (item.type === "album") attempts.push(["iTunes", () => itunesCover(item, "music")]);
-  if (item.type === "film") attempts.push(["TMDB", () => tmdbPoster(item)]);
-  if (item.coverUrl) attempts.push(["source", () => item.coverUrl]);
+  if (item.type === "book") attempts.push(["iTunes", () => itunesCovers(item, "ebook")]);
+  if (item.type === "album") attempts.push(["iTunes", () => itunesCovers(item, "music")]);
+  if (item.type === "film") attempts.push(["TMDB", async () => [await tmdbPoster(item)]]);
+  if (item.coverUrl) attempts.push(["source", async () => [item.coverUrl]]);
 
   const notes = [];
   for (const [name, resolve] of attempts) {
+    let best = null;
     try {
-      const url = await resolve();
-      if (!url) { notes.push(`${name} had nothing`); continue; }
-      const buffer = Buffer.from(await (await get(url)).arrayBuffer());
-      const size = imageSize(buffer);
-      if (!size) { notes.push(`${name} sent an unreadable image`); continue; }
-      if (size.width <= minWidth) { notes.push(`${name} offered only ${size.width}px`); continue; }
-      return { buffer, size, source: name, url };
+      const urls = (await resolve()).filter(Boolean);
+      if (!urls.length) { notes.push(`${name} had nothing`); continue; }
+
+      /* Measuring costs a download each, so only the first few editions are
+         weighed. They come back roughly best-match first, so the biggest of
+         those is the right cover rather than merely a big one. */
+      for (const url of urls.slice(0, MEASURE_AT_MOST)) {
+        try {
+          const buffer = Buffer.from(await (await get(url)).arrayBuffer());
+          const size = imageSize(buffer);
+          if (!size || size.width <= minWidth) continue;
+          if (!best || size.width > best.size.width) best = { buffer, size, source: name, url };
+        } catch { /* one bad edition is not a reason to abandon the rest */ }
+      }
+      if (best) return best;
+      notes.push(`${name} offered nothing over ${minWidth}px`);
     } catch (err) {
       notes.push(`${name} failed: ${err.message}`);
     }

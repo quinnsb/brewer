@@ -43,7 +43,7 @@ import path from "node:path";
 import { parseGoodreads, parseLetterboxd, feedUrls } from "../lib/feeds.mjs";
 import { slug } from "./lib/identity.mjs";
 import { loadEnv } from "./lib/env.mjs";
-import { imageSize, get, titlesAgree, itunesCover, tmdbPoster } from "./lib/covers.mjs";
+import { get, bestCover } from "./lib/covers.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const OVERRIDE_DIR = path.join(ROOT, "images", "library", "overrides");
@@ -96,43 +96,21 @@ async function main() {
 
     /* Books get the ebook catalogue first because it answers for almost
          everything; the feed is the fallback. Films have only the feed. */
-    const attempts = [];
-    if (item.type === "book") attempts.push(["iTunes", () => itunesCover(item, "ebook")]);
-    if (item.type === "album") attempts.push(["iTunes", () => itunesCover(item, "music")]);
-    if (item.type === "film") attempts.push(["TMDB", () => tmdbPoster(item)]);
-    if (offered.has(item.id)) attempts.push([item.type === "book" ? "Goodreads" : "Letterboxd", () => offered.get(item.id)]);
-
-    if (!attempts.length) {
-      stuck.push({ item, was, note: "no source for this type" });
+    /* The shared picker measures several editions and keeps the biggest, which
+       is the difference between Heart of Darkness at 665px and the same book at
+       1500px from the same query. A replacement no bigger than what is already
+       there is not an upgrade, so the floor is what the item already has. */
+    const found = await bestCover(
+      { ...item, coverUrl: offered.get(item.id) },
+      { minWidth: Math.round(was * 1.25) }
+    );
+    if (!found.buffer) {
+      stuck.push({ item, was, note: found.notes.join("; ") });
       continue;
     }
-
-    let best = null;
-    const notes = [];
-    for (const [name, resolve] of attempts) {
-      try {
-        const url = await resolve();
-        if (!url) { notes.push(`${name} had nothing`); continue; }
-        const buffer = Buffer.from(await (await get(url)).arrayBuffer());
-        const size = imageSize(buffer);
-        if (!size) { notes.push(`${name} sent an unreadable image`); continue; }
-        /* A replacement no bigger than what is already there is not an upgrade,
-           and writing it would only add a file to explain later. */
-        if (size.width <= was * 1.25) { notes.push(`${name} offered only ${size.width}px`); continue; }
-        best = { buffer, size, name };
-        break;
-      } catch (err) {
-        notes.push(`${name} failed: ${err.message}`);
-      }
-    }
-
-    if (!best) {
-      stuck.push({ item, was, note: notes.join("; ") });
-      continue;
-    }
-    if (APPLY) await writeFile(path.join(OVERRIDE_DIR, `${item.id}.jpg`), best.buffer);
-    upgraded.push({ item, was, now: best.size.width });
-    console.log(`  ${APPLY ? "wrote" : "would"}  ${item.id.padEnd(42)} ${was}px -> ${best.size.width}px  (${best.name})`);
+    if (APPLY) await writeFile(path.join(OVERRIDE_DIR, `${item.id}.jpg`), found.buffer);
+    upgraded.push({ item, was, now: found.size.width });
+    console.log(`  ${APPLY ? "wrote" : "would"}  ${item.id.padEnd(42)} ${was}px -> ${found.size.width}px  (${found.source})`);
     /* iTunes rate limits an unauthenticated caller fairly aggressively. */
     await new Promise((r) => setTimeout(r, 350));
   }

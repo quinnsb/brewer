@@ -90,7 +90,7 @@
     }
   },
   "book-starclimber": {
-    "fingerprint": "143588:1787345778987",
+    "fingerprint": "143588:1787348891969",
     "width": 528,
     "height_px": 750,
     "palette": {
@@ -190,12 +190,12 @@
     }
   },
   "book-the-fifth-season": {
-    "fingerprint": "366251:1787264332281",
-    "width": 664,
-    "height_px": 1000,
+    "fingerprint": "1124521:1787348834559",
+    "width": 1328,
+    "height_px": 2000,
     "palette": {
-      "cover": "#2d352f",
-      "accent": "#84760f",
+      "cover": "#2c352e",
+      "accent": "#837716",
       "ink": "#f1ece3"
     }
   },
@@ -220,22 +220,22 @@
     }
   },
   "book-the-stone-sky": {
-    "fingerprint": "393145:1787264355198",
-    "width": 659,
-    "height_px": 1000,
+    "fingerprint": "1284126:1787348837839",
+    "width": 1318,
+    "height_px": 2000,
     "palette": {
-      "cover": "#2a413a",
-      "accent": "#256a88",
+      "cover": "#2a4139",
+      "accent": "#185d79",
       "ink": "#f1ece3"
     }
   },
   "book-heart-of-darkness": {
-    "fingerprint": "54003:1787345792106",
-    "width": 665,
-    "height_px": 982,
+    "fingerprint": "301349:1787348859030",
+    "width": 1500,
+    "height_px": 2000,
     "palette": {
-      "cover": "#3c3c3c",
-      "accent": "#3b3a3a",
+      "cover": "#272716",
+      "accent": "#af9d3e",
       "ink": "#f1ece3"
     }
   },
@@ -836,6 +836,146 @@
     "palette": {
       "cover": "#6d6e63",
       "accent": "#edecac",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-dune": {
+    "fingerprint": "280596:1787348724793",
+    "width": 1117,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#714a2b",
+      "accent": "#f5bc54",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-project-hail-mary": {
+    "fingerprint": "819956:1787348724794",
+    "width": 1297,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#2e3b39",
+      "accent": "#05404b",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-the-way-of-kings": {
+    "fingerprint": "804126:1787348724794",
+    "width": 1328,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#605158",
+      "accent": "#f9b65a",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-song-of-solomon": {
+    "fingerprint": "314951:1787348724795",
+    "width": 1297,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#1a5752",
+      "accent": "#008c95",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-tomorrow-and-tomorrow-and-tomorrow": {
+    "fingerprint": "992418:1787348724795",
+    "width": 1297,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#767d73",
+      "accent": "#fee147",
+      "ink": "#141210"
+    }
+  },
+  "book-norwegian-wood": {
+    "fingerprint": "299491:1787348724795",
+    "width": 1297,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#5f511e",
+      "accent": "#f98c09",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-the-song-of-achilles": {
+    "fingerprint": "793518:1787348724796",
+    "width": 1328,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#366957",
+      "accent": "#02abbf",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-lincoln-in-the-bardo": {
+    "fingerprint": "1556718:1787348724796",
+    "width": 1332,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#33554f",
+      "accent": "#14655a",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-narrative-of-the-life-of-frederick-douglass": {
+    "fingerprint": "256529:1787348724796",
+    "width": 1250,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#961d18",
+      "accent": "#d70600",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-the-nightingale": {
+    "fingerprint": "665423:1787348724797",
+    "width": 1333,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#294246",
+      "accent": "#816d20",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-go-tell-it-on-the-mountain": {
+    "fingerprint": "612354:1787348724797",
+    "width": 1293,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#525049",
+      "accent": "#f0dbac",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-of-mice-and-men": {
+    "fingerprint": "251266:1787348724797",
+    "width": 1133,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#796b50",
+      "accent": "#ebc15a",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-on-writing": {
+    "fingerprint": "398090:1787348724800",
+    "width": 1313,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#1e1e1e",
+      "accent": "#1f1f1f",
+      "ink": "#f1ece3"
+    }
+  },
+  "book-dark-matter": {
+    "fingerprint": "455997:1787348724800",
+    "width": 1300,
+    "height_px": 2000,
+    "palette": {
+      "cover": "#4a504f",
+      "accent": "#cee7ea",
       "ink": "#f1ece3"
     }
   }

@@ -1,89 +1,362 @@
 {
-  "book-the-left-hand-of-darkness": ["Science fiction"],
-  "book-gravitys-rainbow": ["Postmodern fiction", "Historical fiction"],
-  "book-the-dispossessed": ["Science fiction"],
-  "book-blood-meridian": ["Western", "Historical fiction"],
-  "book-housekeeping": ["Literary fiction"],
-  "book-the-sellout": ["Satire", "Literary fiction"],
-  "book-cloud-atlas": ["Literary fiction", "Science fiction"],
-  "book-a-visit-from-the-goon-squad": ["Literary fiction"],
-  "book-piranesi": ["Fantasy"],
-  "book-starclimber": ["Fantasy", "Young adult"],
-  "book-never-let-me-go": ["Science fiction", "Literary fiction"],
-  "book-the-martian": ["Science fiction"],
-  "book-the-bonesetters-daughter": ["Historical fiction", "Family saga"],
-  "book-the-hobbit": ["Fantasy", "Adventure"],
-  "book-dawn": ["Science fiction"],
-  "book-moby-dick": ["Adventure", "Literary fiction"],
-  "book-things-fall-apart": ["Historical fiction", "Literary fiction"],
-  "book-hatchet": ["Adventure", "Young adult"],
-  "book-enders-game": ["Science fiction"],
-  "book-the-fifth-season": ["Fantasy", "Science fiction"],
-  "book-a-day-of-fallen-night": ["Fantasy"],
-  "book-the-call-of-the-wild": ["Adventure"],
-  "book-the-stone-sky": ["Fantasy", "Science fiction"],
-  "book-heart-of-darkness": ["Literary fiction", "Novella"],
-  "book-pretty-as-a-picture": ["Mystery", "Thriller"],
-  "book-ready-player-two": ["Science fiction"],
-  "book-normal-people": ["Literary fiction", "Romance"],
-  "book-feed": ["Science fiction", "Young adult"],
-  "book-the-fellowship-of-the-ring": ["Fantasy", "Adventure"],
-
-  "album-coloring-book": ["Hip-hop", "Gospel"],
-  "album-where-the-light-is-john-mayer-live-in-los-angeles": ["Blues rock", "Singer-songwriter"],
-  "album-in-between-dreams": ["Singer-songwriter", "Folk rock"],
-  "album-blonde-on-blonde": ["Folk rock", "Blues rock"],
-  "album-kind-of-blue": ["Modal jazz"],
-  "album-transatlanticism": ["Indie rock"],
-  "album-reading-writing-and-arithmetic": ["Jangle pop", "Dream pop"],
-  "album-night-train": ["Jazz"],
-  "album-a-boy-named-charlie-brown": ["Jazz", "Soundtrack"],
-  "album-gordon": ["Alternative rock"],
-  "album-come-away-with-me": ["Jazz pop", "Singer-songwriter"],
-  "album-mr-finish-line": ["Funk"],
-  "album-magic": ["Pop", "Singer-songwriter"],
-  "album-messy": ["Soul", "Pop"],
-  "album-plans": ["Indie rock"],
-  "album-thriller": ["Pop", "R&B"],
-  "album-sound-of-silver": ["Dance-punk", "Electronic"],
-  "album-songs-in-the-key-of-life": ["Soul", "R&B"],
-  "album-the-crux": ["Pop rock", "Indie pop"],
-  "album-upstairs-at-erics": ["Synth-pop", "New wave"],
-  "album-talon-of-the-hawk": ["Indie rock", "Folk punk"],
-  "album-the-joshua-tree": ["Rock"],
-  "album-charm": ["Baroque pop", "Soul"],
-  "album-jackson-square": ["Alternative rock"],
-  "album-funeral": ["Indie rock", "Baroque pop"],
-
-  "film-there-will-be-blood": ["Drama", "Historical"],
-  "film-in-the-mood-for-love": ["Romance", "Drama"],
-  "film-paris-texas-film": ["Drama", "Road movie"],
-  "film-burning-2018-film": ["Mystery", "Drama"],
-  "film-the-master-2012-film": ["Drama"],
-  "film-moonlight": ["Drama", "Coming-of-age"],
-  "film-chungking-express": ["Romance", "Comedy-drama"],
-  "film-first-reformed": ["Drama", "Thriller"],
-  "film-ferris-buellers-day-off": ["Comedy", "Coming-of-age"],
-  "film-the-empire-strikes-back": ["Science fiction", "Adventure"],
-  "film-moonrise-kingdom": ["Comedy-drama", "Romance"],
-  "film-oceans-eleven": ["Heist", "Crime"],
-  "film-mission-impossible-fallout": ["Action", "Spy"],
-  "film-kikis-delivery-service": ["Animation", "Fantasy"],
-  "film-la-la-land": ["Musical", "Romance"],
-  "film-treasure-planet": ["Animation", "Science fiction", "Adventure"],
-  "film-a-goofy-movie": ["Animation", "Comedy", "Musical"],
-  "film-meet-the-robinsons": ["Animation", "Science fiction", "Comedy"],
-
-  "other-99-invisible": ["Design"],
-  "other-design-matters-with-debbie-millman": ["Design", "Interviews"],
-  "other-song-exploder": ["Music", "Interviews"],
-  "other-the-rest-is-history": ["History"],
-  "other-the-big-picture": ["Film"],
-  "other-radio-ambulante": ["Documentary", "Society and culture"],
-  "other-the-anthropocene-reviewed": ["Essays", "Society and culture"],
-  "other-my-brother-my-brother-and-me": ["Comedy", "Advice"],
-  "other-the-adventure-zone": ["Actual play", "Comedy fiction"],
-  "other-wonderful": ["Comedy", "Society and culture"],
-  "other-the-besties": ["Video games"],
-  "other-revisionist-history": ["History", "Society and culture"]
+  "book-the-left-hand-of-darkness": [
+    "Science fiction"
+  ],
+  "book-gravitys-rainbow": [
+    "Postmodern fiction",
+    "Historical fiction"
+  ],
+  "book-the-dispossessed": [
+    "Science fiction"
+  ],
+  "book-blood-meridian": [
+    "Western",
+    "Historical fiction"
+  ],
+  "book-housekeeping": [
+    "Literary fiction"
+  ],
+  "book-the-sellout": [
+    "Satire",
+    "Literary fiction"
+  ],
+  "book-cloud-atlas": [
+    "Literary fiction",
+    "Science fiction"
+  ],
+  "book-a-visit-from-the-goon-squad": [
+    "Literary fiction"
+  ],
+  "book-piranesi": [
+    "Fantasy"
+  ],
+  "book-starclimber": [
+    "Fantasy",
+    "Young adult"
+  ],
+  "book-never-let-me-go": [
+    "Science fiction",
+    "Literary fiction"
+  ],
+  "book-the-martian": [
+    "Science fiction"
+  ],
+  "book-the-bonesetters-daughter": [
+    "Historical fiction",
+    "Family saga"
+  ],
+  "book-the-hobbit": [
+    "Fantasy",
+    "Adventure"
+  ],
+  "book-dawn": [
+    "Science fiction"
+  ],
+  "book-moby-dick": [
+    "Adventure",
+    "Literary fiction"
+  ],
+  "book-things-fall-apart": [
+    "Historical fiction",
+    "Literary fiction"
+  ],
+  "book-hatchet": [
+    "Adventure",
+    "Young adult"
+  ],
+  "book-enders-game": [
+    "Science fiction"
+  ],
+  "book-the-fifth-season": [
+    "Fantasy",
+    "Science fiction"
+  ],
+  "book-a-day-of-fallen-night": [
+    "Fantasy"
+  ],
+  "book-the-call-of-the-wild": [
+    "Adventure"
+  ],
+  "book-the-stone-sky": [
+    "Fantasy",
+    "Science fiction"
+  ],
+  "book-heart-of-darkness": [
+    "Literary fiction",
+    "Novella"
+  ],
+  "book-pretty-as-a-picture": [
+    "Mystery",
+    "Thriller"
+  ],
+  "book-ready-player-two": [
+    "Science fiction"
+  ],
+  "book-normal-people": [
+    "Literary fiction",
+    "Romance"
+  ],
+  "book-feed": [
+    "Science fiction",
+    "Young adult"
+  ],
+  "book-the-fellowship-of-the-ring": [
+    "Fantasy",
+    "Adventure"
+  ],
+  "album-coloring-book": [
+    "Hip-hop",
+    "Gospel"
+  ],
+  "album-where-the-light-is-john-mayer-live-in-los-angeles": [
+    "Blues rock",
+    "Singer-songwriter"
+  ],
+  "album-in-between-dreams": [
+    "Singer-songwriter",
+    "Folk rock"
+  ],
+  "album-blonde-on-blonde": [
+    "Folk rock",
+    "Blues rock"
+  ],
+  "album-kind-of-blue": [
+    "Modal jazz"
+  ],
+  "album-transatlanticism": [
+    "Indie rock"
+  ],
+  "album-reading-writing-and-arithmetic": [
+    "Jangle pop",
+    "Dream pop"
+  ],
+  "album-night-train": [
+    "Jazz"
+  ],
+  "album-a-boy-named-charlie-brown": [
+    "Jazz",
+    "Soundtrack"
+  ],
+  "album-gordon": [
+    "Alternative rock"
+  ],
+  "album-come-away-with-me": [
+    "Jazz pop",
+    "Singer-songwriter"
+  ],
+  "album-mr-finish-line": [
+    "Funk"
+  ],
+  "album-magic": [
+    "Pop",
+    "Singer-songwriter"
+  ],
+  "album-messy": [
+    "Soul",
+    "Pop"
+  ],
+  "album-plans": [
+    "Indie rock"
+  ],
+  "album-thriller": [
+    "Pop",
+    "R&B"
+  ],
+  "album-sound-of-silver": [
+    "Dance-punk",
+    "Electronic"
+  ],
+  "album-songs-in-the-key-of-life": [
+    "Soul",
+    "R&B"
+  ],
+  "album-the-crux": [
+    "Pop rock",
+    "Indie pop"
+  ],
+  "album-upstairs-at-erics": [
+    "Synth-pop",
+    "New wave"
+  ],
+  "album-talon-of-the-hawk": [
+    "Indie rock",
+    "Folk punk"
+  ],
+  "album-the-joshua-tree": [
+    "Rock"
+  ],
+  "album-charm": [
+    "Baroque pop",
+    "Soul"
+  ],
+  "album-jackson-square": [
+    "Alternative rock"
+  ],
+  "album-funeral": [
+    "Indie rock",
+    "Baroque pop"
+  ],
+  "film-there-will-be-blood": [
+    "Drama",
+    "Historical"
+  ],
+  "film-in-the-mood-for-love": [
+    "Romance",
+    "Drama"
+  ],
+  "film-paris-texas-film": [
+    "Drama",
+    "Road movie"
+  ],
+  "film-burning-2018-film": [
+    "Mystery",
+    "Drama"
+  ],
+  "film-the-master-2012-film": [
+    "Drama"
+  ],
+  "film-moonlight": [
+    "Drama",
+    "Coming-of-age"
+  ],
+  "film-chungking-express": [
+    "Romance",
+    "Comedy-drama"
+  ],
+  "film-first-reformed": [
+    "Drama",
+    "Thriller"
+  ],
+  "film-ferris-buellers-day-off": [
+    "Comedy",
+    "Coming-of-age"
+  ],
+  "film-the-empire-strikes-back": [
+    "Science fiction",
+    "Adventure"
+  ],
+  "film-moonrise-kingdom": [
+    "Comedy-drama",
+    "Romance"
+  ],
+  "film-oceans-eleven": [
+    "Heist",
+    "Crime"
+  ],
+  "film-mission-impossible-fallout": [
+    "Action",
+    "Spy"
+  ],
+  "film-kikis-delivery-service": [
+    "Animation",
+    "Fantasy"
+  ],
+  "film-la-la-land": [
+    "Musical",
+    "Romance"
+  ],
+  "film-treasure-planet": [
+    "Animation",
+    "Science fiction",
+    "Adventure"
+  ],
+  "film-a-goofy-movie": [
+    "Animation",
+    "Comedy",
+    "Musical"
+  ],
+  "film-meet-the-robinsons": [
+    "Animation",
+    "Science fiction",
+    "Comedy"
+  ],
+  "other-99-invisible": [
+    "Design"
+  ],
+  "other-design-matters-with-debbie-millman": [
+    "Design",
+    "Interviews"
+  ],
+  "other-song-exploder": [
+    "Music",
+    "Interviews"
+  ],
+  "other-the-rest-is-history": [
+    "History"
+  ],
+  "other-the-big-picture": [
+    "Film"
+  ],
+  "other-radio-ambulante": [
+    "Documentary",
+    "Society and culture"
+  ],
+  "other-the-anthropocene-reviewed": [
+    "Essays",
+    "Society and culture"
+  ],
+  "other-my-brother-my-brother-and-me": [
+    "Comedy",
+    "Advice"
+  ],
+  "other-the-adventure-zone": [
+    "Actual play",
+    "Comedy fiction"
+  ],
+  "other-wonderful": [
+    "Comedy",
+    "Society and culture"
+  ],
+  "other-the-besties": [
+    "Video games"
+  ],
+  "other-revisionist-history": [
+    "History",
+    "Society and culture"
+  ],
+  "book-dune": [
+    "Science fiction"
+  ],
+  "book-project-hail-mary": [
+    "Science fiction"
+  ],
+  "book-the-way-of-kings": [
+    "Fantasy"
+  ],
+  "book-song-of-solomon": [
+    "Literary fiction"
+  ],
+  "book-tomorrow-and-tomorrow-and-tomorrow": [
+    "Literary fiction"
+  ],
+  "book-norwegian-wood": [
+    "Literary fiction"
+  ],
+  "book-the-song-of-achilles": [
+    "Historical fiction"
+  ],
+  "book-lincoln-in-the-bardo": [
+    "Literary fiction",
+    "Historical fiction"
+  ],
+  "book-narrative-of-the-life-of-frederick-douglass": [
+    "Memoir"
+  ],
+  "book-the-nightingale": [
+    "Historical fiction"
+  ],
+  "book-go-tell-it-on-the-mountain": [
+    "Literary fiction"
+  ],
+  "book-of-mice-and-men": [
+    "Literary fiction",
+    "Novella"
+  ],
+  "book-on-writing": [
+    "Memoir"
+  ],
+  "book-dark-matter": [
+    "Science fiction",
+    "Thriller"
+  ]
 }

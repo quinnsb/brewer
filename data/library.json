@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T21:06:31.786Z",
+  "generatedAt": "2026-08-21T21:48:58.035Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -1009,7 +1009,7 @@
       "creator": "N. K. Jemisin",
       "year": 2015,
       "detail": null,
-      "cover": "images/library/book-the-fifth-season.jpg",
+      "cover": "images/library/overrides/book-the-fifth-season.jpg",
       "sourceUrl": "https://books.apple.com/us/book/the-fifth-season/id771220893?uo=4",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -1037,11 +1037,11 @@
         "N. K. Jemisin"
       ],
       "reviewHtml": null,
-      "width": 664,
-      "height_px": 1000,
+      "width": 1328,
+      "height_px": 2000,
       "palette": {
-        "cover": "#2d352f",
-        "accent": "#84760f",
+        "cover": "#2c352e",
+        "accent": "#837716",
         "ink": "#f1ece3"
       }
     },
@@ -1154,7 +1154,7 @@
       "creator": "N. K. Jemisin",
       "year": 2017,
       "detail": null,
-      "cover": "images/library/book-the-stone-sky.jpg",
+      "cover": "images/library/overrides/book-the-stone-sky.jpg",
       "sourceUrl": "https://books.apple.com/us/book/the-stone-sky/id1182872712?uo=4",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -1182,11 +1182,11 @@
         "N. K. Jemisin"
       ],
       "reviewHtml": null,
-      "width": 659,
-      "height_px": 1000,
+      "width": 1318,
+      "height_px": 2000,
       "palette": {
-        "cover": "#2a413a",
-        "accent": "#256a88",
+        "cover": "#2a4139",
+        "accent": "#185d79",
         "ink": "#f1ece3"
       }
     },
@@ -1235,11 +1235,11 @@
         "Joseph Conrad"
       ],
       "reviewHtml": null,
-      "width": 665,
-      "height_px": 982,
+      "width": 1500,
+      "height_px": 2000,
       "palette": {
-        "cover": "#3c3c3c",
-        "accent": "#3b3a3a",
+        "cover": "#272716",
+        "accent": "#af9d3e",
         "ink": "#f1ece3"
       }
     },
@@ -6358,6 +6358,704 @@
       "palette": {
         "cover": "#6d6e63",
         "accent": "#edecac",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-dune",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Dune",
+      "creator": "Frank Herbert",
+      "year": 1965,
+      "detail": "658 pages",
+      "cover": "images/library/book-dune.jpg",
+      "sourceUrl": "https://www.goodreads.com/review/show/4304879850?utm_medium=api&utm_source=rss",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2021-10-28",
+      "facts": [
+        [
+          "Author",
+          "Frank Herbert"
+        ],
+        [
+          "First published",
+          1965
+        ],
+        [
+          "Pages",
+          658
+        ],
+        [
+          "ISBN",
+          "059309932X"
+        ]
+      ],
+      "height": 0.575,
+      "thickness": 0.909,
+      "starred": false,
+      "genres": [
+        "Science fiction"
+      ],
+      "creators": [
+        "Frank Herbert"
+      ],
+      "reviewHtml": null,
+      "width": 1117,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#714a2b",
+        "accent": "#f5bc54",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-project-hail-mary",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Project Hail Mary",
+      "creator": "Andy Weir",
+      "year": 2021,
+      "detail": "476 pages",
+      "cover": "images/library/book-project-hail-mary.jpg",
+      "sourceUrl": "https://www.goodreads.com/review/show/4350774632?utm_medium=api&utm_source=rss",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2022-01-20",
+      "facts": [
+        [
+          "Author",
+          "Andy Weir"
+        ],
+        [
+          "First published",
+          2021
+        ],
+        [
+          "Pages",
+          476
+        ],
+        [
+          "ISBN",
+          "0593135202"
+        ]
+      ],
+      "height": 0.596,
+      "thickness": 1.474,
+      "starred": false,
+      "genres": [
+        "Science fiction"
+      ],
+      "creators": [
+        "Andy Weir"
+      ],
+      "reviewHtml": null,
+      "width": 1297,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#2e3b39",
+        "accent": "#05404b",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-the-way-of-kings",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "The Way of Kings",
+      "creator": "Brandon Sanderson",
+      "year": 2010,
+      "detail": "1007 pages",
+      "cover": "images/library/book-the-way-of-kings.jpg",
+      "sourceUrl": "https://www.goodreads.com/review/show/4613578216?utm_medium=api&utm_source=rss",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2024-12-01",
+      "facts": [
+        [
+          "Author",
+          "Brandon Sanderson"
+        ],
+        [
+          "First published",
+          2010
+        ],
+        [
+          "Pages",
+          1007
+        ],
+        [
+          "ISBN",
+          "0765326353"
+        ]
+      ],
+      "height": 0.922,
+      "thickness": 0.962,
+      "starred": false,
+      "genres": [
+        "Fantasy"
+      ],
+      "creators": [
+        "Brandon Sanderson"
+      ],
+      "reviewHtml": null,
+      "width": 1328,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#605158",
+        "accent": "#f9b65a",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-song-of-solomon",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Song of Solomon",
+      "creator": "Toni Morrison",
+      "year": 1977,
+      "detail": "338 pages",
+      "cover": "images/library/book-song-of-solomon.jpg",
+      "sourceUrl": "https://www.goodreads.com/review/show/3895325378?utm_medium=api&utm_source=rss",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Author",
+          "Toni Morrison"
+        ],
+        [
+          "First published",
+          1977
+        ],
+        [
+          "Pages",
+          338
+        ]
+      ],
+      "height": 0.657,
+      "thickness": 0.971,
+      "starred": false,
+      "genres": [
+        "Literary fiction"
+      ],
+      "creators": [
+        "Toni Morrison"
+      ],
+      "reviewHtml": null,
+      "width": 1297,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#1a5752",
+        "accent": "#008c95",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-tomorrow-and-tomorrow-and-tomorrow",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Tomorrow, and Tomorrow, and Tomorrow",
+      "creator": "Gabrielle Zevin",
+      "year": 2022,
+      "detail": "418 pages",
+      "cover": "images/library/book-tomorrow-and-tomorrow-and-tomorrow.jpg",
+      "sourceUrl": "https://www.goodreads.com/review/show/5131955263?utm_medium=api&utm_source=rss",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2023-03-07",
+      "facts": [
+        [
+          "Author",
+          "Gabrielle Zevin"
+        ],
+        [
+          "First published",
+          2022
+        ],
+        [
+          "Pages",
+          418
+        ]
+      ],
+      "height": 0.965,
+      "thickness": 0.897,
+      "starred": false,
+      "genres": [
+        "Literary fiction"
+      ],
+      "creators": [
+        "Gabrielle Zevin"
+      ],
+      "reviewHtml": null,
+      "width": 1297,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#767d73",
+        "accent": "#fee147",
+        "ink": "#141210"
+      }
+    },
+    {
+      "id": "book-norwegian-wood",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Norwegian Wood",
+      "creator": "Haruki Murakami",
+      "year": 1987,
+      "detail": "296 pages",
+      "cover": "images/library/book-norwegian-wood.jpg",
+      "sourceUrl": "https://www.goodreads.com/review/show/4305718824?utm_medium=api&utm_source=rss",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2021-11-25",
+      "facts": [
+        [
+          "Author",
+          "Haruki Murakami"
+        ],
+        [
+          "First published",
+          1987
+        ],
+        [
+          "Pages",
+          296
+        ]
+      ],
+      "height": 0.722,
+      "thickness": 0.838,
+      "starred": false,
+      "genres": [
+        "Literary fiction"
+      ],
+      "creators": [
+        "Haruki Murakami"
+      ],
+      "reviewHtml": null,
+      "width": 1297,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#5f511e",
+        "accent": "#f98c09",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-the-song-of-achilles",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "The Song of Achilles",
+      "creator": "Madeline Miller",
+      "year": 2011,
+      "detail": "408 pages",
+      "cover": "images/library/book-the-song-of-achilles.jpg",
+      "sourceUrl": "https://www.goodreads.com/review/show/4739600753?utm_medium=api&utm_source=rss",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2022-05-29",
+      "facts": [
+        [
+          "Author",
+          "Madeline Miller"
+        ],
+        [
+          "First published",
+          2011
+        ],
+        [
+          "Pages",
+          408
+        ]
+      ],
+      "height": 0.899,
+      "thickness": 0.746,
+      "starred": false,
+      "genres": [
+        "Historical fiction"
+      ],
+      "creators": [
+        "Madeline Miller"
+      ],
+      "reviewHtml": null,
+      "width": 1328,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#366957",
+        "accent": "#02abbf",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-lincoln-in-the-bardo",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Lincoln in the Bardo",
+      "creator": "George Saunders",
+      "year": 2017,
+      "detail": "368 pages",
+      "cover": "images/library/book-lincoln-in-the-bardo.jpg",
+      "sourceUrl": "https://www.goodreads.com/review/show/5080152789?utm_medium=api&utm_source=rss",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2022-11-16",
+      "facts": [
+        [
+          "Author",
+          "George Saunders"
+        ],
+        [
+          "First published",
+          2017
+        ],
+        [
+          "Pages",
+          368
+        ],
+        [
+          "ISBN",
+          "0812995341"
+        ]
+      ],
+      "height": 0.726,
+      "thickness": 1.394,
+      "starred": false,
+      "genres": [
+        "Literary fiction",
+        "Historical fiction"
+      ],
+      "creators": [
+        "George Saunders"
+      ],
+      "reviewHtml": null,
+      "width": 1332,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#33554f",
+        "accent": "#14655a",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-narrative-of-the-life-of-frederick-douglass",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Narrative of the Life of Frederick Douglass",
+      "creator": "Frederick Douglass",
+      "year": 1845,
+      "detail": "158 pages",
+      "cover": "images/library/book-narrative-of-the-life-of-frederick-douglass.jpg",
+      "sourceUrl": "https://www.goodreads.com/review/show/5175080418?utm_medium=api&utm_source=rss",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2023-04-18",
+      "facts": [
+        [
+          "Author",
+          "Frederick Douglass"
+        ],
+        [
+          "First published",
+          1845
+        ],
+        [
+          "Pages",
+          158
+        ],
+        [
+          "ISBN",
+          "1580495761"
+        ]
+      ],
+      "height": 0.788,
+      "thickness": 0.785,
+      "starred": false,
+      "genres": [
+        "Memoir"
+      ],
+      "creators": [
+        "Frederick Douglass"
+      ],
+      "reviewHtml": null,
+      "width": 1250,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#961d18",
+        "accent": "#d70600",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-the-nightingale",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "The Nightingale",
+      "creator": "Kristin Hannah",
+      "year": 2015,
+      "detail": "564 pages",
+      "cover": "images/library/book-the-nightingale.jpg",
+      "sourceUrl": "https://www.goodreads.com/review/show/4588276942?utm_medium=api&utm_source=rss",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2022-06-13",
+      "facts": [
+        [
+          "Author",
+          "Kristin Hannah"
+        ],
+        [
+          "First published",
+          2015
+        ],
+        [
+          "Pages",
+          564
+        ],
+        [
+          "ISBN",
+          "0312577222"
+        ]
+      ],
+      "height": 0.871,
+      "thickness": 1.242,
+      "starred": false,
+      "genres": [
+        "Historical fiction"
+      ],
+      "creators": [
+        "Kristin Hannah"
+      ],
+      "reviewHtml": null,
+      "width": 1333,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#294246",
+        "accent": "#816d20",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-go-tell-it-on-the-mountain",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Go Tell It on the Mountain",
+      "creator": "James Baldwin",
+      "year": null,
+      "detail": "Book",
+      "cover": "images/library/book-go-tell-it-on-the-mountain.jpg",
+      "sourceUrl": "",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [],
+      "height": 0.703,
+      "thickness": 1.255,
+      "starred": false,
+      "genres": [
+        "Literary fiction"
+      ],
+      "creators": [
+        "James Baldwin"
+      ],
+      "reviewHtml": null,
+      "width": 1293,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#525049",
+        "accent": "#f0dbac",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-of-mice-and-men",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Of Mice and Men",
+      "creator": "John Steinbeck",
+      "year": 1937,
+      "detail": "107 pages",
+      "cover": "images/library/book-of-mice-and-men.jpg",
+      "sourceUrl": "https://www.goodreads.com/review/show/4689914468?utm_medium=api&utm_source=rss",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2022-04-25",
+      "facts": [
+        [
+          "Author",
+          "John Steinbeck"
+        ],
+        [
+          "First published",
+          1937
+        ],
+        [
+          "Pages",
+          107
+        ],
+        [
+          "ISBN",
+          "0142000671"
+        ]
+      ],
+      "height": 0.901,
+      "thickness": 1.18,
+      "starred": false,
+      "genres": [
+        "Literary fiction",
+        "Novella"
+      ],
+      "creators": [
+        "John Steinbeck"
+      ],
+      "reviewHtml": null,
+      "width": 1133,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#796b50",
+        "accent": "#ebc15a",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-on-writing",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "On Writing",
+      "creator": "Stephen King",
+      "year": 2002,
+      "detail": "320 pages",
+      "cover": "images/library/book-on-writing.jpg",
+      "sourceUrl": "https://www.goodreads.com/review/show/4358730508?utm_medium=api&utm_source=rss",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2023-06-08",
+      "facts": [
+        [
+          "Author",
+          "Stephen King"
+        ],
+        [
+          "First published",
+          2002
+        ],
+        [
+          "Pages",
+          320
+        ],
+        [
+          "ISBN",
+          "0743455967"
+        ]
+      ],
+      "height": 0.518,
+      "thickness": 1.032,
+      "starred": false,
+      "genres": [
+        "Memoir"
+      ],
+      "creators": [
+        "Stephen King"
+      ],
+      "reviewHtml": null,
+      "width": 1313,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#1e1e1e",
+        "accent": "#1f1f1f",
+        "ink": "#f1ece3"
+      }
+    },
+    {
+      "id": "book-dark-matter",
+      "type": "book",
+      "shape": "spine",
+      "aspect": 0.66,
+      "title": "Dark Matter",
+      "creator": "Blake Crouch",
+      "year": 2016,
+      "detail": "342 pages",
+      "cover": "images/library/book-dark-matter.jpg",
+      "sourceUrl": "https://www.goodreads.com/review/show/5276300514?utm_medium=api&utm_source=rss",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2023-02-17",
+      "facts": [
+        [
+          "Author",
+          "Blake Crouch"
+        ],
+        [
+          "First published",
+          2016
+        ],
+        [
+          "Pages",
+          342
+        ],
+        [
+          "ISBN",
+          "1101904224"
+        ]
+      ],
+      "height": 0.832,
+      "thickness": 0.976,
+      "starred": false,
+      "genres": [
+        "Science fiction",
+        "Thriller"
+      ],
+      "creators": [
+        "Blake Crouch"
+      ],
+      "reviewHtml": null,
+      "width": 1300,
+      "height_px": 2000,
+      "palette": {
+        "cover": "#4a504f",
+        "accent": "#cee7ea",
         "ink": "#f1ece3"
       }
     }

@@ -1,0 +1,116 @@
+{
+  "importedAt": "2026-08-21T21:45:24.791Z",
+  "source": "library-add-books",
+  "items": [
+    {
+      "type": "book",
+      "query": "Dune Frank Herbert",
+      "title": "Dune",
+      "creator": "Frank Herbert",
+      "year": 1965,
+      "sourceUrl": "https://www.goodreads.com/review/show/4304879850?utm_medium=api&utm_source=rss"
+    },
+    {
+      "type": "book",
+      "query": "Project Hail Mary Andy Weir",
+      "title": "Project Hail Mary",
+      "creator": "Andy Weir",
+      "year": 2021,
+      "sourceUrl": "https://www.goodreads.com/review/show/4350774632?utm_medium=api&utm_source=rss"
+    },
+    {
+      "type": "book",
+      "query": "The Way of Kings Brandon Sanderson",
+      "title": "The Way of Kings",
+      "creator": "Brandon Sanderson",
+      "year": 2010,
+      "sourceUrl": "https://www.goodreads.com/review/show/4613578216?utm_medium=api&utm_source=rss"
+    },
+    {
+      "type": "book",
+      "query": "Song of Solomon Toni Morrison",
+      "title": "Song of Solomon",
+      "creator": "Toni Morrison",
+      "year": 1977,
+      "sourceUrl": "https://www.goodreads.com/review/show/3895325378?utm_medium=api&utm_source=rss"
+    },
+    {
+      "type": "book",
+      "query": "Tomorrow, and Tomorrow, and Tomorrow Gabrielle Zevin",
+      "title": "Tomorrow, and Tomorrow, and Tomorrow",
+      "creator": "Gabrielle Zevin",
+      "year": 2022,
+      "sourceUrl": "https://www.goodreads.com/review/show/5131955263?utm_medium=api&utm_source=rss"
+    },
+    {
+      "type": "book",
+      "query": "Norwegian Wood Haruki Murakami",
+      "title": "Norwegian Wood",
+      "creator": "Haruki Murakami",
+      "year": 1987,
+      "sourceUrl": "https://www.goodreads.com/review/show/4305718824?utm_medium=api&utm_source=rss"
+    },
+    {
+      "type": "book",
+      "query": "The Song of Achilles Madeline Miller",
+      "title": "The Song of Achilles",
+      "creator": "Madeline Miller",
+      "year": 2011,
+      "sourceUrl": "https://www.goodreads.com/review/show/4739600753?utm_medium=api&utm_source=rss"
+    },
+    {
+      "type": "book",
+      "query": "Lincoln in the Bardo George Saunders",
+      "title": "Lincoln in the Bardo",
+      "creator": "George Saunders",
+      "year": 2017,
+      "sourceUrl": "https://www.goodreads.com/review/show/5080152789?utm_medium=api&utm_source=rss"
+    },
+    {
+      "type": "book",
+      "query": "Narrative of the Life of Frederick Douglass Frederick Douglass",
+      "title": "Narrative of the Life of Frederick Douglass",
+      "creator": "Frederick Douglass",
+      "year": 1845,
+      "sourceUrl": "https://www.goodreads.com/review/show/5175080418?utm_medium=api&utm_source=rss"
+    },
+    {
+      "type": "book",
+      "query": "The Nightingale Kristin Hannah",
+      "title": "The Nightingale",
+      "creator": "Kristin Hannah",
+      "year": 2015,
+      "sourceUrl": "https://www.goodreads.com/review/show/4588276942?utm_medium=api&utm_source=rss"
+    },
+    {
+      "type": "book",
+      "query": "Go Tell It on the Mountain James Baldwin",
+      "title": "Go Tell It on the Mountain",
+      "creator": "James Baldwin"
+    },
+    {
+      "type": "book",
+      "query": "Of Mice and Men John Steinbeck",
+      "title": "Of Mice and Men",
+      "creator": "John Steinbeck",
+      "year": 1937,
+      "sourceUrl": "https://www.goodreads.com/review/show/4689914468?utm_medium=api&utm_source=rss"
+    },
+    {
+      "type": "book",
+      "query": "On Writing Stephen King",
+      "title": "On Writing",
+      "creator": "Stephen King",
+      "year": 2002,
+      "sourceUrl": "https://www.goodreads.com/review/show/4358730508?utm_medium=api&utm_source=rss"
+    },
+    {
+      "type": "book",
+      "query": "Dark Matter Blake Crouch",
+      "title": "Dark Matter",
+      "creator": "Blake Crouch",
+      "year": 2016,
+      "sourceUrl": "https://www.goodreads.com/review/show/5276300514?utm_medium=api&utm_source=rss"
+    }
+  ]
+}
