@@ -1,7 +1,7 @@
 /* Media-specific list and catalog pages. The moving corridor is decorative;
    the catalog underneath owns all navigation and accessible media names. */
 
-const DATA_URL = "data/library.json?v=library-polish4";
+const DATA_URL = "data/library.json?v=library-polish5";
 
 const PAGE = {
   book: {

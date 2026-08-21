@@ -8,7 +8,7 @@
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
 
-const DATA_URL = "data/library.json?v=library-polish4";
+const DATA_URL = "data/library.json?v=library-polish5";
 
 const TYPE_LABEL = {
   book: ["Books", "drag or scroll either direction"],
@@ -553,7 +553,25 @@ let detailRoot = null;
 let detailSource = null;
 let detailCloseTimer = 0;
 let detailSwitchTimer = 0;
+let detailResizeTimer = 0;
 const inertBeforeDetail = new Map();
+
+function fitDetailTitle(layer) {
+  const title = layer?.querySelector(".media-detail-header h2");
+  if (!title) return;
+  title.style.removeProperty("font-size");
+  const minimum = innerWidth <= 860 ? 40 : 46;
+  let size = parseFloat(getComputedStyle(title).fontSize);
+  while (title.scrollWidth > title.clientWidth + 1 && size > minimum) {
+    size = Math.max(minimum, size - 2);
+    title.style.fontSize = `${size}px`;
+  }
+}
+
+addEventListener("resize", () => {
+  clearTimeout(detailResizeTimer);
+  detailResizeTimer = setTimeout(() => fitDetailTitle(detailLayer), 80);
+}, { passive: true });
 
 function svgIcon(path) {
   const ns = "http://www.w3.org/2000/svg";
@@ -782,6 +800,8 @@ function openDetail(item, node, { replace = false } = {}) {
       replacement.classList.add("is-in");
       old.replaceWith(replacement);
       detailLayer = replacement;
+      fitDetailTitle(replacement);
+      document.fonts?.ready.then(() => fitDetailTitle(replacement));
       replacement.querySelector(".media-detail-close")?.focus({ preventScroll: true });
     };
     if (REDUCED) swap();
@@ -792,6 +812,8 @@ function openDetail(item, node, { replace = false } = {}) {
   detailLayer = replacement;
   document.body.append(detailLayer);
   setMorphOrigin(detailLayer, morphSource);
+  fitDetailTitle(detailLayer);
+  document.fonts?.ready.then(() => fitDetailTitle(detailLayer));
   document.body.classList.add("media-detail-open");
   setPageInert(true);
   requestAnimationFrame(() => {
@@ -883,7 +905,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-polish4");
+  const { initHero } = await import("./library-hero.js?v=library-polish5");
   initHero(items);
 }
 
