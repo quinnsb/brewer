@@ -65,7 +65,7 @@ if (reducedMotion) document.documentElement.classList.add("reduce-motion");
 function hrefFor(filter, value) {
   const next = new URLSearchParams({ type });
   if (filter && value) next.set(filter, value);
-  return `library-lists.html?${next.toString()}#catalog`;
+  return `library-lists?${next.toString()}#catalog`;
 }
 
 function corridorKeyframes(direction, name) {
@@ -167,7 +167,7 @@ function listCard(list) {
   body.className = "list-card-body";
   const heading = document.createElement("h3");
   const link = document.createElement("a");
-  link.href = `library-lists.html?list=${encodeURIComponent(list.id)}`;
+  link.href = `library-lists?list=${encodeURIComponent(list.id)}`;
   link.textContent = list.title;
   heading.append(link);
   const count = document.createElement("p");
@@ -462,7 +462,7 @@ function renderIndex(lists, grid) {
 function renderOneList(list, grid) {
   const kicker = node("[data-list-kicker]");
   const back = document.createElement("a");
-  back.href = `library-lists.html?type=${type}`;
+  back.href = `library-lists?type=${type}`;
   back.textContent = page.label;
   kicker.replaceChildren(back, document.createTextNode(` / ${list.title}`));
 

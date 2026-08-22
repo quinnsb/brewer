@@ -293,8 +293,8 @@ export function renderShelves(items, root, sources = {}) {
     const truncated = list.length < all.length;
     const label = truncated ? `All ${all.length} ${TYPE_LABEL[type][0].toLowerCase()}` : linkText;
     const href = truncated
-      ? `library-lists.html?type=${anchor}#catalog`
-      : `library-lists.html?type=${anchor}`;
+      ? `library-lists?type=${anchor}#catalog`
+      : `library-lists?type=${anchor}`;
     const listLink = el("a", `lib-btn is-shelf is-${type}`, { href });
     listLink.append(
       Object.assign(el("span"), { textContent: label }),
@@ -851,7 +851,7 @@ function factsNode(item) {
 
 function catalogHref(item, filter, value) {
   const params = new URLSearchParams({ type: item.type, [filter]: value });
-  return `library-lists.html?${params.toString()}#catalog`;
+  return `library-lists?${params.toString()}#catalog`;
 }
 
 function detailMeta(item) {
