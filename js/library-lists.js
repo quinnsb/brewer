@@ -1,14 +1,14 @@
 /* Media-specific list and catalog pages. The moving corridor is decorative;
    the catalog underneath owns all navigation and accessible media names. */
 
-import { wireExpansion } from "./library.js?v=library-detail5";
+import { wireExpansion, coverPicture } from "./library.js?v=library-detail6";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail5";
-const LISTS_URL = "data/library-lists.json?v=library-detail5";
+const DATA_URL = "data/library.json?v=library-detail6";
+const LISTS_URL = "data/library-lists.json?v=library-detail6";
 
 const PAGE = {
   book: {
@@ -122,12 +122,7 @@ function renderStream(items) {
       card.style.setProperty("--stream-animation", animation);
       card.style.setProperty("--stream-speed", `${speed}s`);
       card.style.setProperty("--stream-delay", `${-(index * speed) / cards}s`);
-      const img = document.createElement("img");
-      img.src = item.thumb || item.cover;
-      img.alt = "";
-      img.decoding = "async";
-      img.draggable = false;
-      card.append(img);
+      card.append(coverPicture(item, { tier: "card" }));
       stage.append(card);
     }
   }
@@ -154,12 +149,7 @@ function preview(items) {
     trigger.setAttribute("aria-label", `Open ${item.title} details`);
     trigger.setAttribute("aria-expanded", "false");
     trigger.style.aspectRatio = String(item.aspect || 1);
-    const img = document.createElement("img");
-    img.src = item.thumb || item.cover;
-    img.alt = "";
-    img.loading = "lazy";
-    img.draggable = false;
-    trigger.append(img);
+    trigger.append(coverPicture(item, { tier: "shelf" }));
     frame.append(trigger);
   }
   return frame;
@@ -205,10 +195,14 @@ function addOptions(select, counts, selected) {
   }
 }
 
+/* 87 films have no director. Returning null rather than an empty paragraph
+   keeps the card from reserving a line for a byline it does not have. */
 function creatorLinks(item) {
+  const creators = item.creators?.length ? item.creators : [item.creator].filter(Boolean);
+  if (!creators.length) return null;
   const wrap = document.createElement("p");
   wrap.className = "catalog-card-creator";
-  (item.creators || [item.creator]).forEach((creator, index, creators) => {
+  creators.forEach((creator, index) => {
     const link = document.createElement("a");
     link.href = hrefFor("creator", creator);
     link.textContent = creator;
@@ -227,12 +221,9 @@ function catalogCard(item, rank) {
   imageWrap.dataset.id = item.id;
   imageWrap.setAttribute("aria-label", `Open ${item.title} details`);
   imageWrap.setAttribute("aria-expanded", "false");
-  const img = document.createElement("img");
-  img.src = item.thumb || item.cover;
-  img.alt = `${item.title} cover`;
-  img.loading = "lazy";
-  img.decoding = "async";
-  imageWrap.append(img);
+  const picture = coverPicture(item, { tier: "card" });
+  picture.querySelector("img").alt = `${item.title} cover`;
+  imageWrap.append(picture);
 
   const body = document.createElement("div");
   body.className = "catalog-card-body";
@@ -242,7 +233,7 @@ function catalogCard(item, rank) {
   meta.className = "catalog-card-meta";
   const metadata = [item.year ? String(item.year) : "Year unavailable"];
   if (Number(item.rating) > 0) metadata.push(`Personal ${Number(item.rating).toFixed(1)} / 5`);
-  if (Number(item.externalRating) > 0) metadata.push(`IMDb ${Number(item.externalRating).toFixed(1)} / 10`);
+  if (Number(item.externalRating) > 0) metadata.push(`${EXTERNAL_RATING_LABEL} ${Number(item.externalRating).toFixed(1)} / 10`);
   meta.textContent = metadata.join(" · ");
   const genres = document.createElement("div");
   genres.className = "catalog-card-genres";
@@ -258,42 +249,150 @@ function catalogCard(item, rank) {
     number.textContent = String(rank).padStart(2, "0");
     body.append(number);
   }
-  body.append(title, creatorLinks(item), meta, genres);
+  body.append(title, ...[creatorLinks(item)].filter(Boolean), meta, genres);
   card.append(imageWrap, body);
   return card;
 }
 
+/* The outside score comes from TMDB, and the film panel has always said so.
+   The sort control said "IMDb", which named a source the data never came from. */
+const EXTERNAL_RATING_LABEL = "TMDB";
+
+/* Only the sorts that mean something for this medium. These were hardcoded in
+   the markup, which is how the books catalog came to offer a sort by film
+   rating, on a field no book will ever carry. */
+/* No `types` means every medium. A sort is also dropped when the medium has the
+   field on paper but nothing in it, so an option can never do nothing. */
+const SORTS = {
+  title: { label: "Title" },
+  creator: { label: "Creator" },
+  year: { label: "Release date" },
+  rating: { label: "My rating", field: "rating" },
+  externalRating: {
+    label: `${EXTERNAL_RATING_LABEL} rating`,
+    types: ["film"],
+    field: "externalRating",
+  },
+};
+
+function sortsFor(media) {
+  return Object.entries(SORTS).filter(([, sort]) => {
+    if (sort.types && !sort.types.includes(type)) return false;
+    if (sort.field) return media.some((item) => Number(item[sort.field]) > 0);
+    return true;
+  });
+}
+
+/* Every filter that is on, named the way the controls name it, so the heading
+   and the empty state can both describe the same state in the same words. */
+function activeFilters(genre, creator) {
+  const active = [];
+  if (genre) active.push({ control: "Genre", value: genre });
+  if (creator) active.push({ control: page.creatorControlLabel, value: creator });
+  return active;
+}
+
+/* "Fantasy books." used to be the whole heading even with an author selected,
+   so two different filters produced the same title. A creator on its own leads
+   with the medium, which is why that branch keeps the capitalised label. */
+function catalogTitle(genre, creator) {
+  const medium = page.label.toLowerCase();
+  if (genre && creator) return `${genre} ${medium} by ${creator}.`;
+  if (genre) return `${genre} ${medium}.`;
+  if (creator) return `${page.label} by ${creator}.`;
+  return `All ${medium}.`;
+}
+
+/* Nothing matched. This used to render an empty grid and leave the page as a
+   blank gap above the footer, which reads as a broken page rather than an
+   honest answer. */
+function emptyState(genre, creator, onClear) {
+  const wrap = document.createElement("div");
+  wrap.className = "catalog-empty";
+  const named = activeFilters(genre, creator).map((f) => `${f.control.toLowerCase()} ${f.value}`);
+  const heading = document.createElement("p");
+  heading.className = "catalog-empty-heading";
+  /* Two filters clash with each other; one filter simply has nothing in it. The
+     difference is what the reader needs to know, so the copy follows it. */
+  heading.textContent = named.length === 2 ? "Nothing matches both of those." : "Nothing here yet.";
+  const detail = document.createElement("p");
+  detail.className = "catalog-empty-detail";
+  detail.textContent = named.length === 2
+    ? `There is no ${page.singular} filed under ${named[0]} and ${named[1]}. Dropping either one will bring results back.`
+    : `Nothing in the ${page.label.toLowerCase()} catalog is filed under ${named[0]}.`;
+  const clear = document.createElement("button");
+  clear.type = "button";
+  clear.className = "catalog-empty-clear";
+  clear.textContent = `Clear filters and show all ${page.label.toLowerCase()}`;
+  clear.addEventListener("click", onClear);
+  wrap.append(heading, detail, clear);
+  return wrap;
+}
+
 function renderCatalog(media) {
-  const genreCounts = countsFor(media, (item) => item.genres || []);
-  const creatorCounts = countsFor(media, (item) => item.creators || [item.creator]);
   const genreSelect = node("[data-catalog-genre]");
   const creatorSelect = node("[data-catalog-creator]");
   const sortSelect = node("[data-catalog-sort]");
   const orderSelect = node("[data-catalog-order]");
   const requestedGenre = params.get("genre") || "";
   const requestedCreator = params.get("creator") || "";
-  addOptions(genreSelect, genreCounts, requestedGenre);
-  addOptions(creatorSelect, creatorCounts, requestedCreator);
-  sortSelect.value = params.get("sort") || "title";
+
+  /* Built from the medium rather than the markup, so no catalog offers a sort
+     on a field its items do not have. */
+  sortSelect.replaceChildren(...sortsFor(media).map(([value, sort]) => {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = value === "creator" ? page.creatorControlLabel : sort.label;
+    return option;
+  }));
+  const requestedSort = params.get("sort") || "title";
+  sortSelect.value = [...sortSelect.options].some((o) => o.value === requestedSort) ? requestedSort : "title";
   orderSelect.value = params.get("order") || "asc";
   node("[data-creator-heading]").textContent = page.creatorControlLabel;
-  /* The heading changes per medium, so the placeholder option has to as well,
-     or the album page offers "All authors". Written out per medium rather than
-     pluralised, because "All artist or bands" is not English. */
-  creatorSelect.options[0].textContent = page.creatorControlAll;
   const reset = node("[data-catalog-reset]");
   reset.href = hrefFor();
   reset.textContent = `View all ${page.label.toLowerCase()}`;
   const grid = node("[data-catalog-grid]");
+  const count = node("[data-catalog-count]");
+
+  const creatorsOf = (item) => (item.creators?.length ? item.creators : [item.creator].filter(Boolean));
+
+  /* Each control offers what the other one leaves available, so a combination
+     that matches nothing cannot be assembled from the dropdowns. The value in
+     hand always stays selectable, otherwise choosing it would erase it. */
+  const fillOptions = (genre, creator) => {
+    const forGenres = creator ? media.filter((item) => creatorsOf(item).includes(creator)) : media;
+    const forCreators = genre ? media.filter((item) => item.genres.includes(genre)) : media;
+    genreSelect.replaceChildren(Object.assign(document.createElement("option"), {
+      value: "", textContent: "All genres",
+    }));
+    creatorSelect.replaceChildren(Object.assign(document.createElement("option"), {
+      /* Written out per medium rather than pluralised, because "All artist or
+         bands" is not English. */
+      value: "", textContent: page.creatorControlAll,
+    }));
+    addOptions(genreSelect, countsFor(forGenres, (item) => item.genres || []), genre);
+    addOptions(creatorSelect, countsFor(forCreators, creatorsOf), creator);
+    /* A filter arriving from the URL that the other filter rules out is still
+       shown, so the page reflects its own address and the empty state can
+       explain the clash. */
+    if (genre && !genreSelect.value) addOptions(genreSelect, [[genre, 0]], genre);
+    if (creator && !creatorSelect.value) addOptions(creatorSelect, [[creator, 0]], creator);
+    genreSelect.value = genre;
+    creatorSelect.value = creator;
+  };
+
+  fillOptions(requestedGenre, requestedCreator);
 
   const render = () => {
     const genre = genreSelect.value;
     const creator = creatorSelect.value;
     const sort = sortSelect.value;
     const direction = orderSelect.value === "desc" ? -1 : 1;
+    fillOptions(genre, creator);
     const filtered = media.filter((item) =>
       (!genre || item.genres.includes(genre)) &&
-      (!creator || (item.creators || [item.creator]).includes(creator))
+      (!creator || creatorsOf(item).includes(creator))
     );
     const valueFor = (item) => {
       if (sort === "creator") return item.creator || "";
@@ -308,13 +407,19 @@ function renderCatalog(media) {
       const comparison = typeof av === "number" ? av - bv : av.localeCompare(bv);
       return comparison * direction;
     });
+    const clearAll = () => {
+      genreSelect.value = "";
+      creatorSelect.value = "";
+      render();
+    };
     /* Passed through a lambda, not straight to map: map hands the index in as
        the second argument, which catalogCard reads as a rank, so the plain
        catalogue numbered every card after the first. Only a ranked list ranks. */
-    grid.replaceChildren(...filtered.map((item) => catalogCard(item)));
-    const title = genre ? `${genre} ${page.label.toLowerCase()}.` : creator ? `${creator}.` : `All ${page.label.toLowerCase()}.`;
-    node("[data-catalog-title]").textContent = title;
-    node("[data-catalog-count]").textContent = `${filtered.length} ${filtered.length === 1 ? page.singular : page.label.toLowerCase()} catalogued`;
+    if (filtered.length) grid.replaceChildren(...filtered.map((item) => catalogCard(item)));
+    else grid.replaceChildren(emptyState(genre, creator, clearAll));
+    grid.classList.toggle("is-empty", !filtered.length);
+    node("[data-catalog-title]").textContent = catalogTitle(genre, creator);
+    count.textContent = `${filtered.length} ${filtered.length === 1 ? page.singular : page.label.toLowerCase()} catalogued`;
     reset.hidden = !genre && !creator && sort === "title" && direction === 1;
     /* Rebuilt from scratch, so anything the page arrived with has to be put
        back deliberately. ?list= is the whole identity of a single list page:
@@ -424,11 +529,19 @@ async function main() {
   if (one) renderOneList(one, grid);
   else renderIndex(lists.filter((list) => list.type === type).map(resolve), grid);
 
+  /* Only a ranked list gives the detail panel a number to print. An unranked
+     list, and the catalog, leave the panel with the medium alone. */
+  const ranks = new Map(
+    one?.ranked
+      ? one.items.map((item, index) => [item.id, { position: index + 1, listTitle: one.title }])
+      : []
+  );
+
   /* The corridor is decoration, so it wants a set big enough to read as motion.
      A three-title list would just flash the same cover past repeatedly. */
   renderStream(one && one.count >= 3 ? one.items : media);
   renderCatalog(media);
-  wireExpansion(media, node(".list-page-main"));
+  wireExpansion(media, node(".list-page-main"), ranks);
   document.title = chosen ? `${chosen.title} | Library` : `${page.section} | Library`;
   document.body.dataset.listType = type;
   if (chosen) document.body.dataset.listView = "single";

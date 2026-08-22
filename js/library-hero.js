@@ -13,7 +13,7 @@
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js?v=hero-orbit2";
 /* Keep this URL identical to library.html. A different query string creates a
    second module instance, which renders every shelf and detail handler twice. */
-import { openItem } from "./library.js?v=library-detail5";
+import { openItem, coverPicture } from "./library.js?v=library-detail6";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||
@@ -42,11 +42,10 @@ function card(item) {
 
   const media = document.createElement("span");
   media.className = "hcard-media";
-  const img = document.createElement("img");
-  img.src = item.thumb || item.cover;
-  img.alt = "";
-  img.loading = "lazy";
-  media.append(img);
+  /* 72px on screen, so the smallest derivative there is. These twenty-five are
+     the first images the page asks for, so they are also the ones that decide
+     how long the hero takes to form. */
+  media.append(coverPicture(item, { tier: "shelf" }));
   btn.append(media);
   return btn;
 }

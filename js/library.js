@@ -7,24 +7,26 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
-import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail5";
+import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail6";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail5";
-const SOURCES_URL = "data/library-sources.json?v=library-detail5";
+const DATA_URL = "data/library.json?v=library-detail6";
+const SOURCES_URL = "data/library-sources.json?v=library-detail6";
 
 /* Which outside profile belongs beside which shelf. Podcasts have no single
    home worth linking to, so they get none rather than a token one. */
 const SHELF_SOURCE = { book: "goodreads", film: "letterboxd", album: "spotify" };
 
+/* All four answer the arrow keys now, so all four say so. Until the rails were
+   wired up, three of them promised a keyboard that did nothing. */
 const TYPE_LABEL = {
-  book: ["Books", "drag or scroll either direction"],
+  book: ["Books", "drag, scroll, or use arrow keys"],
   album: ["Albums", "drag, scroll, or use arrow keys"],
-  film: ["Films", "drag or scroll either direction"],
-  other: ["Podcasts", "drag or scroll either direction"],
+  film: ["Films", "drag, scroll, or use arrow keys"],
+  other: ["Podcasts", "drag, scroll, or use arrow keys"],
 };
 const ORDER = ["book", "album", "film", "other"];
 const LIST_LINK = {
@@ -105,15 +107,52 @@ function paint(node, item) {
   node.setAttribute("aria-expanded", "false");
 }
 
+/* ---------- cover images ---------- */
+
+/* Three derivatives exist per cover and the right one depends on how big it is
+   drawn: `shelf` is the 320px webp for rails, the hero ring and any other
+   thumbnail, `card` is the 700px webp for the catalog grid and the corridor.
+   The jpeg is the fallback source, so a browser that does not decode webp still
+   gets a picture, and an item the build never made derivatives for falls all
+   the way back to the full cover rather than to nothing.
+
+   A <picture> rather than a bare <img> because format has to be negotiated by
+   the browser, which srcset alone cannot do. Every layout rule in the CSS
+   targets `img` as a descendant, so `picture { display: contents }` keeps the
+   img the laid-out child and nothing else had to move. */
+export function coverPicture(item, { tier = "shelf", cls = "", eager = false } = {}) {
+  const picture = el("picture");
+  const webp = tier === "card"
+    ? item.thumbWebp || item.shelfWebp
+    : item.shelfWebp || item.thumbWebp;
+  if (webp) {
+    const source = el("source", "", { type: "image/webp", srcset: webp });
+    picture.append(source);
+  }
+  const img = el("img", cls);
+  img.alt = "";
+  if (!eager) img.loading = "lazy";
+  img.decoding = "async";
+  img.draggable = false;
+  /* Intrinsic size so the row reserves its space before the bytes land. The
+     palette pass already measured every cover, so this costs nothing. */
+  if (item.width && item.height_px) {
+    img.width = item.width;
+    img.height = item.height_px;
+  }
+  /* src goes on last, after the img is inside the picture. Setting it while the
+     img is still detached starts that fetch immediately, with no <source> in
+     scope to override it, so the browser pulled the jpeg AND then the webp:
+     eighty-five redundant thumbnails, and a heavier page than before. */
+  picture.append(img);
+  img.src = item.thumb || item.cover;
+  return picture;
+}
+
 /* The shelf-sized copy, falling back to the full cover if the build has not
    made one. The detail view deliberately does not use this. */
 function coverImg(item, cls = "") {
-  const img = el("img", cls);
-  img.src = item.thumb || item.cover;
-  img.alt = "";
-  img.loading = "lazy";
-  img.draggable = false;
-  return img;
+  return coverPicture(item, { tier: "shelf", cls });
 }
 
 const label = (item) =>
@@ -194,7 +233,7 @@ const CONTAINER = {
      scroller, so cloned runs placed directly in it would stack instead of
      sitting end to end. */
   film() {
-    const rail = el("div", "shelf-rail");
+    const rail = el("div", "shelf-rail", { role: "region", "aria-label": "Film posters" });
     const track = el("div", "loop-track");
     const mount = el("div", "rack");
     track.append(mount);
@@ -202,7 +241,7 @@ const CONTAINER = {
     return { rail, mount };
   },
   other() {
-    const rail = el("div", "shelf-rail");
+    const rail = el("div", "shelf-rail", { role: "region", "aria-label": "Podcast artwork" });
     const track = el("div", "loop-track");
     const mount = el("div", "tiles");
     track.append(mount);
@@ -224,17 +263,22 @@ export function renderShelves(items, root, sources = {}) {
 
     const block = el("section", "shelf-block");
     const [name, sub] = TYPE_LABEL[type];
-    const lab = el("h2", "shelf-label", { id: `shelf-${type}-heading` });
+    /* The hint and the count are siblings of the heading, not children of it.
+       Inside, they became part of its accessible name, so heading navigation
+       announced "Books drag or scroll either direction 24 of 43". */
+    const row = el("div", "shelf-label shelf-heading");
+    const lab = el("h2", "", { id: `shelf-${type}-heading` });
+    lab.textContent = name;
     block.setAttribute("aria-labelledby", lab.id);
-    lab.append(document.createTextNode(name), Object.assign(el("span"), { textContent: sub }));
+    row.append(lab, Object.assign(el("span", "shelf-hint"), { textContent: sub }));
     /* Said out loud, because a shelf that quietly shows a quarter of the
        collection reads as the whole collection. */
     if (list.length < all.length) {
-      lab.append(Object.assign(el("span", "shelf-count"), {
+      row.append(Object.assign(el("span", "shelf-count"), {
         textContent: `${list.length} of ${all.length}`,
       }));
     }
-    block.append(lab);
+    block.append(row);
 
     const { rail, mount, status } = CONTAINER[type]();
     for (const item of list) {
@@ -279,13 +323,39 @@ export function renderShelves(items, root, sources = {}) {
     /* Albums have the coverflow. Everything else scrolls, and scrolling should
        not run out: one run of covers ends and the next begins. */
     if (type === "album") wireCoverflow(list, rail, mount, status);
-    else wireLoopRail(rail, mount, { overlap: type === "book" });
+    else {
+      const { scrollByCards } = wireLoopRail(rail, mount, { overlap: type === "book" });
+      /* A visible way through the rail. Until now the only signal that these
+         scrolled sideways was eleven pixels of hint text. The buttons live in
+         the heading row rather than over the covers, so they never sit on top
+         of something clickable. */
+      row.append(railControls(name, scrollByCards));
+    }
   }
 
   /* What was actually drawn, so the detail panel's prev and next walk the same
      run: navigating to an item with no node on the page leaves the morph with
      no origin to grow from. */
   return drawn;
+}
+
+/* Previous and next for a rail, as a pair of buttons in the shelf heading. The
+   rail itself stays a plain scroller, so these are an addition to dragging and
+   the arrow keys rather than the only way through. */
+function railControls(shelfName, scrollByCards) {
+  const wrap = el("div", "shelf-controls");
+  const medium = shelfName.toLowerCase();
+  for (const direction of ["previous", "next"]) {
+    const back = direction === "previous";
+    const button = el("button", `shelf-control is-${direction}`, {
+      type: "button",
+      "aria-label": `Scroll ${medium} ${back ? "left" : "right"}`,
+    });
+    button.append(svgIcon(back ? "M15 18l-6-6 6-6" : "M9 18l6-6-6-6"));
+    button.addEventListener("click", () => scrollByCards(back ? -1 : 1));
+    wrap.append(button);
+  }
+  return wrap;
 }
 
 /* ---------- seamless looping rails ---------- */
@@ -430,6 +500,35 @@ function wireLoopRail(frame, originalRun, { overlap = false } = {}) {
   requestAnimationFrame(measure);
 
   wireDrag(frame, normalize);
+
+  /* One card at a time, measured rather than assumed, because the four shelves
+     use four different card widths and the books overlap on top of that. */
+  const cardStep = () => {
+    const cards = originalRun.children;
+    if (cards.length < 2) return frame.clientWidth * 0.8;
+    const first = cards[0].getBoundingClientRect();
+    const second = cards[1].getBoundingClientRect();
+    return Math.abs(second.left - first.left) || first.width || frame.clientWidth * 0.8;
+  };
+
+  /* Instant rather than smooth. A looping rail folds its own scroll position
+     back to the middle run, and those writes land while a smooth animation is
+     still in flight, which cancels it: the step was measured, the scroll was
+     requested, and the rail did not move. Stepping in one write is also what
+     dragging already does, so the two feel the same. */
+  const scrollByCards = (count) => {
+    frame.scrollLeft += cardStep() * count;
+  };
+
+  /* The hint said "drag or scroll" on all three of these while only the album
+     coverflow actually answered the arrow keys. */
+  frame.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+    event.preventDefault();
+    scrollByCards(event.key === "ArrowLeft" ? -1 : 1);
+  });
+
+  return { scrollByCards };
 }
 
 /* ---------- albums: native coverflow ---------- */
@@ -468,7 +567,8 @@ function wireCoverflow(items, frame, stage, status) {
     const hadSlideFocus = document.activeElement?.classList.contains("coverflow-slide");
     selected = index;
     const item = items[index];
-    status.textContent = `${item.title}, ${item.creator || "Unknown"}, ${index + 1} of ${count}`;
+    const by = item.creator ? `${item.creator}, ` : "";
+    status.textContent = `${item.title}, ${by}${index + 1} of ${count}`;
     nodes.forEach((node, i) => {
       node.setAttribute("aria-current", String(i === index));
       node.tabIndex = i === index ? 0 : -1;
@@ -668,9 +768,68 @@ function genreCell(item) {
   return cell;
 }
 
+/* ---------- dates ---------- */
+
+const MONTHS = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"];
+
+/* Sources hand these over as ISO strings, which is the right way to store a
+   date and the wrong way to show one. Month precision is as far as anything
+   here needs to go: the day a film came out, or the day a book was finished, is
+   more precision than it is information. A value that is already just a year
+   stays a year, and anything unparseable is passed through untouched rather
+   than turned into "Invalid Date". */
+function monthAndYear(value) {
+  if (value === null || value === undefined || value === "") return "";
+  const text = String(value).trim();
+  if (/^\d{4}$/.test(text)) return text;
+  const iso = /^(\d{4})-(\d{2})(?:-(\d{2}))?/.exec(text);
+  if (!iso) return text;
+  const month = MONTHS[Number(iso[2]) - 1];
+  return month ? `${month} ${iso[1]}` : iso[1];
+}
+
+/* The year alone, for comparing a facts row against the header. */
+function yearOf(value) {
+  const iso = /^(\d{4})/.exec(String(value ?? "").trim());
+  return iso ? Number(iso[1]) : null;
+}
+
+/* ---------- facts ---------- */
+
+/* Rows the header already carries. The byline links the creator and the line
+   under it gives the year, so repeating them here spent half the table saying
+   what was two lines above it. "Starring", "Writer" and "Producer" are not
+   duplicates and stay. */
+const CREATOR_TERMS = new Set(["author", "artist", "director", "host", "maker", "creator"]);
+const DATE_TERMS = new Set(["first published", "published", "released", "first released", "publication date"]);
+
 function factsNode(item) {
-  const sourceFacts = (item.facts || []).filter(([term]) => term.toLowerCase() !== "genre");
   const hasGenres = Boolean(item.genres?.length);
+  const headerCreators = (item.creators?.length ? item.creators : [item.creator].filter(Boolean))
+    .map((name) => name.toLowerCase());
+
+  const sourceFacts = [];
+  for (const [term, value] of item.facts || []) {
+    if (value === null || value === undefined || value === "") continue;
+    const key = term.trim().toLowerCase();
+    if (key === "genre" || key === "genres") continue;
+
+    /* Only a genuine repeat is dropped. A facts row naming someone the byline
+       does not name is still worth showing. */
+    if (CREATOR_TERMS.has(key) && headerCreators.includes(String(value).trim().toLowerCase())) continue;
+
+    if (DATE_TERMS.has(key)) {
+      const shown = monthAndYear(value);
+      /* A bare year identical to the header year says nothing new. A date with
+         a month does, so it stays, trimmed to the month. */
+      if (shown === String(item.year ?? "")) continue;
+      sourceFacts.push([term, shown]);
+      continue;
+    }
+    sourceFacts.push([term, String(value)]);
+  }
+
   if (!hasGenres && !sourceFacts.length) return null;
 
   const list = el("dl", "media-facts");
@@ -680,11 +839,10 @@ function factsNode(item) {
     list.append(row);
   }
   for (const [term, value] of sourceFacts) {
-    if (value === null || value === undefined || value === "") continue;
     const row = el("div");
     row.append(
       Object.assign(el("dt"), { textContent: term }),
-      Object.assign(el("dd"), { textContent: String(value) })
+      Object.assign(el("dd"), { textContent: value })
     );
     list.append(row);
   }
@@ -706,7 +864,7 @@ function detailMeta(item) {
     people.append(link);
     if (index < creators.length - 1) people.append(document.createTextNode(", "));
   });
-  const rest = [item.year, item.finished ? `finished ${item.finished}` : null].filter(Boolean);
+  const rest = [item.year, item.finished ? `finished ${monthAndYear(item.finished)}` : null].filter(Boolean);
   if (people.childNodes.length) meta.append(people);
   if (rest.length) meta.append(Object.assign(el("p", "media-detail-date"), { textContent: rest.join(" · ") }));
   return meta;
@@ -873,6 +1031,8 @@ const DETAIL_TYPE = { book: "Book", album: "Album", film: "Film", other: "Podcas
 let openId = null;
 let detailLayer = null;
 let detailItems = [];
+/* id -> { position, listTitle }, populated only by a ranked list. */
+let detailRanks = new Map();
 let detailRoot = null;
 let detailSource = null;
 let detailCloseTimer = 0;
@@ -955,6 +1115,21 @@ function detailSequence(item) {
   };
 }
 
+/* A position is only worth printing when the position means something. The
+   panel used to read "Book 01 of 24", which numbered an arbitrary slice of a
+   43 book collection as though the order were a verdict. A rank belongs to a
+   ranked list and nowhere else, so it arrives from whatever rendered the page
+   and is absent everywhere else. */
+function detailRank(item) {
+  return detailRanks.get(item.id) || null;
+}
+
+function kickerText(item) {
+  const rank = detailRank(item);
+  if (!rank) return DETAIL_TYPE[item.type];
+  return `No. ${String(rank.position).padStart(2, "0")} in ${rank.listTitle}`;
+}
+
 /* Same creator outranks any number of shared genres, since "more Le Guin" is a
    stronger reason to click than "more science fiction". */
 function relatedItems(item, limit = 4) {
@@ -989,17 +1164,16 @@ function relatedNode(item) {
   const row = el("ul", "media-detail-related-row");
   for (const candidate of related) {
     const cell = el("li");
+    /* 87 films have no director, and naming them "Open X by " left the button
+       label hanging mid-sentence. No creator, no clause. */
     const button = el("button", "media-detail-related-item", {
       type: "button",
-      "aria-label": `Open ${candidate.title} by ${candidate.creator}`,
+      "aria-label": candidate.creator ? `Open ${candidate.title} by ${candidate.creator}` : `Open ${candidate.title}`,
     });
-    const image = el("img");
-    image.src = candidate.cover;
-    image.alt = "";
-    image.loading = "lazy";
-    image.draggable = false;
+    /* This used to reach for candidate.cover, the full file, to draw a 60px
+       thumbnail: four of them meant up to four megabytes for one panel. */
     button.append(
-      image,
+      coverPicture(candidate, { tier: "shelf" }),
       Object.assign(el("span", "media-detail-related-title"), { textContent: candidate.title }),
       Object.assign(el("span", "media-detail-related-creator"), { textContent: candidate.creator })
     );
@@ -1072,9 +1246,7 @@ function detailNode(item) {
 
   const header = el("header", "media-detail-header");
   header.append(
-    Object.assign(el("p", "media-detail-kicker"), {
-      textContent: `${DETAIL_TYPE[item.type]} ${String(sequence.index + 1).padStart(2, "0")} of ${String(sequence.count).padStart(2, "0")}`,
-    }),
+    Object.assign(el("p", "media-detail-kicker"), { textContent: kickerText(item) }),
     Object.assign(el("h2"), { id: titleId, textContent: item.title })
   );
   header.append(detailMeta(item));
@@ -1251,9 +1423,12 @@ function startMedia(layer, item) {
   if (host) playAlbum(host, item);
 }
 
-export function wireExpansion(items, root) {
+/* `ranks` is optional and only a ranked list passes one: a Map of item id to
+   { position, listTitle }. Everywhere else the panel shows no number at all. */
+export function wireExpansion(items, root, ranks = new Map()) {
   const byId = new Map(items.map((i) => [i.id, i]));
   detailItems = items;
+  detailRanks = ranks;
   detailRoot = root;
 
   root.addEventListener("click", (e) => {
@@ -1377,7 +1552,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-detail5");
+  const { initHero } = await import("./library-hero.js?v=library-detail6");
   initHero(items);
 }
 

@@ -19,7 +19,9 @@
 :root {
   --lib-bg: #0b0b0c;
   --lib-fg: #d8d6d1;
-  --lib-dim: rgba(216, 214, 209, 0.52);
+  /* 0.52 measured 4.3:1 against --lib-bg, under the 4.5:1 AA floor, and this
+     is the colour of every shelf hint, count and control label on the page. */
+  --lib-dim: rgba(216, 214, 209, 0.66);
   --lib-faint: rgba(216, 214, 209, 0.3);
   --lib-line: rgba(216, 214, 209, 0.18);
   --lib-accent: #e8531c;
@@ -48,6 +50,12 @@
 }
 
 * { box-sizing: border-box; }
+
+/* Covers are wrapped in <picture> so the browser can pick webp over jpeg. Every
+   layout rule here targets `img` as a descendant, and display:contents takes
+   the picture's own box out of the flow, so the img stays the laid-out child of
+   whatever held it before and none of those rules had to change. */
+picture { display: contents; }
 
 body.library {
   margin: 0;
@@ -189,14 +197,26 @@ body.library a { color: inherit; }
   display: flex; gap: 12px; align-items: baseline;
   font-weight: 400;
 }
-.shelf-label span { text-transform: none; letter-spacing: 0.04em; font-size: 11px; opacity: 0.62; }
+/* No opacity here: multiplied against --lib-dim it put the scroll hint at
+   2.3:1, the worst contrast on the page. The colour alone is the dimming. */
+/* The heading is a child of this row now, so it drops its own block margins
+   and inherits the row's mono treatment. */
+.shelf-heading h2 {
+  margin: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit;
+}
+.shelf-hint { text-transform: none; letter-spacing: 0.04em; font-size: 11px; }
 /* Pushed to the far end of the rule, where a count belongs, so it reads as a
    fraction of the collection rather than as part of the scroll hint. */
 .shelf-label .shelf-count {
   margin-left: auto; flex: 0 0 auto;
   text-transform: uppercase; letter-spacing: 0.12em; font-size: 10px; opacity: 0.5;
 }
-@media (max-width: 620px) { .shelf-label .shelf-count { display: none; } }
+/* Hiding this on a phone meant mobile never learned the shelf was a selection
+   rather than the collection. It wraps under the label instead. */
+@media (max-width: 620px) {
+  .shelf-heading { flex-wrap: wrap; }
+  .shelf-heading .shelf-count { margin-left: 0; }
+}
 
 /* Left, with the labels, rather than stranded on the right where nothing else
    on the page sits. */
@@ -299,6 +319,26 @@ html.reduce-motion .lib-btn:hover { transform: none; }
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
+/* Off screen until it has focus, then the first thing in the tab order. */
+.skip-link {
+  position: fixed; top: 14px; left: 50%; z-index: 200;
+  transform: translate(-50%, calc(-100% - 24px));
+  padding: 13px 22px; border-radius: 0.6em;
+  background: var(--site-cream); color: var(--site-panel);
+  font-family: "Aeonik", system-ui, sans-serif; font-weight: 500; font-size: 15px;
+  text-decoration: none;
+  transition: transform 0.22s var(--ease);
+}
+.skip-link:focus-visible {
+  transform: translate(-50%, 0);
+  outline: 3px solid var(--lib-accent); outline-offset: 3px;
+}
+html.reduce-motion .skip-link { transition: none; }
+
+/* The fixed sound toggle and menu bar sit over the top of the page, so an
+   anchor landing at the very top lands underneath them. */
+#shelves, #catalog { scroll-margin-top: 84px; }
+
 @media (prefers-reduced-motion: reduce) {
   /* The reduced-motion resting arc occupies the lower half immediately.
      Lift the static headline clear of it so both remain readable. */
@@ -337,7 +377,38 @@ html.reduce-motion .hcard:focus-visible .hcard-media { transform: none; }
 .shelf-rail {
   overflow-x: auto; overflow-y: hidden;
   scrollbar-width: none; -ms-overflow-style: none;
+  /* Covers used to be cut dead at both gutters, which reads as a clipping bug
+     rather than as "there is more this way". The fade is narrow so it softens
+     the edge without dimming a cover anyone is looking at. */
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 34px, #000 calc(100% - 34px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 34px, #000 calc(100% - 34px), transparent 100%);
 }
+.shelf-rail:focus-visible { outline: 2px solid var(--lib-accent); outline-offset: 6px; }
+
+/* ---------- rail controls ---------- */
+
+/* Pushed to the end of the heading row, so they sit clear of the covers and
+   cannot land on top of something clickable. */
+.shelf-controls { margin-left: auto; display: flex; gap: 6px; }
+
+.shelf-control {
+  width: 34px; height: 34px; display: grid; place-items: center;
+  padding: 0; border: 1px solid var(--lib-line); border-radius: 50%;
+  background: none; color: var(--lib-fg); cursor: pointer;
+  transition: border-color 0.24s ease, background-color 0.24s ease, transform 0.24s var(--ease);
+}
+.shelf-control svg { width: 17px; height: 17px; display: block; }
+.shelf-control:hover {
+  border-color: var(--lib-accent);
+  background: color-mix(in srgb, var(--lib-accent) 18%, transparent);
+}
+.shelf-control:active { transform: scale(0.94); }
+.shelf-control:focus-visible { outline: 2px solid var(--lib-accent); outline-offset: 3px; }
+html.reduce-motion .shelf-control { transition: none; }
+
+/* On a phone the covers are dragged, and two 34px buttons in the heading row
+   only crowd the label and the count. */
+@media (max-width: 620px) { .shelf-controls { display: none; } }
 .shelf-rail::-webkit-scrollbar { width: 0; height: 0; display: none; }
 
 .book-cover-shelf {
@@ -885,9 +956,15 @@ body.menu-open .sound-toggle { opacity: 0; pointer-events: none; }
 .footer-legal p {
   margin: 0; text-align: center;
   font-family: "Space Mono", ui-monospace, monospace;
-  font-size: clamp(10px, 0.85vw, 13px); line-height: 1.55; letter-spacing: 0.02em;
+  font-size: clamp(12px, 0.85vw, 13px); line-height: 1.55; letter-spacing: 0.02em;
 }
-.footer-legal a { font-weight: 700; text-underline-offset: 0.22em; }
+/* These were 15px tall in a pipe-separated run, which is a hard row of targets
+   to hit on a phone. The padding gives each one its own comfortable box without
+   changing how the line reads. */
+.footer-legal a {
+  font-weight: 700; text-underline-offset: 0.22em;
+  display: inline-block; padding: 7px 2px;
+}
 
 /* ---------- curated list landing ---------- */
 
@@ -1059,6 +1136,11 @@ body.menu-open .sound-toggle { opacity: 0; pointer-events: none; }
   font-size: clamp(54px, 8vw, 118px); line-height: 0.86; letter-spacing: -0.05em;
   overflow-wrap: anywhere;
 }
+/* `hidden` is set by the JS whenever no filter is on, and a bare display rule
+   silently outranks the attribute, which is why "View all books" sat on an
+   unfiltered catalog pointing at the page you were already on. */
+.catalog-reset[hidden] { display: none; }
+
 .catalog-reset {
   min-height: 44px; display: inline-flex; align-items: center; flex: 0 0 auto;
   color: var(--hero-verb); text-decoration: none; border-bottom: 1px solid rgba(243, 200, 68, 0.5);
@@ -1086,12 +1168,40 @@ body.menu-open .sound-toggle { opacity: 0; pointer-events: none; }
 .catalog-result-count {
   margin: 0 0 18px; padding-top: 10px; border-top: 1px solid var(--lib-line);
   color: var(--lib-dim); font-family: "Space Mono", ui-monospace, monospace;
-  font-size: 9px; text-transform: uppercase; letter-spacing: 0.12em;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
 }
 .catalog-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(min(190px, 42vw), 1fr));
   align-items: start; gap: clamp(46px, 6vw, 86px) clamp(16px, 2.2vw, 34px);
 }
+
+/* No results. The grid's card columns would squeeze this into one 190px
+   column, so it drops out of the card layout entirely. */
+.catalog-grid.is-empty { display: block; }
+
+.catalog-empty { max-width: 46ch; padding: 8px 0 clamp(40px, 6vw, 72px); }
+.catalog-empty-heading {
+  margin: 0 0 10px;
+  font-family: "Aeonik", system-ui, sans-serif; font-weight: 500;
+  font-size: clamp(21px, 2.4vw, 27px); letter-spacing: -0.02em; line-height: 1.16;
+  color: var(--lib-fg);
+}
+.catalog-empty-detail {
+  margin: 0 0 22px; font-size: 16px; line-height: 1.55; color: var(--lib-dim);
+}
+.catalog-empty-clear {
+  display: inline-flex; align-items: center; min-height: 48px; padding: 13px 24px;
+  border: 1px solid var(--lib-line); border-radius: 0.6em;
+  background: none; color: var(--lib-fg); cursor: pointer;
+  font-family: "Aeonik", system-ui, sans-serif; font-weight: 500;
+  font-size: 15px; letter-spacing: -0.01em;
+  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+.catalog-empty-clear:hover {
+  border-color: var(--lib-accent); color: var(--site-cream);
+  background: color-mix(in srgb, var(--lib-accent) 16%, transparent);
+}
+.catalog-empty-clear:focus-visible { outline: 2px solid var(--lib-accent); outline-offset: 3px; }
 .catalog-card { min-width: 0; }
 .catalog-card-image {
   width: 100%; aspect-ratio: 0.66; overflow: hidden; border-radius: 2px;

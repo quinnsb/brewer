@@ -5,13 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Library Lists</title>
   <meta name="description" content="Curated lists of Quinn Brewer's favorite books, albums, films, and podcasts." />
+  <link rel="icon" type="image/svg+xml" href="images/brewerfavicon.svg" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="canonical" href="https://www.quinnbrewer.com/library-lists.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Library lists · Quinn Brewer" />
+  <meta property="og:description" content="Curated lists and the full catalog of Quinn Brewer's books, albums, films, and podcasts." />
+  <meta property="og:url" content="https://www.quinnbrewer.com/library-lists.html" />
+  <meta property="og:image" content="https://www.quinnbrewer.com/images/library/thumbs/album-coloring-book.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site-menu.css?v=1" />
-  <link rel="stylesheet" href="css/library.css?v=library-detail5" />
+  <link rel="stylesheet" href="css/library.css?v=library-detail6" />
 </head>
 <body id="top" class="library library-lists">
+  <!-- Roughly a hundred cover buttons stand between the top of the page and
+       anything else, so the keyboard needs a way past them. First element in
+       the body, so it is the first stop in the tab order. -->
+  <a class="skip-link" href="#catalog">Skip to the catalog</a>
   <button
     class="sound-toggle"
     type="button"
@@ -70,13 +83,9 @@
         </label>
         <label>
           <span>Sort by</span>
-          <select data-catalog-sort>
-            <option value="title">Title</option>
-            <option value="creator">Creator</option>
-            <option value="year">Release date</option>
-            <option value="rating">Personal rating</option>
-            <option value="externalRating">IMDb rating</option>
-          </select>
+          <!-- Built per medium in library-lists.js: a books catalog has no
+               film rating to sort on. -->
+          <select data-catalog-sort><option value="title">Title</option></select>
         </label>
         <label>
           <span>Order</span>
@@ -86,7 +95,7 @@
           </select>
         </label>
       </form>
-      <p class="catalog-result-count" data-catalog-count></p>
+      <p class="catalog-result-count" data-catalog-count role="status" aria-live="polite"></p>
       <div class="catalog-grid" data-catalog-grid></div>
     </section>
   </main>
@@ -109,6 +118,6 @@
   </footer>
 
   <script src="js/site-menu.js?v=1"></script>
-  <script type="module" src="js/library-lists.js?v=library-detail5"></script>
+  <script type="module" src="js/library-lists.js?v=library-detail6"></script>
 </body>
 </html>
