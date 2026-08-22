@@ -358,5 +358,421 @@
   "book-dark-matter": [
     "Science fiction",
     "Thriller"
+  ],
+  "film-spider-man-brand-new-day": [
+    "Science fiction",
+    "Action",
+    "Adventure"
+  ],
+  "film-the-odyssey": [
+    "Adventure",
+    "Action",
+    "Fantasy"
+  ],
+  "film-disclosure-day": [
+    "Science fiction",
+    "Thriller"
+  ],
+  "film-the-mandalorian-and-grogu": [
+    "Action",
+    "Adventure",
+    "Science fiction"
+  ],
+  "film-backrooms": [
+    "Horror",
+    "Mystery",
+    "Science fiction"
+  ],
+  "film-the-devil-wears-prada-2": [
+    "Comedy",
+    "Drama"
+  ],
+  "film-michael": [
+    "Musical",
+    "Drama"
+  ],
+  "film-the-drama": [
+    "Romance",
+    "Comedy",
+    "Drama"
+  ],
+  "film-project-hail-mary": [
+    "Science fiction",
+    "Adventure"
+  ],
+  "film-marty-supreme": [
+    "Drama",
+    "Thriller"
+  ],
+  "film-one-battle-after-another": [
+    "Thriller",
+    "Crime",
+    "Comedy"
+  ],
+  "film-obsession": [
+    "Horror",
+    "Thriller"
+  ],
+  "film-wake-up-dead-man": [
+    "Thriller",
+    "Mystery",
+    "Comedy"
+  ],
+  "film-kpop-demon-hunters": [
+    "Fantasy",
+    "Musical",
+    "Comedy",
+    "Animation"
+  ],
+  "film-superman": [
+    "Science fiction",
+    "Adventure",
+    "Action"
+  ],
+  "film-f1": [
+    "Action",
+    "Drama"
+  ],
+  "film-mission-impossible-the-final-reckoning": [
+    "Action",
+    "Thriller",
+    "Adventure"
+  ],
+  "film-thunderbolts": [
+    "Action",
+    "Science fiction",
+    "Adventure"
+  ],
+  "film-sinners": [
+    "Horror",
+    "Action",
+    "Thriller"
+  ],
+  "film-black-bag": [
+    "Drama",
+    "Mystery",
+    "Thriller"
+  ],
+  "film-friendship": [
+    "Comedy",
+    "Drama"
+  ],
+  "film-conclave": [
+    "Drama",
+    "Thriller"
+  ],
+  "film-deadpool-wolverine": [
+    "Action",
+    "Comedy",
+    "Science fiction"
+  ],
+  "film-the-boy-and-the-heron": [
+    "Animation",
+    "Fantasy",
+    "Drama"
+  ],
+  "film-dungeons-dragons-honor-among-thieves": [
+    "Adventure",
+    "Fantasy",
+    "Comedy"
+  ],
+  "film-the-batman": [
+    "Crime",
+    "Mystery",
+    "Thriller"
+  ],
+  "film-spider-man-no-way-home": [
+    "Action",
+    "Adventure",
+    "Science fiction"
+  ],
+  "film-dune": [
+    "Science fiction",
+    "Adventure"
+  ],
+  "film-shang-chi-and-the-legend-of-the-ten-rings": [
+    "Action",
+    "Adventure",
+    "Fantasy"
+  ],
+  "film-black-widow": [
+    "Action",
+    "Adventure",
+    "Science fiction"
+  ],
+  "film-tenet": [
+    "Action",
+    "Thriller",
+    "Science fiction"
+  ],
+  "film-star-wars-the-rise-of-skywalker": [
+    "Adventure",
+    "Action",
+    "Science fiction"
+  ],
+  "film-little-women": [
+    "Drama",
+    "Romance"
+  ],
+  "film-jojo-rabbit": [
+    "Comedy",
+    "War",
+    "Drama"
+  ],
+  "film-knives-out": [
+    "Comedy",
+    "Crime",
+    "Mystery"
+  ],
+  "film-joker": [
+    "Crime",
+    "Thriller",
+    "Drama"
+  ],
+  "film-spider-man-far-from-home": [
+    "Action",
+    "Adventure",
+    "Science fiction"
+  ],
+  "film-parasite": [
+    "Comedy",
+    "Thriller",
+    "Drama"
+  ],
+  "film-once-upon-a-time-in-hollywood": [
+    "Comedy",
+    "Drama",
+    "Thriller"
+  ],
+  "film-avengers-endgame": [
+    "Adventure",
+    "Science fiction",
+    "Action"
+  ],
+  "film-captain-marvel": [
+    "Action",
+    "Adventure",
+    "Science fiction"
+  ],
+  "film-spider-man-into-the-spider-verse": [
+    "Animation",
+    "Action",
+    "Adventure",
+    "Science fiction"
+  ],
+  "film-bohemian-rhapsody": [
+    "Musical",
+    "Drama"
+  ],
+  "film-avengers-infinity-war": [
+    "Adventure",
+    "Action",
+    "Science fiction"
+  ],
+  "film-a-quiet-place": [
+    "Horror",
+    "Drama",
+    "Science fiction"
+  ],
+  "film-black-panther": [
+    "Action",
+    "Adventure",
+    "Science fiction"
+  ],
+  "film-star-wars-the-last-jedi": [
+    "Adventure",
+    "Action",
+    "Science fiction"
+  ],
+  "film-coco": [
+    "Family",
+    "Animation",
+    "Musical",
+    "Adventure"
+  ],
+  "film-blade-runner-2049": [
+    "Science fiction",
+    "Drama"
+  ],
+  "film-thor-ragnarok": [
+    "Action",
+    "Science fiction",
+    "Comedy",
+    "Adventure"
+  ],
+  "film-it": [
+    "Horror",
+    "Thriller",
+    "Drama"
+  ],
+  "film-lady-bird": [
+    "Drama",
+    "Comedy"
+  ],
+  "film-dunkirk": [
+    "War",
+    "Action",
+    "Drama"
+  ],
+  "film-spider-man-homecoming": [
+    "Action",
+    "Adventure",
+    "Science fiction"
+  ],
+  "film-wonder-woman": [
+    "Action",
+    "Adventure",
+    "Fantasy"
+  ],
+  "film-baby-driver": [
+    "Action",
+    "Crime"
+  ],
+  "film-logan": [
+    "Action",
+    "Drama",
+    "Science fiction"
+  ],
+  "film-get-out": [
+    "Mystery",
+    "Thriller",
+    "Horror"
+  ],
+  "film-rogue-one-a-star-wars-story": [
+    "Action",
+    "Adventure",
+    "Science fiction"
+  ],
+  "film-split": [
+    "Horror",
+    "Thriller"
+  ],
+  "film-arrival": [
+    "Drama",
+    "Science fiction",
+    "Mystery"
+  ],
+  "film-the-nice-guys": [
+    "Comedy",
+    "Crime",
+    "Action"
+  ],
+  "film-captain-america-civil-war": [
+    "Adventure",
+    "Action",
+    "Science fiction"
+  ],
+  "film-deadpool": [
+    "Action",
+    "Adventure",
+    "Comedy"
+  ],
+  "film-the-revenant": [
+    "Western",
+    "Drama",
+    "Adventure"
+  ],
+  "film-star-wars-the-force-awakens": [
+    "Adventure",
+    "Action",
+    "Science fiction"
+  ],
+  "film-the-hateful-eight": [
+    "Drama",
+    "Mystery",
+    "Western"
+  ],
+  "film-the-martian": [
+    "Science fiction",
+    "Drama",
+    "Adventure"
+  ],
+  "film-ant-man": [
+    "Science fiction",
+    "Adventure",
+    "Action"
+  ],
+  "film-sicario": [
+    "Action",
+    "Crime",
+    "Thriller"
+  ],
+  "film-inside-out": [
+    "Animation",
+    "Family",
+    "Adventure",
+    "Drama",
+    "Comedy"
+  ],
+  "film-quantum-of-solace": [
+    "Adventure",
+    "Action",
+    "Thriller"
+  ],
+  "film-casino-royale": [
+    "Adventure",
+    "Action",
+    "Thriller"
+  ],
+  "film-alien": [
+    "Horror",
+    "Science fiction"
+  ],
+  "film-inglourious-basterds": [
+    "Drama",
+    "Thriller",
+    "War"
+  ],
+  "film-tinker-tailor-soldier-spy": [
+    "Drama",
+    "Thriller",
+    "Mystery"
+  ],
+  "film-moneyball": [
+    "Drama"
+  ],
+  "film-close-encounters-of-the-third-kind": [
+    "Science fiction",
+    "Drama"
+  ],
+  "film-inside-llewyn-davis": [
+    "Drama",
+    "Musical"
+  ],
+  "film-before-sunset": [
+    "Drama",
+    "Romance"
+  ],
+  "film-that-thing-you-do": [
+    "Comedy",
+    "Drama",
+    "Musical"
+  ],
+  "film-tears-of-the-sun": [
+    "War",
+    "Action",
+    "Drama"
+  ],
+  "film-michael-clayton": [
+    "Drama",
+    "Thriller",
+    "Crime"
+  ],
+  "film-anchorman-the-legend-of-ron-burgundy": [
+    "Comedy"
+  ],
+  "film-no-country-for-old-men": [
+    "Crime",
+    "Thriller",
+    "Western"
+  ],
+  "film-2001-a-space-odyssey": [
+    "Science fiction",
+    "Mystery",
+    "Adventure"
+  ],
+  "film-the-royal-tenenbaums": [
+    "Comedy",
+    "Drama"
   ]
 }

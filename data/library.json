@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T01:43:31.907Z",
+  "generatedAt": "2026-08-22T02:02:32.215Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -7156,6 +7156,4076 @@
         "ink": "#f1ece3"
       },
       "thumb": "images/library/thumbs/book-dark-matter.jpg"
+    },
+    {
+      "id": "film-spider-man-brand-new-day",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Spider-Man: Brand New Day",
+      "creator": "",
+      "year": 2026,
+      "detail": "Film",
+      "cover": "images/library/film-spider-man-brand-new-day.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/969681",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4.5,
+      "finished": "2026-08-04",
+      "facts": [
+        [
+          "Released",
+          "2026-07-29"
+        ],
+        [
+          "TMDB rating",
+          "7.9"
+        ]
+      ],
+      "height": 0.852,
+      "thickness": 0.709,
+      "starred": false,
+      "genres": [
+        "Science fiction",
+        "Action",
+        "Adventure"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#2e1418",
+        "accent": "#003d69",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-spider-man-brand-new-day.jpg"
+    },
+    {
+      "id": "film-the-odyssey",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Odyssey",
+      "creator": "",
+      "year": 2026,
+      "detail": "Film",
+      "cover": "images/library/film-the-odyssey.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1368337",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2026-07-20",
+      "facts": [
+        [
+          "Released",
+          "2026-07-15"
+        ],
+        [
+          "TMDB rating",
+          "8.0"
+        ]
+      ],
+      "height": 0.887,
+      "thickness": 0.789,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Fantasy"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#423731",
+        "accent": "#eabc7e",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-odyssey.jpg"
+    },
+    {
+      "id": "film-disclosure-day",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Disclosure Day",
+      "creator": "",
+      "year": 2026,
+      "detail": "Film",
+      "cover": "images/library/film-disclosure-day.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1275779",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3.5,
+      "finished": "2026-08-07",
+      "facts": [
+        [
+          "Released",
+          "2026-06-10"
+        ],
+        [
+          "TMDB rating",
+          "7.5"
+        ]
+      ],
+      "height": 0.969,
+      "thickness": 0.832,
+      "starred": false,
+      "genres": [
+        "Science fiction",
+        "Thriller"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#8d9590",
+        "accent": "#ddeadf",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-disclosure-day.jpg"
+    },
+    {
+      "id": "film-the-mandalorian-and-grogu",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Mandalorian and Grogu",
+      "creator": "",
+      "year": 2026,
+      "detail": "Film",
+      "cover": "images/library/film-the-mandalorian-and-grogu.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1228710",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 2.5,
+      "finished": "2026-06-01",
+      "facts": [
+        [
+          "Released",
+          "2026-05-20"
+        ],
+        [
+          "TMDB rating",
+          "7.5"
+        ]
+      ],
+      "height": 0.673,
+      "thickness": 0.952,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#3c3026",
+        "accent": "#f58911",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-mandalorian-and-grogu.jpg"
+    },
+    {
+      "id": "film-backrooms",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Backrooms",
+      "creator": "",
+      "year": 2026,
+      "detail": "Film",
+      "cover": "images/library/film-backrooms.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1083381",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": "2026-07-14",
+      "facts": [
+        [
+          "Released",
+          "2026-05-27"
+        ],
+        [
+          "TMDB rating",
+          "7.1"
+        ]
+      ],
+      "height": 0.495,
+      "thickness": 1.463,
+      "starred": false,
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#5c4e1a",
+        "accent": "#998926",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-backrooms.jpg"
+    },
+    {
+      "id": "film-the-devil-wears-prada-2",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Devil Wears Prada 2",
+      "creator": "",
+      "year": 2026,
+      "detail": "Film",
+      "cover": "images/library/film-the-devil-wears-prada-2.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1314481",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3.5,
+      "finished": "2026-05-15",
+      "facts": [
+        [
+          "Released",
+          "2026-04-29"
+        ],
+        [
+          "TMDB rating",
+          "7.1"
+        ]
+      ],
+      "height": 0.83,
+      "thickness": 0.621,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#998585",
+        "accent": "#540505",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-the-devil-wears-prada-2.jpg"
+    },
+    {
+      "id": "film-michael",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Michael",
+      "creator": "",
+      "year": 2026,
+      "detail": "Film",
+      "cover": "images/library/film-michael.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/936075",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 2,
+      "finished": "2026-07-03",
+      "facts": [
+        [
+          "Released",
+          "2026-04-22"
+        ],
+        [
+          "TMDB rating",
+          "8.7"
+        ]
+      ],
+      "height": 0.532,
+      "thickness": 1.474,
+      "starred": false,
+      "genres": [
+        "Musical",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#5f4132",
+        "accent": "#b12c28",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-michael.jpg"
+    },
+    {
+      "id": "film-the-drama",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Drama",
+      "creator": "",
+      "year": 2026,
+      "detail": "Film",
+      "cover": "images/library/film-the-drama.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1325734",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2026-05-13",
+      "facts": [
+        [
+          "Released",
+          "2026-04-01"
+        ],
+        [
+          "TMDB rating",
+          "6.9"
+        ]
+      ],
+      "height": 0.654,
+      "thickness": 1.153,
+      "starred": false,
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#433a34",
+        "accent": "#5b3015",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-drama.jpg"
+    },
+    {
+      "id": "film-project-hail-mary",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Project Hail Mary",
+      "creator": "",
+      "year": 2026,
+      "detail": "Film",
+      "cover": "images/library/film-project-hail-mary.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/687163",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4.5,
+      "finished": "2026-03-25",
+      "facts": [
+        [
+          "Released",
+          "2026-03-15"
+        ],
+        [
+          "TMDB rating",
+          "8.6"
+        ]
+      ],
+      "height": 0.464,
+      "thickness": 0.671,
+      "starred": false,
+      "genres": [
+        "Science fiction",
+        "Adventure"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#253233",
+        "accent": "#10526a",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-project-hail-mary.jpg"
+    },
+    {
+      "id": "film-marty-supreme",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Marty Supreme",
+      "creator": "",
+      "year": 2025,
+      "detail": "Film",
+      "cover": "images/library/film-marty-supreme.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1317288",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4.5,
+      "finished": "2026-07-17",
+      "facts": [
+        [
+          "Released",
+          "2025-12-19"
+        ],
+        [
+          "TMDB rating",
+          "7.4"
+        ]
+      ],
+      "height": 0.67,
+      "thickness": 1.352,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#3d2d26",
+        "accent": "#5e301d",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-marty-supreme.jpg"
+    },
+    {
+      "id": "film-one-battle-after-another",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "One Battle After Another",
+      "creator": "",
+      "year": 2025,
+      "detail": "Film",
+      "cover": "images/library/film-one-battle-after-another.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1054867",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2025-09-30",
+      "facts": [
+        [
+          "Released",
+          "2025-09-23"
+        ],
+        [
+          "TMDB rating",
+          "7.3"
+        ]
+      ],
+      "height": 0.855,
+      "thickness": 0.955,
+      "starred": false,
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Comedy"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#513323",
+        "accent": "#e8834e",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-one-battle-after-another.jpg"
+    },
+    {
+      "id": "film-obsession",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Obsession",
+      "creator": "",
+      "year": 2025,
+      "detail": "Film",
+      "cover": "images/library/film-obsession.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1339713",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2026-07-03",
+      "facts": [
+        [
+          "Released",
+          "2026-05-13"
+        ],
+        [
+          "TMDB rating",
+          "8.2"
+        ]
+      ],
+      "height": 0.482,
+      "thickness": 0.989,
+      "starred": false,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#161312",
+        "accent": "#311a11",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-obsession.jpg"
+    },
+    {
+      "id": "film-wake-up-dead-man",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Wake Up Dead Man",
+      "creator": "",
+      "year": 2025,
+      "detail": "Film",
+      "cover": "images/library/film-wake-up-dead-man.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/812583",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2026-02-11",
+      "facts": [
+        [
+          "Released",
+          "2025-11-26"
+        ],
+        [
+          "TMDB rating",
+          "7.2"
+        ]
+      ],
+      "height": 0.798,
+      "thickness": 1.215,
+      "starred": false,
+      "genres": [
+        "Thriller",
+        "Mystery",
+        "Comedy"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#2c2e2c",
+        "accent": "#938c79",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-wake-up-dead-man.jpg"
+    },
+    {
+      "id": "film-kpop-demon-hunters",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "KPop Demon Hunters",
+      "creator": "",
+      "year": 2025,
+      "detail": "Film",
+      "cover": "images/library/film-kpop-demon-hunters.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/803796",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3.5,
+      "finished": "2026-04-08",
+      "facts": [
+        [
+          "Released",
+          "2025-06-20"
+        ],
+        [
+          "TMDB rating",
+          "8.0"
+        ]
+      ],
+      "height": 0.473,
+      "thickness": 0.781,
+      "starred": false,
+      "genres": [
+        "Fantasy",
+        "Musical",
+        "Comedy",
+        "Animation"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#534c85",
+        "accent": "#0c3c9b",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-kpop-demon-hunters.jpg"
+    },
+    {
+      "id": "film-superman",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Superman",
+      "creator": "",
+      "year": 2025,
+      "detail": "Film",
+      "cover": "images/library/film-superman.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1061474",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3.5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2025-07-09"
+        ],
+        [
+          "TMDB rating",
+          "7.3"
+        ]
+      ],
+      "height": 0.626,
+      "thickness": 0.912,
+      "starred": false,
+      "genres": [
+        "Science fiction",
+        "Adventure",
+        "Action"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#5a4452",
+        "accent": "#31aefa",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-superman.jpg"
+    },
+    {
+      "id": "film-f1",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "F1",
+      "creator": "",
+      "year": 2025,
+      "detail": "Film",
+      "cover": "images/library/film-f1.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/911430",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": "2026-06-28",
+      "facts": [
+        [
+          "Released",
+          "2025-06-25"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.876,
+      "thickness": 1.381,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#474b46",
+        "accent": "#27373e",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-f1.jpg"
+    },
+    {
+      "id": "film-mission-impossible-the-final-reckoning",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Mission: Impossible – The Final Reckoning",
+      "creator": "",
+      "year": 2025,
+      "detail": "Film",
+      "cover": "images/library/film-mission-impossible-the-final-reckoning.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/575265",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3.5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2025-05-17"
+        ],
+        [
+          "TMDB rating",
+          "7.2"
+        ]
+      ],
+      "height": 0.811,
+      "thickness": 0.602,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Adventure"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#797870",
+        "accent": "#946720",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-mission-impossible-the-final-reckoning.jpg"
+    },
+    {
+      "id": "film-thunderbolts",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Thunderbolts*",
+      "creator": "",
+      "year": 2025,
+      "detail": "Film",
+      "cover": "images/library/film-thunderbolts.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/986056",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": "2025-05-03",
+      "facts": [
+        [
+          "Released",
+          "2025-04-30"
+        ],
+        [
+          "TMDB rating",
+          "7.3"
+        ]
+      ],
+      "height": 0.753,
+      "thickness": 0.692,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Science fiction",
+        "Adventure"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#29241c",
+        "accent": "#754e34",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-thunderbolts.jpg"
+    },
+    {
+      "id": "film-sinners",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Sinners",
+      "creator": "",
+      "year": 2025,
+      "detail": "Film",
+      "cover": "images/library/film-sinners.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1233413",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2025-04-16"
+        ],
+        [
+          "TMDB rating",
+          "7.5"
+        ]
+      ],
+      "height": 0.594,
+      "thickness": 1.419,
+      "starred": false,
+      "genres": [
+        "Horror",
+        "Action",
+        "Thriller"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#551f0d",
+        "accent": "#f39604",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-sinners.jpg"
+    },
+    {
+      "id": "film-black-bag",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Black Bag",
+      "creator": "",
+      "year": 2025,
+      "detail": "Film",
+      "cover": "images/library/film-black-bag.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1233575",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3.5,
+      "finished": "2026-06-29",
+      "facts": [
+        [
+          "Released",
+          "2025-03-12"
+        ],
+        [
+          "TMDB rating",
+          "6.4"
+        ]
+      ],
+      "height": 0.82,
+      "thickness": 1.301,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#444c4a",
+        "accent": "#f9d1a0",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-black-bag.jpg"
+    },
+    {
+      "id": "film-friendship",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Friendship",
+      "creator": "",
+      "year": 2024,
+      "detail": "Film",
+      "cover": "images/library/film-friendship.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1239655",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": "2025-06-07",
+      "facts": [
+        [
+          "Released",
+          "2025-05-09"
+        ],
+        [
+          "TMDB rating",
+          "6.4"
+        ]
+      ],
+      "height": 0.773,
+      "thickness": 0.957,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#707975",
+        "accent": "#d7e259",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-friendship.jpg"
+    },
+    {
+      "id": "film-conclave",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Conclave",
+      "creator": "",
+      "year": 2024,
+      "detail": "Film",
+      "cover": "images/library/film-conclave.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/974576",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2025-06-21",
+      "facts": [
+        [
+          "Released",
+          "2024-10-25"
+        ],
+        [
+          "TMDB rating",
+          "7.2"
+        ]
+      ],
+      "height": 0.924,
+      "thickness": 0.977,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#484848",
+        "accent": "#780e10",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-conclave.jpg"
+    },
+    {
+      "id": "film-deadpool-wolverine",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Deadpool & Wolverine",
+      "creator": "",
+      "year": 2024,
+      "detail": "Film",
+      "cover": "images/library/film-deadpool-wolverine.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/533535",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": "2026-07-26",
+      "facts": [
+        [
+          "Released",
+          "2024-07-24"
+        ],
+        [
+          "TMDB rating",
+          "7.6"
+        ]
+      ],
+      "height": 0.566,
+      "thickness": 1.405,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#4f382b",
+        "accent": "#d2b224",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-deadpool-wolverine.jpg"
+    },
+    {
+      "id": "film-the-boy-and-the-heron",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Boy and the Heron",
+      "creator": "",
+      "year": 2023,
+      "detail": "Film",
+      "cover": "images/library/film-the-boy-and-the-heron.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/508883",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2023-07-14"
+        ],
+        [
+          "TMDB rating",
+          "7.4"
+        ]
+      ],
+      "height": 0.969,
+      "thickness": 1.077,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Fantasy",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#6c6c5a",
+        "accent": "#e5c994",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-boy-and-the-heron.jpg"
+    },
+    {
+      "id": "film-dungeons-dragons-honor-among-thieves",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Dungeons & Dragons: Honor Among Thieves",
+      "creator": "",
+      "year": 2023,
+      "detail": "Film",
+      "cover": "images/library/film-dungeons-dragons-honor-among-thieves.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/493529",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 2.5,
+      "finished": "2023-04-11",
+      "facts": [
+        [
+          "Released",
+          "2023-03-23"
+        ],
+        [
+          "TMDB rating",
+          "7.4"
+        ]
+      ],
+      "height": 0.495,
+      "thickness": 0.723,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Comedy"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#4c3435",
+        "accent": "#61120c",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-dungeons-dragons-honor-among-thieves.jpg"
+    },
+    {
+      "id": "film-the-batman",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Batman",
+      "creator": "",
+      "year": 2022,
+      "detail": "Film",
+      "cover": "images/library/film-the-batman.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/414906",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2022-03-01"
+        ],
+        [
+          "TMDB rating",
+          "7.7"
+        ]
+      ],
+      "height": 0.793,
+      "thickness": 1.299,
+      "starred": false,
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#572b11",
+        "accent": "#e36716",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-batman.jpg"
+    },
+    {
+      "id": "film-spider-man-no-way-home",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Spider-Man: No Way Home",
+      "creator": "",
+      "year": 2021,
+      "detail": "Film",
+      "cover": "images/library/film-spider-man-no-way-home.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/634649",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4.5,
+      "finished": "2026-07-26",
+      "facts": [
+        [
+          "Released",
+          "2021-12-15"
+        ],
+        [
+          "TMDB rating",
+          "7.9"
+        ]
+      ],
+      "height": 0.601,
+      "thickness": 0.686,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#4f4146",
+        "accent": "#8d3b46",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-spider-man-no-way-home.jpg"
+    },
+    {
+      "id": "film-dune",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Dune",
+      "creator": "",
+      "year": 2021,
+      "detail": "Film",
+      "cover": "images/library/film-dune.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/438631",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2021-09-15"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.675,
+      "thickness": 1.37,
+      "starred": false,
+      "genres": [
+        "Science fiction",
+        "Adventure"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#485551",
+        "accent": "#40160c",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-dune.jpg"
+    },
+    {
+      "id": "film-shang-chi-and-the-legend-of-the-ten-rings",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Shang-Chi and the Legend of the Ten Rings",
+      "creator": "",
+      "year": 2021,
+      "detail": "Film",
+      "cover": "images/library/film-shang-chi-and-the-legend-of-the-ten-rings.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/566525",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2021-09-01"
+        ],
+        [
+          "TMDB rating",
+          "7.5"
+        ]
+      ],
+      "height": 0.703,
+      "thickness": 0.638,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#1d2d34",
+        "accent": "#357ca8",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-shang-chi-and-the-legend-of-the-ten-rings.jpg"
+    },
+    {
+      "id": "film-black-widow",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Black Widow",
+      "creator": "",
+      "year": 2021,
+      "detail": "Film",
+      "cover": "images/library/film-black-widow.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/497698",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2021-07-07"
+        ],
+        [
+          "TMDB rating",
+          "7.2"
+        ]
+      ],
+      "height": 0.471,
+      "thickness": 0.616,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#260a0b",
+        "accent": "#9c0f0f",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-black-widow.jpg"
+    },
+    {
+      "id": "film-tenet",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Tenet",
+      "creator": "",
+      "year": 2020,
+      "detail": "Film",
+      "cover": "images/library/film-tenet.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/577922",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2020-08-22"
+        ],
+        [
+          "TMDB rating",
+          "7.2"
+        ]
+      ],
+      "height": 0.721,
+      "thickness": 1.256,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Thriller",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#4a5560",
+        "accent": "#274760",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-tenet.jpg"
+    },
+    {
+      "id": "film-star-wars-the-rise-of-skywalker",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Star Wars: The Rise of Skywalker",
+      "creator": "",
+      "year": 2019,
+      "detail": "Film",
+      "cover": "images/library/film-star-wars-the-rise-of-skywalker.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/181812",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2019-12-18"
+        ],
+        [
+          "TMDB rating",
+          "6.3"
+        ]
+      ],
+      "height": 0.74,
+      "thickness": 0.68,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#414355",
+        "accent": "#2795cf",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-star-wars-the-rise-of-skywalker.jpg"
+    },
+    {
+      "id": "film-little-women",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Little Women",
+      "creator": "",
+      "year": 2019,
+      "detail": "Film",
+      "cover": "images/library/film-little-women.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/331482",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2019-12-25"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.978,
+      "thickness": 0.838,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#27251f",
+        "accent": "#33230f",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-little-women.jpg"
+    },
+    {
+      "id": "film-jojo-rabbit",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Jojo Rabbit",
+      "creator": "",
+      "year": 2019,
+      "detail": "Film",
+      "cover": "images/library/film-jojo-rabbit.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/515001",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2019-10-18"
+        ],
+        [
+          "TMDB rating",
+          "8.0"
+        ]
+      ],
+      "height": 0.92,
+      "thickness": 0.726,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "War",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#5a2c2c",
+        "accent": "#be1419",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-jojo-rabbit.jpg"
+    },
+    {
+      "id": "film-knives-out",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Knives Out",
+      "creator": "",
+      "year": 2019,
+      "detail": "Film",
+      "cover": "images/library/film-knives-out.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/546554",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2019-11-27"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.679,
+      "thickness": 1.487,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Mystery"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#321c0e",
+        "accent": "#a8840b",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-knives-out.jpg"
+    },
+    {
+      "id": "film-joker",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Joker",
+      "creator": "",
+      "year": 2019,
+      "detail": "Film",
+      "cover": "images/library/film-joker.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/475557",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2019-10-01"
+        ],
+        [
+          "TMDB rating",
+          "8.1"
+        ]
+      ],
+      "height": 0.463,
+      "thickness": 0.66,
+      "starred": false,
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#4b4234",
+        "accent": "#8f4233",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-joker.jpg"
+    },
+    {
+      "id": "film-spider-man-far-from-home",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Spider-Man: Far From Home",
+      "creator": "",
+      "year": 2019,
+      "detail": "Film",
+      "cover": "images/library/film-spider-man-far-from-home.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/429617",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2019-06-28"
+        ],
+        [
+          "TMDB rating",
+          "7.4"
+        ]
+      ],
+      "height": 0.931,
+      "thickness": 0.666,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#303740",
+        "accent": "#04456f",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-spider-man-far-from-home.jpg"
+    },
+    {
+      "id": "film-parasite",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Parasite",
+      "creator": "",
+      "year": 2019,
+      "detail": "Film",
+      "cover": "images/library/film-parasite.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/496243",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2026-05-31",
+      "facts": [
+        [
+          "Released",
+          "2019-05-30"
+        ],
+        [
+          "TMDB rating",
+          "8.5"
+        ]
+      ],
+      "height": 0.691,
+      "thickness": 1.242,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "Thriller",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#304e41",
+        "accent": "#208689",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-parasite.jpg"
+    },
+    {
+      "id": "film-once-upon-a-time-in-hollywood",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Once Upon a Time... in Hollywood",
+      "creator": "",
+      "year": 2019,
+      "detail": "Film",
+      "cover": "images/library/film-once-upon-a-time-in-hollywood.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/466272",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2019-07-24"
+        ],
+        [
+          "TMDB rating",
+          "7.4"
+        ]
+      ],
+      "height": 0.66,
+      "thickness": 1.139,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Thriller"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#896a5c",
+        "accent": "#f04934",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-once-upon-a-time-in-hollywood.jpg"
+    },
+    {
+      "id": "film-avengers-endgame",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Avengers: Endgame",
+      "creator": "",
+      "year": 2019,
+      "detail": "Film",
+      "cover": "images/library/film-avengers-endgame.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/299534",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2019-04-24"
+        ],
+        [
+          "TMDB rating",
+          "8.2"
+        ]
+      ],
+      "height": 0.614,
+      "thickness": 1.214,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Science fiction",
+        "Action"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#2d1a3d",
+        "accent": "#12084d",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-avengers-endgame.jpg"
+    },
+    {
+      "id": "film-captain-marvel",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Captain Marvel",
+      "creator": "",
+      "year": 2019,
+      "detail": "Film",
+      "cover": "images/library/film-captain-marvel.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/299537",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2019-03-06"
+        ],
+        [
+          "TMDB rating",
+          "6.8"
+        ]
+      ],
+      "height": 0.833,
+      "thickness": 1.036,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#53333b",
+        "accent": "#a00d12",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-captain-marvel.jpg"
+    },
+    {
+      "id": "film-spider-man-into-the-spider-verse",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Spider-Man: Into the Spider-Verse",
+      "creator": "",
+      "year": 2018,
+      "detail": "Film",
+      "cover": "images/library/film-spider-man-into-the-spider-verse.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/324857",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2018-12-06"
+        ],
+        [
+          "TMDB rating",
+          "8.4"
+        ]
+      ],
+      "height": 0.973,
+      "thickness": 1.106,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#46586d",
+        "accent": "#bde0f6",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-spider-man-into-the-spider-verse.jpg"
+    },
+    {
+      "id": "film-bohemian-rhapsody",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Bohemian Rhapsody",
+      "creator": "",
+      "year": 2018,
+      "detail": "Film",
+      "cover": "images/library/film-bohemian-rhapsody.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/424694",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2018-10-24"
+        ],
+        [
+          "TMDB rating",
+          "8.0"
+        ]
+      ],
+      "height": 0.981,
+      "thickness": 1.405,
+      "starred": false,
+      "genres": [
+        "Musical",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#7b464e",
+        "accent": "#ffd403",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-bohemian-rhapsody.jpg"
+    },
+    {
+      "id": "film-avengers-infinity-war",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Avengers: Infinity War",
+      "creator": "",
+      "year": 2018,
+      "detail": "Film",
+      "cover": "images/library/film-avengers-infinity-war.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/299536",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2018-04-25"
+        ],
+        [
+          "TMDB rating",
+          "8.2"
+        ]
+      ],
+      "height": 0.933,
+      "thickness": 1.11,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#3e2528",
+        "accent": "#06406d",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-avengers-infinity-war.jpg"
+    },
+    {
+      "id": "film-a-quiet-place",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "A Quiet Place",
+      "creator": "",
+      "year": 2018,
+      "detail": "Film",
+      "cover": "images/library/film-a-quiet-place.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/447332",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2018-04-03"
+        ],
+        [
+          "TMDB rating",
+          "7.4"
+        ]
+      ],
+      "height": 0.614,
+      "thickness": 1.32,
+      "starred": false,
+      "genres": [
+        "Horror",
+        "Drama",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#121617",
+        "accent": "#182528",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-a-quiet-place.jpg"
+    },
+    {
+      "id": "film-black-panther",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Black Panther",
+      "creator": "",
+      "year": 2018,
+      "detail": "Film",
+      "cover": "images/library/film-black-panther.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/284054",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2018-02-13"
+        ],
+        [
+          "TMDB rating",
+          "7.4"
+        ]
+      ],
+      "height": 0.702,
+      "thickness": 1.332,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#212b35",
+        "accent": "#033165",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-black-panther.jpg"
+    },
+    {
+      "id": "film-star-wars-the-last-jedi",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Star Wars: The Last Jedi",
+      "creator": "",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-star-wars-the-last-jedi.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/181808",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2017-12-13"
+        ],
+        [
+          "TMDB rating",
+          "6.7"
+        ]
+      ],
+      "height": 0.465,
+      "thickness": 0.625,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#613e3f",
+        "accent": "#820a0a",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-star-wars-the-last-jedi.jpg"
+    },
+    {
+      "id": "film-coco",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Coco",
+      "creator": "",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-coco.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/354912",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2017-10-27"
+        ],
+        [
+          "TMDB rating",
+          "8.2"
+        ]
+      ],
+      "height": 0.959,
+      "thickness": 0.77,
+      "starred": false,
+      "genres": [
+        "Family",
+        "Animation",
+        "Musical",
+        "Adventure"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#423240",
+        "accent": "#14275f",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-coco.jpg"
+    },
+    {
+      "id": "film-blade-runner-2049",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Blade Runner 2049",
+      "creator": "",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-blade-runner-2049.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/335984",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2017-10-04"
+        ],
+        [
+          "TMDB rating",
+          "7.6"
+        ]
+      ],
+      "height": 0.547,
+      "thickness": 1.243,
+      "starred": false,
+      "genres": [
+        "Science fiction",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#372927",
+        "accent": "#c11504",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-blade-runner-2049.jpg"
+    },
+    {
+      "id": "film-thor-ragnarok",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Thor: Ragnarok",
+      "creator": "",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-thor-ragnarok.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/284053",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2017-10-02"
+        ],
+        [
+          "TMDB rating",
+          "7.6"
+        ]
+      ],
+      "height": 0.517,
+      "thickness": 1.253,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Science fiction",
+        "Comedy",
+        "Adventure"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#344250",
+        "accent": "#1a4a91",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-thor-ragnarok.jpg"
+    },
+    {
+      "id": "film-it",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "It",
+      "creator": "",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-it.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/346364",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2017-09-06"
+        ],
+        [
+          "TMDB rating",
+          "7.2"
+        ]
+      ],
+      "height": 0.869,
+      "thickness": 1.003,
+      "starred": false,
+      "genres": [
+        "Horror",
+        "Thriller",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#1b1816",
+        "accent": "#977920",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-it.jpg"
+    },
+    {
+      "id": "film-lady-bird",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Lady Bird",
+      "creator": "",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-lady-bird.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/391713",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": "2026-06-03",
+      "facts": [
+        [
+          "Released",
+          "2017-09-01"
+        ],
+        [
+          "TMDB rating",
+          "7.2"
+        ]
+      ],
+      "height": 0.689,
+      "thickness": 0.775,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#705a50",
+        "accent": "#3f0600",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-lady-bird.jpg"
+    },
+    {
+      "id": "film-dunkirk",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Dunkirk",
+      "creator": "",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-dunkirk.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/374720",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2017-07-19"
+        ],
+        [
+          "TMDB rating",
+          "7.4"
+        ]
+      ],
+      "height": 0.78,
+      "thickness": 1.37,
+      "starred": false,
+      "genres": [
+        "War",
+        "Action",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#3a4c57",
+        "accent": "#245066",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-dunkirk.jpg"
+    },
+    {
+      "id": "film-spider-man-homecoming",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Spider-Man: Homecoming",
+      "creator": "",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-spider-man-homecoming.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/315635",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2017-07-05"
+        ],
+        [
+          "TMDB rating",
+          "7.3"
+        ]
+      ],
+      "height": 0.468,
+      "thickness": 1.415,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#4b494b",
+        "accent": "#f2d9bf",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-spider-man-homecoming.jpg"
+    },
+    {
+      "id": "film-wonder-woman",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Wonder Woman",
+      "creator": "",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-wonder-woman.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/297762",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2017-05-30"
+        ],
+        [
+          "TMDB rating",
+          "7.2"
+        ]
+      ],
+      "height": 0.724,
+      "thickness": 0.713,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#724c31",
+        "accent": "#f58217",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-wonder-woman.jpg"
+    },
+    {
+      "id": "film-baby-driver",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Baby Driver",
+      "creator": "",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-baby-driver.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/339403",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2017-06-28"
+        ],
+        [
+          "TMDB rating",
+          "7.4"
+        ]
+      ],
+      "height": 0.651,
+      "thickness": 1.45,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Crime"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#78423d",
+        "accent": "#f04f72",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-baby-driver.jpg"
+    },
+    {
+      "id": "film-logan",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Logan",
+      "creator": "",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-logan.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/263115",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2017-02-28"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.949,
+      "thickness": 0.713,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Drama",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#593528",
+        "accent": "#fd903a",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-logan.jpg"
+    },
+    {
+      "id": "film-get-out",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Get Out",
+      "creator": "",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-get-out.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/419430",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2017-02-24"
+        ],
+        [
+          "TMDB rating",
+          "7.6"
+        ]
+      ],
+      "height": 0.899,
+      "thickness": 0.775,
+      "starred": false,
+      "genres": [
+        "Mystery",
+        "Thriller",
+        "Horror"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#595959",
+        "accent": "#414141",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-get-out.jpg"
+    },
+    {
+      "id": "film-rogue-one-a-star-wars-story",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Rogue One: A Star Wars Story",
+      "creator": "",
+      "year": 2016,
+      "detail": "Film",
+      "cover": "images/library/film-rogue-one-a-star-wars-story.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/330459",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2016-12-14"
+        ],
+        [
+          "TMDB rating",
+          "7.5"
+        ]
+      ],
+      "height": 0.958,
+      "thickness": 0.731,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#4d5a5e",
+        "accent": "#20354e",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-rogue-one-a-star-wars-story.jpg"
+    },
+    {
+      "id": "film-split",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Split",
+      "creator": "",
+      "year": 2016,
+      "detail": "Film",
+      "cover": "images/library/film-split.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/381288",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2017-01-19"
+        ],
+        [
+          "TMDB rating",
+          "7.3"
+        ]
+      ],
+      "height": 0.718,
+      "thickness": 0.884,
+      "starred": false,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#5f5b58",
+        "accent": "#d7c2b1",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-split.jpg"
+    },
+    {
+      "id": "film-arrival",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Arrival",
+      "creator": "",
+      "year": 2016,
+      "detail": "Film",
+      "cover": "images/library/film-arrival.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/329865",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2016-11-10"
+        ],
+        [
+          "TMDB rating",
+          "7.6"
+        ]
+      ],
+      "height": 0.722,
+      "thickness": 1.23,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Science fiction",
+        "Mystery"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#403b32",
+        "accent": "#f5d3ad",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-arrival.jpg"
+    },
+    {
+      "id": "film-the-nice-guys",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Nice Guys",
+      "creator": "",
+      "year": 2016,
+      "detail": "Film",
+      "cover": "images/library/film-the-nice-guys.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/290250",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2026-06-02",
+      "facts": [
+        [
+          "Released",
+          "2016-05-15"
+        ],
+        [
+          "TMDB rating",
+          "7.1"
+        ]
+      ],
+      "height": 0.612,
+      "thickness": 0.622,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Action"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#827565",
+        "accent": "#f4ba87",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-the-nice-guys.jpg"
+    },
+    {
+      "id": "film-captain-america-civil-war",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Captain America: Civil War",
+      "creator": "",
+      "year": 2016,
+      "detail": "Film",
+      "cover": "images/library/film-captain-america-civil-war.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/271110",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2016-04-27"
+        ],
+        [
+          "TMDB rating",
+          "7.5"
+        ]
+      ],
+      "height": 0.59,
+      "thickness": 1.001,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#2d272d",
+        "accent": "#640303",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-captain-america-civil-war.jpg"
+    },
+    {
+      "id": "film-deadpool",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Deadpool",
+      "creator": "",
+      "year": 2016,
+      "detail": "Film",
+      "cover": "images/library/film-deadpool.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/293660",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2016-02-09"
+        ],
+        [
+          "TMDB rating",
+          "7.6"
+        ]
+      ],
+      "height": 0.866,
+      "thickness": 1.005,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#776769",
+        "accent": "#740d16",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-deadpool.jpg"
+    },
+    {
+      "id": "film-the-revenant",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Revenant",
+      "creator": "",
+      "year": 2015,
+      "detail": "Film",
+      "cover": "images/library/film-the-revenant.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/281957",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2015-12-25"
+        ],
+        [
+          "TMDB rating",
+          "7.5"
+        ]
+      ],
+      "height": 0.753,
+      "thickness": 0.965,
+      "starred": false,
+      "genres": [
+        "Western",
+        "Drama",
+        "Adventure"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#3c404b",
+        "accent": "#3a1118",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-revenant.jpg"
+    },
+    {
+      "id": "film-star-wars-the-force-awakens",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Star Wars: The Force Awakens",
+      "creator": "",
+      "year": 2015,
+      "detail": "Film",
+      "cover": "images/library/film-star-wars-the-force-awakens.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/140607",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2015-12-15"
+        ],
+        [
+          "TMDB rating",
+          "7.2"
+        ]
+      ],
+      "height": 0.477,
+      "thickness": 1.416,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#271b1d",
+        "accent": "#eba47c",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-star-wars-the-force-awakens.jpg"
+    },
+    {
+      "id": "film-the-hateful-eight",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Hateful Eight",
+      "creator": "",
+      "year": 2015,
+      "detail": "Film",
+      "cover": "images/library/film-the-hateful-eight.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/273248",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2015-12-25"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.872,
+      "thickness": 1.311,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Western"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#858381",
+        "accent": "#d9b6b7",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-the-hateful-eight.jpg"
+    },
+    {
+      "id": "film-the-martian",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Martian",
+      "creator": "",
+      "year": 2015,
+      "detail": "Film",
+      "cover": "images/library/film-the-martian.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/286217",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 5,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2015-09-30"
+        ],
+        [
+          "TMDB rating",
+          "7.7"
+        ]
+      ],
+      "height": 0.707,
+      "thickness": 1.015,
+      "starred": false,
+      "genres": [
+        "Science fiction",
+        "Drama",
+        "Adventure"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#958477",
+        "accent": "#c75e27",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-the-martian.jpg"
+    },
+    {
+      "id": "film-ant-man",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Ant-Man",
+      "creator": "",
+      "year": 2015,
+      "detail": "Film",
+      "cover": "images/library/film-ant-man.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/102899",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2015-07-14"
+        ],
+        [
+          "TMDB rating",
+          "7.1"
+        ]
+      ],
+      "height": 0.49,
+      "thickness": 0.848,
+      "starred": false,
+      "genres": [
+        "Science fiction",
+        "Adventure",
+        "Action"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#2f3c4b",
+        "accent": "#4c0504",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-ant-man.jpg"
+    },
+    {
+      "id": "film-sicario",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Sicario",
+      "creator": "",
+      "year": 2015,
+      "detail": "Film",
+      "cover": "images/library/film-sicario.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/273481",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3.5,
+      "finished": "2026-04-04",
+      "facts": [
+        [
+          "Released",
+          "2015-09-17"
+        ],
+        [
+          "TMDB rating",
+          "7.4"
+        ]
+      ],
+      "height": 0.648,
+      "thickness": 0.691,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#7c7263",
+        "accent": "#906242",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-sicario.jpg"
+    },
+    {
+      "id": "film-inside-out",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Inside Out",
+      "creator": "",
+      "year": 2015,
+      "detail": "Film",
+      "cover": "images/library/film-inside-out.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/150540",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2015-06-17"
+        ],
+        [
+          "TMDB rating",
+          "7.9"
+        ]
+      ],
+      "height": 0.735,
+      "thickness": 1.042,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Family",
+        "Adventure",
+        "Drama",
+        "Comedy"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#3d4355",
+        "accent": "#003a7e",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-inside-out.jpg"
+    },
+    {
+      "id": "film-quantum-of-solace",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Quantum of Solace",
+      "creator": "",
+      "year": 2008,
+      "detail": "Film",
+      "cover": "images/library/film-quantum-of-solace.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/10764",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": "2026-07-23",
+      "facts": [
+        [
+          "Released",
+          "2008-10-29"
+        ],
+        [
+          "TMDB rating",
+          "6.3"
+        ]
+      ],
+      "height": 0.82,
+      "thickness": 0.666,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Thriller"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#625347",
+        "accent": "#f8eed0",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-quantum-of-solace.jpg"
+    },
+    {
+      "id": "film-casino-royale",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Casino Royale",
+      "creator": "",
+      "year": 2006,
+      "detail": "Film",
+      "cover": "images/library/film-casino-royale.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/36557",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2026-07-18",
+      "facts": [
+        [
+          "Released",
+          "2006-11-14"
+        ],
+        [
+          "TMDB rating",
+          "7.6"
+        ]
+      ],
+      "height": 0.689,
+      "thickness": 1.194,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Thriller"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#182325",
+        "accent": "#102f30",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-casino-royale.jpg"
+    },
+    {
+      "id": "film-alien",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Alien",
+      "creator": "",
+      "year": 1979,
+      "detail": "Film",
+      "cover": "images/library/film-alien.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/348",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2026-07-15",
+      "facts": [
+        [
+          "Released",
+          "1979-05-25"
+        ],
+        [
+          "TMDB rating",
+          "8.2"
+        ]
+      ],
+      "height": 0.816,
+      "thickness": 1.338,
+      "starred": false,
+      "genres": [
+        "Horror",
+        "Science fiction"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#080806",
+        "accent": "#44572b",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-alien.jpg"
+    },
+    {
+      "id": "film-inglourious-basterds",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Inglourious Basterds",
+      "creator": "",
+      "year": 2009,
+      "detail": "Film",
+      "cover": "images/library/film-inglourious-basterds.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/16869",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4.5,
+      "finished": "2026-07-12",
+      "facts": [
+        [
+          "Released",
+          "2009-08-02"
+        ],
+        [
+          "TMDB rating",
+          "8.2"
+        ]
+      ],
+      "height": 0.912,
+      "thickness": 1.271,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Thriller",
+        "War"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#877877",
+        "accent": "#aa1f21",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-inglourious-basterds.jpg"
+    },
+    {
+      "id": "film-tinker-tailor-soldier-spy",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Tinker Tailor Soldier Spy",
+      "creator": "",
+      "year": 2011,
+      "detail": "Film",
+      "cover": "images/library/film-tinker-tailor-soldier-spy.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/49517",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2026-07-07",
+      "facts": [
+        [
+          "Released",
+          "2011-09-16"
+        ],
+        [
+          "TMDB rating",
+          "6.6"
+        ]
+      ],
+      "height": 0.873,
+      "thickness": 0.757,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Mystery"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#1e1e1d",
+        "accent": "#13484c",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-tinker-tailor-soldier-spy.jpg"
+    },
+    {
+      "id": "film-moneyball",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Moneyball",
+      "creator": "",
+      "year": 2011,
+      "detail": "Film",
+      "cover": "images/library/film-moneyball.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/60308",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4.5,
+      "finished": "2026-07-05",
+      "facts": [
+        [
+          "Released",
+          "2011-09-23"
+        ],
+        [
+          "TMDB rating",
+          "7.3"
+        ]
+      ],
+      "height": 0.868,
+      "thickness": 1.11,
+      "starred": false,
+      "genres": [
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#333a29",
+        "accent": "#89ad40",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-moneyball.jpg"
+    },
+    {
+      "id": "film-close-encounters-of-the-third-kind",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Close Encounters of the Third Kind",
+      "creator": "",
+      "year": 1977,
+      "detail": "Film",
+      "cover": "images/library/film-close-encounters-of-the-third-kind.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/840",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2026-06-29",
+      "facts": [
+        [
+          "Released",
+          "1977-12-14"
+        ],
+        [
+          "TMDB rating",
+          "7.4"
+        ]
+      ],
+      "height": 0.457,
+      "thickness": 0.841,
+      "starred": false,
+      "genres": [
+        "Science fiction",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#0e1518",
+        "accent": "#24698f",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-close-encounters-of-the-third-kind.jpg"
+    },
+    {
+      "id": "film-inside-llewyn-davis",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Inside Llewyn Davis",
+      "creator": "",
+      "year": 2013,
+      "detail": "Film",
+      "cover": "images/library/film-inside-llewyn-davis.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/86829",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2026-06-18",
+      "facts": [
+        [
+          "Released",
+          "2013-10-18"
+        ],
+        [
+          "TMDB rating",
+          "7.2"
+        ]
+      ],
+      "height": 0.727,
+      "thickness": 0.921,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Musical"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#848277",
+        "accent": "#c8c1ad",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-inside-llewyn-davis.jpg"
+    },
+    {
+      "id": "film-before-sunset",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Before Sunset",
+      "creator": "",
+      "year": 2004,
+      "detail": "Film",
+      "cover": "images/library/film-before-sunset.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/80",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4.5,
+      "finished": "2026-06-08",
+      "facts": [
+        [
+          "Released",
+          "2004-06-16"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.687,
+      "thickness": 1.487,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#1c1811",
+        "accent": "#382c0c",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-before-sunset.jpg"
+    },
+    {
+      "id": "film-that-thing-you-do",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "That Thing You Do!",
+      "creator": "",
+      "year": 1996,
+      "detail": "Film",
+      "cover": "images/library/film-that-thing-you-do.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/9591",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3.5,
+      "finished": "2026-05-29",
+      "facts": [
+        [
+          "Released",
+          "1996-10-04"
+        ],
+        [
+          "TMDB rating",
+          "6.9"
+        ]
+      ],
+      "height": 0.686,
+      "thickness": 1.272,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Musical"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#8f8585",
+        "accent": "#e5b86b",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-that-thing-you-do.jpg"
+    },
+    {
+      "id": "film-tears-of-the-sun",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Tears of the Sun",
+      "creator": "",
+      "year": 2003,
+      "detail": "Film",
+      "cover": "images/library/film-tears-of-the-sun.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/9567",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": "2026-05-27",
+      "facts": [
+        [
+          "Released",
+          "2003-03-07"
+        ],
+        [
+          "TMDB rating",
+          "6.9"
+        ]
+      ],
+      "height": 0.508,
+      "thickness": 0.902,
+      "starred": false,
+      "genres": [
+        "War",
+        "Action",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#6e491a",
+        "accent": "#dd730e",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-tears-of-the-sun.jpg"
+    },
+    {
+      "id": "film-michael-clayton",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Michael Clayton",
+      "creator": "",
+      "year": 2007,
+      "detail": "Film",
+      "cover": "images/library/film-michael-clayton.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/4566",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4.5,
+      "finished": "2026-05-18",
+      "facts": [
+        [
+          "Released",
+          "2007-09-28"
+        ],
+        [
+          "TMDB rating",
+          "6.8"
+        ]
+      ],
+      "height": 0.963,
+      "thickness": 1.05,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#262d3a",
+        "accent": "#1fa4d3",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-michael-clayton.jpg"
+    },
+    {
+      "id": "film-anchorman-the-legend-of-ron-burgundy",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Anchorman: The Legend of Ron Burgundy",
+      "creator": "",
+      "year": 2004,
+      "detail": "Film",
+      "cover": "images/library/film-anchorman-the-legend-of-ron-burgundy.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/8699",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2026-04-27",
+      "facts": [
+        [
+          "Released",
+          "2004-06-28"
+        ],
+        [
+          "TMDB rating",
+          "6.7"
+        ]
+      ],
+      "height": 0.474,
+      "thickness": 1.044,
+      "starred": false,
+      "genres": [
+        "Comedy"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#3a4053",
+        "accent": "#0369ac",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-anchorman-the-legend-of-ron-burgundy.jpg"
+    },
+    {
+      "id": "film-no-country-for-old-men",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "No Country for Old Men",
+      "creator": "",
+      "year": 2007,
+      "detail": "Film",
+      "cover": "images/library/film-no-country-for-old-men.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/6977",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4.5,
+      "finished": "2026-05-02",
+      "facts": [
+        [
+          "Released",
+          "2007-11-09"
+        ],
+        [
+          "TMDB rating",
+          "7.9"
+        ]
+      ],
+      "height": 0.771,
+      "thickness": 1.043,
+      "starred": false,
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Western"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#27211d",
+        "accent": "#946a4e",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-no-country-for-old-men.jpg"
+    },
+    {
+      "id": "film-2001-a-space-odyssey",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "2001: A Space Odyssey",
+      "creator": "",
+      "year": 1968,
+      "detail": "Film",
+      "cover": "images/library/film-2001-a-space-odyssey.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/62",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 3,
+      "finished": "2026-01-15",
+      "facts": [
+        [
+          "Released",
+          "1968-04-02"
+        ],
+        [
+          "TMDB rating",
+          "8.0"
+        ]
+      ],
+      "height": 0.87,
+      "thickness": 0.61,
+      "starred": false,
+      "genres": [
+        "Science fiction",
+        "Mystery",
+        "Adventure"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#2d2f2d",
+        "accent": "#c9c5ad",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-2001-a-space-odyssey.jpg"
+    },
+    {
+      "id": "film-the-royal-tenenbaums",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Royal Tenenbaums",
+      "creator": "",
+      "year": 2001,
+      "detail": "Film",
+      "cover": "images/library/film-the-royal-tenenbaums.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/9428",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": 4,
+      "finished": "2026-03-30",
+      "facts": [
+        [
+          "Released",
+          "2001-10-05"
+        ],
+        [
+          "TMDB rating",
+          "7.5"
+        ]
+      ],
+      "height": 0.638,
+      "thickness": 1.109,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "creators": [
+        "Unknown"
+      ],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#755c51",
+        "accent": "#912719",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-royal-tenenbaums.jpg"
     }
   ]
 }

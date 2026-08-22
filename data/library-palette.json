@@ -978,5 +978,875 @@
       "accent": "#cee7ea",
       "ink": "#f1ece3"
     }
+  },
+  "film-spider-man-brand-new-day": {
+    "fingerprint": "243059:1787364136321",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#2e1418",
+      "accent": "#003d69",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-odyssey": {
+    "fingerprint": "149025:1787364136322",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#423731",
+      "accent": "#eabc7e",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-disclosure-day": {
+    "fingerprint": "148882:1787364136323",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#8d9590",
+      "accent": "#ddeadf",
+      "ink": "#141210"
+    }
+  },
+  "film-the-mandalorian-and-grogu": {
+    "fingerprint": "278933:1787364136324",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#3c3026",
+      "accent": "#f58911",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-backrooms": {
+    "fingerprint": "103937:1787364136325",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#5c4e1a",
+      "accent": "#998926",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-devil-wears-prada-2": {
+    "fingerprint": "104605:1787364136325",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#998585",
+      "accent": "#540505",
+      "ink": "#141210"
+    }
+  },
+  "film-michael": {
+    "fingerprint": "250332:1787364136326",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#5f4132",
+      "accent": "#b12c28",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-drama": {
+    "fingerprint": "209193:1787364136326",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#433a34",
+      "accent": "#5b3015",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-project-hail-mary": {
+    "fingerprint": "171053:1787364136327",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#253233",
+      "accent": "#10526a",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-marty-supreme": {
+    "fingerprint": "153621:1787364136327",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#3d2d26",
+      "accent": "#5e301d",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-one-battle-after-another": {
+    "fingerprint": "184571:1787364136328",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#513323",
+      "accent": "#e8834e",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-obsession": {
+    "fingerprint": "75407:1787364136328",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#161312",
+      "accent": "#311a11",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-wake-up-dead-man": {
+    "fingerprint": "151039:1787364136329",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#2c2e2c",
+      "accent": "#938c79",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-kpop-demon-hunters": {
+    "fingerprint": "204922:1787364136329",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#534c85",
+      "accent": "#0c3c9b",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-superman": {
+    "fingerprint": "152336:1787364136330",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#5a4452",
+      "accent": "#31aefa",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-f1": {
+    "fingerprint": "125457:1787364136330",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#474b46",
+      "accent": "#27373e",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-mission-impossible-the-final-reckoning": {
+    "fingerprint": "194957:1787364136331",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#797870",
+      "accent": "#946720",
+      "ink": "#141210"
+    }
+  },
+  "film-thunderbolts": {
+    "fingerprint": "243877:1787364136331",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#29241c",
+      "accent": "#754e34",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-sinners": {
+    "fingerprint": "124786:1787364136332",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#551f0d",
+      "accent": "#f39604",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-black-bag": {
+    "fingerprint": "304306:1787364136332",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#444c4a",
+      "accent": "#f9d1a0",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-friendship": {
+    "fingerprint": "128503:1787364136333",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#707975",
+      "accent": "#d7e259",
+      "ink": "#141210"
+    }
+  },
+  "film-conclave": {
+    "fingerprint": "122140:1787364136333",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#484848",
+      "accent": "#780e10",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-deadpool-wolverine": {
+    "fingerprint": "275640:1787364136333",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#4f382b",
+      "accent": "#d2b224",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-boy-and-the-heron": {
+    "fingerprint": "88824:1787364136334",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#6c6c5a",
+      "accent": "#e5c994",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-dungeons-dragons-honor-among-thieves": {
+    "fingerprint": "255499:1787364136334",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#4c3435",
+      "accent": "#61120c",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-batman": {
+    "fingerprint": "248571:1787364136334",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#572b11",
+      "accent": "#e36716",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-spider-man-no-way-home": {
+    "fingerprint": "296456:1787364136335",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#4f4146",
+      "accent": "#8d3b46",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-dune": {
+    "fingerprint": "198969:1787364136335",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#485551",
+      "accent": "#40160c",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-shang-chi-and-the-legend-of-the-ten-rings": {
+    "fingerprint": "213451:1787364136335",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#1d2d34",
+      "accent": "#357ca8",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-black-widow": {
+    "fingerprint": "225509:1787364136337",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#260a0b",
+      "accent": "#9c0f0f",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-tenet": {
+    "fingerprint": "190215:1787364136337",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#4a5560",
+      "accent": "#274760",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-star-wars-the-rise-of-skywalker": {
+    "fingerprint": "239444:1787364136338",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#414355",
+      "accent": "#2795cf",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-little-women": {
+    "fingerprint": "183582:1787364136339",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#27251f",
+      "accent": "#33230f",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-jojo-rabbit": {
+    "fingerprint": "276807:1787364136339",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#5a2c2c",
+      "accent": "#be1419",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-knives-out": {
+    "fingerprint": "203028:1787364136340",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#321c0e",
+      "accent": "#a8840b",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-joker": {
+    "fingerprint": "229171:1787364136340",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#4b4234",
+      "accent": "#8f4233",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-spider-man-far-from-home": {
+    "fingerprint": "170066:1787364136341",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#303740",
+      "accent": "#04456f",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-parasite": {
+    "fingerprint": "307242:1787364136341",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#304e41",
+      "accent": "#208689",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-once-upon-a-time-in-hollywood": {
+    "fingerprint": "263546:1787364136341",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#896a5c",
+      "accent": "#f04934",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-avengers-endgame": {
+    "fingerprint": "262548:1787364136344",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#2d1a3d",
+      "accent": "#12084d",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-captain-marvel": {
+    "fingerprint": "231132:1787364136344",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#53333b",
+      "accent": "#a00d12",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-spider-man-into-the-spider-verse": {
+    "fingerprint": "116065:1787364136344",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#46586d",
+      "accent": "#bde0f6",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-bohemian-rhapsody": {
+    "fingerprint": "163453:1787364136345",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#7b464e",
+      "accent": "#ffd403",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-avengers-infinity-war": {
+    "fingerprint": "259635:1787364136345",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#3e2528",
+      "accent": "#06406d",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-a-quiet-place": {
+    "fingerprint": "158257:1787364136346",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#121617",
+      "accent": "#182528",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-black-panther": {
+    "fingerprint": "259332:1787364136346",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#212b35",
+      "accent": "#033165",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-star-wars-the-last-jedi": {
+    "fingerprint": "270837:1787364136347",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#613e3f",
+      "accent": "#820a0a",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-coco": {
+    "fingerprint": "209592:1787364136347",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#423240",
+      "accent": "#14275f",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-blade-runner-2049": {
+    "fingerprint": "195023:1787364136348",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#372927",
+      "accent": "#c11504",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-thor-ragnarok": {
+    "fingerprint": "219189:1787364136349",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#344250",
+      "accent": "#1a4a91",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-it": {
+    "fingerprint": "105854:1787364136349",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#1b1816",
+      "accent": "#977920",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-lady-bird": {
+    "fingerprint": "199634:1787364136349",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#705a50",
+      "accent": "#3f0600",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-dunkirk": {
+    "fingerprint": "144486:1787364136350",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#3a4c57",
+      "accent": "#245066",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-spider-man-homecoming": {
+    "fingerprint": "242473:1787364136350",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#4b494b",
+      "accent": "#f2d9bf",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-wonder-woman": {
+    "fingerprint": "109200:1787364136351",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#724c31",
+      "accent": "#f58217",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-baby-driver": {
+    "fingerprint": "182137:1787364136351",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#78423d",
+      "accent": "#f04f72",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-logan": {
+    "fingerprint": "274970:1787364136351",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#593528",
+      "accent": "#fd903a",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-get-out": {
+    "fingerprint": "153981:1787364136352",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#595959",
+      "accent": "#414141",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-rogue-one-a-star-wars-story": {
+    "fingerprint": "211388:1787364136352",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#4d5a5e",
+      "accent": "#20354e",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-split": {
+    "fingerprint": "154092:1787364136354",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#5f5b58",
+      "accent": "#d7c2b1",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-arrival": {
+    "fingerprint": "151554:1787364136354",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#403b32",
+      "accent": "#f5d3ad",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-nice-guys": {
+    "fingerprint": "195050:1787364136355",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#827565",
+      "accent": "#f4ba87",
+      "ink": "#141210"
+    }
+  },
+  "film-captain-america-civil-war": {
+    "fingerprint": "233780:1787364136355",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#2d272d",
+      "accent": "#640303",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-deadpool": {
+    "fingerprint": "200402:1787364136356",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#776769",
+      "accent": "#740d16",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-revenant": {
+    "fingerprint": "179776:1787364136356",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#3c404b",
+      "accent": "#3a1118",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-star-wars-the-force-awakens": {
+    "fingerprint": "232097:1787364136356",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#271b1d",
+      "accent": "#eba47c",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-hateful-eight": {
+    "fingerprint": "171049:1787364136357",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#858381",
+      "accent": "#d9b6b7",
+      "ink": "#141210"
+    }
+  },
+  "film-the-martian": {
+    "fingerprint": "179657:1787364136357",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#958477",
+      "accent": "#c75e27",
+      "ink": "#141210"
+    }
+  },
+  "film-ant-man": {
+    "fingerprint": "156129:1787364136357",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#2f3c4b",
+      "accent": "#4c0504",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-sicario": {
+    "fingerprint": "180887:1787364136358",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#7c7263",
+      "accent": "#906242",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-inside-out": {
+    "fingerprint": "208876:1787364136358",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#3d4355",
+      "accent": "#003a7e",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-quantum-of-solace": {
+    "fingerprint": "163585:1787364136358",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#625347",
+      "accent": "#f8eed0",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-casino-royale": {
+    "fingerprint": "106027:1787364136358",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#182325",
+      "accent": "#102f30",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-alien": {
+    "fingerprint": "67703:1787364136359",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#080806",
+      "accent": "#44572b",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-inglourious-basterds": {
+    "fingerprint": "199780:1787364136359",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#877877",
+      "accent": "#aa1f21",
+      "ink": "#141210"
+    }
+  },
+  "film-tinker-tailor-soldier-spy": {
+    "fingerprint": "293550:1787364136359",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#1e1e1d",
+      "accent": "#13484c",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-moneyball": {
+    "fingerprint": "131277:1787364136359",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#333a29",
+      "accent": "#89ad40",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-close-encounters-of-the-third-kind": {
+    "fingerprint": "132480:1787364136359",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#0e1518",
+      "accent": "#24698f",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-inside-llewyn-davis": {
+    "fingerprint": "160679:1787364136359",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#848277",
+      "accent": "#c8c1ad",
+      "ink": "#141210"
+    }
+  },
+  "film-before-sunset": {
+    "fingerprint": "97201:1787364136360",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#1c1811",
+      "accent": "#382c0c",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-that-thing-you-do": {
+    "fingerprint": "106964:1787364136360",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#8f8585",
+      "accent": "#e5b86b",
+      "ink": "#141210"
+    }
+  },
+  "film-tears-of-the-sun": {
+    "fingerprint": "259962:1787364136360",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#6e491a",
+      "accent": "#dd730e",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-michael-clayton": {
+    "fingerprint": "149037:1787364136360",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#262d3a",
+      "accent": "#1fa4d3",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-anchorman-the-legend-of-ron-burgundy": {
+    "fingerprint": "171216:1787364136361",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#3a4053",
+      "accent": "#0369ac",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-no-country-for-old-men": {
+    "fingerprint": "165754:1787364136362",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#27211d",
+      "accent": "#946a4e",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-2001-a-space-odyssey": {
+    "fingerprint": "243409:1787364136362",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#2d2f2d",
+      "accent": "#c9c5ad",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-royal-tenenbaums": {
+    "fingerprint": "190281:1787364136362",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#755c51",
+      "accent": "#912719",
+      "ink": "#f1ece3"
+    }
   }
 }

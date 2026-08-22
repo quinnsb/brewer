@@ -1,6 +1,6 @@
 {
-  "importedAt": "2026-08-21T21:45:24.791Z",
-  "source": "library-add-books",
+  "importedAt": "2026-08-22T02:02:16.315Z",
+  "source": "library-add-films",
   "items": [
     {
       "type": "book",
@@ -111,6 +111,615 @@
       "creator": "Blake Crouch",
       "year": 2016,
       "sourceUrl": "https://www.goodreads.com/review/show/5276300514?utm_medium=api&utm_source=rss"
+    },
+    {
+      "type": "film",
+      "query": "Spider-Man: Brand New Day",
+      "title": "Spider-Man: Brand New Day",
+      "year": 2026,
+      "sourceUrl": "https://www.themoviedb.org/movie/969681"
+    },
+    {
+      "type": "film",
+      "query": "The Odyssey",
+      "title": "The Odyssey",
+      "year": 2026,
+      "sourceUrl": "https://www.themoviedb.org/movie/1368337"
+    },
+    {
+      "type": "film",
+      "query": "Disclosure Day",
+      "title": "Disclosure Day",
+      "year": 2026,
+      "sourceUrl": "https://www.themoviedb.org/movie/1275779"
+    },
+    {
+      "type": "film",
+      "query": "The Mandalorian and Grogu",
+      "title": "The Mandalorian and Grogu",
+      "year": 2026,
+      "sourceUrl": "https://www.themoviedb.org/movie/1228710"
+    },
+    {
+      "type": "film",
+      "query": "Backrooms",
+      "title": "Backrooms",
+      "year": 2026,
+      "sourceUrl": "https://www.themoviedb.org/movie/1083381"
+    },
+    {
+      "type": "film",
+      "query": "The Devil Wears Prada 2",
+      "title": "The Devil Wears Prada 2",
+      "year": 2026,
+      "sourceUrl": "https://www.themoviedb.org/movie/1314481"
+    },
+    {
+      "type": "film",
+      "query": "Michael",
+      "title": "Michael",
+      "year": 2026,
+      "sourceUrl": "https://www.themoviedb.org/movie/936075"
+    },
+    {
+      "type": "film",
+      "query": "The Drama",
+      "title": "The Drama",
+      "year": 2026,
+      "sourceUrl": "https://www.themoviedb.org/movie/1325734"
+    },
+    {
+      "type": "film",
+      "query": "Project Hail Mary",
+      "title": "Project Hail Mary",
+      "year": 2026,
+      "sourceUrl": "https://www.themoviedb.org/movie/687163"
+    },
+    {
+      "type": "film",
+      "query": "Marty Supreme",
+      "title": "Marty Supreme",
+      "year": 2025,
+      "sourceUrl": "https://www.themoviedb.org/movie/1317288"
+    },
+    {
+      "type": "film",
+      "query": "One Battle After Another",
+      "title": "One Battle After Another",
+      "year": 2025,
+      "sourceUrl": "https://www.themoviedb.org/movie/1054867"
+    },
+    {
+      "type": "film",
+      "query": "Obsession",
+      "title": "Obsession",
+      "year": 2025,
+      "sourceUrl": "https://www.themoviedb.org/movie/1339713"
+    },
+    {
+      "type": "film",
+      "query": "Wake Up Dead Man",
+      "title": "Wake Up Dead Man",
+      "year": 2025,
+      "sourceUrl": "https://www.themoviedb.org/movie/812583"
+    },
+    {
+      "type": "film",
+      "query": "KPop Demon Hunters",
+      "title": "KPop Demon Hunters",
+      "year": 2025,
+      "sourceUrl": "https://www.themoviedb.org/movie/803796"
+    },
+    {
+      "type": "film",
+      "query": "Superman",
+      "title": "Superman",
+      "year": 2025,
+      "sourceUrl": "https://www.themoviedb.org/movie/1061474"
+    },
+    {
+      "type": "film",
+      "query": "F1",
+      "title": "F1",
+      "year": 2025,
+      "sourceUrl": "https://www.themoviedb.org/movie/911430"
+    },
+    {
+      "type": "film",
+      "query": "Mission: Impossible – The Final Reckoning",
+      "title": "Mission: Impossible – The Final Reckoning",
+      "year": 2025,
+      "sourceUrl": "https://www.themoviedb.org/movie/575265"
+    },
+    {
+      "type": "film",
+      "query": "Thunderbolts*",
+      "title": "Thunderbolts*",
+      "year": 2025,
+      "sourceUrl": "https://www.themoviedb.org/movie/986056"
+    },
+    {
+      "type": "film",
+      "query": "Sinners",
+      "title": "Sinners",
+      "year": 2025,
+      "sourceUrl": "https://www.themoviedb.org/movie/1233413"
+    },
+    {
+      "type": "film",
+      "query": "Black Bag",
+      "title": "Black Bag",
+      "year": 2025,
+      "sourceUrl": "https://www.themoviedb.org/movie/1233575"
+    },
+    {
+      "type": "film",
+      "query": "Friendship",
+      "title": "Friendship",
+      "year": 2024,
+      "sourceUrl": "https://www.themoviedb.org/movie/1239655"
+    },
+    {
+      "type": "film",
+      "query": "Conclave",
+      "title": "Conclave",
+      "year": 2024,
+      "sourceUrl": "https://www.themoviedb.org/movie/974576"
+    },
+    {
+      "type": "film",
+      "query": "Deadpool & Wolverine",
+      "title": "Deadpool & Wolverine",
+      "year": 2024,
+      "sourceUrl": "https://www.themoviedb.org/movie/533535"
+    },
+    {
+      "type": "film",
+      "query": "The Boy and the Heron",
+      "title": "The Boy and the Heron",
+      "year": 2023,
+      "sourceUrl": "https://www.themoviedb.org/movie/508883"
+    },
+    {
+      "type": "film",
+      "query": "Dungeons & Dragons: Honor Among Thieves",
+      "title": "Dungeons & Dragons: Honor Among Thieves",
+      "year": 2023,
+      "sourceUrl": "https://www.themoviedb.org/movie/493529"
+    },
+    {
+      "type": "film",
+      "query": "The Batman",
+      "title": "The Batman",
+      "year": 2022,
+      "sourceUrl": "https://www.themoviedb.org/movie/414906"
+    },
+    {
+      "type": "film",
+      "query": "Spider-Man: No Way Home",
+      "title": "Spider-Man: No Way Home",
+      "year": 2021,
+      "sourceUrl": "https://www.themoviedb.org/movie/634649"
+    },
+    {
+      "type": "film",
+      "query": "Dune",
+      "title": "Dune",
+      "year": 2021,
+      "sourceUrl": "https://www.themoviedb.org/movie/438631"
+    },
+    {
+      "type": "film",
+      "query": "Shang-Chi and the Legend of the Ten Rings",
+      "title": "Shang-Chi and the Legend of the Ten Rings",
+      "year": 2021,
+      "sourceUrl": "https://www.themoviedb.org/movie/566525"
+    },
+    {
+      "type": "film",
+      "query": "Black Widow",
+      "title": "Black Widow",
+      "year": 2021,
+      "sourceUrl": "https://www.themoviedb.org/movie/497698"
+    },
+    {
+      "type": "film",
+      "query": "Tenet",
+      "title": "Tenet",
+      "year": 2020,
+      "sourceUrl": "https://www.themoviedb.org/movie/577922"
+    },
+    {
+      "type": "film",
+      "query": "Star Wars: The Rise of Skywalker",
+      "title": "Star Wars: The Rise of Skywalker",
+      "year": 2019,
+      "sourceUrl": "https://www.themoviedb.org/movie/181812"
+    },
+    {
+      "type": "film",
+      "query": "Little Women",
+      "title": "Little Women",
+      "year": 2019,
+      "sourceUrl": "https://www.themoviedb.org/movie/331482"
+    },
+    {
+      "type": "film",
+      "query": "Jojo Rabbit",
+      "title": "Jojo Rabbit",
+      "year": 2019,
+      "sourceUrl": "https://www.themoviedb.org/movie/515001"
+    },
+    {
+      "type": "film",
+      "query": "Knives Out",
+      "title": "Knives Out",
+      "year": 2019,
+      "sourceUrl": "https://www.themoviedb.org/movie/546554"
+    },
+    {
+      "type": "film",
+      "query": "Joker",
+      "title": "Joker",
+      "year": 2019,
+      "sourceUrl": "https://www.themoviedb.org/movie/475557"
+    },
+    {
+      "type": "film",
+      "query": "Spider-Man: Far From Home",
+      "title": "Spider-Man: Far From Home",
+      "year": 2019,
+      "sourceUrl": "https://www.themoviedb.org/movie/429617"
+    },
+    {
+      "type": "film",
+      "query": "Parasite",
+      "title": "Parasite",
+      "year": 2019,
+      "sourceUrl": "https://www.themoviedb.org/movie/496243"
+    },
+    {
+      "type": "film",
+      "query": "Once Upon a Time... in Hollywood",
+      "title": "Once Upon a Time... in Hollywood",
+      "year": 2019,
+      "sourceUrl": "https://www.themoviedb.org/movie/466272"
+    },
+    {
+      "type": "film",
+      "query": "Avengers: Endgame",
+      "title": "Avengers: Endgame",
+      "year": 2019,
+      "sourceUrl": "https://www.themoviedb.org/movie/299534"
+    },
+    {
+      "type": "film",
+      "query": "Captain Marvel",
+      "title": "Captain Marvel",
+      "year": 2019,
+      "sourceUrl": "https://www.themoviedb.org/movie/299537"
+    },
+    {
+      "type": "film",
+      "query": "Spider-Man: Into the Spider-Verse",
+      "title": "Spider-Man: Into the Spider-Verse",
+      "year": 2018,
+      "sourceUrl": "https://www.themoviedb.org/movie/324857"
+    },
+    {
+      "type": "film",
+      "query": "Bohemian Rhapsody",
+      "title": "Bohemian Rhapsody",
+      "year": 2018,
+      "sourceUrl": "https://www.themoviedb.org/movie/424694"
+    },
+    {
+      "type": "film",
+      "query": "Avengers: Infinity War",
+      "title": "Avengers: Infinity War",
+      "year": 2018,
+      "sourceUrl": "https://www.themoviedb.org/movie/299536"
+    },
+    {
+      "type": "film",
+      "query": "A Quiet Place",
+      "title": "A Quiet Place",
+      "year": 2018,
+      "sourceUrl": "https://www.themoviedb.org/movie/447332"
+    },
+    {
+      "type": "film",
+      "query": "Black Panther",
+      "title": "Black Panther",
+      "year": 2018,
+      "sourceUrl": "https://www.themoviedb.org/movie/284054"
+    },
+    {
+      "type": "film",
+      "query": "Star Wars: The Last Jedi",
+      "title": "Star Wars: The Last Jedi",
+      "year": 2017,
+      "sourceUrl": "https://www.themoviedb.org/movie/181808"
+    },
+    {
+      "type": "film",
+      "query": "Coco",
+      "title": "Coco",
+      "year": 2017,
+      "sourceUrl": "https://www.themoviedb.org/movie/354912"
+    },
+    {
+      "type": "film",
+      "query": "Blade Runner 2049",
+      "title": "Blade Runner 2049",
+      "year": 2017,
+      "sourceUrl": "https://www.themoviedb.org/movie/335984"
+    },
+    {
+      "type": "film",
+      "query": "Thor: Ragnarok",
+      "title": "Thor: Ragnarok",
+      "year": 2017,
+      "sourceUrl": "https://www.themoviedb.org/movie/284053"
+    },
+    {
+      "type": "film",
+      "query": "It",
+      "title": "It",
+      "year": 2017,
+      "sourceUrl": "https://www.themoviedb.org/movie/346364"
+    },
+    {
+      "type": "film",
+      "query": "Lady Bird",
+      "title": "Lady Bird",
+      "year": 2017,
+      "sourceUrl": "https://www.themoviedb.org/movie/391713"
+    },
+    {
+      "type": "film",
+      "query": "Dunkirk",
+      "title": "Dunkirk",
+      "year": 2017,
+      "sourceUrl": "https://www.themoviedb.org/movie/374720"
+    },
+    {
+      "type": "film",
+      "query": "Spider-Man: Homecoming",
+      "title": "Spider-Man: Homecoming",
+      "year": 2017,
+      "sourceUrl": "https://www.themoviedb.org/movie/315635"
+    },
+    {
+      "type": "film",
+      "query": "Wonder Woman",
+      "title": "Wonder Woman",
+      "year": 2017,
+      "sourceUrl": "https://www.themoviedb.org/movie/297762"
+    },
+    {
+      "type": "film",
+      "query": "Baby Driver",
+      "title": "Baby Driver",
+      "year": 2017,
+      "sourceUrl": "https://www.themoviedb.org/movie/339403"
+    },
+    {
+      "type": "film",
+      "query": "Logan",
+      "title": "Logan",
+      "year": 2017,
+      "sourceUrl": "https://www.themoviedb.org/movie/263115"
+    },
+    {
+      "type": "film",
+      "query": "Get Out",
+      "title": "Get Out",
+      "year": 2017,
+      "sourceUrl": "https://www.themoviedb.org/movie/419430"
+    },
+    {
+      "type": "film",
+      "query": "Rogue One: A Star Wars Story",
+      "title": "Rogue One: A Star Wars Story",
+      "year": 2016,
+      "sourceUrl": "https://www.themoviedb.org/movie/330459"
+    },
+    {
+      "type": "film",
+      "query": "Split",
+      "title": "Split",
+      "year": 2016,
+      "sourceUrl": "https://www.themoviedb.org/movie/381288"
+    },
+    {
+      "type": "film",
+      "query": "Arrival",
+      "title": "Arrival",
+      "year": 2016,
+      "sourceUrl": "https://www.themoviedb.org/movie/329865"
+    },
+    {
+      "type": "film",
+      "query": "The Nice Guys",
+      "title": "The Nice Guys",
+      "year": 2016,
+      "sourceUrl": "https://www.themoviedb.org/movie/290250"
+    },
+    {
+      "type": "film",
+      "query": "Captain America: Civil War",
+      "title": "Captain America: Civil War",
+      "year": 2016,
+      "sourceUrl": "https://www.themoviedb.org/movie/271110"
+    },
+    {
+      "type": "film",
+      "query": "Deadpool",
+      "title": "Deadpool",
+      "year": 2016,
+      "sourceUrl": "https://www.themoviedb.org/movie/293660"
+    },
+    {
+      "type": "film",
+      "query": "The Revenant",
+      "title": "The Revenant",
+      "year": 2015,
+      "sourceUrl": "https://www.themoviedb.org/movie/281957"
+    },
+    {
+      "type": "film",
+      "query": "Star Wars: The Force Awakens",
+      "title": "Star Wars: The Force Awakens",
+      "year": 2015,
+      "sourceUrl": "https://www.themoviedb.org/movie/140607"
+    },
+    {
+      "type": "film",
+      "query": "The Hateful Eight",
+      "title": "The Hateful Eight",
+      "year": 2015,
+      "sourceUrl": "https://www.themoviedb.org/movie/273248"
+    },
+    {
+      "type": "film",
+      "query": "The Martian",
+      "title": "The Martian",
+      "year": 2015,
+      "sourceUrl": "https://www.themoviedb.org/movie/286217"
+    },
+    {
+      "type": "film",
+      "query": "Ant-Man",
+      "title": "Ant-Man",
+      "year": 2015,
+      "sourceUrl": "https://www.themoviedb.org/movie/102899"
+    },
+    {
+      "type": "film",
+      "query": "Sicario",
+      "title": "Sicario",
+      "year": 2015,
+      "sourceUrl": "https://www.themoviedb.org/movie/273481"
+    },
+    {
+      "type": "film",
+      "query": "Inside Out",
+      "title": "Inside Out",
+      "year": 2015,
+      "sourceUrl": "https://www.themoviedb.org/movie/150540"
+    },
+    {
+      "type": "film",
+      "query": "Quantum of Solace",
+      "title": "Quantum of Solace",
+      "year": 2008,
+      "sourceUrl": "https://www.themoviedb.org/movie/10764"
+    },
+    {
+      "type": "film",
+      "query": "Casino Royale",
+      "title": "Casino Royale",
+      "year": 2006,
+      "sourceUrl": "https://www.themoviedb.org/movie/36557"
+    },
+    {
+      "type": "film",
+      "query": "Alien",
+      "title": "Alien",
+      "year": 1979,
+      "sourceUrl": "https://www.themoviedb.org/movie/348"
+    },
+    {
+      "type": "film",
+      "query": "Inglourious Basterds",
+      "title": "Inglourious Basterds",
+      "year": 2009,
+      "sourceUrl": "https://www.themoviedb.org/movie/16869"
+    },
+    {
+      "type": "film",
+      "query": "Tinker Tailor Soldier Spy",
+      "title": "Tinker Tailor Soldier Spy",
+      "year": 2011,
+      "sourceUrl": "https://www.themoviedb.org/movie/49517"
+    },
+    {
+      "type": "film",
+      "query": "Moneyball",
+      "title": "Moneyball",
+      "year": 2011,
+      "sourceUrl": "https://www.themoviedb.org/movie/60308"
+    },
+    {
+      "type": "film",
+      "query": "Close Encounters of the Third Kind",
+      "title": "Close Encounters of the Third Kind",
+      "year": 1977,
+      "sourceUrl": "https://www.themoviedb.org/movie/840"
+    },
+    {
+      "type": "film",
+      "query": "Inside Llewyn Davis",
+      "title": "Inside Llewyn Davis",
+      "year": 2013,
+      "sourceUrl": "https://www.themoviedb.org/movie/86829"
+    },
+    {
+      "type": "film",
+      "query": "Before Sunset",
+      "title": "Before Sunset",
+      "year": 2004,
+      "sourceUrl": "https://www.themoviedb.org/movie/80"
+    },
+    {
+      "type": "film",
+      "query": "That Thing You Do!",
+      "title": "That Thing You Do!",
+      "year": 1996,
+      "sourceUrl": "https://www.themoviedb.org/movie/9591"
+    },
+    {
+      "type": "film",
+      "query": "Tears of the Sun",
+      "title": "Tears of the Sun",
+      "year": 2003,
+      "sourceUrl": "https://www.themoviedb.org/movie/9567"
+    },
+    {
+      "type": "film",
+      "query": "Michael Clayton",
+      "title": "Michael Clayton",
+      "year": 2007,
+      "sourceUrl": "https://www.themoviedb.org/movie/4566"
+    },
+    {
+      "type": "film",
+      "query": "Anchorman: The Legend of Ron Burgundy",
+      "title": "Anchorman: The Legend of Ron Burgundy",
+      "year": 2004,
+      "sourceUrl": "https://www.themoviedb.org/movie/8699"
+    },
+    {
+      "type": "film",
+      "query": "No Country for Old Men",
+      "title": "No Country for Old Men",
+      "year": 2007,
+      "sourceUrl": "https://www.themoviedb.org/movie/6977"
+    },
+    {
+      "type": "film",
+      "query": "2001: A Space Odyssey",
+      "title": "2001: A Space Odyssey",
+      "year": 1968,
+      "sourceUrl": "https://www.themoviedb.org/movie/62"
+    },
+    {
+      "type": "film",
+      "query": "The Royal Tenenbaums",
+      "title": "The Royal Tenenbaums",
+      "year": 2001,
+      "sourceUrl": "https://www.themoviedb.org/movie/9428"
     }
   ]
 }

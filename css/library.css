@@ -411,6 +411,12 @@ html.reduce-motion .hcard:focus-visible .hcard-media { transform: none; }
 .loop-track:not(.is-looping) > [data-loop-clone],
 .book-cover-shelf:not(.is-looping) > [data-loop-clone] { display: none; }
 .shelf-rail:has(.loop-track) { cursor: grab; touch-action: pan-x pan-y; }
+/* Films settle on a poster the way the coverflow settles on a sleeve. Proximity
+   rather than mandatory, so a deliberate long swipe still travels instead of
+   being caught by the next poster, and so the seam of the loop is not a snap
+   point that fights the wrap. */
+.shelf-rail:has(.rack) { scroll-snap-type: x proximity; }
+.rack > .poster { scroll-snap-align: center; }
 .shelf-rail:has(.loop-track):active { cursor: grabbing; }
 .rack { display: flex; align-items: flex-end; gap: 12px; padding: 30px 4px 18px; width: max-content; }
 .poster {
