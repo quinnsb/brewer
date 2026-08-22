@@ -774,5 +774,683 @@
   "film-the-royal-tenenbaums": [
     "Comedy",
     "Drama"
+  ],
+  "album-godspell": [
+    "Musical",
+    "Soundtrack"
+  ],
+  "album-being-funny-in-a-foreign-language": [
+    "Pop rock",
+    "New wave"
+  ],
+  "album-the-magic-of-abba": [
+    "Europop",
+    "Pop"
+  ],
+  "album-aloha-from-ahvah": [
+    "Hawaiian",
+    "Easy listening"
+  ],
+  "album-our-man-in-new-orleans": [
+    "Dixieland",
+    "Jazz"
+  ],
+  "album-sound-color": [
+    "Alternative rock",
+    "Rock"
+  ],
+  "album-mostly-mozart-volume-3": [
+    "Baroque",
+    "Classical"
+  ],
+  "album-a-night-in-tunisia": [
+    "Hard bop",
+    "Jazz"
+  ],
+  "album-art-blakey-and-the-jazz-messengers": [
+    "Hard bop",
+    "Jazz"
+  ],
+  "album-the-second-set-lausanne-1960": [
+    "Hard bop",
+    "Jazz"
+  ],
+  "album-breakaway": [
+    "Soft rock",
+    "Rock"
+  ],
+  "album-forever": [
+    "Surf",
+    "Rock"
+  ],
+  "album-abbey-road": [
+    "Pop rock",
+    "Classic rock"
+  ],
+  "album-magical-mystery-tour": [
+    "Soundtrack",
+    "Pop rock"
+  ],
+  "album-rubber-soul": [
+    "Beat",
+    "Rock and roll"
+  ],
+  "album-the-beatles": [
+    "Pop rock",
+    "Rock and roll"
+  ],
+  "album-a-ben-rector-christmas": [
+    "Holiday",
+    "Jazz"
+  ],
+  "album-brand-new": [
+    "Pop"
+  ],
+  "album-into-the-morning": [
+    "Light music",
+    "Pop"
+  ],
+  "album-the-joy-of-music": [
+    "Rock",
+    "Pop"
+  ],
+  "album-the-richest-man-in-the-world": [
+    "Pop"
+  ],
+  "album-the-walking-in-between": [
+    "Light music",
+    "Pop"
+  ],
+  "album-waltz-for-debby": [
+    "Post bop",
+    "Jazz"
+  ],
+  "album-piano-man": [
+    "Folk rock",
+    "Pop rock"
+  ],
+  "album-the-stranger": [
+    "Pop rock",
+    "Rock"
+  ],
+  "album-merry-christmas": [
+    "Holiday",
+    "Pop"
+  ],
+  "album-gone-now": [
+    "Indie pop",
+    "Synth-pop"
+  ],
+  "album-bob-dylans-greatest-hits": [
+    "Folk rock",
+    "Folk"
+  ],
+  "album-the-yakin-sax-man": [
+    "Easy listening",
+    "Jazz"
+  ],
+  "album-the-jazz-legacy-of-bud-powell": [
+    "Jazz"
+  ],
+  "album-somethin-else": [
+    "Bop",
+    "Hard bop"
+  ],
+  "album-lovers-guitar-chet-atkins": [
+    "Folk"
+  ],
+  "album-if-you-leave-me-now": [
+    "Soft rock",
+    "Pop rock"
+  ],
+  "album-shadow-weaver": [
+    "Alternative rock",
+    "Rock"
+  ],
+  "album-san-francisco-days": [
+    "Blues rock",
+    "Rock and roll"
+  ],
+  "album-body-and-soul-a-jazz-autobiography": [
+    "Swing",
+    "Jazz"
+  ],
+  "album-the-light-in-the-wilderness": [
+    "Modern",
+    "Oratorio"
+  ],
+  "album-a-place-in-time": [
+    "Cool jazz",
+    "Jazz"
+  ],
+  "album-dave-digs-disney": [
+    "Cool jazz",
+    "Jazz"
+  ],
+  "album-the-dave-brubeck-quartet-in-europe": [
+    "Cool jazz",
+    "Jazz"
+  ],
+  "album-time-further-out-miro-reflexions": [
+    "Hard bop",
+    "Jazz"
+  ],
+  "album-time-out": [
+    "Bop",
+    "Hard bop"
+  ],
+  "album-the-rise-and-fall-of-ziggy-stardust-and-the-spiders-from-mar": [
+    "Glam",
+    "Art rock"
+  ],
+  "album-narrow-stairs": [
+    "Indie rock",
+    "Rock"
+  ],
+  "album-time-is-slipping-away": [
+    "Funk",
+    "Soul"
+  ],
+  "album-banjo-bonanza": [
+    "Bluegrass",
+    "Folk"
+  ],
+  "album-takin-it-to-the-streets": [
+    "Pop rock",
+    "Soft rock"
+  ],
+  "album-medicine": [
+    "Rock",
+    "Folk"
+  ],
+  "album-ella-fitzgerald": [
+    "Swing",
+    "Jazz"
+  ],
+  "album-ella-wishes-you-a-swinging-christmas": [
+    "Swing",
+    "Holiday"
+  ],
+  "album-ella-and-louis": [
+    "Easy listening",
+    "Swing"
+  ],
+  "album-caribou": [
+    "Pop rock",
+    "Rock"
+  ],
+  "album-greatest-hits": [
+    "Pop rock",
+    "Classic rock"
+  ],
+  "album-chopin": [
+    "Romantic",
+    "Classical"
+  ],
+  "album-foggy-mountain-jamboree": [
+    "Country",
+    "Bluegrass"
+  ],
+  "album-town-and-country": [
+    "Bluegrass",
+    "Folk"
+  ],
+  "album-rumours": [
+    "Pop rock",
+    "Soft rock"
+  ],
+  "album-strangers-in-the-night": [
+    "Easy listening",
+    "Jazz"
+  ],
+  "album-the-front-bottoms": [
+    "Acoustic",
+    "Punk"
+  ],
+  "album-fugazi": [
+    "Alternative rock",
+    "Hardcore"
+  ],
+  "album-autumn": [
+    "Contemporary",
+    "Classical"
+  ],
+  "album-december": [
+    "Contemporary",
+    "Holiday"
+  ],
+  "album-signs-of-light": [
+    "Indie rock",
+    "Rock"
+  ],
+  "album-the-head-and-the-heart": [
+    "Folk rock",
+    "Indie rock"
+  ],
+  "album-the-beat-of-the-brass": [
+    "Easy listening",
+    "Latin jazz"
+  ],
+  "album-empyrean-isles": [
+    "Modal",
+    "Post bop"
+  ],
+  "album-future-shock": [
+    "Electro",
+    "Funk"
+  ],
+  "album-maiden-voyage": [
+    "Hard bop",
+    "Modal"
+  ],
+  "album-push-push": [
+    "Soul-jazz",
+    "Jazz-funk"
+  ],
+  "album-bambi": [
+    "Indie rock",
+    "Indie pop"
+  ],
+  "album-en-concert": [
+    "Acoustic",
+    "Soft rock"
+  ],
+  "album-from-here-to-now-to-you": [
+    "Acoustic",
+    "Folk rock"
+  ],
+  "album-crash-landing": [
+    "Psychedelic rock",
+    "Rock"
+  ],
+  "album-bleed-american": [
+    "Alternative rock",
+    "Emo"
+  ],
+  "album-something-new-the-unique-sounds-of-jazz-bassoon": [
+    "Avant-garde jazz",
+    "Contemporary jazz"
+  ],
+  "album-a-love-supreme": [
+    "Free jazz",
+    "Post bop"
+  ],
+  "album-crescent": [
+    "Post bop",
+    "Modal"
+  ],
+  "album-john-denvers-greatest-hits": [
+    "Country rock",
+    "Rock"
+  ],
+  "album-continuum": [
+    "Alternative rock",
+    "Blues rock"
+  ],
+  "album-room-for-squares": [
+    "Alternative rock",
+    "Acoustic"
+  ],
+  "album-johnny-cash-at-san-quentin": [
+    "Country rock",
+    "Country"
+  ],
+  "album-funeral-pyre": [
+    "Indie rock",
+    "Rock"
+  ],
+  "album-turn-out-the-lights": [
+    "Folk",
+    "Rock"
+  ],
+  "album-gone-for-the-day": [
+    "Swing",
+    "Jazz"
+  ],
+  "album-duotones": [
+    "Smooth jazz",
+    "Contemporary jazz"
+  ],
+  "album-this-is-happening": [
+    "Leftfield",
+    "Indie rock"
+  ],
+  "album-led-zeppelin-ii": [
+    "Hard rock",
+    "Blues rock"
+  ],
+  "album-correspondence-a-fiction": [
+    "Spoken word",
+    "Alternative rock"
+  ],
+  "album-sanctuary": [
+    "Spoken word"
+  ],
+  "album-my-bag": [
+    "House",
+    "Indie rock"
+  ],
+  "album-loretta-lynn-writes-em-and-sings-em": [
+    "Country",
+    "Folk"
+  ],
+  "album-somebody-somewhere": [
+    "Country",
+    "Honky tonk"
+  ],
+  "album-hello-dolly": [
+    "Swing",
+    "Ragtime"
+  ],
+  "album-louis-and-the-angels": [
+    "Jazz"
+  ],
+  "album-piano-concerto-no-3-in-c-minor-piano-sonata-in-e-flat-major": [
+    "Classical",
+    "Romantic"
+  ],
+  "album-trio-in-b-flat-major-for-piano-violin-and-cello-op-97": [
+    "Romantic",
+    "Chamber music"
+  ],
+  "album-imaginal-disk": [
+    "Dance-pop",
+    "Synth-pop"
+  ],
+  "album-heard-it-in-a-past-life": [
+    "Indie rock",
+    "Rock"
+  ],
+  "album-business-as-usual": [
+    "Pop rock",
+    "Rock"
+  ],
+  "album-run-on": [
+    "Breaks",
+    "Big beat"
+  ],
+  "album-sigh-no-more": [
+    "Bluegrass",
+    "Folk"
+  ],
+  "album-l-o-v-e": [
+    "Easy listening",
+    "Jazz"
+  ],
+  "album-love-is-the-thing": [
+    "Jazz"
+  ],
+  "album-ramblin-rose": [
+    "Easy listening",
+    "Jazz"
+  ],
+  "album-nina-simone-sings-the-blues": [
+    "Blues"
+  ],
+  "album-live-at-eventim-apollo": [
+    "Soul",
+    "Pop"
+  ],
+  "album-war-of-the-worlds": [
+    "Radioplay",
+    "Spoken word"
+  ],
+  "album-oscar-peterson-plays-duke-ellington": [
+    "Jazz"
+  ],
+  "album-home-for-the-holidays": [
+    "Holiday",
+    "Jazz"
+  ],
+  "album-childrens-concert-at-town-hall": [
+    "Folk"
+  ],
+  "album-sledgehammer": [
+    "Pop rock",
+    "Rock"
+  ],
+  "album-the-yips": [
+    "Indie rock",
+    "Rock"
+  ],
+  "album-ghost-in-the-machine": [
+    "Pop rock",
+    "New wave"
+  ],
+  "album-synchronicity": [
+    "Alternative rock",
+    "Rock"
+  ],
+  "album-ramones-mania": [
+    "New wave",
+    "Punk"
+  ],
+  "album-goin-latin": [
+    "Latin jazz",
+    "Soul-jazz"
+  ],
+  "album-mother-natures-son": [
+    "Soul-jazz",
+    "Jazz"
+  ],
+  "album-the-ray-charles-story-volume-4": [
+    "R&B",
+    "Soul"
+  ],
+  "album-my-kind-of-country": [
+    "Country",
+    "Folk"
+  ],
+  "album-highland-pageantry": [
+    "Pipe & drum",
+    "Brass & military"
+  ],
+  "album-first-take": [
+    "Soul"
+  ],
+  "album-the-sound-of-music-an-original-soundtrack-recording": [
+    "Soundtrack",
+    "Pop"
+  ],
+  "album-chuck-timely-the-hourglass": [
+    "Pop"
+  ],
+  "album-kansas-anymore-the-longest-goodbye": [
+    "Pop"
+  ],
+  "album-scenery": [
+    "Bop",
+    "Modal"
+  ],
+  "album-short-n-sweet": [
+    "Dance-pop",
+    "Disco"
+  ],
+  "album-parsley-sage-rosemary-and-thyme": [
+    "Folk rock",
+    "Pop rock"
+  ],
+  "album-simon-and-garfunkels-greatest-hits": [
+    "Folk rock",
+    "Rock"
+  ],
+  "album-wednesday-morning-3-a-m": [
+    "Folk",
+    "Folk rock"
+  ],
+  "album-25-favorite-cowboy-songs": [
+    "Country",
+    "Folk"
+  ],
+  "album-getz-gilberto": [
+    "Bossa nova",
+    "Latin jazz"
+  ],
+  "album-aja": [
+    "Jazz-rock",
+    "Jazz"
+  ],
+  "album-cant-buy-a-thrill": [
+    "Pop rock",
+    "Jazz-rock"
+  ],
+  "album-wicked-the-soundtrack": [
+    "Musical",
+    "Soundtrack"
+  ],
+  "album-illinois": [
+    "Folk rock",
+    "Indie pop"
+  ],
+  "album-blind": [
+    "Indie rock",
+    "Dream pop"
+  ],
+  "album-static-silence": [
+    "Indie rock",
+    "Dream pop"
+  ],
+  "album-susan-sings-songs-from-sesame-street": [
+    "Educational",
+    "Soul"
+  ],
+  "album-1989-taylors-version": [
+    "Synth-pop",
+    "Ballad"
+  ],
+  "album-fearless-taylors-version": [
+    "Country",
+    "Pop"
+  ],
+  "album-watch-your-step": [
+    "R&B",
+    "Soul"
+  ],
+  "album-the-london-collection-volume-2": [
+    "Bop",
+    "Jazz"
+  ],
+  "album-thelonious-alone-in-san-francisco": [
+    "Jazz"
+  ],
+  "album-family-tree": [
+    "Folk",
+    "Family"
+  ],
+  "album-life-is-like-that": [
+    "Folk rock",
+    "Rock"
+  ],
+  "album-never-enough": [
+    "Hardcore",
+    "Shoegaze"
+  ],
+  "album-live-under-a-blood-red-sky": [
+    "New wave",
+    "Pop rock"
+  ],
+  "album-the-best-of-1990-2000": [
+    "Pop rock",
+    "Rock"
+  ],
+  "album-baby-driver-music-from-the-motion-picture": [
+    "Soundtrack",
+    "Hip-hop"
+  ],
+  "album-christmas-greetings": [
+    "Classical",
+    "Religious"
+  ],
+  "album-colorado-jazz-party": [
+    "Cool jazz",
+    "Bop"
+  ],
+  "album-dfa-compilation-1": [
+    "Leftfield",
+    "Electro"
+  ],
+  "album-disney-ultimate-hits-vol-1-2": [
+    "Soundtrack",
+    "Theme"
+  ],
+  "album-funky-christmas": [
+    "Soul",
+    "Holiday"
+  ],
+  "album-home-alone-christmas": [
+    "Soundtrack",
+    "Holiday"
+  ],
+  "album-less-than-zero": [
+    "Soundtrack",
+    "Jazzy hip-hop"
+  ],
+  "album-mamma-mia-here-we-go-again-the-movie-soundtrack-featuring-th": [
+    "Soundtrack",
+    "Ballad"
+  ],
+  "album-o-brother-where-art-thou": [
+    "Soundtrack",
+    "Country"
+  ],
+  "album-saturday-night-fever-the-original-movie-sound-track": [
+    "Soundtrack",
+    "Disco"
+  ],
+  "album-sgt-peppers-lonely-hearts-club-band": [
+    "Pop rock",
+    "Soundtrack"
+  ],
+  "album-sleepless-in-seattle-original-motion-picture-soundtrack": [
+    "Soundtrack",
+    "Jazz"
+  ],
+  "album-the-montreux-collection": [
+    "Bop",
+    "Jazz"
+  ],
+  "album-its-the-great-pumpkin-charlie-brown-original-soundtrack-reco": [
+    "Cool jazz",
+    "Soundtrack"
+  ],
+  "album-its-the-great-pumpkin-charlie-brown-music-from-the-soundtrac": [
+    "Cool jazz",
+    "Jazz"
+  ],
+  "album-peanuts-portraits": [
+    "Jazz",
+    "Soundtrack"
+  ],
+  "album-a-charlie-brown-thanksgiving": [
+    "Cool jazz",
+    "Soundtrack"
+  ],
+  "album-a-charlie-brown-christmas": [
+    "Contemporary jazz",
+    "Holiday"
+  ],
+  "album-vince-guaraldi-trio": [
+    "Cool jazz",
+    "Jazz"
+  ],
+  "album-vulfnik": [
+    "Funk",
+    "Soul"
+  ],
+  "album-clarity-of-cal": [
+    "Funk",
+    "Neo soul"
+  ],
+  "album-msg-ii": [
+    "Neo soul",
+    "Funk"
+  ],
+  "album-whos-next": [
+    "Hard rock",
+    "Rock"
+  ],
+  "album-joe-hisaishi-1m5ovzv": [
+    "Anison",
+    "Score"
   ]
 }

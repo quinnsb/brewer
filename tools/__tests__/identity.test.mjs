@@ -23,7 +23,7 @@ test("slug caps length so an id cannot run away", () => {
    If this fails, extracting them changed the shelf. */
 test("every existing item's id is reproduced from its title", () => {
   for (const item of raw.items) {
-    assert.equal(itemId(item.type, item.title), item.id, `id drift for ${item.title}`);
+    assert.equal(itemId(item.type, item.title, item.creator), item.id, `id drift for ${item.title}`);
   }
 });
 
@@ -45,4 +45,39 @@ test("every existing item's shape and aspect match its type", () => {
 test("geometry is stable across calls", () => {
   assert.deepEqual(shelfGeometry("book-x"), shelfGeometry("book-x"));
   assert.notDeepEqual(shelfGeometry("book-x"), shelfGeometry("book-y"));
+});
+
+/* A title with no Latin characters slugs to the empty string, so every one of
+   them became the id "album-". The first Japanese record in the Discogs import
+   landed there; a second would have collided with it and overwritten its cover. */
+test("a title that slugs to nothing still gets a usable id", () => {
+  const id = itemId("album", "となりのトトロ (イメージ・ソング集)", "Joe Hisaishi");
+  assert.notEqual(id, "album-");
+  assert.match(id, /^album-joe-hisaishi-[a-z0-9]+$/);
+});
+
+test("two non-Latin titles by one artist do not collide", () => {
+  const a = itemId("album", "となりのトトロ", "Joe Hisaishi");
+  const b = itemId("album", "オン・ギター", "Joe Hisaishi");
+  assert.notEqual(a, b);
+});
+
+test("the fallback id is stable across runs", () => {
+  assert.equal(
+    itemId("album", "となりのトトロ", "Joe Hisaishi"),
+    itemId("album", "となりのトトロ", "Joe Hisaishi")
+  );
+});
+
+test("a title that slugs to nothing and has no creator still gets an id", () => {
+  const id = itemId("album", "★★★");
+  assert.notEqual(id, "album-");
+  assert.match(id, /^album-[a-z0-9]+$/);
+});
+
+/* The normal path must not move: every existing id is derived from the title
+   alone, so bringing the creator in as an argument cannot change them. */
+test("a title with Latin characters ignores the creator entirely", () => {
+  assert.equal(itemId("album", "Kind of Blue", "Miles Davis"), "album-kind-of-blue");
+  assert.equal(itemId("album", "Kind of Blue"), "album-kind-of-blue");
 });

@@ -1663,5 +1663,1562 @@
     "bytes": 107038,
     "webpBytes": 49142,
     "shelfBytes": 14838
+  },
+  "album-godspell": {
+    "fingerprint": "152566:1787404138165",
+    "thumb": "images/library/thumbs/album-godspell.jpg",
+    "thumbWebp": "images/library/thumbs/album-godspell.webp",
+    "shelfWebp": "images/library/thumbs/album-godspell-sm.webp",
+    "bytes": 193059,
+    "webpBytes": 91924,
+    "shelfBytes": 27420
+  },
+  "album-being-funny-in-a-foreign-language": {
+    "fingerprint": "92525:1787404138346",
+    "thumb": "images/library/thumbs/album-being-funny-in-a-foreign-language.jpg",
+    "thumbWebp": "images/library/thumbs/album-being-funny-in-a-foreign-language.webp",
+    "shelfWebp": "images/library/thumbs/album-being-funny-in-a-foreign-language-sm.webp",
+    "bytes": 133910,
+    "webpBytes": 60670,
+    "shelfBytes": 11858
+  },
+  "album-the-magic-of-abba": {
+    "fingerprint": "95142:1787404138521",
+    "thumb": "images/library/thumbs/album-the-magic-of-abba.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-magic-of-abba.webp",
+    "shelfWebp": "images/library/thumbs/album-the-magic-of-abba-sm.webp",
+    "bytes": 114213,
+    "webpBytes": 38924,
+    "shelfBytes": 10618
+  },
+  "album-aloha-from-ahvah": {
+    "fingerprint": "133354:1787404138914",
+    "thumb": "images/library/thumbs/album-aloha-from-ahvah.jpg",
+    "thumbWebp": "images/library/thumbs/album-aloha-from-ahvah.webp",
+    "shelfWebp": "images/library/thumbs/album-aloha-from-ahvah-sm.webp",
+    "bytes": 141559,
+    "webpBytes": 52288,
+    "shelfBytes": 12996
+  },
+  "album-our-man-in-new-orleans": {
+    "fingerprint": "114710:1787404139140",
+    "thumb": "images/library/thumbs/album-our-man-in-new-orleans.jpg",
+    "thumbWebp": "images/library/thumbs/album-our-man-in-new-orleans.webp",
+    "shelfWebp": "images/library/thumbs/album-our-man-in-new-orleans-sm.webp",
+    "bytes": 129156,
+    "webpBytes": 46124,
+    "shelfBytes": 12900
+  },
+  "album-sound-color": {
+    "fingerprint": "58610:1787404139381",
+    "thumb": "images/library/thumbs/album-sound-color.jpg",
+    "thumbWebp": "images/library/thumbs/album-sound-color.webp",
+    "shelfWebp": "images/library/thumbs/album-sound-color-sm.webp",
+    "bytes": 77430,
+    "webpBytes": 18706,
+    "shelfBytes": 5274
+  },
+  "album-mostly-mozart-volume-3": {
+    "fingerprint": "27592:1787404140025",
+    "thumb": "images/library/thumbs/album-mostly-mozart-volume-3.jpg",
+    "thumbWebp": "images/library/thumbs/album-mostly-mozart-volume-3.webp",
+    "shelfWebp": "images/library/thumbs/album-mostly-mozart-volume-3-sm.webp",
+    "bytes": 98713,
+    "webpBytes": 33456,
+    "shelfBytes": 9624
+  },
+  "album-a-night-in-tunisia": {
+    "fingerprint": "132632:1787404140215",
+    "thumb": "images/library/thumbs/album-a-night-in-tunisia.jpg",
+    "thumbWebp": "images/library/thumbs/album-a-night-in-tunisia.webp",
+    "shelfWebp": "images/library/thumbs/album-a-night-in-tunisia-sm.webp",
+    "bytes": 142980,
+    "webpBytes": 42742,
+    "shelfBytes": 14556
+  },
+  "album-art-blakey-and-the-jazz-messengers": {
+    "fingerprint": "62629:1787404140400",
+    "thumb": "images/library/thumbs/album-art-blakey-and-the-jazz-messengers.jpg",
+    "thumbWebp": "images/library/thumbs/album-art-blakey-and-the-jazz-messengers.webp",
+    "shelfWebp": "images/library/thumbs/album-art-blakey-and-the-jazz-messengers-sm.webp",
+    "bytes": 115454,
+    "webpBytes": 42872,
+    "shelfBytes": 10818
+  },
+  "album-the-second-set-lausanne-1960": {
+    "fingerprint": "97459:1787404140844",
+    "thumb": "images/library/thumbs/album-the-second-set-lausanne-1960.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-second-set-lausanne-1960.webp",
+    "shelfWebp": "images/library/thumbs/album-the-second-set-lausanne-1960-sm.webp",
+    "bytes": 116334,
+    "webpBytes": 36646,
+    "shelfBytes": 11096
+  },
+  "album-breakaway": {
+    "fingerprint": "114360:1787404141018",
+    "thumb": "images/library/thumbs/album-breakaway.jpg",
+    "thumbWebp": "images/library/thumbs/album-breakaway.webp",
+    "shelfWebp": "images/library/thumbs/album-breakaway-sm.webp",
+    "bytes": 129511,
+    "webpBytes": 49834,
+    "shelfBytes": 14950
+  },
+  "album-forever": {
+    "fingerprint": "108484:1787404141202",
+    "thumb": "images/library/thumbs/album-forever.jpg",
+    "thumbWebp": "images/library/thumbs/album-forever.webp",
+    "shelfWebp": "images/library/thumbs/album-forever-sm.webp",
+    "bytes": 115604,
+    "webpBytes": 40204,
+    "shelfBytes": 12954
+  },
+  "album-abbey-road": {
+    "fingerprint": "158825:1787404141379",
+    "thumb": "images/library/thumbs/album-abbey-road.jpg",
+    "thumbWebp": "images/library/thumbs/album-abbey-road.webp",
+    "shelfWebp": "images/library/thumbs/album-abbey-road-sm.webp",
+    "bytes": 183936,
+    "webpBytes": 93282,
+    "shelfBytes": 21924
+  },
+  "album-magical-mystery-tour": {
+    "fingerprint": "271886:1787404141575",
+    "thumb": "images/library/thumbs/album-magical-mystery-tour.jpg",
+    "thumbWebp": "images/library/thumbs/album-magical-mystery-tour.webp",
+    "shelfWebp": "images/library/thumbs/album-magical-mystery-tour-sm.webp",
+    "bytes": 295798,
+    "webpBytes": 178512,
+    "shelfBytes": 35618
+  },
+  "album-rubber-soul": {
+    "fingerprint": "134119:1787404141751",
+    "thumb": "images/library/thumbs/album-rubber-soul.jpg",
+    "thumbWebp": "images/library/thumbs/album-rubber-soul.webp",
+    "shelfWebp": "images/library/thumbs/album-rubber-soul-sm.webp",
+    "bytes": 145409,
+    "webpBytes": 64134,
+    "shelfBytes": 17346
+  },
+  "album-the-beatles": {
+    "fingerprint": "55650:1787404141928",
+    "thumb": "images/library/thumbs/album-the-beatles.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-beatles.webp",
+    "shelfWebp": "images/library/thumbs/album-the-beatles-sm.webp",
+    "bytes": 69645,
+    "webpBytes": 18838,
+    "shelfBytes": 4230
+  },
+  "album-a-ben-rector-christmas": {
+    "fingerprint": "89020:1787404142101",
+    "thumb": "images/library/thumbs/album-a-ben-rector-christmas.jpg",
+    "thumbWebp": "images/library/thumbs/album-a-ben-rector-christmas.webp",
+    "shelfWebp": "images/library/thumbs/album-a-ben-rector-christmas-sm.webp",
+    "bytes": 103682,
+    "webpBytes": 35482,
+    "shelfBytes": 10870
+  },
+  "album-brand-new": {
+    "fingerprint": "115255:1787404142340",
+    "thumb": "images/library/thumbs/album-brand-new.jpg",
+    "thumbWebp": "images/library/thumbs/album-brand-new.webp",
+    "shelfWebp": "images/library/thumbs/album-brand-new-sm.webp",
+    "bytes": 123272,
+    "webpBytes": 48882,
+    "shelfBytes": 17682
+  },
+  "album-into-the-morning": {
+    "fingerprint": "29510:1787404142579",
+    "thumb": "images/library/thumbs/album-into-the-morning.jpg",
+    "thumbWebp": "images/library/thumbs/album-into-the-morning.webp",
+    "shelfWebp": "images/library/thumbs/album-into-the-morning-sm.webp",
+    "bytes": 103412,
+    "webpBytes": 38218,
+    "shelfBytes": 12080
+  },
+  "album-the-joy-of-music": {
+    "fingerprint": "93133:1787404142750",
+    "thumb": "images/library/thumbs/album-the-joy-of-music.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-joy-of-music.webp",
+    "shelfWebp": "images/library/thumbs/album-the-joy-of-music-sm.webp",
+    "bytes": 107470,
+    "webpBytes": 34152,
+    "shelfBytes": 8536
+  },
+  "album-the-richest-man-in-the-world": {
+    "fingerprint": "95130:1787404143261",
+    "thumb": "images/library/thumbs/album-the-richest-man-in-the-world.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-richest-man-in-the-world.webp",
+    "shelfWebp": "images/library/thumbs/album-the-richest-man-in-the-world-sm.webp",
+    "bytes": 123178,
+    "webpBytes": 45434,
+    "shelfBytes": 9946
+  },
+  "album-the-walking-in-between": {
+    "fingerprint": "42797:1787404143444",
+    "thumb": "images/library/thumbs/album-the-walking-in-between.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-walking-in-between.webp",
+    "shelfWebp": "images/library/thumbs/album-the-walking-in-between-sm.webp",
+    "bytes": 68286,
+    "webpBytes": 18102,
+    "shelfBytes": 6346
+  },
+  "album-waltz-for-debby": {
+    "fingerprint": "59691:1787404143617",
+    "thumb": "images/library/thumbs/album-waltz-for-debby.jpg",
+    "thumbWebp": "images/library/thumbs/album-waltz-for-debby.webp",
+    "shelfWebp": "images/library/thumbs/album-waltz-for-debby-sm.webp",
+    "bytes": 73108,
+    "webpBytes": 25062,
+    "shelfBytes": 6422
+  },
+  "album-piano-man": {
+    "fingerprint": "90344:1787404143784",
+    "thumb": "images/library/thumbs/album-piano-man.jpg",
+    "thumbWebp": "images/library/thumbs/album-piano-man.webp",
+    "shelfWebp": "images/library/thumbs/album-piano-man-sm.webp",
+    "bytes": 94799,
+    "webpBytes": 23240,
+    "shelfBytes": 4144
+  },
+  "album-the-stranger": {
+    "fingerprint": "70954:1787404143953",
+    "thumb": "images/library/thumbs/album-the-stranger.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-stranger.webp",
+    "shelfWebp": "images/library/thumbs/album-the-stranger-sm.webp",
+    "bytes": 87329,
+    "webpBytes": 24402,
+    "shelfBytes": 7322
+  },
+  "album-merry-christmas": {
+    "fingerprint": "35206:1787404144190",
+    "thumb": "images/library/thumbs/album-merry-christmas.jpg",
+    "thumbWebp": "images/library/thumbs/album-merry-christmas.webp",
+    "shelfWebp": "images/library/thumbs/album-merry-christmas-sm.webp",
+    "bytes": 99068,
+    "webpBytes": 36064,
+    "shelfBytes": 9996
+  },
+  "album-gone-now": {
+    "fingerprint": "78886:1787404144368",
+    "thumb": "images/library/thumbs/album-gone-now.jpg",
+    "thumbWebp": "images/library/thumbs/album-gone-now.webp",
+    "shelfWebp": "images/library/thumbs/album-gone-now-sm.webp",
+    "bytes": 99931,
+    "webpBytes": 32862,
+    "shelfBytes": 6742
+  },
+  "album-bob-dylans-greatest-hits": {
+    "fingerprint": "9759:1787404144547",
+    "thumb": "images/library/thumbs/album-bob-dylans-greatest-hits.jpg",
+    "thumbWebp": "images/library/thumbs/album-bob-dylans-greatest-hits.webp",
+    "shelfWebp": "images/library/thumbs/album-bob-dylans-greatest-hits-sm.webp",
+    "bytes": 62109,
+    "webpBytes": 18664,
+    "shelfBytes": 6240
+  },
+  "album-the-yakin-sax-man": {
+    "fingerprint": "136651:1787404144781",
+    "thumb": "images/library/thumbs/album-the-yakin-sax-man.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-yakin-sax-man.webp",
+    "shelfWebp": "images/library/thumbs/album-the-yakin-sax-man-sm.webp",
+    "bytes": 163629,
+    "webpBytes": 74172,
+    "shelfBytes": 18650
+  },
+  "album-the-jazz-legacy-of-bud-powell": {
+    "fingerprint": "97404:1787404145205",
+    "thumb": "images/library/thumbs/album-the-jazz-legacy-of-bud-powell.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-jazz-legacy-of-bud-powell.webp",
+    "shelfWebp": "images/library/thumbs/album-the-jazz-legacy-of-bud-powell-sm.webp",
+    "bytes": 112854,
+    "webpBytes": 41456,
+    "shelfBytes": 12362
+  },
+  "album-somethin-else": {
+    "fingerprint": "50278:1787404145426",
+    "thumb": "images/library/thumbs/album-somethin-else.jpg",
+    "thumbWebp": "images/library/thumbs/album-somethin-else.webp",
+    "shelfWebp": "images/library/thumbs/album-somethin-else-sm.webp",
+    "bytes": 54783,
+    "webpBytes": 17886,
+    "shelfBytes": 7110
+  },
+  "album-lovers-guitar-chet-atkins": {
+    "fingerprint": "11195:1787404145663",
+    "thumb": "images/library/thumbs/album-lovers-guitar-chet-atkins.jpg",
+    "thumbWebp": "images/library/thumbs/album-lovers-guitar-chet-atkins.webp",
+    "shelfWebp": "images/library/thumbs/album-lovers-guitar-chet-atkins-sm.webp",
+    "bytes": 99667,
+    "webpBytes": 37302,
+    "shelfBytes": 13494
+  },
+  "album-if-you-leave-me-now": {
+    "fingerprint": "87125:1787404145908",
+    "thumb": "images/library/thumbs/album-if-you-leave-me-now.jpg",
+    "thumbWebp": "images/library/thumbs/album-if-you-leave-me-now.webp",
+    "shelfWebp": "images/library/thumbs/album-if-you-leave-me-now-sm.webp",
+    "bytes": 104258,
+    "webpBytes": 35462,
+    "shelfBytes": 10774
+  },
+  "album-shadow-weaver": {
+    "fingerprint": "84651:1787404146154",
+    "thumb": "images/library/thumbs/album-shadow-weaver.jpg",
+    "thumbWebp": "images/library/thumbs/album-shadow-weaver.webp",
+    "shelfWebp": "images/library/thumbs/album-shadow-weaver-sm.webp",
+    "bytes": 100728,
+    "webpBytes": 31496,
+    "shelfBytes": 8066
+  },
+  "album-san-francisco-days": {
+    "fingerprint": "85151:1787404146379",
+    "thumb": "images/library/thumbs/album-san-francisco-days.jpg",
+    "thumbWebp": "images/library/thumbs/album-san-francisco-days.webp",
+    "shelfWebp": "images/library/thumbs/album-san-francisco-days-sm.webp",
+    "bytes": 97574,
+    "webpBytes": 32206,
+    "shelfBytes": 9956
+  },
+  "album-body-and-soul-a-jazz-autobiography": {
+    "fingerprint": "54071:1787404146570",
+    "thumb": "images/library/thumbs/album-body-and-soul-a-jazz-autobiography.jpg",
+    "thumbWebp": "images/library/thumbs/album-body-and-soul-a-jazz-autobiography.webp",
+    "shelfWebp": "images/library/thumbs/album-body-and-soul-a-jazz-autobiography-sm.webp",
+    "bytes": 135157,
+    "webpBytes": 59726,
+    "shelfBytes": 15904
+  },
+  "album-the-light-in-the-wilderness": {
+    "fingerprint": "99460:1787404146846",
+    "thumb": "images/library/thumbs/album-the-light-in-the-wilderness.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-light-in-the-wilderness.webp",
+    "shelfWebp": "images/library/thumbs/album-the-light-in-the-wilderness-sm.webp",
+    "bytes": 158023,
+    "webpBytes": 71042,
+    "shelfBytes": 21030
+  },
+  "album-a-place-in-time": {
+    "fingerprint": "101385:1787404147077",
+    "thumb": "images/library/thumbs/album-a-place-in-time.jpg",
+    "thumbWebp": "images/library/thumbs/album-a-place-in-time.webp",
+    "shelfWebp": "images/library/thumbs/album-a-place-in-time-sm.webp",
+    "bytes": 116762,
+    "webpBytes": 42014,
+    "shelfBytes": 13360
+  },
+  "album-dave-digs-disney": {
+    "fingerprint": "128413:1787404147250",
+    "thumb": "images/library/thumbs/album-dave-digs-disney.jpg",
+    "thumbWebp": "images/library/thumbs/album-dave-digs-disney.webp",
+    "shelfWebp": "images/library/thumbs/album-dave-digs-disney-sm.webp",
+    "bytes": 138221,
+    "webpBytes": 53788,
+    "shelfBytes": 16552
+  },
+  "album-the-dave-brubeck-quartet-in-europe": {
+    "fingerprint": "160331:1787404147439",
+    "thumb": "images/library/thumbs/album-the-dave-brubeck-quartet-in-europe.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-dave-brubeck-quartet-in-europe.webp",
+    "shelfWebp": "images/library/thumbs/album-the-dave-brubeck-quartet-in-europe-sm.webp",
+    "bytes": 180291,
+    "webpBytes": 89790,
+    "shelfBytes": 21172
+  },
+  "album-time-further-out-miro-reflexions": {
+    "fingerprint": "103542:1787404147666",
+    "thumb": "images/library/thumbs/album-time-further-out-miro-reflexions.jpg",
+    "thumbWebp": "images/library/thumbs/album-time-further-out-miro-reflexions.webp",
+    "shelfWebp": "images/library/thumbs/album-time-further-out-miro-reflexions-sm.webp",
+    "bytes": 115624,
+    "webpBytes": 41974,
+    "shelfBytes": 12496
+  },
+  "album-time-out": {
+    "fingerprint": "138786:1787404147889",
+    "thumb": "images/library/thumbs/album-time-out.jpg",
+    "thumbWebp": "images/library/thumbs/album-time-out.webp",
+    "shelfWebp": "images/library/thumbs/album-time-out-sm.webp",
+    "bytes": 154143,
+    "webpBytes": 58760,
+    "shelfBytes": 18108
+  },
+  "album-the-rise-and-fall-of-ziggy-stardust-and-the-spiders-from-mar": {
+    "fingerprint": "106849:1787404148075",
+    "thumb": "images/library/thumbs/album-the-rise-and-fall-of-ziggy-stardust-and-the-spiders-from-mar.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-rise-and-fall-of-ziggy-stardust-and-the-spiders-from-mar.webp",
+    "shelfWebp": "images/library/thumbs/album-the-rise-and-fall-of-ziggy-stardust-and-the-spiders-from-mar-sm.webp",
+    "bytes": 120943,
+    "webpBytes": 47684,
+    "shelfBytes": 13978
+  },
+  "album-narrow-stairs": {
+    "fingerprint": "121047:1787404148299",
+    "thumb": "images/library/thumbs/album-narrow-stairs.jpg",
+    "thumbWebp": "images/library/thumbs/album-narrow-stairs.webp",
+    "shelfWebp": "images/library/thumbs/album-narrow-stairs-sm.webp",
+    "bytes": 136447,
+    "webpBytes": 48902,
+    "shelfBytes": 13286
+  },
+  "album-time-is-slipping-away": {
+    "fingerprint": "135362:1787404148479",
+    "thumb": "images/library/thumbs/album-time-is-slipping-away.jpg",
+    "thumbWebp": "images/library/thumbs/album-time-is-slipping-away.webp",
+    "shelfWebp": "images/library/thumbs/album-time-is-slipping-away-sm.webp",
+    "bytes": 160908,
+    "webpBytes": 76490,
+    "shelfBytes": 19158
+  },
+  "album-banjo-bonanza": {
+    "fingerprint": "216346:1787404148983",
+    "thumb": "images/library/thumbs/album-banjo-bonanza.jpg",
+    "thumbWebp": "images/library/thumbs/album-banjo-bonanza.webp",
+    "shelfWebp": "images/library/thumbs/album-banjo-bonanza-sm.webp",
+    "bytes": 196059,
+    "webpBytes": 85442,
+    "shelfBytes": 19510
+  },
+  "album-takin-it-to-the-streets": {
+    "fingerprint": "61500:1787404149153",
+    "thumb": "images/library/thumbs/album-takin-it-to-the-streets.jpg",
+    "thumbWebp": "images/library/thumbs/album-takin-it-to-the-streets.webp",
+    "shelfWebp": "images/library/thumbs/album-takin-it-to-the-streets-sm.webp",
+    "bytes": 76650,
+    "webpBytes": 17876,
+    "shelfBytes": 4210
+  },
+  "album-medicine": {
+    "fingerprint": "68921:1787404149385",
+    "thumb": "images/library/thumbs/album-medicine.jpg",
+    "thumbWebp": "images/library/thumbs/album-medicine.webp",
+    "shelfWebp": "images/library/thumbs/album-medicine-sm.webp",
+    "bytes": 83437,
+    "webpBytes": 19792,
+    "shelfBytes": 4008
+  },
+  "album-ella-fitzgerald": {
+    "fingerprint": "187389:1787404149899",
+    "thumb": "images/library/thumbs/album-ella-fitzgerald.jpg",
+    "thumbWebp": "images/library/thumbs/album-ella-fitzgerald.webp",
+    "shelfWebp": "images/library/thumbs/album-ella-fitzgerald-sm.webp",
+    "bytes": 221114,
+    "webpBytes": 110286,
+    "shelfBytes": 26046
+  },
+  "album-ella-wishes-you-a-swinging-christmas": {
+    "fingerprint": "122452:1787404150072",
+    "thumb": "images/library/thumbs/album-ella-wishes-you-a-swinging-christmas.jpg",
+    "thumbWebp": "images/library/thumbs/album-ella-wishes-you-a-swinging-christmas.webp",
+    "shelfWebp": "images/library/thumbs/album-ella-wishes-you-a-swinging-christmas-sm.webp",
+    "bytes": 136607,
+    "webpBytes": 55934,
+    "shelfBytes": 16010
+  },
+  "album-ella-and-louis": {
+    "fingerprint": "77837:1787404150305",
+    "thumb": "images/library/thumbs/album-ella-and-louis.jpg",
+    "thumbWebp": "images/library/thumbs/album-ella-and-louis.webp",
+    "shelfWebp": "images/library/thumbs/album-ella-and-louis-sm.webp",
+    "bytes": 134101,
+    "webpBytes": 54528,
+    "shelfBytes": 15332
+  },
+  "album-caribou": {
+    "fingerprint": "143063:1787404150478",
+    "thumb": "images/library/thumbs/album-caribou.jpg",
+    "thumbWebp": "images/library/thumbs/album-caribou.webp",
+    "shelfWebp": "images/library/thumbs/album-caribou-sm.webp",
+    "bytes": 146365,
+    "webpBytes": 62764,
+    "shelfBytes": 17190
+  },
+  "album-greatest-hits": {
+    "fingerprint": "101539:1787404150652",
+    "thumb": "images/library/thumbs/album-greatest-hits.jpg",
+    "thumbWebp": "images/library/thumbs/album-greatest-hits.webp",
+    "shelfWebp": "images/library/thumbs/album-greatest-hits-sm.webp",
+    "bytes": 118026,
+    "webpBytes": 38688,
+    "shelfBytes": 12348
+  },
+  "album-chopin": {
+    "fingerprint": "89516:1787404151033",
+    "thumb": "images/library/thumbs/album-chopin.jpg",
+    "thumbWebp": "images/library/thumbs/album-chopin.webp",
+    "shelfWebp": "images/library/thumbs/album-chopin-sm.webp",
+    "bytes": 105007,
+    "webpBytes": 37336,
+    "shelfBytes": 11040
+  },
+  "album-foggy-mountain-jamboree": {
+    "fingerprint": "135817:1787404151275",
+    "thumb": "images/library/thumbs/album-foggy-mountain-jamboree.jpg",
+    "thumbWebp": "images/library/thumbs/album-foggy-mountain-jamboree.webp",
+    "shelfWebp": "images/library/thumbs/album-foggy-mountain-jamboree-sm.webp",
+    "bytes": 142909,
+    "webpBytes": 54358,
+    "shelfBytes": 20144
+  },
+  "album-town-and-country": {
+    "fingerprint": "111068:1787404151516",
+    "thumb": "images/library/thumbs/album-town-and-country.jpg",
+    "thumbWebp": "images/library/thumbs/album-town-and-country.webp",
+    "shelfWebp": "images/library/thumbs/album-town-and-country-sm.webp",
+    "bytes": 118553,
+    "webpBytes": 43316,
+    "shelfBytes": 13984
+  },
+  "album-rumours": {
+    "fingerprint": "55503:1787404151695",
+    "thumb": "images/library/thumbs/album-rumours.jpg",
+    "thumbWebp": "images/library/thumbs/album-rumours.webp",
+    "shelfWebp": "images/library/thumbs/album-rumours-sm.webp",
+    "bytes": 74283,
+    "webpBytes": 21666,
+    "shelfBytes": 8036
+  },
+  "album-strangers-in-the-night": {
+    "fingerprint": "104553:1787404151919",
+    "thumb": "images/library/thumbs/album-strangers-in-the-night.jpg",
+    "thumbWebp": "images/library/thumbs/album-strangers-in-the-night.webp",
+    "shelfWebp": "images/library/thumbs/album-strangers-in-the-night-sm.webp",
+    "bytes": 114217,
+    "webpBytes": 36086,
+    "shelfBytes": 10456
+  },
+  "album-the-front-bottoms": {
+    "fingerprint": "117280:1787404152108",
+    "thumb": "images/library/thumbs/album-the-front-bottoms.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-front-bottoms.webp",
+    "shelfWebp": "images/library/thumbs/album-the-front-bottoms-sm.webp",
+    "bytes": 136039,
+    "webpBytes": 53864,
+    "shelfBytes": 13238
+  },
+  "album-fugazi": {
+    "fingerprint": "9865:1787404152284",
+    "thumb": "images/library/thumbs/album-fugazi.jpg",
+    "thumbWebp": "images/library/thumbs/album-fugazi.webp",
+    "shelfWebp": "images/library/thumbs/album-fugazi-sm.webp",
+    "bytes": 61051,
+    "webpBytes": 18066,
+    "shelfBytes": 5736
+  },
+  "album-autumn": {
+    "fingerprint": "104900:1787404152458",
+    "thumb": "images/library/thumbs/album-autumn.jpg",
+    "thumbWebp": "images/library/thumbs/album-autumn.webp",
+    "shelfWebp": "images/library/thumbs/album-autumn-sm.webp",
+    "bytes": 108017,
+    "webpBytes": 34332,
+    "shelfBytes": 7046
+  },
+  "album-december": {
+    "fingerprint": "54089:1787404152632",
+    "thumb": "images/library/thumbs/album-december.jpg",
+    "thumbWebp": "images/library/thumbs/album-december.webp",
+    "shelfWebp": "images/library/thumbs/album-december-sm.webp",
+    "bytes": 67187,
+    "webpBytes": 13338,
+    "shelfBytes": 2946
+  },
+  "album-signs-of-light": {
+    "fingerprint": "174120:1787404152806",
+    "thumb": "images/library/thumbs/album-signs-of-light.jpg",
+    "thumbWebp": "images/library/thumbs/album-signs-of-light.webp",
+    "shelfWebp": "images/library/thumbs/album-signs-of-light-sm.webp",
+    "bytes": 194442,
+    "webpBytes": 97606,
+    "shelfBytes": 23166
+  },
+  "album-the-head-and-the-heart": {
+    "fingerprint": "42277:1787404153048",
+    "thumb": "images/library/thumbs/album-the-head-and-the-heart.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-head-and-the-heart.webp",
+    "shelfWebp": "images/library/thumbs/album-the-head-and-the-heart-sm.webp",
+    "bytes": 70190,
+    "webpBytes": 27450,
+    "shelfBytes": 7554
+  },
+  "album-the-beat-of-the-brass": {
+    "fingerprint": "169786:1787404153509",
+    "thumb": "images/library/thumbs/album-the-beat-of-the-brass.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-beat-of-the-brass.webp",
+    "shelfWebp": "images/library/thumbs/album-the-beat-of-the-brass-sm.webp",
+    "bytes": 191671,
+    "webpBytes": 89824,
+    "shelfBytes": 25398
+  },
+  "album-empyrean-isles": {
+    "fingerprint": "116707:1787404153687",
+    "thumb": "images/library/thumbs/album-empyrean-isles.jpg",
+    "thumbWebp": "images/library/thumbs/album-empyrean-isles.webp",
+    "shelfWebp": "images/library/thumbs/album-empyrean-isles-sm.webp",
+    "bytes": 139074,
+    "webpBytes": 59550,
+    "shelfBytes": 18092
+  },
+  "album-future-shock": {
+    "fingerprint": "131934:1787404153859",
+    "thumb": "images/library/thumbs/album-future-shock.jpg",
+    "thumbWebp": "images/library/thumbs/album-future-shock.webp",
+    "shelfWebp": "images/library/thumbs/album-future-shock-sm.webp",
+    "bytes": 135354,
+    "webpBytes": 58718,
+    "shelfBytes": 17980
+  },
+  "album-maiden-voyage": {
+    "fingerprint": "101608:1787404154084",
+    "thumb": "images/library/thumbs/album-maiden-voyage.jpg",
+    "thumbWebp": "images/library/thumbs/album-maiden-voyage.webp",
+    "shelfWebp": "images/library/thumbs/album-maiden-voyage-sm.webp",
+    "bytes": 121068,
+    "webpBytes": 46924,
+    "shelfBytes": 9622
+  },
+  "album-push-push": {
+    "fingerprint": "129494:1787404154310",
+    "thumb": "images/library/thumbs/album-push-push.jpg",
+    "thumbWebp": "images/library/thumbs/album-push-push.webp",
+    "shelfWebp": "images/library/thumbs/album-push-push-sm.webp",
+    "bytes": 147181,
+    "webpBytes": 60730,
+    "shelfBytes": 10702
+  },
+  "album-bambi": {
+    "fingerprint": "25358:1787404154489",
+    "thumb": "images/library/thumbs/album-bambi.jpg",
+    "thumbWebp": "images/library/thumbs/album-bambi.webp",
+    "shelfWebp": "images/library/thumbs/album-bambi-sm.webp",
+    "bytes": 91943,
+    "webpBytes": 31154,
+    "shelfBytes": 9328
+  },
+  "album-en-concert": {
+    "fingerprint": "15342:1787404154715",
+    "thumb": "images/library/thumbs/album-en-concert.jpg",
+    "thumbWebp": "images/library/thumbs/album-en-concert.webp",
+    "shelfWebp": "images/library/thumbs/album-en-concert-sm.webp",
+    "bytes": 57857,
+    "webpBytes": 15452,
+    "shelfBytes": 5740
+  },
+  "album-from-here-to-now-to-you": {
+    "fingerprint": "79765:1787404154984",
+    "thumb": "images/library/thumbs/album-from-here-to-now-to-you.jpg",
+    "thumbWebp": "images/library/thumbs/album-from-here-to-now-to-you.webp",
+    "shelfWebp": "images/library/thumbs/album-from-here-to-now-to-you-sm.webp",
+    "bytes": 129663,
+    "webpBytes": 52300,
+    "shelfBytes": 14834
+  },
+  "album-crash-landing": {
+    "fingerprint": "95396:1787404155159",
+    "thumb": "images/library/thumbs/album-crash-landing.jpg",
+    "thumbWebp": "images/library/thumbs/album-crash-landing.webp",
+    "shelfWebp": "images/library/thumbs/album-crash-landing-sm.webp",
+    "bytes": 112283,
+    "webpBytes": 38646,
+    "shelfBytes": 10230
+  },
+  "album-bleed-american": {
+    "fingerprint": "50456:1787404155333",
+    "thumb": "images/library/thumbs/album-bleed-american.jpg",
+    "thumbWebp": "images/library/thumbs/album-bleed-american.webp",
+    "shelfWebp": "images/library/thumbs/album-bleed-american-sm.webp",
+    "bytes": 117244,
+    "webpBytes": 42948,
+    "shelfBytes": 11780
+  },
+  "album-something-new-the-unique-sounds-of-jazz-bassoon": {
+    "fingerprint": "97124:1787404155750",
+    "thumb": "images/library/thumbs/album-something-new-the-unique-sounds-of-jazz-bassoon.jpg",
+    "thumbWebp": "images/library/thumbs/album-something-new-the-unique-sounds-of-jazz-bassoon.webp",
+    "shelfWebp": "images/library/thumbs/album-something-new-the-unique-sounds-of-jazz-bassoon-sm.webp",
+    "bytes": 103587,
+    "webpBytes": 33440,
+    "shelfBytes": 8808
+  },
+  "album-a-love-supreme": {
+    "fingerprint": "81003:1787404156103",
+    "thumb": "images/library/thumbs/album-a-love-supreme.jpg",
+    "thumbWebp": "images/library/thumbs/album-a-love-supreme.webp",
+    "shelfWebp": "images/library/thumbs/album-a-love-supreme-sm.webp",
+    "bytes": 98121,
+    "webpBytes": 29518,
+    "shelfBytes": 7686
+  },
+  "album-crescent": {
+    "fingerprint": "136201:1787404156284",
+    "thumb": "images/library/thumbs/album-crescent.jpg",
+    "thumbWebp": "images/library/thumbs/album-crescent.webp",
+    "shelfWebp": "images/library/thumbs/album-crescent-sm.webp",
+    "bytes": 154844,
+    "webpBytes": 70126,
+    "shelfBytes": 19560
+  },
+  "album-john-denvers-greatest-hits": {
+    "fingerprint": "136581:1787404156512",
+    "thumb": "images/library/thumbs/album-john-denvers-greatest-hits.jpg",
+    "thumbWebp": "images/library/thumbs/album-john-denvers-greatest-hits.webp",
+    "shelfWebp": "images/library/thumbs/album-john-denvers-greatest-hits-sm.webp",
+    "bytes": 147346,
+    "webpBytes": 65688,
+    "shelfBytes": 20204
+  },
+  "album-continuum": {
+    "fingerprint": "12560:1787404156690",
+    "thumb": "images/library/thumbs/album-continuum.jpg",
+    "thumbWebp": "images/library/thumbs/album-continuum.webp",
+    "shelfWebp": "images/library/thumbs/album-continuum-sm.webp",
+    "bytes": 23136,
+    "webpBytes": 2814,
+    "shelfBytes": 828
+  },
+  "album-room-for-squares": {
+    "fingerprint": "119194:1787404156870",
+    "thumb": "images/library/thumbs/album-room-for-squares.jpg",
+    "thumbWebp": "images/library/thumbs/album-room-for-squares.webp",
+    "shelfWebp": "images/library/thumbs/album-room-for-squares-sm.webp",
+    "bytes": 129757,
+    "webpBytes": 57692,
+    "shelfBytes": 16462
+  },
+  "album-johnny-cash-at-san-quentin": {
+    "fingerprint": "109359:1787404157048",
+    "thumb": "images/library/thumbs/album-johnny-cash-at-san-quentin.jpg",
+    "thumbWebp": "images/library/thumbs/album-johnny-cash-at-san-quentin.webp",
+    "shelfWebp": "images/library/thumbs/album-johnny-cash-at-san-quentin-sm.webp",
+    "bytes": 122707,
+    "webpBytes": 45912,
+    "shelfBytes": 11948
+  },
+  "album-funeral-pyre": {
+    "fingerprint": "81376:1787404157310",
+    "thumb": "images/library/thumbs/album-funeral-pyre.jpg",
+    "thumbWebp": "images/library/thumbs/album-funeral-pyre.webp",
+    "shelfWebp": "images/library/thumbs/album-funeral-pyre-sm.webp",
+    "bytes": 109498,
+    "webpBytes": 33716,
+    "shelfBytes": 5752
+  },
+  "album-turn-out-the-lights": {
+    "fingerprint": "93959:1787404157487",
+    "thumb": "images/library/thumbs/album-turn-out-the-lights.jpg",
+    "thumbWebp": "images/library/thumbs/album-turn-out-the-lights.webp",
+    "shelfWebp": "images/library/thumbs/album-turn-out-the-lights-sm.webp",
+    "bytes": 109094,
+    "webpBytes": 33676,
+    "shelfBytes": 8596
+  },
+  "album-gone-for-the-day": {
+    "fingerprint": "182051:1787404157863",
+    "thumb": "images/library/thumbs/album-gone-for-the-day.jpg",
+    "thumbWebp": "images/library/thumbs/album-gone-for-the-day.webp",
+    "shelfWebp": "images/library/thumbs/album-gone-for-the-day-sm.webp",
+    "bytes": 208508,
+    "webpBytes": 96668,
+    "shelfBytes": 30204
+  },
+  "album-duotones": {
+    "fingerprint": "73205:1787404158112",
+    "thumb": "images/library/thumbs/album-duotones.jpg",
+    "thumbWebp": "images/library/thumbs/album-duotones.webp",
+    "shelfWebp": "images/library/thumbs/album-duotones-sm.webp",
+    "bytes": 91385,
+    "webpBytes": 26384,
+    "shelfBytes": 6626
+  },
+  "album-this-is-happening": {
+    "fingerprint": "115469:1787404158284",
+    "thumb": "images/library/thumbs/album-this-is-happening.jpg",
+    "thumbWebp": "images/library/thumbs/album-this-is-happening.webp",
+    "shelfWebp": "images/library/thumbs/album-this-is-happening-sm.webp",
+    "bytes": 150076,
+    "webpBytes": 68728,
+    "shelfBytes": 11088
+  },
+  "album-led-zeppelin-ii": {
+    "fingerprint": "111414:1787404158512",
+    "thumb": "images/library/thumbs/album-led-zeppelin-ii.jpg",
+    "thumbWebp": "images/library/thumbs/album-led-zeppelin-ii.webp",
+    "shelfWebp": "images/library/thumbs/album-led-zeppelin-ii-sm.webp",
+    "bytes": 122616,
+    "webpBytes": 46378,
+    "shelfBytes": 13792
+  },
+  "album-correspondence-a-fiction": {
+    "fingerprint": "81971:1787404158740",
+    "thumb": "images/library/thumbs/album-correspondence-a-fiction.jpg",
+    "thumbWebp": "images/library/thumbs/album-correspondence-a-fiction.webp",
+    "shelfWebp": "images/library/thumbs/album-correspondence-a-fiction-sm.webp",
+    "bytes": 97748,
+    "webpBytes": 30978,
+    "shelfBytes": 7760
+  },
+  "album-sanctuary": {
+    "fingerprint": "93354:1787404159138",
+    "thumb": "images/library/thumbs/album-sanctuary.jpg",
+    "thumbWebp": "images/library/thumbs/album-sanctuary.webp",
+    "shelfWebp": "images/library/thumbs/album-sanctuary-sm.webp",
+    "bytes": 102563,
+    "webpBytes": 35474,
+    "shelfBytes": 12070
+  },
+  "album-my-bag": {
+    "fingerprint": "71176:1787404159378",
+    "thumb": "images/library/thumbs/album-my-bag.jpg",
+    "thumbWebp": "images/library/thumbs/album-my-bag.webp",
+    "shelfWebp": "images/library/thumbs/album-my-bag-sm.webp",
+    "bytes": 96709,
+    "webpBytes": 36732,
+    "shelfBytes": 6482
+  },
+  "album-loretta-lynn-writes-em-and-sings-em": {
+    "fingerprint": "97865:1787404159606",
+    "thumb": "images/library/thumbs/album-loretta-lynn-writes-em-and-sings-em.jpg",
+    "thumbWebp": "images/library/thumbs/album-loretta-lynn-writes-em-and-sings-em.webp",
+    "shelfWebp": "images/library/thumbs/album-loretta-lynn-writes-em-and-sings-em-sm.webp",
+    "bytes": 111478,
+    "webpBytes": 40790,
+    "shelfBytes": 11240
+  },
+  "album-somebody-somewhere": {
+    "fingerprint": "37042:1787404159828",
+    "thumb": "images/library/thumbs/album-somebody-somewhere.jpg",
+    "thumbWebp": "images/library/thumbs/album-somebody-somewhere.webp",
+    "shelfWebp": "images/library/thumbs/album-somebody-somewhere-sm.webp",
+    "bytes": 77878,
+    "webpBytes": 23806,
+    "shelfBytes": 6938
+  },
+  "album-hello-dolly": {
+    "fingerprint": "86899:1787404160022",
+    "thumb": "images/library/thumbs/album-hello-dolly.jpg",
+    "thumbWebp": "images/library/thumbs/album-hello-dolly.webp",
+    "shelfWebp": "images/library/thumbs/album-hello-dolly-sm.webp",
+    "bytes": 102050,
+    "webpBytes": 36694,
+    "shelfBytes": 10464
+  },
+  "album-louis-and-the-angels": {
+    "fingerprint": "102030:1787404160260",
+    "thumb": "images/library/thumbs/album-louis-and-the-angels.jpg",
+    "thumbWebp": "images/library/thumbs/album-louis-and-the-angels.webp",
+    "shelfWebp": "images/library/thumbs/album-louis-and-the-angels-sm.webp",
+    "bytes": 111420,
+    "webpBytes": 35446,
+    "shelfBytes": 9734
+  },
+  "album-piano-concerto-no-3-in-c-minor-piano-sonata-in-e-flat-major": {
+    "fingerprint": "94994:1787404160775",
+    "thumb": "images/library/thumbs/album-piano-concerto-no-3-in-c-minor-piano-sonata-in-e-flat-major.jpg",
+    "thumbWebp": "images/library/thumbs/album-piano-concerto-no-3-in-c-minor-piano-sonata-in-e-flat-major.webp",
+    "shelfWebp": "images/library/thumbs/album-piano-concerto-no-3-in-c-minor-piano-sonata-in-e-flat-major-sm.webp",
+    "bytes": 103974,
+    "webpBytes": 34366,
+    "shelfBytes": 9376
+  },
+  "album-trio-in-b-flat-major-for-piano-violin-and-cello-op-97": {
+    "fingerprint": "126109:1787404161208",
+    "thumb": "images/library/thumbs/album-trio-in-b-flat-major-for-piano-violin-and-cello-op-97.jpg",
+    "thumbWebp": "images/library/thumbs/album-trio-in-b-flat-major-for-piano-violin-and-cello-op-97.webp",
+    "shelfWebp": "images/library/thumbs/album-trio-in-b-flat-major-for-piano-violin-and-cello-op-97-sm.webp",
+    "bytes": 143424,
+    "webpBytes": 59280,
+    "shelfBytes": 18414
+  },
+  "album-imaginal-disk": {
+    "fingerprint": "75192:1787404161386",
+    "thumb": "images/library/thumbs/album-imaginal-disk.jpg",
+    "thumbWebp": "images/library/thumbs/album-imaginal-disk.webp",
+    "shelfWebp": "images/library/thumbs/album-imaginal-disk-sm.webp",
+    "bytes": 82073,
+    "webpBytes": 21924,
+    "shelfBytes": 6164
+  },
+  "album-heard-it-in-a-past-life": {
+    "fingerprint": "160885:1787404161564",
+    "thumb": "images/library/thumbs/album-heard-it-in-a-past-life.jpg",
+    "thumbWebp": "images/library/thumbs/album-heard-it-in-a-past-life.webp",
+    "shelfWebp": "images/library/thumbs/album-heard-it-in-a-past-life-sm.webp",
+    "bytes": 194113,
+    "webpBytes": 107170,
+    "shelfBytes": 15438
+  },
+  "album-business-as-usual": {
+    "fingerprint": "143323:1787404161740",
+    "thumb": "images/library/thumbs/album-business-as-usual.jpg",
+    "thumbWebp": "images/library/thumbs/album-business-as-usual.webp",
+    "shelfWebp": "images/library/thumbs/album-business-as-usual-sm.webp",
+    "bytes": 170649,
+    "webpBytes": 65278,
+    "shelfBytes": 22608
+  },
+  "album-run-on": {
+    "fingerprint": "61236:1787404161980",
+    "thumb": "images/library/thumbs/album-run-on.jpg",
+    "thumbWebp": "images/library/thumbs/album-run-on.webp",
+    "shelfWebp": "images/library/thumbs/album-run-on-sm.webp",
+    "bytes": 65888,
+    "webpBytes": 14716,
+    "shelfBytes": 4428
+  },
+  "album-sigh-no-more": {
+    "fingerprint": "135693:1787404162159",
+    "thumb": "images/library/thumbs/album-sigh-no-more.jpg",
+    "thumbWebp": "images/library/thumbs/album-sigh-no-more.webp",
+    "shelfWebp": "images/library/thumbs/album-sigh-no-more-sm.webp",
+    "bytes": 168097,
+    "webpBytes": 74946,
+    "shelfBytes": 12936
+  },
+  "album-l-o-v-e": {
+    "fingerprint": "136654:1787404162389",
+    "thumb": "images/library/thumbs/album-l-o-v-e.jpg",
+    "thumbWebp": "images/library/thumbs/album-l-o-v-e.webp",
+    "shelfWebp": "images/library/thumbs/album-l-o-v-e-sm.webp",
+    "bytes": 135277,
+    "webpBytes": 52490,
+    "shelfBytes": 15132
+  },
+  "album-love-is-the-thing": {
+    "fingerprint": "131413:1787404162950",
+    "thumb": "images/library/thumbs/album-love-is-the-thing.jpg",
+    "thumbWebp": "images/library/thumbs/album-love-is-the-thing.webp",
+    "shelfWebp": "images/library/thumbs/album-love-is-the-thing-sm.webp",
+    "bytes": 140791,
+    "webpBytes": 52056,
+    "shelfBytes": 11688
+  },
+  "album-ramblin-rose": {
+    "fingerprint": "21349:1787404163132",
+    "thumb": "images/library/thumbs/album-ramblin-rose.jpg",
+    "thumbWebp": "images/library/thumbs/album-ramblin-rose.webp",
+    "shelfWebp": "images/library/thumbs/album-ramblin-rose-sm.webp",
+    "bytes": 84042,
+    "webpBytes": 25018,
+    "shelfBytes": 8088
+  },
+  "album-nina-simone-sings-the-blues": {
+    "fingerprint": "104682:1787404163307",
+    "thumb": "images/library/thumbs/album-nina-simone-sings-the-blues.jpg",
+    "thumbWebp": "images/library/thumbs/album-nina-simone-sings-the-blues.webp",
+    "shelfWebp": "images/library/thumbs/album-nina-simone-sings-the-blues-sm.webp",
+    "bytes": 127284,
+    "webpBytes": 54638,
+    "shelfBytes": 16310
+  },
+  "album-live-at-eventim-apollo": {
+    "fingerprint": "24963:1787404163486",
+    "thumb": "images/library/thumbs/album-live-at-eventim-apollo.jpg",
+    "thumbWebp": "images/library/thumbs/album-live-at-eventim-apollo.webp",
+    "shelfWebp": "images/library/thumbs/album-live-at-eventim-apollo-sm.webp",
+    "bytes": 74153,
+    "webpBytes": 21280,
+    "shelfBytes": 7122
+  },
+  "album-war-of-the-worlds": {
+    "fingerprint": "177178:1787404163668",
+    "thumb": "images/library/thumbs/album-war-of-the-worlds.jpg",
+    "thumbWebp": "images/library/thumbs/album-war-of-the-worlds.webp",
+    "shelfWebp": "images/library/thumbs/album-war-of-the-worlds-sm.webp",
+    "bytes": 194501,
+    "webpBytes": 87956,
+    "shelfBytes": 27908
+  },
+  "album-oscar-peterson-plays-duke-ellington": {
+    "fingerprint": "115492:1787404163890",
+    "thumb": "images/library/thumbs/album-oscar-peterson-plays-duke-ellington.jpg",
+    "thumbWebp": "images/library/thumbs/album-oscar-peterson-plays-duke-ellington.webp",
+    "shelfWebp": "images/library/thumbs/album-oscar-peterson-plays-duke-ellington-sm.webp",
+    "bytes": 126522,
+    "webpBytes": 50158,
+    "shelfBytes": 14860
+  },
+  "album-home-for-the-holidays": {
+    "fingerprint": "35831:1787404164061",
+    "thumb": "images/library/thumbs/album-home-for-the-holidays.jpg",
+    "thumbWebp": "images/library/thumbs/album-home-for-the-holidays.webp",
+    "shelfWebp": "images/library/thumbs/album-home-for-the-holidays-sm.webp",
+    "bytes": 117441,
+    "webpBytes": 46462,
+    "shelfBytes": 13874
+  },
+  "album-childrens-concert-at-town-hall": {
+    "fingerprint": "107946:1787404164346",
+    "thumb": "images/library/thumbs/album-childrens-concert-at-town-hall.jpg",
+    "thumbWebp": "images/library/thumbs/album-childrens-concert-at-town-hall.webp",
+    "shelfWebp": "images/library/thumbs/album-childrens-concert-at-town-hall-sm.webp",
+    "bytes": 118653,
+    "webpBytes": 45602,
+    "shelfBytes": 14600
+  },
+  "album-sledgehammer": {
+    "fingerprint": "26375:1787404164581",
+    "thumb": "images/library/thumbs/album-sledgehammer.jpg",
+    "thumbWebp": "images/library/thumbs/album-sledgehammer.webp",
+    "shelfWebp": "images/library/thumbs/album-sledgehammer-sm.webp",
+    "bytes": 70509,
+    "webpBytes": 19520,
+    "shelfBytes": 5196
+  },
+  "album-the-yips": {
+    "fingerprint": "159044:1787404164836",
+    "thumb": "images/library/thumbs/album-the-yips.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-yips.webp",
+    "shelfWebp": "images/library/thumbs/album-the-yips-sm.webp",
+    "bytes": 178456,
+    "webpBytes": 86498,
+    "shelfBytes": 22784
+  },
+  "album-ghost-in-the-machine": {
+    "fingerprint": "43890:1787404165008",
+    "thumb": "images/library/thumbs/album-ghost-in-the-machine.jpg",
+    "thumbWebp": "images/library/thumbs/album-ghost-in-the-machine.webp",
+    "shelfWebp": "images/library/thumbs/album-ghost-in-the-machine-sm.webp",
+    "bytes": 50398,
+    "webpBytes": 14034,
+    "shelfBytes": 5536
+  },
+  "album-synchronicity": {
+    "fingerprint": "182804:1787404165191",
+    "thumb": "images/library/thumbs/album-synchronicity.jpg",
+    "thumbWebp": "images/library/thumbs/album-synchronicity.webp",
+    "shelfWebp": "images/library/thumbs/album-synchronicity-sm.webp",
+    "bytes": 178252,
+    "webpBytes": 76682,
+    "shelfBytes": 21870
+  },
+  "album-ramones-mania": {
+    "fingerprint": "175445:1787404165419",
+    "thumb": "images/library/thumbs/album-ramones-mania.jpg",
+    "thumbWebp": "images/library/thumbs/album-ramones-mania.webp",
+    "shelfWebp": "images/library/thumbs/album-ramones-mania-sm.webp",
+    "bytes": 188675,
+    "webpBytes": 87620,
+    "shelfBytes": 28152
+  },
+  "album-goin-latin": {
+    "fingerprint": "146194:1787404165667",
+    "thumb": "images/library/thumbs/album-goin-latin.jpg",
+    "thumbWebp": "images/library/thumbs/album-goin-latin.webp",
+    "shelfWebp": "images/library/thumbs/album-goin-latin-sm.webp",
+    "bytes": 148342,
+    "webpBytes": 59986,
+    "shelfBytes": 16514
+  },
+  "album-mother-natures-son": {
+    "fingerprint": "157922:1787404165895",
+    "thumb": "images/library/thumbs/album-mother-natures-son.jpg",
+    "thumbWebp": "images/library/thumbs/album-mother-natures-son.webp",
+    "shelfWebp": "images/library/thumbs/album-mother-natures-son-sm.webp",
+    "bytes": 170540,
+    "webpBytes": 82572,
+    "shelfBytes": 22206
+  },
+  "album-the-ray-charles-story-volume-4": {
+    "fingerprint": "105659:1787404166142",
+    "thumb": "images/library/thumbs/album-the-ray-charles-story-volume-4.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-ray-charles-story-volume-4.webp",
+    "shelfWebp": "images/library/thumbs/album-the-ray-charles-story-volume-4-sm.webp",
+    "bytes": 115076,
+    "webpBytes": 41834,
+    "shelfBytes": 13828
+  },
+  "album-my-kind-of-country": {
+    "fingerprint": "73967:1787404166579",
+    "thumb": "images/library/thumbs/album-my-kind-of-country.jpg",
+    "thumbWebp": "images/library/thumbs/album-my-kind-of-country.webp",
+    "shelfWebp": "images/library/thumbs/album-my-kind-of-country-sm.webp",
+    "bytes": 84210,
+    "webpBytes": 23716,
+    "shelfBytes": 7928
+  },
+  "album-highland-pageantry": {
+    "fingerprint": "72899:1787404166818",
+    "thumb": "images/library/thumbs/album-highland-pageantry.jpg",
+    "thumbWebp": "images/library/thumbs/album-highland-pageantry.webp",
+    "shelfWebp": "images/library/thumbs/album-highland-pageantry-sm.webp",
+    "bytes": 151985,
+    "webpBytes": 66200,
+    "shelfBytes": 17468
+  },
+  "album-first-take": {
+    "fingerprint": "111558:1787404167000",
+    "thumb": "images/library/thumbs/album-first-take.jpg",
+    "thumbWebp": "images/library/thumbs/album-first-take.webp",
+    "shelfWebp": "images/library/thumbs/album-first-take-sm.webp",
+    "bytes": 124398,
+    "webpBytes": 49334,
+    "shelfBytes": 15536
+  },
+  "album-the-sound-of-music-an-original-soundtrack-recording": {
+    "fingerprint": "107512:1787404167253",
+    "thumb": "images/library/thumbs/album-the-sound-of-music-an-original-soundtrack-recording.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-sound-of-music-an-original-soundtrack-recording.webp",
+    "shelfWebp": "images/library/thumbs/album-the-sound-of-music-an-original-soundtrack-recording-sm.webp",
+    "bytes": 119834,
+    "webpBytes": 46184,
+    "shelfBytes": 13800
+  },
+  "album-chuck-timely-the-hourglass": {
+    "fingerprint": "94102:1787404167426",
+    "thumb": "images/library/thumbs/album-chuck-timely-the-hourglass.jpg",
+    "thumbWebp": "images/library/thumbs/album-chuck-timely-the-hourglass.webp",
+    "shelfWebp": "images/library/thumbs/album-chuck-timely-the-hourglass-sm.webp",
+    "bytes": 105533,
+    "webpBytes": 31384,
+    "shelfBytes": 11702
+  },
+  "album-kansas-anymore-the-longest-goodbye": {
+    "fingerprint": "73125:1787404167601",
+    "thumb": "images/library/thumbs/album-kansas-anymore-the-longest-goodbye.jpg",
+    "thumbWebp": "images/library/thumbs/album-kansas-anymore-the-longest-goodbye.webp",
+    "shelfWebp": "images/library/thumbs/album-kansas-anymore-the-longest-goodbye-sm.webp",
+    "bytes": 93962,
+    "webpBytes": 33916,
+    "shelfBytes": 7056
+  },
+  "album-scenery": {
+    "fingerprint": "129708:1787404167780",
+    "thumb": "images/library/thumbs/album-scenery.jpg",
+    "thumbWebp": "images/library/thumbs/album-scenery.webp",
+    "shelfWebp": "images/library/thumbs/album-scenery-sm.webp",
+    "bytes": 139204,
+    "webpBytes": 63020,
+    "shelfBytes": 15402
+  },
+  "album-short-n-sweet": {
+    "fingerprint": "100532:1787404167956",
+    "thumb": "images/library/thumbs/album-short-n-sweet.jpg",
+    "thumbWebp": "images/library/thumbs/album-short-n-sweet.webp",
+    "shelfWebp": "images/library/thumbs/album-short-n-sweet-sm.webp",
+    "bytes": 106621,
+    "webpBytes": 36450,
+    "shelfBytes": 9044
+  },
+  "album-parsley-sage-rosemary-and-thyme": {
+    "fingerprint": "143250:1787404168131",
+    "thumb": "images/library/thumbs/album-parsley-sage-rosemary-and-thyme.jpg",
+    "thumbWebp": "images/library/thumbs/album-parsley-sage-rosemary-and-thyme.webp",
+    "shelfWebp": "images/library/thumbs/album-parsley-sage-rosemary-and-thyme-sm.webp",
+    "bytes": 157813,
+    "webpBytes": 72690,
+    "shelfBytes": 18900
+  },
+  "album-simon-and-garfunkels-greatest-hits": {
+    "fingerprint": "112854:1787404168300",
+    "thumb": "images/library/thumbs/album-simon-and-garfunkels-greatest-hits.jpg",
+    "thumbWebp": "images/library/thumbs/album-simon-and-garfunkels-greatest-hits.webp",
+    "shelfWebp": "images/library/thumbs/album-simon-and-garfunkels-greatest-hits-sm.webp",
+    "bytes": 117426,
+    "webpBytes": 43710,
+    "shelfBytes": 12768
+  },
+  "album-wednesday-morning-3-a-m": {
+    "fingerprint": "153759:1787404168483",
+    "thumb": "images/library/thumbs/album-wednesday-morning-3-a-m.jpg",
+    "thumbWebp": "images/library/thumbs/album-wednesday-morning-3-a-m.webp",
+    "shelfWebp": "images/library/thumbs/album-wednesday-morning-3-a-m-sm.webp",
+    "bytes": 158732,
+    "webpBytes": 63014,
+    "shelfBytes": 17534
+  },
+  "album-25-favorite-cowboy-songs": {
+    "fingerprint": "165734:1787404168745",
+    "thumb": "images/library/thumbs/album-25-favorite-cowboy-songs.jpg",
+    "thumbWebp": "images/library/thumbs/album-25-favorite-cowboy-songs.webp",
+    "shelfWebp": "images/library/thumbs/album-25-favorite-cowboy-songs-sm.webp",
+    "bytes": 178724,
+    "webpBytes": 91248,
+    "shelfBytes": 20826
+  },
+  "album-getz-gilberto": {
+    "fingerprint": "43078:1787404168992",
+    "thumb": "images/library/thumbs/album-getz-gilberto.jpg",
+    "thumbWebp": "images/library/thumbs/album-getz-gilberto.webp",
+    "shelfWebp": "images/library/thumbs/album-getz-gilberto-sm.webp",
+    "bytes": 73247,
+    "webpBytes": 23708,
+    "shelfBytes": 7894
+  },
+  "album-aja": {
+    "fingerprint": "39387:1787404169167",
+    "thumb": "images/library/thumbs/album-aja.jpg",
+    "thumbWebp": "images/library/thumbs/album-aja.webp",
+    "shelfWebp": "images/library/thumbs/album-aja-sm.webp",
+    "bytes": 52346,
+    "webpBytes": 9102,
+    "shelfBytes": 2612
+  },
+  "album-cant-buy-a-thrill": {
+    "fingerprint": "151592:1787404169351",
+    "thumb": "images/library/thumbs/album-cant-buy-a-thrill.jpg",
+    "thumbWebp": "images/library/thumbs/album-cant-buy-a-thrill.webp",
+    "shelfWebp": "images/library/thumbs/album-cant-buy-a-thrill-sm.webp",
+    "bytes": 162028,
+    "webpBytes": 70478,
+    "shelfBytes": 22056
+  },
+  "album-wicked-the-soundtrack": {
+    "fingerprint": "159817:1787404169527",
+    "thumb": "images/library/thumbs/album-wicked-the-soundtrack.jpg",
+    "thumbWebp": "images/library/thumbs/album-wicked-the-soundtrack.webp",
+    "shelfWebp": "images/library/thumbs/album-wicked-the-soundtrack-sm.webp",
+    "bytes": 172009,
+    "webpBytes": 80964,
+    "shelfBytes": 22158
+  },
+  "album-illinois": {
+    "fingerprint": "164290:1787404169706",
+    "thumb": "images/library/thumbs/album-illinois.jpg",
+    "thumbWebp": "images/library/thumbs/album-illinois.webp",
+    "shelfWebp": "images/library/thumbs/album-illinois-sm.webp",
+    "bytes": 164865,
+    "webpBytes": 70740,
+    "shelfBytes": 20128
+  },
+  "album-blind": {
+    "fingerprint": "58329:1787404169879",
+    "thumb": "images/library/thumbs/album-blind.jpg",
+    "thumbWebp": "images/library/thumbs/album-blind.webp",
+    "shelfWebp": "images/library/thumbs/album-blind-sm.webp",
+    "bytes": 69694,
+    "webpBytes": 17540,
+    "shelfBytes": 4994
+  },
+  "album-static-silence": {
+    "fingerprint": "83420:1787404170057",
+    "thumb": "images/library/thumbs/album-static-silence.jpg",
+    "thumbWebp": "images/library/thumbs/album-static-silence.webp",
+    "shelfWebp": "images/library/thumbs/album-static-silence-sm.webp",
+    "bytes": 103786,
+    "webpBytes": 36058,
+    "shelfBytes": 8050
+  },
+  "album-susan-sings-songs-from-sesame-street": {
+    "fingerprint": "168774:1787404170231",
+    "thumb": "images/library/thumbs/album-susan-sings-songs-from-sesame-street.jpg",
+    "thumbWebp": "images/library/thumbs/album-susan-sings-songs-from-sesame-street.webp",
+    "shelfWebp": "images/library/thumbs/album-susan-sings-songs-from-sesame-street-sm.webp",
+    "bytes": 185728,
+    "webpBytes": 91880,
+    "shelfBytes": 25944
+  },
+  "album-1989-taylors-version": {
+    "fingerprint": "146276:1787404170406",
+    "thumb": "images/library/thumbs/album-1989-taylors-version.jpg",
+    "thumbWebp": "images/library/thumbs/album-1989-taylors-version.webp",
+    "shelfWebp": "images/library/thumbs/album-1989-taylors-version-sm.webp",
+    "bytes": 173157,
+    "webpBytes": 86078,
+    "shelfBytes": 21280
+  },
+  "album-fearless-taylors-version": {
+    "fingerprint": "104897:1787404170574",
+    "thumb": "images/library/thumbs/album-fearless-taylors-version.jpg",
+    "thumbWebp": "images/library/thumbs/album-fearless-taylors-version.webp",
+    "shelfWebp": "images/library/thumbs/album-fearless-taylors-version-sm.webp",
+    "bytes": 116790,
+    "webpBytes": 42552,
+    "shelfBytes": 11562
+  },
+  "album-watch-your-step": {
+    "fingerprint": "73273:1787404171054",
+    "thumb": "images/library/thumbs/album-watch-your-step.jpg",
+    "thumbWebp": "images/library/thumbs/album-watch-your-step.webp",
+    "shelfWebp": "images/library/thumbs/album-watch-your-step-sm.webp",
+    "bytes": 86171,
+    "webpBytes": 25568,
+    "shelfBytes": 8278
+  },
+  "album-the-london-collection-volume-2": {
+    "fingerprint": "109650:1787404171497",
+    "thumb": "images/library/thumbs/album-the-london-collection-volume-2.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-london-collection-volume-2.webp",
+    "shelfWebp": "images/library/thumbs/album-the-london-collection-volume-2-sm.webp",
+    "bytes": 135173,
+    "webpBytes": 53138,
+    "shelfBytes": 12792
+  },
+  "album-thelonious-alone-in-san-francisco": {
+    "fingerprint": "101890:1787404171714",
+    "thumb": "images/library/thumbs/album-thelonious-alone-in-san-francisco.jpg",
+    "thumbWebp": "images/library/thumbs/album-thelonious-alone-in-san-francisco.webp",
+    "shelfWebp": "images/library/thumbs/album-thelonious-alone-in-san-francisco-sm.webp",
+    "bytes": 117356,
+    "webpBytes": 45096,
+    "shelfBytes": 15222
+  },
+  "album-family-tree": {
+    "fingerprint": "165430:1787404171949",
+    "thumb": "images/library/thumbs/album-family-tree.jpg",
+    "thumbWebp": "images/library/thumbs/album-family-tree.webp",
+    "shelfWebp": "images/library/thumbs/album-family-tree-sm.webp",
+    "bytes": 191043,
+    "webpBytes": 105032,
+    "shelfBytes": 25278
+  },
+  "album-life-is-like-that": {
+    "fingerprint": "80897:1787404172383",
+    "thumb": "images/library/thumbs/album-life-is-like-that.jpg",
+    "thumbWebp": "images/library/thumbs/album-life-is-like-that.webp",
+    "shelfWebp": "images/library/thumbs/album-life-is-like-that-sm.webp",
+    "bytes": 89638,
+    "webpBytes": 27250,
+    "shelfBytes": 9718
+  },
+  "album-never-enough": {
+    "fingerprint": "62282:1787404172559",
+    "thumb": "images/library/thumbs/album-never-enough.jpg",
+    "thumbWebp": "images/library/thumbs/album-never-enough.webp",
+    "shelfWebp": "images/library/thumbs/album-never-enough-sm.webp",
+    "bytes": 83260,
+    "webpBytes": 17766,
+    "shelfBytes": 1930
+  },
+  "album-live-under-a-blood-red-sky": {
+    "fingerprint": "56893:1787404172794",
+    "thumb": "images/library/thumbs/album-live-under-a-blood-red-sky.jpg",
+    "thumbWebp": "images/library/thumbs/album-live-under-a-blood-red-sky.webp",
+    "shelfWebp": "images/library/thumbs/album-live-under-a-blood-red-sky-sm.webp",
+    "bytes": 60398,
+    "webpBytes": 14482,
+    "shelfBytes": 4558
+  },
+  "album-the-best-of-1990-2000": {
+    "fingerprint": "63744:1787404172987",
+    "thumb": "images/library/thumbs/album-the-best-of-1990-2000.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-best-of-1990-2000.webp",
+    "shelfWebp": "images/library/thumbs/album-the-best-of-1990-2000-sm.webp",
+    "bytes": 76478,
+    "webpBytes": 20412,
+    "shelfBytes": 6522
+  },
+  "album-baby-driver-music-from-the-motion-picture": {
+    "fingerprint": "132973:1787404173204",
+    "thumb": "images/library/thumbs/album-baby-driver-music-from-the-motion-picture.jpg",
+    "thumbWebp": "images/library/thumbs/album-baby-driver-music-from-the-motion-picture.webp",
+    "shelfWebp": "images/library/thumbs/album-baby-driver-music-from-the-motion-picture-sm.webp",
+    "bytes": 148026,
+    "webpBytes": 64640,
+    "shelfBytes": 18878
+  },
+  "album-christmas-greetings": {
+    "fingerprint": "185756:1787404173411",
+    "thumb": "images/library/thumbs/album-christmas-greetings.jpg",
+    "thumbWebp": "images/library/thumbs/album-christmas-greetings.webp",
+    "shelfWebp": "images/library/thumbs/album-christmas-greetings-sm.webp",
+    "bytes": 210433,
+    "webpBytes": 112888,
+    "shelfBytes": 30582
+  },
+  "album-colorado-jazz-party": {
+    "fingerprint": "101636:1787404173658",
+    "thumb": "images/library/thumbs/album-colorado-jazz-party.jpg",
+    "thumbWebp": "images/library/thumbs/album-colorado-jazz-party.webp",
+    "shelfWebp": "images/library/thumbs/album-colorado-jazz-party-sm.webp",
+    "bytes": 110508,
+    "webpBytes": 38104,
+    "shelfBytes": 12488
+  },
+  "album-dfa-compilation-1": {
+    "fingerprint": "52828:1787404174049",
+    "thumb": "images/library/thumbs/album-dfa-compilation-1.jpg",
+    "thumbWebp": "images/library/thumbs/album-dfa-compilation-1.webp",
+    "shelfWebp": "images/library/thumbs/album-dfa-compilation-1-sm.webp",
+    "bytes": 61312,
+    "webpBytes": 14040,
+    "shelfBytes": 4694
+  },
+  "album-disney-ultimate-hits-vol-1-2": {
+    "fingerprint": "103976:1787404174221",
+    "thumb": "images/library/thumbs/album-disney-ultimate-hits-vol-1-2.jpg",
+    "thumbWebp": "images/library/thumbs/album-disney-ultimate-hits-vol-1-2.webp",
+    "shelfWebp": "images/library/thumbs/album-disney-ultimate-hits-vol-1-2-sm.webp",
+    "bytes": 111169,
+    "webpBytes": 40660,
+    "shelfBytes": 14140
+  },
+  "album-funky-christmas": {
+    "fingerprint": "181340:1787404174879",
+    "thumb": "images/library/thumbs/album-funky-christmas.jpg",
+    "thumbWebp": "images/library/thumbs/album-funky-christmas.webp",
+    "shelfWebp": "images/library/thumbs/album-funky-christmas-sm.webp",
+    "bytes": 198132,
+    "webpBytes": 92778,
+    "shelfBytes": 24200
+  },
+  "album-home-alone-christmas": {
+    "fingerprint": "152844:1787404175060",
+    "thumb": "images/library/thumbs/album-home-alone-christmas.jpg",
+    "thumbWebp": "images/library/thumbs/album-home-alone-christmas.webp",
+    "shelfWebp": "images/library/thumbs/album-home-alone-christmas-sm.webp",
+    "bytes": 166204,
+    "webpBytes": 72758,
+    "shelfBytes": 22296
+  },
+  "album-less-than-zero": {
+    "fingerprint": "101755:1787404175283",
+    "thumb": "images/library/thumbs/album-less-than-zero.jpg",
+    "thumbWebp": "images/library/thumbs/album-less-than-zero.webp",
+    "shelfWebp": "images/library/thumbs/album-less-than-zero-sm.webp",
+    "bytes": 110238,
+    "webpBytes": 37542,
+    "shelfBytes": 11492
+  },
+  "album-mamma-mia-here-we-go-again-the-movie-soundtrack-featuring-th": {
+    "fingerprint": "186412:1787404175462",
+    "thumb": "images/library/thumbs/album-mamma-mia-here-we-go-again-the-movie-soundtrack-featuring-th.jpg",
+    "thumbWebp": "images/library/thumbs/album-mamma-mia-here-we-go-again-the-movie-soundtrack-featuring-th.webp",
+    "shelfWebp": "images/library/thumbs/album-mamma-mia-here-we-go-again-the-movie-soundtrack-featuring-th-sm.webp",
+    "bytes": 204994,
+    "webpBytes": 102908,
+    "shelfBytes": 26698
+  },
+  "album-o-brother-where-art-thou": {
+    "fingerprint": "126798:1787404175643",
+    "thumb": "images/library/thumbs/album-o-brother-where-art-thou.jpg",
+    "thumbWebp": "images/library/thumbs/album-o-brother-where-art-thou.webp",
+    "shelfWebp": "images/library/thumbs/album-o-brother-where-art-thou-sm.webp",
+    "bytes": 130947,
+    "webpBytes": 51698,
+    "shelfBytes": 14294
+  },
+  "album-saturday-night-fever-the-original-movie-sound-track": {
+    "fingerprint": "129782:1787404175869",
+    "thumb": "images/library/thumbs/album-saturday-night-fever-the-original-movie-sound-track.jpg",
+    "thumbWebp": "images/library/thumbs/album-saturday-night-fever-the-original-movie-sound-track.webp",
+    "shelfWebp": "images/library/thumbs/album-saturday-night-fever-the-original-movie-sound-track-sm.webp",
+    "bytes": 141543,
+    "webpBytes": 58944,
+    "shelfBytes": 16942
+  },
+  "album-sgt-peppers-lonely-hearts-club-band": {
+    "fingerprint": "58196:1787404176043",
+    "thumb": "images/library/thumbs/album-sgt-peppers-lonely-hearts-club-band.jpg",
+    "thumbWebp": "images/library/thumbs/album-sgt-peppers-lonely-hearts-club-band.webp",
+    "shelfWebp": "images/library/thumbs/album-sgt-peppers-lonely-hearts-club-band-sm.webp",
+    "bytes": 129635,
+    "webpBytes": 54692,
+    "shelfBytes": 15868
+  },
+  "album-sleepless-in-seattle-original-motion-picture-soundtrack": {
+    "fingerprint": "85041:1787404176226",
+    "thumb": "images/library/thumbs/album-sleepless-in-seattle-original-motion-picture-soundtrack.jpg",
+    "thumbWebp": "images/library/thumbs/album-sleepless-in-seattle-original-motion-picture-soundtrack.webp",
+    "shelfWebp": "images/library/thumbs/album-sleepless-in-seattle-original-motion-picture-soundtrack-sm.webp",
+    "bytes": 97218,
+    "webpBytes": 31900,
+    "shelfBytes": 10328
+  },
+  "album-the-montreux-collection": {
+    "fingerprint": "100853:1787404176632",
+    "thumb": "images/library/thumbs/album-the-montreux-collection.jpg",
+    "thumbWebp": "images/library/thumbs/album-the-montreux-collection.webp",
+    "shelfWebp": "images/library/thumbs/album-the-montreux-collection-sm.webp",
+    "bytes": 127139,
+    "webpBytes": 44302,
+    "shelfBytes": 13892
+  },
+  "album-its-the-great-pumpkin-charlie-brown-original-soundtrack-reco": {
+    "fingerprint": "118747:1787404176853",
+    "thumb": "images/library/thumbs/album-its-the-great-pumpkin-charlie-brown-original-soundtrack-reco.jpg",
+    "thumbWebp": "images/library/thumbs/album-its-the-great-pumpkin-charlie-brown-original-soundtrack-reco.webp",
+    "shelfWebp": "images/library/thumbs/album-its-the-great-pumpkin-charlie-brown-original-soundtrack-reco-sm.webp",
+    "bytes": 130626,
+    "webpBytes": 50412,
+    "shelfBytes": 16778
+  },
+  "album-its-the-great-pumpkin-charlie-brown-music-from-the-soundtrac": {
+    "fingerprint": "93503:1787404177035",
+    "thumb": "images/library/thumbs/album-its-the-great-pumpkin-charlie-brown-music-from-the-soundtrac.jpg",
+    "thumbWebp": "images/library/thumbs/album-its-the-great-pumpkin-charlie-brown-music-from-the-soundtrac.webp",
+    "shelfWebp": "images/library/thumbs/album-its-the-great-pumpkin-charlie-brown-music-from-the-soundtrac-sm.webp",
+    "bytes": 101164,
+    "webpBytes": 36016,
+    "shelfBytes": 10722
+  },
+  "album-peanuts-portraits": {
+    "fingerprint": "123100:1787404177418",
+    "thumb": "images/library/thumbs/album-peanuts-portraits.jpg",
+    "thumbWebp": "images/library/thumbs/album-peanuts-portraits.webp",
+    "shelfWebp": "images/library/thumbs/album-peanuts-portraits-sm.webp",
+    "bytes": 132998,
+    "webpBytes": 52252,
+    "shelfBytes": 17608
+  },
+  "album-a-charlie-brown-thanksgiving": {
+    "fingerprint": "94453:1787404177658",
+    "thumb": "images/library/thumbs/album-a-charlie-brown-thanksgiving.jpg",
+    "thumbWebp": "images/library/thumbs/album-a-charlie-brown-thanksgiving.webp",
+    "shelfWebp": "images/library/thumbs/album-a-charlie-brown-thanksgiving-sm.webp",
+    "bytes": 106644,
+    "webpBytes": 37828,
+    "shelfBytes": 12400
+  },
+  "album-a-charlie-brown-christmas": {
+    "fingerprint": "85377:1787404177869",
+    "thumb": "images/library/thumbs/album-a-charlie-brown-christmas.jpg",
+    "thumbWebp": "images/library/thumbs/album-a-charlie-brown-christmas.webp",
+    "shelfWebp": "images/library/thumbs/album-a-charlie-brown-christmas-sm.webp",
+    "bytes": 95214,
+    "webpBytes": 35764,
+    "shelfBytes": 11912
+  },
+  "album-vince-guaraldi-trio": {
+    "fingerprint": "127476:1787404178075",
+    "thumb": "images/library/thumbs/album-vince-guaraldi-trio.jpg",
+    "thumbWebp": "images/library/thumbs/album-vince-guaraldi-trio.webp",
+    "shelfWebp": "images/library/thumbs/album-vince-guaraldi-trio-sm.webp",
+    "bytes": 140557,
+    "webpBytes": 56032,
+    "shelfBytes": 12712
+  },
+  "album-vulfnik": {
+    "fingerprint": "74653:1787404178248",
+    "thumb": "images/library/thumbs/album-vulfnik.jpg",
+    "thumbWebp": "images/library/thumbs/album-vulfnik.webp",
+    "shelfWebp": "images/library/thumbs/album-vulfnik-sm.webp",
+    "bytes": 88925,
+    "webpBytes": 26994,
+    "shelfBytes": 7432
+  },
+  "album-clarity-of-cal": {
+    "fingerprint": "106746:1787404178428",
+    "thumb": "images/library/thumbs/album-clarity-of-cal.jpg",
+    "thumbWebp": "images/library/thumbs/album-clarity-of-cal.webp",
+    "shelfWebp": "images/library/thumbs/album-clarity-of-cal-sm.webp",
+    "bytes": 129599,
+    "webpBytes": 50514,
+    "shelfBytes": 6330
+  },
+  "album-msg-ii": {
+    "fingerprint": "159059:1787404178603",
+    "thumb": "images/library/thumbs/album-msg-ii.jpg",
+    "thumbWebp": "images/library/thumbs/album-msg-ii.webp",
+    "shelfWebp": "images/library/thumbs/album-msg-ii-sm.webp",
+    "bytes": 182481,
+    "webpBytes": 92654,
+    "shelfBytes": 21880
+  },
+  "album-whos-next": {
+    "fingerprint": "126318:1787404178776",
+    "thumb": "images/library/thumbs/album-whos-next.jpg",
+    "thumbWebp": "images/library/thumbs/album-whos-next.webp",
+    "shelfWebp": "images/library/thumbs/album-whos-next-sm.webp",
+    "bytes": 153967,
+    "webpBytes": 73258,
+    "shelfBytes": 17726
+  },
+  "album-joe-hisaishi-1m5ovzv": {
+    "fingerprint": "132590:1787404490805",
+    "thumb": "images/library/thumbs/album-joe-hisaishi-1m5ovzv.jpg",
+    "thumbWebp": "images/library/thumbs/album-joe-hisaishi-1m5ovzv.webp",
+    "shelfWebp": "images/library/thumbs/album-joe-hisaishi-1m5ovzv-sm.webp",
+    "bytes": 152379,
+    "webpBytes": 66640,
+    "shelfBytes": 17656
   }
 }

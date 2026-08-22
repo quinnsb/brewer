@@ -1,5 +1,5 @@
 {
-  "importedAt": "2026-08-22T02:02:16.315Z",
+  "importedAt": "2026-08-22T13:14:50.932Z",
   "source": "library-add-films",
   "items": [
     {
@@ -720,6 +720,1384 @@
       "title": "The Royal Tenenbaums",
       "year": 2001,
       "sourceUrl": "https://www.themoviedb.org/movie/9428"
+    },
+    {
+      "type": "album",
+      "query": "Godspell \"Godspell\" Original Cast",
+      "title": "Godspell",
+      "creator": "\"Godspell\" Original Cast",
+      "year": 1971,
+      "sourceUrl": "https://www.discogs.com/release/5972213"
+    },
+    {
+      "type": "album",
+      "query": "Being Funny In A Foreign Language The 1975",
+      "title": "Being Funny In A Foreign Language",
+      "creator": "The 1975",
+      "year": 2022,
+      "sourceUrl": "https://www.discogs.com/release/24826730"
+    },
+    {
+      "type": "album",
+      "query": "The Magic Of ABBA ABBA",
+      "title": "The Magic Of ABBA",
+      "creator": "ABBA",
+      "year": 1980,
+      "sourceUrl": "https://www.discogs.com/release/7208591"
+    },
+    {
+      "type": "album",
+      "query": "Aloha From AhVah AhVah",
+      "title": "Aloha From AhVah",
+      "creator": "AhVah",
+      "sourceUrl": "https://www.discogs.com/release/3945400"
+    },
+    {
+      "type": "album",
+      "query": "Our Man In New Orleans Al Hirt",
+      "title": "Our Man In New Orleans",
+      "creator": "Al Hirt",
+      "year": 1963,
+      "sourceUrl": "https://www.discogs.com/release/1528310"
+    },
+    {
+      "type": "album",
+      "query": "Sound & Color Alabama Shakes",
+      "title": "Sound & Color",
+      "creator": "Alabama Shakes",
+      "year": 2015,
+      "sourceUrl": "https://www.discogs.com/release/6764040"
+    },
+    {
+      "type": "album",
+      "query": "Mostly Mozart Volume 3 Alicia De Larrocha",
+      "title": "Mostly Mozart Volume 3",
+      "creator": "Alicia De Larrocha",
+      "year": 1978,
+      "sourceUrl": "https://www.discogs.com/release/7525170"
+    },
+    {
+      "type": "album",
+      "query": "A Night In Tunisia Art Blakey & The Jazz Messengers",
+      "title": "A Night In Tunisia",
+      "creator": "Art Blakey & The Jazz Messengers",
+      "year": 2016,
+      "sourceUrl": "https://www.discogs.com/release/8862801"
+    },
+    {
+      "type": "album",
+      "query": "Art Blakey And The Jazz Messengers Art Blakey & The Jazz Messengers",
+      "title": "Art Blakey And The Jazz Messengers",
+      "creator": "Art Blakey & The Jazz Messengers",
+      "year": 2017,
+      "sourceUrl": "https://www.discogs.com/release/11092717"
+    },
+    {
+      "type": "album",
+      "query": "The Second Set Lausanne 1960 Art Blakey & The Jazz Messengers",
+      "title": "The Second Set Lausanne 1960",
+      "creator": "Art Blakey & The Jazz Messengers",
+      "year": 2020,
+      "sourceUrl": "https://www.discogs.com/release/16045676"
+    },
+    {
+      "type": "album",
+      "query": "Breakaway Art Garfunkel",
+      "title": "Breakaway",
+      "creator": "Art Garfunkel",
+      "year": 1975,
+      "sourceUrl": "https://www.discogs.com/release/985713"
+    },
+    {
+      "type": "album",
+      "query": "Forever The Beach Boys",
+      "title": "Forever",
+      "creator": "The Beach Boys",
+      "year": 1983,
+      "sourceUrl": "https://www.discogs.com/release/3215071"
+    },
+    {
+      "type": "album",
+      "query": "Abbey Road The Beatles",
+      "title": "Abbey Road",
+      "creator": "The Beatles",
+      "year": 2019,
+      "sourceUrl": "https://www.discogs.com/release/14192689"
+    },
+    {
+      "type": "album",
+      "query": "Magical Mystery Tour The Beatles",
+      "title": "Magical Mystery Tour",
+      "creator": "The Beatles",
+      "year": 2012,
+      "sourceUrl": "https://www.discogs.com/release/4054077"
+    },
+    {
+      "type": "album",
+      "query": "Rubber Soul The Beatles",
+      "title": "Rubber Soul",
+      "creator": "The Beatles",
+      "year": 2018,
+      "sourceUrl": "https://www.discogs.com/release/14426802"
+    },
+    {
+      "type": "album",
+      "query": "The Beatles The Beatles",
+      "title": "The Beatles",
+      "creator": "The Beatles",
+      "year": 2018,
+      "sourceUrl": "https://www.discogs.com/release/12771610"
+    },
+    {
+      "type": "album",
+      "query": "A Ben Rector Christmas Ben Rector",
+      "title": "A Ben Rector Christmas",
+      "creator": "Ben Rector",
+      "year": 2020,
+      "sourceUrl": "https://www.discogs.com/release/16270437"
+    },
+    {
+      "type": "album",
+      "query": "Brand New Ben Rector",
+      "title": "Brand New",
+      "creator": "Ben Rector",
+      "year": 2015,
+      "sourceUrl": "https://www.discogs.com/release/8391667"
+    },
+    {
+      "type": "album",
+      "query": "Into The Morning Ben Rector",
+      "title": "Into The Morning",
+      "creator": "Ben Rector",
+      "year": 2010,
+      "sourceUrl": "https://www.discogs.com/release/26544332"
+    },
+    {
+      "type": "album",
+      "query": "The Joy of Music Ben Rector",
+      "title": "The Joy of Music",
+      "creator": "Ben Rector",
+      "year": 2022,
+      "sourceUrl": "https://www.discogs.com/release/22484336"
+    },
+    {
+      "type": "album",
+      "query": "The Richest Man In The World Ben Rector",
+      "title": "The Richest Man In The World",
+      "creator": "Ben Rector",
+      "year": 2025,
+      "sourceUrl": "https://www.discogs.com/release/34393963"
+    },
+    {
+      "type": "album",
+      "query": "The Walking In Between Ben Rector",
+      "title": "The Walking In Between",
+      "creator": "Ben Rector",
+      "year": 2013,
+      "sourceUrl": "https://www.discogs.com/release/26544191"
+    },
+    {
+      "type": "album",
+      "query": "Waltz For Debby The Bill Evans Trio",
+      "title": "Waltz For Debby",
+      "creator": "The Bill Evans Trio",
+      "year": 2023,
+      "sourceUrl": "https://www.discogs.com/release/27345327"
+    },
+    {
+      "type": "album",
+      "query": "Piano Man Billy Joel",
+      "title": "Piano Man",
+      "creator": "Billy Joel",
+      "year": 1973,
+      "sourceUrl": "https://www.discogs.com/release/1674119"
+    },
+    {
+      "type": "album",
+      "query": "The Stranger Billy Joel",
+      "title": "The Stranger",
+      "creator": "Billy Joel",
+      "year": 1977,
+      "sourceUrl": "https://www.discogs.com/release/1108650"
+    },
+    {
+      "type": "album",
+      "query": "Merry Christmas Bing Crosby",
+      "title": "Merry Christmas",
+      "creator": "Bing Crosby",
+      "sourceUrl": "https://www.discogs.com/release/6417661"
+    },
+    {
+      "type": "album",
+      "query": "Gone Now Bleachers",
+      "title": "Gone Now",
+      "creator": "Bleachers",
+      "year": 2017,
+      "sourceUrl": "https://www.discogs.com/release/10395276"
+    },
+    {
+      "type": "album",
+      "query": "Bob Dylan's Greatest Hits Bob Dylan",
+      "title": "Bob Dylan's Greatest Hits",
+      "creator": "Bob Dylan",
+      "year": 1967,
+      "sourceUrl": "https://www.discogs.com/release/1838064"
+    },
+    {
+      "type": "album",
+      "query": "The Yakin' Sax Man Boots Randolph",
+      "title": "The Yakin' Sax Man",
+      "creator": "Boots Randolph",
+      "year": 1964,
+      "sourceUrl": "https://www.discogs.com/release/542815"
+    },
+    {
+      "type": "album",
+      "query": "The Jazz Legacy Of Bud Powell Bud Powell",
+      "title": "The Jazz Legacy Of Bud Powell",
+      "creator": "Bud Powell",
+      "year": 1966,
+      "sourceUrl": "https://www.discogs.com/release/5193072"
+    },
+    {
+      "type": "album",
+      "query": "Somethin' Else Cannonball Adderley",
+      "title": "Somethin' Else",
+      "creator": "Cannonball Adderley",
+      "year": 1997,
+      "sourceUrl": "https://www.discogs.com/release/635494"
+    },
+    {
+      "type": "album",
+      "query": "Lover's Guitar Chet Atkins Chet Atkins",
+      "title": "Lover's Guitar Chet Atkins",
+      "creator": "Chet Atkins",
+      "year": 1969,
+      "sourceUrl": "https://www.discogs.com/release/10633021"
+    },
+    {
+      "type": "album",
+      "query": "If You Leave Me Now Chicago",
+      "title": "If You Leave Me Now",
+      "creator": "Chicago",
+      "year": 1982,
+      "sourceUrl": "https://www.discogs.com/release/2016762"
+    },
+    {
+      "type": "album",
+      "query": "Shadow Weaver The Choir",
+      "title": "Shadow Weaver",
+      "creator": "The Choir",
+      "year": 2014,
+      "sourceUrl": "https://www.discogs.com/release/6315698"
+    },
+    {
+      "type": "album",
+      "query": "San Francisco Days Chris Isaak",
+      "title": "San Francisco Days",
+      "creator": "Chris Isaak",
+      "year": 2024,
+      "sourceUrl": "https://www.discogs.com/release/30977971"
+    },
+    {
+      "type": "album",
+      "query": "Body And Soul: A Jazz Autobiography Coleman Hawkins",
+      "title": "Body And Soul: A Jazz Autobiography",
+      "creator": "Coleman Hawkins",
+      "year": 1964,
+      "sourceUrl": "https://www.discogs.com/release/3247739"
+    },
+    {
+      "type": "album",
+      "query": "The Light In The Wilderness Dave Brubeck",
+      "title": "The Light In The Wilderness",
+      "creator": "Dave Brubeck",
+      "year": 1968,
+      "sourceUrl": "https://www.discogs.com/release/3953312"
+    },
+    {
+      "type": "album",
+      "query": "A Place In Time The Dave Brubeck Quartet",
+      "title": "A Place In Time",
+      "creator": "The Dave Brubeck Quartet",
+      "year": 1968,
+      "sourceUrl": "https://www.discogs.com/release/3952506"
+    },
+    {
+      "type": "album",
+      "query": "Dave Digs Disney The Dave Brubeck Quartet",
+      "title": "Dave Digs Disney",
+      "creator": "The Dave Brubeck Quartet",
+      "year": 1958,
+      "sourceUrl": "https://www.discogs.com/release/2317383"
+    },
+    {
+      "type": "album",
+      "query": "The Dave Brubeck Quartet In Europe The Dave Brubeck Quartet",
+      "title": "The Dave Brubeck Quartet In Europe",
+      "creator": "The Dave Brubeck Quartet",
+      "year": 1958,
+      "sourceUrl": "https://www.discogs.com/release/2095051"
+    },
+    {
+      "type": "album",
+      "query": "Time Further Out (Miro Reflexions) The Dave Brubeck Quartet",
+      "title": "Time Further Out (Miro Reflexions)",
+      "creator": "The Dave Brubeck Quartet",
+      "year": 1967,
+      "sourceUrl": "https://www.discogs.com/release/3314621"
+    },
+    {
+      "type": "album",
+      "query": "Time Out The Dave Brubeck Quartet",
+      "title": "Time Out",
+      "creator": "The Dave Brubeck Quartet",
+      "year": 2022,
+      "sourceUrl": "https://www.discogs.com/release/29033821"
+    },
+    {
+      "type": "album",
+      "query": "The Rise And Fall Of Ziggy Stardust And The Spiders From Mars David Bowie",
+      "title": "The Rise And Fall Of Ziggy Stardust And The Spiders From Mars",
+      "creator": "David Bowie",
+      "year": 2022,
+      "sourceUrl": "https://www.discogs.com/release/23595266"
+    },
+    {
+      "type": "album",
+      "query": "Narrow Stairs Death Cab For Cutie",
+      "title": "Narrow Stairs",
+      "creator": "Death Cab For Cutie",
+      "year": 2023,
+      "sourceUrl": "https://www.discogs.com/release/27838320"
+    },
+    {
+      "type": "album",
+      "query": "Time Is Slipping Away Dexter Wansel",
+      "title": "Time Is Slipping Away",
+      "creator": "Dexter Wansel",
+      "year": 1979,
+      "sourceUrl": "https://www.discogs.com/release/575863"
+    },
+    {
+      "type": "album",
+      "query": "Banjo Bonanza Don Reno, Bobby Thompson",
+      "title": "Banjo Bonanza",
+      "creator": "Don Reno, Bobby Thompson",
+      "year": 1983,
+      "sourceUrl": "https://www.discogs.com/release/3637833"
+    },
+    {
+      "type": "album",
+      "query": "Takin' It To The Streets The Doobie Brothers",
+      "title": "Takin' It To The Streets",
+      "creator": "The Doobie Brothers",
+      "year": 1976,
+      "sourceUrl": "https://www.discogs.com/release/1328141"
+    },
+    {
+      "type": "album",
+      "query": "Medicine Drew Holcomb And The Neighbors",
+      "title": "Medicine",
+      "creator": "Drew Holcomb And The Neighbors",
+      "year": 2015,
+      "sourceUrl": "https://www.discogs.com/release/6657962"
+    },
+    {
+      "type": "album",
+      "query": "Ella Fitzgerald Ella Fitzgerald",
+      "title": "Ella Fitzgerald",
+      "creator": "Ella Fitzgerald",
+      "year": 1970,
+      "sourceUrl": "https://www.discogs.com/release/1793657"
+    },
+    {
+      "type": "album",
+      "query": "Ella Wishes You A Swinging Christmas Ella Fitzgerald",
+      "title": "Ella Wishes You A Swinging Christmas",
+      "creator": "Ella Fitzgerald",
+      "year": 2017,
+      "sourceUrl": "https://www.discogs.com/release/12727147"
+    },
+    {
+      "type": "album",
+      "query": "Ella And Louis Ella Fitzgerald, Louis Armstrong",
+      "title": "Ella And Louis",
+      "creator": "Ella Fitzgerald, Louis Armstrong",
+      "year": 2017,
+      "sourceUrl": "https://www.discogs.com/release/11092407"
+    },
+    {
+      "type": "album",
+      "query": "Caribou Elton John",
+      "title": "Caribou",
+      "creator": "Elton John",
+      "year": 1974,
+      "sourceUrl": "https://www.discogs.com/release/1022855"
+    },
+    {
+      "type": "album",
+      "query": "Greatest Hits Elton John",
+      "title": "Greatest Hits",
+      "creator": "Elton John",
+      "year": 1974,
+      "sourceUrl": "https://www.discogs.com/release/1120137"
+    },
+    {
+      "type": "album",
+      "query": "Chopin Emanuel Ax",
+      "title": "Chopin",
+      "creator": "Emanuel Ax",
+      "year": 1976,
+      "sourceUrl": "https://www.discogs.com/release/4020112"
+    },
+    {
+      "type": "album",
+      "query": "Foggy Mountain Jamboree Flatt & Scruggs",
+      "title": "Foggy Mountain Jamboree",
+      "creator": "Flatt & Scruggs",
+      "year": 1957,
+      "sourceUrl": "https://www.discogs.com/release/2367318"
+    },
+    {
+      "type": "album",
+      "query": "Town And Country Flatt & Scruggs",
+      "title": "Town And Country",
+      "creator": "Flatt & Scruggs",
+      "year": 1965,
+      "sourceUrl": "https://www.discogs.com/release/2485461"
+    },
+    {
+      "type": "album",
+      "query": "Rumours Fleetwood Mac",
+      "title": "Rumours",
+      "creator": "Fleetwood Mac",
+      "year": 1977,
+      "sourceUrl": "https://www.discogs.com/release/526351"
+    },
+    {
+      "type": "album",
+      "query": "Strangers In The Night Frank Sinatra",
+      "title": "Strangers In The Night",
+      "creator": "Frank Sinatra",
+      "year": 1966,
+      "sourceUrl": "https://www.discogs.com/release/1276537"
+    },
+    {
+      "type": "album",
+      "query": "The Front Bottoms The Front Bottoms",
+      "title": "The Front Bottoms",
+      "creator": "The Front Bottoms",
+      "year": 2014,
+      "sourceUrl": "https://www.discogs.com/release/5624843"
+    },
+    {
+      "type": "album",
+      "query": "Fugazi Fugazi",
+      "title": "Fugazi",
+      "creator": "Fugazi",
+      "year": 2021,
+      "sourceUrl": "https://www.discogs.com/release/17358229"
+    },
+    {
+      "type": "album",
+      "query": "Autumn George Winston",
+      "title": "Autumn",
+      "creator": "George Winston",
+      "sourceUrl": "https://www.discogs.com/release/1843668"
+    },
+    {
+      "type": "album",
+      "query": "December George Winston",
+      "title": "December",
+      "creator": "George Winston",
+      "sourceUrl": "https://www.discogs.com/release/290974"
+    },
+    {
+      "type": "album",
+      "query": "Signs Of Light The Head And The Heart",
+      "title": "Signs Of Light",
+      "creator": "The Head And The Heart",
+      "year": 2016,
+      "sourceUrl": "https://www.discogs.com/release/9023264"
+    },
+    {
+      "type": "album",
+      "query": "The Head And The Heart The Head And The Heart",
+      "title": "The Head And The Heart",
+      "creator": "The Head And The Heart",
+      "year": 2022,
+      "sourceUrl": "https://www.discogs.com/release/22906802"
+    },
+    {
+      "type": "album",
+      "query": "The Beat Of The Brass Herb Alpert & The Tijuana Brass",
+      "title": "The Beat Of The Brass",
+      "creator": "Herb Alpert & The Tijuana Brass",
+      "year": 1968,
+      "sourceUrl": "https://www.discogs.com/release/4796094"
+    },
+    {
+      "type": "album",
+      "query": "Empyrean Isles Herbie Hancock",
+      "title": "Empyrean Isles",
+      "creator": "Herbie Hancock",
+      "year": 2023,
+      "sourceUrl": "https://www.discogs.com/release/26441327"
+    },
+    {
+      "type": "album",
+      "query": "Future Shock Herbie Hancock",
+      "title": "Future Shock",
+      "creator": "Herbie Hancock",
+      "year": 1983,
+      "sourceUrl": "https://www.discogs.com/release/35929"
+    },
+    {
+      "type": "album",
+      "query": "Maiden Voyage Herbie Hancock",
+      "title": "Maiden Voyage",
+      "creator": "Herbie Hancock",
+      "year": 2014,
+      "sourceUrl": "https://www.discogs.com/release/8063683"
+    },
+    {
+      "type": "album",
+      "query": "Push Push Herbie Mann",
+      "title": "Push Push",
+      "creator": "Herbie Mann",
+      "year": 1971,
+      "sourceUrl": "https://www.discogs.com/release/6293131"
+    },
+    {
+      "type": "album",
+      "query": "Bambi Hippo Campus",
+      "title": "Bambi",
+      "creator": "Hippo Campus",
+      "year": 2018,
+      "sourceUrl": "https://www.discogs.com/release/13421150"
+    },
+    {
+      "type": "album",
+      "query": "En Concert Jack Johnson",
+      "title": "En Concert",
+      "creator": "Jack Johnson",
+      "year": 2009,
+      "sourceUrl": "https://www.discogs.com/release/2243569"
+    },
+    {
+      "type": "album",
+      "query": "From Here To Now To You Jack Johnson",
+      "title": "From Here To Now To You",
+      "creator": "Jack Johnson",
+      "year": 2013,
+      "sourceUrl": "https://www.discogs.com/release/7034630"
+    },
+    {
+      "type": "album",
+      "query": "Crash Landing Jimi Hendrix",
+      "title": "Crash Landing",
+      "creator": "Jimi Hendrix",
+      "year": 1975,
+      "sourceUrl": "https://www.discogs.com/release/780085"
+    },
+    {
+      "type": "album",
+      "query": "Bleed American Jimmy Eat World",
+      "title": "Bleed American",
+      "creator": "Jimmy Eat World",
+      "year": 2022,
+      "sourceUrl": "https://www.discogs.com/release/23389259"
+    },
+    {
+      "type": "album",
+      "query": "Something New (The Unique Sounds Of Jazz Bassoon) Joan Wildman, Richard Lottridge",
+      "title": "Something New (The Unique Sounds Of Jazz Bassoon)",
+      "creator": "Joan Wildman, Richard Lottridge",
+      "year": 1984,
+      "sourceUrl": "https://www.discogs.com/release/16085328"
+    },
+    {
+      "type": "album",
+      "query": "A Love Supreme John Coltrane",
+      "title": "A Love Supreme",
+      "creator": "John Coltrane",
+      "sourceUrl": "https://www.discogs.com/release/4773442"
+    },
+    {
+      "type": "album",
+      "query": "Crescent The John Coltrane Quartet",
+      "title": "Crescent",
+      "creator": "The John Coltrane Quartet",
+      "year": 1966,
+      "sourceUrl": "https://www.discogs.com/release/7370221"
+    },
+    {
+      "type": "album",
+      "query": "John Denver's Greatest Hits John Denver",
+      "title": "John Denver's Greatest Hits",
+      "creator": "John Denver",
+      "year": 1973,
+      "sourceUrl": "https://www.discogs.com/release/8055184"
+    },
+    {
+      "type": "album",
+      "query": "Continuum John Mayer",
+      "title": "Continuum",
+      "creator": "John Mayer",
+      "year": 2008,
+      "sourceUrl": "https://www.discogs.com/release/1953621"
+    },
+    {
+      "type": "album",
+      "query": "Room For Squares John Mayer",
+      "title": "Room For Squares",
+      "creator": "John Mayer",
+      "year": 2001,
+      "sourceUrl": "https://www.discogs.com/release/1840828"
+    },
+    {
+      "type": "album",
+      "query": "Johnny Cash At San Quentin Johnny Cash",
+      "title": "Johnny Cash At San Quentin",
+      "creator": "Johnny Cash",
+      "year": 1969,
+      "sourceUrl": "https://www.discogs.com/release/1595647"
+    },
+    {
+      "type": "album",
+      "query": "Funeral Pyre Julien Baker",
+      "title": "Funeral Pyre",
+      "creator": "Julien Baker",
+      "year": 2017,
+      "sourceUrl": "https://www.discogs.com/release/9935901"
+    },
+    {
+      "type": "album",
+      "query": "Turn Out The Lights Julien Baker",
+      "title": "Turn Out The Lights",
+      "creator": "Julien Baker",
+      "year": 2017,
+      "sourceUrl": "https://www.discogs.com/release/11316247"
+    },
+    {
+      "type": "album",
+      "query": "Gone For The Day June Christy",
+      "title": "Gone For The Day",
+      "creator": "June Christy",
+      "year": 1957,
+      "sourceUrl": "https://www.discogs.com/release/2685399"
+    },
+    {
+      "type": "album",
+      "query": "Duotones Kenny G",
+      "title": "Duotones",
+      "creator": "Kenny G",
+      "year": 1986,
+      "sourceUrl": "https://www.discogs.com/release/5678531"
+    },
+    {
+      "type": "album",
+      "query": "This Is Happening LCD Soundsystem",
+      "title": "This Is Happening",
+      "creator": "LCD Soundsystem",
+      "year": 2010,
+      "sourceUrl": "https://www.discogs.com/release/2395827"
+    },
+    {
+      "type": "album",
+      "query": "Led Zeppelin II Led Zeppelin",
+      "title": "Led Zeppelin II",
+      "creator": "Led Zeppelin",
+      "year": 1970,
+      "sourceUrl": "https://www.discogs.com/release/449465"
+    },
+    {
+      "type": "album",
+      "query": "Correspondence (A Fiction) Levi The Poet",
+      "title": "Correspondence (A Fiction)",
+      "creator": "Levi The Poet",
+      "year": 2014,
+      "sourceUrl": "https://www.discogs.com/release/6537865"
+    },
+    {
+      "type": "album",
+      "query": "Sanctuary Levi The Poet",
+      "title": "Sanctuary",
+      "creator": "Levi The Poet",
+      "year": 2017,
+      "sourceUrl": "https://www.discogs.com/release/11297824"
+    },
+    {
+      "type": "album",
+      "query": "My Bag Lloyd Cole & The Commotions",
+      "title": "My Bag",
+      "creator": "Lloyd Cole & The Commotions",
+      "year": 1987,
+      "sourceUrl": "https://www.discogs.com/release/2065365"
+    },
+    {
+      "type": "album",
+      "query": "Loretta Lynn Writes 'Em And Sings 'Em Loretta Lynn",
+      "title": "Loretta Lynn Writes 'Em And Sings 'Em",
+      "creator": "Loretta Lynn",
+      "year": 1970,
+      "sourceUrl": "https://www.discogs.com/release/1146434"
+    },
+    {
+      "type": "album",
+      "query": "Somebody Somewhere Loretta Lynn",
+      "title": "Somebody Somewhere",
+      "creator": "Loretta Lynn",
+      "year": 1976,
+      "sourceUrl": "https://www.discogs.com/release/3196037"
+    },
+    {
+      "type": "album",
+      "query": "Hello, Dolly! Louis Armstrong",
+      "title": "Hello, Dolly!",
+      "creator": "Louis Armstrong",
+      "year": 1964,
+      "sourceUrl": "https://www.discogs.com/release/1347052"
+    },
+    {
+      "type": "album",
+      "query": "Louis And The Angels Louis Armstrong",
+      "title": "Louis And The Angels",
+      "creator": "Louis Armstrong",
+      "year": 1957,
+      "sourceUrl": "https://www.discogs.com/release/3971014"
+    },
+    {
+      "type": "album",
+      "query": "Piano Concerto No. 3 In C Minor / Piano Sonata In E Flat Major 'Les Adieux' Ludwig van Beethoven, Vladimir Ashkenazy, Chicago Symphony Orchestra, Georg Solti",
+      "title": "Piano Concerto No. 3 In C Minor / Piano Sonata In E Flat Major 'Les Adieux'",
+      "creator": "Ludwig van Beethoven, Vladimir Ashkenazy, Chicago Symphony Orchestra, Georg Solti",
+      "year": 1976,
+      "sourceUrl": "https://www.discogs.com/release/3387034"
+    },
+    {
+      "type": "album",
+      "query": "Trio In B-Flat Major For Piano, Violin And Cello, Op.97 Ludwig van Beethoven, Suk Trio",
+      "title": "Trio In B-Flat Major For Piano, Violin And Cello, Op.97",
+      "creator": "Ludwig van Beethoven, Suk Trio",
+      "year": 1997,
+      "sourceUrl": "https://www.discogs.com/release/19324387"
+    },
+    {
+      "type": "album",
+      "query": "Imaginal Disk Magdalena Bay",
+      "title": "Imaginal Disk",
+      "creator": "Magdalena Bay",
+      "year": 2024,
+      "sourceUrl": "https://www.discogs.com/release/31552783"
+    },
+    {
+      "type": "album",
+      "query": "Heard It In A Past Life Maggie Rogers",
+      "title": "Heard It In A Past Life",
+      "creator": "Maggie Rogers",
+      "year": 2019,
+      "sourceUrl": "https://www.discogs.com/release/13088205"
+    },
+    {
+      "type": "album",
+      "query": "Business As Usual Men At Work",
+      "title": "Business As Usual",
+      "creator": "Men At Work",
+      "year": 1982,
+      "sourceUrl": "https://www.discogs.com/release/587059"
+    },
+    {
+      "type": "album",
+      "query": "Run On Moby",
+      "title": "Run On",
+      "creator": "Moby",
+      "year": 1999,
+      "sourceUrl": "https://www.discogs.com/release/82578"
+    },
+    {
+      "type": "album",
+      "query": "Sigh No More Mumford & Sons",
+      "title": "Sigh No More",
+      "creator": "Mumford & Sons",
+      "year": 2009,
+      "sourceUrl": "https://www.discogs.com/release/2567790"
+    },
+    {
+      "type": "album",
+      "query": "L-O-V-E Nat King Cole",
+      "title": "L-O-V-E",
+      "creator": "Nat King Cole",
+      "year": 1965,
+      "sourceUrl": "https://www.discogs.com/release/2077034"
+    },
+    {
+      "type": "album",
+      "query": "Love Is The Thing Nat King Cole",
+      "title": "Love Is The Thing",
+      "creator": "Nat King Cole",
+      "year": 1964,
+      "sourceUrl": "https://www.discogs.com/release/2908092"
+    },
+    {
+      "type": "album",
+      "query": "Ramblin' Rose Nat King Cole",
+      "title": "Ramblin' Rose",
+      "creator": "Nat King Cole",
+      "year": 1962,
+      "sourceUrl": "https://www.discogs.com/release/1805898"
+    },
+    {
+      "type": "album",
+      "query": "Nina Simone Sings The Blues Nina Simone",
+      "title": "Nina Simone Sings The Blues",
+      "creator": "Nina Simone",
+      "year": 2024,
+      "sourceUrl": "https://www.discogs.com/release/29812999"
+    },
+    {
+      "type": "album",
+      "query": "Live At Eventim Apollo Olivia Dean",
+      "title": "Live At Eventim Apollo",
+      "creator": "Olivia Dean",
+      "year": 2024,
+      "sourceUrl": "https://www.discogs.com/release/32617629"
+    },
+    {
+      "type": "album",
+      "query": "War Of The Worlds Orson Welles",
+      "title": "War Of The Worlds",
+      "creator": "Orson Welles",
+      "year": 1968,
+      "sourceUrl": "https://www.discogs.com/release/857557"
+    },
+    {
+      "type": "album",
+      "query": "Oscar Peterson Plays Duke Ellington Oscar Peterson",
+      "title": "Oscar Peterson Plays Duke Ellington",
+      "creator": "Oscar Peterson",
+      "year": 1953,
+      "sourceUrl": "https://www.discogs.com/release/11658204"
+    },
+    {
+      "type": "album",
+      "query": "Home For The Holidays Perry Como",
+      "title": "Home For The Holidays",
+      "creator": "Perry Como",
+      "year": 1968,
+      "sourceUrl": "https://www.discogs.com/release/2151821"
+    },
+    {
+      "type": "album",
+      "query": "Children's Concert At Town Hall Pete Seeger",
+      "title": "Children's Concert At Town Hall",
+      "creator": "Pete Seeger",
+      "year": 1963,
+      "sourceUrl": "https://www.discogs.com/release/4025236"
+    },
+    {
+      "type": "album",
+      "query": "Sledgehammer Peter Gabriel",
+      "title": "Sledgehammer",
+      "creator": "Peter Gabriel",
+      "year": 1986,
+      "sourceUrl": "https://www.discogs.com/release/1231559"
+    },
+    {
+      "type": "album",
+      "query": "The Yips Petey USA",
+      "title": "The Yips",
+      "creator": "Petey USA",
+      "year": 2025,
+      "sourceUrl": "https://www.discogs.com/release/34560418"
+    },
+    {
+      "type": "album",
+      "query": "Ghost In The Machine The Police",
+      "title": "Ghost In The Machine",
+      "creator": "The Police",
+      "year": 1981,
+      "sourceUrl": "https://www.discogs.com/release/676581"
+    },
+    {
+      "type": "album",
+      "query": "Synchronicity The Police",
+      "title": "Synchronicity",
+      "creator": "The Police",
+      "year": 1983,
+      "sourceUrl": "https://www.discogs.com/release/442490"
+    },
+    {
+      "type": "album",
+      "query": "Ramones Mania Ramones",
+      "title": "Ramones Mania",
+      "creator": "Ramones",
+      "year": 1988,
+      "sourceUrl": "https://www.discogs.com/release/651058"
+    },
+    {
+      "type": "album",
+      "query": "Goin' Latin Ramsey Lewis",
+      "title": "Goin' Latin",
+      "creator": "Ramsey Lewis",
+      "year": 1967,
+      "sourceUrl": "https://www.discogs.com/release/474008"
+    },
+    {
+      "type": "album",
+      "query": "Mother Nature's Son Ramsey Lewis",
+      "title": "Mother Nature's Son",
+      "creator": "Ramsey Lewis",
+      "year": 1969,
+      "sourceUrl": "https://www.discogs.com/release/3640868"
+    },
+    {
+      "type": "album",
+      "query": "The Ray Charles Story Volume 4 Ray Charles",
+      "title": "The Ray Charles Story Volume 4",
+      "creator": "Ray Charles",
+      "year": 1962,
+      "sourceUrl": "https://www.discogs.com/release/30638698"
+    },
+    {
+      "type": "album",
+      "query": "My Kind Of Country Reba McEntire",
+      "title": "My Kind Of Country",
+      "creator": "Reba McEntire",
+      "sourceUrl": "https://www.discogs.com/release/14167297"
+    },
+    {
+      "type": "album",
+      "query": "Highland Pageantry The Regimental Band And Pipes And Drums Of The Black Watch",
+      "title": "Highland Pageantry",
+      "creator": "The Regimental Band And Pipes And Drums Of The Black Watch",
+      "year": 1959,
+      "sourceUrl": "https://www.discogs.com/release/4949646"
+    },
+    {
+      "type": "album",
+      "query": "First Take Roberta Flack",
+      "title": "First Take",
+      "creator": "Roberta Flack",
+      "year": 2023,
+      "sourceUrl": "https://www.discogs.com/release/26272649"
+    },
+    {
+      "type": "album",
+      "query": "The Sound Of Music (An Original Soundtrack Recording) Rodgers & Hammerstein, Julie Andrews, Christopher Plummer, Irwin Kostal",
+      "title": "The Sound Of Music (An Original Soundtrack Recording)",
+      "creator": "Rodgers & Hammerstein, Julie Andrews, Christopher Plummer, Irwin Kostal",
+      "year": 1965,
+      "sourceUrl": "https://www.discogs.com/release/7965723"
+    },
+    {
+      "type": "album",
+      "query": "Chuck Timely & The Hourglass ROLE MODEL",
+      "title": "Chuck Timely & The Hourglass",
+      "creator": "ROLE MODEL",
+      "year": 2026,
+      "sourceUrl": "https://www.discogs.com/release/38095320"
+    },
+    {
+      "type": "album",
+      "query": "Kansas Anymore (The Longest Goodbye) ROLE MODEL",
+      "title": "Kansas Anymore (The Longest Goodbye)",
+      "creator": "ROLE MODEL",
+      "year": 2025,
+      "sourceUrl": "https://www.discogs.com/release/34573447"
+    },
+    {
+      "type": "album",
+      "query": "Scenery Ryo Fukui",
+      "title": "Scenery",
+      "creator": "Ryo Fukui",
+      "year": 2018,
+      "sourceUrl": "https://www.discogs.com/release/11962976"
+    },
+    {
+      "type": "album",
+      "query": "Short N' Sweet Sabrina Carpenter",
+      "title": "Short N' Sweet",
+      "creator": "Sabrina Carpenter",
+      "year": 2024,
+      "sourceUrl": "https://www.discogs.com/release/31552768"
+    },
+    {
+      "type": "album",
+      "query": "Parsley, Sage, Rosemary And Thyme Simon & Garfunkel",
+      "title": "Parsley, Sage, Rosemary And Thyme",
+      "creator": "Simon & Garfunkel",
+      "year": 1966,
+      "sourceUrl": "https://www.discogs.com/release/1836118"
+    },
+    {
+      "type": "album",
+      "query": "Simon And Garfunkel's Greatest Hits Simon & Garfunkel",
+      "title": "Simon And Garfunkel's Greatest Hits",
+      "creator": "Simon & Garfunkel",
+      "year": 1972,
+      "sourceUrl": "https://www.discogs.com/release/1870306"
+    },
+    {
+      "type": "album",
+      "query": "Wednesday Morning, 3 A.M. Simon & Garfunkel",
+      "title": "Wednesday Morning, 3 A.M.",
+      "creator": "Simon & Garfunkel",
+      "year": 1965,
+      "sourceUrl": "https://www.discogs.com/release/431665"
+    },
+    {
+      "type": "album",
+      "query": "25 Favorite Cowboy Songs The Sons Of The Pioneers",
+      "title": "25 Favorite Cowboy Songs",
+      "creator": "The Sons Of The Pioneers",
+      "year": 1956,
+      "sourceUrl": "https://www.discogs.com/release/2955648"
+    },
+    {
+      "type": "album",
+      "query": "Getz / Gilberto Stan Getz, João Gilberto, Antonio Carlos Jobim",
+      "title": "Getz / Gilberto",
+      "creator": "Stan Getz, João Gilberto, Antonio Carlos Jobim",
+      "year": 2022,
+      "sourceUrl": "https://www.discogs.com/release/25906030"
+    },
+    {
+      "type": "album",
+      "query": "Aja Steely Dan",
+      "title": "Aja",
+      "creator": "Steely Dan",
+      "year": 1977,
+      "sourceUrl": "https://www.discogs.com/release/1842334"
+    },
+    {
+      "type": "album",
+      "query": "Can't Buy A Thrill Steely Dan",
+      "title": "Can't Buy A Thrill",
+      "creator": "Steely Dan",
+      "year": 2022,
+      "sourceUrl": "https://www.discogs.com/release/35170624"
+    },
+    {
+      "type": "album",
+      "query": "Wicked (The Soundtrack) Stephen Schwartz",
+      "title": "Wicked (The Soundtrack)",
+      "creator": "Stephen Schwartz",
+      "year": 2024,
+      "sourceUrl": "https://www.discogs.com/release/32368611"
+    },
+    {
+      "type": "album",
+      "query": "Illinois Sufjan Stevens",
+      "title": "Illinois",
+      "creator": "Sufjan Stevens",
+      "year": 2006,
+      "sourceUrl": "https://www.discogs.com/release/649042"
+    },
+    {
+      "type": "album",
+      "query": "Blind The Sundays",
+      "title": "Blind",
+      "creator": "The Sundays",
+      "year": 2025,
+      "sourceUrl": "https://www.discogs.com/release/33072030"
+    },
+    {
+      "type": "album",
+      "query": "Static & Silence The Sundays",
+      "title": "Static & Silence",
+      "creator": "The Sundays",
+      "year": 2025,
+      "sourceUrl": "https://www.discogs.com/release/34496797"
+    },
+    {
+      "type": "album",
+      "query": "Susan Sings Songs From Sesame Street Susan Robinson, The Children's Chorus",
+      "title": "Susan Sings Songs From Sesame Street",
+      "creator": "Susan Robinson, The Children's Chorus",
+      "year": 1970,
+      "sourceUrl": "https://www.discogs.com/release/1700906"
+    },
+    {
+      "type": "album",
+      "query": "1989 (Taylor's Version) Taylor Swift",
+      "title": "1989 (Taylor's Version)",
+      "creator": "Taylor Swift",
+      "year": 2023,
+      "sourceUrl": "https://www.discogs.com/release/28714750"
+    },
+    {
+      "type": "album",
+      "query": "Fearless (Taylor's Version) Taylor Swift",
+      "title": "Fearless (Taylor's Version)",
+      "creator": "Taylor Swift",
+      "year": 2021,
+      "sourceUrl": "https://www.discogs.com/release/20414812"
+    },
+    {
+      "type": "album",
+      "query": "Watch Your Step Ted Hawkins",
+      "title": "Watch Your Step",
+      "creator": "Ted Hawkins",
+      "year": 2018,
+      "sourceUrl": "https://www.discogs.com/release/12335276"
+    },
+    {
+      "type": "album",
+      "query": "The London Collection Volume 2 Thelonious Monk",
+      "title": "The London Collection Volume 2",
+      "creator": "Thelonious Monk",
+      "year": 2015,
+      "sourceUrl": "https://www.discogs.com/release/7445638"
+    },
+    {
+      "type": "album",
+      "query": "Thelonious Alone In San Francisco Thelonious Monk",
+      "title": "Thelonious Alone In San Francisco",
+      "creator": "Thelonious Monk",
+      "year": 2025,
+      "sourceUrl": "https://www.discogs.com/release/34678384"
+    },
+    {
+      "type": "album",
+      "query": "Family Tree Tom Chapin",
+      "title": "Family Tree",
+      "creator": "Tom Chapin",
+      "year": 1988,
+      "sourceUrl": "https://www.discogs.com/release/9962222"
+    },
+    {
+      "type": "album",
+      "query": "Life Is Like That Tom Chapin",
+      "title": "Life Is Like That",
+      "creator": "Tom Chapin",
+      "year": 1976,
+      "sourceUrl": "https://www.discogs.com/release/21380491"
+    },
+    {
+      "type": "album",
+      "query": "Never Enough Turnstile",
+      "title": "Never Enough",
+      "creator": "Turnstile",
+      "year": 2025,
+      "sourceUrl": "https://www.discogs.com/release/34195183"
+    },
+    {
+      "type": "album",
+      "query": "Live \"Under A Blood Red Sky\" U2",
+      "title": "Live \"Under A Blood Red Sky\"",
+      "creator": "U2",
+      "year": 1983,
+      "sourceUrl": "https://www.discogs.com/release/395330"
+    },
+    {
+      "type": "album",
+      "query": "The Best Of 1990-2000 U2",
+      "title": "The Best Of 1990-2000",
+      "creator": "U2",
+      "year": 2018,
+      "sourceUrl": "https://www.discogs.com/release/12574827"
+    },
+    {
+      "type": "album",
+      "query": "Baby Driver (Music From The Motion Picture) Various",
+      "title": "Baby Driver (Music From The Motion Picture)",
+      "creator": "Various",
+      "year": 2017,
+      "sourceUrl": "https://www.discogs.com/release/10392024"
+    },
+    {
+      "type": "album",
+      "query": "Christmas Greetings Various",
+      "title": "Christmas Greetings",
+      "creator": "Various",
+      "year": 1970,
+      "sourceUrl": "https://www.discogs.com/release/1604249"
+    },
+    {
+      "type": "album",
+      "query": "Colorado Jazz Party Various",
+      "title": "Colorado Jazz Party",
+      "creator": "Various",
+      "year": 1972,
+      "sourceUrl": "https://www.discogs.com/release/4132769"
+    },
+    {
+      "type": "album",
+      "query": "DFA Compilation #1 Various",
+      "title": "DFA Compilation #1",
+      "creator": "Various",
+      "year": 2016,
+      "sourceUrl": "https://www.discogs.com/release/9285266"
+    },
+    {
+      "type": "album",
+      "query": "Disney Ultimate Hits Vol.1 & 2 Various",
+      "title": "Disney Ultimate Hits Vol.1 & 2",
+      "creator": "Various",
+      "year": 2021,
+      "sourceUrl": "https://www.discogs.com/release/20625325"
+    },
+    {
+      "type": "album",
+      "query": "Funky Christmas Various",
+      "title": "Funky Christmas",
+      "creator": "Various",
+      "year": 1976,
+      "sourceUrl": "https://www.discogs.com/release/2486262"
+    },
+    {
+      "type": "album",
+      "query": "Home Alone Christmas Various",
+      "title": "Home Alone Christmas",
+      "creator": "Various",
+      "year": 2021,
+      "sourceUrl": "https://www.discogs.com/release/19482121"
+    },
+    {
+      "type": "album",
+      "query": "Less Than Zero Various",
+      "title": "Less Than Zero",
+      "creator": "Various",
+      "year": 1987,
+      "sourceUrl": "https://www.discogs.com/release/11679895"
+    },
+    {
+      "type": "album",
+      "query": "Mamma Mia! Here We Go Again (The Movie Soundtrack Featuring The Songs Of ABBA) Various",
+      "title": "Mamma Mia! Here We Go Again (The Movie Soundtrack Featuring The Songs Of ABBA)",
+      "creator": "Various",
+      "year": 2018,
+      "sourceUrl": "https://www.discogs.com/release/12335227"
+    },
+    {
+      "type": "album",
+      "query": "O Brother, Where Art Thou? Various",
+      "title": "O Brother, Where Art Thou?",
+      "creator": "Various",
+      "year": 2003,
+      "sourceUrl": "https://www.discogs.com/release/1003373"
+    },
+    {
+      "type": "album",
+      "query": "Saturday Night Fever (The Original Movie Sound Track) Various",
+      "title": "Saturday Night Fever (The Original Movie Sound Track)",
+      "creator": "Various",
+      "year": 1977,
+      "sourceUrl": "https://www.discogs.com/release/127165"
+    },
+    {
+      "type": "album",
+      "query": "Sgt. Pepper's Lonely Hearts Club Band Various",
+      "title": "Sgt. Pepper's Lonely Hearts Club Band",
+      "creator": "Various",
+      "year": 1978,
+      "sourceUrl": "https://www.discogs.com/release/762024"
+    },
+    {
+      "type": "album",
+      "query": "Sleepless In Seattle - Original Motion Picture Soundtrack Various",
+      "title": "Sleepless In Seattle - Original Motion Picture Soundtrack",
+      "creator": "Various",
+      "year": 2017,
+      "sourceUrl": "https://www.discogs.com/release/11251833"
+    },
+    {
+      "type": "album",
+      "query": "The Montreux Collection Various",
+      "title": "The Montreux Collection",
+      "creator": "Various",
+      "year": 1975,
+      "sourceUrl": "https://www.discogs.com/release/3865328"
+    },
+    {
+      "type": "album",
+      "query": "It's The Great Pumpkin, Charlie Brown (Original Soundtrack Recording) Vince Guaraldi",
+      "title": "It's The Great Pumpkin, Charlie Brown (Original Soundtrack Recording)",
+      "creator": "Vince Guaraldi",
+      "year": 2022,
+      "sourceUrl": "https://www.discogs.com/release/24467330"
+    },
+    {
+      "type": "album",
+      "query": "It’s The Great Pumpkin, Charlie Brown: Music From The Soundtrack Vince Guaraldi",
+      "title": "It’s The Great Pumpkin, Charlie Brown: Music From The Soundtrack",
+      "creator": "Vince Guaraldi",
+      "year": 2021,
+      "sourceUrl": "https://www.discogs.com/release/20257174"
+    },
+    {
+      "type": "album",
+      "query": "Peanuts Portraits Vince Guaraldi",
+      "title": "Peanuts Portraits",
+      "creator": "Vince Guaraldi",
+      "year": 2020,
+      "sourceUrl": "https://www.discogs.com/release/15824175"
+    },
+    {
+      "type": "album",
+      "query": "A Charlie Brown Thanksgiving Vince Guaraldi Quintet",
+      "title": "A Charlie Brown Thanksgiving",
+      "creator": "Vince Guaraldi Quintet",
+      "year": 2023,
+      "sourceUrl": "https://www.discogs.com/release/28664260"
+    },
+    {
+      "type": "album",
+      "query": "A Charlie Brown Christmas Vince Guaraldi Trio",
+      "title": "A Charlie Brown Christmas",
+      "creator": "Vince Guaraldi Trio",
+      "year": 2012,
+      "sourceUrl": "https://www.discogs.com/release/3961216"
+    },
+    {
+      "type": "album",
+      "query": "Vince Guaraldi Trio Vince Guaraldi Trio",
+      "title": "Vince Guaraldi Trio",
+      "creator": "Vince Guaraldi Trio",
+      "year": 2015,
+      "sourceUrl": "https://www.discogs.com/release/7850928"
+    },
+    {
+      "type": "album",
+      "query": "ヴォルフニク = Vulfnik Vulfmon, Vulfmon",
+      "title": "ヴォルフニク = Vulfnik",
+      "creator": "Vulfmon, Vulfmon",
+      "year": 2026,
+      "sourceUrl": "https://www.discogs.com/release/37236690"
+    },
+    {
+      "type": "album",
+      "query": "Clarity Of Cal Vulfpeck",
+      "title": "Clarity Of Cal",
+      "creator": "Vulfpeck",
+      "year": 2025,
+      "sourceUrl": "https://www.discogs.com/release/34413274"
+    },
+    {
+      "type": "album",
+      "query": "MSG II Vulfpeck",
+      "title": "MSG II",
+      "creator": "Vulfpeck",
+      "year": 2026,
+      "sourceUrl": "https://www.discogs.com/release/36973368"
+    },
+    {
+      "type": "album",
+      "query": "Who's Next The Who",
+      "title": "Who's Next",
+      "creator": "The Who",
+      "year": 1971,
+      "sourceUrl": "https://www.discogs.com/release/1031476"
+    },
+    {
+      "type": "album",
+      "query": "となりのトトロ (イメージ・ソング集) Joe Hisaishi",
+      "title": "となりのトトロ (イメージ・ソング集)",
+      "creator": "Joe Hisaishi",
+      "year": 2018,
+      "sourceUrl": "https://www.discogs.com/release/12767683"
     }
   ]
 }

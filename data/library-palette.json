@@ -1848,5 +1848,1735 @@
       "accent": "#912719",
       "ink": "#f1ece3"
     }
+  },
+  "album-godspell": {
+    "fingerprint": "152566:1787404138165",
+    "width": 600,
+    "height_px": 598,
+    "palette": {
+      "cover": "#743431",
+      "accent": "#ba0d1c",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-being-funny-in-a-foreign-language": {
+    "fingerprint": "92525:1787404138346",
+    "width": 570,
+    "height_px": 562,
+    "palette": {
+      "cover": "#838380",
+      "accent": "#4d4940",
+      "ink": "#141210"
+    }
+  },
+  "album-the-magic-of-abba": {
+    "fingerprint": "95142:1787404138521",
+    "width": 600,
+    "height_px": 598,
+    "palette": {
+      "cover": "#3c342b",
+      "accent": "#c5796e",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-aloha-from-ahvah": {
+    "fingerprint": "133354:1787404138914",
+    "width": 600,
+    "height_px": 599,
+    "palette": {
+      "cover": "#50494a",
+      "accent": "#df6268",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-our-man-in-new-orleans": {
+    "fingerprint": "114710:1787404139140",
+    "width": 598,
+    "height_px": 597,
+    "palette": {
+      "cover": "#414239",
+      "accent": "#6f5e3d",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-sound-color": {
+    "fingerprint": "58610:1787404139381",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#1b1b1b",
+      "accent": "#222323",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-mostly-mozart-volume-3": {
+    "fingerprint": "27592:1787404140025",
+    "width": 300,
+    "height_px": 300,
+    "palette": {
+      "cover": "#5a5654",
+      "accent": "#69463d",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-a-night-in-tunisia": {
+    "fingerprint": "132632:1787404140215",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#9e7d71",
+      "accent": "#fe8c7b",
+      "ink": "#141210"
+    }
+  },
+  "album-art-blakey-and-the-jazz-messengers": {
+    "fingerprint": "62629:1787404140400",
+    "width": 432,
+    "height_px": 428,
+    "palette": {
+      "cover": "#27240e",
+      "accent": "#483208",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-second-set-lausanne-1960": {
+    "fingerprint": "97459:1787404140844",
+    "width": 600,
+    "height_px": 598,
+    "palette": {
+      "cover": "#3b3428",
+      "accent": "#2f2716",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-breakaway": {
+    "fingerprint": "114360:1787404141018",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#414e57",
+      "accent": "#0f354f",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-forever": {
+    "fingerprint": "108484:1787404141202",
+    "width": 592,
+    "height_px": 599,
+    "palette": {
+      "cover": "#7c6d58",
+      "accent": "#d8b67f",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-abbey-road": {
+    "fingerprint": "158825:1787404141379",
+    "width": 599,
+    "height_px": 592,
+    "palette": {
+      "cover": "#444848",
+      "accent": "#92ceff",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-magical-mystery-tour": {
+    "fingerprint": "271886:1787404141575",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#826e4d",
+      "accent": "#de961c",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-rubber-soul": {
+    "fingerprint": "134119:1787404141751",
+    "width": 577,
+    "height_px": 600,
+    "palette": {
+      "cover": "#413a2e",
+      "accent": "#a6572c",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-beatles": {
+    "fingerprint": "55650:1787404141928",
+    "width": 599,
+    "height_px": 593,
+    "palette": {
+      "cover": "#9da0a5",
+      "accent": "#e5eaf5",
+      "ink": "#141210"
+    }
+  },
+  "album-a-ben-rector-christmas": {
+    "fingerprint": "89020:1787404142101",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#936b5b",
+      "accent": "#d4523b",
+      "ink": "#141210"
+    }
+  },
+  "album-brand-new": {
+    "fingerprint": "115255:1787404142340",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#5c5b55",
+      "accent": "#16355c",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-into-the-morning": {
+    "fingerprint": "29510:1787404142579",
+    "width": 316,
+    "height_px": 316,
+    "palette": {
+      "cover": "#5e4834",
+      "accent": "#e5a146",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-joy-of-music": {
+    "fingerprint": "93133:1787404142750",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#716355",
+      "accent": "#853936",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-richest-man-in-the-world": {
+    "fingerprint": "95130:1787404143261",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#696969",
+      "accent": "#8e8e8e",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-walking-in-between": {
+    "fingerprint": "42797:1787404143444",
+    "width": 499,
+    "height_px": 500,
+    "palette": {
+      "cover": "#81716d",
+      "accent": "#9a1013",
+      "ink": "#141210"
+    }
+  },
+  "album-waltz-for-debby": {
+    "fingerprint": "59691:1787404143617",
+    "width": 600,
+    "height_px": 597,
+    "palette": {
+      "cover": "#363438",
+      "accent": "#343242",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-piano-man": {
+    "fingerprint": "90344:1787404143784",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#414134",
+      "accent": "#4e4632",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-stranger": {
+    "fingerprint": "70954:1787404143953",
+    "width": 595,
+    "height_px": 599,
+    "palette": {
+      "cover": "#5a5a50",
+      "accent": "#f3f2e3",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-merry-christmas": {
+    "fingerprint": "35206:1787404144190",
+    "width": 380,
+    "height_px": 378,
+    "palette": {
+      "cover": "#958e86",
+      "accent": "#92645c",
+      "ink": "#141210"
+    }
+  },
+  "album-gone-now": {
+    "fingerprint": "78886:1787404144368",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#9c9997",
+      "accent": "#eee4dc",
+      "ink": "#141210"
+    }
+  },
+  "album-bob-dylans-greatest-hits": {
+    "fingerprint": "9759:1787404144547",
+    "width": 225,
+    "height_px": 225,
+    "palette": {
+      "cover": "#384142",
+      "accent": "#44687b",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-yakin-sax-man": {
+    "fingerprint": "136651:1787404144781",
+    "width": 596,
+    "height_px": 588,
+    "palette": {
+      "cover": "#445a5c",
+      "accent": "#5cb0b6",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-jazz-legacy-of-bud-powell": {
+    "fingerprint": "97404:1787404145205",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#8b8681",
+      "accent": "#4c301d",
+      "ink": "#141210"
+    }
+  },
+  "album-somethin-else": {
+    "fingerprint": "50278:1787404145426",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#070b0c",
+      "accent": "#003856",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-lovers-guitar-chet-atkins": {
+    "fingerprint": "11195:1787404145663",
+    "width": 151,
+    "height_px": 151,
+    "palette": {
+      "cover": "#2d2024",
+      "accent": "#a73324",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-if-you-leave-me-now": {
+    "fingerprint": "87125:1787404145908",
+    "width": 600,
+    "height_px": 592,
+    "palette": {
+      "cover": "#91837b",
+      "accent": "#d2a498",
+      "ink": "#141210"
+    }
+  },
+  "album-shadow-weaver": {
+    "fingerprint": "84651:1787404146154",
+    "width": 599,
+    "height_px": 594,
+    "palette": {
+      "cover": "#444747",
+      "accent": "#535a5c",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-san-francisco-days": {
+    "fingerprint": "85151:1787404146379",
+    "width": 597,
+    "height_px": 599,
+    "palette": {
+      "cover": "#433a36",
+      "accent": "#c6804c",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-body-and-soul-a-jazz-autobiography": {
+    "fingerprint": "54071:1787404146570",
+    "width": 414,
+    "height_px": 412,
+    "palette": {
+      "cover": "#31392f",
+      "accent": "#197784",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-light-in-the-wilderness": {
+    "fingerprint": "99460:1787404146846",
+    "width": 500,
+    "height_px": 503,
+    "palette": {
+      "cover": "#443738",
+      "accent": "#dc5983",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-a-place-in-time": {
+    "fingerprint": "101385:1787404147077",
+    "width": 600,
+    "height_px": 597,
+    "palette": {
+      "cover": "#896e5a",
+      "accent": "#f9d5ad",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-dave-digs-disney": {
+    "fingerprint": "128413:1787404147250",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#a59989",
+      "accent": "#fcce9b",
+      "ink": "#141210"
+    }
+  },
+  "album-the-dave-brubeck-quartet-in-europe": {
+    "fingerprint": "160331:1787404147439",
+    "width": 598,
+    "height_px": 599,
+    "palette": {
+      "cover": "#6c7171",
+      "accent": "#64858a",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-time-further-out-miro-reflexions": {
+    "fingerprint": "103542:1787404147666",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#83806e",
+      "accent": "#eee5cb",
+      "ink": "#141210"
+    }
+  },
+  "album-time-out": {
+    "fingerprint": "138786:1787404147889",
+    "width": 597,
+    "height_px": 599,
+    "palette": {
+      "cover": "#7c6e6e",
+      "accent": "#c5976e",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-rise-and-fall-of-ziggy-stardust-and-the-spiders-from-mar": {
+    "fingerprint": "106849:1787404148075",
+    "width": 600,
+    "height_px": 584,
+    "palette": {
+      "cover": "#4e402c",
+      "accent": "#91602e",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-narrow-stairs": {
+    "fingerprint": "121047:1787404148299",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#796f69",
+      "accent": "#c64a4e",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-time-is-slipping-away": {
+    "fingerprint": "135362:1787404148479",
+    "width": 593,
+    "height_px": 599,
+    "palette": {
+      "cover": "#494a47",
+      "accent": "#968769",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-banjo-bonanza": {
+    "fingerprint": "216346:1787404148983",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#71461e",
+      "accent": "#e6be31",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-takin-it-to-the-streets": {
+    "fingerprint": "61500:1787404149153",
+    "width": 595,
+    "height_px": 590,
+    "palette": {
+      "cover": "#949290",
+      "accent": "#d8d1c9",
+      "ink": "#141210"
+    }
+  },
+  "album-medicine": {
+    "fingerprint": "68921:1787404149385",
+    "width": 599,
+    "height_px": 585,
+    "palette": {
+      "cover": "#43403a",
+      "accent": "#5f564b",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-ella-fitzgerald": {
+    "fingerprint": "187389:1787404149899",
+    "width": 599,
+    "height_px": 599,
+    "palette": {
+      "cover": "#593c3b",
+      "accent": "#d86e74",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-ella-wishes-you-a-swinging-christmas": {
+    "fingerprint": "122452:1787404150072",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#5a6267",
+      "accent": "#265468",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-ella-and-louis": {
+    "fingerprint": "77837:1787404150305",
+    "width": 432,
+    "height_px": 425,
+    "palette": {
+      "cover": "#857761",
+      "accent": "#e7d8ab",
+      "ink": "#141210"
+    }
+  },
+  "album-caribou": {
+    "fingerprint": "143063:1787404150478",
+    "width": 600,
+    "height_px": 597,
+    "palette": {
+      "cover": "#495d59",
+      "accent": "#3c9eb9",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-greatest-hits": {
+    "fingerprint": "101539:1787404150652",
+    "width": 599,
+    "height_px": 592,
+    "palette": {
+      "cover": "#57525c",
+      "accent": "#658eb0",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-chopin": {
+    "fingerprint": "89516:1787404151033",
+    "width": 600,
+    "height_px": 584,
+    "palette": {
+      "cover": "#322a25",
+      "accent": "#4c2319",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-foggy-mountain-jamboree": {
+    "fingerprint": "135817:1787404151275",
+    "width": 599,
+    "height_px": 588,
+    "palette": {
+      "cover": "#5a4b3b",
+      "accent": "#bc7d1a",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-town-and-country": {
+    "fingerprint": "111068:1787404151516",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#98856f",
+      "accent": "#eec95f",
+      "ink": "#141210"
+    }
+  },
+  "album-rumours": {
+    "fingerprint": "55503:1787404151695",
+    "width": 600,
+    "height_px": 599,
+    "palette": {
+      "cover": "#938d79",
+      "accent": "#fff7d3",
+      "ink": "#141210"
+    }
+  },
+  "album-strangers-in-the-night": {
+    "fingerprint": "104553:1787404151919",
+    "width": 600,
+    "height_px": 597,
+    "palette": {
+      "cover": "#747158",
+      "accent": "#d7ce78",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-front-bottoms": {
+    "fingerprint": "117280:1787404152108",
+    "width": 580,
+    "height_px": 600,
+    "palette": {
+      "cover": "#87746c",
+      "accent": "#bd7262",
+      "ink": "#141210"
+    }
+  },
+  "album-fugazi": {
+    "fingerprint": "9865:1787404152284",
+    "width": 298,
+    "height_px": 300,
+    "palette": {
+      "cover": "#522323",
+      "accent": "#800f0a",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-autumn": {
+    "fingerprint": "104900:1787404152458",
+    "width": 599,
+    "height_px": 597,
+    "palette": {
+      "cover": "#587983",
+      "accent": "#72c6e2",
+      "ink": "#141210"
+    }
+  },
+  "album-december": {
+    "fingerprint": "54089:1787404152632",
+    "width": 599,
+    "height_px": 597,
+    "palette": {
+      "cover": "#736f6b",
+      "accent": "#c9b7a6",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-signs-of-light": {
+    "fingerprint": "174120:1787404152806",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#4d5242",
+      "accent": "#0c371e",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-head-and-the-heart": {
+    "fingerprint": "42277:1787404153048",
+    "width": 500,
+    "height_px": 500,
+    "palette": {
+      "cover": "#9a9994",
+      "accent": "#f5eed0",
+      "ink": "#141210"
+    }
+  },
+  "album-the-beat-of-the-brass": {
+    "fingerprint": "169786:1787404153509",
+    "width": 600,
+    "height_px": 599,
+    "palette": {
+      "cover": "#645a23",
+      "accent": "#e7c630",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-empyrean-isles": {
+    "fingerprint": "116707:1787404153687",
+    "width": 599,
+    "height_px": 595,
+    "palette": {
+      "cover": "#324139",
+      "accent": "#a0dfca",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-future-shock": {
+    "fingerprint": "131934:1787404153859",
+    "width": 599,
+    "height_px": 586,
+    "palette": {
+      "cover": "#292c3a",
+      "accent": "#3a5194",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-maiden-voyage": {
+    "fingerprint": "101608:1787404154084",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#616c5e",
+      "accent": "#abd836",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-push-push": {
+    "fingerprint": "129494:1787404154310",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#564943",
+      "accent": "#ae673d",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-bambi": {
+    "fingerprint": "25358:1787404154489",
+    "width": 300,
+    "height_px": 300,
+    "palette": {
+      "cover": "#4b3b3a",
+      "accent": "#edb2a7",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-en-concert": {
+    "fingerprint": "15342:1787404154715",
+    "width": 300,
+    "height_px": 300,
+    "palette": {
+      "cover": "#0c0d0d",
+      "accent": "#2d2f2d",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-from-here-to-now-to-you": {
+    "fingerprint": "79765:1787404154984",
+    "width": 500,
+    "height_px": 500,
+    "palette": {
+      "cover": "#6d7782",
+      "accent": "#3d70a4",
+      "ink": "#141210"
+    }
+  },
+  "album-crash-landing": {
+    "fingerprint": "95396:1787404155159",
+    "width": 599,
+    "height_px": 600,
+    "palette": {
+      "cover": "#887a60",
+      "accent": "#70300d",
+      "ink": "#141210"
+    }
+  },
+  "album-bleed-american": {
+    "fingerprint": "50456:1787404155333",
+    "width": 382,
+    "height_px": 373,
+    "palette": {
+      "cover": "#5f5853",
+      "accent": "#65462c",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-something-new-the-unique-sounds-of-jazz-bassoon": {
+    "fingerprint": "97124:1787404155750",
+    "width": 599,
+    "height_px": 565,
+    "palette": {
+      "cover": "#504943",
+      "accent": "#aa6b42",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-a-love-supreme": {
+    "fingerprint": "81003:1787404156103",
+    "width": 599,
+    "height_px": 592,
+    "palette": {
+      "cover": "#4c5353",
+      "accent": "#384847",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-crescent": {
+    "fingerprint": "136201:1787404156284",
+    "width": 599,
+    "height_px": 592,
+    "palette": {
+      "cover": "#40403d",
+      "accent": "#51718b",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-john-denvers-greatest-hits": {
+    "fingerprint": "136581:1787404156512",
+    "width": 600,
+    "height_px": 596,
+    "palette": {
+      "cover": "#786653",
+      "accent": "#e7ae86",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-continuum": {
+    "fingerprint": "12560:1787404156690",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#ababab",
+      "accent": "#e7e8eb",
+      "ink": "#141210"
+    }
+  },
+  "album-room-for-squares": {
+    "fingerprint": "119194:1787404156870",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#85776b",
+      "accent": "#f2d2ad",
+      "ink": "#141210"
+    }
+  },
+  "album-johnny-cash-at-san-quentin": {
+    "fingerprint": "109359:1787404157048",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#233546",
+      "accent": "#72d2fd",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-funeral-pyre": {
+    "fingerprint": "81376:1787404157310",
+    "width": 599,
+    "height_px": 600,
+    "palette": {
+      "cover": "#63696a",
+      "accent": "#687476",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-turn-out-the-lights": {
+    "fingerprint": "93959:1787404157487",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#483e35",
+      "accent": "#876a4b",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-gone-for-the-day": {
+    "fingerprint": "182051:1787404157863",
+    "width": 599,
+    "height_px": 591,
+    "palette": {
+      "cover": "#5a5851",
+      "accent": "#6a6f42",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-duotones": {
+    "fingerprint": "73205:1787404158112",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#575a56",
+      "accent": "#bba79e",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-this-is-happening": {
+    "fingerprint": "115469:1787404158284",
+    "width": 598,
+    "height_px": 599,
+    "palette": {
+      "cover": "#626160",
+      "accent": "#f4f0e4",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-led-zeppelin-ii": {
+    "fingerprint": "111414:1787404158512",
+    "width": 599,
+    "height_px": 600,
+    "palette": {
+      "cover": "#715c4c",
+      "accent": "#eed8ae",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-correspondence-a-fiction": {
+    "fingerprint": "81971:1787404158740",
+    "width": 599,
+    "height_px": 576,
+    "palette": {
+      "cover": "#5a595c",
+      "accent": "#745052",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-sanctuary": {
+    "fingerprint": "93354:1787404159138",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#351d0d",
+      "accent": "#c94f00",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-my-bag": {
+    "fingerprint": "71176:1787404159378",
+    "width": 590,
+    "height_px": 588,
+    "palette": {
+      "cover": "#313233",
+      "accent": "#dbd8c0",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-loretta-lynn-writes-em-and-sings-em": {
+    "fingerprint": "97865:1787404159606",
+    "width": 598,
+    "height_px": 600,
+    "palette": {
+      "cover": "#635445",
+      "accent": "#d78966",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-somebody-somewhere": {
+    "fingerprint": "37042:1787404159828",
+    "width": 450,
+    "height_px": 464,
+    "palette": {
+      "cover": "#4a3c33",
+      "accent": "#c28759",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-hello-dolly": {
+    "fingerprint": "86899:1787404160022",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#625852",
+      "accent": "#dc7b6f",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-louis-and-the-angels": {
+    "fingerprint": "102030:1787404160260",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#706753",
+      "accent": "#b39b73",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-piano-concerto-no-3-in-c-minor-piano-sonata-in-e-flat-major": {
+    "fingerprint": "94994:1787404160775",
+    "width": 600,
+    "height_px": 599,
+    "palette": {
+      "cover": "#302720",
+      "accent": "#4b2d21",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-trio-in-b-flat-major-for-piano-violin-and-cello-op-97": {
+    "fingerprint": "126109:1787404161208",
+    "width": 599,
+    "height_px": 520,
+    "palette": {
+      "cover": "#6a665a",
+      "accent": "#d6b841",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-imaginal-disk": {
+    "fingerprint": "75192:1787404161386",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#535257",
+      "accent": "#d6a794",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-heard-it-in-a-past-life": {
+    "fingerprint": "160885:1787404161564",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#644e49",
+      "accent": "#751b02",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-business-as-usual": {
+    "fingerprint": "143323:1787404161740",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#6c6925",
+      "accent": "#fff53d",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-run-on": {
+    "fingerprint": "61236:1787404161980",
+    "width": 600,
+    "height_px": 568,
+    "palette": {
+      "cover": "#8d3a35",
+      "accent": "#ff685f",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-sigh-no-more": {
+    "fingerprint": "135693:1787404162159",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#5e5959",
+      "accent": "#564a3e",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-l-o-v-e": {
+    "fingerprint": "136654:1787404162389",
+    "width": 599,
+    "height_px": 600,
+    "palette": {
+      "cover": "#7d7949",
+      "accent": "#dfec00",
+      "ink": "#141210"
+    }
+  },
+  "album-love-is-the-thing": {
+    "fingerprint": "131413:1787404162950",
+    "width": 593,
+    "height_px": 600,
+    "palette": {
+      "cover": "#766c56",
+      "accent": "#c5b672",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-ramblin-rose": {
+    "fingerprint": "21349:1787404163132",
+    "width": 280,
+    "height_px": 280,
+    "palette": {
+      "cover": "#476568",
+      "accent": "#5c301d",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-nina-simone-sings-the-blues": {
+    "fingerprint": "104682:1787404163307",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#4c4e4a",
+      "accent": "#9ba2bc",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-live-at-eventim-apollo": {
+    "fingerprint": "24963:1787404163486",
+    "width": 300,
+    "height_px": 300,
+    "palette": {
+      "cover": "#622f25",
+      "accent": "#f19a6b",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-war-of-the-worlds": {
+    "fingerprint": "177178:1787404163668",
+    "width": 597,
+    "height_px": 600,
+    "palette": {
+      "cover": "#886e60",
+      "accent": "#a34d04",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-oscar-peterson-plays-duke-ellington": {
+    "fingerprint": "115492:1787404163890",
+    "width": 597,
+    "height_px": 599,
+    "palette": {
+      "cover": "#5c3042",
+      "accent": "#be4b7d",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-home-for-the-holidays": {
+    "fingerprint": "35831:1787404164061",
+    "width": 300,
+    "height_px": 300,
+    "palette": {
+      "cover": "#645352",
+      "accent": "#cf7150",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-childrens-concert-at-town-hall": {
+    "fingerprint": "107946:1787404164346",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#7f8a7b",
+      "accent": "#9f6b47",
+      "ink": "#141210"
+    }
+  },
+  "album-sledgehammer": {
+    "fingerprint": "26375:1787404164581",
+    "width": 409,
+    "height_px": 415,
+    "palette": {
+      "cover": "#453e37",
+      "accent": "#b6a692",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-yips": {
+    "fingerprint": "159044:1787404164836",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#3f3125",
+      "accent": "#8c4e12",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-ghost-in-the-machine": {
+    "fingerprint": "43890:1787404165008",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#0f0604",
+      "accent": "#6f1f0a",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-synchronicity": {
+    "fingerprint": "182804:1787404165191",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#60574a",
+      "accent": "#988500",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-ramones-mania": {
+    "fingerprint": "175445:1787404165419",
+    "width": 600,
+    "height_px": 594,
+    "palette": {
+      "cover": "#7f772b",
+      "accent": "#ffff00",
+      "ink": "#141210"
+    }
+  },
+  "album-goin-latin": {
+    "fingerprint": "146194:1787404165667",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#5a5242",
+      "accent": "#f6c352",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-mother-natures-son": {
+    "fingerprint": "157922:1787404165895",
+    "width": 596,
+    "height_px": 599,
+    "palette": {
+      "cover": "#373124",
+      "accent": "#7a4237",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-ray-charles-story-volume-4": {
+    "fingerprint": "105659:1787404166142",
+    "width": 599,
+    "height_px": 587,
+    "palette": {
+      "cover": "#a94b52",
+      "accent": "#fe4056",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-my-kind-of-country": {
+    "fingerprint": "73967:1787404166579",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#524b41",
+      "accent": "#bfa477",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-highland-pageantry": {
+    "fingerprint": "72899:1787404166818",
+    "width": 413,
+    "height_px": 410,
+    "palette": {
+      "cover": "#3a332e",
+      "accent": "#443521",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-first-take": {
+    "fingerprint": "111558:1787404167000",
+    "width": 599,
+    "height_px": 599,
+    "palette": {
+      "cover": "#6b5b3e",
+      "accent": "#e8ca57",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-sound-of-music-an-original-soundtrack-recording": {
+    "fingerprint": "107512:1787404167253",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#7d776e",
+      "accent": "#aa5e5a",
+      "ink": "#141210"
+    }
+  },
+  "album-chuck-timely-the-hourglass": {
+    "fingerprint": "94102:1787404167426",
+    "width": 599,
+    "height_px": 592,
+    "palette": {
+      "cover": "#714d3c",
+      "accent": "#f39a15",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-kansas-anymore-the-longest-goodbye": {
+    "fingerprint": "73125:1787404167601",
+    "width": 587,
+    "height_px": 600,
+    "palette": {
+      "cover": "#514c49",
+      "accent": "#3f3430",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-scenery": {
+    "fingerprint": "129708:1787404167780",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#622d31",
+      "accent": "#ed122e",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-short-n-sweet": {
+    "fingerprint": "100532:1787404167956",
+    "width": 600,
+    "height_px": 599,
+    "palette": {
+      "cover": "#483851",
+      "accent": "#e38949",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-parsley-sage-rosemary-and-thyme": {
+    "fingerprint": "143250:1787404168131",
+    "width": 591,
+    "height_px": 600,
+    "palette": {
+      "cover": "#403c33",
+      "accent": "#b5943a",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-simon-and-garfunkels-greatest-hits": {
+    "fingerprint": "112854:1787404168300",
+    "width": 588,
+    "height_px": 600,
+    "palette": {
+      "cover": "#7e7f6d",
+      "accent": "#e3bc96",
+      "ink": "#141210"
+    }
+  },
+  "album-wednesday-morning-3-a-m": {
+    "fingerprint": "153759:1787404168483",
+    "width": 600,
+    "height_px": 599,
+    "palette": {
+      "cover": "#3c4639",
+      "accent": "#94844f",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-25-favorite-cowboy-songs": {
+    "fingerprint": "165734:1787404168745",
+    "width": 599,
+    "height_px": 583,
+    "palette": {
+      "cover": "#6e7856",
+      "accent": "#94a341",
+      "ink": "#141210"
+    }
+  },
+  "album-getz-gilberto": {
+    "fingerprint": "43078:1787404168992",
+    "width": 576,
+    "height_px": 576,
+    "palette": {
+      "cover": "#402108",
+      "accent": "#fb8019",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-aja": {
+    "fingerprint": "39387:1787404169167",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#090707",
+      "accent": "#2d1d1c",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-cant-buy-a-thrill": {
+    "fingerprint": "151592:1787404169351",
+    "width": 599,
+    "height_px": 600,
+    "palette": {
+      "cover": "#867360",
+      "accent": "#efd5b1",
+      "ink": "#141210"
+    }
+  },
+  "album-wicked-the-soundtrack": {
+    "fingerprint": "159817:1787404169527",
+    "width": 597,
+    "height_px": 600,
+    "palette": {
+      "cover": "#564831",
+      "accent": "#2fb726",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-illinois": {
+    "fingerprint": "164290:1787404169706",
+    "width": 596,
+    "height_px": 600,
+    "palette": {
+      "cover": "#424c3c",
+      "accent": "#c39937",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-blind": {
+    "fingerprint": "58329:1787404169879",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#44362a",
+      "accent": "#e4b589",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-static-silence": {
+    "fingerprint": "83420:1787404170057",
+    "width": 599,
+    "height_px": 598,
+    "palette": {
+      "cover": "#474952",
+      "accent": "#848fb3",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-susan-sings-songs-from-sesame-street": {
+    "fingerprint": "168774:1787404170231",
+    "width": 599,
+    "height_px": 592,
+    "palette": {
+      "cover": "#585456",
+      "accent": "#85585e",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-1989-taylors-version": {
+    "fingerprint": "146276:1787404170406",
+    "width": 599,
+    "height_px": 596,
+    "palette": {
+      "cover": "#726d67",
+      "accent": "#c3d8e5",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-fearless-taylors-version": {
+    "fingerprint": "104897:1787404170574",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#634827",
+      "accent": "#845911",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-watch-your-step": {
+    "fingerprint": "73273:1787404171054",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#6a615c",
+      "accent": "#c0393d",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-london-collection-volume-2": {
+    "fingerprint": "109650:1787404171497",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#20211b",
+      "accent": "#939670",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-thelonious-alone-in-san-francisco": {
+    "fingerprint": "101890:1787404171714",
+    "width": 599,
+    "height_px": 596,
+    "palette": {
+      "cover": "#695f56",
+      "accent": "#a58e62",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-family-tree": {
+    "fingerprint": "165430:1787404171949",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#595953",
+      "accent": "#62653a",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-life-is-like-that": {
+    "fingerprint": "80897:1787404172383",
+    "width": 600,
+    "height_px": 596,
+    "palette": {
+      "cover": "#59504a",
+      "accent": "#cf987f",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-never-enough": {
+    "fingerprint": "62282:1787404172559",
+    "width": 594,
+    "height_px": 599,
+    "palette": {
+      "cover": "#8c8b89",
+      "accent": "#d2c5ba",
+      "ink": "#141210"
+    }
+  },
+  "album-live-under-a-blood-red-sky": {
+    "fingerprint": "56893:1787404172794",
+    "width": 600,
+    "height_px": 588,
+    "palette": {
+      "cover": "#661f1e",
+      "accent": "#db4725",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-best-of-1990-2000": {
+    "fingerprint": "63744:1787404172987",
+    "width": 599,
+    "height_px": 591,
+    "palette": {
+      "cover": "#5a5a5a",
+      "accent": "#b3bbc2",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-baby-driver-music-from-the-motion-picture": {
+    "fingerprint": "132973:1787404173204",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#7c4748",
+      "accent": "#e83f70",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-christmas-greetings": {
+    "fingerprint": "185756:1787404173411",
+    "width": 597,
+    "height_px": 599,
+    "palette": {
+      "cover": "#717b76",
+      "accent": "#9dc6d4",
+      "ink": "#141210"
+    }
+  },
+  "album-colorado-jazz-party": {
+    "fingerprint": "101636:1787404173658",
+    "width": 600,
+    "height_px": 598,
+    "palette": {
+      "cover": "#6e2a20",
+      "accent": "#a12817",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-dfa-compilation-1": {
+    "fingerprint": "52828:1787404174049",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#a49f9a",
+      "accent": "#b28050",
+      "ink": "#141210"
+    }
+  },
+  "album-disney-ultimate-hits-vol-1-2": {
+    "fingerprint": "103976:1787404174221",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#8a8e8b",
+      "accent": "#76b8bf",
+      "ink": "#141210"
+    }
+  },
+  "album-funky-christmas": {
+    "fingerprint": "181340:1787404174879",
+    "width": 594,
+    "height_px": 600,
+    "palette": {
+      "cover": "#584739",
+      "accent": "#b69048",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-home-alone-christmas": {
+    "fingerprint": "152844:1787404175060",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#6a594c",
+      "accent": "#ae6a34",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-less-than-zero": {
+    "fingerprint": "101755:1787404175283",
+    "width": 599,
+    "height_px": 596,
+    "palette": {
+      "cover": "#383d40",
+      "accent": "#6d9dac",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-mamma-mia-here-we-go-again-the-movie-soundtrack-featuring-th": {
+    "fingerprint": "186412:1787404175462",
+    "width": 599,
+    "height_px": 600,
+    "palette": {
+      "cover": "#73756c",
+      "accent": "#a0dbe7",
+      "ink": "#141210"
+    }
+  },
+  "album-o-brother-where-art-thou": {
+    "fingerprint": "126798:1787404175643",
+    "width": 597,
+    "height_px": 599,
+    "palette": {
+      "cover": "#866834",
+      "accent": "#ecb14b",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-saturday-night-fever-the-original-movie-sound-track": {
+    "fingerprint": "129782:1787404175869",
+    "width": 599,
+    "height_px": 597,
+    "palette": {
+      "cover": "#3d3c35",
+      "accent": "#745331",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-sgt-peppers-lonely-hearts-club-band": {
+    "fingerprint": "58196:1787404176043",
+    "width": 386,
+    "height_px": 366,
+    "palette": {
+      "cover": "#998a82",
+      "accent": "#a3401c",
+      "ink": "#141210"
+    }
+  },
+  "album-sleepless-in-seattle-original-motion-picture-soundtrack": {
+    "fingerprint": "85041:1787404176226",
+    "width": 588,
+    "height_px": 600,
+    "palette": {
+      "cover": "#39312d",
+      "accent": "#803b2c",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-the-montreux-collection": {
+    "fingerprint": "100853:1787404176632",
+    "width": 599,
+    "height_px": 585,
+    "palette": {
+      "cover": "#2f2e29",
+      "accent": "#252719",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-its-the-great-pumpkin-charlie-brown-original-soundtrack-reco": {
+    "fingerprint": "118747:1787404176853",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#484349",
+      "accent": "#b56a28",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-its-the-great-pumpkin-charlie-brown-music-from-the-soundtrac": {
+    "fingerprint": "93503:1787404177035",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#74452a",
+      "accent": "#e96b02",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-peanuts-portraits": {
+    "fingerprint": "123100:1787404177418",
+    "width": 598,
+    "height_px": 600,
+    "palette": {
+      "cover": "#a49f9c",
+      "accent": "#c6c668",
+      "ink": "#141210"
+    }
+  },
+  "album-a-charlie-brown-thanksgiving": {
+    "fingerprint": "94453:1787404177658",
+    "width": 597,
+    "height_px": 600,
+    "palette": {
+      "cover": "#7f927f",
+      "accent": "#7ad157",
+      "ink": "#141210"
+    }
+  },
+  "album-a-charlie-brown-christmas": {
+    "fingerprint": "85377:1787404177869",
+    "width": 600,
+    "height_px": 595,
+    "palette": {
+      "cover": "#a1a19c",
+      "accent": "#c8b391",
+      "ink": "#141210"
+    }
+  },
+  "album-vince-guaraldi-trio": {
+    "fingerprint": "127476:1787404178075",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#436862",
+      "accent": "#043a25",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-vulfnik": {
+    "fingerprint": "74653:1787404178248",
+    "width": 599,
+    "height_px": 600,
+    "palette": {
+      "cover": "#434140",
+      "accent": "#c78b5e",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-clarity-of-cal": {
+    "fingerprint": "106746:1787404178428",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#4a5d6b",
+      "accent": "#3677b1",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-msg-ii": {
+    "fingerprint": "159059:1787404178603",
+    "width": 599,
+    "height_px": 599,
+    "palette": {
+      "cover": "#655655",
+      "accent": "#c39177",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-whos-next": {
+    "fingerprint": "126318:1787404178776",
+    "width": 598,
+    "height_px": 598,
+    "palette": {
+      "cover": "#494852",
+      "accent": "#4f577b",
+      "ink": "#f1ece3"
+    }
+  },
+  "album-joe-hisaishi-1m5ovzv": {
+    "fingerprint": "132590:1787404490805",
+    "width": 600,
+    "height_px": 600,
+    "palette": {
+      "cover": "#5a5653",
+      "accent": "#e9cda0",
+      "ink": "#f1ece3"
+    }
   }
 }

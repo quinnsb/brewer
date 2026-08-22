@@ -12,5 +12,10 @@
   "spotify": {
     "profileUrl": "https://open.spotify.com/user/127248962",
     "label": "My Spotify"
+  },
+  "discogs": {
+    "username": "quinnsb",
+    "profileUrl": "https://www.discogs.com/user/quinnsb",
+    "label": "My Discogs"
   }
 }
