@@ -7,7 +7,7 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
-import { playAlbum, stop as stopSound, soundOn } from "./library-sound.js?v=library-detail3";
+import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail3";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
@@ -662,15 +662,17 @@ function detailMeta(item) {
    embed is the nocookie host with related videos off: this is a trailer on a
    shelf, not a way into YouTube.
 
-   Autoplay follows the same switch the records do. With sound off the trailer
-   still loads, ready to be pressed, rather than disappearing. */
+   A trailer never autoplays, unlike a record. Opening an album to hear it is the
+   point of a record shelf; a film panel is something you read, and a trailer
+   starting itself over the writeup is an interruption rather than a feature. It
+   loads ready to be pressed. */
 function filmTrailerNode(item) {
   if (item.type !== "film" || !item.trailerEmbedUrl) return null;
   const section = el("section", "film-trailer", { "aria-labelledby": `film-trailer-${item.id}` });
   section.append(Object.assign(el("h3"), { id: `film-trailer-${item.id}`, textContent: "Trailer" }));
 
   const frame = el("iframe", "trailer-player", {
-    src: soundOn() ? `${item.trailerEmbedUrl}&autoplay=1` : item.trailerEmbedUrl,
+    src: item.trailerEmbedUrl,
     title: `Watch the trailer for ${item.title}`,
     loading: "lazy",
     allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
