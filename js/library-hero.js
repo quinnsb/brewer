@@ -31,6 +31,42 @@ const VERBS = [
   "make",
   "miss",
 ];
+/* The ring is a fixed cast, not a slice of the album shelf. It is a decorative
+   device drawn for exactly this many covers: the Discogs import took the album
+   count from 25 to 198, and filtering by type turned the ring into a striped
+   band of 198 slivers where no single sleeve was recognisable.
+
+   Pinned by id, in this order, because the arrangement was composed rather than
+   sorted. An id that no longer exists is dropped with a warning rather than
+   leaving a hole in the circle. */
+const RING = [
+  "album-coloring-book",
+  "album-where-the-light-is-john-mayer-live-in-los-angeles",
+  "album-in-between-dreams",
+  "album-blonde-on-blonde",
+  "album-kind-of-blue",
+  "album-transatlanticism",
+  "album-reading-writing-and-arithmetic",
+  "album-night-train",
+  "album-a-boy-named-charlie-brown",
+  "album-gordon",
+  "album-come-away-with-me",
+  "album-mr-finish-line",
+  "album-magic",
+  "album-messy",
+  "album-plans",
+  "album-thriller",
+  "album-sound-of-silver",
+  "album-songs-in-the-key-of-life",
+  "album-the-crux",
+  "album-upstairs-at-erics",
+  "album-talon-of-the-hawk",
+  "album-the-joshua-tree",
+  "album-charm",
+  "album-jackson-square",
+  "album-funeral",
+];
+
 const ORBIT_DEGREES_PER_SECOND = 3;
 
 function card(item) {
@@ -137,7 +173,10 @@ export function initHero(items) {
   const line = document.getElementById("hero-heading");
 
   /* The catalogue is the ring: every album appears once, with no clones. */
-  const heroItems = items.filter((item) => item.type === "album");
+  const byId = new Map(items.map((item) => [item.id, item]));
+  const heroItems = RING.map((id) => byId.get(id)).filter(Boolean);
+  const dropped = RING.length - heroItems.length;
+  if (dropped) console.warn(`Hero ring: ${dropped} of ${RING.length} albums no longer exist`);
   if (!heroItems.length) return;
 
   const nodes = heroItems.map((item) => {

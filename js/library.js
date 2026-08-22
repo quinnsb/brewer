@@ -16,9 +16,17 @@ import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detai
 const DATA_URL = "data/library.json?v=library-detail6";
 const SOURCES_URL = "data/library-sources.json?v=library-detail6";
 
-/* Which outside profile belongs beside which shelf. Podcasts have no single
-   home worth linking to, so they get none rather than a token one. */
-const SHELF_SOURCE = { book: "goodreads", film: "letterboxd", album: "spotify" };
+/* Which outside profiles belong beside which shelf, in the order they render.
+   Albums have two, because the streaming history and the record shelf are
+   different collections: Spotify is what gets played, Discogs is what is
+   physically owned. Podcasts have no single home worth linking to, so they get
+   none rather than a token one. */
+const SHELF_SOURCES = {
+  book: ["goodreads"],
+  film: ["letterboxd"],
+  album: ["spotify", "discogs"],
+  other: [],
+};
 
 /* All four answer the arrow keys now, so all four say so. Until the rails were
    wired up, three of them promised a keyboard that did nothing. */
@@ -47,6 +55,7 @@ const SOURCE_MARK = {
   goodreads: "M17.346.026c.422-.083.859.037 1.179.325.346.284.55.705.557 1.153-.023.457-.247.88-.612 1.156l-2.182 1.748a.601.601 0 0 0-.255.43.52.52 0 0 0 .11.424 5.886 5.886 0 0 1 .832 6.58c-1.394 2.79-4.503 3.99-7.501 2.927a.792.792 0 0 0-.499-.01c-.224.07-.303.18-.453.383l-.014.02-.941 1.254s-.792.985.457.935c3.027-.119 3.817-.119 5.439-.01 2.641.18 3.806 1.903 3.806 3.275 0 1.623-1.036 3.383-3.809 3.383a117.46 117.46 0 0 0-5.517-.03c-.31.005-.597.013-.835.02-.228.006-.41.011-.52.011-.712 0-1.648-.186-1.66-1.068-.008-.729.624-1.12 1.11-1.172.43-.045.815.007 1.24.064.252.034.518.07.815.088.185.011.366.025.552.038.53.038 1.102.08 1.926.087.427.005.759.01 1.025.015.695.012.941.016 1.28-.015 1.248-.112 1.832-.61 1.832-1.376 0-.805-.584-1.264-1.698-1.414-1.564-.213-2.33-.163-3.72-.074a87.66 87.66 0 0 1-1.669.095c-.608.029-2.449.026-2.682-1.492-.053-.416-.073-1.116.807-2.325l.75-1.003c.36-.49.582-.898.053-1.559 0 0-.39-.468-.52-.638-1.215-1.587-1.512-4.08-.448-6.114 1.577-3.011 5.4-4.26 8.37-2.581.253.143.438.203.655.163.201-.032.27-.167.363-.344.02-.04.042-.082.067-.126.004-.01.241-.465.535-1.028l.734-1.41a1.493 1.493 0 0 1 1.041-.785ZM9.193 13.243c1.854.903 3.912.208 5.254-2.47 1.352-2.699.827-5.11-1.041-6.023C10.918 3.537 8.81 5.831 8.017 7.41c-1.355 2.698-.717 4.886 1.147 5.818Z",
   letterboxd: "M8.224 14.352a4.447 4.447 0 0 1-3.775 2.092C1.992 16.444 0 14.454 0 12s1.992-4.444 4.45-4.444c1.592 0 2.988.836 3.774 2.092-.427.682-.673 1.488-.673 2.352s.246 1.67.673 2.352zM15.101 12c0-.864.247-1.67.674-2.352-.786-1.256-2.183-2.092-3.775-2.092s-2.989.836-3.775 2.092c.427.682.674 1.488.674 2.352s-.247 1.67-.674 2.352c.786 1.256 2.183 2.092 3.775 2.092s2.989-.836 3.775-2.092A4.42 4.42 0 0 1 15.1 12zm4.45-4.444a4.447 4.447 0 0 0-3.775 2.092c.427.682.673 1.488.673 2.352s-.246 1.67-.673 2.352a4.447 4.447 0 0 0 3.775 2.092C22.008 16.444 24 14.454 24 12s-1.992-4.444-4.45-4.444z",
   spotify: "M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z",
+  discogs: "M6.325 4.898c-.658 0-1.192.534-1.192 1.192v11.82c0 .658.534 1.192 1.192 1.192h11.35c.658 0 1.192-.534 1.192-1.192V6.09c0-.658-.534-1.192-1.192-1.192H6.325zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 3.106A8.894 8.894 0 0 1 20.894 12A8.894 8.894 0 0 1 12 20.894A8.894 8.894 0 0 1 3.106 12A8.894 8.894 0 0 1 12 3.106zm0 4.06A4.834 4.834 0 0 0 7.166 12A4.834 4.834 0 0 0 12 16.834A4.834 4.834 0 0 0 16.834 12A4.834 4.834 0 0 0 12 7.166zm0 2.53A2.304 2.304 0 0 1 14.304 12A2.304 2.304 0 0 1 12 14.304A2.304 2.304 0 0 1 9.696 12A2.304 2.304 0 0 1 12 9.696z",
 };
 
 function brandIcon(name) {
@@ -305,9 +314,9 @@ export function renderShelves(items, root, sources = {}) {
     /* The shelf is what Quinn owns; the profile is where the running record
        lives. Rendered only when the sources file names one, so an unset handle
        is an absent link rather than a dead one. */
-    const source = sources[SHELF_SOURCE[type]];
-    if (source?.profileUrl) {
-      const key = SHELF_SOURCE[type];
+    for (const key of SHELF_SOURCES[type] || []) {
+      const source = sources[key];
+      if (!source?.profileUrl) continue;
       const away = el("a", "lib-icon-btn", {
         href: source.profileUrl,
         target: "_blank",
