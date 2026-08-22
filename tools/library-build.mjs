@@ -23,7 +23,8 @@ import { applyListening } from "./lib/listening.mjs";
 import { applyWatching } from "./lib/watching.mjs";
 import { applyPalette, refreshPaletteCache } from "./lib/palette.mjs";
 import { validateLists } from "./lib/lists.mjs";
-import { coverStat, coverMeasure } from "./lib/sips.mjs";
+import { applyThumbs, refreshThumbs, THUMB_WIDTH } from "./lib/thumbs.mjs";
+import { coverStat, coverMeasure, coverEncoder } from "./lib/sips.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const RAW = path.join(ROOT, "data", "library.raw.json");
@@ -33,6 +34,7 @@ const LISTENING = path.join(ROOT, "data", "library-listening.json");
 const WATCHING = path.join(ROOT, "data", "library-watching.json");
 const PALETTE = path.join(ROOT, "data", "library-palette.json");
 const LISTS = path.join(ROOT, "data", "library-lists.json");
+const THUMBS = path.join(ROOT, "data", "library-thumbs.json");
 const NOTES_DIR = path.join(ROOT, "content", "library");
 const OVERRIDE_DIR = path.join(ROOT, "images", "library", "overrides");
 
@@ -69,7 +71,17 @@ async function main() {
     measure: coverMeasure(ROOT),
     onLog: (line) => console.log(line),
   });
-  const items = applyPalette(merged, cache);
+  const coloured = applyPalette(merged, cache);
+
+  /* Shelf-sized copies. The covers are deliberately large for the detail view;
+     handing those to a row of thumbnails is what stopped them loading on a
+     phone. */
+  const thumbs = await refreshThumbs(coloured, await readJson(THUMBS, {}), {
+    stat: coverStat(ROOT),
+    encode: coverEncoder(ROOT, THUMB_WIDTH),
+    onLog: (line) => console.log(line),
+  });
+  const items = applyThumbs(coloured, thumbs.cache);
 
   /* The lists file is not rewritten here, only checked. A structural mistake
      throws, because the page cannot render it; an id that has left the library
@@ -89,6 +101,7 @@ async function main() {
   }
 
   await writeFile(PALETTE, JSON.stringify(cache, null, 2));
+  await writeFile(THUMBS, JSON.stringify(thumbs.cache, null, 2));
   await writeFile(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), items }, null, 2));
 
   const reviewed = items.filter((i) => i.reviewHtml).length;
@@ -98,6 +111,7 @@ async function main() {
     `${items.length} items -> data/library.json ` +
     `(${reviewed} with reviews, ${rated} rated, ${computed} covers sampled, ${missed} missing)`
   );
+  console.log(`${thumbs.made} thumbs encoded at ${THUMB_WIDTH}px, ${thumbs.missed} missing`);
   console.log(`${lists.length} lists (${published} with members, ${lists.length - published} still drafts)`);
 }
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T21:48:58.035Z",
+  "generatedAt": "2026-08-22T01:34:40.080Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -51,7 +51,8 @@
         "cover": "#51777d",
         "accent": "#55c7dd",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-the-left-hand-of-darkness.jpg"
     },
     {
       "id": "book-gravitys-rainbow",
@@ -104,7 +105,8 @@
         "cover": "#362861",
         "accent": "#351775",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-gravitys-rainbow.jpg"
     },
     {
       "id": "book-the-dispossessed",
@@ -156,7 +158,8 @@
         "cover": "#7a7994",
         "accent": "#9895cb",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/book-the-dispossessed.jpg"
     },
     {
       "id": "book-blood-meridian",
@@ -209,7 +212,8 @@
         "cover": "#614521",
         "accent": "#fbd407",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-blood-meridian.jpg"
     },
     {
       "id": "book-housekeeping",
@@ -261,7 +265,8 @@
         "cover": "#637484",
         "accent": "#94b6d6",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-housekeeping.jpg"
     },
     {
       "id": "book-the-sellout",
@@ -314,7 +319,8 @@
         "cover": "#aaa99d",
         "accent": "#f5f1e3",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/book-the-sellout.jpg"
     },
     {
       "id": "book-cloud-atlas",
@@ -367,7 +373,8 @@
         "cover": "#55919d",
         "accent": "#20a6d1",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/book-cloud-atlas.jpg"
     },
     {
       "id": "book-a-visit-from-the-goon-squad",
@@ -419,7 +426,8 @@
         "cover": "#8e8577",
         "accent": "#f9b3ae",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/book-a-visit-from-the-goon-squad.jpg"
     },
     {
       "id": "book-piranesi",
@@ -471,7 +479,8 @@
         "cover": "#353543",
         "accent": "#c49d27",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-piranesi.jpg"
     },
     {
       "id": "book-starclimber",
@@ -524,7 +533,8 @@
         "cover": "#453c32",
         "accent": "#ecd8ad",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-starclimber.jpg"
     },
     {
       "id": "book-never-let-me-go",
@@ -577,7 +587,8 @@
         "cover": "#726c65",
         "accent": "#bc9d8d",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-never-let-me-go.jpg"
     },
     {
       "id": "book-the-martian",
@@ -629,7 +640,8 @@
         "cover": "#8e4921",
         "accent": "#f89333",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-the-martian.jpg"
     },
     {
       "id": "book-the-bonesetters-daughter",
@@ -682,7 +694,8 @@
         "cover": "#7c5c3f",
         "accent": "#c60000",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-the-bonesetters-daughter.jpg"
     },
     {
       "id": "book-the-hobbit",
@@ -735,7 +748,8 @@
         "cover": "#181511",
         "accent": "#973a2b",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-the-hobbit.jpg"
     },
     {
       "id": "book-dawn",
@@ -787,7 +801,8 @@
         "cover": "#715538",
         "accent": "#ff9317",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-dawn.jpg"
     },
     {
       "id": "book-moby-dick",
@@ -840,7 +855,8 @@
         "cover": "#62858d",
         "accent": "#89c3d0",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/book-moby-dick.jpg"
     },
     {
       "id": "book-things-fall-apart",
@@ -893,7 +909,8 @@
         "cover": "#813a2b",
         "accent": "#f43d2b",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-things-fall-apart.jpg"
     },
     {
       "id": "book-hatchet",
@@ -946,7 +963,8 @@
         "cover": "#56684c",
         "accent": "#83a939",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-hatchet.jpg"
     },
     {
       "id": "book-enders-game",
@@ -998,7 +1016,8 @@
         "cover": "#283336",
         "accent": "#1b797e",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-enders-game.jpg"
     },
     {
       "id": "book-the-fifth-season",
@@ -1043,7 +1062,8 @@
         "cover": "#2c352e",
         "accent": "#837716",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-the-fifth-season.jpg"
     },
     {
       "id": "book-a-day-of-fallen-night",
@@ -1091,7 +1111,8 @@
         "cover": "#364545",
         "accent": "#ce4f2b",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-a-day-of-fallen-night.jpg"
     },
     {
       "id": "book-the-call-of-the-wild",
@@ -1143,7 +1164,8 @@
         "cover": "#6a83a1",
         "accent": "#69b2ff",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/book-the-call-of-the-wild.jpg"
     },
     {
       "id": "book-the-stone-sky",
@@ -1188,7 +1210,8 @@
         "cover": "#2a4139",
         "accent": "#185d79",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-the-stone-sky.jpg"
     },
     {
       "id": "book-heart-of-darkness",
@@ -1241,7 +1264,8 @@
         "cover": "#272716",
         "accent": "#af9d3e",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-heart-of-darkness.jpg"
     },
     {
       "id": "book-pretty-as-a-picture",
@@ -1294,7 +1318,8 @@
         "cover": "#352a28",
         "accent": "#682f2b",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-pretty-as-a-picture.jpg"
     },
     {
       "id": "book-ready-player-two",
@@ -1346,7 +1371,8 @@
         "cover": "#473857",
         "accent": "#240f32",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-ready-player-two.jpg"
     },
     {
       "id": "book-normal-people",
@@ -1399,7 +1425,8 @@
         "cover": "#47725b",
         "accent": "#66b338",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-normal-people.jpg"
     },
     {
       "id": "book-feed",
@@ -1448,7 +1475,8 @@
         "cover": "#4b4c37",
         "accent": "#cb9200",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-feed.jpg"
     },
     {
       "id": "book-the-fellowship-of-the-ring",
@@ -1501,7 +1529,8 @@
         "cover": "#0d0c09",
         "accent": "#463a1c",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-the-fellowship-of-the-ring.jpg"
     },
     {
       "id": "album-coloring-book",
@@ -1561,7 +1590,8 @@
         "cover": "#803d4e",
         "accent": "#fe5169",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-coloring-book.jpg"
     },
     {
       "id": "album-where-the-light-is-john-mayer-live-in-los-angeles",
@@ -1621,7 +1651,8 @@
         "cover": "#1a1919",
         "accent": "#1b231f",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-where-the-light-is-john-mayer-live-in-los-angeles.jpg"
     },
     {
       "id": "album-in-between-dreams",
@@ -1766,7 +1797,8 @@
         "cover": "#736008",
         "accent": "#ffd600",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-in-between-dreams.jpg"
     },
     {
       "id": "album-blonde-on-blonde",
@@ -1911,7 +1943,8 @@
         "cover": "#685740",
         "accent": "#eab591",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-blonde-on-blonde.jpg"
     },
     {
       "id": "album-kind-of-blue",
@@ -2001,7 +2034,8 @@
         "cover": "#1f2020",
         "accent": "#354040",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-kind-of-blue.jpg"
     },
     {
       "id": "album-transatlanticism",
@@ -2127,7 +2161,8 @@
         "cover": "#825933",
         "accent": "#f9b462",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-transatlanticism.jpg"
     },
     {
       "id": "album-reading-writing-and-arithmetic",
@@ -2248,7 +2283,8 @@
         "cover": "#2e3234",
         "accent": "#3d4649",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-reading-writing-and-arithmetic.jpg"
     },
     {
       "id": "album-night-train",
@@ -2410,7 +2446,8 @@
         "cover": "#202940",
         "accent": "#5d7cdc",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-night-train.jpg"
     },
     {
       "id": "album-a-boy-named-charlie-brown",
@@ -2537,7 +2574,8 @@
         "cover": "#989d8f",
         "accent": "#51983b",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/album-a-boy-named-charlie-brown.jpg"
     },
     {
       "id": "album-gordon",
@@ -2687,7 +2725,8 @@
         "cover": "#1d1f28",
         "accent": "#283a6f",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-gordon.jpg"
     },
     {
       "id": "album-come-away-with-me",
@@ -2832,7 +2871,8 @@
         "cover": "#253046",
         "accent": "#1551a0",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-come-away-with-me.jpg"
     },
     {
       "id": "album-mr-finish-line",
@@ -2952,7 +2992,8 @@
         "cover": "#726e6e",
         "accent": "#a7675d",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-mr-finish-line.jpg"
     },
     {
       "id": "album-magic",
@@ -3091,7 +3132,8 @@
         "cover": "#191e1d",
         "accent": "#3d5e6d",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-magic.jpg"
     },
     {
       "id": "album-messy",
@@ -3224,7 +3266,8 @@
         "cover": "#6e3943",
         "accent": "#9a2e1a",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-messy.jpg"
     },
     {
       "id": "album-plans",
@@ -3350,7 +3393,8 @@
         "cover": "#130f0c",
         "accent": "#4f1919",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-plans.jpg"
     },
     {
       "id": "album-thriller",
@@ -3465,7 +3509,8 @@
         "cover": "#4d4e4a",
         "accent": "#ab7d5d",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-thriller.jpg"
     },
     {
       "id": "album-sound-of-silver",
@@ -3580,7 +3625,8 @@
         "cover": "#8a8983",
         "accent": "#ddd4c4",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/album-sound-of-silver.jpg"
     },
     {
       "id": "album-songs-in-the-key-of-life",
@@ -3767,7 +3813,8 @@
         "cover": "#954b35",
         "accent": "#feab51",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-songs-in-the-key-of-life.jpg"
     },
     {
       "id": "album-the-crux",
@@ -3900,7 +3947,8 @@
         "cover": "#494c4e",
         "accent": "#155da2",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-the-crux.jpg"
     },
     {
       "id": "album-upstairs-at-erics",
@@ -4027,7 +4075,8 @@
         "cover": "#2d282b",
         "accent": "#443430",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-upstairs-at-erics.jpg"
     },
     {
       "id": "album-talon-of-the-hawk",
@@ -4160,7 +4209,8 @@
         "cover": "#b1afae",
         "accent": "#d7b997",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/album-talon-of-the-hawk.jpg"
     },
     {
       "id": "album-the-joshua-tree",
@@ -4286,7 +4336,8 @@
         "cover": "#1d1d1c",
         "accent": "#242321",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-the-joshua-tree.jpg"
     },
     {
       "id": "album-charm",
@@ -4413,7 +4464,8 @@
         "cover": "#402e18",
         "accent": "#452e08",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-charm.jpg"
     },
     {
       "id": "album-jackson-square",
@@ -4464,7 +4516,8 @@
         "cover": "#787467",
         "accent": "#f4e8bb",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/album-jackson-square.jpg"
     },
     {
       "id": "album-funeral",
@@ -4585,7 +4638,8 @@
         "cover": "#794b3f",
         "accent": "#d0765d",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/album-funeral.jpg"
     },
     {
       "id": "film-there-will-be-blood",
@@ -4649,7 +4703,8 @@
         "cover": "#150d0b",
         "accent": "#9b7534",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-there-will-be-blood.jpg"
     },
     {
       "id": "film-in-the-mood-for-love",
@@ -4713,7 +4768,8 @@
         "cover": "#541f17",
         "accent": "#c65b27",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-in-the-mood-for-love.jpg"
     },
     {
       "id": "film-paris-texas-film",
@@ -4777,7 +4833,8 @@
         "cover": "#302922",
         "accent": "#eebe90",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-paris-texas-film.jpg"
     },
     {
       "id": "film-burning-2018-film",
@@ -4841,7 +4898,8 @@
         "cover": "#3b486d",
         "accent": "#134689",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-burning-2018-film.jpg"
     },
     {
       "id": "film-the-master-2012-film",
@@ -4904,7 +4962,8 @@
         "cover": "#58514c",
         "accent": "#805741",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-the-master-2012-film.jpg"
     },
     {
       "id": "film-moonlight",
@@ -4968,7 +5027,8 @@
         "cover": "#47414a",
         "accent": "#2b1a36",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-moonlight.jpg"
     },
     {
       "id": "film-chungking-express",
@@ -5032,7 +5092,8 @@
         "cover": "#50614a",
         "accent": "#d8ce52",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-chungking-express.jpg"
     },
     {
       "id": "film-first-reformed",
@@ -5096,7 +5157,8 @@
         "cover": "#0b0807",
         "accent": "#3d2318",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-first-reformed.jpg"
     },
     {
       "id": "film-ferris-buellers-day-off",
@@ -5160,7 +5222,8 @@
         "cover": "#70605c",
         "accent": "#ff6d70",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-ferris-buellers-day-off.jpg"
     },
     {
       "id": "film-the-empire-strikes-back",
@@ -5224,7 +5287,8 @@
         "cover": "#383d49",
         "accent": "#123d75",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-the-empire-strikes-back.jpg"
     },
     {
       "id": "film-moonrise-kingdom",
@@ -5288,7 +5352,8 @@
         "cover": "#5c6a59",
         "accent": "#4d5a19",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-moonrise-kingdom.jpg"
     },
     {
       "id": "film-oceans-eleven",
@@ -5352,7 +5417,8 @@
         "cover": "#866e6e",
         "accent": "#dd0000",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-oceans-eleven.jpg"
     },
     {
       "id": "film-mission-impossible-fallout",
@@ -5416,7 +5482,8 @@
         "cover": "#867171",
         "accent": "#ea6f69",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/film-mission-impossible-fallout.jpg"
     },
     {
       "id": "film-kikis-delivery-service",
@@ -5476,7 +5543,8 @@
         "cover": "#345a7b",
         "accent": "#0093d4",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-kikis-delivery-service.jpg"
     },
     {
       "id": "film-la-la-land",
@@ -5540,7 +5608,8 @@
         "cover": "#130c39",
         "accent": "#340f98",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-la-la-land.jpg"
     },
     {
       "id": "film-treasure-planet",
@@ -5602,7 +5671,8 @@
         "cover": "#3a414e",
         "accent": "#0796b4",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-treasure-planet.jpg"
     },
     {
       "id": "film-a-goofy-movie",
@@ -5659,7 +5729,8 @@
         "cover": "#554e56",
         "accent": "#00779d",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-a-goofy-movie.jpg"
     },
     {
       "id": "film-meet-the-robinsons",
@@ -5720,7 +5791,8 @@
         "cover": "#313d41",
         "accent": "#005e9b",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/film-meet-the-robinsons.jpg"
     },
     {
       "id": "other-99-invisible",
@@ -5772,7 +5844,8 @@
         "cover": "#272423",
         "accent": "#5a4f1f",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/other-99-invisible.jpg"
     },
     {
       "id": "other-design-matters-with-debbie-millman",
@@ -5825,7 +5898,8 @@
         "cover": "#404746",
         "accent": "#7ebebc",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/other-design-matters-with-debbie-millman.jpg"
     },
     {
       "id": "other-song-exploder",
@@ -5878,7 +5952,8 @@
         "cover": "#1e1b1b",
         "accent": "#ac6708",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/other-song-exploder.jpg"
     },
     {
       "id": "other-the-rest-is-history",
@@ -5930,7 +6005,8 @@
         "cover": "#6e4e58",
         "accent": "#8e1f44",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/other-the-rest-is-history.jpg"
     },
     {
       "id": "other-the-big-picture",
@@ -5982,7 +6058,8 @@
         "cover": "#186156",
         "accent": "#0577fb",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/other-the-big-picture.jpg"
     },
     {
       "id": "other-radio-ambulante",
@@ -6037,7 +6114,8 @@
         "cover": "#6a8d91",
         "accent": "#a7e0e4",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/other-radio-ambulante.jpg"
     },
     {
       "id": "other-the-anthropocene-reviewed",
@@ -6091,7 +6169,8 @@
         "cover": "#1d1e3b",
         "accent": "#121a44",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/other-the-anthropocene-reviewed.jpg"
     },
     {
       "id": "other-my-brother-my-brother-and-me",
@@ -6144,7 +6223,8 @@
         "cover": "#81746f",
         "accent": "#d46e54",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/other-my-brother-my-brother-and-me.jpg"
     },
     {
       "id": "other-the-adventure-zone",
@@ -6197,7 +6277,8 @@
         "cover": "#3c2247",
         "accent": "#874c17",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/other-the-adventure-zone.jpg"
     },
     {
       "id": "other-wonderful",
@@ -6251,7 +6332,8 @@
         "cover": "#908a77",
         "accent": "#f8d493",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/other-wonderful.jpg"
     },
     {
       "id": "other-the-besties",
@@ -6306,7 +6388,8 @@
         "cover": "#ad8c33",
         "accent": "#fdc541",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/other-the-besties.jpg"
     },
     {
       "id": "other-revisionist-history",
@@ -6359,7 +6442,8 @@
         "cover": "#6d6e63",
         "accent": "#edecac",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/other-revisionist-history.jpg"
     },
     {
       "id": "book-dune",
@@ -6411,7 +6495,8 @@
         "cover": "#714a2b",
         "accent": "#f5bc54",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-dune.jpg"
     },
     {
       "id": "book-project-hail-mary",
@@ -6463,7 +6548,8 @@
         "cover": "#2e3b39",
         "accent": "#05404b",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-project-hail-mary.jpg"
     },
     {
       "id": "book-the-way-of-kings",
@@ -6515,7 +6601,8 @@
         "cover": "#605158",
         "accent": "#f9b65a",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-the-way-of-kings.jpg"
     },
     {
       "id": "book-song-of-solomon",
@@ -6563,7 +6650,8 @@
         "cover": "#1a5752",
         "accent": "#008c95",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-song-of-solomon.jpg"
     },
     {
       "id": "book-tomorrow-and-tomorrow-and-tomorrow",
@@ -6611,7 +6699,8 @@
         "cover": "#767d73",
         "accent": "#fee147",
         "ink": "#141210"
-      }
+      },
+      "thumb": "images/library/thumbs/book-tomorrow-and-tomorrow-and-tomorrow.jpg"
     },
     {
       "id": "book-norwegian-wood",
@@ -6659,7 +6748,8 @@
         "cover": "#5f511e",
         "accent": "#f98c09",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-norwegian-wood.jpg"
     },
     {
       "id": "book-the-song-of-achilles",
@@ -6707,7 +6797,8 @@
         "cover": "#366957",
         "accent": "#02abbf",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-the-song-of-achilles.jpg"
     },
     {
       "id": "book-lincoln-in-the-bardo",
@@ -6760,7 +6851,8 @@
         "cover": "#33554f",
         "accent": "#14655a",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-lincoln-in-the-bardo.jpg"
     },
     {
       "id": "book-narrative-of-the-life-of-frederick-douglass",
@@ -6812,7 +6904,8 @@
         "cover": "#961d18",
         "accent": "#d70600",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-narrative-of-the-life-of-frederick-douglass.jpg"
     },
     {
       "id": "book-the-nightingale",
@@ -6864,7 +6957,8 @@
         "cover": "#294246",
         "accent": "#816d20",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-the-nightingale.jpg"
     },
     {
       "id": "book-go-tell-it-on-the-mountain",
@@ -6899,7 +6993,8 @@
         "cover": "#525049",
         "accent": "#f0dbac",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-go-tell-it-on-the-mountain.jpg"
     },
     {
       "id": "book-of-mice-and-men",
@@ -6952,7 +7047,8 @@
         "cover": "#796b50",
         "accent": "#ebc15a",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-of-mice-and-men.jpg"
     },
     {
       "id": "book-on-writing",
@@ -7004,7 +7100,8 @@
         "cover": "#1e1e1e",
         "accent": "#1f1f1f",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-on-writing.jpg"
     },
     {
       "id": "book-dark-matter",
@@ -7057,7 +7154,8 @@
         "cover": "#4a504f",
         "accent": "#cee7ea",
         "ink": "#f1ece3"
-      }
+      },
+      "thumb": "images/library/thumbs/book-dark-matter.jpg"
     }
   ]
 }

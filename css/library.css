@@ -327,7 +327,11 @@ html.reduce-motion .hcard:focus-visible .hcard-media { transform: none; }
   padding: 28px 8px 24px 4px;
 }
 .book-cover-run + .book-cover-run { margin-left: var(--book-run-overlap, 0); }
-.book-loop { cursor: grab; touch-action: pan-y; user-select: none; }
+/* pan-x as well as pan-y: pan-y alone told the browser not to handle horizontal
+   panning, so a finger swipe along the rail fell to the pointer handler, which
+   has no momentum and no rubber-banding. Native scrolling does this properly on
+   touch; the pointer handler is for mouse drag only now. */
+.book-loop { cursor: grab; touch-action: pan-x pan-y; }
 .book-loop:active { cursor: grabbing; }
 .book-cover {
   position: relative; flex: 0 0 var(--book-w); width: var(--book-w); height: var(--book-h);
@@ -387,16 +391,23 @@ html.reduce-motion .hcard:focus-visible .hcard-media { transform: none; }
 .loop-track { display: flex; align-items: flex-end; width: max-content; }
 .loop-track:not(.is-looping) > [data-loop-clone],
 .book-cover-shelf:not(.is-looping) > [data-loop-clone] { display: none; }
-.shelf-rail:has(.loop-track) { cursor: grab; touch-action: pan-y; user-select: none; }
+.shelf-rail:has(.loop-track) { cursor: grab; touch-action: pan-x pan-y; }
 .shelf-rail:has(.loop-track):active { cursor: grabbing; }
 .rack { display: flex; align-items: flex-end; gap: 12px; padding: 30px 4px 18px; width: max-content; }
 .poster {
   flex: 0 0 auto; border: 0; padding: 0; cursor: pointer; background: var(--cover);
   border-radius: 2px; overflow: hidden; height: clamp(270px, 25vw, 350px);
+  /* The width has to be known before the poster loads. It used to come from the
+     image's intrinsic size via `width: auto`, so an unloaded image was 0px wide
+     and the whole rack collapsed. That is worse than it sounds: a collapsed rack
+     stacks every poster at the same spot, so almost none of them are ever in the
+     viewport, so lazy loading never fires and the shelf stays empty. The aspect
+     is set per item from SHAPE, with the film ratio as the default. */
+  aspect-ratio: var(--aspect, 0.68);
   transition: transform 0.4s var(--ease);
   box-shadow: 0 8px 18px -10px rgba(0,0,0,.85);
 }
-.poster img { height: 100%; width: auto; display: block; }
+.poster img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .poster:hover, .poster:focus-visible { transform: translateY(-7px); }
 
 /* ---------- PODCASTS: tiles ---------- */
@@ -448,6 +459,9 @@ body.media-detail-open { overflow: hidden; }
 .media-detail-layer.is-switching .media-detail-copy { opacity: 0; }
 
 .media-detail-art {
+  /* pan-y so a vertical drag starts as a scroll and the dismiss handler can
+     take it over; without this the browser keeps the gesture outright. */
+  touch-action: pan-y;
   position: relative; min-width: 0; min-height: 100dvh;
   display: grid; place-items: center; overflow: hidden; isolation: isolate;
   background:

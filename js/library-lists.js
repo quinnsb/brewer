@@ -1,14 +1,14 @@
 /* Media-specific list and catalog pages. The moving corridor is decorative;
    the catalog underneath owns all navigation and accessible media names. */
 
-import { wireExpansion } from "./library.js?v=library-detail2";
+import { wireExpansion } from "./library.js?v=library-detail3";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail2";
-const LISTS_URL = "data/library-lists.json?v=library-detail2";
+const DATA_URL = "data/library.json?v=library-detail3";
+const LISTS_URL = "data/library-lists.json?v=library-detail3";
 
 const PAGE = {
   book: {
@@ -123,7 +123,7 @@ function renderStream(items) {
       card.style.setProperty("--stream-speed", `${speed}s`);
       card.style.setProperty("--stream-delay", `${-(index * speed) / cards}s`);
       const img = document.createElement("img");
-      img.src = item.cover;
+      img.src = item.thumb || item.cover;
       img.alt = "";
       img.decoding = "async";
       img.draggable = false;
@@ -155,7 +155,7 @@ function preview(items) {
     trigger.setAttribute("aria-expanded", "false");
     trigger.style.aspectRatio = String(item.aspect || 1);
     const img = document.createElement("img");
-    img.src = item.cover;
+    img.src = item.thumb || item.cover;
     img.alt = "";
     img.loading = "lazy";
     img.draggable = false;
@@ -228,7 +228,7 @@ function catalogCard(item, rank) {
   imageWrap.setAttribute("aria-label", `Open ${item.title} details`);
   imageWrap.setAttribute("aria-expanded", "false");
   const img = document.createElement("img");
-  img.src = item.cover;
+  img.src = item.thumb || item.cover;
   img.alt = `${item.title} cover`;
   img.loading = "lazy";
   img.decoding = "async";

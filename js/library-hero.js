@@ -13,7 +13,7 @@
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js?v=hero-orbit2";
 /* Keep this URL identical to library.html. A different query string creates a
    second module instance, which renders every shelf and detail handler twice. */
-import { openItem } from "./library.js?v=library-detail2";
+import { openItem } from "./library.js?v=library-detail3";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||
@@ -43,7 +43,7 @@ function card(item) {
   const media = document.createElement("span");
   media.className = "hcard-media";
   const img = document.createElement("img");
-  img.src = item.cover;
+  img.src = item.thumb || item.cover;
   img.alt = "";
   img.loading = "lazy";
   media.append(img);

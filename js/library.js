@@ -7,14 +7,14 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
-import { playAlbum, stop as stopSound, soundOn } from "./library-sound.js?v=library-detail2";
+import { playAlbum, stop as stopSound, soundOn } from "./library-sound.js?v=library-detail3";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail2";
-const SOURCES_URL = "data/library-sources.json?v=library-detail2";
+const DATA_URL = "data/library.json?v=library-detail3";
+const SOURCES_URL = "data/library-sources.json?v=library-detail3";
 
 /* Which outside profile belongs beside which shelf. Podcasts have no single
    home worth linking to, so they get none rather than a token one. */
@@ -74,9 +74,11 @@ function paint(node, item) {
   node.setAttribute("aria-expanded", "false");
 }
 
+/* The shelf-sized copy, falling back to the full cover if the build has not
+   made one. The detail view deliberately does not use this. */
 function coverImg(item, cls = "") {
   const img = el("img", cls);
-  img.src = item.cover;
+  img.src = item.thumb || item.cover;
   img.alt = "";
   img.loading = "lazy";
   img.draggable = false;
@@ -117,6 +119,9 @@ const BUILDERS = {
   film(item) {
     const btn = el("button", "poster", { type: "button", "aria-label": label(item) });
     paint(btn, item);
+    /* From the item's own aspect, so the box is the right shape before the
+       poster arrives rather than after. */
+    btn.style.setProperty("--aspect", String(item.aspect || 0.68));
     btn.append(coverImg(item));
     return btn;
   },
@@ -244,6 +249,10 @@ function wireDrag(frame, onScroll = () => {}) {
 
   frame.addEventListener("pointerdown", (event) => {
     if (event.button !== 0) return;
+    /* Mouse only. A finger gets native scrolling, which has momentum and
+       rubber-banding this cannot imitate; taking the gesture off the browser is
+       what made swiping the shelves feel broken on a phone. */
+    if (event.pointerType && event.pointerType !== "mouse") return;
     drag = { id: event.pointerId, x: event.clientX, startX: event.clientX, moved: false };
   });
 
@@ -715,6 +724,69 @@ function albumListeningNode(item) {
   return section;
 }
 
+/* Drag the artwork down to dismiss, the way a photo viewer does.
+
+   Only on touch, and only when the panel is already scrolled to the top: below
+   that the same gesture is how you read the writeup, so the scroller keeps it.
+   Touch events rather than pointer events because this has to be able to call
+   preventDefault to stop the scroll once it decides the drag is a dismissal,
+   and a pointermove that the browser has already turned into a scroll is no
+   longer cancelable. */
+const DISMISS_AFTER = 110;
+
+function wireSwipeDismiss(layer, art, onClose) {
+  let startY = 0;
+  let travelled = 0;
+  let owning = false;
+
+  const paint = (dy) => {
+    layer.style.transition = "none";
+    layer.style.transform = `translateY(${(dy * 0.55).toFixed(1)}px)`;
+    layer.style.opacity = String(Math.max(0.3, 1 - dy / 520));
+  };
+
+  const clear = () => {
+    layer.style.transition = "transform 0.26s var(--ease), opacity 0.26s ease";
+    layer.style.transform = "";
+    layer.style.opacity = "";
+    /* Handed back to the stylesheet once the spring has played, or the next
+       open would inherit an inline transition. */
+    setTimeout(() => {
+      layer.style.removeProperty("transition");
+    }, 300);
+  };
+
+  art.addEventListener("touchstart", (event) => {
+    if (event.touches.length !== 1) return;
+    startY = event.touches[0].clientY;
+    travelled = 0;
+    owning = layer.scrollTop <= 0;
+  }, { passive: true });
+
+  art.addEventListener("touchmove", (event) => {
+    if (!owning || event.touches.length !== 1) return;
+    travelled = event.touches[0].clientY - startY;
+    /* Dragging up is scrolling, not dismissing, so the gesture goes back. */
+    if (travelled <= 0) {
+      owning = false;
+      clear();
+      return;
+    }
+    event.preventDefault();
+    paint(travelled);
+  }, { passive: false });
+
+  const release = () => {
+    if (!owning) return;
+    owning = false;
+    const dismiss = travelled > DISMISS_AFTER;
+    clear();
+    if (dismiss) onClose();
+  };
+  art.addEventListener("touchend", release, { passive: true });
+  art.addEventListener("touchcancel", release, { passive: true });
+}
+
 /* A click on the page while focus sits inside an embed, the Spotify player or a
    YouTube trailer, is spent handing focus back to the document, so anything
    wired to `click` alone needed pressing twice to work. Acting on pointerdown
@@ -924,6 +996,8 @@ function detailNode(item) {
   const morph = el("div", "media-detail-morph");
   const object = el("figure", `media-detail-object is-${item.type}`);
   const image = el("img");
+  /* The full file, not the thumb: this is the one place the resolution is the
+     point, and it is a single image rather than a row of them. */
   image.src = item.cover;
   image.alt = `${item.title} cover`;
   image.draggable = false;
@@ -989,6 +1063,7 @@ function detailNode(item) {
   if (related) copy.append(related);
   copy.append(navigation);
   layer.append(art, copy);
+  wireSwipeDismiss(layer, art, () => closeDetail());
   return layer;
 }
 
@@ -1245,7 +1320,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-detail2");
+  const { initHero } = await import("./library-hero.js?v=library-detail3");
   initHero(items);
 }
 

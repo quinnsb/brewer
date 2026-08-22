@@ -5,7 +5,7 @@
    it is uncompressed and trivially parseable, so this needs no image-decoding
    dependency. */
 
-import { readFile, mkdtemp, rm, stat } from "node:fs/promises";
+import { readFile, mkdtemp, rm, stat, mkdir } from "node:fs/promises";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { tmpdir } from "node:os";
@@ -52,5 +52,17 @@ export function coverMeasure(root) {
     } finally {
       await rm(dir, { recursive: true, force: true });
     }
+  };
+}
+
+/* Re-encode a cover down to a shelf-sized JPEG. sips writes in place from a
+   copy, so the source is never touched. */
+export function coverEncoder(root, width) {
+  return async (cover, target) => {
+    const from = path.join(root, cover);
+    const to = path.join(root, target);
+    await mkdir(path.dirname(to), { recursive: true });
+    await run("sips", ["-Z", String(width), "-s", "format", "jpeg", "-s", "formatOptions", "78", from, "--out", to]);
+    return (await stat(to)).size;
   };
 }
