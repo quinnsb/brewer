@@ -19,14 +19,19 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { mergeItem } from "./lib/merge.mjs";
 import { applyTaxonomy } from "./lib/taxonomy.mjs";
+import { applyExternalRatings } from "./lib/external-rating.mjs";
+import { librarySchema } from "./lib/schema.mjs";
 import { applyListening } from "./lib/listening.mjs";
 import { applyWatching } from "./lib/watching.mjs";
 import { applyPalette, refreshPaletteCache } from "./lib/palette.mjs";
 import { validateLists } from "./lib/lists.mjs";
-import { applyThumbs, refreshThumbs, THUMB_WIDTH } from "./lib/thumbs.mjs";
+import { applyThumbs, refreshThumbs, THUMB_WIDTH, SHELF_WIDTH } from "./lib/thumbs.mjs";
 import { coverStat, coverMeasure, coverEncoder } from "./lib/sips.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
+/* Absolute urls for the structured data, which has to point at the live site
+   rather than at a relative path. */
+const SITE = "https://www.quinnbrewer.com";
 const RAW = path.join(ROOT, "data", "library.raw.json");
 const OUT = path.join(ROOT, "data", "library.json");
 const TAXONOMY = path.join(ROOT, "data", "library-taxonomy.json");
@@ -78,10 +83,12 @@ async function main() {
      phone. */
   const thumbs = await refreshThumbs(coloured, await readJson(THUMBS, {}), {
     stat: coverStat(ROOT),
-    encode: coverEncoder(ROOT, THUMB_WIDTH),
+    encode: coverEncoder(ROOT, THUMB_WIDTH, SHELF_WIDTH),
     onLog: (line) => console.log(line),
   });
-  const items = applyThumbs(coloured, thumbs.cache);
+  /* The outside score, lifted out of the facts table into a field the catalog
+     can actually sort on. */
+  const items = applyExternalRatings(applyThumbs(coloured, thumbs.cache));
 
   /* The lists file is not rewritten here, only checked. A structural mistake
      throws, because the page cannot render it; an id that has left the library
@@ -103,6 +110,24 @@ async function main() {
   await writeFile(PALETTE, JSON.stringify(cache, null, 2));
   await writeFile(THUMBS, JSON.stringify(thumbs.cache, null, 2));
   await writeFile(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), items }, null, 2));
+
+  /* The structured data goes into library.html itself, between the marker tags,
+     so the crawler sees it in the served HTML rather than after the JS has run.
+     Rewritten in place on every build, so it tracks the catalog by itself.
+
+     All 185 items rather than a sample. It is around 73KB of very repetitive
+     JSON, which is 9KB once the edge compresses it, so completeness is close to
+     free here. If it ever stops being free, cap it per type. */
+  const schemaFile = path.join(ROOT, "library.html");
+  const html = await readFile(schemaFile, "utf8");
+  const schema = JSON.stringify(librarySchema(items, SITE));
+  const marker = /(<script type="application\/ld\+json" data-library-schema>)[\s\S]*?(<\/script>)/;
+  if (!marker.test(html)) {
+    console.warn("  WARN  library.html has no data-library-schema tag, structured data not written");
+  } else {
+    await writeFile(schemaFile, html.replace(marker, `$1${schema}$2`));
+    console.log(`structured data -> library.html (${items.length} items, ${Math.round(schema.length / 1024)}KB)`);
+  }
 
   const reviewed = items.filter((i) => i.reviewHtml).length;
   const rated = items.filter((i) => i.rating != null).length;

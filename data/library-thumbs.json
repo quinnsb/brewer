@@ -2,926 +2,1666 @@
   "book-the-left-hand-of-darkness": {
     "fingerprint": "437269:1787345771467",
     "thumb": "images/library/thumbs/book-the-left-hand-of-darkness.jpg",
-    "bytes": 71440
+    "thumbWebp": "images/library/thumbs/book-the-left-hand-of-darkness.webp",
+    "shelfWebp": "images/library/thumbs/book-the-left-hand-of-darkness-sm.webp",
+    "bytes": 71440,
+    "webpBytes": 22486,
+    "shelfBytes": 9210
   },
   "book-gravitys-rainbow": {
     "fingerprint": "439476:1787345772696",
     "thumb": "images/library/thumbs/book-gravitys-rainbow.jpg",
-    "bytes": 81944
+    "thumbWebp": "images/library/thumbs/book-gravitys-rainbow.webp",
+    "shelfWebp": "images/library/thumbs/book-gravitys-rainbow-sm.webp",
+    "bytes": 81944,
+    "webpBytes": 29922,
+    "shelfBytes": 8634
   },
   "book-the-dispossessed": {
     "fingerprint": "130662:1787346060294",
     "thumb": "images/library/thumbs/book-the-dispossessed.jpg",
-    "bytes": 32384
+    "thumbWebp": "images/library/thumbs/book-the-dispossessed.webp",
+    "shelfWebp": "images/library/thumbs/book-the-dispossessed-sm.webp",
+    "bytes": 32384,
+    "webpBytes": 7222,
+    "shelfBytes": 3120
   },
   "book-blood-meridian": {
     "fingerprint": "1255038:1787345774224",
     "thumb": "images/library/thumbs/book-blood-meridian.jpg",
-    "bytes": 122096
+    "thumbWebp": "images/library/thumbs/book-blood-meridian.webp",
+    "shelfWebp": "images/library/thumbs/book-blood-meridian-sm.webp",
+    "bytes": 122096,
+    "webpBytes": 50094,
+    "shelfBytes": 12244
   },
   "book-housekeeping": {
     "fingerprint": "727331:1787345775423",
     "thumb": "images/library/thumbs/book-housekeeping.jpg",
-    "bytes": 109418
+    "thumbWebp": "images/library/thumbs/book-housekeeping.webp",
+    "shelfWebp": "images/library/thumbs/book-housekeeping-sm.webp",
+    "bytes": 109418,
+    "webpBytes": 42696,
+    "shelfBytes": 12254
   },
   "book-the-sellout": {
     "fingerprint": "748188:1787345776054",
     "thumb": "images/library/thumbs/book-the-sellout.jpg",
-    "bytes": 90239
+    "thumbWebp": "images/library/thumbs/book-the-sellout.webp",
+    "shelfWebp": "images/library/thumbs/book-the-sellout-sm.webp",
+    "bytes": 90239,
+    "webpBytes": 31234,
+    "shelfBytes": 3908
   },
   "book-cloud-atlas": {
     "fingerprint": "231576:1787345777097",
     "thumb": "images/library/thumbs/book-cloud-atlas.jpg",
-    "bytes": 42602
+    "thumbWebp": "images/library/thumbs/book-cloud-atlas.webp",
+    "shelfWebp": "images/library/thumbs/book-cloud-atlas-sm.webp",
+    "bytes": 42602,
+    "webpBytes": 13770,
+    "shelfBytes": 4744
   },
   "book-a-visit-from-the-goon-squad": {
     "fingerprint": "383479:1787345777539",
     "thumb": "images/library/thumbs/book-a-visit-from-the-goon-squad.jpg",
-    "bytes": 81250
+    "thumbWebp": "images/library/thumbs/book-a-visit-from-the-goon-squad.webp",
+    "shelfWebp": "images/library/thumbs/book-a-visit-from-the-goon-squad-sm.webp",
+    "bytes": 81250,
+    "webpBytes": 30376,
+    "shelfBytes": 10640
   },
   "book-piranesi": {
     "fingerprint": "687361:1787345778150",
     "thumb": "images/library/thumbs/book-piranesi.jpg",
-    "bytes": 112134
+    "thumbWebp": "images/library/thumbs/book-piranesi.webp",
+    "shelfWebp": "images/library/thumbs/book-piranesi-sm.webp",
+    "bytes": 112134,
+    "webpBytes": 48752,
+    "shelfBytes": 12852
   },
   "book-starclimber": {
     "fingerprint": "143588:1787348891969",
     "thumb": "images/library/thumbs/book-starclimber.jpg",
-    "bytes": 130102
+    "thumbWebp": "images/library/thumbs/book-starclimber.webp",
+    "shelfWebp": "images/library/thumbs/book-starclimber-sm.webp",
+    "bytes": 130102,
+    "webpBytes": 58332,
+    "shelfBytes": 14678
   },
   "book-never-let-me-go": {
     "fingerprint": "339433:1787345780248",
     "thumb": "images/library/thumbs/book-never-let-me-go.jpg",
-    "bytes": 57135
+    "thumbWebp": "images/library/thumbs/book-never-let-me-go.webp",
+    "shelfWebp": "images/library/thumbs/book-never-let-me-go-sm.webp",
+    "bytes": 57135,
+    "webpBytes": 16732,
+    "shelfBytes": 6802
   },
   "book-the-martian": {
     "fingerprint": "476588:1787345780862",
     "thumb": "images/library/thumbs/book-the-martian.jpg",
-    "bytes": 50583
+    "thumbWebp": "images/library/thumbs/book-the-martian.webp",
+    "shelfWebp": "images/library/thumbs/book-the-martian-sm.webp",
+    "bytes": 50583,
+    "webpBytes": 14064,
+    "shelfBytes": 4628
   },
   "book-the-bonesetters-daughter": {
     "fingerprint": "659409:1787345781981",
     "thumb": "images/library/thumbs/book-the-bonesetters-daughter.jpg",
-    "bytes": 104442
+    "thumbWebp": "images/library/thumbs/book-the-bonesetters-daughter.webp",
+    "shelfWebp": "images/library/thumbs/book-the-bonesetters-daughter-sm.webp",
+    "bytes": 104442,
+    "webpBytes": 42550,
+    "shelfBytes": 11556
   },
   "book-the-hobbit": {
     "fingerprint": "283933:1787345782633",
     "thumb": "images/library/thumbs/book-the-hobbit.jpg",
-    "bytes": 65250
+    "thumbWebp": "images/library/thumbs/book-the-hobbit.webp",
+    "shelfWebp": "images/library/thumbs/book-the-hobbit-sm.webp",
+    "bytes": 65250,
+    "webpBytes": 23598,
+    "shelfBytes": 9340
   },
   "book-dawn": {
     "fingerprint": "498730:1787345784063",
     "thumb": "images/library/thumbs/book-dawn.jpg",
-    "bytes": 118077
+    "thumbWebp": "images/library/thumbs/book-dawn.webp",
+    "shelfWebp": "images/library/thumbs/book-dawn-sm.webp",
+    "bytes": 118077,
+    "webpBytes": 45910,
+    "shelfBytes": 17260
   },
   "book-moby-dick": {
     "fingerprint": "276485:1787345784486",
     "thumb": "images/library/thumbs/book-moby-dick.jpg",
-    "bytes": 40032
+    "thumbWebp": "images/library/thumbs/book-moby-dick.webp",
+    "shelfWebp": "images/library/thumbs/book-moby-dick-sm.webp",
+    "bytes": 40032,
+    "webpBytes": 14618,
+    "shelfBytes": 4904
   },
   "book-things-fall-apart": {
     "fingerprint": "959403:1787345785783",
     "thumb": "images/library/thumbs/book-things-fall-apart.jpg",
-    "bytes": 161899
+    "thumbWebp": "images/library/thumbs/book-things-fall-apart.webp",
+    "shelfWebp": "images/library/thumbs/book-things-fall-apart-sm.webp",
+    "bytes": 161899,
+    "webpBytes": 84016,
+    "shelfBytes": 19370
   },
   "book-hatchet": {
     "fingerprint": "880075:1787345786890",
     "thumb": "images/library/thumbs/book-hatchet.jpg",
-    "bytes": 151658
+    "thumbWebp": "images/library/thumbs/book-hatchet.webp",
+    "shelfWebp": "images/library/thumbs/book-hatchet-sm.webp",
+    "bytes": 151658,
+    "webpBytes": 74346,
+    "shelfBytes": 19650
   },
   "book-enders-game": {
     "fingerprint": "662973:1787345788106",
     "thumb": "images/library/thumbs/book-enders-game.jpg",
-    "bytes": 107708
+    "thumbWebp": "images/library/thumbs/book-enders-game.webp",
+    "shelfWebp": "images/library/thumbs/book-enders-game-sm.webp",
+    "bytes": 107708,
+    "webpBytes": 41870,
+    "shelfBytes": 14146
   },
   "book-the-fifth-season": {
     "fingerprint": "1124521:1787348834559",
     "thumb": "images/library/thumbs/book-the-fifth-season.jpg",
-    "bytes": 158422
+    "thumbWebp": "images/library/thumbs/book-the-fifth-season.webp",
+    "shelfWebp": "images/library/thumbs/book-the-fifth-season-sm.webp",
+    "bytes": 158422,
+    "webpBytes": 84092,
+    "shelfBytes": 19984
   },
   "book-a-day-of-fallen-night": {
     "fingerprint": "1238990:1787345789427",
     "thumb": "images/library/thumbs/book-a-day-of-fallen-night.jpg",
-    "bytes": 196263
+    "thumbWebp": "images/library/thumbs/book-a-day-of-fallen-night.webp",
+    "shelfWebp": "images/library/thumbs/book-a-day-of-fallen-night-sm.webp",
+    "bytes": 196263,
+    "webpBytes": 102956,
+    "shelfBytes": 28240
   },
   "book-the-call-of-the-wild": {
     "fingerprint": "479679:1787345791098",
     "thumb": "images/library/thumbs/book-the-call-of-the-wild.jpg",
-    "bytes": 75110
+    "thumbWebp": "images/library/thumbs/book-the-call-of-the-wild.webp",
+    "shelfWebp": "images/library/thumbs/book-the-call-of-the-wild-sm.webp",
+    "bytes": 75110,
+    "webpBytes": 26174,
+    "shelfBytes": 9734
   },
   "book-the-stone-sky": {
     "fingerprint": "1284126:1787348837839",
     "thumb": "images/library/thumbs/book-the-stone-sky.jpg",
-    "bytes": 172910
+    "thumbWebp": "images/library/thumbs/book-the-stone-sky.webp",
+    "shelfWebp": "images/library/thumbs/book-the-stone-sky-sm.webp",
+    "bytes": 172910,
+    "webpBytes": 89230,
+    "shelfBytes": 21166
   },
   "book-heart-of-darkness": {
     "fingerprint": "301349:1787348859030",
     "thumb": "images/library/thumbs/book-heart-of-darkness.jpg",
-    "bytes": 69459
+    "thumbWebp": "images/library/thumbs/book-heart-of-darkness.webp",
+    "shelfWebp": "images/library/thumbs/book-heart-of-darkness-sm.webp",
+    "bytes": 69459,
+    "webpBytes": 23768,
+    "shelfBytes": 9564
   },
   "book-pretty-as-a-picture": {
     "fingerprint": "938324:1787345792597",
     "thumb": "images/library/thumbs/book-pretty-as-a-picture.jpg",
-    "bytes": 129342
+    "thumbWebp": "images/library/thumbs/book-pretty-as-a-picture.webp",
+    "shelfWebp": "images/library/thumbs/book-pretty-as-a-picture-sm.webp",
+    "bytes": 129342,
+    "webpBytes": 60054,
+    "shelfBytes": 16360
   },
   "book-ready-player-two": {
     "fingerprint": "1185900:1787345793361",
     "thumb": "images/library/thumbs/book-ready-player-two.jpg",
-    "bytes": 139507
+    "thumbWebp": "images/library/thumbs/book-ready-player-two.webp",
+    "shelfWebp": "images/library/thumbs/book-ready-player-two-sm.webp",
+    "bytes": 139507,
+    "webpBytes": 65796,
+    "shelfBytes": 16576
   },
   "book-normal-people": {
     "fingerprint": "483888:1787345794503",
     "thumb": "images/library/thumbs/book-normal-people.jpg",
-    "bytes": 92329
+    "thumbWebp": "images/library/thumbs/book-normal-people.webp",
+    "shelfWebp": "images/library/thumbs/book-normal-people-sm.webp",
+    "bytes": 92329,
+    "webpBytes": 31334,
+    "shelfBytes": 11774
   },
   "book-feed": {
     "fingerprint": "719099:1787345795641",
     "thumb": "images/library/thumbs/book-feed.jpg",
-    "bytes": 111452
+    "thumbWebp": "images/library/thumbs/book-feed.webp",
+    "shelfWebp": "images/library/thumbs/book-feed-sm.webp",
+    "bytes": 111452,
+    "webpBytes": 49030,
+    "shelfBytes": 12324
   },
   "book-the-fellowship-of-the-ring": {
     "fingerprint": "310925:1787345796442",
     "thumb": "images/library/thumbs/book-the-fellowship-of-the-ring.jpg",
-    "bytes": 67764
+    "thumbWebp": "images/library/thumbs/book-the-fellowship-of-the-ring.webp",
+    "shelfWebp": "images/library/thumbs/book-the-fellowship-of-the-ring-sm.webp",
+    "bytes": 67764,
+    "webpBytes": 26862,
+    "shelfBytes": 10164
   },
   "album-coloring-book": {
     "fingerprint": "45691:1787264151152",
     "thumb": "images/library/thumbs/album-coloring-book.jpg",
-    "bytes": 74402
+    "thumbWebp": "images/library/thumbs/album-coloring-book.webp",
+    "shelfWebp": "images/library/thumbs/album-coloring-book-sm.webp",
+    "bytes": 74402,
+    "webpBytes": 22696,
+    "shelfBytes": 8074
   },
   "album-where-the-light-is-john-mayer-live-in-los-angeles": {
     "fingerprint": "78836:1787263980056",
     "thumb": "images/library/thumbs/album-where-the-light-is-john-mayer-live-in-los-angeles.jpg",
-    "bytes": 133166
+    "thumbWebp": "images/library/thumbs/album-where-the-light-is-john-mayer-live-in-los-angeles.webp",
+    "shelfWebp": "images/library/thumbs/album-where-the-light-is-john-mayer-live-in-los-angeles-sm.webp",
+    "bytes": 133166,
+    "webpBytes": 57334,
+    "shelfBytes": 15844
   },
   "album-in-between-dreams": {
     "fingerprint": "300234:1787264428174",
     "thumb": "images/library/thumbs/album-in-between-dreams.jpg",
-    "bytes": 193494
+    "thumbWebp": "images/library/thumbs/album-in-between-dreams.webp",
+    "shelfWebp": "images/library/thumbs/album-in-between-dreams-sm.webp",
+    "bytes": 193494,
+    "webpBytes": 95550,
+    "shelfBytes": 24968
   },
   "album-blonde-on-blonde": {
     "fingerprint": "228838:1787264428671",
     "thumb": "images/library/thumbs/album-blonde-on-blonde.jpg",
-    "bytes": 123094
+    "thumbWebp": "images/library/thumbs/album-blonde-on-blonde.webp",
+    "shelfWebp": "images/library/thumbs/album-blonde-on-blonde-sm.webp",
+    "bytes": 123094,
+    "webpBytes": 38794,
+    "shelfBytes": 11796
   },
   "album-kind-of-blue": {
     "fingerprint": "61116:1787264429169",
     "thumb": "images/library/thumbs/album-kind-of-blue.jpg",
-    "bytes": 87271
+    "thumbWebp": "images/library/thumbs/album-kind-of-blue.webp",
+    "shelfWebp": "images/library/thumbs/album-kind-of-blue-sm.webp",
+    "bytes": 87271,
+    "webpBytes": 25980,
+    "shelfBytes": 7830
   },
   "album-transatlanticism": {
     "fingerprint": "231399:1787264429660",
     "thumb": "images/library/thumbs/album-transatlanticism.jpg",
-    "bytes": 121294
+    "thumbWebp": "images/library/thumbs/album-transatlanticism.webp",
+    "shelfWebp": "images/library/thumbs/album-transatlanticism-sm.webp",
+    "bytes": 121294,
+    "webpBytes": 38790,
+    "shelfBytes": 8952
   },
   "album-reading-writing-and-arithmetic": {
     "fingerprint": "442606:1787264430187",
     "thumb": "images/library/thumbs/album-reading-writing-and-arithmetic.jpg",
-    "bytes": 233101
+    "thumbWebp": "images/library/thumbs/album-reading-writing-and-arithmetic.webp",
+    "shelfWebp": "images/library/thumbs/album-reading-writing-and-arithmetic-sm.webp",
+    "bytes": 233101,
+    "webpBytes": 122476,
+    "shelfBytes": 30280
   },
   "album-night-train": {
     "fingerprint": "194127:1787264430715",
     "thumb": "images/library/thumbs/album-night-train.jpg",
-    "bytes": 95068
+    "thumbWebp": "images/library/thumbs/album-night-train.webp",
+    "shelfWebp": "images/library/thumbs/album-night-train-sm.webp",
+    "bytes": 95068,
+    "webpBytes": 24332,
+    "shelfBytes": 6234
   },
   "album-a-boy-named-charlie-brown": {
     "fingerprint": "172311:1787264431520",
     "thumb": "images/library/thumbs/album-a-boy-named-charlie-brown.jpg",
-    "bytes": 94100
+    "thumbWebp": "images/library/thumbs/album-a-boy-named-charlie-brown.webp",
+    "shelfWebp": "images/library/thumbs/album-a-boy-named-charlie-brown-sm.webp",
+    "bytes": 94100,
+    "webpBytes": 38868,
+    "shelfBytes": 12498
   },
   "album-gordon": {
     "fingerprint": "223550:1787264432003",
     "thumb": "images/library/thumbs/album-gordon.jpg",
-    "bytes": 111712
+    "thumbWebp": "images/library/thumbs/album-gordon.webp",
+    "shelfWebp": "images/library/thumbs/album-gordon-sm.webp",
+    "bytes": 111712,
+    "webpBytes": 33518,
+    "shelfBytes": 9062
   },
   "album-come-away-with-me": {
     "fingerprint": "160902:1787264432593",
     "thumb": "images/library/thumbs/album-come-away-with-me.jpg",
-    "bytes": 85028
+    "thumbWebp": "images/library/thumbs/album-come-away-with-me.webp",
+    "shelfWebp": "images/library/thumbs/album-come-away-with-me-sm.webp",
+    "bytes": 85028,
+    "webpBytes": 28414,
+    "shelfBytes": 8552
   },
   "album-mr-finish-line": {
     "fingerprint": "414359:1787264433248",
     "thumb": "images/library/thumbs/album-mr-finish-line.jpg",
-    "bytes": 168133
+    "thumbWebp": "images/library/thumbs/album-mr-finish-line.webp",
+    "shelfWebp": "images/library/thumbs/album-mr-finish-line-sm.webp",
+    "bytes": 168133,
+    "webpBytes": 73702,
+    "shelfBytes": 9056
   },
   "album-magic": {
     "fingerprint": "303601:1787281365943",
     "thumb": "images/library/thumbs/album-magic.jpg",
-    "bytes": 112532
+    "thumbWebp": "images/library/thumbs/album-magic.webp",
+    "shelfWebp": "images/library/thumbs/album-magic-sm.webp",
+    "bytes": 112532,
+    "webpBytes": 28352,
+    "shelfBytes": 5856
   },
   "album-messy": {
     "fingerprint": "190780:1787281366520",
     "thumb": "images/library/thumbs/album-messy.jpg",
-    "bytes": 83510
+    "thumbWebp": "images/library/thumbs/album-messy.webp",
+    "shelfWebp": "images/library/thumbs/album-messy-sm.webp",
+    "bytes": 83510,
+    "webpBytes": 18610,
+    "shelfBytes": 6018
   },
   "album-plans": {
     "fingerprint": "183445:1787281367121",
     "thumb": "images/library/thumbs/album-plans.jpg",
-    "bytes": 94519
+    "thumbWebp": "images/library/thumbs/album-plans.webp",
+    "shelfWebp": "images/library/thumbs/album-plans-sm.webp",
+    "bytes": 94519,
+    "webpBytes": 31518,
+    "shelfBytes": 7854
   },
   "album-thriller": {
     "fingerprint": "243715:1787281367714",
     "thumb": "images/library/thumbs/album-thriller.jpg",
-    "bytes": 113883
+    "thumbWebp": "images/library/thumbs/album-thriller.webp",
+    "shelfWebp": "images/library/thumbs/album-thriller-sm.webp",
+    "bytes": 113883,
+    "webpBytes": 38706,
+    "shelfBytes": 10908
   },
   "album-sound-of-silver": {
     "fingerprint": "158217:1787281368390",
     "thumb": "images/library/thumbs/album-sound-of-silver.jpg",
-    "bytes": 94788
+    "thumbWebp": "images/library/thumbs/album-sound-of-silver.webp",
+    "shelfWebp": "images/library/thumbs/album-sound-of-silver-sm.webp",
+    "bytes": 94788,
+    "webpBytes": 37504,
+    "shelfBytes": 13284
   },
   "album-songs-in-the-key-of-life": {
     "fingerprint": "245487:1787281369033",
     "thumb": "images/library/thumbs/album-songs-in-the-key-of-life.jpg",
-    "bytes": 127400
+    "thumbWebp": "images/library/thumbs/album-songs-in-the-key-of-life.webp",
+    "shelfWebp": "images/library/thumbs/album-songs-in-the-key-of-life-sm.webp",
+    "bytes": 127400,
+    "webpBytes": 41514,
+    "shelfBytes": 13022
   },
   "album-the-crux": {
     "fingerprint": "448115:1787281489797",
     "thumb": "images/library/thumbs/album-the-crux.jpg",
-    "bytes": 209165
+    "thumbWebp": "images/library/thumbs/album-the-crux.webp",
+    "shelfWebp": "images/library/thumbs/album-the-crux-sm.webp",
+    "bytes": 209165,
+    "webpBytes": 98304,
+    "shelfBytes": 22524
   },
   "album-upstairs-at-erics": {
     "fingerprint": "282675:1787281399428",
     "thumb": "images/library/thumbs/album-upstairs-at-erics.jpg",
-    "bytes": 141430
+    "thumbWebp": "images/library/thumbs/album-upstairs-at-erics.webp",
+    "shelfWebp": "images/library/thumbs/album-upstairs-at-erics-sm.webp",
+    "bytes": 141430,
+    "webpBytes": 48982,
+    "shelfBytes": 13706
   },
   "album-talon-of-the-hawk": {
     "fingerprint": "105065:1787281400017",
     "thumb": "images/library/thumbs/album-talon-of-the-hawk.jpg",
-    "bytes": 56485
+    "thumbWebp": "images/library/thumbs/album-talon-of-the-hawk.webp",
+    "shelfWebp": "images/library/thumbs/album-talon-of-the-hawk-sm.webp",
+    "bytes": 56485,
+    "webpBytes": 22548,
+    "shelfBytes": 6050
   },
   "album-the-joshua-tree": {
     "fingerprint": "138648:1787281400598",
     "thumb": "images/library/thumbs/album-the-joshua-tree.jpg",
-    "bytes": 70183
+    "thumbWebp": "images/library/thumbs/album-the-joshua-tree.webp",
+    "shelfWebp": "images/library/thumbs/album-the-joshua-tree-sm.webp",
+    "bytes": 70183,
+    "webpBytes": 25128,
+    "shelfBytes": 5922
   },
   "album-charm": {
     "fingerprint": "270592:1787281401199",
     "thumb": "images/library/thumbs/album-charm.jpg",
-    "bytes": 144767
+    "thumbWebp": "images/library/thumbs/album-charm.webp",
+    "shelfWebp": "images/library/thumbs/album-charm-sm.webp",
+    "bytes": 144767,
+    "webpBytes": 55448,
+    "shelfBytes": 10496
   },
   "album-jackson-square": {
     "fingerprint": "71598:1787281407221",
     "thumb": "images/library/thumbs/album-jackson-square.jpg",
-    "bytes": 125840
+    "thumbWebp": "images/library/thumbs/album-jackson-square.webp",
+    "shelfWebp": "images/library/thumbs/album-jackson-square-sm.webp",
+    "bytes": 125840,
+    "webpBytes": 46146,
+    "shelfBytes": 14370
   },
   "album-funeral": {
     "fingerprint": "315926:1787281408140",
     "thumb": "images/library/thumbs/album-funeral.jpg",
-    "bytes": 167973
+    "thumbWebp": "images/library/thumbs/album-funeral.webp",
+    "shelfWebp": "images/library/thumbs/album-funeral-sm.webp",
+    "bytes": 167973,
+    "webpBytes": 70494,
+    "shelfBytes": 16642
   },
   "film-there-will-be-blood": {
     "fingerprint": "411522:1787346061395",
     "thumb": "images/library/thumbs/film-there-will-be-blood.jpg",
-    "bytes": 62705
+    "thumbWebp": "images/library/thumbs/film-there-will-be-blood.webp",
+    "shelfWebp": "images/library/thumbs/film-there-will-be-blood-sm.webp",
+    "bytes": 62705,
+    "webpBytes": 25392,
+    "shelfBytes": 7552
   },
   "film-in-the-mood-for-love": {
     "fingerprint": "328607:1787346061883",
     "thumb": "images/library/thumbs/film-in-the-mood-for-love.jpg",
-    "bytes": 109837
+    "thumbWebp": "images/library/thumbs/film-in-the-mood-for-love.webp",
+    "shelfWebp": "images/library/thumbs/film-in-the-mood-for-love-sm.webp",
+    "bytes": 109837,
+    "webpBytes": 50540,
+    "shelfBytes": 11548
   },
   "film-paris-texas-film": {
     "fingerprint": "227378:1787346030852",
     "thumb": "images/library/thumbs/film-paris-texas-film.jpg",
-    "bytes": 69592
+    "thumbWebp": "images/library/thumbs/film-paris-texas-film.webp",
+    "shelfWebp": "images/library/thumbs/film-paris-texas-film-sm.webp",
+    "bytes": 69592,
+    "webpBytes": 29878,
+    "shelfBytes": 8872
   },
   "film-burning-2018-film": {
     "fingerprint": "732769:1787346031381",
     "thumb": "images/library/thumbs/film-burning-2018-film.jpg",
-    "bytes": 48101
+    "thumbWebp": "images/library/thumbs/film-burning-2018-film.webp",
+    "shelfWebp": "images/library/thumbs/film-burning-2018-film-sm.webp",
+    "bytes": 48101,
+    "webpBytes": 10820,
+    "shelfBytes": 3674
   },
   "film-the-master-2012-film": {
     "fingerprint": "499343:1787346031894",
     "thumb": "images/library/thumbs/film-the-master-2012-film.jpg",
-    "bytes": 83364
+    "thumbWebp": "images/library/thumbs/film-the-master-2012-film.webp",
+    "shelfWebp": "images/library/thumbs/film-the-master-2012-film-sm.webp",
+    "bytes": 83364,
+    "webpBytes": 35000,
+    "shelfBytes": 9598
   },
   "film-moonlight": {
     "fingerprint": "1244438:1787363011242",
     "thumb": "images/library/thumbs/film-moonlight.jpg",
-    "bytes": 82581
+    "thumbWebp": "images/library/thumbs/film-moonlight.webp",
+    "shelfWebp": "images/library/thumbs/film-moonlight-sm.webp",
+    "bytes": 82581,
+    "webpBytes": 31106,
+    "shelfBytes": 7348
   },
   "film-chungking-express": {
     "fingerprint": "216171:1787346032367",
     "thumb": "images/library/thumbs/film-chungking-express.jpg",
-    "bytes": 80399
+    "thumbWebp": "images/library/thumbs/film-chungking-express.webp",
+    "shelfWebp": "images/library/thumbs/film-chungking-express-sm.webp",
+    "bytes": 80399,
+    "webpBytes": 23456,
+    "shelfBytes": 6106
   },
   "film-first-reformed": {
     "fingerprint": "214406:1787346032819",
     "thumb": "images/library/thumbs/film-first-reformed.jpg",
-    "bytes": 31941
+    "thumbWebp": "images/library/thumbs/film-first-reformed.webp",
+    "shelfWebp": "images/library/thumbs/film-first-reformed-sm.webp",
+    "bytes": 31941,
+    "webpBytes": 8964,
+    "shelfBytes": 3212
   },
   "film-ferris-buellers-day-off": {
     "fingerprint": "584463:1787346033300",
     "thumb": "images/library/thumbs/film-ferris-buellers-day-off.jpg",
-    "bytes": 92364
+    "thumbWebp": "images/library/thumbs/film-ferris-buellers-day-off.webp",
+    "shelfWebp": "images/library/thumbs/film-ferris-buellers-day-off-sm.webp",
+    "bytes": 92364,
+    "webpBytes": 40394,
+    "shelfBytes": 12154
   },
   "film-the-empire-strikes-back": {
     "fingerprint": "365138:1787346033790",
     "thumb": "images/library/thumbs/film-the-empire-strikes-back.jpg",
-    "bytes": 107690
+    "thumbWebp": "images/library/thumbs/film-the-empire-strikes-back.webp",
+    "shelfWebp": "images/library/thumbs/film-the-empire-strikes-back-sm.webp",
+    "bytes": 107690,
+    "webpBytes": 49230,
+    "shelfBytes": 12410
   },
   "film-moonrise-kingdom": {
     "fingerprint": "499119:1787346034264",
     "thumb": "images/library/thumbs/film-moonrise-kingdom.jpg",
-    "bytes": 100489
+    "thumbWebp": "images/library/thumbs/film-moonrise-kingdom.webp",
+    "shelfWebp": "images/library/thumbs/film-moonrise-kingdom-sm.webp",
+    "bytes": 100489,
+    "webpBytes": 44580,
+    "shelfBytes": 12590
   },
   "film-oceans-eleven": {
     "fingerprint": "273769:1787346034739",
     "thumb": "images/library/thumbs/film-oceans-eleven.jpg",
-    "bytes": 62201
+    "thumbWebp": "images/library/thumbs/film-oceans-eleven.webp",
+    "shelfWebp": "images/library/thumbs/film-oceans-eleven-sm.webp",
+    "bytes": 62201,
+    "webpBytes": 21536,
+    "shelfBytes": 8900
   },
   "film-mission-impossible-fallout": {
     "fingerprint": "992446:1787346035281",
     "thumb": "images/library/thumbs/film-mission-impossible-fallout.jpg",
-    "bytes": 86137
+    "thumbWebp": "images/library/thumbs/film-mission-impossible-fallout.webp",
+    "shelfWebp": "images/library/thumbs/film-mission-impossible-fallout-sm.webp",
+    "bytes": 86137,
+    "webpBytes": 36852,
+    "shelfBytes": 12038
   },
   "film-kikis-delivery-service": {
     "fingerprint": "597453:1787346035758",
     "thumb": "images/library/thumbs/film-kikis-delivery-service.jpg",
-    "bytes": 79842
+    "thumbWebp": "images/library/thumbs/film-kikis-delivery-service.webp",
+    "shelfWebp": "images/library/thumbs/film-kikis-delivery-service-sm.webp",
+    "bytes": 79842,
+    "webpBytes": 30132,
+    "shelfBytes": 9658
   },
   "film-la-la-land": {
     "fingerprint": "560171:1787346036235",
     "thumb": "images/library/thumbs/film-la-la-land.jpg",
-    "bytes": 55804
+    "thumbWebp": "images/library/thumbs/film-la-la-land.webp",
+    "shelfWebp": "images/library/thumbs/film-la-la-land-sm.webp",
+    "bytes": 55804,
+    "webpBytes": 17254,
+    "shelfBytes": 5106
   },
   "film-treasure-planet": {
     "fingerprint": "246639:1787346036699",
     "thumb": "images/library/thumbs/film-treasure-planet.jpg",
-    "bytes": 87978
+    "thumbWebp": "images/library/thumbs/film-treasure-planet.webp",
+    "shelfWebp": "images/library/thumbs/film-treasure-planet-sm.webp",
+    "bytes": 87978,
+    "webpBytes": 31364,
+    "shelfBytes": 9690
   },
   "film-a-goofy-movie": {
     "fingerprint": "726760:1787346037222",
     "thumb": "images/library/thumbs/film-a-goofy-movie.jpg",
-    "bytes": 111766
+    "thumbWebp": "images/library/thumbs/film-a-goofy-movie.webp",
+    "shelfWebp": "images/library/thumbs/film-a-goofy-movie-sm.webp",
+    "bytes": 111766,
+    "webpBytes": 49632,
+    "shelfBytes": 15720
   },
   "film-meet-the-robinsons": {
     "fingerprint": "317940:1787346037682",
     "thumb": "images/library/thumbs/film-meet-the-robinsons.jpg",
-    "bytes": 101908
+    "thumbWebp": "images/library/thumbs/film-meet-the-robinsons.webp",
+    "shelfWebp": "images/library/thumbs/film-meet-the-robinsons-sm.webp",
+    "bytes": 101908,
+    "webpBytes": 46984,
+    "shelfBytes": 13736
   },
   "other-99-invisible": {
     "fingerprint": "102979:1787264440566",
     "thumb": "images/library/thumbs/other-99-invisible.jpg",
-    "bytes": 62809
+    "thumbWebp": "images/library/thumbs/other-99-invisible.webp",
+    "shelfWebp": "images/library/thumbs/other-99-invisible-sm.webp",
+    "bytes": 62809,
+    "webpBytes": 10844,
+    "shelfBytes": 5254
   },
   "other-design-matters-with-debbie-millman": {
     "fingerprint": "96623:1787264440941",
     "thumb": "images/library/thumbs/other-design-matters-with-debbie-millman.jpg",
-    "bytes": 62200
+    "thumbWebp": "images/library/thumbs/other-design-matters-with-debbie-millman.webp",
+    "shelfWebp": "images/library/thumbs/other-design-matters-with-debbie-millman-sm.webp",
+    "bytes": 62200,
+    "webpBytes": 16702,
+    "shelfBytes": 8302
   },
   "other-song-exploder": {
     "fingerprint": "63126:1787264441601",
     "thumb": "images/library/thumbs/other-song-exploder.jpg",
-    "bytes": 39407
+    "thumbWebp": "images/library/thumbs/other-song-exploder.webp",
+    "shelfWebp": "images/library/thumbs/other-song-exploder-sm.webp",
+    "bytes": 39407,
+    "webpBytes": 10338,
+    "shelfBytes": 4084
   },
   "other-the-rest-is-history": {
     "fingerprint": "353597:1787264441956",
     "thumb": "images/library/thumbs/other-the-rest-is-history.jpg",
-    "bytes": 177542
+    "thumbWebp": "images/library/thumbs/other-the-rest-is-history.webp",
+    "shelfWebp": "images/library/thumbs/other-the-rest-is-history-sm.webp",
+    "bytes": 177542,
+    "webpBytes": 85996,
+    "shelfBytes": 16590
   },
   "other-the-big-picture": {
     "fingerprint": "110518:1787270910182",
     "thumb": "images/library/thumbs/other-the-big-picture.jpg",
-    "bytes": 65611
+    "thumbWebp": "images/library/thumbs/other-the-big-picture.webp",
+    "shelfWebp": "images/library/thumbs/other-the-big-picture-sm.webp",
+    "bytes": 65611,
+    "webpBytes": 20816,
+    "shelfBytes": 8522
   },
   "other-radio-ambulante": {
     "fingerprint": "101376:1787270911088",
     "thumb": "images/library/thumbs/other-radio-ambulante.jpg",
-    "bytes": 63454
+    "thumbWebp": "images/library/thumbs/other-radio-ambulante.webp",
+    "shelfWebp": "images/library/thumbs/other-radio-ambulante-sm.webp",
+    "bytes": 63454,
+    "webpBytes": 19460,
+    "shelfBytes": 8128
   },
   "other-the-anthropocene-reviewed": {
     "fingerprint": "81590:1787270912343",
     "thumb": "images/library/thumbs/other-the-anthropocene-reviewed.jpg",
-    "bytes": 49978
+    "thumbWebp": "images/library/thumbs/other-the-anthropocene-reviewed.webp",
+    "shelfWebp": "images/library/thumbs/other-the-anthropocene-reviewed-sm.webp",
+    "bytes": 49978,
+    "webpBytes": 14324,
+    "shelfBytes": 6086
   },
   "other-my-brother-my-brother-and-me": {
     "fingerprint": "210991:1787270913372",
     "thumb": "images/library/thumbs/other-my-brother-my-brother-and-me.jpg",
-    "bytes": 115314
+    "thumbWebp": "images/library/thumbs/other-my-brother-my-brother-and-me.webp",
+    "shelfWebp": "images/library/thumbs/other-my-brother-my-brother-and-me-sm.webp",
+    "bytes": 115314,
+    "webpBytes": 36112,
+    "shelfBytes": 13194
   },
   "other-the-adventure-zone": {
     "fingerprint": "313776:1787270914590",
     "thumb": "images/library/thumbs/other-the-adventure-zone.jpg",
-    "bytes": 168581
+    "thumbWebp": "images/library/thumbs/other-the-adventure-zone.webp",
+    "shelfWebp": "images/library/thumbs/other-the-adventure-zone-sm.webp",
+    "bytes": 168581,
+    "webpBytes": 65558,
+    "shelfBytes": 19954
   },
   "other-wonderful": {
     "fingerprint": "255240:1787270915246",
     "thumb": "images/library/thumbs/other-wonderful.jpg",
-    "bytes": 144892
+    "thumbWebp": "images/library/thumbs/other-wonderful.webp",
+    "shelfWebp": "images/library/thumbs/other-wonderful-sm.webp",
+    "bytes": 144892,
+    "webpBytes": 53660,
+    "shelfBytes": 19148
   },
   "other-the-besties": {
     "fingerprint": "85716:1787270915999",
     "thumb": "images/library/thumbs/other-the-besties.jpg",
-    "bytes": 51250
+    "thumbWebp": "images/library/thumbs/other-the-besties.webp",
+    "shelfWebp": "images/library/thumbs/other-the-besties-sm.webp",
+    "bytes": 51250,
+    "webpBytes": 17242,
+    "shelfBytes": 6718
   },
   "other-revisionist-history": {
     "fingerprint": "383089:1787271193052",
     "thumb": "images/library/thumbs/other-revisionist-history.jpg",
-    "bytes": 172996
+    "thumbWebp": "images/library/thumbs/other-revisionist-history.webp",
+    "shelfWebp": "images/library/thumbs/other-revisionist-history-sm.webp",
+    "bytes": 172996,
+    "webpBytes": 73410,
+    "shelfBytes": 16340
   },
   "book-dune": {
     "fingerprint": "280596:1787348724793",
     "thumb": "images/library/thumbs/book-dune.jpg",
-    "bytes": 45451
+    "thumbWebp": "images/library/thumbs/book-dune.webp",
+    "shelfWebp": "images/library/thumbs/book-dune-sm.webp",
+    "bytes": 45451,
+    "webpBytes": 13560,
+    "shelfBytes": 4540
   },
   "book-project-hail-mary": {
     "fingerprint": "819956:1787348724794",
     "thumb": "images/library/thumbs/book-project-hail-mary.jpg",
-    "bytes": 110285
+    "thumbWebp": "images/library/thumbs/book-project-hail-mary.webp",
+    "shelfWebp": "images/library/thumbs/book-project-hail-mary-sm.webp",
+    "bytes": 110285,
+    "webpBytes": 43024,
+    "shelfBytes": 13744
   },
   "book-the-way-of-kings": {
     "fingerprint": "804126:1787348724794",
     "thumb": "images/library/thumbs/book-the-way-of-kings.jpg",
-    "bytes": 107061
+    "thumbWebp": "images/library/thumbs/book-the-way-of-kings.webp",
+    "shelfWebp": "images/library/thumbs/book-the-way-of-kings-sm.webp",
+    "bytes": 107061,
+    "webpBytes": 42560,
+    "shelfBytes": 13852
   },
   "book-song-of-solomon": {
     "fingerprint": "314951:1787348724795",
     "thumb": "images/library/thumbs/book-song-of-solomon.jpg",
-    "bytes": 79933
+    "thumbWebp": "images/library/thumbs/book-song-of-solomon.webp",
+    "shelfWebp": "images/library/thumbs/book-song-of-solomon-sm.webp",
+    "bytes": 79933,
+    "webpBytes": 28230,
+    "shelfBytes": 11058
   },
   "book-tomorrow-and-tomorrow-and-tomorrow": {
     "fingerprint": "992418:1787348724795",
     "thumb": "images/library/thumbs/book-tomorrow-and-tomorrow-and-tomorrow.jpg",
-    "bytes": 170620
+    "thumbWebp": "images/library/thumbs/book-tomorrow-and-tomorrow-and-tomorrow.webp",
+    "shelfWebp": "images/library/thumbs/book-tomorrow-and-tomorrow-and-tomorrow-sm.webp",
+    "bytes": 170620,
+    "webpBytes": 77496,
+    "shelfBytes": 22934
   },
   "book-norwegian-wood": {
     "fingerprint": "299491:1787348724795",
     "thumb": "images/library/thumbs/book-norwegian-wood.jpg",
-    "bytes": 56984
+    "thumbWebp": "images/library/thumbs/book-norwegian-wood.webp",
+    "shelfWebp": "images/library/thumbs/book-norwegian-wood-sm.webp",
+    "bytes": 56984,
+    "webpBytes": 18432,
+    "shelfBytes": 7018
   },
   "book-the-song-of-achilles": {
     "fingerprint": "793518:1787348724796",
     "thumb": "images/library/thumbs/book-the-song-of-achilles.jpg",
-    "bytes": 116495
+    "thumbWebp": "images/library/thumbs/book-the-song-of-achilles.webp",
+    "shelfWebp": "images/library/thumbs/book-the-song-of-achilles-sm.webp",
+    "bytes": 116495,
+    "webpBytes": 49064,
+    "shelfBytes": 13144
   },
   "book-lincoln-in-the-bardo": {
     "fingerprint": "1556718:1787348724796",
     "thumb": "images/library/thumbs/book-lincoln-in-the-bardo.jpg",
-    "bytes": 174402
+    "thumbWebp": "images/library/thumbs/book-lincoln-in-the-bardo.webp",
+    "shelfWebp": "images/library/thumbs/book-lincoln-in-the-bardo-sm.webp",
+    "bytes": 174402,
+    "webpBytes": 92612,
+    "shelfBytes": 20042
   },
   "book-narrative-of-the-life-of-frederick-douglass": {
     "fingerprint": "256529:1787348724796",
     "thumb": "images/library/thumbs/book-narrative-of-the-life-of-frederick-douglass.jpg",
-    "bytes": 52565
+    "thumbWebp": "images/library/thumbs/book-narrative-of-the-life-of-frederick-douglass.webp",
+    "shelfWebp": "images/library/thumbs/book-narrative-of-the-life-of-frederick-douglass-sm.webp",
+    "bytes": 52565,
+    "webpBytes": 19834,
+    "shelfBytes": 7682
   },
   "book-the-nightingale": {
     "fingerprint": "665423:1787348724797",
     "thumb": "images/library/thumbs/book-the-nightingale.jpg",
-    "bytes": 110173
+    "thumbWebp": "images/library/thumbs/book-the-nightingale.webp",
+    "shelfWebp": "images/library/thumbs/book-the-nightingale-sm.webp",
+    "bytes": 110173,
+    "webpBytes": 46592,
+    "shelfBytes": 11884
   },
   "book-go-tell-it-on-the-mountain": {
     "fingerprint": "612354:1787348724797",
     "thumb": "images/library/thumbs/book-go-tell-it-on-the-mountain.jpg",
-    "bytes": 84757
+    "thumbWebp": "images/library/thumbs/book-go-tell-it-on-the-mountain.webp",
+    "shelfWebp": "images/library/thumbs/book-go-tell-it-on-the-mountain-sm.webp",
+    "bytes": 84757,
+    "webpBytes": 32066,
+    "shelfBytes": 9482
   },
   "book-of-mice-and-men": {
     "fingerprint": "251266:1787348724797",
     "thumb": "images/library/thumbs/book-of-mice-and-men.jpg",
-    "bytes": 45766
+    "thumbWebp": "images/library/thumbs/book-of-mice-and-men.webp",
+    "shelfWebp": "images/library/thumbs/book-of-mice-and-men-sm.webp",
+    "bytes": 45766,
+    "webpBytes": 13254,
+    "shelfBytes": 4904
   },
   "book-on-writing": {
     "fingerprint": "398090:1787348724800",
     "thumb": "images/library/thumbs/book-on-writing.jpg",
-    "bytes": 69262
+    "thumbWebp": "images/library/thumbs/book-on-writing.webp",
+    "shelfWebp": "images/library/thumbs/book-on-writing-sm.webp",
+    "bytes": 69262,
+    "webpBytes": 25300,
+    "shelfBytes": 9012
   },
   "book-dark-matter": {
     "fingerprint": "455997:1787348724800",
     "thumb": "images/library/thumbs/book-dark-matter.jpg",
-    "bytes": 89525
+    "thumbWebp": "images/library/thumbs/book-dark-matter.webp",
+    "shelfWebp": "images/library/thumbs/book-dark-matter-sm.webp",
+    "bytes": 89525,
+    "webpBytes": 31422,
+    "shelfBytes": 11230
   },
   "film-spider-man-brand-new-day": {
     "fingerprint": "243059:1787364136321",
     "thumb": "images/library/thumbs/film-spider-man-brand-new-day.jpg",
-    "bytes": 98201
+    "thumbWebp": "images/library/thumbs/film-spider-man-brand-new-day.webp",
+    "shelfWebp": "images/library/thumbs/film-spider-man-brand-new-day-sm.webp",
+    "bytes": 98201,
+    "webpBytes": 38184,
+    "shelfBytes": 10232
   },
   "film-the-odyssey": {
     "fingerprint": "149025:1787364136322",
     "thumb": "images/library/thumbs/film-the-odyssey.jpg",
-    "bytes": 64682
+    "thumbWebp": "images/library/thumbs/film-the-odyssey.webp",
+    "shelfWebp": "images/library/thumbs/film-the-odyssey-sm.webp",
+    "bytes": 64682,
+    "webpBytes": 16624,
+    "shelfBytes": 5324
   },
   "film-disclosure-day": {
     "fingerprint": "148882:1787364136323",
     "thumb": "images/library/thumbs/film-disclosure-day.jpg",
-    "bytes": 67354
+    "thumbWebp": "images/library/thumbs/film-disclosure-day.webp",
+    "shelfWebp": "images/library/thumbs/film-disclosure-day-sm.webp",
+    "bytes": 67354,
+    "webpBytes": 17528,
+    "shelfBytes": 4490
   },
   "film-the-mandalorian-and-grogu": {
     "fingerprint": "278933:1787364136324",
     "thumb": "images/library/thumbs/film-the-mandalorian-and-grogu.jpg",
-    "bytes": 109800
+    "thumbWebp": "images/library/thumbs/film-the-mandalorian-and-grogu.webp",
+    "shelfWebp": "images/library/thumbs/film-the-mandalorian-and-grogu-sm.webp",
+    "bytes": 109800,
+    "webpBytes": 45988,
+    "shelfBytes": 12070
   },
   "film-backrooms": {
     "fingerprint": "103937:1787364136325",
     "thumb": "images/library/thumbs/film-backrooms.jpg",
-    "bytes": 52929
+    "thumbWebp": "images/library/thumbs/film-backrooms.webp",
+    "shelfWebp": "images/library/thumbs/film-backrooms-sm.webp",
+    "bytes": 52929,
+    "webpBytes": 11922,
+    "shelfBytes": 3678
   },
   "film-the-devil-wears-prada-2": {
     "fingerprint": "104605:1787364136325",
     "thumb": "images/library/thumbs/film-the-devil-wears-prada-2.jpg",
-    "bytes": 52713
+    "thumbWebp": "images/library/thumbs/film-the-devil-wears-prada-2.webp",
+    "shelfWebp": "images/library/thumbs/film-the-devil-wears-prada-2-sm.webp",
+    "bytes": 52713,
+    "webpBytes": 19052,
+    "shelfBytes": 6978
   },
   "film-michael": {
     "fingerprint": "250332:1787364136326",
     "thumb": "images/library/thumbs/film-michael.jpg",
-    "bytes": 99989
+    "thumbWebp": "images/library/thumbs/film-michael.webp",
+    "shelfWebp": "images/library/thumbs/film-michael-sm.webp",
+    "bytes": 99989,
+    "webpBytes": 37102,
+    "shelfBytes": 10644
   },
   "film-the-drama": {
     "fingerprint": "209193:1787364136326",
     "thumb": "images/library/thumbs/film-the-drama.jpg",
-    "bytes": 100949
+    "thumbWebp": "images/library/thumbs/film-the-drama.webp",
+    "shelfWebp": "images/library/thumbs/film-the-drama-sm.webp",
+    "bytes": 100949,
+    "webpBytes": 34396,
+    "shelfBytes": 9132
   },
   "film-project-hail-mary": {
     "fingerprint": "171053:1787364136327",
     "thumb": "images/library/thumbs/film-project-hail-mary.jpg",
-    "bytes": 93497
+    "thumbWebp": "images/library/thumbs/film-project-hail-mary.webp",
+    "shelfWebp": "images/library/thumbs/film-project-hail-mary-sm.webp",
+    "bytes": 93497,
+    "webpBytes": 33140,
+    "shelfBytes": 10214
   },
   "film-marty-supreme": {
     "fingerprint": "153621:1787364136327",
     "thumb": "images/library/thumbs/film-marty-supreme.jpg",
-    "bytes": 78630
+    "thumbWebp": "images/library/thumbs/film-marty-supreme.webp",
+    "shelfWebp": "images/library/thumbs/film-marty-supreme-sm.webp",
+    "bytes": 78630,
+    "webpBytes": 22794,
+    "shelfBytes": 6936
   },
   "film-one-battle-after-another": {
     "fingerprint": "184571:1787364136328",
     "thumb": "images/library/thumbs/film-one-battle-after-another.jpg",
-    "bytes": 104313
+    "thumbWebp": "images/library/thumbs/film-one-battle-after-another.webp",
+    "shelfWebp": "images/library/thumbs/film-one-battle-after-another-sm.webp",
+    "bytes": 104313,
+    "webpBytes": 41530,
+    "shelfBytes": 11834
   },
   "film-obsession": {
     "fingerprint": "75407:1787364136328",
     "thumb": "images/library/thumbs/film-obsession.jpg",
-    "bytes": 47085
+    "thumbWebp": "images/library/thumbs/film-obsession.webp",
+    "shelfWebp": "images/library/thumbs/film-obsession-sm.webp",
+    "bytes": 47085,
+    "webpBytes": 13326,
+    "shelfBytes": 4520
   },
   "film-wake-up-dead-man": {
     "fingerprint": "151039:1787364136329",
     "thumb": "images/library/thumbs/film-wake-up-dead-man.jpg",
-    "bytes": 76048
+    "thumbWebp": "images/library/thumbs/film-wake-up-dead-man.webp",
+    "shelfWebp": "images/library/thumbs/film-wake-up-dead-man-sm.webp",
+    "bytes": 76048,
+    "webpBytes": 32920,
+    "shelfBytes": 9158
   },
   "film-kpop-demon-hunters": {
     "fingerprint": "204922:1787364136329",
     "thumb": "images/library/thumbs/film-kpop-demon-hunters.jpg",
-    "bytes": 106358
+    "thumbWebp": "images/library/thumbs/film-kpop-demon-hunters.webp",
+    "shelfWebp": "images/library/thumbs/film-kpop-demon-hunters-sm.webp",
+    "bytes": 106358,
+    "webpBytes": 44358,
+    "shelfBytes": 13628
   },
   "film-superman": {
     "fingerprint": "152336:1787364136330",
     "thumb": "images/library/thumbs/film-superman.jpg",
-    "bytes": 76335
+    "thumbWebp": "images/library/thumbs/film-superman.webp",
+    "shelfWebp": "images/library/thumbs/film-superman-sm.webp",
+    "bytes": 76335,
+    "webpBytes": 29068,
+    "shelfBytes": 8012
   },
   "film-f1": {
     "fingerprint": "125457:1787364136330",
     "thumb": "images/library/thumbs/film-f1.jpg",
-    "bytes": 58563
+    "thumbWebp": "images/library/thumbs/film-f1.webp",
+    "shelfWebp": "images/library/thumbs/film-f1-sm.webp",
+    "bytes": 58563,
+    "webpBytes": 16280,
+    "shelfBytes": 4874
   },
   "film-mission-impossible-the-final-reckoning": {
     "fingerprint": "194957:1787364136331",
     "thumb": "images/library/thumbs/film-mission-impossible-the-final-reckoning.jpg",
-    "bytes": 97999
+    "thumbWebp": "images/library/thumbs/film-mission-impossible-the-final-reckoning.webp",
+    "shelfWebp": "images/library/thumbs/film-mission-impossible-the-final-reckoning-sm.webp",
+    "bytes": 97999,
+    "webpBytes": 37110,
+    "shelfBytes": 12300
   },
   "film-thunderbolts": {
     "fingerprint": "243877:1787364136331",
     "thumb": "images/library/thumbs/film-thunderbolts.jpg",
-    "bytes": 114417
+    "thumbWebp": "images/library/thumbs/film-thunderbolts.webp",
+    "shelfWebp": "images/library/thumbs/film-thunderbolts-sm.webp",
+    "bytes": 114417,
+    "webpBytes": 55192,
+    "shelfBytes": 13844
   },
   "film-sinners": {
     "fingerprint": "124786:1787364136332",
     "thumb": "images/library/thumbs/film-sinners.jpg",
-    "bytes": 72755
+    "thumbWebp": "images/library/thumbs/film-sinners.webp",
+    "shelfWebp": "images/library/thumbs/film-sinners-sm.webp",
+    "bytes": 72755,
+    "webpBytes": 24320,
+    "shelfBytes": 5948
   },
   "film-black-bag": {
     "fingerprint": "304306:1787364136332",
     "thumb": "images/library/thumbs/film-black-bag.jpg",
-    "bytes": 121948
+    "thumbWebp": "images/library/thumbs/film-black-bag.webp",
+    "shelfWebp": "images/library/thumbs/film-black-bag-sm.webp",
+    "bytes": 121948,
+    "webpBytes": 51778,
+    "shelfBytes": 13410
   },
   "film-friendship": {
     "fingerprint": "128503:1787364136333",
     "thumb": "images/library/thumbs/film-friendship.jpg",
-    "bytes": 70449
+    "thumbWebp": "images/library/thumbs/film-friendship.webp",
+    "shelfWebp": "images/library/thumbs/film-friendship-sm.webp",
+    "bytes": 70449,
+    "webpBytes": 22790,
+    "shelfBytes": 7934
   },
   "film-conclave": {
     "fingerprint": "122140:1787364136333",
     "thumb": "images/library/thumbs/film-conclave.jpg",
-    "bytes": 58216
+    "thumbWebp": "images/library/thumbs/film-conclave.webp",
+    "shelfWebp": "images/library/thumbs/film-conclave-sm.webp",
+    "bytes": 58216,
+    "webpBytes": 18614,
+    "shelfBytes": 5950
   },
   "film-deadpool-wolverine": {
     "fingerprint": "275640:1787364136333",
     "thumb": "images/library/thumbs/film-deadpool-wolverine.jpg",
-    "bytes": 125603
+    "thumbWebp": "images/library/thumbs/film-deadpool-wolverine.webp",
+    "shelfWebp": "images/library/thumbs/film-deadpool-wolverine-sm.webp",
+    "bytes": 125603,
+    "webpBytes": 63360,
+    "shelfBytes": 14870
   },
   "film-the-boy-and-the-heron": {
     "fingerprint": "88824:1787364136334",
     "thumb": "images/library/thumbs/film-the-boy-and-the-heron.jpg",
-    "bytes": 87217
+    "thumbWebp": "images/library/thumbs/film-the-boy-and-the-heron.webp",
+    "shelfWebp": "images/library/thumbs/film-the-boy-and-the-heron-sm.webp",
+    "bytes": 87217,
+    "webpBytes": 32898,
+    "shelfBytes": 11102
   },
   "film-dungeons-dragons-honor-among-thieves": {
     "fingerprint": "255499:1787364136334",
     "thumb": "images/library/thumbs/film-dungeons-dragons-honor-among-thieves.jpg",
-    "bytes": 138650
+    "thumbWebp": "images/library/thumbs/film-dungeons-dragons-honor-among-thieves.webp",
+    "shelfWebp": "images/library/thumbs/film-dungeons-dragons-honor-among-thieves-sm.webp",
+    "bytes": 138650,
+    "webpBytes": 71124,
+    "shelfBytes": 19488
   },
   "film-the-batman": {
     "fingerprint": "248571:1787364136334",
     "thumb": "images/library/thumbs/film-the-batman.jpg",
-    "bytes": 97712
+    "thumbWebp": "images/library/thumbs/film-the-batman.webp",
+    "shelfWebp": "images/library/thumbs/film-the-batman-sm.webp",
+    "bytes": 97712,
+    "webpBytes": 35324,
+    "shelfBytes": 9972
   },
   "film-spider-man-no-way-home": {
     "fingerprint": "296456:1787364136335",
     "thumb": "images/library/thumbs/film-spider-man-no-way-home.jpg",
-    "bytes": 142600
+    "thumbWebp": "images/library/thumbs/film-spider-man-no-way-home.webp",
+    "shelfWebp": "images/library/thumbs/film-spider-man-no-way-home-sm.webp",
+    "bytes": 142600,
+    "webpBytes": 78278,
+    "shelfBytes": 18378
   },
   "film-dune": {
     "fingerprint": "198969:1787364136335",
     "thumb": "images/library/thumbs/film-dune.jpg",
-    "bytes": 86770
+    "thumbWebp": "images/library/thumbs/film-dune.webp",
+    "shelfWebp": "images/library/thumbs/film-dune-sm.webp",
+    "bytes": 86770,
+    "webpBytes": 30208,
+    "shelfBytes": 8688
   },
   "film-shang-chi-and-the-legend-of-the-ten-rings": {
     "fingerprint": "213451:1787364136335",
     "thumb": "images/library/thumbs/film-shang-chi-and-the-legend-of-the-ten-rings.jpg",
-    "bytes": 115383
+    "thumbWebp": "images/library/thumbs/film-shang-chi-and-the-legend-of-the-ten-rings.webp",
+    "shelfWebp": "images/library/thumbs/film-shang-chi-and-the-legend-of-the-ten-rings-sm.webp",
+    "bytes": 115383,
+    "webpBytes": 48798,
+    "shelfBytes": 12696
   },
   "film-black-widow": {
     "fingerprint": "225509:1787364136337",
     "thumb": "images/library/thumbs/film-black-widow.jpg",
-    "bytes": 97013
+    "thumbWebp": "images/library/thumbs/film-black-widow.webp",
+    "shelfWebp": "images/library/thumbs/film-black-widow-sm.webp",
+    "bytes": 97013,
+    "webpBytes": 35502,
+    "shelfBytes": 10254
   },
   "film-tenet": {
     "fingerprint": "190215:1787364136337",
     "thumb": "images/library/thumbs/film-tenet.jpg",
-    "bytes": 87452
+    "thumbWebp": "images/library/thumbs/film-tenet.webp",
+    "shelfWebp": "images/library/thumbs/film-tenet-sm.webp",
+    "bytes": 87452,
+    "webpBytes": 29490,
+    "shelfBytes": 8890
   },
   "film-star-wars-the-rise-of-skywalker": {
     "fingerprint": "239444:1787364136338",
     "thumb": "images/library/thumbs/film-star-wars-the-rise-of-skywalker.jpg",
-    "bytes": 115294
+    "thumbWebp": "images/library/thumbs/film-star-wars-the-rise-of-skywalker.webp",
+    "shelfWebp": "images/library/thumbs/film-star-wars-the-rise-of-skywalker-sm.webp",
+    "bytes": 115294,
+    "webpBytes": 52554,
+    "shelfBytes": 14344
   },
   "film-little-women": {
     "fingerprint": "183582:1787364136339",
     "thumb": "images/library/thumbs/film-little-women.jpg",
-    "bytes": 94187
+    "thumbWebp": "images/library/thumbs/film-little-women.webp",
+    "shelfWebp": "images/library/thumbs/film-little-women-sm.webp",
+    "bytes": 94187,
+    "webpBytes": 39828,
+    "shelfBytes": 10904
   },
   "film-jojo-rabbit": {
     "fingerprint": "276807:1787364136339",
     "thumb": "images/library/thumbs/film-jojo-rabbit.jpg",
-    "bytes": 124759
+    "thumbWebp": "images/library/thumbs/film-jojo-rabbit.webp",
+    "shelfWebp": "images/library/thumbs/film-jojo-rabbit-sm.webp",
+    "bytes": 124759,
+    "webpBytes": 53282,
+    "shelfBytes": 15530
   },
   "film-knives-out": {
     "fingerprint": "203028:1787364136340",
     "thumb": "images/library/thumbs/film-knives-out.jpg",
-    "bytes": 110892
+    "thumbWebp": "images/library/thumbs/film-knives-out.webp",
+    "shelfWebp": "images/library/thumbs/film-knives-out-sm.webp",
+    "bytes": 110892,
+    "webpBytes": 50940,
+    "shelfBytes": 14884
   },
   "film-joker": {
     "fingerprint": "229171:1787364136340",
     "thumb": "images/library/thumbs/film-joker.jpg",
-    "bytes": 106051
+    "thumbWebp": "images/library/thumbs/film-joker.webp",
+    "shelfWebp": "images/library/thumbs/film-joker-sm.webp",
+    "bytes": 106051,
+    "webpBytes": 44216,
+    "shelfBytes": 11928
   },
   "film-spider-man-far-from-home": {
     "fingerprint": "170066:1787364136341",
     "thumb": "images/library/thumbs/film-spider-man-far-from-home.jpg",
-    "bytes": 91832
+    "thumbWebp": "images/library/thumbs/film-spider-man-far-from-home.webp",
+    "shelfWebp": "images/library/thumbs/film-spider-man-far-from-home-sm.webp",
+    "bytes": 91832,
+    "webpBytes": 38900,
+    "shelfBytes": 12020
   },
   "film-parasite": {
     "fingerprint": "307242:1787364136341",
     "thumb": "images/library/thumbs/film-parasite.jpg",
-    "bytes": 124503
+    "thumbWebp": "images/library/thumbs/film-parasite.webp",
+    "shelfWebp": "images/library/thumbs/film-parasite-sm.webp",
+    "bytes": 124503,
+    "webpBytes": 56230,
+    "shelfBytes": 13174
   },
   "film-once-upon-a-time-in-hollywood": {
     "fingerprint": "263546:1787364136341",
     "thumb": "images/library/thumbs/film-once-upon-a-time-in-hollywood.jpg",
-    "bytes": 128231
+    "thumbWebp": "images/library/thumbs/film-once-upon-a-time-in-hollywood.webp",
+    "shelfWebp": "images/library/thumbs/film-once-upon-a-time-in-hollywood-sm.webp",
+    "bytes": 128231,
+    "webpBytes": 62014,
+    "shelfBytes": 16560
   },
   "film-avengers-endgame": {
     "fingerprint": "262548:1787364136344",
     "thumb": "images/library/thumbs/film-avengers-endgame.jpg",
-    "bytes": 131783
+    "thumbWebp": "images/library/thumbs/film-avengers-endgame.webp",
+    "shelfWebp": "images/library/thumbs/film-avengers-endgame-sm.webp",
+    "bytes": 131783,
+    "webpBytes": 64906,
+    "shelfBytes": 17178
   },
   "film-captain-marvel": {
     "fingerprint": "231132:1787364136344",
     "thumb": "images/library/thumbs/film-captain-marvel.jpg",
-    "bytes": 121647
+    "thumbWebp": "images/library/thumbs/film-captain-marvel.webp",
+    "shelfWebp": "images/library/thumbs/film-captain-marvel-sm.webp",
+    "bytes": 121647,
+    "webpBytes": 55554,
+    "shelfBytes": 16586
   },
   "film-spider-man-into-the-spider-verse": {
     "fingerprint": "116065:1787364136344",
     "thumb": "images/library/thumbs/film-spider-man-into-the-spider-verse.jpg",
-    "bytes": 65909
+    "thumbWebp": "images/library/thumbs/film-spider-man-into-the-spider-verse.webp",
+    "shelfWebp": "images/library/thumbs/film-spider-man-into-the-spider-verse-sm.webp",
+    "bytes": 65909,
+    "webpBytes": 22814,
+    "shelfBytes": 6790
   },
   "film-bohemian-rhapsody": {
     "fingerprint": "163453:1787364136345",
     "thumb": "images/library/thumbs/film-bohemian-rhapsody.jpg",
-    "bytes": 83601
+    "thumbWebp": "images/library/thumbs/film-bohemian-rhapsody.webp",
+    "shelfWebp": "images/library/thumbs/film-bohemian-rhapsody-sm.webp",
+    "bytes": 83601,
+    "webpBytes": 28164,
+    "shelfBytes": 7506
   },
   "film-avengers-infinity-war": {
     "fingerprint": "259635:1787364136345",
     "thumb": "images/library/thumbs/film-avengers-infinity-war.jpg",
-    "bytes": 133946
+    "thumbWebp": "images/library/thumbs/film-avengers-infinity-war.webp",
+    "shelfWebp": "images/library/thumbs/film-avengers-infinity-war-sm.webp",
+    "bytes": 133946,
+    "webpBytes": 66896,
+    "shelfBytes": 17888
   },
   "film-a-quiet-place": {
     "fingerprint": "158257:1787364136346",
     "thumb": "images/library/thumbs/film-a-quiet-place.jpg",
-    "bytes": 72116
+    "thumbWebp": "images/library/thumbs/film-a-quiet-place.webp",
+    "shelfWebp": "images/library/thumbs/film-a-quiet-place-sm.webp",
+    "bytes": 72116,
+    "webpBytes": 26236,
+    "shelfBytes": 5650
   },
   "film-black-panther": {
     "fingerprint": "259332:1787364136346",
     "thumb": "images/library/thumbs/film-black-panther.jpg",
-    "bytes": 128087
+    "thumbWebp": "images/library/thumbs/film-black-panther.webp",
+    "shelfWebp": "images/library/thumbs/film-black-panther-sm.webp",
+    "bytes": 128087,
+    "webpBytes": 63576,
+    "shelfBytes": 17374
   },
   "film-star-wars-the-last-jedi": {
     "fingerprint": "270837:1787364136347",
     "thumb": "images/library/thumbs/film-star-wars-the-last-jedi.jpg",
-    "bytes": 124494
+    "thumbWebp": "images/library/thumbs/film-star-wars-the-last-jedi.webp",
+    "shelfWebp": "images/library/thumbs/film-star-wars-the-last-jedi-sm.webp",
+    "bytes": 124494,
+    "webpBytes": 53054,
+    "shelfBytes": 15426
   },
   "film-coco": {
     "fingerprint": "209592:1787364136347",
     "thumb": "images/library/thumbs/film-coco.jpg",
-    "bytes": 112735
+    "thumbWebp": "images/library/thumbs/film-coco.webp",
+    "shelfWebp": "images/library/thumbs/film-coco-sm.webp",
+    "bytes": 112735,
+    "webpBytes": 51768,
+    "shelfBytes": 13756
   },
   "film-blade-runner-2049": {
     "fingerprint": "195023:1787364136348",
     "thumb": "images/library/thumbs/film-blade-runner-2049.jpg",
-    "bytes": 101397
+    "thumbWebp": "images/library/thumbs/film-blade-runner-2049.webp",
+    "shelfWebp": "images/library/thumbs/film-blade-runner-2049-sm.webp",
+    "bytes": 101397,
+    "webpBytes": 43972,
+    "shelfBytes": 12814
   },
   "film-thor-ragnarok": {
     "fingerprint": "219189:1787364136349",
     "thumb": "images/library/thumbs/film-thor-ragnarok.jpg",
-    "bytes": 116383
+    "thumbWebp": "images/library/thumbs/film-thor-ragnarok.webp",
+    "shelfWebp": "images/library/thumbs/film-thor-ragnarok-sm.webp",
+    "bytes": 116383,
+    "webpBytes": 53626,
+    "shelfBytes": 15576
   },
   "film-it": {
     "fingerprint": "105854:1787364136349",
     "thumb": "images/library/thumbs/film-it.jpg",
-    "bytes": 53909
+    "thumbWebp": "images/library/thumbs/film-it.webp",
+    "shelfWebp": "images/library/thumbs/film-it-sm.webp",
+    "bytes": 53909,
+    "webpBytes": 19674,
+    "shelfBytes": 4936
   },
   "film-lady-bird": {
     "fingerprint": "199634:1787364136349",
     "thumb": "images/library/thumbs/film-lady-bird.jpg",
-    "bytes": 89856
+    "thumbWebp": "images/library/thumbs/film-lady-bird.webp",
+    "shelfWebp": "images/library/thumbs/film-lady-bird-sm.webp",
+    "bytes": 89856,
+    "webpBytes": 29286,
+    "shelfBytes": 10538
   },
   "film-dunkirk": {
     "fingerprint": "144486:1787364136350",
     "thumb": "images/library/thumbs/film-dunkirk.jpg",
-    "bytes": 69016
+    "thumbWebp": "images/library/thumbs/film-dunkirk.webp",
+    "shelfWebp": "images/library/thumbs/film-dunkirk-sm.webp",
+    "bytes": 69016,
+    "webpBytes": 19876,
+    "shelfBytes": 6572
   },
   "film-spider-man-homecoming": {
     "fingerprint": "242473:1787364136350",
     "thumb": "images/library/thumbs/film-spider-man-homecoming.jpg",
-    "bytes": 130058
+    "thumbWebp": "images/library/thumbs/film-spider-man-homecoming.webp",
+    "shelfWebp": "images/library/thumbs/film-spider-man-homecoming-sm.webp",
+    "bytes": 130058,
+    "webpBytes": 59558,
+    "shelfBytes": 16742
   },
   "film-wonder-woman": {
     "fingerprint": "109200:1787364136351",
     "thumb": "images/library/thumbs/film-wonder-woman.jpg",
-    "bytes": 63698
+    "thumbWebp": "images/library/thumbs/film-wonder-woman.webp",
+    "shelfWebp": "images/library/thumbs/film-wonder-woman-sm.webp",
+    "bytes": 63698,
+    "webpBytes": 20976,
+    "shelfBytes": 6820
   },
   "film-baby-driver": {
     "fingerprint": "182137:1787364136351",
     "thumb": "images/library/thumbs/film-baby-driver.jpg",
-    "bytes": 96986
+    "thumbWebp": "images/library/thumbs/film-baby-driver.webp",
+    "shelfWebp": "images/library/thumbs/film-baby-driver-sm.webp",
+    "bytes": 96986,
+    "webpBytes": 41222,
+    "shelfBytes": 11654
   },
   "film-logan": {
     "fingerprint": "274970:1787364136351",
     "thumb": "images/library/thumbs/film-logan.jpg",
-    "bytes": 112837
+    "thumbWebp": "images/library/thumbs/film-logan.webp",
+    "shelfWebp": "images/library/thumbs/film-logan-sm.webp",
+    "bytes": 112837,
+    "webpBytes": 44628,
+    "shelfBytes": 11412
   },
   "film-get-out": {
     "fingerprint": "153981:1787364136352",
     "thumb": "images/library/thumbs/film-get-out.jpg",
-    "bytes": 77119
+    "thumbWebp": "images/library/thumbs/film-get-out.webp",
+    "shelfWebp": "images/library/thumbs/film-get-out-sm.webp",
+    "bytes": 77119,
+    "webpBytes": 31500,
+    "shelfBytes": 8036
   },
   "film-rogue-one-a-star-wars-story": {
     "fingerprint": "211388:1787364136352",
     "thumb": "images/library/thumbs/film-rogue-one-a-star-wars-story.jpg",
-    "bytes": 101586
+    "thumbWebp": "images/library/thumbs/film-rogue-one-a-star-wars-story.webp",
+    "shelfWebp": "images/library/thumbs/film-rogue-one-a-star-wars-story-sm.webp",
+    "bytes": 101586,
+    "webpBytes": 45254,
+    "shelfBytes": 11186
   },
   "film-split": {
     "fingerprint": "154092:1787364136354",
     "thumb": "images/library/thumbs/film-split.jpg",
-    "bytes": 74799
+    "thumbWebp": "images/library/thumbs/film-split.webp",
+    "shelfWebp": "images/library/thumbs/film-split-sm.webp",
+    "bytes": 74799,
+    "webpBytes": 25770,
+    "shelfBytes": 6204
   },
   "film-arrival": {
     "fingerprint": "151554:1787364136354",
     "thumb": "images/library/thumbs/film-arrival.jpg",
-    "bytes": 80913
+    "thumbWebp": "images/library/thumbs/film-arrival.webp",
+    "shelfWebp": "images/library/thumbs/film-arrival-sm.webp",
+    "bytes": 80913,
+    "webpBytes": 31418,
+    "shelfBytes": 9238
   },
   "film-the-nice-guys": {
     "fingerprint": "195050:1787364136355",
     "thumb": "images/library/thumbs/film-the-nice-guys.jpg",
-    "bytes": 93923
+    "thumbWebp": "images/library/thumbs/film-the-nice-guys.webp",
+    "shelfWebp": "images/library/thumbs/film-the-nice-guys-sm.webp",
+    "bytes": 93923,
+    "webpBytes": 34970,
+    "shelfBytes": 9670
   },
   "film-captain-america-civil-war": {
     "fingerprint": "233780:1787364136355",
     "thumb": "images/library/thumbs/film-captain-america-civil-war.jpg",
-    "bytes": 113202
+    "thumbWebp": "images/library/thumbs/film-captain-america-civil-war.webp",
+    "shelfWebp": "images/library/thumbs/film-captain-america-civil-war-sm.webp",
+    "bytes": 113202,
+    "webpBytes": 54548,
+    "shelfBytes": 13500
   },
   "film-deadpool": {
     "fingerprint": "200402:1787364136356",
     "thumb": "images/library/thumbs/film-deadpool.jpg",
-    "bytes": 73657
+    "thumbWebp": "images/library/thumbs/film-deadpool.webp",
+    "shelfWebp": "images/library/thumbs/film-deadpool-sm.webp",
+    "bytes": 73657,
+    "webpBytes": 26694,
+    "shelfBytes": 7590
   },
   "film-the-revenant": {
     "fingerprint": "179776:1787364136356",
     "thumb": "images/library/thumbs/film-the-revenant.jpg",
-    "bytes": 89026
+    "thumbWebp": "images/library/thumbs/film-the-revenant.webp",
+    "shelfWebp": "images/library/thumbs/film-the-revenant-sm.webp",
+    "bytes": 89026,
+    "webpBytes": 34610,
+    "shelfBytes": 9252
   },
   "film-star-wars-the-force-awakens": {
     "fingerprint": "232097:1787364136356",
     "thumb": "images/library/thumbs/film-star-wars-the-force-awakens.jpg",
-    "bytes": 113781
+    "thumbWebp": "images/library/thumbs/film-star-wars-the-force-awakens.webp",
+    "shelfWebp": "images/library/thumbs/film-star-wars-the-force-awakens-sm.webp",
+    "bytes": 113781,
+    "webpBytes": 55078,
+    "shelfBytes": 13952
   },
   "film-the-hateful-eight": {
     "fingerprint": "171049:1787364136357",
     "thumb": "images/library/thumbs/film-the-hateful-eight.jpg",
-    "bytes": 85200
+    "thumbWebp": "images/library/thumbs/film-the-hateful-eight.webp",
+    "shelfWebp": "images/library/thumbs/film-the-hateful-eight-sm.webp",
+    "bytes": 85200,
+    "webpBytes": 33474,
+    "shelfBytes": 8736
   },
   "film-the-martian": {
     "fingerprint": "179657:1787364136357",
     "thumb": "images/library/thumbs/film-the-martian.jpg",
-    "bytes": 100855
+    "thumbWebp": "images/library/thumbs/film-the-martian.webp",
+    "shelfWebp": "images/library/thumbs/film-the-martian-sm.webp",
+    "bytes": 100855,
+    "webpBytes": 39710,
+    "shelfBytes": 9870
   },
   "film-ant-man": {
     "fingerprint": "156129:1787364136357",
     "thumb": "images/library/thumbs/film-ant-man.jpg",
-    "bytes": 82114
+    "thumbWebp": "images/library/thumbs/film-ant-man.webp",
+    "shelfWebp": "images/library/thumbs/film-ant-man-sm.webp",
+    "bytes": 82114,
+    "webpBytes": 33198,
+    "shelfBytes": 10274
   },
   "film-sicario": {
     "fingerprint": "180887:1787364136358",
     "thumb": "images/library/thumbs/film-sicario.jpg",
-    "bytes": 91635
+    "thumbWebp": "images/library/thumbs/film-sicario.webp",
+    "shelfWebp": "images/library/thumbs/film-sicario-sm.webp",
+    "bytes": 91635,
+    "webpBytes": 35218,
+    "shelfBytes": 9308
   },
   "film-inside-out": {
     "fingerprint": "208876:1787364136358",
     "thumb": "images/library/thumbs/film-inside-out.jpg",
-    "bytes": 107413
+    "thumbWebp": "images/library/thumbs/film-inside-out.webp",
+    "shelfWebp": "images/library/thumbs/film-inside-out-sm.webp",
+    "bytes": 107413,
+    "webpBytes": 38040,
+    "shelfBytes": 12202
   },
   "film-quantum-of-solace": {
     "fingerprint": "163585:1787364136358",
     "thumb": "images/library/thumbs/film-quantum-of-solace.jpg",
-    "bytes": 88102
+    "thumbWebp": "images/library/thumbs/film-quantum-of-solace.webp",
+    "shelfWebp": "images/library/thumbs/film-quantum-of-solace-sm.webp",
+    "bytes": 88102,
+    "webpBytes": 37330,
+    "shelfBytes": 11060
   },
   "film-casino-royale": {
     "fingerprint": "106027:1787364136358",
     "thumb": "images/library/thumbs/film-casino-royale.jpg",
-    "bytes": 61058
+    "thumbWebp": "images/library/thumbs/film-casino-royale.webp",
+    "shelfWebp": "images/library/thumbs/film-casino-royale-sm.webp",
+    "bytes": 61058,
+    "webpBytes": 21228,
+    "shelfBytes": 7346
   },
   "film-alien": {
     "fingerprint": "67703:1787364136359",
     "thumb": "images/library/thumbs/film-alien.jpg",
-    "bytes": 40169
+    "thumbWebp": "images/library/thumbs/film-alien.webp",
+    "shelfWebp": "images/library/thumbs/film-alien-sm.webp",
+    "bytes": 40169,
+    "webpBytes": 16314,
+    "shelfBytes": 4978
   },
   "film-inglourious-basterds": {
     "fingerprint": "199780:1787364136359",
     "thumb": "images/library/thumbs/film-inglourious-basterds.jpg",
-    "bytes": 98444
+    "thumbWebp": "images/library/thumbs/film-inglourious-basterds.webp",
+    "shelfWebp": "images/library/thumbs/film-inglourious-basterds-sm.webp",
+    "bytes": 98444,
+    "webpBytes": 42126,
+    "shelfBytes": 12190
   },
   "film-tinker-tailor-soldier-spy": {
     "fingerprint": "293550:1787364136359",
     "thumb": "images/library/thumbs/film-tinker-tailor-soldier-spy.jpg",
-    "bytes": 141907
+    "thumbWebp": "images/library/thumbs/film-tinker-tailor-soldier-spy.webp",
+    "shelfWebp": "images/library/thumbs/film-tinker-tailor-soldier-spy-sm.webp",
+    "bytes": 141907,
+    "webpBytes": 84112,
+    "shelfBytes": 16498
   },
   "film-moneyball": {
     "fingerprint": "131277:1787364136359",
     "thumb": "images/library/thumbs/film-moneyball.jpg",
-    "bytes": 68789
+    "thumbWebp": "images/library/thumbs/film-moneyball.webp",
+    "shelfWebp": "images/library/thumbs/film-moneyball-sm.webp",
+    "bytes": 68789,
+    "webpBytes": 23272,
+    "shelfBytes": 7612
   },
   "film-close-encounters-of-the-third-kind": {
     "fingerprint": "132480:1787364136359",
     "thumb": "images/library/thumbs/film-close-encounters-of-the-third-kind.jpg",
-    "bytes": 72727
+    "thumbWebp": "images/library/thumbs/film-close-encounters-of-the-third-kind.webp",
+    "shelfWebp": "images/library/thumbs/film-close-encounters-of-the-third-kind-sm.webp",
+    "bytes": 72727,
+    "webpBytes": 26664,
+    "shelfBytes": 8368
   },
   "film-inside-llewyn-davis": {
     "fingerprint": "160679:1787364136359",
     "thumb": "images/library/thumbs/film-inside-llewyn-davis.jpg",
-    "bytes": 79685
+    "thumbWebp": "images/library/thumbs/film-inside-llewyn-davis.webp",
+    "shelfWebp": "images/library/thumbs/film-inside-llewyn-davis-sm.webp",
+    "bytes": 79685,
+    "webpBytes": 28528,
+    "shelfBytes": 6958
   },
   "film-before-sunset": {
     "fingerprint": "97201:1787364136360",
     "thumb": "images/library/thumbs/film-before-sunset.jpg",
-    "bytes": 55653
+    "thumbWebp": "images/library/thumbs/film-before-sunset.webp",
+    "shelfWebp": "images/library/thumbs/film-before-sunset-sm.webp",
+    "bytes": 55653,
+    "webpBytes": 20434,
+    "shelfBytes": 6954
   },
   "film-that-thing-you-do": {
     "fingerprint": "106964:1787364136360",
     "thumb": "images/library/thumbs/film-that-thing-you-do.jpg",
-    "bytes": 68089
+    "thumbWebp": "images/library/thumbs/film-that-thing-you-do.webp",
+    "shelfWebp": "images/library/thumbs/film-that-thing-you-do-sm.webp",
+    "bytes": 68089,
+    "webpBytes": 25456,
+    "shelfBytes": 8900
   },
   "film-tears-of-the-sun": {
     "fingerprint": "259962:1787364136360",
     "thumb": "images/library/thumbs/film-tears-of-the-sun.jpg",
-    "bytes": 104002
+    "thumbWebp": "images/library/thumbs/film-tears-of-the-sun.webp",
+    "shelfWebp": "images/library/thumbs/film-tears-of-the-sun-sm.webp",
+    "bytes": 104002,
+    "webpBytes": 41252,
+    "shelfBytes": 10518
   },
   "film-michael-clayton": {
     "fingerprint": "149037:1787364136360",
     "thumb": "images/library/thumbs/film-michael-clayton.jpg",
-    "bytes": 86265
+    "thumbWebp": "images/library/thumbs/film-michael-clayton.webp",
+    "shelfWebp": "images/library/thumbs/film-michael-clayton-sm.webp",
+    "bytes": 86265,
+    "webpBytes": 34520,
+    "shelfBytes": 10566
   },
   "film-anchorman-the-legend-of-ron-burgundy": {
     "fingerprint": "171216:1787364136361",
     "thumb": "images/library/thumbs/film-anchorman-the-legend-of-ron-burgundy.jpg",
-    "bytes": 91445
+    "thumbWebp": "images/library/thumbs/film-anchorman-the-legend-of-ron-burgundy.webp",
+    "shelfWebp": "images/library/thumbs/film-anchorman-the-legend-of-ron-burgundy-sm.webp",
+    "bytes": 91445,
+    "webpBytes": 36654,
+    "shelfBytes": 11758
   },
   "film-no-country-for-old-men": {
     "fingerprint": "165754:1787364136362",
     "thumb": "images/library/thumbs/film-no-country-for-old-men.jpg",
-    "bytes": 67421
+    "thumbWebp": "images/library/thumbs/film-no-country-for-old-men.webp",
+    "shelfWebp": "images/library/thumbs/film-no-country-for-old-men-sm.webp",
+    "bytes": 67421,
+    "webpBytes": 23168,
+    "shelfBytes": 5262
   },
   "film-2001-a-space-odyssey": {
     "fingerprint": "243409:1787364136362",
     "thumb": "images/library/thumbs/film-2001-a-space-odyssey.jpg",
-    "bytes": 115307
+    "thumbWebp": "images/library/thumbs/film-2001-a-space-odyssey.webp",
+    "shelfWebp": "images/library/thumbs/film-2001-a-space-odyssey-sm.webp",
+    "bytes": 115307,
+    "webpBytes": 53158,
+    "shelfBytes": 13816
   },
   "film-the-royal-tenenbaums": {
     "fingerprint": "190281:1787364136362",
     "thumb": "images/library/thumbs/film-the-royal-tenenbaums.jpg",
-    "bytes": 107038
+    "thumbWebp": "images/library/thumbs/film-the-royal-tenenbaums.webp",
+    "shelfWebp": "images/library/thumbs/film-the-royal-tenenbaums-sm.webp",
+    "bytes": 107038,
+    "webpBytes": 49142,
+    "shelfBytes": 14838
   }
 }

@@ -40,7 +40,7 @@ export function goodreadsItems(rows) {
       type: "book",
       query: `${row.Title} ${row.Author || ""}`.trim(),
       title: row.Title,
-      creator: row.Author || "Unknown",
+      creator: row.Author || "",
       year: Number(row["Original Publication Year"] || row["Year Published"]) || null,
       rating: Number(row["My Rating"]) || null,
       finished: row["Date Read"] || null,

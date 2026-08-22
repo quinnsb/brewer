@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T02:02:32.215Z",
+  "generatedAt": "2026-08-22T12:30:58.673Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -52,7 +52,10 @@
         "accent": "#55c7dd",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-the-left-hand-of-darkness.jpg"
+      "thumb": "images/library/thumbs/book-the-left-hand-of-darkness.jpg",
+      "thumbWebp": "images/library/thumbs/book-the-left-hand-of-darkness.webp",
+      "shelfWebp": "images/library/thumbs/book-the-left-hand-of-darkness-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-gravitys-rainbow",
@@ -106,7 +109,10 @@
         "accent": "#351775",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-gravitys-rainbow.jpg"
+      "thumb": "images/library/thumbs/book-gravitys-rainbow.jpg",
+      "thumbWebp": "images/library/thumbs/book-gravitys-rainbow.webp",
+      "shelfWebp": "images/library/thumbs/book-gravitys-rainbow-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-the-dispossessed",
@@ -159,7 +165,10 @@
         "accent": "#9895cb",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/book-the-dispossessed.jpg"
+      "thumb": "images/library/thumbs/book-the-dispossessed.jpg",
+      "thumbWebp": "images/library/thumbs/book-the-dispossessed.webp",
+      "shelfWebp": "images/library/thumbs/book-the-dispossessed-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-blood-meridian",
@@ -213,7 +222,10 @@
         "accent": "#fbd407",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-blood-meridian.jpg"
+      "thumb": "images/library/thumbs/book-blood-meridian.jpg",
+      "thumbWebp": "images/library/thumbs/book-blood-meridian.webp",
+      "shelfWebp": "images/library/thumbs/book-blood-meridian-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-housekeeping",
@@ -266,7 +278,10 @@
         "accent": "#94b6d6",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-housekeeping.jpg"
+      "thumb": "images/library/thumbs/book-housekeeping.jpg",
+      "thumbWebp": "images/library/thumbs/book-housekeeping.webp",
+      "shelfWebp": "images/library/thumbs/book-housekeeping-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-the-sellout",
@@ -320,7 +335,10 @@
         "accent": "#f5f1e3",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/book-the-sellout.jpg"
+      "thumb": "images/library/thumbs/book-the-sellout.jpg",
+      "thumbWebp": "images/library/thumbs/book-the-sellout.webp",
+      "shelfWebp": "images/library/thumbs/book-the-sellout-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-cloud-atlas",
@@ -374,7 +392,10 @@
         "accent": "#20a6d1",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/book-cloud-atlas.jpg"
+      "thumb": "images/library/thumbs/book-cloud-atlas.jpg",
+      "thumbWebp": "images/library/thumbs/book-cloud-atlas.webp",
+      "shelfWebp": "images/library/thumbs/book-cloud-atlas-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-a-visit-from-the-goon-squad",
@@ -427,7 +448,10 @@
         "accent": "#f9b3ae",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/book-a-visit-from-the-goon-squad.jpg"
+      "thumb": "images/library/thumbs/book-a-visit-from-the-goon-squad.jpg",
+      "thumbWebp": "images/library/thumbs/book-a-visit-from-the-goon-squad.webp",
+      "shelfWebp": "images/library/thumbs/book-a-visit-from-the-goon-squad-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-piranesi",
@@ -480,7 +504,10 @@
         "accent": "#c49d27",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-piranesi.jpg"
+      "thumb": "images/library/thumbs/book-piranesi.jpg",
+      "thumbWebp": "images/library/thumbs/book-piranesi.webp",
+      "shelfWebp": "images/library/thumbs/book-piranesi-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-starclimber",
@@ -534,7 +561,10 @@
         "accent": "#ecd8ad",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-starclimber.jpg"
+      "thumb": "images/library/thumbs/book-starclimber.jpg",
+      "thumbWebp": "images/library/thumbs/book-starclimber.webp",
+      "shelfWebp": "images/library/thumbs/book-starclimber-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-never-let-me-go",
@@ -588,7 +618,10 @@
         "accent": "#bc9d8d",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-never-let-me-go.jpg"
+      "thumb": "images/library/thumbs/book-never-let-me-go.jpg",
+      "thumbWebp": "images/library/thumbs/book-never-let-me-go.webp",
+      "shelfWebp": "images/library/thumbs/book-never-let-me-go-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-the-martian",
@@ -641,7 +674,10 @@
         "accent": "#f89333",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-the-martian.jpg"
+      "thumb": "images/library/thumbs/book-the-martian.jpg",
+      "thumbWebp": "images/library/thumbs/book-the-martian.webp",
+      "shelfWebp": "images/library/thumbs/book-the-martian-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-the-bonesetters-daughter",
@@ -695,7 +731,10 @@
         "accent": "#c60000",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-the-bonesetters-daughter.jpg"
+      "thumb": "images/library/thumbs/book-the-bonesetters-daughter.jpg",
+      "thumbWebp": "images/library/thumbs/book-the-bonesetters-daughter.webp",
+      "shelfWebp": "images/library/thumbs/book-the-bonesetters-daughter-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-the-hobbit",
@@ -749,7 +788,10 @@
         "accent": "#973a2b",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-the-hobbit.jpg"
+      "thumb": "images/library/thumbs/book-the-hobbit.jpg",
+      "thumbWebp": "images/library/thumbs/book-the-hobbit.webp",
+      "shelfWebp": "images/library/thumbs/book-the-hobbit-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-dawn",
@@ -802,7 +844,10 @@
         "accent": "#ff9317",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-dawn.jpg"
+      "thumb": "images/library/thumbs/book-dawn.jpg",
+      "thumbWebp": "images/library/thumbs/book-dawn.webp",
+      "shelfWebp": "images/library/thumbs/book-dawn-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-moby-dick",
@@ -856,7 +901,10 @@
         "accent": "#89c3d0",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/book-moby-dick.jpg"
+      "thumb": "images/library/thumbs/book-moby-dick.jpg",
+      "thumbWebp": "images/library/thumbs/book-moby-dick.webp",
+      "shelfWebp": "images/library/thumbs/book-moby-dick-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-things-fall-apart",
@@ -910,7 +958,10 @@
         "accent": "#f43d2b",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-things-fall-apart.jpg"
+      "thumb": "images/library/thumbs/book-things-fall-apart.jpg",
+      "thumbWebp": "images/library/thumbs/book-things-fall-apart.webp",
+      "shelfWebp": "images/library/thumbs/book-things-fall-apart-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-hatchet",
@@ -964,7 +1015,10 @@
         "accent": "#83a939",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-hatchet.jpg"
+      "thumb": "images/library/thumbs/book-hatchet.jpg",
+      "thumbWebp": "images/library/thumbs/book-hatchet.webp",
+      "shelfWebp": "images/library/thumbs/book-hatchet-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-enders-game",
@@ -1017,7 +1071,10 @@
         "accent": "#1b797e",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-enders-game.jpg"
+      "thumb": "images/library/thumbs/book-enders-game.jpg",
+      "thumbWebp": "images/library/thumbs/book-enders-game.webp",
+      "shelfWebp": "images/library/thumbs/book-enders-game-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-the-fifth-season",
@@ -1063,7 +1120,10 @@
         "accent": "#837716",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-the-fifth-season.jpg"
+      "thumb": "images/library/thumbs/book-the-fifth-season.jpg",
+      "thumbWebp": "images/library/thumbs/book-the-fifth-season.webp",
+      "shelfWebp": "images/library/thumbs/book-the-fifth-season-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-a-day-of-fallen-night",
@@ -1112,7 +1172,10 @@
         "accent": "#ce4f2b",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-a-day-of-fallen-night.jpg"
+      "thumb": "images/library/thumbs/book-a-day-of-fallen-night.jpg",
+      "thumbWebp": "images/library/thumbs/book-a-day-of-fallen-night.webp",
+      "shelfWebp": "images/library/thumbs/book-a-day-of-fallen-night-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-the-call-of-the-wild",
@@ -1165,7 +1228,10 @@
         "accent": "#69b2ff",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/book-the-call-of-the-wild.jpg"
+      "thumb": "images/library/thumbs/book-the-call-of-the-wild.jpg",
+      "thumbWebp": "images/library/thumbs/book-the-call-of-the-wild.webp",
+      "shelfWebp": "images/library/thumbs/book-the-call-of-the-wild-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-the-stone-sky",
@@ -1211,7 +1277,10 @@
         "accent": "#185d79",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-the-stone-sky.jpg"
+      "thumb": "images/library/thumbs/book-the-stone-sky.jpg",
+      "thumbWebp": "images/library/thumbs/book-the-stone-sky.webp",
+      "shelfWebp": "images/library/thumbs/book-the-stone-sky-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-heart-of-darkness",
@@ -1265,7 +1334,10 @@
         "accent": "#af9d3e",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-heart-of-darkness.jpg"
+      "thumb": "images/library/thumbs/book-heart-of-darkness.jpg",
+      "thumbWebp": "images/library/thumbs/book-heart-of-darkness.webp",
+      "shelfWebp": "images/library/thumbs/book-heart-of-darkness-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-pretty-as-a-picture",
@@ -1319,7 +1391,10 @@
         "accent": "#682f2b",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-pretty-as-a-picture.jpg"
+      "thumb": "images/library/thumbs/book-pretty-as-a-picture.jpg",
+      "thumbWebp": "images/library/thumbs/book-pretty-as-a-picture.webp",
+      "shelfWebp": "images/library/thumbs/book-pretty-as-a-picture-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-ready-player-two",
@@ -1372,7 +1447,10 @@
         "accent": "#240f32",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-ready-player-two.jpg"
+      "thumb": "images/library/thumbs/book-ready-player-two.jpg",
+      "thumbWebp": "images/library/thumbs/book-ready-player-two.webp",
+      "shelfWebp": "images/library/thumbs/book-ready-player-two-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-normal-people",
@@ -1426,7 +1504,10 @@
         "accent": "#66b338",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-normal-people.jpg"
+      "thumb": "images/library/thumbs/book-normal-people.jpg",
+      "thumbWebp": "images/library/thumbs/book-normal-people.webp",
+      "shelfWebp": "images/library/thumbs/book-normal-people-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-feed",
@@ -1476,7 +1557,10 @@
         "accent": "#cb9200",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-feed.jpg"
+      "thumb": "images/library/thumbs/book-feed.jpg",
+      "thumbWebp": "images/library/thumbs/book-feed.webp",
+      "shelfWebp": "images/library/thumbs/book-feed-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-the-fellowship-of-the-ring",
@@ -1530,7 +1614,10 @@
         "accent": "#463a1c",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-the-fellowship-of-the-ring.jpg"
+      "thumb": "images/library/thumbs/book-the-fellowship-of-the-ring.jpg",
+      "thumbWebp": "images/library/thumbs/book-the-fellowship-of-the-ring.webp",
+      "shelfWebp": "images/library/thumbs/book-the-fellowship-of-the-ring-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-coloring-book",
@@ -1591,7 +1678,10 @@
         "accent": "#fe5169",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-coloring-book.jpg"
+      "thumb": "images/library/thumbs/album-coloring-book.jpg",
+      "thumbWebp": "images/library/thumbs/album-coloring-book.webp",
+      "shelfWebp": "images/library/thumbs/album-coloring-book-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-where-the-light-is-john-mayer-live-in-los-angeles",
@@ -1652,7 +1742,10 @@
         "accent": "#1b231f",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-where-the-light-is-john-mayer-live-in-los-angeles.jpg"
+      "thumb": "images/library/thumbs/album-where-the-light-is-john-mayer-live-in-los-angeles.jpg",
+      "thumbWebp": "images/library/thumbs/album-where-the-light-is-john-mayer-live-in-los-angeles.webp",
+      "shelfWebp": "images/library/thumbs/album-where-the-light-is-john-mayer-live-in-los-angeles-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-in-between-dreams",
@@ -1798,7 +1891,10 @@
         "accent": "#ffd600",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-in-between-dreams.jpg"
+      "thumb": "images/library/thumbs/album-in-between-dreams.jpg",
+      "thumbWebp": "images/library/thumbs/album-in-between-dreams.webp",
+      "shelfWebp": "images/library/thumbs/album-in-between-dreams-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-blonde-on-blonde",
@@ -1944,7 +2040,10 @@
         "accent": "#eab591",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-blonde-on-blonde.jpg"
+      "thumb": "images/library/thumbs/album-blonde-on-blonde.jpg",
+      "thumbWebp": "images/library/thumbs/album-blonde-on-blonde.webp",
+      "shelfWebp": "images/library/thumbs/album-blonde-on-blonde-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-kind-of-blue",
@@ -2035,7 +2134,10 @@
         "accent": "#354040",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-kind-of-blue.jpg"
+      "thumb": "images/library/thumbs/album-kind-of-blue.jpg",
+      "thumbWebp": "images/library/thumbs/album-kind-of-blue.webp",
+      "shelfWebp": "images/library/thumbs/album-kind-of-blue-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-transatlanticism",
@@ -2162,7 +2264,10 @@
         "accent": "#f9b462",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-transatlanticism.jpg"
+      "thumb": "images/library/thumbs/album-transatlanticism.jpg",
+      "thumbWebp": "images/library/thumbs/album-transatlanticism.webp",
+      "shelfWebp": "images/library/thumbs/album-transatlanticism-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-reading-writing-and-arithmetic",
@@ -2284,7 +2389,10 @@
         "accent": "#3d4649",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-reading-writing-and-arithmetic.jpg"
+      "thumb": "images/library/thumbs/album-reading-writing-and-arithmetic.jpg",
+      "thumbWebp": "images/library/thumbs/album-reading-writing-and-arithmetic.webp",
+      "shelfWebp": "images/library/thumbs/album-reading-writing-and-arithmetic-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-night-train",
@@ -2447,7 +2555,10 @@
         "accent": "#5d7cdc",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-night-train.jpg"
+      "thumb": "images/library/thumbs/album-night-train.jpg",
+      "thumbWebp": "images/library/thumbs/album-night-train.webp",
+      "shelfWebp": "images/library/thumbs/album-night-train-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-a-boy-named-charlie-brown",
@@ -2575,7 +2686,10 @@
         "accent": "#51983b",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/album-a-boy-named-charlie-brown.jpg"
+      "thumb": "images/library/thumbs/album-a-boy-named-charlie-brown.jpg",
+      "thumbWebp": "images/library/thumbs/album-a-boy-named-charlie-brown.webp",
+      "shelfWebp": "images/library/thumbs/album-a-boy-named-charlie-brown-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-gordon",
@@ -2726,7 +2840,10 @@
         "accent": "#283a6f",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-gordon.jpg"
+      "thumb": "images/library/thumbs/album-gordon.jpg",
+      "thumbWebp": "images/library/thumbs/album-gordon.webp",
+      "shelfWebp": "images/library/thumbs/album-gordon-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-come-away-with-me",
@@ -2872,7 +2989,10 @@
         "accent": "#1551a0",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-come-away-with-me.jpg"
+      "thumb": "images/library/thumbs/album-come-away-with-me.jpg",
+      "thumbWebp": "images/library/thumbs/album-come-away-with-me.webp",
+      "shelfWebp": "images/library/thumbs/album-come-away-with-me-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-mr-finish-line",
@@ -2993,7 +3113,10 @@
         "accent": "#a7675d",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-mr-finish-line.jpg"
+      "thumb": "images/library/thumbs/album-mr-finish-line.jpg",
+      "thumbWebp": "images/library/thumbs/album-mr-finish-line.webp",
+      "shelfWebp": "images/library/thumbs/album-mr-finish-line-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-magic",
@@ -3133,7 +3256,10 @@
         "accent": "#3d5e6d",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-magic.jpg"
+      "thumb": "images/library/thumbs/album-magic.jpg",
+      "thumbWebp": "images/library/thumbs/album-magic.webp",
+      "shelfWebp": "images/library/thumbs/album-magic-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-messy",
@@ -3267,7 +3393,10 @@
         "accent": "#9a2e1a",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-messy.jpg"
+      "thumb": "images/library/thumbs/album-messy.jpg",
+      "thumbWebp": "images/library/thumbs/album-messy.webp",
+      "shelfWebp": "images/library/thumbs/album-messy-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-plans",
@@ -3394,7 +3523,10 @@
         "accent": "#4f1919",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-plans.jpg"
+      "thumb": "images/library/thumbs/album-plans.jpg",
+      "thumbWebp": "images/library/thumbs/album-plans.webp",
+      "shelfWebp": "images/library/thumbs/album-plans-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-thriller",
@@ -3510,7 +3642,10 @@
         "accent": "#ab7d5d",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-thriller.jpg"
+      "thumb": "images/library/thumbs/album-thriller.jpg",
+      "thumbWebp": "images/library/thumbs/album-thriller.webp",
+      "shelfWebp": "images/library/thumbs/album-thriller-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-sound-of-silver",
@@ -3626,7 +3761,10 @@
         "accent": "#ddd4c4",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/album-sound-of-silver.jpg"
+      "thumb": "images/library/thumbs/album-sound-of-silver.jpg",
+      "thumbWebp": "images/library/thumbs/album-sound-of-silver.webp",
+      "shelfWebp": "images/library/thumbs/album-sound-of-silver-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-songs-in-the-key-of-life",
@@ -3814,7 +3952,10 @@
         "accent": "#feab51",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-songs-in-the-key-of-life.jpg"
+      "thumb": "images/library/thumbs/album-songs-in-the-key-of-life.jpg",
+      "thumbWebp": "images/library/thumbs/album-songs-in-the-key-of-life.webp",
+      "shelfWebp": "images/library/thumbs/album-songs-in-the-key-of-life-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-the-crux",
@@ -3948,7 +4089,10 @@
         "accent": "#155da2",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-the-crux.jpg"
+      "thumb": "images/library/thumbs/album-the-crux.jpg",
+      "thumbWebp": "images/library/thumbs/album-the-crux.webp",
+      "shelfWebp": "images/library/thumbs/album-the-crux-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-upstairs-at-erics",
@@ -4076,7 +4220,10 @@
         "accent": "#443430",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-upstairs-at-erics.jpg"
+      "thumb": "images/library/thumbs/album-upstairs-at-erics.jpg",
+      "thumbWebp": "images/library/thumbs/album-upstairs-at-erics.webp",
+      "shelfWebp": "images/library/thumbs/album-upstairs-at-erics-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-talon-of-the-hawk",
@@ -4210,7 +4357,10 @@
         "accent": "#d7b997",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/album-talon-of-the-hawk.jpg"
+      "thumb": "images/library/thumbs/album-talon-of-the-hawk.jpg",
+      "thumbWebp": "images/library/thumbs/album-talon-of-the-hawk.webp",
+      "shelfWebp": "images/library/thumbs/album-talon-of-the-hawk-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-the-joshua-tree",
@@ -4337,7 +4487,10 @@
         "accent": "#242321",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-the-joshua-tree.jpg"
+      "thumb": "images/library/thumbs/album-the-joshua-tree.jpg",
+      "thumbWebp": "images/library/thumbs/album-the-joshua-tree.webp",
+      "shelfWebp": "images/library/thumbs/album-the-joshua-tree-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-charm",
@@ -4465,7 +4618,10 @@
         "accent": "#452e08",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-charm.jpg"
+      "thumb": "images/library/thumbs/album-charm.jpg",
+      "thumbWebp": "images/library/thumbs/album-charm.webp",
+      "shelfWebp": "images/library/thumbs/album-charm-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-jackson-square",
@@ -4517,7 +4673,10 @@
         "accent": "#f4e8bb",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/album-jackson-square.jpg"
+      "thumb": "images/library/thumbs/album-jackson-square.jpg",
+      "thumbWebp": "images/library/thumbs/album-jackson-square.webp",
+      "shelfWebp": "images/library/thumbs/album-jackson-square-sm.webp",
+      "externalRating": null
     },
     {
       "id": "album-funeral",
@@ -4639,7 +4798,10 @@
         "accent": "#d0765d",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/album-funeral.jpg"
+      "thumb": "images/library/thumbs/album-funeral.jpg",
+      "thumbWebp": "images/library/thumbs/album-funeral.webp",
+      "shelfWebp": "images/library/thumbs/album-funeral-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-there-will-be-blood",
@@ -4704,7 +4866,10 @@
         "accent": "#9b7534",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-there-will-be-blood.jpg"
+      "thumb": "images/library/thumbs/film-there-will-be-blood.jpg",
+      "thumbWebp": "images/library/thumbs/film-there-will-be-blood.webp",
+      "shelfWebp": "images/library/thumbs/film-there-will-be-blood-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-in-the-mood-for-love",
@@ -4769,7 +4934,10 @@
         "accent": "#c65b27",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-in-the-mood-for-love.jpg"
+      "thumb": "images/library/thumbs/film-in-the-mood-for-love.jpg",
+      "thumbWebp": "images/library/thumbs/film-in-the-mood-for-love.webp",
+      "shelfWebp": "images/library/thumbs/film-in-the-mood-for-love-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-paris-texas-film",
@@ -4834,7 +5002,10 @@
         "accent": "#eebe90",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-paris-texas-film.jpg"
+      "thumb": "images/library/thumbs/film-paris-texas-film.jpg",
+      "thumbWebp": "images/library/thumbs/film-paris-texas-film.webp",
+      "shelfWebp": "images/library/thumbs/film-paris-texas-film-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-burning-2018-film",
@@ -4899,7 +5070,10 @@
         "accent": "#134689",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-burning-2018-film.jpg"
+      "thumb": "images/library/thumbs/film-burning-2018-film.jpg",
+      "thumbWebp": "images/library/thumbs/film-burning-2018-film.webp",
+      "shelfWebp": "images/library/thumbs/film-burning-2018-film-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-the-master-2012-film",
@@ -4963,7 +5137,10 @@
         "accent": "#805741",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-the-master-2012-film.jpg"
+      "thumb": "images/library/thumbs/film-the-master-2012-film.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-master-2012-film.webp",
+      "shelfWebp": "images/library/thumbs/film-the-master-2012-film-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-moonlight",
@@ -5028,7 +5205,10 @@
         "accent": "#0f96a4",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-moonlight.jpg"
+      "thumb": "images/library/thumbs/film-moonlight.jpg",
+      "thumbWebp": "images/library/thumbs/film-moonlight.webp",
+      "shelfWebp": "images/library/thumbs/film-moonlight-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-chungking-express",
@@ -5093,7 +5273,10 @@
         "accent": "#d8ce52",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-chungking-express.jpg"
+      "thumb": "images/library/thumbs/film-chungking-express.jpg",
+      "thumbWebp": "images/library/thumbs/film-chungking-express.webp",
+      "shelfWebp": "images/library/thumbs/film-chungking-express-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-first-reformed",
@@ -5158,7 +5341,10 @@
         "accent": "#3d2318",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-first-reformed.jpg"
+      "thumb": "images/library/thumbs/film-first-reformed.jpg",
+      "thumbWebp": "images/library/thumbs/film-first-reformed.webp",
+      "shelfWebp": "images/library/thumbs/film-first-reformed-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-ferris-buellers-day-off",
@@ -5223,7 +5409,10 @@
         "accent": "#ff6d70",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-ferris-buellers-day-off.jpg"
+      "thumb": "images/library/thumbs/film-ferris-buellers-day-off.jpg",
+      "thumbWebp": "images/library/thumbs/film-ferris-buellers-day-off.webp",
+      "shelfWebp": "images/library/thumbs/film-ferris-buellers-day-off-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-the-empire-strikes-back",
@@ -5288,7 +5477,10 @@
         "accent": "#123d75",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-the-empire-strikes-back.jpg"
+      "thumb": "images/library/thumbs/film-the-empire-strikes-back.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-empire-strikes-back.webp",
+      "shelfWebp": "images/library/thumbs/film-the-empire-strikes-back-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-moonrise-kingdom",
@@ -5353,7 +5545,10 @@
         "accent": "#4d5a19",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-moonrise-kingdom.jpg"
+      "thumb": "images/library/thumbs/film-moonrise-kingdom.jpg",
+      "thumbWebp": "images/library/thumbs/film-moonrise-kingdom.webp",
+      "shelfWebp": "images/library/thumbs/film-moonrise-kingdom-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-oceans-eleven",
@@ -5418,7 +5613,10 @@
         "accent": "#dd0000",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-oceans-eleven.jpg"
+      "thumb": "images/library/thumbs/film-oceans-eleven.jpg",
+      "thumbWebp": "images/library/thumbs/film-oceans-eleven.webp",
+      "shelfWebp": "images/library/thumbs/film-oceans-eleven-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-mission-impossible-fallout",
@@ -5483,7 +5681,10 @@
         "accent": "#ea6f69",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/film-mission-impossible-fallout.jpg"
+      "thumb": "images/library/thumbs/film-mission-impossible-fallout.jpg",
+      "thumbWebp": "images/library/thumbs/film-mission-impossible-fallout.webp",
+      "shelfWebp": "images/library/thumbs/film-mission-impossible-fallout-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-kikis-delivery-service",
@@ -5544,7 +5745,10 @@
         "accent": "#0093d4",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-kikis-delivery-service.jpg"
+      "thumb": "images/library/thumbs/film-kikis-delivery-service.jpg",
+      "thumbWebp": "images/library/thumbs/film-kikis-delivery-service.webp",
+      "shelfWebp": "images/library/thumbs/film-kikis-delivery-service-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-la-la-land",
@@ -5609,7 +5813,10 @@
         "accent": "#340f98",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-la-la-land.jpg"
+      "thumb": "images/library/thumbs/film-la-la-land.jpg",
+      "thumbWebp": "images/library/thumbs/film-la-la-land.webp",
+      "shelfWebp": "images/library/thumbs/film-la-la-land-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-treasure-planet",
@@ -5672,7 +5879,10 @@
         "accent": "#0796b4",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-treasure-planet.jpg"
+      "thumb": "images/library/thumbs/film-treasure-planet.jpg",
+      "thumbWebp": "images/library/thumbs/film-treasure-planet.webp",
+      "shelfWebp": "images/library/thumbs/film-treasure-planet-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-a-goofy-movie",
@@ -5730,7 +5940,10 @@
         "accent": "#00779d",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-a-goofy-movie.jpg"
+      "thumb": "images/library/thumbs/film-a-goofy-movie.jpg",
+      "thumbWebp": "images/library/thumbs/film-a-goofy-movie.webp",
+      "shelfWebp": "images/library/thumbs/film-a-goofy-movie-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-meet-the-robinsons",
@@ -5792,7 +6005,10 @@
         "accent": "#005e9b",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-meet-the-robinsons.jpg"
+      "thumb": "images/library/thumbs/film-meet-the-robinsons.jpg",
+      "thumbWebp": "images/library/thumbs/film-meet-the-robinsons.webp",
+      "shelfWebp": "images/library/thumbs/film-meet-the-robinsons-sm.webp",
+      "externalRating": null
     },
     {
       "id": "other-99-invisible",
@@ -5845,7 +6061,10 @@
         "accent": "#5a4f1f",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/other-99-invisible.jpg"
+      "thumb": "images/library/thumbs/other-99-invisible.jpg",
+      "thumbWebp": "images/library/thumbs/other-99-invisible.webp",
+      "shelfWebp": "images/library/thumbs/other-99-invisible-sm.webp",
+      "externalRating": null
     },
     {
       "id": "other-design-matters-with-debbie-millman",
@@ -5899,7 +6118,10 @@
         "accent": "#7ebebc",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/other-design-matters-with-debbie-millman.jpg"
+      "thumb": "images/library/thumbs/other-design-matters-with-debbie-millman.jpg",
+      "thumbWebp": "images/library/thumbs/other-design-matters-with-debbie-millman.webp",
+      "shelfWebp": "images/library/thumbs/other-design-matters-with-debbie-millman-sm.webp",
+      "externalRating": null
     },
     {
       "id": "other-song-exploder",
@@ -5953,7 +6175,10 @@
         "accent": "#ac6708",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/other-song-exploder.jpg"
+      "thumb": "images/library/thumbs/other-song-exploder.jpg",
+      "thumbWebp": "images/library/thumbs/other-song-exploder.webp",
+      "shelfWebp": "images/library/thumbs/other-song-exploder-sm.webp",
+      "externalRating": null
     },
     {
       "id": "other-the-rest-is-history",
@@ -6006,7 +6231,10 @@
         "accent": "#8e1f44",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/other-the-rest-is-history.jpg"
+      "thumb": "images/library/thumbs/other-the-rest-is-history.jpg",
+      "thumbWebp": "images/library/thumbs/other-the-rest-is-history.webp",
+      "shelfWebp": "images/library/thumbs/other-the-rest-is-history-sm.webp",
+      "externalRating": null
     },
     {
       "id": "other-the-big-picture",
@@ -6059,7 +6287,10 @@
         "accent": "#0577fb",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/other-the-big-picture.jpg"
+      "thumb": "images/library/thumbs/other-the-big-picture.jpg",
+      "thumbWebp": "images/library/thumbs/other-the-big-picture.webp",
+      "shelfWebp": "images/library/thumbs/other-the-big-picture-sm.webp",
+      "externalRating": null
     },
     {
       "id": "other-radio-ambulante",
@@ -6115,7 +6346,10 @@
         "accent": "#a7e0e4",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/other-radio-ambulante.jpg"
+      "thumb": "images/library/thumbs/other-radio-ambulante.jpg",
+      "thumbWebp": "images/library/thumbs/other-radio-ambulante.webp",
+      "shelfWebp": "images/library/thumbs/other-radio-ambulante-sm.webp",
+      "externalRating": null
     },
     {
       "id": "other-the-anthropocene-reviewed",
@@ -6170,7 +6404,10 @@
         "accent": "#121a44",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/other-the-anthropocene-reviewed.jpg"
+      "thumb": "images/library/thumbs/other-the-anthropocene-reviewed.jpg",
+      "thumbWebp": "images/library/thumbs/other-the-anthropocene-reviewed.webp",
+      "shelfWebp": "images/library/thumbs/other-the-anthropocene-reviewed-sm.webp",
+      "externalRating": null
     },
     {
       "id": "other-my-brother-my-brother-and-me",
@@ -6224,7 +6461,10 @@
         "accent": "#d46e54",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/other-my-brother-my-brother-and-me.jpg"
+      "thumb": "images/library/thumbs/other-my-brother-my-brother-and-me.jpg",
+      "thumbWebp": "images/library/thumbs/other-my-brother-my-brother-and-me.webp",
+      "shelfWebp": "images/library/thumbs/other-my-brother-my-brother-and-me-sm.webp",
+      "externalRating": null
     },
     {
       "id": "other-the-adventure-zone",
@@ -6278,7 +6518,10 @@
         "accent": "#874c17",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/other-the-adventure-zone.jpg"
+      "thumb": "images/library/thumbs/other-the-adventure-zone.jpg",
+      "thumbWebp": "images/library/thumbs/other-the-adventure-zone.webp",
+      "shelfWebp": "images/library/thumbs/other-the-adventure-zone-sm.webp",
+      "externalRating": null
     },
     {
       "id": "other-wonderful",
@@ -6333,7 +6576,10 @@
         "accent": "#f8d493",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/other-wonderful.jpg"
+      "thumb": "images/library/thumbs/other-wonderful.jpg",
+      "thumbWebp": "images/library/thumbs/other-wonderful.webp",
+      "shelfWebp": "images/library/thumbs/other-wonderful-sm.webp",
+      "externalRating": null
     },
     {
       "id": "other-the-besties",
@@ -6389,7 +6635,10 @@
         "accent": "#fdc541",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/other-the-besties.jpg"
+      "thumb": "images/library/thumbs/other-the-besties.jpg",
+      "thumbWebp": "images/library/thumbs/other-the-besties.webp",
+      "shelfWebp": "images/library/thumbs/other-the-besties-sm.webp",
+      "externalRating": null
     },
     {
       "id": "other-revisionist-history",
@@ -6443,7 +6692,10 @@
         "accent": "#edecac",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/other-revisionist-history.jpg"
+      "thumb": "images/library/thumbs/other-revisionist-history.jpg",
+      "thumbWebp": "images/library/thumbs/other-revisionist-history.webp",
+      "shelfWebp": "images/library/thumbs/other-revisionist-history-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-dune",
@@ -6496,7 +6748,10 @@
         "accent": "#f5bc54",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-dune.jpg"
+      "thumb": "images/library/thumbs/book-dune.jpg",
+      "thumbWebp": "images/library/thumbs/book-dune.webp",
+      "shelfWebp": "images/library/thumbs/book-dune-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-project-hail-mary",
@@ -6549,7 +6804,10 @@
         "accent": "#05404b",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-project-hail-mary.jpg"
+      "thumb": "images/library/thumbs/book-project-hail-mary.jpg",
+      "thumbWebp": "images/library/thumbs/book-project-hail-mary.webp",
+      "shelfWebp": "images/library/thumbs/book-project-hail-mary-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-the-way-of-kings",
@@ -6602,7 +6860,10 @@
         "accent": "#f9b65a",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-the-way-of-kings.jpg"
+      "thumb": "images/library/thumbs/book-the-way-of-kings.jpg",
+      "thumbWebp": "images/library/thumbs/book-the-way-of-kings.webp",
+      "shelfWebp": "images/library/thumbs/book-the-way-of-kings-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-song-of-solomon",
@@ -6651,7 +6912,10 @@
         "accent": "#008c95",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-song-of-solomon.jpg"
+      "thumb": "images/library/thumbs/book-song-of-solomon.jpg",
+      "thumbWebp": "images/library/thumbs/book-song-of-solomon.webp",
+      "shelfWebp": "images/library/thumbs/book-song-of-solomon-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-tomorrow-and-tomorrow-and-tomorrow",
@@ -6700,7 +6964,10 @@
         "accent": "#fee147",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/book-tomorrow-and-tomorrow-and-tomorrow.jpg"
+      "thumb": "images/library/thumbs/book-tomorrow-and-tomorrow-and-tomorrow.jpg",
+      "thumbWebp": "images/library/thumbs/book-tomorrow-and-tomorrow-and-tomorrow.webp",
+      "shelfWebp": "images/library/thumbs/book-tomorrow-and-tomorrow-and-tomorrow-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-norwegian-wood",
@@ -6749,7 +7016,10 @@
         "accent": "#f98c09",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-norwegian-wood.jpg"
+      "thumb": "images/library/thumbs/book-norwegian-wood.jpg",
+      "thumbWebp": "images/library/thumbs/book-norwegian-wood.webp",
+      "shelfWebp": "images/library/thumbs/book-norwegian-wood-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-the-song-of-achilles",
@@ -6798,7 +7068,10 @@
         "accent": "#02abbf",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-the-song-of-achilles.jpg"
+      "thumb": "images/library/thumbs/book-the-song-of-achilles.jpg",
+      "thumbWebp": "images/library/thumbs/book-the-song-of-achilles.webp",
+      "shelfWebp": "images/library/thumbs/book-the-song-of-achilles-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-lincoln-in-the-bardo",
@@ -6852,7 +7125,10 @@
         "accent": "#14655a",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-lincoln-in-the-bardo.jpg"
+      "thumb": "images/library/thumbs/book-lincoln-in-the-bardo.jpg",
+      "thumbWebp": "images/library/thumbs/book-lincoln-in-the-bardo.webp",
+      "shelfWebp": "images/library/thumbs/book-lincoln-in-the-bardo-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-narrative-of-the-life-of-frederick-douglass",
@@ -6905,7 +7181,10 @@
         "accent": "#d70600",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-narrative-of-the-life-of-frederick-douglass.jpg"
+      "thumb": "images/library/thumbs/book-narrative-of-the-life-of-frederick-douglass.jpg",
+      "thumbWebp": "images/library/thumbs/book-narrative-of-the-life-of-frederick-douglass.webp",
+      "shelfWebp": "images/library/thumbs/book-narrative-of-the-life-of-frederick-douglass-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-the-nightingale",
@@ -6958,7 +7237,10 @@
         "accent": "#816d20",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-the-nightingale.jpg"
+      "thumb": "images/library/thumbs/book-the-nightingale.jpg",
+      "thumbWebp": "images/library/thumbs/book-the-nightingale.webp",
+      "shelfWebp": "images/library/thumbs/book-the-nightingale-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-go-tell-it-on-the-mountain",
@@ -6994,7 +7276,10 @@
         "accent": "#f0dbac",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-go-tell-it-on-the-mountain.jpg"
+      "thumb": "images/library/thumbs/book-go-tell-it-on-the-mountain.jpg",
+      "thumbWebp": "images/library/thumbs/book-go-tell-it-on-the-mountain.webp",
+      "shelfWebp": "images/library/thumbs/book-go-tell-it-on-the-mountain-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-of-mice-and-men",
@@ -7048,7 +7333,10 @@
         "accent": "#ebc15a",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-of-mice-and-men.jpg"
+      "thumb": "images/library/thumbs/book-of-mice-and-men.jpg",
+      "thumbWebp": "images/library/thumbs/book-of-mice-and-men.webp",
+      "shelfWebp": "images/library/thumbs/book-of-mice-and-men-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-on-writing",
@@ -7101,7 +7389,10 @@
         "accent": "#1f1f1f",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-on-writing.jpg"
+      "thumb": "images/library/thumbs/book-on-writing.jpg",
+      "thumbWebp": "images/library/thumbs/book-on-writing.webp",
+      "shelfWebp": "images/library/thumbs/book-on-writing-sm.webp",
+      "externalRating": null
     },
     {
       "id": "book-dark-matter",
@@ -7155,7 +7446,10 @@
         "accent": "#cee7ea",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/book-dark-matter.jpg"
+      "thumb": "images/library/thumbs/book-dark-matter.jpg",
+      "thumbWebp": "images/library/thumbs/book-dark-matter.webp",
+      "shelfWebp": "images/library/thumbs/book-dark-matter-sm.webp",
+      "externalRating": null
     },
     {
       "id": "film-spider-man-brand-new-day",
@@ -7163,7 +7457,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Spider-Man: Brand New Day",
-      "creator": "",
+      "creator": "Destin Daniel Cretton",
       "year": 2026,
       "detail": "Film",
       "cover": "images/library/film-spider-man-brand-new-day.jpg",
@@ -7192,7 +7486,7 @@
         "Adventure"
       ],
       "creators": [
-        "Unknown"
+        "Destin Daniel Cretton"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7202,7 +7496,10 @@
         "accent": "#003d69",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-spider-man-brand-new-day.jpg"
+      "thumb": "images/library/thumbs/film-spider-man-brand-new-day.jpg",
+      "thumbWebp": "images/library/thumbs/film-spider-man-brand-new-day.webp",
+      "shelfWebp": "images/library/thumbs/film-spider-man-brand-new-day-sm.webp",
+      "externalRating": 7.9
     },
     {
       "id": "film-the-odyssey",
@@ -7210,7 +7507,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "The Odyssey",
-      "creator": "",
+      "creator": "Christopher Nolan",
       "year": 2026,
       "detail": "Film",
       "cover": "images/library/film-the-odyssey.jpg",
@@ -7239,7 +7536,7 @@
         "Fantasy"
       ],
       "creators": [
-        "Unknown"
+        "Christopher Nolan"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7249,7 +7546,10 @@
         "accent": "#eabc7e",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-the-odyssey.jpg"
+      "thumb": "images/library/thumbs/film-the-odyssey.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-odyssey.webp",
+      "shelfWebp": "images/library/thumbs/film-the-odyssey-sm.webp",
+      "externalRating": 8
     },
     {
       "id": "film-disclosure-day",
@@ -7257,7 +7557,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Disclosure Day",
-      "creator": "",
+      "creator": "Steven Spielberg",
       "year": 2026,
       "detail": "Film",
       "cover": "images/library/film-disclosure-day.jpg",
@@ -7285,7 +7585,7 @@
         "Thriller"
       ],
       "creators": [
-        "Unknown"
+        "Steven Spielberg"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7295,7 +7595,10 @@
         "accent": "#ddeadf",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/film-disclosure-day.jpg"
+      "thumb": "images/library/thumbs/film-disclosure-day.jpg",
+      "thumbWebp": "images/library/thumbs/film-disclosure-day.webp",
+      "shelfWebp": "images/library/thumbs/film-disclosure-day-sm.webp",
+      "externalRating": 7.5
     },
     {
       "id": "film-the-mandalorian-and-grogu",
@@ -7303,7 +7606,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "The Mandalorian and Grogu",
-      "creator": "",
+      "creator": "Jon Favreau",
       "year": 2026,
       "detail": "Film",
       "cover": "images/library/film-the-mandalorian-and-grogu.jpg",
@@ -7332,7 +7635,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Jon Favreau"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7342,7 +7645,10 @@
         "accent": "#f58911",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-the-mandalorian-and-grogu.jpg"
+      "thumb": "images/library/thumbs/film-the-mandalorian-and-grogu.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-mandalorian-and-grogu.webp",
+      "shelfWebp": "images/library/thumbs/film-the-mandalorian-and-grogu-sm.webp",
+      "externalRating": 7.5
     },
     {
       "id": "film-backrooms",
@@ -7350,7 +7656,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Backrooms",
-      "creator": "",
+      "creator": "Kane Parsons",
       "year": 2026,
       "detail": "Film",
       "cover": "images/library/film-backrooms.jpg",
@@ -7379,7 +7685,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Kane Parsons"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7389,7 +7695,10 @@
         "accent": "#998926",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-backrooms.jpg"
+      "thumb": "images/library/thumbs/film-backrooms.jpg",
+      "thumbWebp": "images/library/thumbs/film-backrooms.webp",
+      "shelfWebp": "images/library/thumbs/film-backrooms-sm.webp",
+      "externalRating": 7.1
     },
     {
       "id": "film-the-devil-wears-prada-2",
@@ -7397,7 +7706,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "The Devil Wears Prada 2",
-      "creator": "",
+      "creator": "David Frankel",
       "year": 2026,
       "detail": "Film",
       "cover": "images/library/film-the-devil-wears-prada-2.jpg",
@@ -7425,7 +7734,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "David Frankel"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7435,7 +7744,10 @@
         "accent": "#540505",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/film-the-devil-wears-prada-2.jpg"
+      "thumb": "images/library/thumbs/film-the-devil-wears-prada-2.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-devil-wears-prada-2.webp",
+      "shelfWebp": "images/library/thumbs/film-the-devil-wears-prada-2-sm.webp",
+      "externalRating": 7.1
     },
     {
       "id": "film-michael",
@@ -7443,7 +7755,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Michael",
-      "creator": "",
+      "creator": "Antoine Fuqua",
       "year": 2026,
       "detail": "Film",
       "cover": "images/library/film-michael.jpg",
@@ -7471,7 +7783,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Antoine Fuqua"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7481,7 +7793,10 @@
         "accent": "#b12c28",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-michael.jpg"
+      "thumb": "images/library/thumbs/film-michael.jpg",
+      "thumbWebp": "images/library/thumbs/film-michael.webp",
+      "shelfWebp": "images/library/thumbs/film-michael-sm.webp",
+      "externalRating": 8.7
     },
     {
       "id": "film-the-drama",
@@ -7489,7 +7804,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "The Drama",
-      "creator": "",
+      "creator": "Kristoffer Borgli",
       "year": 2026,
       "detail": "Film",
       "cover": "images/library/film-the-drama.jpg",
@@ -7518,7 +7833,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Kristoffer Borgli"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7528,7 +7843,10 @@
         "accent": "#5b3015",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-the-drama.jpg"
+      "thumb": "images/library/thumbs/film-the-drama.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-drama.webp",
+      "shelfWebp": "images/library/thumbs/film-the-drama-sm.webp",
+      "externalRating": 6.9
     },
     {
       "id": "film-project-hail-mary",
@@ -7536,7 +7854,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Project Hail Mary",
-      "creator": "",
+      "creator": "Phil Lord, Christopher Miller",
       "year": 2026,
       "detail": "Film",
       "cover": "images/library/film-project-hail-mary.jpg",
@@ -7564,7 +7882,8 @@
         "Adventure"
       ],
       "creators": [
-        "Unknown"
+        "Phil Lord",
+        "Christopher Miller"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7574,7 +7893,10 @@
         "accent": "#10526a",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-project-hail-mary.jpg"
+      "thumb": "images/library/thumbs/film-project-hail-mary.jpg",
+      "thumbWebp": "images/library/thumbs/film-project-hail-mary.webp",
+      "shelfWebp": "images/library/thumbs/film-project-hail-mary-sm.webp",
+      "externalRating": 8.6
     },
     {
       "id": "film-marty-supreme",
@@ -7582,7 +7904,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Marty Supreme",
-      "creator": "",
+      "creator": "Josh Safdie",
       "year": 2025,
       "detail": "Film",
       "cover": "images/library/film-marty-supreme.jpg",
@@ -7610,7 +7932,7 @@
         "Thriller"
       ],
       "creators": [
-        "Unknown"
+        "Josh Safdie"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7620,7 +7942,10 @@
         "accent": "#5e301d",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-marty-supreme.jpg"
+      "thumb": "images/library/thumbs/film-marty-supreme.jpg",
+      "thumbWebp": "images/library/thumbs/film-marty-supreme.webp",
+      "shelfWebp": "images/library/thumbs/film-marty-supreme-sm.webp",
+      "externalRating": 7.4
     },
     {
       "id": "film-one-battle-after-another",
@@ -7628,7 +7953,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "One Battle After Another",
-      "creator": "",
+      "creator": "Paul Thomas Anderson",
       "year": 2025,
       "detail": "Film",
       "cover": "images/library/film-one-battle-after-another.jpg",
@@ -7657,7 +7982,7 @@
         "Comedy"
       ],
       "creators": [
-        "Unknown"
+        "Paul Thomas Anderson"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7667,7 +7992,10 @@
         "accent": "#e8834e",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-one-battle-after-another.jpg"
+      "thumb": "images/library/thumbs/film-one-battle-after-another.jpg",
+      "thumbWebp": "images/library/thumbs/film-one-battle-after-another.webp",
+      "shelfWebp": "images/library/thumbs/film-one-battle-after-another-sm.webp",
+      "externalRating": 7.3
     },
     {
       "id": "film-obsession",
@@ -7675,7 +8003,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Obsession",
-      "creator": "",
+      "creator": "Curry Barker",
       "year": 2025,
       "detail": "Film",
       "cover": "images/library/film-obsession.jpg",
@@ -7703,7 +8031,7 @@
         "Thriller"
       ],
       "creators": [
-        "Unknown"
+        "Curry Barker"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7713,7 +8041,10 @@
         "accent": "#311a11",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-obsession.jpg"
+      "thumb": "images/library/thumbs/film-obsession.jpg",
+      "thumbWebp": "images/library/thumbs/film-obsession.webp",
+      "shelfWebp": "images/library/thumbs/film-obsession-sm.webp",
+      "externalRating": 8.2
     },
     {
       "id": "film-wake-up-dead-man",
@@ -7721,7 +8052,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Wake Up Dead Man",
-      "creator": "",
+      "creator": "Rian Johnson",
       "year": 2025,
       "detail": "Film",
       "cover": "images/library/film-wake-up-dead-man.jpg",
@@ -7750,7 +8081,7 @@
         "Comedy"
       ],
       "creators": [
-        "Unknown"
+        "Rian Johnson"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7760,7 +8091,10 @@
         "accent": "#938c79",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-wake-up-dead-man.jpg"
+      "thumb": "images/library/thumbs/film-wake-up-dead-man.jpg",
+      "thumbWebp": "images/library/thumbs/film-wake-up-dead-man.webp",
+      "shelfWebp": "images/library/thumbs/film-wake-up-dead-man-sm.webp",
+      "externalRating": 7.2
     },
     {
       "id": "film-kpop-demon-hunters",
@@ -7768,7 +8102,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "KPop Demon Hunters",
-      "creator": "",
+      "creator": "Chris Appelhans, Maggie Kang",
       "year": 2025,
       "detail": "Film",
       "cover": "images/library/film-kpop-demon-hunters.jpg",
@@ -7798,7 +8132,8 @@
         "Animation"
       ],
       "creators": [
-        "Unknown"
+        "Chris Appelhans",
+        "Maggie Kang"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7808,7 +8143,10 @@
         "accent": "#0c3c9b",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-kpop-demon-hunters.jpg"
+      "thumb": "images/library/thumbs/film-kpop-demon-hunters.jpg",
+      "thumbWebp": "images/library/thumbs/film-kpop-demon-hunters.webp",
+      "shelfWebp": "images/library/thumbs/film-kpop-demon-hunters-sm.webp",
+      "externalRating": 8
     },
     {
       "id": "film-superman",
@@ -7816,7 +8154,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Superman",
-      "creator": "",
+      "creator": "James Gunn",
       "year": 2025,
       "detail": "Film",
       "cover": "images/library/film-superman.jpg",
@@ -7845,7 +8183,7 @@
         "Action"
       ],
       "creators": [
-        "Unknown"
+        "James Gunn"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7855,7 +8193,10 @@
         "accent": "#31aefa",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-superman.jpg"
+      "thumb": "images/library/thumbs/film-superman.jpg",
+      "thumbWebp": "images/library/thumbs/film-superman.webp",
+      "shelfWebp": "images/library/thumbs/film-superman-sm.webp",
+      "externalRating": 7.3
     },
     {
       "id": "film-f1",
@@ -7863,7 +8204,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "F1",
-      "creator": "",
+      "creator": "Joseph Kosinski",
       "year": 2025,
       "detail": "Film",
       "cover": "images/library/film-f1.jpg",
@@ -7891,7 +8232,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Joseph Kosinski"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7901,7 +8242,10 @@
         "accent": "#27373e",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-f1.jpg"
+      "thumb": "images/library/thumbs/film-f1.jpg",
+      "thumbWebp": "images/library/thumbs/film-f1.webp",
+      "shelfWebp": "images/library/thumbs/film-f1-sm.webp",
+      "externalRating": 7.8
     },
     {
       "id": "film-mission-impossible-the-final-reckoning",
@@ -7909,7 +8253,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Mission: Impossible – The Final Reckoning",
-      "creator": "",
+      "creator": "Christopher McQuarrie",
       "year": 2025,
       "detail": "Film",
       "cover": "images/library/film-mission-impossible-the-final-reckoning.jpg",
@@ -7938,7 +8282,7 @@
         "Adventure"
       ],
       "creators": [
-        "Unknown"
+        "Christopher McQuarrie"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7948,7 +8292,10 @@
         "accent": "#946720",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/film-mission-impossible-the-final-reckoning.jpg"
+      "thumb": "images/library/thumbs/film-mission-impossible-the-final-reckoning.jpg",
+      "thumbWebp": "images/library/thumbs/film-mission-impossible-the-final-reckoning.webp",
+      "shelfWebp": "images/library/thumbs/film-mission-impossible-the-final-reckoning-sm.webp",
+      "externalRating": 7.2
     },
     {
       "id": "film-thunderbolts",
@@ -7956,7 +8303,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Thunderbolts*",
-      "creator": "",
+      "creator": "Jake Schreier",
       "year": 2025,
       "detail": "Film",
       "cover": "images/library/film-thunderbolts.jpg",
@@ -7985,7 +8332,7 @@
         "Adventure"
       ],
       "creators": [
-        "Unknown"
+        "Jake Schreier"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -7995,7 +8342,10 @@
         "accent": "#754e34",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-thunderbolts.jpg"
+      "thumb": "images/library/thumbs/film-thunderbolts.jpg",
+      "thumbWebp": "images/library/thumbs/film-thunderbolts.webp",
+      "shelfWebp": "images/library/thumbs/film-thunderbolts-sm.webp",
+      "externalRating": 7.3
     },
     {
       "id": "film-sinners",
@@ -8003,7 +8353,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Sinners",
-      "creator": "",
+      "creator": "Ryan Coogler",
       "year": 2025,
       "detail": "Film",
       "cover": "images/library/film-sinners.jpg",
@@ -8032,7 +8382,7 @@
         "Thriller"
       ],
       "creators": [
-        "Unknown"
+        "Ryan Coogler"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8042,7 +8392,10 @@
         "accent": "#f39604",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-sinners.jpg"
+      "thumb": "images/library/thumbs/film-sinners.jpg",
+      "thumbWebp": "images/library/thumbs/film-sinners.webp",
+      "shelfWebp": "images/library/thumbs/film-sinners-sm.webp",
+      "externalRating": 7.5
     },
     {
       "id": "film-black-bag",
@@ -8050,7 +8403,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Black Bag",
-      "creator": "",
+      "creator": "Steven Soderbergh",
       "year": 2025,
       "detail": "Film",
       "cover": "images/library/film-black-bag.jpg",
@@ -8079,7 +8432,7 @@
         "Thriller"
       ],
       "creators": [
-        "Unknown"
+        "Steven Soderbergh"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8089,7 +8442,10 @@
         "accent": "#f9d1a0",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-black-bag.jpg"
+      "thumb": "images/library/thumbs/film-black-bag.jpg",
+      "thumbWebp": "images/library/thumbs/film-black-bag.webp",
+      "shelfWebp": "images/library/thumbs/film-black-bag-sm.webp",
+      "externalRating": 6.4
     },
     {
       "id": "film-friendship",
@@ -8097,7 +8453,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Friendship",
-      "creator": "",
+      "creator": "Andrew DeYoung",
       "year": 2024,
       "detail": "Film",
       "cover": "images/library/film-friendship.jpg",
@@ -8125,7 +8481,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Andrew DeYoung"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8135,7 +8491,10 @@
         "accent": "#d7e259",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/film-friendship.jpg"
+      "thumb": "images/library/thumbs/film-friendship.jpg",
+      "thumbWebp": "images/library/thumbs/film-friendship.webp",
+      "shelfWebp": "images/library/thumbs/film-friendship-sm.webp",
+      "externalRating": 6.4
     },
     {
       "id": "film-conclave",
@@ -8143,7 +8502,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Conclave",
-      "creator": "",
+      "creator": "Edward Berger",
       "year": 2024,
       "detail": "Film",
       "cover": "images/library/film-conclave.jpg",
@@ -8171,7 +8530,7 @@
         "Thriller"
       ],
       "creators": [
-        "Unknown"
+        "Edward Berger"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8181,7 +8540,10 @@
         "accent": "#780e10",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-conclave.jpg"
+      "thumb": "images/library/thumbs/film-conclave.jpg",
+      "thumbWebp": "images/library/thumbs/film-conclave.webp",
+      "shelfWebp": "images/library/thumbs/film-conclave-sm.webp",
+      "externalRating": 7.2
     },
     {
       "id": "film-deadpool-wolverine",
@@ -8189,7 +8551,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Deadpool & Wolverine",
-      "creator": "",
+      "creator": "Shawn Levy",
       "year": 2024,
       "detail": "Film",
       "cover": "images/library/film-deadpool-wolverine.jpg",
@@ -8218,7 +8580,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Shawn Levy"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8228,7 +8590,10 @@
         "accent": "#d2b224",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-deadpool-wolverine.jpg"
+      "thumb": "images/library/thumbs/film-deadpool-wolverine.jpg",
+      "thumbWebp": "images/library/thumbs/film-deadpool-wolverine.webp",
+      "shelfWebp": "images/library/thumbs/film-deadpool-wolverine-sm.webp",
+      "externalRating": 7.6
     },
     {
       "id": "film-the-boy-and-the-heron",
@@ -8236,7 +8601,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "The Boy and the Heron",
-      "creator": "",
+      "creator": "Hayao Miyazaki",
       "year": 2023,
       "detail": "Film",
       "cover": "images/library/film-the-boy-and-the-heron.jpg",
@@ -8265,7 +8630,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Hayao Miyazaki"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8275,7 +8640,10 @@
         "accent": "#e5c994",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-the-boy-and-the-heron.jpg"
+      "thumb": "images/library/thumbs/film-the-boy-and-the-heron.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-boy-and-the-heron.webp",
+      "shelfWebp": "images/library/thumbs/film-the-boy-and-the-heron-sm.webp",
+      "externalRating": 7.4
     },
     {
       "id": "film-dungeons-dragons-honor-among-thieves",
@@ -8283,7 +8651,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Dungeons & Dragons: Honor Among Thieves",
-      "creator": "",
+      "creator": "Jonathan Goldstein, John Francis Daley",
       "year": 2023,
       "detail": "Film",
       "cover": "images/library/film-dungeons-dragons-honor-among-thieves.jpg",
@@ -8312,7 +8680,8 @@
         "Comedy"
       ],
       "creators": [
-        "Unknown"
+        "Jonathan Goldstein",
+        "John Francis Daley"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8322,7 +8691,10 @@
         "accent": "#61120c",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-dungeons-dragons-honor-among-thieves.jpg"
+      "thumb": "images/library/thumbs/film-dungeons-dragons-honor-among-thieves.jpg",
+      "thumbWebp": "images/library/thumbs/film-dungeons-dragons-honor-among-thieves.webp",
+      "shelfWebp": "images/library/thumbs/film-dungeons-dragons-honor-among-thieves-sm.webp",
+      "externalRating": 7.4
     },
     {
       "id": "film-the-batman",
@@ -8330,7 +8702,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "The Batman",
-      "creator": "",
+      "creator": "Matt Reeves",
       "year": 2022,
       "detail": "Film",
       "cover": "images/library/film-the-batman.jpg",
@@ -8359,7 +8731,7 @@
         "Thriller"
       ],
       "creators": [
-        "Unknown"
+        "Matt Reeves"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8369,7 +8741,10 @@
         "accent": "#e36716",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-the-batman.jpg"
+      "thumb": "images/library/thumbs/film-the-batman.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-batman.webp",
+      "shelfWebp": "images/library/thumbs/film-the-batman-sm.webp",
+      "externalRating": 7.7
     },
     {
       "id": "film-spider-man-no-way-home",
@@ -8377,7 +8752,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Spider-Man: No Way Home",
-      "creator": "",
+      "creator": "Jon Watts",
       "year": 2021,
       "detail": "Film",
       "cover": "images/library/film-spider-man-no-way-home.jpg",
@@ -8406,7 +8781,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Jon Watts"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8416,7 +8791,10 @@
         "accent": "#8d3b46",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-spider-man-no-way-home.jpg"
+      "thumb": "images/library/thumbs/film-spider-man-no-way-home.jpg",
+      "thumbWebp": "images/library/thumbs/film-spider-man-no-way-home.webp",
+      "shelfWebp": "images/library/thumbs/film-spider-man-no-way-home-sm.webp",
+      "externalRating": 7.9
     },
     {
       "id": "film-dune",
@@ -8424,7 +8802,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Dune",
-      "creator": "",
+      "creator": "Denis Villeneuve",
       "year": 2021,
       "detail": "Film",
       "cover": "images/library/film-dune.jpg",
@@ -8452,7 +8830,7 @@
         "Adventure"
       ],
       "creators": [
-        "Unknown"
+        "Denis Villeneuve"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8462,7 +8840,10 @@
         "accent": "#40160c",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-dune.jpg"
+      "thumb": "images/library/thumbs/film-dune.jpg",
+      "thumbWebp": "images/library/thumbs/film-dune.webp",
+      "shelfWebp": "images/library/thumbs/film-dune-sm.webp",
+      "externalRating": 7.8
     },
     {
       "id": "film-shang-chi-and-the-legend-of-the-ten-rings",
@@ -8470,7 +8851,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Shang-Chi and the Legend of the Ten Rings",
-      "creator": "",
+      "creator": "Destin Daniel Cretton",
       "year": 2021,
       "detail": "Film",
       "cover": "images/library/film-shang-chi-and-the-legend-of-the-ten-rings.jpg",
@@ -8499,7 +8880,7 @@
         "Fantasy"
       ],
       "creators": [
-        "Unknown"
+        "Destin Daniel Cretton"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8509,7 +8890,10 @@
         "accent": "#357ca8",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-shang-chi-and-the-legend-of-the-ten-rings.jpg"
+      "thumb": "images/library/thumbs/film-shang-chi-and-the-legend-of-the-ten-rings.jpg",
+      "thumbWebp": "images/library/thumbs/film-shang-chi-and-the-legend-of-the-ten-rings.webp",
+      "shelfWebp": "images/library/thumbs/film-shang-chi-and-the-legend-of-the-ten-rings-sm.webp",
+      "externalRating": 7.5
     },
     {
       "id": "film-black-widow",
@@ -8517,7 +8901,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Black Widow",
-      "creator": "",
+      "creator": "Cate Shortland",
       "year": 2021,
       "detail": "Film",
       "cover": "images/library/film-black-widow.jpg",
@@ -8546,7 +8930,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Cate Shortland"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8556,7 +8940,10 @@
         "accent": "#9c0f0f",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-black-widow.jpg"
+      "thumb": "images/library/thumbs/film-black-widow.jpg",
+      "thumbWebp": "images/library/thumbs/film-black-widow.webp",
+      "shelfWebp": "images/library/thumbs/film-black-widow-sm.webp",
+      "externalRating": 7.2
     },
     {
       "id": "film-tenet",
@@ -8564,7 +8951,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Tenet",
-      "creator": "",
+      "creator": "Christopher Nolan",
       "year": 2020,
       "detail": "Film",
       "cover": "images/library/film-tenet.jpg",
@@ -8593,7 +8980,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Christopher Nolan"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8603,7 +8990,10 @@
         "accent": "#274760",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-tenet.jpg"
+      "thumb": "images/library/thumbs/film-tenet.jpg",
+      "thumbWebp": "images/library/thumbs/film-tenet.webp",
+      "shelfWebp": "images/library/thumbs/film-tenet-sm.webp",
+      "externalRating": 7.2
     },
     {
       "id": "film-star-wars-the-rise-of-skywalker",
@@ -8611,7 +9001,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Star Wars: The Rise of Skywalker",
-      "creator": "",
+      "creator": "J.J. Abrams",
       "year": 2019,
       "detail": "Film",
       "cover": "images/library/film-star-wars-the-rise-of-skywalker.jpg",
@@ -8640,7 +9030,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "J.J. Abrams"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8650,7 +9040,10 @@
         "accent": "#2795cf",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-star-wars-the-rise-of-skywalker.jpg"
+      "thumb": "images/library/thumbs/film-star-wars-the-rise-of-skywalker.jpg",
+      "thumbWebp": "images/library/thumbs/film-star-wars-the-rise-of-skywalker.webp",
+      "shelfWebp": "images/library/thumbs/film-star-wars-the-rise-of-skywalker-sm.webp",
+      "externalRating": 6.3
     },
     {
       "id": "film-little-women",
@@ -8658,7 +9051,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Little Women",
-      "creator": "",
+      "creator": "Greta Gerwig",
       "year": 2019,
       "detail": "Film",
       "cover": "images/library/film-little-women.jpg",
@@ -8686,7 +9079,7 @@
         "Romance"
       ],
       "creators": [
-        "Unknown"
+        "Greta Gerwig"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8696,7 +9089,10 @@
         "accent": "#33230f",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-little-women.jpg"
+      "thumb": "images/library/thumbs/film-little-women.jpg",
+      "thumbWebp": "images/library/thumbs/film-little-women.webp",
+      "shelfWebp": "images/library/thumbs/film-little-women-sm.webp",
+      "externalRating": 7.8
     },
     {
       "id": "film-jojo-rabbit",
@@ -8704,7 +9100,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Jojo Rabbit",
-      "creator": "",
+      "creator": "Taika Waititi",
       "year": 2019,
       "detail": "Film",
       "cover": "images/library/film-jojo-rabbit.jpg",
@@ -8733,7 +9129,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Taika Waititi"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8743,7 +9139,10 @@
         "accent": "#be1419",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-jojo-rabbit.jpg"
+      "thumb": "images/library/thumbs/film-jojo-rabbit.jpg",
+      "thumbWebp": "images/library/thumbs/film-jojo-rabbit.webp",
+      "shelfWebp": "images/library/thumbs/film-jojo-rabbit-sm.webp",
+      "externalRating": 8
     },
     {
       "id": "film-knives-out",
@@ -8751,7 +9150,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Knives Out",
-      "creator": "",
+      "creator": "Rian Johnson",
       "year": 2019,
       "detail": "Film",
       "cover": "images/library/film-knives-out.jpg",
@@ -8780,7 +9179,7 @@
         "Mystery"
       ],
       "creators": [
-        "Unknown"
+        "Rian Johnson"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8790,7 +9189,10 @@
         "accent": "#a8840b",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-knives-out.jpg"
+      "thumb": "images/library/thumbs/film-knives-out.jpg",
+      "thumbWebp": "images/library/thumbs/film-knives-out.webp",
+      "shelfWebp": "images/library/thumbs/film-knives-out-sm.webp",
+      "externalRating": 7.8
     },
     {
       "id": "film-joker",
@@ -8798,7 +9200,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Joker",
-      "creator": "",
+      "creator": "Todd Phillips",
       "year": 2019,
       "detail": "Film",
       "cover": "images/library/film-joker.jpg",
@@ -8827,7 +9229,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Todd Phillips"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8837,7 +9239,10 @@
         "accent": "#8f4233",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-joker.jpg"
+      "thumb": "images/library/thumbs/film-joker.jpg",
+      "thumbWebp": "images/library/thumbs/film-joker.webp",
+      "shelfWebp": "images/library/thumbs/film-joker-sm.webp",
+      "externalRating": 8.1
     },
     {
       "id": "film-spider-man-far-from-home",
@@ -8845,7 +9250,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Spider-Man: Far From Home",
-      "creator": "",
+      "creator": "Jon Watts",
       "year": 2019,
       "detail": "Film",
       "cover": "images/library/film-spider-man-far-from-home.jpg",
@@ -8874,7 +9279,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Jon Watts"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8884,7 +9289,10 @@
         "accent": "#04456f",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-spider-man-far-from-home.jpg"
+      "thumb": "images/library/thumbs/film-spider-man-far-from-home.jpg",
+      "thumbWebp": "images/library/thumbs/film-spider-man-far-from-home.webp",
+      "shelfWebp": "images/library/thumbs/film-spider-man-far-from-home-sm.webp",
+      "externalRating": 7.4
     },
     {
       "id": "film-parasite",
@@ -8892,7 +9300,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Parasite",
-      "creator": "",
+      "creator": "Bong Joon Ho",
       "year": 2019,
       "detail": "Film",
       "cover": "images/library/film-parasite.jpg",
@@ -8921,7 +9329,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Bong Joon Ho"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8931,7 +9339,10 @@
         "accent": "#208689",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-parasite.jpg"
+      "thumb": "images/library/thumbs/film-parasite.jpg",
+      "thumbWebp": "images/library/thumbs/film-parasite.webp",
+      "shelfWebp": "images/library/thumbs/film-parasite-sm.webp",
+      "externalRating": 8.5
     },
     {
       "id": "film-once-upon-a-time-in-hollywood",
@@ -8939,7 +9350,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Once Upon a Time... in Hollywood",
-      "creator": "",
+      "creator": "Quentin Tarantino",
       "year": 2019,
       "detail": "Film",
       "cover": "images/library/film-once-upon-a-time-in-hollywood.jpg",
@@ -8968,7 +9379,7 @@
         "Thriller"
       ],
       "creators": [
-        "Unknown"
+        "Quentin Tarantino"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -8978,7 +9389,10 @@
         "accent": "#f04934",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-once-upon-a-time-in-hollywood.jpg"
+      "thumb": "images/library/thumbs/film-once-upon-a-time-in-hollywood.jpg",
+      "thumbWebp": "images/library/thumbs/film-once-upon-a-time-in-hollywood.webp",
+      "shelfWebp": "images/library/thumbs/film-once-upon-a-time-in-hollywood-sm.webp",
+      "externalRating": 7.4
     },
     {
       "id": "film-avengers-endgame",
@@ -8986,7 +9400,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Avengers: Endgame",
-      "creator": "",
+      "creator": "Anthony Russo, Joe Russo",
       "year": 2019,
       "detail": "Film",
       "cover": "images/library/film-avengers-endgame.jpg",
@@ -9015,7 +9429,8 @@
         "Action"
       ],
       "creators": [
-        "Unknown"
+        "Anthony Russo",
+        "Joe Russo"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9025,7 +9440,10 @@
         "accent": "#12084d",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-avengers-endgame.jpg"
+      "thumb": "images/library/thumbs/film-avengers-endgame.jpg",
+      "thumbWebp": "images/library/thumbs/film-avengers-endgame.webp",
+      "shelfWebp": "images/library/thumbs/film-avengers-endgame-sm.webp",
+      "externalRating": 8.2
     },
     {
       "id": "film-captain-marvel",
@@ -9033,7 +9451,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Captain Marvel",
-      "creator": "",
+      "creator": "Ryan Fleck, Anna Boden",
       "year": 2019,
       "detail": "Film",
       "cover": "images/library/film-captain-marvel.jpg",
@@ -9062,7 +9480,8 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Ryan Fleck",
+        "Anna Boden"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9072,7 +9491,10 @@
         "accent": "#a00d12",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-captain-marvel.jpg"
+      "thumb": "images/library/thumbs/film-captain-marvel.jpg",
+      "thumbWebp": "images/library/thumbs/film-captain-marvel.webp",
+      "shelfWebp": "images/library/thumbs/film-captain-marvel-sm.webp",
+      "externalRating": 6.8
     },
     {
       "id": "film-spider-man-into-the-spider-verse",
@@ -9080,7 +9502,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Spider-Man: Into the Spider-Verse",
-      "creator": "",
+      "creator": "Bob Persichetti, Peter Ramsey, Rodney Rothman",
       "year": 2018,
       "detail": "Film",
       "cover": "images/library/film-spider-man-into-the-spider-verse.jpg",
@@ -9110,7 +9532,9 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Bob Persichetti",
+        "Peter Ramsey",
+        "Rodney Rothman"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9120,7 +9544,10 @@
         "accent": "#bde0f6",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-spider-man-into-the-spider-verse.jpg"
+      "thumb": "images/library/thumbs/film-spider-man-into-the-spider-verse.jpg",
+      "thumbWebp": "images/library/thumbs/film-spider-man-into-the-spider-verse.webp",
+      "shelfWebp": "images/library/thumbs/film-spider-man-into-the-spider-verse-sm.webp",
+      "externalRating": 8.4
     },
     {
       "id": "film-bohemian-rhapsody",
@@ -9128,7 +9555,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Bohemian Rhapsody",
-      "creator": "",
+      "creator": "Bryan Singer",
       "year": 2018,
       "detail": "Film",
       "cover": "images/library/film-bohemian-rhapsody.jpg",
@@ -9156,7 +9583,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Bryan Singer"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9166,7 +9593,10 @@
         "accent": "#ffd403",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-bohemian-rhapsody.jpg"
+      "thumb": "images/library/thumbs/film-bohemian-rhapsody.jpg",
+      "thumbWebp": "images/library/thumbs/film-bohemian-rhapsody.webp",
+      "shelfWebp": "images/library/thumbs/film-bohemian-rhapsody-sm.webp",
+      "externalRating": 8
     },
     {
       "id": "film-avengers-infinity-war",
@@ -9174,7 +9604,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Avengers: Infinity War",
-      "creator": "",
+      "creator": "Joe Russo, Anthony Russo",
       "year": 2018,
       "detail": "Film",
       "cover": "images/library/film-avengers-infinity-war.jpg",
@@ -9203,7 +9633,8 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Joe Russo",
+        "Anthony Russo"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9213,7 +9644,10 @@
         "accent": "#06406d",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-avengers-infinity-war.jpg"
+      "thumb": "images/library/thumbs/film-avengers-infinity-war.jpg",
+      "thumbWebp": "images/library/thumbs/film-avengers-infinity-war.webp",
+      "shelfWebp": "images/library/thumbs/film-avengers-infinity-war-sm.webp",
+      "externalRating": 8.2
     },
     {
       "id": "film-a-quiet-place",
@@ -9221,7 +9655,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "A Quiet Place",
-      "creator": "",
+      "creator": "John Krasinski",
       "year": 2018,
       "detail": "Film",
       "cover": "images/library/film-a-quiet-place.jpg",
@@ -9250,7 +9684,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "John Krasinski"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9260,7 +9694,10 @@
         "accent": "#182528",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-a-quiet-place.jpg"
+      "thumb": "images/library/thumbs/film-a-quiet-place.jpg",
+      "thumbWebp": "images/library/thumbs/film-a-quiet-place.webp",
+      "shelfWebp": "images/library/thumbs/film-a-quiet-place-sm.webp",
+      "externalRating": 7.4
     },
     {
       "id": "film-black-panther",
@@ -9268,7 +9705,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Black Panther",
-      "creator": "",
+      "creator": "Ryan Coogler",
       "year": 2018,
       "detail": "Film",
       "cover": "images/library/film-black-panther.jpg",
@@ -9297,7 +9734,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Ryan Coogler"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9307,7 +9744,10 @@
         "accent": "#033165",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-black-panther.jpg"
+      "thumb": "images/library/thumbs/film-black-panther.jpg",
+      "thumbWebp": "images/library/thumbs/film-black-panther.webp",
+      "shelfWebp": "images/library/thumbs/film-black-panther-sm.webp",
+      "externalRating": 7.4
     },
     {
       "id": "film-star-wars-the-last-jedi",
@@ -9315,7 +9755,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Star Wars: The Last Jedi",
-      "creator": "",
+      "creator": "Rian Johnson",
       "year": 2017,
       "detail": "Film",
       "cover": "images/library/film-star-wars-the-last-jedi.jpg",
@@ -9344,7 +9784,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Rian Johnson"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9354,7 +9794,10 @@
         "accent": "#820a0a",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-star-wars-the-last-jedi.jpg"
+      "thumb": "images/library/thumbs/film-star-wars-the-last-jedi.jpg",
+      "thumbWebp": "images/library/thumbs/film-star-wars-the-last-jedi.webp",
+      "shelfWebp": "images/library/thumbs/film-star-wars-the-last-jedi-sm.webp",
+      "externalRating": 6.7
     },
     {
       "id": "film-coco",
@@ -9362,7 +9805,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Coco",
-      "creator": "",
+      "creator": "Lee Unkrich",
       "year": 2017,
       "detail": "Film",
       "cover": "images/library/film-coco.jpg",
@@ -9392,7 +9835,7 @@
         "Adventure"
       ],
       "creators": [
-        "Unknown"
+        "Lee Unkrich"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9402,7 +9845,10 @@
         "accent": "#14275f",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-coco.jpg"
+      "thumb": "images/library/thumbs/film-coco.jpg",
+      "thumbWebp": "images/library/thumbs/film-coco.webp",
+      "shelfWebp": "images/library/thumbs/film-coco-sm.webp",
+      "externalRating": 8.2
     },
     {
       "id": "film-blade-runner-2049",
@@ -9410,7 +9856,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Blade Runner 2049",
-      "creator": "",
+      "creator": "Denis Villeneuve",
       "year": 2017,
       "detail": "Film",
       "cover": "images/library/film-blade-runner-2049.jpg",
@@ -9438,7 +9884,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Denis Villeneuve"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9448,7 +9894,10 @@
         "accent": "#c11504",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-blade-runner-2049.jpg"
+      "thumb": "images/library/thumbs/film-blade-runner-2049.jpg",
+      "thumbWebp": "images/library/thumbs/film-blade-runner-2049.webp",
+      "shelfWebp": "images/library/thumbs/film-blade-runner-2049-sm.webp",
+      "externalRating": 7.6
     },
     {
       "id": "film-thor-ragnarok",
@@ -9456,7 +9905,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Thor: Ragnarok",
-      "creator": "",
+      "creator": "Taika Waititi",
       "year": 2017,
       "detail": "Film",
       "cover": "images/library/film-thor-ragnarok.jpg",
@@ -9486,7 +9935,7 @@
         "Adventure"
       ],
       "creators": [
-        "Unknown"
+        "Taika Waititi"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9496,7 +9945,10 @@
         "accent": "#1a4a91",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-thor-ragnarok.jpg"
+      "thumb": "images/library/thumbs/film-thor-ragnarok.jpg",
+      "thumbWebp": "images/library/thumbs/film-thor-ragnarok.webp",
+      "shelfWebp": "images/library/thumbs/film-thor-ragnarok-sm.webp",
+      "externalRating": 7.6
     },
     {
       "id": "film-it",
@@ -9504,7 +9956,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "It",
-      "creator": "",
+      "creator": "Andy Muschietti",
       "year": 2017,
       "detail": "Film",
       "cover": "images/library/film-it.jpg",
@@ -9533,7 +9985,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Andy Muschietti"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9543,7 +9995,10 @@
         "accent": "#977920",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-it.jpg"
+      "thumb": "images/library/thumbs/film-it.jpg",
+      "thumbWebp": "images/library/thumbs/film-it.webp",
+      "shelfWebp": "images/library/thumbs/film-it-sm.webp",
+      "externalRating": 7.2
     },
     {
       "id": "film-lady-bird",
@@ -9551,7 +10006,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Lady Bird",
-      "creator": "",
+      "creator": "Greta Gerwig",
       "year": 2017,
       "detail": "Film",
       "cover": "images/library/film-lady-bird.jpg",
@@ -9579,7 +10034,7 @@
         "Comedy"
       ],
       "creators": [
-        "Unknown"
+        "Greta Gerwig"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9589,7 +10044,10 @@
         "accent": "#3f0600",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-lady-bird.jpg"
+      "thumb": "images/library/thumbs/film-lady-bird.jpg",
+      "thumbWebp": "images/library/thumbs/film-lady-bird.webp",
+      "shelfWebp": "images/library/thumbs/film-lady-bird-sm.webp",
+      "externalRating": 7.2
     },
     {
       "id": "film-dunkirk",
@@ -9597,7 +10055,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Dunkirk",
-      "creator": "",
+      "creator": "Christopher Nolan",
       "year": 2017,
       "detail": "Film",
       "cover": "images/library/film-dunkirk.jpg",
@@ -9626,7 +10084,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Christopher Nolan"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9636,7 +10094,10 @@
         "accent": "#245066",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-dunkirk.jpg"
+      "thumb": "images/library/thumbs/film-dunkirk.jpg",
+      "thumbWebp": "images/library/thumbs/film-dunkirk.webp",
+      "shelfWebp": "images/library/thumbs/film-dunkirk-sm.webp",
+      "externalRating": 7.4
     },
     {
       "id": "film-spider-man-homecoming",
@@ -9644,7 +10105,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Spider-Man: Homecoming",
-      "creator": "",
+      "creator": "Jon Watts",
       "year": 2017,
       "detail": "Film",
       "cover": "images/library/film-spider-man-homecoming.jpg",
@@ -9673,7 +10134,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Jon Watts"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9683,7 +10144,10 @@
         "accent": "#f2d9bf",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-spider-man-homecoming.jpg"
+      "thumb": "images/library/thumbs/film-spider-man-homecoming.jpg",
+      "thumbWebp": "images/library/thumbs/film-spider-man-homecoming.webp",
+      "shelfWebp": "images/library/thumbs/film-spider-man-homecoming-sm.webp",
+      "externalRating": 7.3
     },
     {
       "id": "film-wonder-woman",
@@ -9691,7 +10155,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Wonder Woman",
-      "creator": "",
+      "creator": "Patty Jenkins",
       "year": 2017,
       "detail": "Film",
       "cover": "images/library/film-wonder-woman.jpg",
@@ -9720,7 +10184,7 @@
         "Fantasy"
       ],
       "creators": [
-        "Unknown"
+        "Patty Jenkins"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9730,7 +10194,10 @@
         "accent": "#f58217",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-wonder-woman.jpg"
+      "thumb": "images/library/thumbs/film-wonder-woman.jpg",
+      "thumbWebp": "images/library/thumbs/film-wonder-woman.webp",
+      "shelfWebp": "images/library/thumbs/film-wonder-woman-sm.webp",
+      "externalRating": 7.2
     },
     {
       "id": "film-baby-driver",
@@ -9738,7 +10205,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Baby Driver",
-      "creator": "",
+      "creator": "Edgar Wright",
       "year": 2017,
       "detail": "Film",
       "cover": "images/library/film-baby-driver.jpg",
@@ -9766,7 +10233,7 @@
         "Crime"
       ],
       "creators": [
-        "Unknown"
+        "Edgar Wright"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9776,7 +10243,10 @@
         "accent": "#f04f72",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-baby-driver.jpg"
+      "thumb": "images/library/thumbs/film-baby-driver.jpg",
+      "thumbWebp": "images/library/thumbs/film-baby-driver.webp",
+      "shelfWebp": "images/library/thumbs/film-baby-driver-sm.webp",
+      "externalRating": 7.4
     },
     {
       "id": "film-logan",
@@ -9784,7 +10254,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Logan",
-      "creator": "",
+      "creator": "James Mangold",
       "year": 2017,
       "detail": "Film",
       "cover": "images/library/film-logan.jpg",
@@ -9813,7 +10283,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "James Mangold"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9823,7 +10293,10 @@
         "accent": "#fd903a",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-logan.jpg"
+      "thumb": "images/library/thumbs/film-logan.jpg",
+      "thumbWebp": "images/library/thumbs/film-logan.webp",
+      "shelfWebp": "images/library/thumbs/film-logan-sm.webp",
+      "externalRating": 7.8
     },
     {
       "id": "film-get-out",
@@ -9831,7 +10304,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Get Out",
-      "creator": "",
+      "creator": "Jordan Peele",
       "year": 2017,
       "detail": "Film",
       "cover": "images/library/film-get-out.jpg",
@@ -9860,7 +10333,7 @@
         "Horror"
       ],
       "creators": [
-        "Unknown"
+        "Jordan Peele"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9870,7 +10343,10 @@
         "accent": "#414141",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-get-out.jpg"
+      "thumb": "images/library/thumbs/film-get-out.jpg",
+      "thumbWebp": "images/library/thumbs/film-get-out.webp",
+      "shelfWebp": "images/library/thumbs/film-get-out-sm.webp",
+      "externalRating": 7.6
     },
     {
       "id": "film-rogue-one-a-star-wars-story",
@@ -9878,7 +10354,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Rogue One: A Star Wars Story",
-      "creator": "",
+      "creator": "Gareth Edwards",
       "year": 2016,
       "detail": "Film",
       "cover": "images/library/film-rogue-one-a-star-wars-story.jpg",
@@ -9907,7 +10383,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Gareth Edwards"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9917,7 +10393,10 @@
         "accent": "#20354e",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-rogue-one-a-star-wars-story.jpg"
+      "thumb": "images/library/thumbs/film-rogue-one-a-star-wars-story.jpg",
+      "thumbWebp": "images/library/thumbs/film-rogue-one-a-star-wars-story.webp",
+      "shelfWebp": "images/library/thumbs/film-rogue-one-a-star-wars-story-sm.webp",
+      "externalRating": 7.5
     },
     {
       "id": "film-split",
@@ -9925,7 +10404,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Split",
-      "creator": "",
+      "creator": "M. Night Shyamalan",
       "year": 2016,
       "detail": "Film",
       "cover": "images/library/film-split.jpg",
@@ -9953,7 +10432,7 @@
         "Thriller"
       ],
       "creators": [
-        "Unknown"
+        "M. Night Shyamalan"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -9963,7 +10442,10 @@
         "accent": "#d7c2b1",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-split.jpg"
+      "thumb": "images/library/thumbs/film-split.jpg",
+      "thumbWebp": "images/library/thumbs/film-split.webp",
+      "shelfWebp": "images/library/thumbs/film-split-sm.webp",
+      "externalRating": 7.3
     },
     {
       "id": "film-arrival",
@@ -9971,7 +10453,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Arrival",
-      "creator": "",
+      "creator": "Denis Villeneuve",
       "year": 2016,
       "detail": "Film",
       "cover": "images/library/film-arrival.jpg",
@@ -10000,7 +10482,7 @@
         "Mystery"
       ],
       "creators": [
-        "Unknown"
+        "Denis Villeneuve"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10010,7 +10492,10 @@
         "accent": "#f5d3ad",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-arrival.jpg"
+      "thumb": "images/library/thumbs/film-arrival.jpg",
+      "thumbWebp": "images/library/thumbs/film-arrival.webp",
+      "shelfWebp": "images/library/thumbs/film-arrival-sm.webp",
+      "externalRating": 7.6
     },
     {
       "id": "film-the-nice-guys",
@@ -10018,7 +10503,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "The Nice Guys",
-      "creator": "",
+      "creator": "Shane Black",
       "year": 2016,
       "detail": "Film",
       "cover": "images/library/film-the-nice-guys.jpg",
@@ -10047,7 +10532,7 @@
         "Action"
       ],
       "creators": [
-        "Unknown"
+        "Shane Black"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10057,7 +10542,10 @@
         "accent": "#f4ba87",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/film-the-nice-guys.jpg"
+      "thumb": "images/library/thumbs/film-the-nice-guys.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-nice-guys.webp",
+      "shelfWebp": "images/library/thumbs/film-the-nice-guys-sm.webp",
+      "externalRating": 7.1
     },
     {
       "id": "film-captain-america-civil-war",
@@ -10065,7 +10553,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Captain America: Civil War",
-      "creator": "",
+      "creator": "Joe Russo, Anthony Russo",
       "year": 2016,
       "detail": "Film",
       "cover": "images/library/film-captain-america-civil-war.jpg",
@@ -10094,7 +10582,8 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Joe Russo",
+        "Anthony Russo"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10104,7 +10593,10 @@
         "accent": "#640303",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-captain-america-civil-war.jpg"
+      "thumb": "images/library/thumbs/film-captain-america-civil-war.jpg",
+      "thumbWebp": "images/library/thumbs/film-captain-america-civil-war.webp",
+      "shelfWebp": "images/library/thumbs/film-captain-america-civil-war-sm.webp",
+      "externalRating": 7.5
     },
     {
       "id": "film-deadpool",
@@ -10112,7 +10604,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Deadpool",
-      "creator": "",
+      "creator": "Tim Miller",
       "year": 2016,
       "detail": "Film",
       "cover": "images/library/film-deadpool.jpg",
@@ -10141,7 +10633,7 @@
         "Comedy"
       ],
       "creators": [
-        "Unknown"
+        "Tim Miller"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10151,7 +10643,10 @@
         "accent": "#740d16",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-deadpool.jpg"
+      "thumb": "images/library/thumbs/film-deadpool.jpg",
+      "thumbWebp": "images/library/thumbs/film-deadpool.webp",
+      "shelfWebp": "images/library/thumbs/film-deadpool-sm.webp",
+      "externalRating": 7.6
     },
     {
       "id": "film-the-revenant",
@@ -10159,7 +10654,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "The Revenant",
-      "creator": "",
+      "creator": "Alejandro G. Iñárritu",
       "year": 2015,
       "detail": "Film",
       "cover": "images/library/film-the-revenant.jpg",
@@ -10188,7 +10683,7 @@
         "Adventure"
       ],
       "creators": [
-        "Unknown"
+        "Alejandro G. Iñárritu"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10198,7 +10693,10 @@
         "accent": "#3a1118",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-the-revenant.jpg"
+      "thumb": "images/library/thumbs/film-the-revenant.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-revenant.webp",
+      "shelfWebp": "images/library/thumbs/film-the-revenant-sm.webp",
+      "externalRating": 7.5
     },
     {
       "id": "film-star-wars-the-force-awakens",
@@ -10206,7 +10704,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Star Wars: The Force Awakens",
-      "creator": "",
+      "creator": "J.J. Abrams",
       "year": 2015,
       "detail": "Film",
       "cover": "images/library/film-star-wars-the-force-awakens.jpg",
@@ -10235,7 +10733,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "J.J. Abrams"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10245,7 +10743,10 @@
         "accent": "#eba47c",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-star-wars-the-force-awakens.jpg"
+      "thumb": "images/library/thumbs/film-star-wars-the-force-awakens.jpg",
+      "thumbWebp": "images/library/thumbs/film-star-wars-the-force-awakens.webp",
+      "shelfWebp": "images/library/thumbs/film-star-wars-the-force-awakens-sm.webp",
+      "externalRating": 7.2
     },
     {
       "id": "film-the-hateful-eight",
@@ -10253,7 +10754,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "The Hateful Eight",
-      "creator": "",
+      "creator": "Quentin Tarantino",
       "year": 2015,
       "detail": "Film",
       "cover": "images/library/film-the-hateful-eight.jpg",
@@ -10282,7 +10783,7 @@
         "Western"
       ],
       "creators": [
-        "Unknown"
+        "Quentin Tarantino"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10292,7 +10793,10 @@
         "accent": "#d9b6b7",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/film-the-hateful-eight.jpg"
+      "thumb": "images/library/thumbs/film-the-hateful-eight.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-hateful-eight.webp",
+      "shelfWebp": "images/library/thumbs/film-the-hateful-eight-sm.webp",
+      "externalRating": 7.8
     },
     {
       "id": "film-the-martian",
@@ -10300,7 +10804,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "The Martian",
-      "creator": "",
+      "creator": "Ridley Scott",
       "year": 2015,
       "detail": "Film",
       "cover": "images/library/film-the-martian.jpg",
@@ -10329,7 +10833,7 @@
         "Adventure"
       ],
       "creators": [
-        "Unknown"
+        "Ridley Scott"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10339,7 +10843,10 @@
         "accent": "#c75e27",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/film-the-martian.jpg"
+      "thumb": "images/library/thumbs/film-the-martian.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-martian.webp",
+      "shelfWebp": "images/library/thumbs/film-the-martian-sm.webp",
+      "externalRating": 7.7
     },
     {
       "id": "film-ant-man",
@@ -10347,7 +10854,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Ant-Man",
-      "creator": "",
+      "creator": "Peyton Reed",
       "year": 2015,
       "detail": "Film",
       "cover": "images/library/film-ant-man.jpg",
@@ -10376,7 +10883,7 @@
         "Action"
       ],
       "creators": [
-        "Unknown"
+        "Peyton Reed"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10386,7 +10893,10 @@
         "accent": "#4c0504",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-ant-man.jpg"
+      "thumb": "images/library/thumbs/film-ant-man.jpg",
+      "thumbWebp": "images/library/thumbs/film-ant-man.webp",
+      "shelfWebp": "images/library/thumbs/film-ant-man-sm.webp",
+      "externalRating": 7.1
     },
     {
       "id": "film-sicario",
@@ -10394,7 +10904,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Sicario",
-      "creator": "",
+      "creator": "Denis Villeneuve",
       "year": 2015,
       "detail": "Film",
       "cover": "images/library/film-sicario.jpg",
@@ -10423,7 +10933,7 @@
         "Thriller"
       ],
       "creators": [
-        "Unknown"
+        "Denis Villeneuve"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10433,7 +10943,10 @@
         "accent": "#906242",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-sicario.jpg"
+      "thumb": "images/library/thumbs/film-sicario.jpg",
+      "thumbWebp": "images/library/thumbs/film-sicario.webp",
+      "shelfWebp": "images/library/thumbs/film-sicario-sm.webp",
+      "externalRating": 7.4
     },
     {
       "id": "film-inside-out",
@@ -10441,7 +10954,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Inside Out",
-      "creator": "",
+      "creator": "Pete Docter",
       "year": 2015,
       "detail": "Film",
       "cover": "images/library/film-inside-out.jpg",
@@ -10472,7 +10985,7 @@
         "Comedy"
       ],
       "creators": [
-        "Unknown"
+        "Pete Docter"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10482,7 +10995,10 @@
         "accent": "#003a7e",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-inside-out.jpg"
+      "thumb": "images/library/thumbs/film-inside-out.jpg",
+      "thumbWebp": "images/library/thumbs/film-inside-out.webp",
+      "shelfWebp": "images/library/thumbs/film-inside-out-sm.webp",
+      "externalRating": 7.9
     },
     {
       "id": "film-quantum-of-solace",
@@ -10490,7 +11006,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Quantum of Solace",
-      "creator": "",
+      "creator": "Marc Forster",
       "year": 2008,
       "detail": "Film",
       "cover": "images/library/film-quantum-of-solace.jpg",
@@ -10519,7 +11035,7 @@
         "Thriller"
       ],
       "creators": [
-        "Unknown"
+        "Marc Forster"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10529,7 +11045,10 @@
         "accent": "#f8eed0",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-quantum-of-solace.jpg"
+      "thumb": "images/library/thumbs/film-quantum-of-solace.jpg",
+      "thumbWebp": "images/library/thumbs/film-quantum-of-solace.webp",
+      "shelfWebp": "images/library/thumbs/film-quantum-of-solace-sm.webp",
+      "externalRating": 6.3
     },
     {
       "id": "film-casino-royale",
@@ -10537,7 +11056,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Casino Royale",
-      "creator": "",
+      "creator": "Martin Campbell",
       "year": 2006,
       "detail": "Film",
       "cover": "images/library/film-casino-royale.jpg",
@@ -10566,7 +11085,7 @@
         "Thriller"
       ],
       "creators": [
-        "Unknown"
+        "Martin Campbell"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10576,7 +11095,10 @@
         "accent": "#102f30",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-casino-royale.jpg"
+      "thumb": "images/library/thumbs/film-casino-royale.jpg",
+      "thumbWebp": "images/library/thumbs/film-casino-royale.webp",
+      "shelfWebp": "images/library/thumbs/film-casino-royale-sm.webp",
+      "externalRating": 7.6
     },
     {
       "id": "film-alien",
@@ -10584,7 +11106,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Alien",
-      "creator": "",
+      "creator": "Ridley Scott",
       "year": 1979,
       "detail": "Film",
       "cover": "images/library/film-alien.jpg",
@@ -10612,7 +11134,7 @@
         "Science fiction"
       ],
       "creators": [
-        "Unknown"
+        "Ridley Scott"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10622,7 +11144,10 @@
         "accent": "#44572b",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-alien.jpg"
+      "thumb": "images/library/thumbs/film-alien.jpg",
+      "thumbWebp": "images/library/thumbs/film-alien.webp",
+      "shelfWebp": "images/library/thumbs/film-alien-sm.webp",
+      "externalRating": 8.2
     },
     {
       "id": "film-inglourious-basterds",
@@ -10630,7 +11155,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Inglourious Basterds",
-      "creator": "",
+      "creator": "Quentin Tarantino",
       "year": 2009,
       "detail": "Film",
       "cover": "images/library/film-inglourious-basterds.jpg",
@@ -10659,7 +11184,7 @@
         "War"
       ],
       "creators": [
-        "Unknown"
+        "Quentin Tarantino"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10669,7 +11194,10 @@
         "accent": "#aa1f21",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/film-inglourious-basterds.jpg"
+      "thumb": "images/library/thumbs/film-inglourious-basterds.jpg",
+      "thumbWebp": "images/library/thumbs/film-inglourious-basterds.webp",
+      "shelfWebp": "images/library/thumbs/film-inglourious-basterds-sm.webp",
+      "externalRating": 8.2
     },
     {
       "id": "film-tinker-tailor-soldier-spy",
@@ -10677,7 +11205,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Tinker Tailor Soldier Spy",
-      "creator": "",
+      "creator": "Tomas Alfredson",
       "year": 2011,
       "detail": "Film",
       "cover": "images/library/film-tinker-tailor-soldier-spy.jpg",
@@ -10706,7 +11234,7 @@
         "Mystery"
       ],
       "creators": [
-        "Unknown"
+        "Tomas Alfredson"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10716,7 +11244,10 @@
         "accent": "#13484c",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-tinker-tailor-soldier-spy.jpg"
+      "thumb": "images/library/thumbs/film-tinker-tailor-soldier-spy.jpg",
+      "thumbWebp": "images/library/thumbs/film-tinker-tailor-soldier-spy.webp",
+      "shelfWebp": "images/library/thumbs/film-tinker-tailor-soldier-spy-sm.webp",
+      "externalRating": 6.6
     },
     {
       "id": "film-moneyball",
@@ -10724,7 +11255,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Moneyball",
-      "creator": "",
+      "creator": "Bennett Miller",
       "year": 2011,
       "detail": "Film",
       "cover": "images/library/film-moneyball.jpg",
@@ -10751,7 +11282,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Bennett Miller"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10761,7 +11292,10 @@
         "accent": "#89ad40",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-moneyball.jpg"
+      "thumb": "images/library/thumbs/film-moneyball.jpg",
+      "thumbWebp": "images/library/thumbs/film-moneyball.webp",
+      "shelfWebp": "images/library/thumbs/film-moneyball-sm.webp",
+      "externalRating": 7.3
     },
     {
       "id": "film-close-encounters-of-the-third-kind",
@@ -10769,7 +11303,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Close Encounters of the Third Kind",
-      "creator": "",
+      "creator": "Steven Spielberg",
       "year": 1977,
       "detail": "Film",
       "cover": "images/library/film-close-encounters-of-the-third-kind.jpg",
@@ -10797,7 +11331,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Steven Spielberg"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10807,7 +11341,10 @@
         "accent": "#24698f",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-close-encounters-of-the-third-kind.jpg"
+      "thumb": "images/library/thumbs/film-close-encounters-of-the-third-kind.jpg",
+      "thumbWebp": "images/library/thumbs/film-close-encounters-of-the-third-kind.webp",
+      "shelfWebp": "images/library/thumbs/film-close-encounters-of-the-third-kind-sm.webp",
+      "externalRating": 7.4
     },
     {
       "id": "film-inside-llewyn-davis",
@@ -10815,7 +11352,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Inside Llewyn Davis",
-      "creator": "",
+      "creator": "Joel Coen, Ethan Coen",
       "year": 2013,
       "detail": "Film",
       "cover": "images/library/film-inside-llewyn-davis.jpg",
@@ -10843,7 +11380,8 @@
         "Musical"
       ],
       "creators": [
-        "Unknown"
+        "Joel Coen",
+        "Ethan Coen"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10853,7 +11391,10 @@
         "accent": "#c8c1ad",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/film-inside-llewyn-davis.jpg"
+      "thumb": "images/library/thumbs/film-inside-llewyn-davis.jpg",
+      "thumbWebp": "images/library/thumbs/film-inside-llewyn-davis.webp",
+      "shelfWebp": "images/library/thumbs/film-inside-llewyn-davis-sm.webp",
+      "externalRating": 7.2
     },
     {
       "id": "film-before-sunset",
@@ -10861,7 +11402,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Before Sunset",
-      "creator": "",
+      "creator": "Richard Linklater",
       "year": 2004,
       "detail": "Film",
       "cover": "images/library/film-before-sunset.jpg",
@@ -10889,7 +11430,7 @@
         "Romance"
       ],
       "creators": [
-        "Unknown"
+        "Richard Linklater"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10899,7 +11440,10 @@
         "accent": "#382c0c",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-before-sunset.jpg"
+      "thumb": "images/library/thumbs/film-before-sunset.jpg",
+      "thumbWebp": "images/library/thumbs/film-before-sunset.webp",
+      "shelfWebp": "images/library/thumbs/film-before-sunset-sm.webp",
+      "externalRating": 7.8
     },
     {
       "id": "film-that-thing-you-do",
@@ -10907,7 +11451,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "That Thing You Do!",
-      "creator": "",
+      "creator": "Tom Hanks",
       "year": 1996,
       "detail": "Film",
       "cover": "images/library/film-that-thing-you-do.jpg",
@@ -10936,7 +11480,7 @@
         "Musical"
       ],
       "creators": [
-        "Unknown"
+        "Tom Hanks"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10946,7 +11490,10 @@
         "accent": "#e5b86b",
         "ink": "#141210"
       },
-      "thumb": "images/library/thumbs/film-that-thing-you-do.jpg"
+      "thumb": "images/library/thumbs/film-that-thing-you-do.jpg",
+      "thumbWebp": "images/library/thumbs/film-that-thing-you-do.webp",
+      "shelfWebp": "images/library/thumbs/film-that-thing-you-do-sm.webp",
+      "externalRating": 6.9
     },
     {
       "id": "film-tears-of-the-sun",
@@ -10954,7 +11501,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Tears of the Sun",
-      "creator": "",
+      "creator": "Antoine Fuqua",
       "year": 2003,
       "detail": "Film",
       "cover": "images/library/film-tears-of-the-sun.jpg",
@@ -10983,7 +11530,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Antoine Fuqua"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -10993,7 +11540,10 @@
         "accent": "#dd730e",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-tears-of-the-sun.jpg"
+      "thumb": "images/library/thumbs/film-tears-of-the-sun.jpg",
+      "thumbWebp": "images/library/thumbs/film-tears-of-the-sun.webp",
+      "shelfWebp": "images/library/thumbs/film-tears-of-the-sun-sm.webp",
+      "externalRating": 6.9
     },
     {
       "id": "film-michael-clayton",
@@ -11001,7 +11551,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Michael Clayton",
-      "creator": "",
+      "creator": "Tony Gilroy",
       "year": 2007,
       "detail": "Film",
       "cover": "images/library/film-michael-clayton.jpg",
@@ -11030,7 +11580,7 @@
         "Crime"
       ],
       "creators": [
-        "Unknown"
+        "Tony Gilroy"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -11040,7 +11590,10 @@
         "accent": "#1fa4d3",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-michael-clayton.jpg"
+      "thumb": "images/library/thumbs/film-michael-clayton.jpg",
+      "thumbWebp": "images/library/thumbs/film-michael-clayton.webp",
+      "shelfWebp": "images/library/thumbs/film-michael-clayton-sm.webp",
+      "externalRating": 6.8
     },
     {
       "id": "film-anchorman-the-legend-of-ron-burgundy",
@@ -11048,7 +11601,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "Anchorman: The Legend of Ron Burgundy",
-      "creator": "",
+      "creator": "Adam McKay",
       "year": 2004,
       "detail": "Film",
       "cover": "images/library/film-anchorman-the-legend-of-ron-burgundy.jpg",
@@ -11075,7 +11628,7 @@
         "Comedy"
       ],
       "creators": [
-        "Unknown"
+        "Adam McKay"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -11085,7 +11638,10 @@
         "accent": "#0369ac",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-anchorman-the-legend-of-ron-burgundy.jpg"
+      "thumb": "images/library/thumbs/film-anchorman-the-legend-of-ron-burgundy.jpg",
+      "thumbWebp": "images/library/thumbs/film-anchorman-the-legend-of-ron-burgundy.webp",
+      "shelfWebp": "images/library/thumbs/film-anchorman-the-legend-of-ron-burgundy-sm.webp",
+      "externalRating": 6.7
     },
     {
       "id": "film-no-country-for-old-men",
@@ -11093,7 +11649,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "No Country for Old Men",
-      "creator": "",
+      "creator": "Joel Coen, Ethan Coen",
       "year": 2007,
       "detail": "Film",
       "cover": "images/library/film-no-country-for-old-men.jpg",
@@ -11122,7 +11678,8 @@
         "Western"
       ],
       "creators": [
-        "Unknown"
+        "Joel Coen",
+        "Ethan Coen"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -11132,7 +11689,10 @@
         "accent": "#946a4e",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-no-country-for-old-men.jpg"
+      "thumb": "images/library/thumbs/film-no-country-for-old-men.jpg",
+      "thumbWebp": "images/library/thumbs/film-no-country-for-old-men.webp",
+      "shelfWebp": "images/library/thumbs/film-no-country-for-old-men-sm.webp",
+      "externalRating": 7.9
     },
     {
       "id": "film-2001-a-space-odyssey",
@@ -11140,7 +11700,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "2001: A Space Odyssey",
-      "creator": "",
+      "creator": "Stanley Kubrick",
       "year": 1968,
       "detail": "Film",
       "cover": "images/library/film-2001-a-space-odyssey.jpg",
@@ -11169,7 +11729,7 @@
         "Adventure"
       ],
       "creators": [
-        "Unknown"
+        "Stanley Kubrick"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -11179,7 +11739,10 @@
         "accent": "#c9c5ad",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-2001-a-space-odyssey.jpg"
+      "thumb": "images/library/thumbs/film-2001-a-space-odyssey.jpg",
+      "thumbWebp": "images/library/thumbs/film-2001-a-space-odyssey.webp",
+      "shelfWebp": "images/library/thumbs/film-2001-a-space-odyssey-sm.webp",
+      "externalRating": 8
     },
     {
       "id": "film-the-royal-tenenbaums",
@@ -11187,7 +11750,7 @@
       "shape": "poster",
       "aspect": 0.68,
       "title": "The Royal Tenenbaums",
-      "creator": "",
+      "creator": "Wes Anderson",
       "year": 2001,
       "detail": "Film",
       "cover": "images/library/film-the-royal-tenenbaums.jpg",
@@ -11215,7 +11778,7 @@
         "Drama"
       ],
       "creators": [
-        "Unknown"
+        "Wes Anderson"
       ],
       "reviewHtml": null,
       "width": 780,
@@ -11225,7 +11788,10 @@
         "accent": "#912719",
         "ink": "#f1ece3"
       },
-      "thumb": "images/library/thumbs/film-the-royal-tenenbaums.jpg"
+      "thumb": "images/library/thumbs/film-the-royal-tenenbaums.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-royal-tenenbaums.webp",
+      "shelfWebp": "images/library/thumbs/film-the-royal-tenenbaums-sm.webp",
+      "externalRating": 7.5
     }
   ]
 }

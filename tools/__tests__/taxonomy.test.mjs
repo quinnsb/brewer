@@ -8,7 +8,24 @@ test("adds authored genres to every item", () => {
     { "album-one": ["Indie rock", "Indie rock", "Pop"] }
   );
   assert.deepEqual(items[0].genres, ["Indie rock", "Pop"]);
-  assert.deepEqual(items[0].creators, ["Unknown"]);
+  assert.deepEqual(items[0].creators, []);
+});
+
+/* "Unknown" used to be substituted here, which put a director called Unknown in
+   the catalog filter and on the byline of 87 films. An absent creator is now
+   absent all the way through, and every consumer checks before it renders. */
+test("a missing creator yields no creators rather than a placeholder", () => {
+  const items = applyTaxonomy(
+    [
+      { id: "film-one", type: "film", creator: "" },
+      { id: "film-two", type: "film" },
+      { id: "book-one", type: "book", creator: "   " },
+    ],
+    { "film-one": ["Drama"], "film-two": ["Drama"], "book-one": ["Fantasy"] }
+  );
+  assert.deepEqual(items[0].creators, []);
+  assert.deepEqual(items[1].creators, []);
+  assert.deepEqual(items[2].creators, []);
 });
 
 test("keeps bands intact and separates co-directors", () => {

@@ -270,7 +270,7 @@ async function itunes(query, media, entity, preferred = null) {
   if (!r?.artworkUrl100) return null;
   return {
     title: r.collectionName ?? r.trackName ?? query,
-    creator: r.artistName ?? "Unknown",
+    creator: r.artistName ?? "",
     year: r.releaseDate ? Number(r.releaseDate.slice(0, 4)) : null,
     detail: r.trackCount ? `${r.trackCount} tracks` : null,
     /* mzstatic serves any square size by rewriting the path segment */
@@ -346,7 +346,7 @@ async function resolveOpenLibrary(query) {
   if (!doc?.cover_i) return null;
   return {
     title: doc.title,
-    creator: doc.author_name?.[0] ?? "Unknown",
+    creator: doc.author_name?.[0] ?? "",
     year: doc.first_publish_year ?? null,
     detail: doc.number_of_pages_median ? `${doc.number_of_pages_median} pages` : null,
     coverUrl: `https://covers.openlibrary.org/b/id/${doc.cover_i}-L.jpg`,
@@ -368,7 +368,7 @@ async function resolveCoverArtArchive(query) {
   if (!rg) return null;
   return {
     title: rg.title,
-    creator: rg["artist-credit"]?.[0]?.name ?? "Unknown",
+    creator: rg["artist-credit"]?.[0]?.name ?? "",
     year: rg["first-release-date"] ? Number(rg["first-release-date"].slice(0, 4)) : null,
     detail: rg["primary-type"] ?? null,
     coverUrl: `https://coverartarchive.org/release-group/${rg.id}/front-500`,
@@ -413,7 +413,7 @@ async function resolveFilm(query) {
   if (!page?.thumbnail?.source) return null;
 
   let year = null;
-  let creator = "Unknown";
+  let creator = "";
   let facts = [];
   const qid = page.pageprops?.wikibase_item;
   if (qid) {

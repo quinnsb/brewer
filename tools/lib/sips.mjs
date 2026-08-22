@@ -57,12 +57,48 @@ export function coverMeasure(root) {
 
 /* Re-encode a cover down to a shelf-sized JPEG. sips writes in place from a
    copy, so the source is never touched. */
-export function coverEncoder(root, width) {
-  return async (cover, target) => {
+/* Two derivatives per cover. sips is macOS built-in and cannot write webp, so
+   cwebp does that half, reading the jpeg sips just wrote rather than the
+   original.
+
+   Going through the jpeg is deliberate. `sips -Z` fits the longest side inside
+   the box, while `cwebp -resize W 0` sets the width and lets the height run,
+   so resizing a portrait poster from the original produced a webp half again
+   taller than its jpeg and barely smaller in bytes. Re-encoding the already
+   correct 700px jpeg gives a file about a fifth of its size, and at q80 on an
+   image this small the second compression is not visible. */
+/* sips reports these as "pixelWidth: 1400" lines. Returns null rather than
+   throwing, and the caller then treats the image as landscape, which is the
+   safe direction: bounding the width can only make a portrait smaller. */
+async function jpegSize(file) {
+  try {
+    const { stdout } = await run("sips", ["-g", "pixelWidth", "-g", "pixelHeight", file]);
+    const width = Number(/pixelWidth:\s*(\d+)/.exec(stdout)?.[1]);
+    const height = Number(/pixelHeight:\s*(\d+)/.exec(stdout)?.[1]);
+    return Number.isFinite(width) && Number.isFinite(height) ? { width, height } : null;
+  } catch {
+    return null;
+  }
+}
+
+export function coverEncoder(root, width, shelfWidth) {
+  return async (cover, targets) => {
     const from = path.join(root, cover);
-    const to = path.join(root, target);
-    await mkdir(path.dirname(to), { recursive: true });
-    await run("sips", ["-Z", String(width), "-s", "format", "jpeg", "-s", "formatOptions", "78", from, "--out", to]);
-    return (await stat(to)).size;
+    const toJpeg = path.join(root, targets.jpeg);
+    const toWebp = path.join(root, targets.webp);
+    await mkdir(path.dirname(toJpeg), { recursive: true });
+    await run("sips", ["-Z", String(width), "-s", "format", "jpeg", "-s", "formatOptions", "78", from, "--out", toJpeg]);
+    await run("cwebp", ["-quiet", "-q", "80", toJpeg, "-o", toWebp]);
+    /* cwebp's -resize sets the width outright, so the shelf copy is bounded by
+       hand to keep the longest side inside the box the way `sips -Z` does. */
+    const toShelf = path.join(root, targets.shelf);
+    const box = Math.round(shelfWidth);
+    const dims = await jpegSize(toJpeg);
+    const resize = dims && dims.height > dims.width
+      ? ["0", String(box)]
+      : [String(box), "0"];
+    await run("cwebp", ["-quiet", "-q", "78", "-resize", ...resize, toJpeg, "-o", toShelf]);
+    const [jpeg, webp, shelf] = await Promise.all([stat(toJpeg), stat(toWebp), stat(toShelf)]);
+    return { jpeg: jpeg.size, webp: webp.size, shelf: shelf.size };
   };
 }
