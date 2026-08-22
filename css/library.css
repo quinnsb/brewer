@@ -190,6 +190,13 @@ body.library a { color: inherit; }
   font-weight: 400;
 }
 .shelf-label span { text-transform: none; letter-spacing: 0.04em; font-size: 11px; opacity: 0.62; }
+/* Pushed to the far end of the rule, where a count belongs, so it reads as a
+   fraction of the collection rather than as part of the scroll hint. */
+.shelf-label .shelf-count {
+  margin-left: auto; flex: 0 0 auto;
+  text-transform: uppercase; letter-spacing: 0.12em; font-size: 10px; opacity: 0.5;
+}
+@media (max-width: 620px) { .shelf-label .shelf-count { display: none; } }
 
 /* Left, with the labels, rather than stranded on the right where nothing else
    on the page sits. */

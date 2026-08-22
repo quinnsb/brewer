@@ -7,14 +7,14 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
-import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail4";
+import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail5";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail4";
-const SOURCES_URL = "data/library-sources.json?v=library-detail4";
+const DATA_URL = "data/library.json?v=library-detail5";
+const SOURCES_URL = "data/library-sources.json?v=library-detail5";
 
 /* Which outside profile belongs beside which shelf. Podcasts have no single
    home worth linking to, so they get none rather than a token one. */
@@ -58,6 +58,37 @@ function brandIcon(name) {
   mark.setAttribute("fill", "currentColor");
   svg.append(mark);
   return svg;
+}
+
+/* The landing shelf is a selection, not the catalogue. 105 films in one rail is
+   more shelf than anyone wants to swipe, so each one opens with a curated run
+   and the rest live on that medium's own page, which the button now goes
+   straight to.
+
+   Best first, using Quinn's own judgement where it exists: starred, then by
+   rating, then by how recently it came out. Unrated items fall in behind rated
+   ones rather than being dropped, so a shelf with no ratings yet, the albums and
+   the podcasts, still fills up. */
+const SHELF_MAX = 24;
+/* Below this there is nothing worth hiding: trimming 25 albums to 24 costs a
+   record and buys nothing, and it would re-sort a shelf that was fine as it
+   was. Only collections meaningfully past the cap get curated. */
+const CURATE_ABOVE = SHELF_MAX + 5;
+
+function curate(list) {
+  if (list.length <= CURATE_ABOVE) return [...list];
+  return [...list]
+    .sort((a, b) => {
+      if (Boolean(a.starred) !== Boolean(b.starred)) return a.starred ? -1 : 1;
+      const ar = a.rating ?? -1;
+      const br = b.rating ?? -1;
+      if (ar !== br) return br - ar;
+      const ay = a.year ?? 0;
+      const by = b.year ?? 0;
+      if (ay !== by) return by - ay;
+      return a.title.localeCompare(b.title);
+    })
+    .slice(0, SHELF_MAX);
 }
 
 const el = (tag, cls, attrs) => {
@@ -183,16 +214,26 @@ const CONTAINER = {
 export function renderShelves(items, root, sources = {}) {
   const byType = {};
   for (const it of items) (byType[it.type] ||= []).push(it);
+  const drawn = [];
 
   for (const type of ORDER) {
-    const list = byType[type];
-    if (!list?.length) continue;
+    const all = byType[type];
+    if (!all?.length) continue;
+    const list = curate(all);
+    drawn.push(...list);
 
     const block = el("section", "shelf-block");
     const [name, sub] = TYPE_LABEL[type];
     const lab = el("h2", "shelf-label", { id: `shelf-${type}-heading` });
     block.setAttribute("aria-labelledby", lab.id);
     lab.append(document.createTextNode(name), Object.assign(el("span"), { textContent: sub }));
+    /* Said out loud, because a shelf that quietly shows a quarter of the
+       collection reads as the whole collection. */
+    if (list.length < all.length) {
+      lab.append(Object.assign(el("span", "shelf-count"), {
+        textContent: `${list.length} of ${all.length}`,
+      }));
+    }
     block.append(lab);
 
     const { rail, mount, status } = CONTAINER[type]();
@@ -203,9 +244,16 @@ export function renderShelves(items, root, sources = {}) {
     }
     const [linkText, anchor] = LIST_LINK[type];
     const actions = el("div", "shelf-actions");
-    const listLink = el("a", `lib-btn is-shelf is-${type}`, { href: `library-lists.html?type=${anchor}` });
+    /* When the shelf is a selection, the button's job is the rest of the
+       collection, so it goes to the catalogue rather than the lists above it. */
+    const truncated = list.length < all.length;
+    const label = truncated ? `All ${all.length} ${TYPE_LABEL[type][0].toLowerCase()}` : linkText;
+    const href = truncated
+      ? `library-lists.html?type=${anchor}#catalog`
+      : `library-lists.html?type=${anchor}`;
+    const listLink = el("a", `lib-btn is-shelf is-${type}`, { href });
     listLink.append(
-      Object.assign(el("span"), { textContent: linkText }),
+      Object.assign(el("span"), { textContent: label }),
       Object.assign(el("span", "lib-btn-arrow"), { textContent: "\u2192", "aria-hidden": "true" })
     );
     actions.append(listLink);
@@ -233,6 +281,11 @@ export function renderShelves(items, root, sources = {}) {
     if (type === "album") wireCoverflow(list, rail, mount, status);
     else wireLoopRail(rail, mount, { overlap: type === "book" });
   }
+
+  /* What was actually drawn, so the detail panel's prev and next walk the same
+     run: navigating to an item with no node on the page leaves the morph with
+     no origin to grow from. */
+  return drawn;
 }
 
 /* ---------- seamless looping rails ---------- */
@@ -1319,12 +1372,12 @@ async function main() {
     (await fetch(DATA_URL, { cache: "no-cache" })).json(),
     loadSources(),
   ]);
-  renderShelves(items, root, sources);
-  wireExpansion(items, root);
+  const shown = renderShelves(items, root, sources);
+  wireExpansion(shown, root);
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-detail4");
+  const { initHero } = await import("./library-hero.js?v=library-detail5");
   initHero(items);
 }
 
