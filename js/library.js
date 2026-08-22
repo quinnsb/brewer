@@ -7,14 +7,14 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
-import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail3";
+import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail4";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail3";
-const SOURCES_URL = "data/library-sources.json?v=library-detail3";
+const DATA_URL = "data/library.json?v=library-detail4";
+const SOURCES_URL = "data/library-sources.json?v=library-detail4";
 
 /* Which outside profile belongs beside which shelf. Podcasts have no single
    home worth linking to, so they get none rather than a token one. */
@@ -99,9 +99,11 @@ const BUILDERS = {
   book(item) {
     const btn = el("button", "book-cover", { type: "button", "aria-label": label(item) });
     paint(btn, item);
-    const height = coverHeight(item);
-    btn.style.setProperty("--book-h", `${height}px`);
-    btn.style.setProperty("--book-w", `${Math.round(height * item.aspect)}px`);
+    /* The base height and the aspect go in; the actual height and width are
+       worked out in CSS, so --book-scale can shrink the whole run on a narrow
+       screen without this having to re-run on resize. */
+    btn.style.setProperty("--book-base", `${coverHeight(item)}px`);
+    btn.style.setProperty("--book-aspect", String(item.aspect));
     btn.style.setProperty("--book-tilt", `${visualVariant(item.id, 7) - 3}deg`);
     btn.append(coverImg(item));
     return btn;
@@ -1322,7 +1324,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-detail3");
+  const { initHero } = await import("./library-hero.js?v=library-detail4");
   initHero(items);
 }
 

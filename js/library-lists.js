@@ -1,14 +1,14 @@
 /* Media-specific list and catalog pages. The moving corridor is decorative;
    the catalog underneath owns all navigation and accessible media names. */
 
-import { wireExpansion } from "./library.js?v=library-detail3";
+import { wireExpansion } from "./library.js?v=library-detail4";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail3";
-const LISTS_URL = "data/library-lists.json?v=library-detail3";
+const DATA_URL = "data/library.json?v=library-detail4";
+const LISTS_URL = "data/library-lists.json?v=library-detail4";
 
 const PAGE = {
   book: {

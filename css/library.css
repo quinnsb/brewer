@@ -36,6 +36,12 @@
      screens, where the pill gives way to the full-width bottom bar and this
      reservation would only squeeze the page, the gutter wins. */
   --pill-safe: calc(clamp(30px, 3.2vw, 62px) + 132px);
+  /* How far the shelves ride up over the hero. The arc sits in the upper part of
+     the pinned viewport, so the space beneath it is empty, and on a phone that is
+     most of a screen of nothing. Pulling the shelves up closes that gap and,
+     because the hero stays pinned while they arrive, makes the first row travel
+     across the arc instead of starting below it. */
+  --hero-overlap: 38vh;
   --shell: 1240px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --card: 72px;
@@ -57,7 +63,12 @@ body.library a { color: inherit; }
 
 /* ---------- hero ---------- */
 
-.hero-track { height: 200vh; }
+/* 200vh pinned the hero for exactly one viewport, which is exactly what the ring
+   animation consumes, so the shelves could never reach the arc while it was
+   still pinned: they arrived only after the hero had started scrolling away, and
+   the two then moved together. The extra height buys pinned scroll after the
+   ring has settled, and that is the stretch the first shelf travels across. */
+.hero-track { height: 220vh; }
 .hero-sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; isolation: isolate; }
 
 /* The headline sits inside the ring of cards, so it is centred on the stage.
@@ -147,7 +158,10 @@ body.library a { color: inherit; }
 /* ---------- shelves ---------- */
 
 .shelves {
-  max-width: var(--shell); margin: 0 auto;
+  max-width: var(--shell);
+  /* Negative top margin, not a transform: the shelves have to actually occupy
+     this space so the page height and every scroll position below stay honest. */
+  margin: calc(-1 * var(--hero-overlap)) auto 0;
   /* Bottom clearance is the pill's offset plus its height plus a gap, so the
      last shelf never ends underneath it. */
   padding: 0 var(--gutter) 110px;
@@ -334,6 +348,11 @@ html.reduce-motion .hcard:focus-visible .hcard-media { transform: none; }
 .book-loop { cursor: grab; touch-action: pan-x pan-y; }
 .book-loop:active { cursor: grabbing; }
 .book-cover {
+  /* --book-base and --book-aspect are set per item; --book-scale is the knob a
+     breakpoint turns. Books were a fixed 212 to 286px tall whatever the screen,
+     which on a phone is barely two covers across. */
+  --book-h: calc(var(--book-base) * var(--book-scale, 1));
+  --book-w: calc(var(--book-h) * var(--book-aspect));
   position: relative; flex: 0 0 var(--book-w); width: var(--book-w); height: var(--book-h);
   margin-left: calc(var(--book-w) * -0.22);
   border: 0; border-radius: 2px; padding: 0; overflow: hidden;
@@ -1101,6 +1120,7 @@ body.menu-open .sound-toggle { opacity: 0; pointer-events: none; }
 }
 
 @media (max-width: 720px) {
+  :root { --hero-overlap: 50vh; --book-scale: 0.66; }
   .hero-inner { width: min(86vw, 540px); }
   .hero-line { font-size: clamp(27px, 7.5vw, 34px); }
   .footer-brand { flex-direction: column-reverse; align-items: center; gap: 64px; }
