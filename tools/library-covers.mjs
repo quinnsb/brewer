@@ -43,7 +43,7 @@ import path from "node:path";
 import { parseGoodreads, parseLetterboxd, feedUrls } from "../lib/feeds.mjs";
 import { slug } from "./lib/identity.mjs";
 import { loadEnv } from "./lib/env.mjs";
-import { get, bestCover } from "./lib/covers.mjs";
+import { get, bestCover, aspectFits } from "./lib/covers.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const OVERRIDE_DIR = path.join(ROOT, "images", "library", "overrides");
@@ -78,20 +78,33 @@ async function main() {
     }
   }
 
-  /* An override already in place was chosen deliberately, so it is left alone
-     however small it is. */
-  const small = published.items.filter((item) => {
-    const width = palette[item.id]?.width || 0;
-    return width && width < MIN && !existsSync(path.join(OVERRIDE_DIR, `${item.id}.jpg`));
+  /* Two ways a cover needs replacing: too small, or the wrong shape. Judging on
+     width alone let Moonlight through at 960x1021, a nearly square image where a
+     poster belongs, because 960 looked perfectly healthy. An override already in
+     place was chosen deliberately and is left alone either way. */
+  const wanted = published.items.filter((item) => {
+    if (existsSync(path.join(OVERRIDE_DIR, `${item.id}.jpg`))) return false;
+    const entry = palette[item.id];
+    if (!entry?.width) return false;
+    const tooSmall = entry.width < MIN;
+    const wrongShape = !aspectFits(item.aspect, { width: entry.width, height: entry.height_px });
+    return tooSmall || wrongShape;
   });
 
-  console.log(`\n${small.length} covers under ${MIN}px, ${offered.size} offered by the feeds\n`);
+  const misshapen = wanted.filter((item) =>
+    !aspectFits(item.aspect, { width: palette[item.id].width, height: palette[item.id].height_px })
+  ).length;
+  console.log(
+    `\n${wanted.length} covers to replace ` +
+    `(${wanted.length - misshapen} too small, ${misshapen} the wrong shape), ` +
+    `${offered.size} offered by the feeds\n`
+  );
   if (APPLY) await mkdir(OVERRIDE_DIR, { recursive: true });
 
   const upgraded = [];
   const stuck = [];
 
-  for (const item of small) {
+  for (const item of wanted) {
     const was = palette[item.id]?.width || 0;
 
     /* Books get the ebook catalogue first because it answers for almost
@@ -100,9 +113,12 @@ async function main() {
        is the difference between Heart of Darkness at 665px and the same book at
        1500px from the same query. A replacement no bigger than what is already
        there is not an upgrade, so the floor is what the item already has. */
+    /* A cover of the wrong shape has no width worth beating, so the floor drops
+       to the plain minimum; otherwise the replacement has to be a real upgrade. */
+    const rightShape = aspectFits(item.aspect, { width: was, height: palette[item.id].height_px });
     const found = await bestCover(
       { ...item, coverUrl: offered.get(item.id) },
-      { minWidth: Math.round(was * 1.25) }
+      { minWidth: rightShape ? Math.round(was * 1.25) : 400, expectAspect: item.aspect }
     );
     if (!found.buffer) {
       stuck.push({ item, was, note: found.notes.join("; ") });

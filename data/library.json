@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T01:34:40.080Z",
+  "generatedAt": "2026-08-22T01:43:31.907Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -4974,7 +4974,7 @@
       "creator": "Barry Jenkins",
       "year": 2016,
       "detail": "Film",
-      "cover": "images/library/film-moonlight.jpg",
+      "cover": "images/library/overrides/film-moonlight.jpg",
       "sourceUrl": "https://en.wikipedia.org/wiki/Moonlight",
       "catalogId": null,
       "listenEmbedUrl": null,
@@ -5021,11 +5021,11 @@
         "Barry Jenkins"
       ],
       "reviewHtml": null,
-      "width": 960,
-      "height_px": 1021,
+      "width": 2000,
+      "height_px": 3000,
       "palette": {
-        "cover": "#47414a",
-        "accent": "#2b1a36",
+        "cover": "#3b4863",
+        "accent": "#0f96a4",
         "ink": "#f1ece3"
       },
       "thumb": "images/library/thumbs/film-moonlight.jpg"

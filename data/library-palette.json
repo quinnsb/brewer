@@ -590,12 +590,12 @@
     }
   },
   "film-moonlight": {
-    "fingerprint": "97319:1787264438280",
-    "width": 960,
-    "height_px": 1021,
+    "fingerprint": "1244438:1787363011242",
+    "width": 2000,
+    "height_px": 3000,
     "palette": {
-      "cover": "#47414a",
-      "accent": "#2b1a36",
+      "cover": "#3b4863",
+      "accent": "#0f96a4",
       "ink": "#f1ece3"
     }
   },

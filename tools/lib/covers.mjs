@@ -130,9 +130,21 @@ export async function tmdbPoster({ title, year }) {
 
 const MEASURE_AT_MOST = 5;
 
+/* How far a cover's proportions may stray from the shape its type declares
+   before it is the wrong picture rather than a different edition. Real book
+   jackets run anywhere from 0.60 to 0.75, so this has to be generous; a square
+   image where a poster belongs is nowhere near it. */
+export const ASPECT_TOLERANCE = 0.12;
+
+export function aspectFits(expected, size) {
+  if (!expected || !size?.height) return true;
+  return Math.abs(size.width / size.height - expected) <= ASPECT_TOLERANCE;
+}
+
 /* Downloads and returns the bytes of the biggest edition that agrees on the
-   title, and only if it beats `minWidth`; 0 accepts anything readable. */
-export async function bestCover(item, { minWidth = 0 } = {}) {
+   title, and only if it beats `minWidth` and is the right shape; a big picture
+   of the wrong thing is not an upgrade. */
+export async function bestCover(item, { minWidth = 0, expectAspect = 0 } = {}) {
   const attempts = [];
   if (item.type === "book") attempts.push(["iTunes", () => itunesCovers(item, "ebook")]);
   if (item.type === "album") attempts.push(["iTunes", () => itunesCovers(item, "music")]);
@@ -154,11 +166,12 @@ export async function bestCover(item, { minWidth = 0 } = {}) {
           const buffer = Buffer.from(await (await get(url)).arrayBuffer());
           const size = imageSize(buffer);
           if (!size || size.width <= minWidth) continue;
+          if (!aspectFits(expectAspect, size)) continue;
           if (!best || size.width > best.size.width) best = { buffer, size, source: name, url };
         } catch { /* one bad edition is not a reason to abandon the rest */ }
       }
       if (best) return best;
-      notes.push(`${name} offered nothing over ${minWidth}px`);
+      notes.push(`${name} offered nothing over ${minWidth}px in the right shape`);
     } catch (err) {
       notes.push(`${name} failed: ${err.message}`);
     }
