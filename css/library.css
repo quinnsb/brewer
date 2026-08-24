@@ -167,14 +167,8 @@ body.library a { color: inherit; }
   position: relative; z-index: 3; background: var(--lib-bg);
 }
 
-/* Above the bottom-bar breakpoint the standalone pill is showing, so content
-   starts to the right of it and nothing ever passes underneath. */
-@media (min-width: 621px) {
-  .shelves,
-  .list-index-section,
-  .catalog-section,
-  .list-page-intro { padding-left: max(var(--gutter), var(--pill-safe)); }
-}
+/* The pill reservation this used to hold now lives at the end of the file,
+   below the rules that were quietly overriding it. See "ROOM FOR THE MENU". */
 .shelf-block { margin-bottom: 76px; }
 /* The last shelf's margin used to stack on .shelves' padding, leaving a screen
    and a half of nothing between the podcasts and the footer. */
@@ -533,6 +527,27 @@ html.reduce-motion .shelf-control { transition: none; }
 .poster.is-open, .tile.is-open { transform: translateY(-7px); }
 
 body.media-detail-open { overflow: hidden; }
+
+/* Room on the left for the menu, on a media page as much as anywhere else.
+
+   A media page is a full-screen takeover of the library, not a dialog you are
+   held inside, so the way out to the rest of the site has to stay both visible
+   and clickable. The layer sits at z-index 120 and the pill at 80, which put
+   the pill behind it; library.js separately exempts the menu from the inert
+   sweep, or it would still be unclickable once lifted.
+
+   --pill-safe is the same reservation the list pages use: the pill's own left
+   offset plus its width plus a gap. */
+body.media-detail-open .menu-btn,
+body.media-detail-open .menu-bar,
+body.media-detail-open .menu-dock { z-index: 130; }
+
+/* The art column is a centred cover over a gradient, so the pill has the
+   bottom-left corner to itself already. What it does not have is a guarantee:
+   a wide cover on a short viewport reaches down into that corner. Nudging the
+   morph up by half the reserved band keeps the two apart without moving the
+   cover off centre in any way a viewer would notice. */
+body.media-detail-open .media-detail-art { padding-bottom: clamp(0px, 6vh, 74px); }
 
 /* The camera push. In the reference the shelf keeps travelling toward the
    viewer for the whole time the cover is growing, and the neighbouring spines
@@ -965,7 +980,11 @@ body.media-detail-pushed .detail-dolly-host {
   .media-detail-object img { max-height: 46svh; }
   .media-detail-copy {
     height: auto; min-height: 58svh; overflow-x: hidden; overflow-y: visible;
-    padding: 64px var(--gutter) 48px; transform: translateY(18px);
+    /* The phone chrome bar is full width and fixed to the bottom, so the last
+       thing in this column, the prev/next pair, was sitting underneath it. The
+       extra 76px is the bar's height plus its offset from the edge. */
+    padding: 64px var(--gutter) calc(48px + 76px);
+    transform: translateY(18px);
   }
   .media-detail-layer.is-closing .media-detail-copy { transform: translateY(14px); }
   .media-detail-close {
@@ -1514,3 +1533,34 @@ html.reduce-motion .list-stream-card { animation-play-state: paused; }
   .hero-quote-cite { transition: none; opacity: 1; transform: none; }
 }
 html.reduce-motion .hero-quote-cite { transition: none; opacity: 1; transform: none; }
+
+/* ---------- ROOM FOR THE MENU ----------
+   Above the bottom-bar breakpoint the standalone pill is showing at the bottom
+   left, fixed, so page content has to start to the right of it: it is fixed,
+   which means whatever is not inset passes underneath it sooner or later as
+   you scroll.
+
+   This lived up near .shelves, which is why the main page has always been
+   right and the catalog pages have not. Three rules further down the file set
+   `padding-left: var(--gutter)` on the very sections it names, and matched its
+   specificity exactly, so source order decided it and the reservation lost.
+   The catalog heading sat under the pill as a result: on an albums page, the
+   word "All albums." had Menu written across it.
+
+   It belongs at the end, after everything it has to beat.
+
+   The breakpoint matters. Below 621px the pill gives way to a full-width bar
+   along the bottom, so there is nothing on the left to reserve for and the
+   inset would only squeeze the page. --pill-safe is the pill's own left offset
+   plus its width plus a gap; max() means the ordinary gutter still wins
+   wherever that comes out larger. */
+@media (min-width: 621px) {
+  .shelves,
+  .list-index-section,
+  .catalog-section,
+  .list-page-intro { padding-left: max(var(--gutter), var(--pill-safe)); }
+  /* The intro is a centred column inside a full-bleed hero, so it takes the
+     reservation as a margin on the centring box rather than as padding that
+     would push its text off centre. */
+  .list-page-intro { padding-right: max(var(--gutter), var(--pill-safe)); }
+}

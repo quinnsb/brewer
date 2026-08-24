@@ -7,14 +7,14 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
-import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail10";
+import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail11";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail10";
-const SOURCES_URL = "data/library-sources.json?v=library-detail10";
+const DATA_URL = "data/library.json?v=library-detail11";
+const SOURCES_URL = "data/library-sources.json?v=library-detail11";
 
 /* Which outside profiles belong beside which shelf, in the order they render.
    Albums have two, because the streaming history and the record shelf are
@@ -1103,11 +1103,19 @@ function markExpanded(node) {
   }
 }
 
+/* The site menu is exempt. A media page is a full-screen takeover of the
+   library rather than a dialog you are held inside, so the way out to the rest
+   of the site has to stay reachable: the pill is the only navigation on the
+   page and marking it inert left it both invisible behind the overlay and
+   unclickable underneath it. The stylesheet lifts it above the layer to match. */
+const KEEPS_FOCUS_DURING_DETAIL = ".menu-btn, .menu-bar, .menu-dock, .skip-link";
+
 function setPageInert(active) {
   if (active) {
     inertBeforeDetail.clear();
     for (const child of document.body.children) {
       if (child === detailLayer || child.tagName === "SCRIPT") continue;
+      if (child.matches?.(KEEPS_FOCUS_DURING_DETAIL)) continue;
       inertBeforeDetail.set(child, child.inert);
       child.inert = true;
     }
@@ -1685,7 +1693,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-detail10");
+  const { initHero } = await import("./library-hero.js?v=library-detail11");
   initHero(items);
 }
 
