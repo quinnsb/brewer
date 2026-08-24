@@ -13,7 +13,7 @@
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js?v=hero-orbit2";
 /* Keep this URL identical to library.html. A different query string creates a
    second module instance, which renders every shelf and detail handler twice. */
-import { openItem, coverPicture } from "./library.js?v=library-detail6";
+import { openItem, coverPicture } from "./library.js?v=library-detail7";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||
@@ -312,9 +312,16 @@ export function initHero(items) {
       if (phase === "scatter") {
         target = scatter[i];
       } else if (phase === "line") {
-        const spacing = 78;
+        /* The row has to fit the screen it is drawn on. A flat 78px pitch put
+           thirteen phone cards across 1014px of a 393px viewport, so for the
+           two seconds of the intro four to seven covers sat entirely outside
+           the frame and the rest slid in from past the edges. Derive the pitch
+           from the width instead, capped at the original 78px so nothing
+           changes on a desktop, where thirteen cards never came close to the
+           edge in the first place. */
+        const spacing = Math.min(78, (g.mobile ? innerWidth * 0.92 : innerWidth) / layoutTotal);
         target = {
-          x: layoutIndex * spacing - (layoutTotal * spacing) / 2,
+          x: (layoutIndex - (layoutTotal - 1) / 2) * spacing,
           y: 0, rotation: 0, scale: 1, opacity: 1,
         };
       } else {

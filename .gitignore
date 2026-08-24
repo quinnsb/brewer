@@ -3,3 +3,5 @@
 inspo images 4/
 .env
 .superpowers/
+node_modules/
+tools/audit/shots/

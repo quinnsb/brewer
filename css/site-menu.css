@@ -255,4 +255,13 @@ body.menu-closing .menu-dock button {
   .menu-btn { display: none; }
   .menu-bar { display: flex; }
   .menu-bar .menu-btn { display: block; }
+
+  /* The bar is fixed over the last ~77px of the viewport, so anything the
+     browser scrolls to on its own — a focused field, an anchor, a
+     scrollIntoView — has to stop short of it or it arrives underneath. The
+     contact form found this the hard way: tabbing to a name field parked it
+     behind the bar, where a tap hits the bar instead. Content at the very end
+     of the page is already covered, because the bar hides itself near the
+     footer. */
+  html { scroll-padding-bottom: 92px; }
 }

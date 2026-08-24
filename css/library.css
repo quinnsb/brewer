@@ -489,12 +489,18 @@ html.reduce-motion .shelf-control { transition: none; }
 .loop-track:not(.is-looping) > [data-loop-clone],
 .book-cover-shelf:not(.is-looping) > [data-loop-clone] { display: none; }
 .shelf-rail:has(.loop-track) { cursor: grab; touch-action: pan-x pan-y; }
-/* Films settle on a poster the way the coverflow settles on a sleeve. Proximity
-   rather than mandatory, so a deliberate long swipe still travels instead of
-   being caught by the next poster, and so the seam of the loop is not a snap
-   point that fights the wrap. */
-.shelf-rail:has(.rack) { scroll-snap-type: x proximity; }
-.rack > .poster { scroll-snap-align: center; }
+/* Films used to settle on a poster the way the coverflow settles on a sleeve,
+   and proximity snapping was chosen so the loop seam would not be a snap point
+   that fights the wrap. It fights it anyway, one level down: this rail loops,
+   which means wireLoopRail assigns scrollLeft by exactly one run width when the
+   seam goes by, and the snap engine then adjusts wherever that assignment
+   landed. Measured, it moved a 6335px wrap to 6370px. Off by a third of a
+   poster is a visible jump, and a fast swipe is what crosses the seam while
+   there is still momentum to interrupt, which is why only fast swipes glitched.
+
+   The coverflow keeps its snap because it does not loop. A rail cannot have
+   both an exact wrap and a snap that is free to move it, so the films keep the
+   wrap and drop the snap. */
 .shelf-rail:has(.loop-track):active { cursor: grabbing; }
 .rack { display: flex; align-items: flex-end; gap: 12px; padding: 30px 4px 18px; width: max-content; }
 .poster {
@@ -739,7 +745,15 @@ body.media-detail-open { overflow: hidden; }
   transition: transform 0.24s var(--ease), opacity 0.2s ease;
 }
 .media-detail-related-item img {
-  width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 3px;
+  /* height, not just width. coverPicture puts the cover's real pixel size on
+     the img as width/height attributes so a shelf reserves its space before
+     the bytes land, and an attribute is a presentational hint: it sets the
+     used height unless CSS says otherwise. Every other cover rule on this page
+     answers it with height:100%; this one did not, so a 780x1170 poster drew
+     110px wide and 1170px tall and the See-also row became four columns of
+     ribbon. aspect-ratio supplies the shape once the attribute is out of the
+     way. */
+  width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 3px;
   background: rgba(241, 236, 227, 0.06);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.42);
 }
