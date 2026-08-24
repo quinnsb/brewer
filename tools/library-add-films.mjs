@@ -30,39 +30,13 @@ import { rawItemFor, seedFor } from "../lib/add-item.mjs";
 import { buildNote } from "../lib/apply-note.mjs";
 import { parseFilmGrid, lastPage, filmsPageUrl } from "../lib/letterboxd-list.mjs";
 import { parseLetterboxd, feedUrls } from "../lib/feeds.mjs";
-import { get, imageSize, titlesAgree } from "./lib/covers.mjs";
+import { filmFromTmdb, tmdbGenreNames } from "../lib/tmdb-film.mjs";
+import { get } from "./lib/covers.mjs";
 import { loadEnv } from "./lib/env.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const APPLY = process.argv.includes("--apply");
 const LIMIT = Number(process.argv[process.argv.indexOf("--limit") + 1]) || Infinity;
-const POSTER_SIZE = "w780";
-
-/* TMDB's genre names, mapped onto the words the shelf already uses. Anything not
-   listed keeps TMDB's own name, which is how Horror, War and the rest arrive. */
-const GENRE_ALIAS = {
-  "Science Fiction": "Science fiction",
-  History: "Historical",
-  Music: "Musical",
-};
-
-async function tmdbGenreNames(key) {
-  const payload = await (await get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${key}`)).json();
-  return new Map((payload.genres || []).map((g) => [g.id, GENRE_ALIAS[g.name] || g.name]));
-}
-
-/* One search per film, matched on title and year so a remake does not win. */
-async function tmdbFilm(film, key) {
-  const params = new URLSearchParams({ api_key: key, query: film.title });
-  if (film.year) params.set("year", String(film.year));
-  const payload = await (await get(`https://api.themoviedb.org/3/search/movie?${params}`)).json();
-
-  for (const result of payload.results || []) {
-    if (!result.poster_path || !titlesAgree(film.title, result.title)) continue;
-    return result;
-  }
-  return null;
-}
 
 async function main() {
   await loadEnv(ROOT);
@@ -146,30 +120,12 @@ async function main() {
     if (have.has(rawItem.id)) { already += 1; continue; }
 
     try {
-      const match = await tmdbFilm(film, key);
-      if (!match) { skipped.push([film.title, "no TMDB match"]); continue; }
-
-      const names = (match.genre_ids || []).map((id) => genres.get(id)).filter(Boolean);
-      if (!names.length) { skipped.push([film.title, "TMDB lists no genre"]); continue; }
-
-      const buffer = Buffer.from(
-        await (await get(`https://image.tmdb.org/t/p/${POSTER_SIZE}${match.poster_path}`)).arrayBuffer()
-      );
-      const size = imageSize(buffer);
-      if (!size) { skipped.push([film.title, "poster unreadable"]); continue; }
-
       /* Rebuilt now that TMDB has supplied the facts the grid does not carry. */
-      rawItem = rawItemFor({
-        type: "film",
-        title: film.title,
-        year: film.year ?? (match.release_date ? Number(match.release_date.slice(0, 4)) : null),
-        detail: "Film",
-        sourceUrl: `https://www.themoviedb.org/movie/${match.id}`,
-        facts: [
-          ["Released", match.release_date || null],
-          ["TMDB rating", match.vote_average ? match.vote_average.toFixed(1) : null],
-        ].filter(([, v]) => v !== null),
-      });
+      const built = await filmFromTmdb(film, key, genres);
+      const { size } = built;
+      const names = built.genres;
+      const buffer = built.poster;
+      rawItem = built.rawItem;
 
       have.add(rawItem.id);
       items.push({ rawItem, genres: names });

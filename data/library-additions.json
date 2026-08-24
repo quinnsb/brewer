@@ -1,6 +1,6 @@
 {
-  "importedAt": "2026-08-22T13:14:50.932Z",
-  "source": "library-add-films",
+  "importedAt": "2026-08-24T18:06:40.487Z",
+  "source": "library-import-letterboxd-lists",
   "items": [
     {
       "type": "book",
@@ -2098,6 +2098,405 @@
       "creator": "Joe Hisaishi",
       "year": 2018,
       "sourceUrl": "https://www.discogs.com/release/12767683"
+    },
+    {
+      "type": "film",
+      "query": "Spirited Away",
+      "title": "Spirited Away",
+      "year": 2001,
+      "sourceUrl": "https://www.themoviedb.org/movie/129"
+    },
+    {
+      "type": "film",
+      "query": "My Neighbor Totoro",
+      "title": "My Neighbor Totoro",
+      "year": 1988,
+      "sourceUrl": "https://www.themoviedb.org/movie/8392"
+    },
+    {
+      "type": "film",
+      "query": "The Wind Rises",
+      "title": "The Wind Rises",
+      "year": 2013,
+      "sourceUrl": "https://www.themoviedb.org/movie/149870"
+    },
+    {
+      "type": "film",
+      "query": "Princess Mononoke",
+      "title": "Princess Mononoke",
+      "year": 1997,
+      "sourceUrl": "https://www.themoviedb.org/movie/128"
+    },
+    {
+      "type": "film",
+      "query": "Ponyo",
+      "title": "Ponyo",
+      "year": 2008,
+      "sourceUrl": "https://www.themoviedb.org/movie/12429"
+    },
+    {
+      "type": "film",
+      "query": "Howl's Moving Castle",
+      "title": "Howl's Moving Castle",
+      "year": 2004,
+      "sourceUrl": "https://www.themoviedb.org/movie/4935"
+    },
+    {
+      "type": "film",
+      "query": "Nausicaä of the Valley of the Wind",
+      "title": "Nausicaä of the Valley of the Wind",
+      "year": 1984,
+      "sourceUrl": "https://www.themoviedb.org/movie/81"
+    },
+    {
+      "type": "film",
+      "query": "Porco Rosso",
+      "title": "Porco Rosso",
+      "year": 1992,
+      "sourceUrl": "https://www.themoviedb.org/movie/11621"
+    },
+    {
+      "type": "film",
+      "query": "Castle in the Sky",
+      "title": "Castle in the Sky",
+      "year": 1986,
+      "sourceUrl": "https://www.themoviedb.org/movie/10515"
+    },
+    {
+      "type": "film",
+      "query": "The Castle of Cagliostro",
+      "title": "The Castle of Cagliostro",
+      "year": 1979,
+      "sourceUrl": "https://www.themoviedb.org/movie/15371"
+    },
+    {
+      "type": "film",
+      "query": "Toy Story",
+      "title": "Toy Story",
+      "year": 1995,
+      "sourceUrl": "https://www.themoviedb.org/movie/862"
+    },
+    {
+      "type": "film",
+      "query": "Ratatouille",
+      "title": "Ratatouille",
+      "year": 2007,
+      "sourceUrl": "https://www.themoviedb.org/movie/2062"
+    },
+    {
+      "type": "film",
+      "query": "WALL·E",
+      "title": "WALL·E",
+      "year": 2008,
+      "sourceUrl": "https://www.themoviedb.org/movie/10681"
+    },
+    {
+      "type": "film",
+      "query": "Finding Nemo",
+      "title": "Finding Nemo",
+      "year": 2003,
+      "sourceUrl": "https://www.themoviedb.org/movie/12"
+    },
+    {
+      "type": "film",
+      "query": "The Incredibles",
+      "title": "The Incredibles",
+      "year": 2004,
+      "sourceUrl": "https://www.themoviedb.org/movie/9806"
+    },
+    {
+      "type": "film",
+      "query": "Monsters, Inc.",
+      "title": "Monsters, Inc.",
+      "year": 2001,
+      "sourceUrl": "https://www.themoviedb.org/movie/585"
+    },
+    {
+      "type": "film",
+      "query": "Soul",
+      "title": "Soul",
+      "year": 2020,
+      "sourceUrl": "https://www.themoviedb.org/movie/508442"
+    },
+    {
+      "type": "film",
+      "query": "Toy Story 3",
+      "title": "Toy Story 3",
+      "year": 2010,
+      "sourceUrl": "https://www.themoviedb.org/movie/10193"
+    },
+    {
+      "type": "film",
+      "query": "Up",
+      "title": "Up",
+      "year": 2009,
+      "sourceUrl": "https://www.themoviedb.org/movie/14160"
+    },
+    {
+      "type": "film",
+      "query": "Toy Story 2",
+      "title": "Toy Story 2",
+      "year": 1999,
+      "sourceUrl": "https://www.themoviedb.org/movie/863"
+    },
+    {
+      "type": "film",
+      "query": "Turning Red",
+      "title": "Turning Red",
+      "year": 2022,
+      "sourceUrl": "https://www.themoviedb.org/movie/508947"
+    },
+    {
+      "type": "film",
+      "query": "A Bug's Life",
+      "title": "A Bug's Life",
+      "year": 1998,
+      "sourceUrl": "https://www.themoviedb.org/movie/9487"
+    },
+    {
+      "type": "film",
+      "query": "Incredibles 2",
+      "title": "Incredibles 2",
+      "year": 2018,
+      "sourceUrl": "https://www.themoviedb.org/movie/260513"
+    },
+    {
+      "type": "film",
+      "query": "Inside Out 2",
+      "title": "Inside Out 2",
+      "year": 2024,
+      "sourceUrl": "https://www.themoviedb.org/movie/1022789"
+    },
+    {
+      "type": "film",
+      "query": "Toy Story 4",
+      "title": "Toy Story 4",
+      "year": 2019,
+      "sourceUrl": "https://www.themoviedb.org/movie/301528"
+    },
+    {
+      "type": "film",
+      "query": "Luca",
+      "title": "Luca",
+      "year": 2021,
+      "sourceUrl": "https://www.themoviedb.org/movie/508943"
+    },
+    {
+      "type": "film",
+      "query": "Monsters University",
+      "title": "Monsters University",
+      "year": 2013,
+      "sourceUrl": "https://www.themoviedb.org/movie/62211"
+    },
+    {
+      "type": "film",
+      "query": "Cars",
+      "title": "Cars",
+      "year": 2006,
+      "sourceUrl": "https://www.themoviedb.org/movie/920"
+    },
+    {
+      "type": "film",
+      "query": "Onward",
+      "title": "Onward",
+      "year": 2020,
+      "sourceUrl": "https://www.themoviedb.org/movie/508439"
+    },
+    {
+      "type": "film",
+      "query": "Cars 2",
+      "title": "Cars 2",
+      "year": 2011,
+      "sourceUrl": "https://www.themoviedb.org/movie/49013"
+    },
+    {
+      "type": "film",
+      "query": "Brave",
+      "title": "Brave",
+      "year": 2012,
+      "sourceUrl": "https://www.themoviedb.org/movie/62177"
+    },
+    {
+      "type": "film",
+      "query": "Elemental",
+      "title": "Elemental",
+      "year": 2023,
+      "sourceUrl": "https://www.themoviedb.org/movie/976573"
+    },
+    {
+      "type": "film",
+      "query": "Finding Dory",
+      "title": "Finding Dory",
+      "year": 2016,
+      "sourceUrl": "https://www.themoviedb.org/movie/127380"
+    },
+    {
+      "type": "film",
+      "query": "The Good Dinosaur",
+      "title": "The Good Dinosaur",
+      "year": 2015,
+      "sourceUrl": "https://www.themoviedb.org/movie/105864"
+    },
+    {
+      "type": "film",
+      "query": "Cars 3",
+      "title": "Cars 3",
+      "year": 2017,
+      "sourceUrl": "https://www.themoviedb.org/movie/260514"
+    },
+    {
+      "type": "film",
+      "query": "Lightyear",
+      "title": "Lightyear",
+      "year": 2022,
+      "sourceUrl": "https://www.themoviedb.org/movie/718789"
+    },
+    {
+      "type": "film",
+      "query": "The Social Network",
+      "title": "The Social Network",
+      "year": 2010,
+      "sourceUrl": "https://www.themoviedb.org/movie/37799"
+    },
+    {
+      "type": "film",
+      "query": "25th Hour",
+      "title": "25th Hour",
+      "year": 2002,
+      "sourceUrl": "https://www.themoviedb.org/movie/1429"
+    },
+    {
+      "type": "film",
+      "query": "Mulholland Drive",
+      "title": "Mulholland Drive",
+      "year": 2001,
+      "sourceUrl": "https://www.themoviedb.org/movie/1018"
+    },
+    {
+      "type": "film",
+      "query": "Mad Max: Fury Road",
+      "title": "Mad Max: Fury Road",
+      "year": 2015,
+      "sourceUrl": "https://www.themoviedb.org/movie/76341"
+    },
+    {
+      "type": "film",
+      "query": "Marie Antoinette",
+      "title": "Marie Antoinette",
+      "year": 2006,
+      "sourceUrl": "https://www.themoviedb.org/movie/1887"
+    },
+    {
+      "type": "film",
+      "query": "The Wolf of Wall Street",
+      "title": "The Wolf of Wall Street",
+      "year": 2013,
+      "sourceUrl": "https://www.themoviedb.org/movie/106646"
+    },
+    {
+      "type": "film",
+      "query": "Oppenheimer",
+      "title": "Oppenheimer",
+      "year": 2023,
+      "sourceUrl": "https://www.themoviedb.org/movie/872585"
+    },
+    {
+      "type": "film",
+      "query": "Melancholia",
+      "title": "Melancholia",
+      "year": 2011,
+      "sourceUrl": "https://www.themoviedb.org/movie/62215"
+    },
+    {
+      "type": "film",
+      "query": "Children of Men",
+      "title": "Children of Men",
+      "year": 2006,
+      "sourceUrl": "https://www.themoviedb.org/movie/9693"
+    },
+    {
+      "type": "film",
+      "query": "Something's Gotta Give",
+      "title": "Something's Gotta Give",
+      "year": 2003,
+      "sourceUrl": "https://www.themoviedb.org/movie/6964"
+    },
+    {
+      "type": "film",
+      "query": "The Handmaiden",
+      "title": "The Handmaiden",
+      "year": 2016,
+      "sourceUrl": "https://www.themoviedb.org/movie/290098"
+    },
+    {
+      "type": "film",
+      "query": "Rushmore",
+      "title": "Rushmore",
+      "year": 1998,
+      "sourceUrl": "https://www.themoviedb.org/movie/11545"
+    },
+    {
+      "type": "film",
+      "query": "Fantastic Mr. Fox",
+      "title": "Fantastic Mr. Fox",
+      "year": 2009,
+      "sourceUrl": "https://www.themoviedb.org/movie/10315"
+    },
+    {
+      "type": "film",
+      "query": "The Grand Budapest Hotel",
+      "title": "The Grand Budapest Hotel",
+      "year": 2014,
+      "sourceUrl": "https://www.themoviedb.org/movie/120467"
+    },
+    {
+      "type": "film",
+      "query": "Asteroid City",
+      "title": "Asteroid City",
+      "year": 2023,
+      "sourceUrl": "https://www.themoviedb.org/movie/747188"
+    },
+    {
+      "type": "film",
+      "query": "The Life Aquatic with Steve Zissou",
+      "title": "The Life Aquatic with Steve Zissou",
+      "year": 2004,
+      "sourceUrl": "https://www.themoviedb.org/movie/421"
+    },
+    {
+      "type": "film",
+      "query": "The French Dispatch of the Liberty, Kansas Evening Sun",
+      "title": "The French Dispatch of the Liberty, Kansas Evening Sun",
+      "year": 2021,
+      "sourceUrl": "https://www.themoviedb.org/movie/542178"
+    },
+    {
+      "type": "film",
+      "query": "The Phoenician Scheme",
+      "title": "The Phoenician Scheme",
+      "year": 2025,
+      "sourceUrl": "https://www.themoviedb.org/movie/1137350"
+    },
+    {
+      "type": "film",
+      "query": "Bottle Rocket",
+      "title": "Bottle Rocket",
+      "year": 1996,
+      "sourceUrl": "https://www.themoviedb.org/movie/13685"
+    },
+    {
+      "type": "film",
+      "query": "The Darjeeling Limited",
+      "title": "The Darjeeling Limited",
+      "year": 2007,
+      "sourceUrl": "https://www.themoviedb.org/movie/4538"
+    },
+    {
+      "type": "film",
+      "query": "Isle of Dogs",
+      "title": "Isle of Dogs",
+      "year": 2018,
+      "sourceUrl": "https://www.themoviedb.org/movie/399174"
     }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "_comment": [
+    "Letterboxd slug -> TMDB film id, for films where the search cannot find the",
+    "right record on its own.",
+    "",
+    "tools/lib/covers.mjs refuses a match unless every word of the wanted title",
+    "appears in the title that came back, which is what stops a loose search",
+    "installing a poster for the wrong work. A few films defeat that honestly:",
+    "TMDB's English title for them is one almost nobody uses, so the titles",
+    "really do disagree and the guard is right to say so.",
+    "",
+    "An id here skips the search for that one film. Add an entry only when you",
+    "have opened the TMDB page and confirmed it is the right film."
+  ],
+  "nausicaa-of-the-valley-of-the-wind": {
+    "tmdb": 81,
+    "why": "TMDB titles this 'Warriors of the Wind', the 1985 edited US release"
+  }
+}

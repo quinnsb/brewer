@@ -1452,5 +1452,308 @@
   "album-joe-hisaishi-1m5ovzv": [
     "Anison",
     "Score"
+  ],
+  "film-spirited-away": [
+    "Animation",
+    "Family",
+    "Fantasy"
+  ],
+  "film-my-neighbor-totoro": [
+    "Fantasy",
+    "Animation",
+    "Family"
+  ],
+  "film-the-wind-rises": [
+    "Animation",
+    "Drama",
+    "Historical",
+    "Romance"
+  ],
+  "film-princess-mononoke": [
+    "Adventure",
+    "Fantasy",
+    "Animation"
+  ],
+  "film-ponyo": [
+    "Animation",
+    "Fantasy",
+    "Family"
+  ],
+  "film-howls-moving-castle": [
+    "Fantasy",
+    "Animation",
+    "Adventure"
+  ],
+  "film-nausica-of-the-valley-of-the-wind": [
+    "Adventure",
+    "Animation",
+    "Fantasy"
+  ],
+  "film-porco-rosso": [
+    "Animation",
+    "Adventure",
+    "Fantasy"
+  ],
+  "film-castle-in-the-sky": [
+    "Adventure",
+    "Fantasy",
+    "Animation",
+    "Action",
+    "Family"
+  ],
+  "film-the-castle-of-cagliostro": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Crime"
+  ],
+  "film-toy-story": [
+    "Family",
+    "Comedy",
+    "Animation",
+    "Adventure"
+  ],
+  "film-ratatouille": [
+    "Animation",
+    "Comedy",
+    "Family",
+    "Fantasy"
+  ],
+  "film-wall-e": [
+    "Animation",
+    "Family",
+    "Science fiction"
+  ],
+  "film-finding-nemo": [
+    "Animation",
+    "Family",
+    "Adventure"
+  ],
+  "film-the-incredibles": [
+    "Action",
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "film-monsters-inc": [
+    "Animation",
+    "Comedy",
+    "Family",
+    "Fantasy"
+  ],
+  "film-soul": [
+    "Animation",
+    "Family",
+    "Drama",
+    "Musical",
+    "Fantasy"
+  ],
+  "film-toy-story-3": [
+    "Animation",
+    "Family",
+    "Comedy"
+  ],
+  "film-up": [
+    "Animation",
+    "Comedy",
+    "Family",
+    "Adventure"
+  ],
+  "film-toy-story-2": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "film-turning-red": [
+    "Animation",
+    "Family",
+    "Comedy",
+    "Fantasy"
+  ],
+  "film-a-bugs-life": [
+    "Adventure",
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "film-incredibles-2": [
+    "Action",
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "film-inside-out-2": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "film-toy-story-4": [
+    "Family",
+    "Comedy",
+    "Animation",
+    "Adventure"
+  ],
+  "film-luca": [
+    "Animation",
+    "Family",
+    "Fantasy",
+    "Drama",
+    "Comedy"
+  ],
+  "film-monsters-university": [
+    "Animation",
+    "Family",
+    "Comedy",
+    "Fantasy"
+  ],
+  "film-cars": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "film-onward": [
+    "Adventure",
+    "Animation",
+    "Comedy",
+    "Family",
+    "Fantasy"
+  ],
+  "film-cars-2": [
+    "Animation",
+    "Family",
+    "Adventure",
+    "Comedy"
+  ],
+  "film-brave": [
+    "Adventure",
+    "Animation",
+    "Family",
+    "Fantasy"
+  ],
+  "film-elemental": [
+    "Animation",
+    "Comedy",
+    "Family",
+    "Romance"
+  ],
+  "film-finding-dory": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "film-the-good-dinosaur": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "film-cars-3": [
+    "Animation",
+    "Drama",
+    "Family",
+    "Adventure"
+  ],
+  "film-lightyear": [
+    "Animation",
+    "Science fiction",
+    "Family",
+    "Adventure"
+  ],
+  "film-the-social-network": [
+    "Drama"
+  ],
+  "film-25th-hour": [
+    "Crime",
+    "Drama"
+  ],
+  "film-mulholland-drive": [
+    "Thriller",
+    "Drama",
+    "Mystery"
+  ],
+  "film-mad-max-fury-road": [
+    "Action",
+    "Adventure",
+    "Science fiction"
+  ],
+  "film-marie-antoinette": [
+    "Drama",
+    "Historical"
+  ],
+  "film-the-wolf-of-wall-street": [
+    "Crime",
+    "Drama",
+    "Comedy"
+  ],
+  "film-oppenheimer": [
+    "Drama",
+    "Historical"
+  ],
+  "film-melancholia": [
+    "Drama",
+    "Science fiction"
+  ],
+  "film-children-of-men": [
+    "Science fiction",
+    "Thriller",
+    "Action"
+  ],
+  "film-somethings-gotta-give": [
+    "Drama",
+    "Comedy",
+    "Romance"
+  ],
+  "film-the-handmaiden": [
+    "Thriller",
+    "Drama",
+    "Romance"
+  ],
+  "film-rushmore": [
+    "Comedy",
+    "Drama"
+  ],
+  "film-fantastic-mr-fox": [
+    "Adventure",
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "film-the-grand-budapest-hotel": [
+    "Comedy",
+    "Drama"
+  ],
+  "film-asteroid-city": [
+    "Comedy",
+    "Drama"
+  ],
+  "film-the-life-aquatic-with-steve-zissou": [
+    "Adventure",
+    "Comedy",
+    "Drama"
+  ],
+  "film-the-french-dispatch-of-the-liberty-kansas-evening-sun": [
+    "Drama",
+    "Comedy"
+  ],
+  "film-the-phoenician-scheme": [
+    "Comedy",
+    "Adventure",
+    "Crime"
+  ],
+  "film-bottle-rocket": [
+    "Comedy",
+    "Crime",
+    "Drama"
+  ],
+  "film-the-darjeeling-limited": [
+    "Adventure",
+    "Drama",
+    "Comedy"
+  ],
+  "film-isle-of-dogs": [
+    "Adventure",
+    "Comedy",
+    "Animation"
   ]
 }

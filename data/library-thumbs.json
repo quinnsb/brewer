@@ -3220,5 +3220,518 @@
     "bytes": 152379,
     "webpBytes": 66640,
     "shelfBytes": 17656
+  },
+  "film-spirited-away": {
+    "fingerprint": "108130:1787594800491",
+    "thumb": "images/library/thumbs/film-spirited-away.jpg",
+    "thumbWebp": "images/library/thumbs/film-spirited-away.webp",
+    "shelfWebp": "images/library/thumbs/film-spirited-away-sm.webp",
+    "bytes": 64274,
+    "webpBytes": 24724,
+    "shelfBytes": 8092
+  },
+  "film-my-neighbor-totoro": {
+    "fingerprint": "300952:1787594800491",
+    "thumb": "images/library/thumbs/film-my-neighbor-totoro.jpg",
+    "thumbWebp": "images/library/thumbs/film-my-neighbor-totoro.webp",
+    "shelfWebp": "images/library/thumbs/film-my-neighbor-totoro-sm.webp",
+    "bytes": 115027,
+    "webpBytes": 47234,
+    "shelfBytes": 11326
+  },
+  "film-the-wind-rises": {
+    "fingerprint": "136442:1787594800492",
+    "thumb": "images/library/thumbs/film-the-wind-rises.jpg",
+    "thumbWebp": "images/library/thumbs/film-the-wind-rises.webp",
+    "shelfWebp": "images/library/thumbs/film-the-wind-rises-sm.webp",
+    "bytes": 73357,
+    "webpBytes": 28244,
+    "shelfBytes": 8382
+  },
+  "film-princess-mononoke": {
+    "fingerprint": "204489:1787594800492",
+    "thumb": "images/library/thumbs/film-princess-mononoke.jpg",
+    "thumbWebp": "images/library/thumbs/film-princess-mononoke.webp",
+    "shelfWebp": "images/library/thumbs/film-princess-mononoke-sm.webp",
+    "bytes": 112556,
+    "webpBytes": 45072,
+    "shelfBytes": 12854
+  },
+  "film-ponyo": {
+    "fingerprint": "183080:1787594800492",
+    "thumb": "images/library/thumbs/film-ponyo.jpg",
+    "thumbWebp": "images/library/thumbs/film-ponyo.webp",
+    "shelfWebp": "images/library/thumbs/film-ponyo-sm.webp",
+    "bytes": 80600,
+    "webpBytes": 24214,
+    "shelfBytes": 7912
+  },
+  "film-howls-moving-castle": {
+    "fingerprint": "198577:1787594800494",
+    "thumb": "images/library/thumbs/film-howls-moving-castle.jpg",
+    "thumbWebp": "images/library/thumbs/film-howls-moving-castle.webp",
+    "shelfWebp": "images/library/thumbs/film-howls-moving-castle-sm.webp",
+    "bytes": 115066,
+    "webpBytes": 55882,
+    "shelfBytes": 15686
+  },
+  "film-nausica-of-the-valley-of-the-wind": {
+    "fingerprint": "164015:1787594800495",
+    "thumb": "images/library/thumbs/film-nausica-of-the-valley-of-the-wind.jpg",
+    "thumbWebp": "images/library/thumbs/film-nausica-of-the-valley-of-the-wind.webp",
+    "shelfWebp": "images/library/thumbs/film-nausica-of-the-valley-of-the-wind-sm.webp",
+    "bytes": 86106,
+    "webpBytes": 33792,
+    "shelfBytes": 9856
+  },
+  "film-porco-rosso": {
+    "fingerprint": "85315:1787594800496",
+    "thumb": "images/library/thumbs/film-porco-rosso.jpg",
+    "thumbWebp": "images/library/thumbs/film-porco-rosso.webp",
+    "shelfWebp": "images/library/thumbs/film-porco-rosso-sm.webp",
+    "bytes": 67398,
+    "webpBytes": 23240,
+    "shelfBytes": 8374
+  },
+  "film-castle-in-the-sky": {
+    "fingerprint": "304694:1787594800496",
+    "thumb": "images/library/thumbs/film-castle-in-the-sky.jpg",
+    "thumbWebp": "images/library/thumbs/film-castle-in-the-sky.webp",
+    "shelfWebp": "images/library/thumbs/film-castle-in-the-sky-sm.webp",
+    "bytes": 145143,
+    "webpBytes": 66156,
+    "shelfBytes": 17448
+  },
+  "film-the-castle-of-cagliostro": {
+    "fingerprint": "187005:1787594800496",
+    "thumb": "images/library/thumbs/film-the-castle-of-cagliostro.jpg",
+    "thumbWebp": "images/library/thumbs/film-the-castle-of-cagliostro.webp",
+    "shelfWebp": "images/library/thumbs/film-the-castle-of-cagliostro-sm.webp",
+    "bytes": 91262,
+    "webpBytes": 27760,
+    "shelfBytes": 7898
+  },
+  "film-toy-story": {
+    "fingerprint": "179665:1787594800497",
+    "thumb": "images/library/thumbs/film-toy-story.jpg",
+    "thumbWebp": "images/library/thumbs/film-toy-story.webp",
+    "shelfWebp": "images/library/thumbs/film-toy-story-sm.webp",
+    "bytes": 108306,
+    "webpBytes": 47008,
+    "shelfBytes": 15186
+  },
+  "film-ratatouille": {
+    "fingerprint": "236808:1787594800497",
+    "thumb": "images/library/thumbs/film-ratatouille.jpg",
+    "thumbWebp": "images/library/thumbs/film-ratatouille.webp",
+    "shelfWebp": "images/library/thumbs/film-ratatouille-sm.webp",
+    "bytes": 121961,
+    "webpBytes": 56398,
+    "shelfBytes": 16110
+  },
+  "film-wall-e": {
+    "fingerprint": "185586:1787594800497",
+    "thumb": "images/library/thumbs/film-wall-e.jpg",
+    "thumbWebp": "images/library/thumbs/film-wall-e.webp",
+    "shelfWebp": "images/library/thumbs/film-wall-e-sm.webp",
+    "bytes": 83499,
+    "webpBytes": 27320,
+    "shelfBytes": 6528
+  },
+  "film-finding-nemo": {
+    "fingerprint": "149964:1787594800498",
+    "thumb": "images/library/thumbs/film-finding-nemo.jpg",
+    "thumbWebp": "images/library/thumbs/film-finding-nemo.webp",
+    "shelfWebp": "images/library/thumbs/film-finding-nemo-sm.webp",
+    "bytes": 89870,
+    "webpBytes": 35696,
+    "shelfBytes": 11258
+  },
+  "film-the-incredibles": {
+    "fingerprint": "242068:1787594800498",
+    "thumb": "images/library/thumbs/film-the-incredibles.jpg",
+    "thumbWebp": "images/library/thumbs/film-the-incredibles.webp",
+    "shelfWebp": "images/library/thumbs/film-the-incredibles-sm.webp",
+    "bytes": 116063,
+    "webpBytes": 47988,
+    "shelfBytes": 14246
+  },
+  "film-monsters-inc": {
+    "fingerprint": "145369:1787594800498",
+    "thumb": "images/library/thumbs/film-monsters-inc.jpg",
+    "thumbWebp": "images/library/thumbs/film-monsters-inc.webp",
+    "shelfWebp": "images/library/thumbs/film-monsters-inc-sm.webp",
+    "bytes": 81808,
+    "webpBytes": 31700,
+    "shelfBytes": 9906
+  },
+  "film-soul": {
+    "fingerprint": "183765:1787594800498",
+    "thumb": "images/library/thumbs/film-soul.jpg",
+    "thumbWebp": "images/library/thumbs/film-soul.webp",
+    "shelfWebp": "images/library/thumbs/film-soul-sm.webp",
+    "bytes": 83960,
+    "webpBytes": 21990,
+    "shelfBytes": 6970
+  },
+  "film-toy-story-3": {
+    "fingerprint": "260396:1787594800499",
+    "thumb": "images/library/thumbs/film-toy-story-3.jpg",
+    "thumbWebp": "images/library/thumbs/film-toy-story-3.webp",
+    "shelfWebp": "images/library/thumbs/film-toy-story-3-sm.webp",
+    "bytes": 124479,
+    "webpBytes": 52384,
+    "shelfBytes": 15604
+  },
+  "film-up": {
+    "fingerprint": "118251:1787594800499",
+    "thumb": "images/library/thumbs/film-up.jpg",
+    "thumbWebp": "images/library/thumbs/film-up.webp",
+    "shelfWebp": "images/library/thumbs/film-up-sm.webp",
+    "bytes": 60724,
+    "webpBytes": 23550,
+    "shelfBytes": 7380
+  },
+  "film-toy-story-2": {
+    "fingerprint": "169916:1787594800499",
+    "thumb": "images/library/thumbs/film-toy-story-2.jpg",
+    "thumbWebp": "images/library/thumbs/film-toy-story-2.webp",
+    "shelfWebp": "images/library/thumbs/film-toy-story-2-sm.webp",
+    "bytes": 106468,
+    "webpBytes": 46606,
+    "shelfBytes": 15484
+  },
+  "film-turning-red": {
+    "fingerprint": "179905:1787594800499",
+    "thumb": "images/library/thumbs/film-turning-red.jpg",
+    "thumbWebp": "images/library/thumbs/film-turning-red.webp",
+    "shelfWebp": "images/library/thumbs/film-turning-red-sm.webp",
+    "bytes": 101561,
+    "webpBytes": 41690,
+    "shelfBytes": 10704
+  },
+  "film-a-bugs-life": {
+    "fingerprint": "214919:1787594800499",
+    "thumb": "images/library/thumbs/film-a-bugs-life.jpg",
+    "thumbWebp": "images/library/thumbs/film-a-bugs-life.webp",
+    "shelfWebp": "images/library/thumbs/film-a-bugs-life-sm.webp",
+    "bytes": 95093,
+    "webpBytes": 31486,
+    "shelfBytes": 9462
+  },
+  "film-incredibles-2": {
+    "fingerprint": "199740:1787594800500",
+    "thumb": "images/library/thumbs/film-incredibles-2.jpg",
+    "thumbWebp": "images/library/thumbs/film-incredibles-2.webp",
+    "shelfWebp": "images/library/thumbs/film-incredibles-2-sm.webp",
+    "bytes": 110695,
+    "webpBytes": 50686,
+    "shelfBytes": 15090
+  },
+  "film-inside-out-2": {
+    "fingerprint": "221305:1787594800500",
+    "thumb": "images/library/thumbs/film-inside-out-2.jpg",
+    "thumbWebp": "images/library/thumbs/film-inside-out-2.webp",
+    "shelfWebp": "images/library/thumbs/film-inside-out-2-sm.webp",
+    "bytes": 121855,
+    "webpBytes": 57778,
+    "shelfBytes": 16554
+  },
+  "film-toy-story-4": {
+    "fingerprint": "182394:1787594800500",
+    "thumb": "images/library/thumbs/film-toy-story-4.jpg",
+    "thumbWebp": "images/library/thumbs/film-toy-story-4.webp",
+    "shelfWebp": "images/library/thumbs/film-toy-story-4-sm.webp",
+    "bytes": 107440,
+    "webpBytes": 50636,
+    "shelfBytes": 15622
+  },
+  "film-luca": {
+    "fingerprint": "218818:1787594800500",
+    "thumb": "images/library/thumbs/film-luca.jpg",
+    "thumbWebp": "images/library/thumbs/film-luca.webp",
+    "shelfWebp": "images/library/thumbs/film-luca-sm.webp",
+    "bytes": 115251,
+    "webpBytes": 53702,
+    "shelfBytes": 14962
+  },
+  "film-monsters-university": {
+    "fingerprint": "274251:1787594800500",
+    "thumb": "images/library/thumbs/film-monsters-university.jpg",
+    "thumbWebp": "images/library/thumbs/film-monsters-university.webp",
+    "shelfWebp": "images/library/thumbs/film-monsters-university-sm.webp",
+    "bytes": 129878,
+    "webpBytes": 60404,
+    "shelfBytes": 16182
+  },
+  "film-cars": {
+    "fingerprint": "317280:1787594800500",
+    "thumb": "images/library/thumbs/film-cars.jpg",
+    "thumbWebp": "images/library/thumbs/film-cars.webp",
+    "shelfWebp": "images/library/thumbs/film-cars-sm.webp",
+    "bytes": 152916,
+    "webpBytes": 86280,
+    "shelfBytes": 19252
+  },
+  "film-onward": {
+    "fingerprint": "232253:1787594800501",
+    "thumb": "images/library/thumbs/film-onward.jpg",
+    "thumbWebp": "images/library/thumbs/film-onward.webp",
+    "shelfWebp": "images/library/thumbs/film-onward-sm.webp",
+    "bytes": 119187,
+    "webpBytes": 52496,
+    "shelfBytes": 14976
+  },
+  "film-cars-2": {
+    "fingerprint": "224355:1787594800501",
+    "thumb": "images/library/thumbs/film-cars-2.jpg",
+    "thumbWebp": "images/library/thumbs/film-cars-2.webp",
+    "shelfWebp": "images/library/thumbs/film-cars-2-sm.webp",
+    "bytes": 112110,
+    "webpBytes": 57074,
+    "shelfBytes": 13694
+  },
+  "film-brave": {
+    "fingerprint": "197837:1787594800501",
+    "thumb": "images/library/thumbs/film-brave.jpg",
+    "thumbWebp": "images/library/thumbs/film-brave.webp",
+    "shelfWebp": "images/library/thumbs/film-brave-sm.webp",
+    "bytes": 103395,
+    "webpBytes": 47376,
+    "shelfBytes": 13186
+  },
+  "film-elemental": {
+    "fingerprint": "303991:1787594800501",
+    "thumb": "images/library/thumbs/film-elemental.jpg",
+    "thumbWebp": "images/library/thumbs/film-elemental.webp",
+    "shelfWebp": "images/library/thumbs/film-elemental-sm.webp",
+    "bytes": 136786,
+    "webpBytes": 62284,
+    "shelfBytes": 17676
+  },
+  "film-finding-dory": {
+    "fingerprint": "201028:1787594800501",
+    "thumb": "images/library/thumbs/film-finding-dory.jpg",
+    "thumbWebp": "images/library/thumbs/film-finding-dory.webp",
+    "shelfWebp": "images/library/thumbs/film-finding-dory-sm.webp",
+    "bytes": 99953,
+    "webpBytes": 38030,
+    "shelfBytes": 11376
+  },
+  "film-the-good-dinosaur": {
+    "fingerprint": "151333:1787594800501",
+    "thumb": "images/library/thumbs/film-the-good-dinosaur.jpg",
+    "thumbWebp": "images/library/thumbs/film-the-good-dinosaur.webp",
+    "shelfWebp": "images/library/thumbs/film-the-good-dinosaur-sm.webp",
+    "bytes": 84913,
+    "webpBytes": 30162,
+    "shelfBytes": 8898
+  },
+  "film-cars-3": {
+    "fingerprint": "150376:1787594800501",
+    "thumb": "images/library/thumbs/film-cars-3.jpg",
+    "thumbWebp": "images/library/thumbs/film-cars-3.webp",
+    "shelfWebp": "images/library/thumbs/film-cars-3-sm.webp",
+    "bytes": 104520,
+    "webpBytes": 43078,
+    "shelfBytes": 10360
+  },
+  "film-lightyear": {
+    "fingerprint": "211409:1787594800502",
+    "thumb": "images/library/thumbs/film-lightyear.jpg",
+    "thumbWebp": "images/library/thumbs/film-lightyear.webp",
+    "shelfWebp": "images/library/thumbs/film-lightyear-sm.webp",
+    "bytes": 104817,
+    "webpBytes": 41842,
+    "shelfBytes": 12610
+  },
+  "film-the-social-network": {
+    "fingerprint": "138866:1787594800502",
+    "thumb": "images/library/thumbs/film-the-social-network.jpg",
+    "thumbWebp": "images/library/thumbs/film-the-social-network.webp",
+    "shelfWebp": "images/library/thumbs/film-the-social-network-sm.webp",
+    "bytes": 68795,
+    "webpBytes": 22334,
+    "shelfBytes": 6590
+  },
+  "film-25th-hour": {
+    "fingerprint": "68947:1787594800502",
+    "thumb": "images/library/thumbs/film-25th-hour.jpg",
+    "thumbWebp": "images/library/thumbs/film-25th-hour.webp",
+    "shelfWebp": "images/library/thumbs/film-25th-hour-sm.webp",
+    "bytes": 57915,
+    "webpBytes": 23362,
+    "shelfBytes": 8208
+  },
+  "film-mulholland-drive": {
+    "fingerprint": "147646:1787594800502",
+    "thumb": "images/library/thumbs/film-mulholland-drive.jpg",
+    "thumbWebp": "images/library/thumbs/film-mulholland-drive.webp",
+    "shelfWebp": "images/library/thumbs/film-mulholland-drive-sm.webp",
+    "bytes": 70450,
+    "webpBytes": 25244,
+    "shelfBytes": 8950
+  },
+  "film-mad-max-fury-road": {
+    "fingerprint": "264370:1787594800502",
+    "thumb": "images/library/thumbs/film-mad-max-fury-road.jpg",
+    "thumbWebp": "images/library/thumbs/film-mad-max-fury-road.webp",
+    "shelfWebp": "images/library/thumbs/film-mad-max-fury-road-sm.webp",
+    "bytes": 110647,
+    "webpBytes": 48622,
+    "shelfBytes": 13162
+  },
+  "film-marie-antoinette": {
+    "fingerprint": "178102:1787594800502",
+    "thumb": "images/library/thumbs/film-marie-antoinette.jpg",
+    "thumbWebp": "images/library/thumbs/film-marie-antoinette.webp",
+    "shelfWebp": "images/library/thumbs/film-marie-antoinette-sm.webp",
+    "bytes": 100479,
+    "webpBytes": 44860,
+    "shelfBytes": 13650
+  },
+  "film-the-wolf-of-wall-street": {
+    "fingerprint": "141421:1787594800503",
+    "thumb": "images/library/thumbs/film-the-wolf-of-wall-street.jpg",
+    "thumbWebp": "images/library/thumbs/film-the-wolf-of-wall-street.webp",
+    "shelfWebp": "images/library/thumbs/film-the-wolf-of-wall-street-sm.webp",
+    "bytes": 109568,
+    "webpBytes": 48386,
+    "shelfBytes": 16192
+  },
+  "film-oppenheimer": {
+    "fingerprint": "158224:1787594800503",
+    "thumb": "images/library/thumbs/film-oppenheimer.jpg",
+    "thumbWebp": "images/library/thumbs/film-oppenheimer.webp",
+    "shelfWebp": "images/library/thumbs/film-oppenheimer-sm.webp",
+    "bytes": 108253,
+    "webpBytes": 46494,
+    "shelfBytes": 14066
+  },
+  "film-melancholia": {
+    "fingerprint": "161879:1787594800503",
+    "thumb": "images/library/thumbs/film-melancholia.jpg",
+    "thumbWebp": "images/library/thumbs/film-melancholia.webp",
+    "shelfWebp": "images/library/thumbs/film-melancholia-sm.webp",
+    "bytes": 87745,
+    "webpBytes": 33062,
+    "shelfBytes": 9802
+  },
+  "film-children-of-men": {
+    "fingerprint": "238421:1787594800503",
+    "thumb": "images/library/thumbs/film-children-of-men.jpg",
+    "thumbWebp": "images/library/thumbs/film-children-of-men.webp",
+    "shelfWebp": "images/library/thumbs/film-children-of-men-sm.webp",
+    "bytes": 91683,
+    "webpBytes": 33304,
+    "shelfBytes": 6994
+  },
+  "film-somethings-gotta-give": {
+    "fingerprint": "134270:1787594800503",
+    "thumb": "images/library/thumbs/film-somethings-gotta-give.jpg",
+    "thumbWebp": "images/library/thumbs/film-somethings-gotta-give.webp",
+    "shelfWebp": "images/library/thumbs/film-somethings-gotta-give-sm.webp",
+    "bytes": 76621,
+    "webpBytes": 30244,
+    "shelfBytes": 9680
+  },
+  "film-the-handmaiden": {
+    "fingerprint": "140583:1787594800503",
+    "thumb": "images/library/thumbs/film-the-handmaiden.jpg",
+    "thumbWebp": "images/library/thumbs/film-the-handmaiden.webp",
+    "shelfWebp": "images/library/thumbs/film-the-handmaiden-sm.webp",
+    "bytes": 76889,
+    "webpBytes": 27488,
+    "shelfBytes": 8906
+  },
+  "film-rushmore": {
+    "fingerprint": "229073:1787594800503",
+    "thumb": "images/library/thumbs/film-rushmore.jpg",
+    "thumbWebp": "images/library/thumbs/film-rushmore.webp",
+    "shelfWebp": "images/library/thumbs/film-rushmore-sm.webp",
+    "bytes": 105060,
+    "webpBytes": 39172,
+    "shelfBytes": 9116
+  },
+  "film-fantastic-mr-fox": {
+    "fingerprint": "141035:1787594800504",
+    "thumb": "images/library/thumbs/film-fantastic-mr-fox.jpg",
+    "thumbWebp": "images/library/thumbs/film-fantastic-mr-fox.webp",
+    "shelfWebp": "images/library/thumbs/film-fantastic-mr-fox-sm.webp",
+    "bytes": 82857,
+    "webpBytes": 36540,
+    "shelfBytes": 11326
+  },
+  "film-the-grand-budapest-hotel": {
+    "fingerprint": "203770:1787594800504",
+    "thumb": "images/library/thumbs/film-the-grand-budapest-hotel.jpg",
+    "thumbWebp": "images/library/thumbs/film-the-grand-budapest-hotel.webp",
+    "shelfWebp": "images/library/thumbs/film-the-grand-budapest-hotel-sm.webp",
+    "bytes": 112750,
+    "webpBytes": 52464,
+    "shelfBytes": 14456
+  },
+  "film-asteroid-city": {
+    "fingerprint": "121759:1787594800504",
+    "thumb": "images/library/thumbs/film-asteroid-city.jpg",
+    "thumbWebp": "images/library/thumbs/film-asteroid-city.webp",
+    "shelfWebp": "images/library/thumbs/film-asteroid-city-sm.webp",
+    "bytes": 65195,
+    "webpBytes": 18882,
+    "shelfBytes": 6616
+  },
+  "film-the-life-aquatic-with-steve-zissou": {
+    "fingerprint": "209508:1787594800504",
+    "thumb": "images/library/thumbs/film-the-life-aquatic-with-steve-zissou.jpg",
+    "thumbWebp": "images/library/thumbs/film-the-life-aquatic-with-steve-zissou.webp",
+    "shelfWebp": "images/library/thumbs/film-the-life-aquatic-with-steve-zissou-sm.webp",
+    "bytes": 111623,
+    "webpBytes": 51166,
+    "shelfBytes": 14694
+  },
+  "film-the-french-dispatch-of-the-liberty-kansas-evening-sun": {
+    "fingerprint": "197702:1787594800505",
+    "thumb": "images/library/thumbs/film-the-french-dispatch-of-the-liberty-kansas-evening-sun.jpg",
+    "thumbWebp": "images/library/thumbs/film-the-french-dispatch-of-the-liberty-kansas-evening-sun.webp",
+    "shelfWebp": "images/library/thumbs/film-the-french-dispatch-of-the-liberty-kansas-evening-sun-sm.webp",
+    "bytes": 105306,
+    "webpBytes": 48408,
+    "shelfBytes": 13274
+  },
+  "film-the-phoenician-scheme": {
+    "fingerprint": "109017:1787594800505",
+    "thumb": "images/library/thumbs/film-the-phoenician-scheme.jpg",
+    "thumbWebp": "images/library/thumbs/film-the-phoenician-scheme.webp",
+    "shelfWebp": "images/library/thumbs/film-the-phoenician-scheme-sm.webp",
+    "bytes": 61847,
+    "webpBytes": 20874,
+    "shelfBytes": 6552
+  },
+  "film-bottle-rocket": {
+    "fingerprint": "218147:1787594800505",
+    "thumb": "images/library/thumbs/film-bottle-rocket.jpg",
+    "thumbWebp": "images/library/thumbs/film-bottle-rocket.webp",
+    "shelfWebp": "images/library/thumbs/film-bottle-rocket-sm.webp",
+    "bytes": 113303,
+    "webpBytes": 51714,
+    "shelfBytes": 12698
+  },
+  "film-the-darjeeling-limited": {
+    "fingerprint": "317185:1787594800506",
+    "thumb": "images/library/thumbs/film-the-darjeeling-limited.jpg",
+    "thumbWebp": "images/library/thumbs/film-the-darjeeling-limited.webp",
+    "shelfWebp": "images/library/thumbs/film-the-darjeeling-limited-sm.webp",
+    "bytes": 152745,
+    "webpBytes": 82538,
+    "shelfBytes": 19322
+  },
+  "film-isle-of-dogs": {
+    "fingerprint": "163281:1787594800507",
+    "thumb": "images/library/thumbs/film-isle-of-dogs.jpg",
+    "thumbWebp": "images/library/thumbs/film-isle-of-dogs.webp",
+    "shelfWebp": "images/library/thumbs/film-isle-of-dogs-sm.webp",
+    "bytes": 86460,
+    "webpBytes": 38056,
+    "shelfBytes": 11346
   }
 }

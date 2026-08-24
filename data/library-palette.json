@@ -3578,5 +3578,575 @@
       "accent": "#e9cda0",
       "ink": "#f1ece3"
     }
+  },
+  "film-spirited-away": {
+    "fingerprint": "108130:1787594800491",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#281b16",
+      "accent": "#cc6c55",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-my-neighbor-totoro": {
+    "fingerprint": "300952:1787594800491",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#2a3637",
+      "accent": "#225e7a",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-wind-rises": {
+    "fingerprint": "136442:1787594800492",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#2b777e",
+      "accent": "#009ac8",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-princess-mononoke": {
+    "fingerprint": "204489:1787594800492",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#565b54",
+      "accent": "#dbe0c1",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-ponyo": {
+    "fingerprint": "183080:1787594800492",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#105679",
+      "accent": "#00acd0",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-howls-moving-castle": {
+    "fingerprint": "198577:1787594800494",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#3a3a3f",
+      "accent": "#6994c4",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-nausica-of-the-valley-of-the-wind": {
+    "fingerprint": "164015:1787594800495",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#44677a",
+      "accent": "#007bc4",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-porco-rosso": {
+    "fingerprint": "85315:1787594800496",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#5a5667",
+      "accent": "#b63d2d",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-castle-in-the-sky": {
+    "fingerprint": "304694:1787594800496",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#4e5359",
+      "accent": "#62be5d",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-castle-of-cagliostro": {
+    "fingerprint": "187005:1787594800496",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#476461",
+      "accent": "#1a752a",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-toy-story": {
+    "fingerprint": "179665:1787594800497",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#3f5a61",
+      "accent": "#0091d2",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-ratatouille": {
+    "fingerprint": "236808:1787594800497",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#66574b",
+      "accent": "#a8722b",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-wall-e": {
+    "fingerprint": "185586:1787594800497",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#16153b",
+      "accent": "#070241",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-finding-nemo": {
+    "fingerprint": "149964:1787594800498",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#1e4664",
+      "accent": "#0560ac",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-incredibles": {
+    "fingerprint": "242068:1787594800498",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#53261a",
+      "accent": "#d85834",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-monsters-inc": {
+    "fingerprint": "145369:1787594800498",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#4a5869",
+      "accent": "#3186a5",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-soul": {
+    "fingerprint": "183765:1787594800498",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#314c66",
+      "accent": "#053b85",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-toy-story-3": {
+    "fingerprint": "260396:1787594800499",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#70614a",
+      "accent": "#d18440",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-up": {
+    "fingerprint": "118251:1787594800499",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#5b8098",
+      "accent": "#128cd0",
+      "ink": "#141210"
+    }
+  },
+  "film-toy-story-2": {
+    "fingerprint": "169916:1787594800499",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#4c4343",
+      "accent": "#286294",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-turning-red": {
+    "fingerprint": "179905:1787594800499",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#69372d",
+      "accent": "#f98a49",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-a-bugs-life": {
+    "fingerprint": "214919:1787594800499",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#456930",
+      "accent": "#b7aa33",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-incredibles-2": {
+    "fingerprint": "199740:1787594800500",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#662f1b",
+      "accent": "#fd8d23",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-inside-out-2": {
+    "fingerprint": "221305:1787594800500",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#49393f",
+      "accent": "#ce4a42",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-toy-story-4": {
+    "fingerprint": "182394:1787594800500",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#3e353d",
+      "accent": "#1d3677",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-luca": {
+    "fingerprint": "218818:1787594800500",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#3f5f6c",
+      "accent": "#67d4fe",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-monsters-university": {
+    "fingerprint": "274251:1787594800500",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#5a6b73",
+      "accent": "#40b0e3",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-cars": {
+    "fingerprint": "317280:1787594800500",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#5f453e",
+      "accent": "#da907b",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-onward": {
+    "fingerprint": "232253:1787594800501",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#332d49",
+      "accent": "#884b28",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-cars-2": {
+    "fingerprint": "224355:1787594800501",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#313244",
+      "accent": "#097ac3",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-brave": {
+    "fingerprint": "197837:1787594800501",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#28353b",
+      "accent": "#7d0a05",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-elemental": {
+    "fingerprint": "303991:1787594800501",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#4b494d",
+      "accent": "#e89b5b",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-finding-dory": {
+    "fingerprint": "201028:1787594800501",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#17506f",
+      "accent": "#03a4de",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-good-dinosaur": {
+    "fingerprint": "151333:1787594800501",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#4e6a76",
+      "accent": "#3892d4",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-cars-3": {
+    "fingerprint": "150376:1787594800501",
+    "width": 780,
+    "height_px": 1114,
+    "palette": {
+      "cover": "#4f5054",
+      "accent": "#b4cbdb",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-lightyear": {
+    "fingerprint": "211409:1787594800502",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#433e4c",
+      "accent": "#4876d7",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-social-network": {
+    "fingerprint": "138866:1787594800502",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#312621",
+      "accent": "#ca956b",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-25th-hour": {
+    "fingerprint": "68947:1787594800502",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#6e1b19",
+      "accent": "#cb1611",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-mulholland-drive": {
+    "fingerprint": "147646:1787594800502",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#24221d",
+      "accent": "#079adc",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-mad-max-fury-road": {
+    "fingerprint": "264370:1787594800502",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#363017",
+      "accent": "#b98b0d",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-marie-antoinette": {
+    "fingerprint": "178102:1787594800502",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#8f7a72",
+      "accent": "#e796a8",
+      "ink": "#141210"
+    }
+  },
+  "film-the-wolf-of-wall-street": {
+    "fingerprint": "141421:1787594800503",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#31291c",
+      "accent": "#b58424",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-oppenheimer": {
+    "fingerprint": "158224:1787594800503",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#441909",
+      "accent": "#a63509",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-melancholia": {
+    "fingerprint": "161879:1787594800503",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#314335",
+      "accent": "#143b27",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-children-of-men": {
+    "fingerprint": "238421:1787594800503",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#353e43",
+      "accent": "#11252e",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-somethings-gotta-give": {
+    "fingerprint": "134270:1787594800503",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#837c71",
+      "accent": "#895d39",
+      "ink": "#141210"
+    }
+  },
+  "film-the-handmaiden": {
+    "fingerprint": "140583:1787594800503",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#2d2b2d",
+      "accent": "#775e59",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-rushmore": {
+    "fingerprint": "229073:1787594800503",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#969784",
+      "accent": "#cfa172",
+      "ink": "#141210"
+    }
+  },
+  "film-fantastic-mr-fox": {
+    "fingerprint": "141035:1787594800504",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#9e7115",
+      "accent": "#ffc801",
+      "ink": "#141210"
+    }
+  },
+  "film-the-grand-budapest-hotel": {
+    "fingerprint": "203770:1787594800504",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#5e514a",
+      "accent": "#3c2b12",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-asteroid-city": {
+    "fingerprint": "121759:1787594800504",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#517e6a",
+      "accent": "#cc975d",
+      "ink": "#141210"
+    }
+  },
+  "film-the-life-aquatic-with-steve-zissou": {
+    "fingerprint": "209508:1787594800504",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#2a3a2f",
+      "accent": "#026e80",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-the-french-dispatch-of-the-liberty-kansas-evening-sun": {
+    "fingerprint": "197702:1787594800505",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#76796f",
+      "accent": "#e3985d",
+      "ink": "#141210"
+    }
+  },
+  "film-the-phoenician-scheme": {
+    "fingerprint": "109017:1787594800505",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#262926",
+      "accent": "#2f4f46",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-bottle-rocket": {
+    "fingerprint": "218147:1787594800505",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#837a4c",
+      "accent": "#f47c7d",
+      "ink": "#141210"
+    }
+  },
+  "film-the-darjeeling-limited": {
+    "fingerprint": "317185:1787594800506",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#3c4031",
+      "accent": "#ce9a73",
+      "ink": "#f1ece3"
+    }
+  },
+  "film-isle-of-dogs": {
+    "fingerprint": "163281:1787594800507",
+    "width": 780,
+    "height_px": 1170,
+    "palette": {
+      "cover": "#7b716d",
+      "accent": "#c3665c",
+      "ink": "#f1ece3"
+    }
   }
 }

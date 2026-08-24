@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T13:15:50.289Z",
+  "generatedAt": "2026-08-24T18:07:14.890Z",
   "items": [
     {
       "id": "book-the-left-hand-of-darkness",
@@ -22307,6 +22307,2760 @@
       "thumbWebp": "images/library/thumbs/album-joe-hisaishi-1m5ovzv.webp",
       "shelfWebp": "images/library/thumbs/album-joe-hisaishi-1m5ovzv-sm.webp",
       "externalRating": null
+    },
+    {
+      "id": "film-spirited-away",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Spirited Away",
+      "creator": "",
+      "year": 2001,
+      "detail": "Film",
+      "cover": "images/library/film-spirited-away.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/129",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2001-07-20"
+        ],
+        [
+          "TMDB rating",
+          "8.5"
+        ]
+      ],
+      "height": 0.965,
+      "thickness": 1.451,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Family",
+        "Fantasy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#281b16",
+        "accent": "#cc6c55",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-spirited-away.jpg",
+      "thumbWebp": "images/library/thumbs/film-spirited-away.webp",
+      "shelfWebp": "images/library/thumbs/film-spirited-away-sm.webp",
+      "externalRating": 8.5
+    },
+    {
+      "id": "film-my-neighbor-totoro",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "My Neighbor Totoro",
+      "creator": "",
+      "year": 1988,
+      "detail": "Film",
+      "cover": "images/library/film-my-neighbor-totoro.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/8392",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "1988-04-16"
+        ],
+        [
+          "TMDB rating",
+          "8.1"
+        ]
+      ],
+      "height": 0.596,
+      "thickness": 1.271,
+      "starred": false,
+      "genres": [
+        "Fantasy",
+        "Animation",
+        "Family"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#2a3637",
+        "accent": "#225e7a",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-my-neighbor-totoro.jpg",
+      "thumbWebp": "images/library/thumbs/film-my-neighbor-totoro.webp",
+      "shelfWebp": "images/library/thumbs/film-my-neighbor-totoro-sm.webp",
+      "externalRating": 8.1
+    },
+    {
+      "id": "film-the-wind-rises",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Wind Rises",
+      "creator": "",
+      "year": 2013,
+      "detail": "Film",
+      "cover": "images/library/film-the-wind-rises.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/149870",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2013-07-20"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.494,
+      "thickness": 1.079,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Drama",
+        "Historical",
+        "Romance"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#2b777e",
+        "accent": "#009ac8",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-wind-rises.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-wind-rises.webp",
+      "shelfWebp": "images/library/thumbs/film-the-wind-rises-sm.webp",
+      "externalRating": 7.8
+    },
+    {
+      "id": "film-princess-mononoke",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Princess Mononoke",
+      "creator": "",
+      "year": 1997,
+      "detail": "Film",
+      "cover": "images/library/film-princess-mononoke.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/128",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "1997-07-12"
+        ],
+        [
+          "TMDB rating",
+          "8.3"
+        ]
+      ],
+      "height": 0.609,
+      "thickness": 0.896,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Animation"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#565b54",
+        "accent": "#dbe0c1",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-princess-mononoke.jpg",
+      "thumbWebp": "images/library/thumbs/film-princess-mononoke.webp",
+      "shelfWebp": "images/library/thumbs/film-princess-mononoke-sm.webp",
+      "externalRating": 8.3
+    },
+    {
+      "id": "film-ponyo",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Ponyo",
+      "creator": "",
+      "year": 2008,
+      "detail": "Film",
+      "cover": "images/library/film-ponyo.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/12429",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2008-07-19"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.7,
+      "thickness": 1.047,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Fantasy",
+        "Family"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#105679",
+        "accent": "#00acd0",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-ponyo.jpg",
+      "thumbWebp": "images/library/thumbs/film-ponyo.webp",
+      "shelfWebp": "images/library/thumbs/film-ponyo-sm.webp",
+      "externalRating": 7.8
+    },
+    {
+      "id": "film-howls-moving-castle",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Howl's Moving Castle",
+      "creator": "",
+      "year": 2004,
+      "detail": "Film",
+      "cover": "images/library/film-howls-moving-castle.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/4935",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2004-09-09"
+        ],
+        [
+          "TMDB rating",
+          "8.4"
+        ]
+      ],
+      "height": 0.909,
+      "thickness": 1.231,
+      "starred": false,
+      "genres": [
+        "Fantasy",
+        "Animation",
+        "Adventure"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#3a3a3f",
+        "accent": "#6994c4",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-howls-moving-castle.jpg",
+      "thumbWebp": "images/library/thumbs/film-howls-moving-castle.webp",
+      "shelfWebp": "images/library/thumbs/film-howls-moving-castle-sm.webp",
+      "externalRating": 8.4
+    },
+    {
+      "id": "film-nausica-of-the-valley-of-the-wind",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Nausicaä of the Valley of the Wind",
+      "creator": "",
+      "year": 1984,
+      "detail": "Film",
+      "cover": "images/library/film-nausica-of-the-valley-of-the-wind.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/81",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "1984-03-11"
+        ],
+        [
+          "TMDB rating",
+          "7.9"
+        ]
+      ],
+      "height": 0.557,
+      "thickness": 1.307,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Fantasy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#44677a",
+        "accent": "#007bc4",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-nausica-of-the-valley-of-the-wind.jpg",
+      "thumbWebp": "images/library/thumbs/film-nausica-of-the-valley-of-the-wind.webp",
+      "shelfWebp": "images/library/thumbs/film-nausica-of-the-valley-of-the-wind-sm.webp",
+      "externalRating": 7.9
+    },
+    {
+      "id": "film-porco-rosso",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Porco Rosso",
+      "creator": "",
+      "year": 1992,
+      "detail": "Film",
+      "cover": "images/library/film-porco-rosso.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/11621",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "1992-07-18"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.741,
+      "thickness": 1.348,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Fantasy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#5a5667",
+        "accent": "#b63d2d",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-porco-rosso.jpg",
+      "thumbWebp": "images/library/thumbs/film-porco-rosso.webp",
+      "shelfWebp": "images/library/thumbs/film-porco-rosso-sm.webp",
+      "externalRating": 7.8
+    },
+    {
+      "id": "film-castle-in-the-sky",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Castle in the Sky",
+      "creator": "",
+      "year": 1986,
+      "detail": "Film",
+      "cover": "images/library/film-castle-in-the-sky.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/10515",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "1986-08-02"
+        ],
+        [
+          "TMDB rating",
+          "8.0"
+        ]
+      ],
+      "height": 0.872,
+      "thickness": 0.708,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Animation",
+        "Action",
+        "Family"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#4e5359",
+        "accent": "#62be5d",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-castle-in-the-sky.jpg",
+      "thumbWebp": "images/library/thumbs/film-castle-in-the-sky.webp",
+      "shelfWebp": "images/library/thumbs/film-castle-in-the-sky-sm.webp",
+      "externalRating": 8
+    },
+    {
+      "id": "film-the-castle-of-cagliostro",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Castle of Cagliostro",
+      "creator": "",
+      "year": 1979,
+      "detail": "Film",
+      "cover": "images/library/film-the-castle-of-cagliostro.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/15371",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "1979-07-06"
+        ],
+        [
+          "TMDB rating",
+          "7.5"
+        ]
+      ],
+      "height": 0.6,
+      "thickness": 0.663,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Crime"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#476461",
+        "accent": "#1a752a",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-castle-of-cagliostro.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-castle-of-cagliostro.webp",
+      "shelfWebp": "images/library/thumbs/film-the-castle-of-cagliostro-sm.webp",
+      "externalRating": 7.5
+    },
+    {
+      "id": "film-toy-story",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Toy Story",
+      "creator": "",
+      "year": 1995,
+      "detail": "Film",
+      "cover": "images/library/film-toy-story.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/862",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "1995-11-22"
+        ],
+        [
+          "TMDB rating",
+          "8.0"
+        ]
+      ],
+      "height": 0.797,
+      "thickness": 1.043,
+      "starred": false,
+      "genres": [
+        "Family",
+        "Comedy",
+        "Animation",
+        "Adventure"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#3f5a61",
+        "accent": "#0091d2",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-toy-story.jpg",
+      "thumbWebp": "images/library/thumbs/film-toy-story.webp",
+      "shelfWebp": "images/library/thumbs/film-toy-story-sm.webp",
+      "externalRating": 8
+    },
+    {
+      "id": "film-ratatouille",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Ratatouille",
+      "creator": "",
+      "year": 2007,
+      "detail": "Film",
+      "cover": "images/library/film-ratatouille.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/2062",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2007-06-28"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.666,
+      "thickness": 0.994,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#66574b",
+        "accent": "#a8722b",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-ratatouille.jpg",
+      "thumbWebp": "images/library/thumbs/film-ratatouille.webp",
+      "shelfWebp": "images/library/thumbs/film-ratatouille-sm.webp",
+      "externalRating": 7.8
+    },
+    {
+      "id": "film-wall-e",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "WALL·E",
+      "creator": "",
+      "year": 2008,
+      "detail": "Film",
+      "cover": "images/library/film-wall-e.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/10681",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2008-06-26"
+        ],
+        [
+          "TMDB rating",
+          "8.1"
+        ]
+      ],
+      "height": 0.97,
+      "thickness": 1.109,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Family",
+        "Science fiction"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#16153b",
+        "accent": "#070241",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-wall-e.jpg",
+      "thumbWebp": "images/library/thumbs/film-wall-e.webp",
+      "shelfWebp": "images/library/thumbs/film-wall-e-sm.webp",
+      "externalRating": 8.1
+    },
+    {
+      "id": "film-finding-nemo",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Finding Nemo",
+      "creator": "",
+      "year": 2003,
+      "detail": "Film",
+      "cover": "images/library/film-finding-nemo.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/12",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2003-05-30"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.944,
+      "thickness": 0.659,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Family",
+        "Adventure"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#1e4664",
+        "accent": "#0560ac",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-finding-nemo.jpg",
+      "thumbWebp": "images/library/thumbs/film-finding-nemo.webp",
+      "shelfWebp": "images/library/thumbs/film-finding-nemo-sm.webp",
+      "externalRating": 7.8
+    },
+    {
+      "id": "film-the-incredibles",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Incredibles",
+      "creator": "",
+      "year": 2004,
+      "detail": "Film",
+      "cover": "images/library/film-the-incredibles.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/9806",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2004-10-27"
+        ],
+        [
+          "TMDB rating",
+          "7.7"
+        ]
+      ],
+      "height": 0.971,
+      "thickness": 1.158,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Animation",
+        "Family"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#53261a",
+        "accent": "#d85834",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-incredibles.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-incredibles.webp",
+      "shelfWebp": "images/library/thumbs/film-the-incredibles-sm.webp",
+      "externalRating": 7.7
+    },
+    {
+      "id": "film-monsters-inc",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Monsters, Inc.",
+      "creator": "",
+      "year": 2001,
+      "detail": "Film",
+      "cover": "images/library/film-monsters-inc.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/585",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2001-11-01"
+        ],
+        [
+          "TMDB rating",
+          "7.9"
+        ]
+      ],
+      "height": 0.475,
+      "thickness": 0.821,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#4a5869",
+        "accent": "#3186a5",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-monsters-inc.jpg",
+      "thumbWebp": "images/library/thumbs/film-monsters-inc.webp",
+      "shelfWebp": "images/library/thumbs/film-monsters-inc-sm.webp",
+      "externalRating": 7.9
+    },
+    {
+      "id": "film-soul",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Soul",
+      "creator": "",
+      "year": 2020,
+      "detail": "Film",
+      "cover": "images/library/film-soul.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/508442",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2020-12-25"
+        ],
+        [
+          "TMDB rating",
+          "8.1"
+        ]
+      ],
+      "height": 0.976,
+      "thickness": 0.663,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Family",
+        "Drama",
+        "Musical",
+        "Fantasy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#314c66",
+        "accent": "#053b85",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-soul.jpg",
+      "thumbWebp": "images/library/thumbs/film-soul.webp",
+      "shelfWebp": "images/library/thumbs/film-soul-sm.webp",
+      "externalRating": 8.1
+    },
+    {
+      "id": "film-toy-story-3",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Toy Story 3",
+      "creator": "",
+      "year": 2010,
+      "detail": "Film",
+      "cover": "images/library/film-toy-story-3.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/10193",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2010-06-16"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.747,
+      "thickness": 1.229,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Family",
+        "Comedy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#70614a",
+        "accent": "#d18440",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-toy-story-3.jpg",
+      "thumbWebp": "images/library/thumbs/film-toy-story-3.webp",
+      "shelfWebp": "images/library/thumbs/film-toy-story-3-sm.webp",
+      "externalRating": 7.8
+    },
+    {
+      "id": "film-up",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Up",
+      "creator": "",
+      "year": 2009,
+      "detail": "Film",
+      "cover": "images/library/film-up.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/14160",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2009-05-28"
+        ],
+        [
+          "TMDB rating",
+          "8.0"
+        ]
+      ],
+      "height": 0.947,
+      "thickness": 1.258,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Adventure"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#5b8098",
+        "accent": "#128cd0",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-up.jpg",
+      "thumbWebp": "images/library/thumbs/film-up.webp",
+      "shelfWebp": "images/library/thumbs/film-up-sm.webp",
+      "externalRating": 8
+    },
+    {
+      "id": "film-toy-story-2",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Toy Story 2",
+      "creator": "",
+      "year": 1999,
+      "detail": "Film",
+      "cover": "images/library/film-toy-story-2.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/863",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "1999-10-30"
+        ],
+        [
+          "TMDB rating",
+          "7.6"
+        ]
+      ],
+      "height": 0.827,
+      "thickness": 0.947,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#4c4343",
+        "accent": "#286294",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-toy-story-2.jpg",
+      "thumbWebp": "images/library/thumbs/film-toy-story-2.webp",
+      "shelfWebp": "images/library/thumbs/film-toy-story-2-sm.webp",
+      "externalRating": 7.6
+    },
+    {
+      "id": "film-turning-red",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Turning Red",
+      "creator": "",
+      "year": 2022,
+      "detail": "Film",
+      "cover": "images/library/film-turning-red.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/508947",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2022-03-10"
+        ],
+        [
+          "TMDB rating",
+          "7.3"
+        ]
+      ],
+      "height": 0.506,
+      "thickness": 0.795,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Family",
+        "Comedy",
+        "Fantasy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#69372d",
+        "accent": "#f98a49",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-turning-red.jpg",
+      "thumbWebp": "images/library/thumbs/film-turning-red.webp",
+      "shelfWebp": "images/library/thumbs/film-turning-red-sm.webp",
+      "externalRating": 7.3
+    },
+    {
+      "id": "film-a-bugs-life",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "A Bug's Life",
+      "creator": "",
+      "year": 1998,
+      "detail": "Film",
+      "cover": "images/library/film-a-bugs-life.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/9487",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "1998-11-25"
+        ],
+        [
+          "TMDB rating",
+          "7.0"
+        ]
+      ],
+      "height": 0.497,
+      "thickness": 0.624,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#456930",
+        "accent": "#b7aa33",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-a-bugs-life.jpg",
+      "thumbWebp": "images/library/thumbs/film-a-bugs-life.webp",
+      "shelfWebp": "images/library/thumbs/film-a-bugs-life-sm.webp",
+      "externalRating": 7
+    },
+    {
+      "id": "film-incredibles-2",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Incredibles 2",
+      "creator": "",
+      "year": 2018,
+      "detail": "Film",
+      "cover": "images/library/film-incredibles-2.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/260513",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2018-06-14"
+        ],
+        [
+          "TMDB rating",
+          "7.5"
+        ]
+      ],
+      "height": 0.64,
+      "thickness": 1.377,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Animation",
+        "Family"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#662f1b",
+        "accent": "#fd8d23",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-incredibles-2.jpg",
+      "thumbWebp": "images/library/thumbs/film-incredibles-2.webp",
+      "shelfWebp": "images/library/thumbs/film-incredibles-2-sm.webp",
+      "externalRating": 7.5
+    },
+    {
+      "id": "film-inside-out-2",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Inside Out 2",
+      "creator": "",
+      "year": 2024,
+      "detail": "Film",
+      "cover": "images/library/film-inside-out-2.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1022789",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2024-06-11"
+        ],
+        [
+          "TMDB rating",
+          "7.5"
+        ]
+      ],
+      "height": 0.893,
+      "thickness": 1.415,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Family"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#49393f",
+        "accent": "#ce4a42",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-inside-out-2.jpg",
+      "thumbWebp": "images/library/thumbs/film-inside-out-2.webp",
+      "shelfWebp": "images/library/thumbs/film-inside-out-2-sm.webp",
+      "externalRating": 7.5
+    },
+    {
+      "id": "film-toy-story-4",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Toy Story 4",
+      "creator": "",
+      "year": 2019,
+      "detail": "Film",
+      "cover": "images/library/film-toy-story-4.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/301528",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2019-06-19"
+        ],
+        [
+          "TMDB rating",
+          "7.5"
+        ]
+      ],
+      "height": 0.622,
+      "thickness": 1.375,
+      "starred": false,
+      "genres": [
+        "Family",
+        "Comedy",
+        "Animation",
+        "Adventure"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#3e353d",
+        "accent": "#1d3677",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-toy-story-4.jpg",
+      "thumbWebp": "images/library/thumbs/film-toy-story-4.webp",
+      "shelfWebp": "images/library/thumbs/film-toy-story-4-sm.webp",
+      "externalRating": 7.5
+    },
+    {
+      "id": "film-luca",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Luca",
+      "creator": "",
+      "year": 2021,
+      "detail": "Film",
+      "cover": "images/library/film-luca.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/508943",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2021-06-17"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.63,
+      "thickness": 0.956,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Family",
+        "Fantasy",
+        "Drama",
+        "Comedy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#3f5f6c",
+        "accent": "#67d4fe",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-luca.jpg",
+      "thumbWebp": "images/library/thumbs/film-luca.webp",
+      "shelfWebp": "images/library/thumbs/film-luca-sm.webp",
+      "externalRating": 7.8
+    },
+    {
+      "id": "film-monsters-university",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Monsters University",
+      "creator": "",
+      "year": 2013,
+      "detail": "Film",
+      "cover": "images/library/film-monsters-university.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/62211",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2013-06-19"
+        ],
+        [
+          "TMDB rating",
+          "7.1"
+        ]
+      ],
+      "height": 0.72,
+      "thickness": 1.223,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Family",
+        "Comedy",
+        "Fantasy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#5a6b73",
+        "accent": "#40b0e3",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-monsters-university.jpg",
+      "thumbWebp": "images/library/thumbs/film-monsters-university.webp",
+      "shelfWebp": "images/library/thumbs/film-monsters-university-sm.webp",
+      "externalRating": 7.1
+    },
+    {
+      "id": "film-cars",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Cars",
+      "creator": "",
+      "year": 2006,
+      "detail": "Film",
+      "cover": "images/library/film-cars.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/920",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2006-06-08"
+        ],
+        [
+          "TMDB rating",
+          "7.0"
+        ]
+      ],
+      "height": 0.562,
+      "thickness": 1.411,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Family"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#5f453e",
+        "accent": "#da907b",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-cars.jpg",
+      "thumbWebp": "images/library/thumbs/film-cars.webp",
+      "shelfWebp": "images/library/thumbs/film-cars-sm.webp",
+      "externalRating": 7
+    },
+    {
+      "id": "film-onward",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Onward",
+      "creator": "",
+      "year": 2020,
+      "detail": "Film",
+      "cover": "images/library/film-onward.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/508439",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2020-02-29"
+        ],
+        [
+          "TMDB rating",
+          "7.6"
+        ]
+      ],
+      "height": 0.972,
+      "thickness": 0.9,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#332d49",
+        "accent": "#884b28",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-onward.jpg",
+      "thumbWebp": "images/library/thumbs/film-onward.webp",
+      "shelfWebp": "images/library/thumbs/film-onward-sm.webp",
+      "externalRating": 7.6
+    },
+    {
+      "id": "film-cars-2",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Cars 2",
+      "creator": "",
+      "year": 2011,
+      "detail": "Film",
+      "cover": "images/library/film-cars-2.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/49013",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2011-06-11"
+        ],
+        [
+          "TMDB rating",
+          "6.2"
+        ]
+      ],
+      "height": 0.902,
+      "thickness": 1.349,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Family",
+        "Adventure",
+        "Comedy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#313244",
+        "accent": "#097ac3",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-cars-2.jpg",
+      "thumbWebp": "images/library/thumbs/film-cars-2.webp",
+      "shelfWebp": "images/library/thumbs/film-cars-2-sm.webp",
+      "externalRating": 6.2
+    },
+    {
+      "id": "film-brave",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Brave",
+      "creator": "",
+      "year": 2012,
+      "detail": "Film",
+      "cover": "images/library/film-brave.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/62177",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2012-06-21"
+        ],
+        [
+          "TMDB rating",
+          "7.0"
+        ]
+      ],
+      "height": 0.973,
+      "thickness": 1.251,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Family",
+        "Fantasy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#28353b",
+        "accent": "#7d0a05",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-brave.jpg",
+      "thumbWebp": "images/library/thumbs/film-brave.webp",
+      "shelfWebp": "images/library/thumbs/film-brave-sm.webp",
+      "externalRating": 7
+    },
+    {
+      "id": "film-elemental",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Elemental",
+      "creator": "",
+      "year": 2023,
+      "detail": "Film",
+      "cover": "images/library/film-elemental.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/976573",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2023-06-14"
+        ],
+        [
+          "TMDB rating",
+          "7.6"
+        ]
+      ],
+      "height": 0.526,
+      "thickness": 1.364,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Romance"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#4b494d",
+        "accent": "#e89b5b",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-elemental.jpg",
+      "thumbWebp": "images/library/thumbs/film-elemental.webp",
+      "shelfWebp": "images/library/thumbs/film-elemental-sm.webp",
+      "externalRating": 7.6
+    },
+    {
+      "id": "film-finding-dory",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Finding Dory",
+      "creator": "",
+      "year": 2016,
+      "detail": "Film",
+      "cover": "images/library/film-finding-dory.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/127380",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2016-06-16"
+        ],
+        [
+          "TMDB rating",
+          "7.0"
+        ]
+      ],
+      "height": 0.633,
+      "thickness": 1.006,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Family"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#17506f",
+        "accent": "#03a4de",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-finding-dory.jpg",
+      "thumbWebp": "images/library/thumbs/film-finding-dory.webp",
+      "shelfWebp": "images/library/thumbs/film-finding-dory-sm.webp",
+      "externalRating": 7
+    },
+    {
+      "id": "film-the-good-dinosaur",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Good Dinosaur",
+      "creator": "",
+      "year": 2015,
+      "detail": "Film",
+      "cover": "images/library/film-the-good-dinosaur.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/105864",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2015-11-14"
+        ],
+        [
+          "TMDB rating",
+          "6.7"
+        ]
+      ],
+      "height": 0.572,
+      "thickness": 1.448,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Family"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#4e6a76",
+        "accent": "#3892d4",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-good-dinosaur.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-good-dinosaur.webp",
+      "shelfWebp": "images/library/thumbs/film-the-good-dinosaur-sm.webp",
+      "externalRating": 6.7
+    },
+    {
+      "id": "film-cars-3",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Cars 3",
+      "creator": "",
+      "year": 2017,
+      "detail": "Film",
+      "cover": "images/library/film-cars-3.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/260514",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2017-06-15"
+        ],
+        [
+          "TMDB rating",
+          "6.9"
+        ]
+      ],
+      "height": 0.518,
+      "thickness": 1.261,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Drama",
+        "Family",
+        "Adventure"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1114,
+      "palette": {
+        "cover": "#4f5054",
+        "accent": "#b4cbdb",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-cars-3.jpg",
+      "thumbWebp": "images/library/thumbs/film-cars-3.webp",
+      "shelfWebp": "images/library/thumbs/film-cars-3-sm.webp",
+      "externalRating": 6.9
+    },
+    {
+      "id": "film-lightyear",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Lightyear",
+      "creator": "",
+      "year": 2022,
+      "detail": "Film",
+      "cover": "images/library/film-lightyear.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/718789",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2022-06-15"
+        ],
+        [
+          "TMDB rating",
+          "6.9"
+        ]
+      ],
+      "height": 0.971,
+      "thickness": 1.019,
+      "starred": false,
+      "genres": [
+        "Animation",
+        "Science fiction",
+        "Family",
+        "Adventure"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#433e4c",
+        "accent": "#4876d7",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-lightyear.jpg",
+      "thumbWebp": "images/library/thumbs/film-lightyear.webp",
+      "shelfWebp": "images/library/thumbs/film-lightyear-sm.webp",
+      "externalRating": 6.9
+    },
+    {
+      "id": "film-the-social-network",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Social Network",
+      "creator": "",
+      "year": 2010,
+      "detail": "Film",
+      "cover": "images/library/film-the-social-network.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/37799",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2010-10-01"
+        ],
+        [
+          "TMDB rating",
+          "7.4"
+        ]
+      ],
+      "height": 0.879,
+      "thickness": 0.913,
+      "starred": false,
+      "genres": [
+        "Drama"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#312621",
+        "accent": "#ca956b",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-social-network.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-social-network.webp",
+      "shelfWebp": "images/library/thumbs/film-the-social-network-sm.webp",
+      "externalRating": 7.4
+    },
+    {
+      "id": "film-25th-hour",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "25th Hour",
+      "creator": "",
+      "year": 2002,
+      "detail": "Film",
+      "cover": "images/library/film-25th-hour.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1429",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2002-12-19"
+        ],
+        [
+          "TMDB rating",
+          "7.3"
+        ]
+      ],
+      "height": 0.601,
+      "thickness": 0.773,
+      "starred": false,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#6e1b19",
+        "accent": "#cb1611",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-25th-hour.jpg",
+      "thumbWebp": "images/library/thumbs/film-25th-hour.webp",
+      "shelfWebp": "images/library/thumbs/film-25th-hour-sm.webp",
+      "externalRating": 7.3
+    },
+    {
+      "id": "film-mulholland-drive",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Mulholland Drive",
+      "creator": "",
+      "year": 2001,
+      "detail": "Film",
+      "cover": "images/library/film-mulholland-drive.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1018",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2001-06-06"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.494,
+      "thickness": 0.606,
+      "starred": false,
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Mystery"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#24221d",
+        "accent": "#079adc",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-mulholland-drive.jpg",
+      "thumbWebp": "images/library/thumbs/film-mulholland-drive.webp",
+      "shelfWebp": "images/library/thumbs/film-mulholland-drive-sm.webp",
+      "externalRating": 7.8
+    },
+    {
+      "id": "film-mad-max-fury-road",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Mad Max: Fury Road",
+      "creator": "",
+      "year": 2015,
+      "detail": "Film",
+      "cover": "images/library/film-mad-max-fury-road.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/76341",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2015-05-13"
+        ],
+        [
+          "TMDB rating",
+          "7.6"
+        ]
+      ],
+      "height": 0.896,
+      "thickness": 1.246,
+      "starred": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science fiction"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#363017",
+        "accent": "#b98b0d",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-mad-max-fury-road.jpg",
+      "thumbWebp": "images/library/thumbs/film-mad-max-fury-road.webp",
+      "shelfWebp": "images/library/thumbs/film-mad-max-fury-road-sm.webp",
+      "externalRating": 7.6
+    },
+    {
+      "id": "film-marie-antoinette",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Marie Antoinette",
+      "creator": "",
+      "year": 2006,
+      "detail": "Film",
+      "cover": "images/library/film-marie-antoinette.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1887",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2006-05-24"
+        ],
+        [
+          "TMDB rating",
+          "6.7"
+        ]
+      ],
+      "height": 0.939,
+      "thickness": 1.412,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Historical"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#8f7a72",
+        "accent": "#e796a8",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-marie-antoinette.jpg",
+      "thumbWebp": "images/library/thumbs/film-marie-antoinette.webp",
+      "shelfWebp": "images/library/thumbs/film-marie-antoinette-sm.webp",
+      "externalRating": 6.7
+    },
+    {
+      "id": "film-the-wolf-of-wall-street",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Wolf of Wall Street",
+      "creator": "",
+      "year": 2013,
+      "detail": "Film",
+      "cover": "images/library/film-the-wolf-of-wall-street.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/106646",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2013-12-25"
+        ],
+        [
+          "TMDB rating",
+          "8.0"
+        ]
+      ],
+      "height": 0.899,
+      "thickness": 0.95,
+      "starred": false,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Comedy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#31291c",
+        "accent": "#b58424",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-wolf-of-wall-street.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-wolf-of-wall-street.webp",
+      "shelfWebp": "images/library/thumbs/film-the-wolf-of-wall-street-sm.webp",
+      "externalRating": 8
+    },
+    {
+      "id": "film-oppenheimer",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Oppenheimer",
+      "creator": "",
+      "year": 2023,
+      "detail": "Film",
+      "cover": "images/library/film-oppenheimer.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/872585",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2023-07-19"
+        ],
+        [
+          "TMDB rating",
+          "8.0"
+        ]
+      ],
+      "height": 0.574,
+      "thickness": 1.187,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Historical"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#441909",
+        "accent": "#a63509",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-oppenheimer.jpg",
+      "thumbWebp": "images/library/thumbs/film-oppenheimer.webp",
+      "shelfWebp": "images/library/thumbs/film-oppenheimer-sm.webp",
+      "externalRating": 8
+    },
+    {
+      "id": "film-melancholia",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Melancholia",
+      "creator": "",
+      "year": 2011,
+      "detail": "Film",
+      "cover": "images/library/film-melancholia.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/62215",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2011-03-16"
+        ],
+        [
+          "TMDB rating",
+          "7.1"
+        ]
+      ],
+      "height": 0.731,
+      "thickness": 1.43,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Science fiction"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#314335",
+        "accent": "#143b27",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-melancholia.jpg",
+      "thumbWebp": "images/library/thumbs/film-melancholia.webp",
+      "shelfWebp": "images/library/thumbs/film-melancholia-sm.webp",
+      "externalRating": 7.1
+    },
+    {
+      "id": "film-children-of-men",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Children of Men",
+      "creator": "",
+      "year": 2006,
+      "detail": "Film",
+      "cover": "images/library/film-children-of-men.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/9693",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2006-09-22"
+        ],
+        [
+          "TMDB rating",
+          "7.6"
+        ]
+      ],
+      "height": 0.63,
+      "thickness": 0.804,
+      "starred": false,
+      "genres": [
+        "Science fiction",
+        "Thriller",
+        "Action"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#353e43",
+        "accent": "#11252e",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-children-of-men.jpg",
+      "thumbWebp": "images/library/thumbs/film-children-of-men.webp",
+      "shelfWebp": "images/library/thumbs/film-children-of-men-sm.webp",
+      "externalRating": 7.6
+    },
+    {
+      "id": "film-somethings-gotta-give",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Something's Gotta Give",
+      "creator": "",
+      "year": 2003,
+      "detail": "Film",
+      "cover": "images/library/film-somethings-gotta-give.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/6964",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2003-12-12"
+        ],
+        [
+          "TMDB rating",
+          "6.6"
+        ]
+      ],
+      "height": 0.539,
+      "thickness": 0.856,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Romance"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#837c71",
+        "accent": "#895d39",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-somethings-gotta-give.jpg",
+      "thumbWebp": "images/library/thumbs/film-somethings-gotta-give.webp",
+      "shelfWebp": "images/library/thumbs/film-somethings-gotta-give-sm.webp",
+      "externalRating": 6.6
+    },
+    {
+      "id": "film-the-handmaiden",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Handmaiden",
+      "creator": "",
+      "year": 2016,
+      "detail": "Film",
+      "cover": "images/library/film-the-handmaiden.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/290098",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2016-06-01"
+        ],
+        [
+          "TMDB rating",
+          "8.2"
+        ]
+      ],
+      "height": 0.695,
+      "thickness": 0.945,
+      "starred": false,
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Romance"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#2d2b2d",
+        "accent": "#775e59",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-handmaiden.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-handmaiden.webp",
+      "shelfWebp": "images/library/thumbs/film-the-handmaiden-sm.webp",
+      "externalRating": 8.2
+    },
+    {
+      "id": "film-rushmore",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Rushmore",
+      "creator": "",
+      "year": 1998,
+      "detail": "Film",
+      "cover": "images/library/film-rushmore.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/11545",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "1998-12-11"
+        ],
+        [
+          "TMDB rating",
+          "7.4"
+        ]
+      ],
+      "height": 0.883,
+      "thickness": 1.436,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#969784",
+        "accent": "#cfa172",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-rushmore.jpg",
+      "thumbWebp": "images/library/thumbs/film-rushmore.webp",
+      "shelfWebp": "images/library/thumbs/film-rushmore-sm.webp",
+      "externalRating": 7.4
+    },
+    {
+      "id": "film-fantastic-mr-fox",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Fantastic Mr. Fox",
+      "creator": "",
+      "year": 2009,
+      "detail": "Film",
+      "cover": "images/library/film-fantastic-mr-fox.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/10315",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2009-10-14"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.698,
+      "thickness": 1.499,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#9e7115",
+        "accent": "#ffc801",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-fantastic-mr-fox.jpg",
+      "thumbWebp": "images/library/thumbs/film-fantastic-mr-fox.webp",
+      "shelfWebp": "images/library/thumbs/film-fantastic-mr-fox-sm.webp",
+      "externalRating": 7.8
+    },
+    {
+      "id": "film-the-grand-budapest-hotel",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Grand Budapest Hotel",
+      "creator": "",
+      "year": 2014,
+      "detail": "Film",
+      "cover": "images/library/film-the-grand-budapest-hotel.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/120467",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2014-02-26"
+        ],
+        [
+          "TMDB rating",
+          "8.0"
+        ]
+      ],
+      "height": 0.925,
+      "thickness": 1.102,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#5e514a",
+        "accent": "#3c2b12",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-grand-budapest-hotel.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-grand-budapest-hotel.webp",
+      "shelfWebp": "images/library/thumbs/film-the-grand-budapest-hotel-sm.webp",
+      "externalRating": 8
+    },
+    {
+      "id": "film-asteroid-city",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Asteroid City",
+      "creator": "",
+      "year": 2023,
+      "detail": "Film",
+      "cover": "images/library/film-asteroid-city.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/747188",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2023-06-08"
+        ],
+        [
+          "TMDB rating",
+          "6.5"
+        ]
+      ],
+      "height": 0.791,
+      "thickness": 0.717,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#517e6a",
+        "accent": "#cc975d",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-asteroid-city.jpg",
+      "thumbWebp": "images/library/thumbs/film-asteroid-city.webp",
+      "shelfWebp": "images/library/thumbs/film-asteroid-city-sm.webp",
+      "externalRating": 6.5
+    },
+    {
+      "id": "film-the-life-aquatic-with-steve-zissou",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Life Aquatic with Steve Zissou",
+      "creator": "",
+      "year": 2004,
+      "detail": "Film",
+      "cover": "images/library/film-the-life-aquatic-with-steve-zissou.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/421",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2004-12-10"
+        ],
+        [
+          "TMDB rating",
+          "7.1"
+        ]
+      ],
+      "height": 0.518,
+      "thickness": 1.202,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Drama"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#2a3a2f",
+        "accent": "#026e80",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-life-aquatic-with-steve-zissou.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-life-aquatic-with-steve-zissou.webp",
+      "shelfWebp": "images/library/thumbs/film-the-life-aquatic-with-steve-zissou-sm.webp",
+      "externalRating": 7.1
+    },
+    {
+      "id": "film-the-french-dispatch-of-the-liberty-kansas-evening-sun",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The French Dispatch of the Liberty, Kansas Evening Sun",
+      "creator": "",
+      "year": 2021,
+      "detail": "Film",
+      "cover": "images/library/film-the-french-dispatch-of-the-liberty-kansas-evening-sun.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/542178",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2021-10-21"
+        ],
+        [
+          "TMDB rating",
+          "7.0"
+        ]
+      ],
+      "height": 0.916,
+      "thickness": 0.972,
+      "starred": false,
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#76796f",
+        "accent": "#e3985d",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-the-french-dispatch-of-the-liberty-kansas-evening-sun.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-french-dispatch-of-the-liberty-kansas-evening-sun.webp",
+      "shelfWebp": "images/library/thumbs/film-the-french-dispatch-of-the-liberty-kansas-evening-sun-sm.webp",
+      "externalRating": 7
+    },
+    {
+      "id": "film-the-phoenician-scheme",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Phoenician Scheme",
+      "creator": "",
+      "year": 2025,
+      "detail": "Film",
+      "cover": "images/library/film-the-phoenician-scheme.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/1137350",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2025-05-23"
+        ],
+        [
+          "TMDB rating",
+          "6.5"
+        ]
+      ],
+      "height": 0.544,
+      "thickness": 1.406,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "Adventure",
+        "Crime"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#262926",
+        "accent": "#2f4f46",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-phoenician-scheme.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-phoenician-scheme.webp",
+      "shelfWebp": "images/library/thumbs/film-the-phoenician-scheme-sm.webp",
+      "externalRating": 6.5
+    },
+    {
+      "id": "film-bottle-rocket",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Bottle Rocket",
+      "creator": "",
+      "year": 1996,
+      "detail": "Film",
+      "cover": "images/library/film-bottle-rocket.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/13685",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "1996-02-21"
+        ],
+        [
+          "TMDB rating",
+          "6.7"
+        ]
+      ],
+      "height": 0.74,
+      "thickness": 1.272,
+      "starred": false,
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Drama"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#837a4c",
+        "accent": "#f47c7d",
+        "ink": "#141210"
+      },
+      "thumb": "images/library/thumbs/film-bottle-rocket.jpg",
+      "thumbWebp": "images/library/thumbs/film-bottle-rocket.webp",
+      "shelfWebp": "images/library/thumbs/film-bottle-rocket-sm.webp",
+      "externalRating": 6.7
+    },
+    {
+      "id": "film-the-darjeeling-limited",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "The Darjeeling Limited",
+      "creator": "",
+      "year": 2007,
+      "detail": "Film",
+      "cover": "images/library/film-the-darjeeling-limited.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/4538",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2007-09-07"
+        ],
+        [
+          "TMDB rating",
+          "7.1"
+        ]
+      ],
+      "height": 0.703,
+      "thickness": 1.33,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Comedy"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#3c4031",
+        "accent": "#ce9a73",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-the-darjeeling-limited.jpg",
+      "thumbWebp": "images/library/thumbs/film-the-darjeeling-limited.webp",
+      "shelfWebp": "images/library/thumbs/film-the-darjeeling-limited-sm.webp",
+      "externalRating": 7.1
+    },
+    {
+      "id": "film-isle-of-dogs",
+      "type": "film",
+      "shape": "poster",
+      "aspect": 0.68,
+      "title": "Isle of Dogs",
+      "creator": "",
+      "year": 2018,
+      "detail": "Film",
+      "cover": "images/library/film-isle-of-dogs.jpg",
+      "sourceUrl": "https://www.themoviedb.org/movie/399174",
+      "catalogId": null,
+      "listenEmbedUrl": null,
+      "tracks": [],
+      "rating": null,
+      "finished": null,
+      "facts": [
+        [
+          "Released",
+          "2018-03-23"
+        ],
+        [
+          "TMDB rating",
+          "7.8"
+        ]
+      ],
+      "height": 0.946,
+      "thickness": 1.402,
+      "starred": false,
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Animation"
+      ],
+      "creators": [],
+      "reviewHtml": null,
+      "width": 780,
+      "height_px": 1170,
+      "palette": {
+        "cover": "#7b716d",
+        "accent": "#c3665c",
+        "ink": "#f1ece3"
+      },
+      "thumb": "images/library/thumbs/film-isle-of-dogs.jpg",
+      "thumbWebp": "images/library/thumbs/film-isle-of-dogs.webp",
+      "shelfWebp": "images/library/thumbs/film-isle-of-dogs-sm.webp",
+      "externalRating": 7.8
     }
   ]
 }
