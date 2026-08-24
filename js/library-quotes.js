@@ -20,7 +20,7 @@
    way through it is just rude.
    ============================================================ */
 
-const QUOTES_URL = "data/library-quotes.json?v=library-detail14";
+const QUOTES_URL = "data/library-quotes.json?v=library-detail15";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||

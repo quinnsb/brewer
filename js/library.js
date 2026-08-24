@@ -7,14 +7,14 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
-import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail14";
+import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail15";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail14";
-const SOURCES_URL = "data/library-sources.json?v=library-detail14";
+const DATA_URL = "data/library.json?v=library-detail15";
+const SOURCES_URL = "data/library-sources.json?v=library-detail15";
 
 /* Which outside profiles belong beside which shelf, in the order they render.
    Albums have two, because the streaming history and the record shelf are
@@ -37,12 +37,10 @@ const TYPE_LABEL = {
   other: ["Podcasts", "drag, scroll, or use arrow keys"],
 };
 const ORDER = ["book", "album", "film", "other"];
-const LIST_LINK = {
-  book: ["See all book lists", "book"],
-  album: ["See all album lists", "album"],
-  film: ["See all film lists", "film"],
-  other: ["See all podcast lists", "other"],
-};
+/* The query value the lists page expects for each shelf. It used to carry a
+   label beside it too, one per type, but every one of them now reads "See all
+   <medium>", which TYPE_LABEL already holds. */
+const LIST_ANCHOR = { book: "book", album: "album", film: "film", other: "other" };
 
 /* The platforms' own marks, as single-path logos, used to link out to each
    platform. Built with createElementNS: `el` reaches for createElement, which
@@ -299,12 +297,23 @@ export function renderShelves(items, root, sources = {}) {
       node.dataset.id = item.id;
       mount.append(node);
     }
-    const [linkText, anchor] = LIST_LINK[type];
+    const anchor = LIST_ANCHOR[type];
     const actions = el("div", "shelf-actions");
     /* When the shelf is a selection, the button's job is the rest of the
        collection, so it goes to the catalogue rather than the lists above it. */
     const truncated = list.length < all.length;
-    const label = truncated ? `All ${all.length} ${TYPE_LABEL[type][0].toLowerCase()}` : linkText;
+    /* One phrasing for all four shelves. It used to read "All 198 albums" on a
+       truncated shelf and "See all album lists" on a complete one, so the row
+       of buttons said two different things depending on how much of a
+       collection happened to be on show. It also put the size of the
+       collection on the button rather than what pressing it does, three inches
+       under a header already reading "24 of 198". The header is where the
+       count belongs.
+
+       Only the destination still varies: a truncated shelf jumps to the
+       catalogue, because the rest of the collection is the thing you want,
+       while a complete one lands at the top of the page, where the lists are. */
+    const label = `See all ${TYPE_LABEL[type][0].toLowerCase()}`;
     const href = truncated
       ? `library-lists?type=${anchor}#catalog`
       : `library-lists?type=${anchor}`;
@@ -1696,7 +1705,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-detail14");
+  const { initHero } = await import("./library-hero.js?v=library-detail15");
   initHero(items);
 }
 
