@@ -7,14 +7,14 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
-import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail8";
+import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail9";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail8";
-const SOURCES_URL = "data/library-sources.json?v=library-detail8";
+const DATA_URL = "data/library.json?v=library-detail9";
+const SOURCES_URL = "data/library-sources.json?v=library-detail9";
 
 /* Which outside profiles belong beside which shelf, in the order they render.
    Albums have two, because the streaming history and the record shelf are
@@ -1183,6 +1183,10 @@ function relatedNode(item) {
       type: "button",
       "aria-label": candidate.creator ? `Open ${candidate.title} by ${candidate.creator}` : `Open ${candidate.title}`,
     });
+    /* Its own shape, not the open item's. Sleeves and podcast art are square,
+       books and posters are portrait, and a See-also row can hold both at once
+       because it matches on creator and genre rather than on type. */
+    button.style.setProperty("--related-aspect", String(candidate.aspect || 0.66));
     /* This used to reach for candidate.cover, the full file, to draw a 60px
        thumbnail: four of them meant up to four megabytes for one panel. */
     button.append(
@@ -1681,7 +1685,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-detail8");
+  const { initHero } = await import("./library-hero.js?v=library-detail9");
   initHero(items);
 }
 
