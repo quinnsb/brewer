@@ -1477,17 +1477,19 @@ html.reduce-motion .list-stream-card { animation-play-state: paused; }
    wrap, so each word is its own inline-block and the line breaks between them
    while the masks only ever clip a single glyph. */
 .hero-quote {
-  margin: clamp(20px, 3.2vh, 34px) 0 0;
+  margin: 0;
   display: flex; flex-direction: column; align-items: center;
-  text-align: center; max-width: min(640px, 82vw);
+  text-align: center; max-width: min(860px, 84vw);
 }
 .hero-quote-line {
   margin: 0;
   font-family: "Aeonik", system-ui, sans-serif; font-weight: 400;
-  /* Big enough to be the thing that changes rather than a caption under the
-     heading, small enough that a fifteen-word line still fits two rows. */
-  font-size: clamp(19px, 2.35vw, 30px); line-height: 1.32;
-  letter-spacing: -0.015em;
+  /* The quotation is the hero now, with no heading above it, so it is sized as
+     display type rather than as a caption. Kept below the old headline's 72px
+     ceiling so a fifteen-word line still lands in two or three rows instead of
+     becoming a paragraph. */
+  font-size: clamp(26px, 3.9vw, 46px); line-height: 1.24;
+  letter-spacing: -0.02em;
   color: var(--lib-fg);
   text-wrap: balance;
 }
@@ -1498,7 +1500,7 @@ html.reduce-motion .list-stream-card { animation-play-state: paused; }
    line in the data cannot end up double-quoted. */
 .quote-word { display: inline-block; white-space: nowrap; }
 .hero-quote-cite {
-  margin-top: clamp(10px, 1.4vh, 16px);
+  margin-top: clamp(16px, 2.4vh, 28px);
   font-family: "Space Mono", ui-monospace, monospace;
   font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--hero-verb);

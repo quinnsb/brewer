@@ -68,15 +68,11 @@
 
   <section class="qlab-stage">
     <div class="qlab-inner">
-      <!-- The shape being proposed for library.html: a fixed h1, with the part
-           that changes per visit as a blockquote underneath it. Two words, so
-           there is no wrap to control and nothing short to strand. Sentence
-           case, like every other h1 on the site. -->
-      <h1 id="hero-heading" class="hero-line is-in">
-        <span class="stem">
-          <span data-heading>Personal curation</span>
-        </span>
-      </h1>
+      <!-- No visible heading: the quotation is the whole hero. The h1 stays in
+           the markup and out of sight, because a page still needs one heading
+           that does not change on every load. Search engines and screen readers
+           read it; nobody sees it. -->
+      <h1 id="hero-heading" class="sr-only" data-heading>Library</h1>
 
       <figure class="hero-quote" id="hero-quote">
         <blockquote class="hero-quote-line" data-quote-line cite="" aria-hidden="true"></blockquote>
@@ -118,14 +114,6 @@
     <button type="button" class="primary" data-reroll>Reroll</button>
     <button type="button" data-replay>Replay reveal</button>
     <button type="button" data-all>All lines</button>
-    <span>heading</span>
-    <select data-heading-pick>
-      <option>Personal curation</option>
-      <option>Personally curated</option>
-      <option>A personal collection</option>
-      <option>What I keep coming back to</option>
-      <option>The library</option>
-    </select>
     <span>width</span>
     <select data-width>
       <option value="82vw">stage default</option>
@@ -155,11 +143,6 @@
 
     document.querySelector("[data-all]").addEventListener("click", () => {
       document.body.classList.toggle("show-all");
-    });
-
-    /* The wording is easier to judge than to argue about. */
-    document.querySelector("[data-heading-pick]").addEventListener("change", (event) => {
-      document.querySelector("[data-heading]").textContent = event.target.value;
     });
 
     document.querySelector("[data-width]").addEventListener("change", (event) => {
