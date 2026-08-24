@@ -36,25 +36,29 @@ for (const kind of ["phone", "desktop"]) {
 
   console.log(`\n================ ${kind} ================`);
 
-  /* ---------- hero headline: is the whole sentence ever on screen? ---------- */
-  const verbSamples = [];
-  for (let i = 0; i < 30; i++) {
-    verbSamples.push(await page.evaluate(() => {
-      const slot = document.getElementById("verb-slot");
-      const r = slot?.getBoundingClientRect();
-      return {
-        text: (slot?.textContent || "").trim(),
-        visible: [...(slot?.querySelectorAll(".ch") || [])].filter(
-          (c) => !c.classList.contains("enter") && !c.classList.contains("leave")
-        ).length,
-        h: Math.round(r?.height || 0),
-      };
-    }));
-    await page.waitForTimeout(120);
-  }
-  const blank = verbSamples.filter((s) => s.visible === 0).length;
-  console.log(`HERO VERB: ${blank}/${verbSamples.length} samples showed no verb at all ` +
-    `(slot height ${verbSamples[0].h}px). Sentence is incomplete ${Math.round((blank / verbSamples.length) * 100)}% of the time.`);
+  /* ---------- hero quote: did it arrive, and is it whole? ----------
+     This used to sample the cycling verb and report how often the sentence was
+     half-drawn, which was the right question when a word swapped every 2.2s.
+     The quote is revealed once and then holds, so the question is now whether
+     it arrived at all and whether every character came out of its mask. */
+  const quote = await page.evaluate(() => {
+    const line = document.querySelector("[data-quote-line]");
+    const sr = document.querySelector("[data-quote-sr]");
+    const glyphs = [...(line?.querySelectorAll(".ch") || [])];
+    return {
+      text: (line?.textContent || "").trim(),
+      cite: (document.querySelector("[data-quote-cite]")?.textContent || "").trim(),
+      accessible: (sr?.textContent || "").trim(),
+      total: glyphs.length,
+      hidden: glyphs.filter((c) => c.classList.contains("enter")).length,
+      h: Math.round(line?.getBoundingClientRect().height || 0),
+    };
+  });
+  const verdict = !quote.total ? "NO QUOTE RENDERED"
+    : quote.hidden ? `${quote.hidden}/${quote.total} characters still masked`
+    : "fully revealed";
+  console.log(`HERO QUOTE: ${verdict} (${quote.h}px tall) "${quote.text}" / ${quote.cite}`);
+  if (!quote.accessible) console.log("HERO QUOTE: no screen-reader text, the sr-only span is empty");
 
   /* ---------- the film shelf under a fast swipe ---------- */
   const shelfInfo = await page.evaluate(() => {

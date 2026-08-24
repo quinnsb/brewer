@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site-menu.css?v=2" />
-  <link rel="stylesheet" href="css/library.css?v=library-detail9" />
+  <link rel="stylesheet" href="css/library.css?v=library-detail10" />
 </head>
 <body id="top" class="library">
   <!-- Roughly a hundred cover buttons stand between the top of the page and
@@ -52,13 +52,22 @@
     <div class="hero-track">
       <div class="hero-sticky">
         <div class="hero-inner">
-          <h1 id="hero-heading" class="hero-line">
-            <span class="stem">
-              <span>You are</span>
-              <span>what you</span>
-            </span>
-            <span class="slot" id="verb-slot"></span>
-          </h1>
+          <!-- The heading is here and out of sight. A page needs one heading
+               that says what it is, and the quotation cannot be it: a different
+               sentence on every load is not an identity. So the h1 is the page
+               name for search and for a screen reader, and what a visitor sees
+               is the quote. -->
+          <h1 id="hero-heading" class="sr-only">Library</h1>
+          <!-- Filled by js/library-quotes.js from data/library-quotes.json,
+               one at random per visit, revealed once the ring of cards has
+               landed. The visible line is hidden from assistive tech because it
+               is a stack of per-character spans; the sr-only span beside it
+               carries the sentence and its attribution as ordinary text. -->
+          <figure class="hero-quote" id="hero-quote">
+            <blockquote class="hero-quote-line" data-quote-line aria-hidden="true"></blockquote>
+            <figcaption class="hero-quote-cite" data-quote-cite aria-hidden="true"></figcaption>
+            <span class="sr-only" data-quote-sr></span>
+          </figure>
         </div>
         <div class="hero-stage" id="hero-stage"></div>
         <div class="hero-cutoff" id="hero-cutoff" aria-hidden="true"></div>
@@ -94,6 +103,6 @@
   </footer>
 
   <script src="js/site-menu.js?v=2"></script>
-  <script type="module" src="js/library.js?v=library-detail9"></script>
+  <script type="module" src="js/library.js?v=library-detail10"></script>
 </body>
 </html>

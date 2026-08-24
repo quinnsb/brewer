@@ -19,7 +19,7 @@
    is already re-entrant: call it again with another quote.
    ============================================================ */
 
-const QUOTES_URL = "data/library-quotes.json?v=library-detail9";
+const QUOTES_URL = "data/library-quotes.json?v=library-detail10";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||

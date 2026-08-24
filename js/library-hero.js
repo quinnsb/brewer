@@ -13,24 +13,14 @@
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js?v=hero-orbit2";
 /* Keep this URL identical to library.html. A different query string creates a
    second module instance, which renders every shelf and detail handler twice. */
-import { openItem, coverPicture } from "./library.js?v=library-detail9";
+import { openItem, coverPicture } from "./library.js?v=library-detail10";
+import { initQuotes } from "./library-quotes.js?v=library-detail10";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||
   new URLSearchParams(location.search).get("motion") === "reduce";
 /* Keep in step with --card in css/library.css. */
 const CARD = 72;
-const VERBS = [
-  "read",
-  "listen to",
-  "watch",
-  "laugh",
-  "eat",
-  "pray",
-  "love",
-  "make",
-  "miss",
-];
 /* The ring is a fixed cast, not a slice of the album shelf. It is a decorative
    device drawn for exactly this many covers: the Discogs import took the album
    count from 25 to 198, and filtering by type turned the ring into a striped
@@ -88,89 +78,26 @@ function card(item) {
 
 /* ---------- rotating verb ---------- */
 
-function rotateVerb(slot, sr) {
-  const STAGGER = 24;
-  const EXIT = 260;
-  let vi = 0;
-  let current = null;
-
-  const build = (word) => {
-    const w = document.createElement("span");
-    w.className = "word";
-    for (const c of word) {
-      const mask = document.createElement("span");
-      mask.className = "mask";
-      const ch = document.createElement("span");
-      ch.className = "ch enter";
-      ch.textContent = c;
-      mask.append(ch);
-      w.append(mask);
-    }
-    return w;
-  };
-
-  const mount = (word) => {
-    /* Keep the accessible sentence in step with the visible one. Without
-       this the screen-reader text is stuck on whichever verb rendered
-       first, which is worse than no live text at all. */
-    if (sr) sr.textContent = word;
-
-    const incoming = build(word);
-    slot.replaceChildren(incoming);
-    current = incoming;
-    const chars = incoming.querySelectorAll(".ch");
-    requestAnimationFrame(() =>
-      chars.forEach((ch, i) => setTimeout(() => ch.classList.remove("enter"), i * STAGGER))
-    );
-  };
-
-  const render = (word) => {
-    const outgoing = current;
-    if (!outgoing) {
-      mount(word);
-      return;
-    }
-
-    /* Finish the current word before mounting its replacement. Keeping both
-       in the slot during the cross-over made short verbs read as duplicates. */
-    outgoing.classList.add("out");
-    const gone = outgoing.querySelectorAll(".ch");
-    gone.forEach((ch, i) => setTimeout(() => ch.classList.add("leave"), i * STAGGER));
-    current = null;
-    setTimeout(() => mount(word), EXIT);
-  };
-
-  /* First verb is painted immediately so the reveal has something to blur
-     in, but the cycle does not start until the headline has arrived. */
-  render(VERBS[0]);
-
-  return function start() {
-    if (REDUCED) return;
-    setInterval(() => {
-      vi = (vi + 1) % VERBS.length;
-      render(VERBS[vi]);
-    }, 2200);
-  };
-}
-
-export function initHero(items) {
+export async function initHero(items) {
   const stage = document.getElementById("hero-stage");
   const cutoff = document.getElementById("hero-cutoff");
-  const slot = document.getElementById("verb-slot");
-  if (!stage || !slot) return;
+  if (!stage) return;
   if (stage.dataset.heroInitialized === "true") return;
   stage.dataset.heroInitialized = "true";
-  slot.replaceChildren();
 
-  /* Screen readers get the sentence, not a stream of characters. The
-     per-character spans are hidden from them for the same reason. */
-  const sr = document.createElement("span");
-  sr.className = "sr-only";
-  slot.parentElement.append(sr);
-  slot.setAttribute("aria-hidden", "true");
+  /* The headline used to be "You are what you [read / listen to / watch]",
+     one word cycling in a fixed slot. It is a quotation now, picked at random
+     per visit, and the h1 above it is a static, visually hidden page name. The
+     reveal is held back rather than fired here: cards land first, and type that
+     arrives before them is type nobody is looking at.
 
-  const startRotating = rotateVerb(slot, sr);
-  const line = document.getElementById("hero-heading");
+     Awaited because the quotes have to be fetched before they can be revealed.
+     A failure inside initQuotes leaves an empty hero rather than throwing, so
+     the ring below is never at risk of not being drawn. */
+  const revealQuote = await initQuotes("#hero-quote");
+  /* Faded out by scroll below. The whole block, not the h1: the h1 is
+     visually hidden now, so fading it would be fading nothing. */
+  const centrepiece = document.getElementById("hero-quote");
 
   /* The catalogue is the ring: every album appears once, with no clones. */
   const byId = new Map(items.map((item) => [item.id, item]));
@@ -195,20 +122,32 @@ export function initHero(items) {
     opacity: 0,
   }));
 
-  /* Cards land first, then the headline blurs in at the centre of the ring
-     they just formed. Rotating the verb before that would animate type
-     nobody can see yet. */
+  /* Cards land first, then the quotation reveals at the centre of the ring they
+     just formed.
+
+     Not on a timer. Switching to the circle phase at 2500ms only sets the
+     springs a new target; the covers are still travelling for a good while
+     after that, and revealing on the switch put the words up while the ring was
+     visibly still closing around them. The frame loop below calls this once the
+     springs have actually come to rest, so the two never overlap however long
+     the settle takes on a given machine. */
   let phase = REDUCED ? "circle" : "scatter";
+  let quoteShown = false;
+  const showQuote = () => {
+    if (quoteShown) return;
+    quoteShown = true;
+    revealQuote();
+  };
   if (REDUCED) {
-    line.classList.add("is-in");
-    startRotating();
+    showQuote();
   } else {
     setTimeout(() => (phase = "line"), 500);
-    setTimeout(() => {
-      phase = "circle";
-      line.classList.add("is-in");
-      setTimeout(startRotating, 1200);
-    }, 2500);
+    setTimeout(() => (phase = "circle"), 2500);
+    /* A spring that is being fought by a resize, or a tab that was in the
+       background while the intro played, could take a long time to satisfy the
+       settle test. The words matter more than the choreography, so they arrive
+       regardless after this. */
+    setTimeout(showQuote, 7000);
   }
 
   const state = scatter.map((s) => ({ ...s, v: { x: 0, y: 0, r: 0, s: 0 } }));
@@ -287,14 +226,18 @@ export function initHero(items) {
     const easedRelease = release * release * (3 - 2 * release);
     if (cutoff) cutoff.style.transform = `translateY(${((1 - easedRelease) * 100).toFixed(2)}%)`;
 
-    /* The headline lives at the centre of the ring, which is exactly where
-       the arc sweeps through. Retire it as the arc forms rather than let
-       the two fight over the same space. */
-    if (!REDUCED) {
+    /* The quotation lives at the centre of the ring, which is exactly where
+       the arc sweeps through. Retire it as the arc forms rather than let the
+       two fight over the same space. */
+    if (!REDUCED && centrepiece) {
       const fade = 1 - Math.min(Math.max((p - 0.2) / 0.35, 0), 1);
-      line.style.opacity = fade.toFixed(3);
-      line.style.pointerEvents = fade < 0.05 ? "none" : "";
+      centrepiece.style.opacity = fade.toFixed(3);
+      centrepiece.style.pointerEvents = fade < 0.05 ? "none" : "";
     }
+
+    let settleMin = Infinity;
+    let settleMax = 0;
+    let settleCount = 0;
 
     for (let i = 0; i < total; i++) {
       const hiddenOnMobile = g.mobile && i % 2 === 1;
@@ -358,6 +301,27 @@ export function initHero(items) {
         `translate3d(${s.x.toFixed(2)}px, ${s.y.toFixed(2)}px, 0) ` +
         `rotate(${s.rotation.toFixed(2)}deg) scale(${s.scale.toFixed(3)})`;
       nodes[i].style.opacity = s.opacity.toFixed(3);
+
+      /* Distance from the centre, not distance from target. The ring turns
+         while it sits there, at ORBIT_DEGREES_PER_SECOND, so every target is
+         always moving and every spring is always chasing one: a test for
+         "has stopped" is a test that is never satisfied, and the fallback
+         below would end up doing all the work. What actually says the ring is
+         formed is that the covers agree on a radius. That is true whatever
+         angle the orbit has reached. */
+      if (!quoteShown && phase === "circle") {
+        const radius = Math.hypot(s.x, s.y - scrollParallaxY);
+        if (radius < settleMin) settleMin = radius;
+        if (radius > settleMax) settleMax = radius;
+        settleCount += 1;
+      }
+    }
+
+    /* Six pixels of disagreement across every visible cover, on a radius of a
+       few hundred. Tighter than the eye can see a gap at, loose enough that the
+       orbit and the sub-pixel jitter of a settled spring do not hold it open. */
+    if (!quoteShown && phase === "circle" && settleCount > 1 && settleMax - settleMin < 6) {
+      showQuote();
     }
 
     requestAnimationFrame(frame);

@@ -97,8 +97,8 @@ body.library a { color: inherit; }
 .hero-track { height: 220vh; }
 .hero-sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; isolation: isolate; }
 
-/* The headline sits inside the ring of cards, so it is centred on the stage.
-   Each part gets its own line, and the changing verb cannot move the stem. */
+/* The quotation sits inside the ring of cards, so it is centred on the stage.
+   The h1 in here is visually hidden, so this box holds only the quote. */
 .hero-inner {
   position: absolute; top: 50%; left: 50%;
   transform: translate(-50%, -50%);
@@ -106,37 +106,10 @@ body.library a { color: inherit; }
   z-index: 10; pointer-events: none;
 }
 
-.hero-line {
-  font-family: "Aeonik", system-ui, sans-serif; font-weight: 500;
-  font-size: clamp(38px, 5.35vw, 72px); letter-spacing: -0.035em; line-height: 0.98;
-  margin: 0; display: flex; flex-direction: column; align-items: center;
-  text-align: center;
-}
-.hero-line .stem {
-  display: flex; flex-direction: column; align-items: center; gap: 0.06em;
-}
-.hero-line .slot {
-  position: relative; display: flex; justify-content: center;
-  height: 1.12em;
-  margin-top: 0.06em;
-  color: var(--hero-verb); white-space: nowrap;
-}
-
-/* Reveal: blur and rise, fired when the ring finishes forming. */
-.hero-line .stem, .hero-line .slot {
-  opacity: 0; transform: translateY(20px); filter: blur(10px);
-  transition: opacity 1s ease, transform 1s ease, filter 1s ease;
-}
-.hero-line.is-in .stem,
-.hero-line.is-in .slot { opacity: 1; transform: none; filter: blur(0); }
-.hero-line.is-in .slot { transition-delay: 0.2s; }
-
-/* The slot owns the permanent third-row geometry. Every word animates in
-   that reserved layer, so the headline cannot collapse between swaps. */
-.word {
-  position: absolute; top: 0; left: 50%;
-  display: inline-flex; transform: translateX(-50%);
-}
+/* .mask and .ch are the per-character reveal. They were built for the verb
+   swap in the old "You are what you [read]" headline and the hero quote reuses
+   them unchanged, which is why they are still here while .hero-line, .stem,
+   .slot and .word are not: nothing renders those any more. */
 .mask { display: inline-block; overflow: hidden; padding-bottom: 0.14em; }
 .mask .ch {
   display: inline-block; white-space: pre;
@@ -362,9 +335,6 @@ html.reduce-motion .skip-link { transition: none; }
      Lift the static headline clear of it so both remain readable. */
   .hero-inner { top: 22%; }
   .mask .ch, .hcard-media { transition: none; }
-  .hero-line .stem, .hero-line .slot {
-    opacity: 1; transform: none; filter: none; transition: none;
-  }
 }
 
 /* `?motion=reduce` mirrors the operating-system preference so the full
@@ -380,8 +350,6 @@ html.reduce-motion .media-detail-layer,
 html.reduce-motion .media-detail-morph,
 html.reduce-motion .media-detail-copy,
 html.reduce-motion .socials a { transition: none; }
-html.reduce-motion .hero-line .stem,
-html.reduce-motion .hero-line .slot { opacity: 1; transform: none; filter: none; transition: none; }
 html.reduce-motion .book-cover:hover,
 html.reduce-motion .book-cover:focus-visible,
 html.reduce-motion .hcard:hover .hcard-media,
@@ -1433,7 +1401,6 @@ body.menu-open .sound-toggle { opacity: 0; pointer-events: none; }
 @media (max-width: 720px) {
   :root { --hero-overlap: 50vh; --book-scale: 0.66; }
   .hero-inner { width: min(86vw, 540px); }
-  .hero-line { font-size: clamp(27px, 7.5vw, 34px); }
   .footer-brand { flex-direction: column-reverse; align-items: center; gap: 64px; }
   .giant-wordmark { width: min(88vw, 400px); }
   .footer-side { width: 100%; }
@@ -1453,7 +1420,6 @@ body.menu-open .sound-toggle { opacity: 0; pointer-events: none; }
 
 @media (max-height: 600px) and (max-width: 900px) {
   .hero-inner { width: min(86vw, 540px); }
-  .hero-line { font-size: clamp(24px, 3.3vw, 28px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1477,18 +1443,47 @@ html.reduce-motion .list-stream-card { animation-play-state: paused; }
    wrap, so each word is its own inline-block and the line breaks between them
    while the masks only ever clip a single glyph. */
 .hero-quote {
-  margin: 0;
+  /* margin-inline: auto, not just margin: 0. .hero-inner is a plain block
+     760px wide and this box is capped well below that, so without it the quote
+     sits against the left edge of the ring rather than in the middle of it. */
+  margin: 0 auto;
   display: flex; flex-direction: column; align-items: center;
-  text-align: center; max-width: min(860px, 84vw);
+  /* Narrow enough to sit in the hole in the ring rather than across the page.
+     It cannot always fit entirely: the ring's radius is capped at 350px, so on
+     a mid-width screen a twelve-word quotation at readable size is wider than
+     the gap however it wraps, and shrinking the type until it fits would make
+     the hero's only words the smallest thing on it. The scrim below handles
+     that instead. */
+  position: relative;
+  text-align: center; max-width: min(520px, 56vw);
+}
+/* A soft hole in the ring, so the type reads over any cover it crosses without
+   hiding the cover. Sized past the text on both axes and faded to nothing well
+   before its edge, so there is no visible disc, only the covers behind the
+   words dropping back. Sits above the stage because .hero-inner already does. */
+.hero-quote::before {
+  content: ""; position: absolute; z-index: -1;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 176%; height: 340%;
+  /* Two stops, not four. Four shades of near-black over a near-black page
+     banded into visible concentric rings; a single long falloff dithers
+     cleanly and separates the type just as well. */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(11, 11, 12, 0.88) 0%,
+    rgba(11, 11, 12, 0) 70%
+  );
+  pointer-events: none;
 }
 .hero-quote-line {
+  position: relative;
   margin: 0;
   font-family: "Aeonik", system-ui, sans-serif; font-weight: 400;
   /* The quotation is the hero now, with no heading above it, so it is sized as
      display type rather than as a caption. Kept below the old headline's 72px
      ceiling so a fifteen-word line still lands in two or three rows instead of
      becoming a paragraph. */
-  font-size: clamp(26px, 3.9vw, 46px); line-height: 1.24;
+  font-size: clamp(22px, 2.9vw, 36px); line-height: 1.26;
   letter-spacing: -0.02em;
   color: var(--lib-fg);
   text-wrap: balance;
@@ -1512,6 +1507,14 @@ html.reduce-motion .list-stream-card { animation-play-state: paused; }
 .hero-quote.is-in .hero-quote-cite {
   opacity: 1; transform: none;
   transition-delay: 0.42s;
+}
+
+/* The phone ring drops every other cover, so its hole is wider in proportion
+   than a desktop's and 56vw would be needlessly tight. This has to come after
+   the base rule rather than in the breakpoint block further up the file, or
+   source order beats it and a phone gets 210px: four lines of 22px type. */
+@media (max-width: 720px) {
+  .hero-quote { max-width: min(420px, 84vw); }
 }
 
 @media (prefers-reduced-motion: reduce) {
