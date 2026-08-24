@@ -7,14 +7,14 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
-import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail7";
+import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail8";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail7";
-const SOURCES_URL = "data/library-sources.json?v=library-detail7";
+const DATA_URL = "data/library.json?v=library-detail8";
+const SOURCES_URL = "data/library-sources.json?v=library-detail8";
 
 /* Which outside profiles belong beside which shelf, in the order they render.
    Albums have two, because the streaming history and the record shelf are
@@ -1309,27 +1309,113 @@ function detailNode(item) {
   return layer;
 }
 
-function setMorphOrigin(layer, source) {
+/* The covers are not sitting square. Books carry a per-item tilt, and anything
+   under the pointer is part way through a hover transform when it is clicked.
+   Both have to come out of the matrix, because the flight has to start from
+   where the cover actually looks like it is, not from where the stylesheet
+   would put it at rest. A 2D matrix is (a, b, c, d, e, f) with the first column
+   being the x basis vector, so its length is the scale and its angle is the
+   rotation. */
+function decompose(node) {
+  const value = getComputedStyle(node).transform;
+  if (!value || value === "none") return { scale: 1, rotation: 0 };
+  const parts = value.slice(value.indexOf("(") + 1, -1).split(",").map(Number);
+  /* matrix3d is column-major 4x4, so the x basis is still the first two. */
+  const a = parts[0];
+  const b = parts[1];
+  if (!Number.isFinite(a) || !Number.isFinite(b)) return { scale: 1, rotation: 0 };
+  const scale = Math.hypot(a, b) || 1;
+  return { scale, rotation: (Math.atan2(b, a) * 180) / Math.PI };
+}
+
+/* Writes the FLIP delta: the transform that, applied to the detail object at
+   its final size, lands it exactly on top of the cover that was pressed. The
+   stylesheet then animates that transform to none, which is the trip.
+
+   `startRect` is measured by the caller before any state class is added, so a
+   poster that lifts on .is-open does not contaminate the reading.
+
+   Scale is a single number rather than the separate x and y this used to
+   write. Non-uniform scale matches the two boxes exactly but stretches the
+   artwork to get there, and on a shelf cover cropped with object-fit: cover
+   against a detail image sized with object-fit: contain, the aspect ratios are
+   never quite equal, so it was always stretching by a percent or two. Uniform
+   scale off the width keeps the cover the right shape for the whole flight. */
+function setMorphOrigin(layer, source, startRect) {
   const morph = layer.querySelector(".media-detail-morph");
   const target = morph.getBoundingClientRect();
-  const sourceRect = source?.getBoundingClientRect();
+  const sourceRect = startRect || source?.getBoundingClientRect();
   const visible = sourceRect && sourceRect.width && sourceRect.height &&
     sourceRect.right > 0 && sourceRect.left < innerWidth && sourceRect.bottom > 0 && sourceRect.top < innerHeight;
-  if (!visible || REDUCED) {
+
+  /* Opened from a #item= link, or from a shelf scrolled out of view: there is
+     no cover on screen to fly from, so it rises a little instead of pretending
+     to come from somewhere. The shelf is not pushed either, because a push
+     away from a point the viewer never looked at is just a lurch. */
+  if (!visible || REDUCED || !target.width) {
     morph.style.setProperty("--detail-dx", "0px");
-    morph.style.setProperty("--detail-dy", "18px");
-    morph.style.setProperty("--detail-sx", "0.96");
-    morph.style.setProperty("--detail-sy", "0.96");
+    morph.style.setProperty("--detail-dy", REDUCED ? "0px" : "24px");
+    morph.style.setProperty("--detail-s", REDUCED ? "1" : "0.94");
+    morph.style.setProperty("--detail-rot", "0deg");
+    setDolly(null);
     return;
   }
+
+  const { scale, rotation } = decompose(source);
+  /* offsetWidth rather than the rect, because the rect of a tilted cover is its
+     bounding box and is a couple of percent too wide. */
+  const width = (source.offsetWidth || sourceRect.width) * scale;
   const sourceX = sourceRect.left + sourceRect.width / 2;
   const sourceY = sourceRect.top + sourceRect.height / 2;
   const targetX = target.left + target.width / 2;
   const targetY = target.top + target.height / 2;
-  morph.style.setProperty("--detail-dx", `${sourceX - targetX}px`);
-  morph.style.setProperty("--detail-dy", `${sourceY - targetY}px`);
-  morph.style.setProperty("--detail-sx", String(sourceRect.width / target.width));
-  morph.style.setProperty("--detail-sy", String(sourceRect.height / target.height));
+
+  morph.style.setProperty("--detail-dx", `${(sourceX - targetX).toFixed(2)}px`);
+  morph.style.setProperty("--detail-dy", `${(sourceY - targetY).toFixed(2)}px`);
+  morph.style.setProperty("--detail-s", (width / target.width).toFixed(4));
+  morph.style.setProperty("--detail-rot", `${rotation.toFixed(2)}deg`);
+  setDolly({ x: sourceX, y: sourceY });
+}
+
+/* The shelf pushes away from the cover that was pressed rather than from the
+   middle of the page, so the thing being opened is the one thing that holds
+   still while everything else spreads around it. */
+function setDolly(point) {
+  const shelves = detailRoot || document.getElementById("shelves");
+  if (!shelves) return;
+  if (!point || REDUCED) {
+    shelves.style.setProperty("--dolly-x", "50%");
+    shelves.style.setProperty("--dolly-y", "50%");
+    shelves.style.setProperty("--dolly-scale", REDUCED ? "1" : "1.06");
+    return;
+  }
+  const rect = shelves.getBoundingClientRect();
+  if (!rect.width || !rect.height) return;
+  shelves.style.setProperty("--dolly-x", `${(((point.x - rect.left) / rect.width) * 100).toFixed(2)}%`);
+  shelves.style.setProperty("--dolly-y", `${(((point.y - rect.top) / rect.height) * 100).toFixed(2)}%`);
+  shelves.style.setProperty("--dolly-scale", "1.16");
+}
+
+/* One object, not two. The cover in the shelf is hidden for exactly as long as
+   its double is in flight. */
+let morphSourceNode = null;
+function holdMorphSource(node) {
+  releaseMorphSource();
+  if (!node || REDUCED) return;
+  morphSourceNode = node;
+  node.classList.add("is-morph-source");
+}
+function releaseMorphSource() {
+  morphSourceNode?.classList.remove("is-morph-source");
+  morphSourceNode = null;
+}
+
+/* Durations live in the stylesheet so the two cannot disagree, and so the lab's
+   speed slider only has to turn one knob. */
+function motionMs(name, fallback) {
+  const raw = getComputedStyle(document.documentElement).getPropertyValue(name);
+  const value = Number.parseFloat(raw);
+  return Number.isFinite(value) && value > 0 ? value : fallback;
 }
 
 function finishDetailClose(restoreFocus = true) {
@@ -1340,7 +1426,10 @@ function finishDetailClose(restoreFocus = true) {
   stopSound();
   detailLayer?.remove();
   detailLayer = null;
-  document.body.classList.remove("media-detail-open");
+  /* Only now, once the double has finished travelling back into the shelf. Any
+     earlier and both covers are on screen together at the end of the trip. */
+  releaseMorphSource();
+  document.body.classList.remove("media-detail-open", "media-detail-pushed");
   setPageInert(false);
   markExpanded(null);
   openId = null;
@@ -1382,7 +1471,11 @@ function closeDetail({ restoreFocus = true, fromHistory = false } = {}) {
   }
   detailLayer.classList.add("is-closing");
   detailLayer.classList.remove("is-in");
-  detailCloseTimer = setTimeout(() => finishDetailClose(restoreFocus), 420);
+  /* Released now, not in finishDetailClose: the shelf coming back is half of
+     the close gesture, so it has to run with the cover, not behind it. */
+  document.body.classList.remove("media-detail-pushed");
+  /* +40ms so the class comes off after the last frame rather than on it. */
+  detailCloseTimer = setTimeout(() => finishDetailClose(restoreFocus), motionMs("--detail-close-ms", 300) + 40);
 }
 
 function openDetail(item, node, { replace = false, fromHistory = false } = {}) {
@@ -1390,6 +1483,10 @@ function openDetail(item, node, { replace = false, fromHistory = false } = {}) {
   clearTimeout(detailSwitchTimer);
   const source = node?.isConnected ? node : sourceNodeFor(item.id);
   const morphSource = node?.isConnected ? node : source;
+  /* Measured here, before markExpanded adds .is-open and before the cover is
+     hidden: this is the last moment the shelf cover is where the viewer last
+     saw it, and that position is the whole basis of the flight. */
+  const startRect = morphSource?.isConnected ? morphSource.getBoundingClientRect() : null;
   const replacement = detailNode(item);
   if (detailLayer && !replace) finishDetailClose(false);
   if (!fromHistory) writeHistory(item.id, { replace: replace && Boolean(detailLayer) });
@@ -1398,6 +1495,10 @@ function openDetail(item, node, { replace = false, fromHistory = false } = {}) {
   markExpanded(source);
 
   if (detailLayer && replace) {
+    /* Stepping to the next item cross-fades two panels rather than flying
+       anything, but the new item's cover is now standing full size on screen,
+       so it is the one that has to be missing from the shelf. */
+    holdMorphSource(source);
     const old = detailLayer;
     old.classList.add("is-switching");
     const swap = () => {
@@ -1416,15 +1517,26 @@ function openDetail(item, node, { replace = false, fromHistory = false } = {}) {
 
   detailLayer = replacement;
   document.body.append(detailLayer);
-  setMorphOrigin(detailLayer, morphSource);
+  setMorphOrigin(detailLayer, morphSource, startRect);
+  holdMorphSource(morphSource);
   fitDetailTitle(detailLayer);
   document.fonts?.ready.then(() => fitDetailTitle(detailLayer));
-  document.body.classList.add("media-detail-open");
+  /* Two classes because they come off at different times. media-detail-open is
+     what holds the page unscrollable and has to survive until the overlay is
+     actually gone; media-detail-pushed is only the shelf's camera move, and is
+     dropped the moment a close starts so the shelf travels back alongside the
+     cover instead of after it. */
+  document.body.classList.add("media-detail-open", "media-detail-pushed");
   setPageInert(true);
-  requestAnimationFrame(() => {
+  /* Two frames, not one. setMorphOrigin has just written the starting
+     transform; a single rAF can land in the same frame the browser is already
+     compositing, so the start value is never rendered and the transition has
+     nothing to move from — the cover would appear at full size instead of
+     flying. The second frame guarantees the start state was painted. */
+  requestAnimationFrame(() => requestAnimationFrame(() => {
     detailLayer?.classList.add("is-in");
     detailLayer?.querySelector(".media-detail-close")?.focus({ preventScroll: true });
-  });
+  }));
   startMedia(detailLayer, item);
 }
 
@@ -1443,6 +1555,10 @@ export function wireExpansion(items, root, ranks = new Map()) {
   detailItems = items;
   detailRanks = ranks;
   detailRoot = root;
+  /* Marked rather than named in the stylesheet, because the shelves page and
+     the list page hand this function different containers and both should take
+     the camera push. */
+  root?.classList.add("detail-dolly-host");
 
   root.addEventListener("click", (e) => {
     const node = e.target.closest("[data-id]");
@@ -1565,7 +1681,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-detail7");
+  const { initHero } = await import("./library-hero.js?v=library-detail8");
   initHero(items);
 }
 

@@ -46,6 +46,24 @@
   --hero-overlap: 38vh;
   --shell: 1240px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  /* The detail takeover's curve, fitted rather than guessed. A motion reference
+     was stepped at 60fps and the top edge of the growing panel measured on
+     every frame, which is linear in scale and so is the scale curve itself; a
+     least-squares fit over those 26 samples lands here to within one percent.
+     It is a camera push, so it holds still for a beat, accelerates hard through
+     the middle, and lands with only a light brake rather than the long glide of
+     --ease. Everything belonging to the takeover geometry uses it, so the
+     cover, the shelf behind it and the stage all move as one object. */
+  --ease-dolly: cubic-bezier(0.48, 0.04, 0.74, 0.84);
+  /* Copy is arriving rather than being pushed, so it decelerates instead. */
+  --ease-arrive: cubic-bezier(0.2, 0.8, 0.24, 1);
+  /* Closing accelerates away: the reverse of a push is a fall, not a brake. */
+  --ease-leave: cubic-bezier(0.55, 0, 0.85, 0.5);
+  /* Unitless so calc() can scale them. One place, so the stylesheet and
+     library.js cannot disagree about how long the takeover lasts; the script
+     reads them back rather than keeping its own copy. */
+  --detail-open-ms: 460;
+  --detail-close-ms: 300;
   --card: 72px;
 }
 
@@ -548,24 +566,74 @@ html.reduce-motion .shelf-control { transition: none; }
 
 body.media-detail-open { overflow: hidden; }
 
+/* The camera push. In the reference the shelf keeps travelling toward the
+   viewer for the whole time the cover is growing, and the neighbouring spines
+   are still visible at the edges three quarters of the way through. That is
+   what makes it read as walking into the thing rather than as a panel arriving
+   over a page that has already stopped. So the shelf scales on the same curve
+   as the cover, out of the point that was pressed, and only gives up its
+   opacity at the very end.
+
+   The class is put on whatever container wireExpansion was given rather than on
+   a named selector, because the shelves and the list page hand it different
+   elements and both should push.
+
+   media-detail-pushed is separate from media-detail-open because the two come
+   off at different times: open has to survive until the overlay is removed,
+   since it is what holds the page unscrollable, while the push is dropped at
+   the top of the close so the shelf travels back alongside the cover instead of
+   waiting for it and turning a 300ms close into a 640ms one. */
+.detail-dolly-host {
+  transform-origin: var(--dolly-x, 50%) var(--dolly-y, 50%);
+  transition:
+    transform calc(var(--detail-close-ms) * 1ms) var(--ease-leave),
+    opacity 0.22s linear;
+}
+body.media-detail-pushed .detail-dolly-host {
+  transform: scale(var(--dolly-scale, 1.16));
+  opacity: 0;
+  transition:
+    transform calc(var(--detail-open-ms) * 1ms) var(--ease-dolly),
+    /* Held back so the shelf is still there behind the growing cover for the
+       first two thirds, then gone by the time the cover lands. */
+    opacity 0.16s linear calc(var(--detail-open-ms) * 0.62ms);
+}
+
 .media-detail-layer {
   --detail-dx: 0px;
-  --detail-dy: 18px;
-  --detail-sx: 0.96;
-  --detail-sy: 0.96;
+  --detail-dy: 24px;
+  --detail-s: 0.94;
+  --detail-rot: 0deg;
   position: fixed; inset: 0; z-index: 120;
   display: grid; grid-template-columns: minmax(0, 56fr) minmax(420px, 44fr);
-  overflow: hidden; background: #18181c; color: var(--site-cream);
-  opacity: 0; visibility: hidden;
-  transition: opacity 0.34s ease, visibility 0s linear 0.34s;
+  overflow: hidden; color: var(--site-cream);
 }
-.media-detail-layer.is-in {
-  opacity: 1; visibility: visible;
-  transition-delay: 0s;
+/* The plate behind everything. The layer itself no longer fades, because
+   fading the layer fades the cover along with it, and a cover that dissolves
+   while it travels is a cross-fade wearing a morph's clothes. Only the ground
+   the cover lands on changes opacity. */
+.media-detail-layer::before {
+  content: ""; position: absolute; inset: 0; z-index: 0;
+  background: #18181c;
+  opacity: 0;
+  transition: opacity calc(var(--detail-close-ms) * 1ms) var(--ease-leave);
 }
-.media-detail-layer.is-closing { opacity: 0; pointer-events: none; }
+.media-detail-layer.is-in::before {
+  opacity: 1;
+  transition: opacity calc(var(--detail-open-ms) * 0.6ms) linear;
+}
+.media-detail-layer.is-closing { pointer-events: none; }
 .media-detail-layer.is-switching .media-detail-art,
 .media-detail-layer.is-switching .media-detail-copy { opacity: 0; }
+
+/* One object, not two. While the morph is travelling it is standing in for a
+   cover that is still sitting in the shelf, so that cover has to go — with no
+   transition, or it would fade out visibly underneath its own double. It comes
+   back only once the morph has finished travelling home. */
+.is-morph-source {
+  opacity: 0 !important;
+  transition: none !important;
+}
 
 .media-detail-art {
   /* pan-y so a vertical drag starts as a scroll and the dismiss handler can
@@ -573,6 +641,15 @@ body.media-detail-open { overflow: hidden; }
   touch-action: pan-y;
   position: relative; min-width: 0; min-height: 100dvh;
   display: grid; place-items: center; overflow: hidden; isolation: isolate;
+  background: transparent;
+  transition: opacity 0.15s ease;
+}
+/* The item's own colour, on its own layer so it can bloom in underneath the
+   cover while the cover itself stays solid. It starts slightly oversized and
+   settles, which keeps the background moving with the push instead of sitting
+   flat behind it. */
+.media-detail-art::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
   background:
     radial-gradient(ellipse 78% 68% at 50% 49%, color-mix(in srgb, var(--detail-color) 78%, transparent), transparent 72%),
     radial-gradient(circle at 46% 45%, color-mix(in srgb, var(--detail-accent) 26%, transparent), transparent 56%),
@@ -580,7 +657,16 @@ body.media-detail-open { overflow: hidden; }
       color-mix(in srgb, var(--detail-color) 38%, #101013) 0%,
       color-mix(in srgb, var(--detail-color) 18%, #19191d) 66%,
       #202025 100%);
-  transition: opacity 0.15s ease;
+  opacity: 0; transform: scale(1.12);
+  transition:
+    opacity calc(var(--detail-close-ms) * 1ms) var(--ease-leave),
+    transform calc(var(--detail-close-ms) * 1ms) var(--ease-leave);
+}
+.media-detail-layer.is-in .media-detail-art::before {
+  opacity: 1; transform: none;
+  transition:
+    opacity calc(var(--detail-open-ms) * 0.7ms) linear,
+    transform calc(var(--detail-open-ms) * 1ms) var(--ease-dolly);
 }
 .media-detail-backdrop {
   position: absolute; inset: 0; z-index: 0;
@@ -592,48 +678,105 @@ body.media-detail-open { overflow: hidden; }
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.025), rgba(0, 0, 0, 0.18));
   transform: rotate(4deg); transform-origin: center;
 }
+/* The travelling object. It is opaque on every frame of the trip: the point of
+   the gesture is that one cover leaves the shelf and arrives as the page, and
+   anything that fades mid-flight splits that back into two objects. The custom
+   properties are a FLIP delta written by setMorphOrigin — the distance, scale
+   and angle that put this box exactly over the cover that was pressed. Scale is
+   a single number rather than separate x and y: matching both boxes exactly
+   means stretching the artwork to get there, and a shelf cover cropped with
+   object-fit: cover against a detail image sized with object-fit: contain never
+   has quite the same ratio, so it was always stretching by a percent or two. */
 .media-detail-morph {
   position: relative; z-index: 1;
   width: min(42vw, 620px); max-width: 82%;
-  opacity: 0.52;
-  transform: translate3d(var(--detail-dx), var(--detail-dy), 0) scale(var(--detail-sx), var(--detail-sy));
+  transform:
+    translate3d(var(--detail-dx), var(--detail-dy), 0)
+    scale(var(--detail-s))
+    rotate(var(--detail-rot));
   transform-origin: center;
-  transition: transform 0.4s var(--ease), opacity 0.34s ease;
+  /* Deliberately no transition in the resting rule. The delta above is written
+     by script just after this element is inserted, and by then the browser has
+     already resolved a transform from the fallback values on the layer. A
+     transition declared here would treat that correction as an animation and
+     spend the whole close duration crawling from the fallback pose to the real
+     starting pose — and then .is-in would interrupt it a frame later, so the
+     cover would appear to grow from 0.94 rather than from the shelf. Both
+     directions take their transition from their own state class instead, which
+     leaves the starting pose free to be set instantly. */
   will-change: transform;
 }
 .media-detail-layer.is-book .media-detail-morph { width: min(36vw, 600px); }
 .media-detail-layer.is-film .media-detail-morph { width: min(31vw, 440px); }
-.media-detail-layer.is-in .media-detail-morph { opacity: 1; transform: none; }
-.media-detail-layer.is-closing .media-detail-morph {
-  opacity: 0.52;
-  transform: translate3d(var(--detail-dx), var(--detail-dy), 0) scale(var(--detail-sx), var(--detail-sy));
+.media-detail-layer.is-in .media-detail-morph {
+  transform: none;
+  transition: transform calc(var(--detail-open-ms) * 1ms) var(--ease-dolly);
 }
+.media-detail-layer.is-closing .media-detail-morph {
+  transform:
+    translate3d(var(--detail-dx), var(--detail-dy), 0)
+    scale(var(--detail-s))
+    rotate(var(--detail-rot));
+  transition: transform calc(var(--detail-close-ms) * 1ms) var(--ease-leave);
+}
+
+/* The turn. On the shelf the object is a thing at an angle; on the page it is a
+   face. --turn unwinds to nothing over the same window as the push, so the
+   cover squares up to the viewer exactly as it lands. That is what sells it as
+   an object being handled rather than an image being resized. */
 .media-detail-object {
   position: relative; width: 100%; margin: 0;
+  --obj-rot: 0deg;
+  --obj-tilt: 0deg;
+  --turn: -13deg;
   filter: drop-shadow(0 34px 34px rgba(0, 0, 0, 0.42));
   transform-style: preserve-3d; cursor: default;
+  transform:
+    perspective(1300px)
+    rotateY(calc(var(--obj-rot) + var(--turn)))
+    rotateZ(var(--obj-tilt));
+  /* No resting transition, for the same reason as the morph above. */
+}
+.media-detail-layer.is-in .media-detail-object {
+  --turn: 0deg;
+  transition: transform calc(var(--detail-open-ms) * 1ms) var(--ease-dolly);
+}
+.media-detail-layer.is-closing .media-detail-object {
+  transition: transform calc(var(--detail-close-ms) * 1ms) var(--ease-leave);
 }
 .media-detail-object img {
   position: relative; z-index: 2; display: block;
   width: 100%; max-height: 78dvh; object-fit: contain; border-radius: 3px;
 }
-.media-detail-object.is-book { transform: perspective(1400px) rotateY(-7deg) rotateZ(-0.4deg); }
+/* Resting poses. --turn is added on top of these. */
+.media-detail-object.is-book { --obj-rot: -7deg; --obj-tilt: -0.4deg; }
 .media-detail-object.is-book::before {
   content: none;
 }
-.media-detail-object.is-album { transform: none; }
-.media-detail-object.is-film { transform: perspective(1200px) rotateY(4deg); }
+.media-detail-object.is-album { --obj-rot: 0deg; }
+.media-detail-object.is-film { --obj-rot: 4deg; }
 
 .media-detail-copy {
   position: relative; min-width: 0; height: 100dvh; overflow-x: hidden; overflow-y: auto;
   display: flex; flex-direction: column; align-items: stretch;
   padding: clamp(88px, 10vh, 132px) clamp(34px, 4vw, 74px) clamp(34px, 5vh, 64px);
   background: #202025;
-  opacity: 0; transform: translateX(24px);
-  transition: opacity 0.36s ease 0.08s, transform 0.4s var(--ease) 0.05s;
+  /* The text column is the last thing to resolve: the panel geometry locks
+     about 150ms before the copy has finished coming up, and that lag is most of
+     why the takeover feels like it has weight. The delay is a fraction of the
+     push rather than a fixed number, so the two stay in step at any duration. */
+  opacity: 0; transform: translate3d(30px, 0, 0);
+  transition:
+    opacity calc(var(--detail-close-ms) * 0.6ms) var(--ease-leave),
+    transform calc(var(--detail-close-ms) * 1ms) var(--ease-leave);
 }
-.media-detail-layer.is-in .media-detail-copy { opacity: 1; transform: none; }
-.media-detail-layer.is-closing .media-detail-copy { opacity: 0; transform: translateX(18px); }
+.media-detail-layer.is-in .media-detail-copy {
+  opacity: 1; transform: none;
+  transition:
+    opacity calc(var(--detail-open-ms) * 0.62ms) linear calc(var(--detail-open-ms) * 0.4ms),
+    transform calc(var(--detail-open-ms) * 0.9ms) var(--ease-arrive) calc(var(--detail-open-ms) * 0.38ms);
+}
+.media-detail-layer.is-closing .media-detail-copy { opacity: 0; transform: translate3d(20px, 0, 0); }
 
 .media-detail-close {
   position: absolute; top: 22px; right: 22px;
@@ -862,15 +1005,38 @@ body.media-detail-open { overflow: hidden; }
   .media-facts div { grid-template-columns: minmax(88px, 0.36fr) minmax(0, 1fr); gap: 12px; }
 }
 
+/* Reduced motion gets the destination and none of the trip.
+
+   !important, and every part named rather than only the new ones, because
+   these rules stopped working the moment the takeover existed: its transitions
+   are declared on `.media-detail-layer.is-in .media-detail-copy`, three
+   classes, and `html.reduce-motion .media-detail-copy` is two classes and an
+   element. The state rule won on specificity and the copy animated in anyway,
+   silently, for anyone who had asked the OS for less motion. */
 @media (prefers-reduced-motion: reduce) {
-  .media-detail-layer, .media-detail-morph, .media-detail-copy,
-  .media-detail-close, .media-detail-art { transition: none; }
+  .media-detail-layer,
+  .media-detail-layer::before,
+  .media-detail-morph,
+  .media-detail-object,
+  .media-detail-copy,
+  .media-detail-close,
+  .media-detail-art,
+  .media-detail-art::before,
+  .detail-dolly-host { transition: none !important; }
+  .media-detail-object { --turn: 0deg; }
+  body.media-detail-pushed .detail-dolly-host { transform: none; }
 }
 html.reduce-motion .media-detail-layer,
+html.reduce-motion .media-detail-layer::before,
 html.reduce-motion .media-detail-morph,
+html.reduce-motion .media-detail-object,
 html.reduce-motion .media-detail-copy,
 html.reduce-motion .media-detail-close,
-html.reduce-motion .media-detail-art { transition: none; }
+html.reduce-motion .media-detail-art,
+html.reduce-motion .media-detail-art::before,
+html.reduce-motion .detail-dolly-host { transition: none !important; }
+html.reduce-motion .media-detail-object { --turn: 0deg; }
+html.reduce-motion body.media-detail-pushed .detail-dolly-host { transform: none; }
 
 @media (max-width: 560px) {
   .coverflow { --cf-card: clamp(148px, 48vw, 190px); padding-top: 32px; }

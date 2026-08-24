@@ -13,7 +13,7 @@
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js?v=hero-orbit2";
 /* Keep this URL identical to library.html. A different query string creates a
    second module instance, which renders every shelf and detail handler twice. */
-import { openItem, coverPicture } from "./library.js?v=library-detail7";
+import { openItem, coverPicture } from "./library.js?v=library-detail8";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||
