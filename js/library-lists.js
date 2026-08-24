@@ -1,14 +1,14 @@
 /* Media-specific list and catalog pages. The moving corridor is decorative;
    the catalog underneath owns all navigation and accessible media names. */
 
-import { wireExpansion, coverPicture } from "./library.js?v=library-detail11";
+import { wireExpansion, coverPicture, wireDrag, wireLoopRail } from "./library.js?v=library-detail12";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail11";
-const LISTS_URL = "data/library-lists.json?v=library-detail11";
+const DATA_URL = "data/library.json?v=library-detail12";
+const LISTS_URL = "data/library-lists.json?v=library-detail12";
 
 const PAGE = {
   book: {
@@ -136,12 +136,30 @@ function renderStream(items) {
 
 /* The list's own members, in the order they were put there. This used to wrap
    round the whole catalog with a modulo, which is how a list of nothing managed
-   to show six covers. */
+   to show six covers.
+
+   Every member, not the first six. It used to be a preview in the strict sense
+   and stopped at six, which made a row that dead-ended a screen and a bit along
+   and then simply refused to go further. These loop now, the same way the main
+   page's shelves do, so a list is something you can keep pulling through in
+   either direction; showing only six of them would make the loop a carousel of
+   the same six covers.
+
+   The three levels are what wireLoopRail needs: the frame is the thing that
+   scrolls, the track is the flex row it clones runs into, and the run is what
+   gets cloned. A shorter list simply does not meet the ratio to loop, and the
+   rail leaves the clones hidden and behaves as an ordinary scroller. */
 function preview(items) {
   const frame = document.createElement("div");
   frame.className = `list-card-preview is-${type}`;
-  frame.setAttribute("aria-label", `${page.singular} list preview. Scroll horizontally to browse.`);
-  for (const item of items.slice(0, 6)) {
+  frame.setAttribute("aria-label", `${page.singular} list. Scroll or drag horizontally to browse.`);
+
+  const track = document.createElement("div");
+  track.className = "list-preview-track";
+  const run = document.createElement("div");
+  run.className = "list-preview-run";
+
+  for (const item of items) {
     const trigger = document.createElement("button");
     trigger.type = "button";
     trigger.className = "list-preview-trigger";
@@ -150,8 +168,17 @@ function preview(items) {
     trigger.setAttribute("aria-expanded", "false");
     trigger.style.aspectRatio = String(item.aspect || 1);
     trigger.append(coverPicture(item, { tier: "shelf" }));
-    frame.append(trigger);
+    run.append(trigger);
   }
+
+  track.append(run);
+  frame.append(track);
+  /* Deferred: both of these measure, and neither can measure a row that is not
+     in the document yet. */
+  requestAnimationFrame(() => {
+    wireLoopRail(frame, run);
+    wireDrag(frame);
+  });
   return frame;
 }
 

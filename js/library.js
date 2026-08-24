@@ -7,14 +7,14 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
-import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail11";
+import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail12";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail11";
-const SOURCES_URL = "data/library-sources.json?v=library-detail11";
+const DATA_URL = "data/library.json?v=library-detail12";
+const SOURCES_URL = "data/library-sources.json?v=library-detail12";
 
 /* Which outside profiles belong beside which shelf, in the order they render.
    Albums have two, because the streaming history and the record shelf are
@@ -381,7 +381,10 @@ function railControls(shelfName, scrollByCards) {
 /* Grab and shove, with the wheel as well, and a drag that moved swallows the
    click so a shove does not open whatever ended up under the cursor. Wanted on
    every rail, looping or not, so it does not live inside the loop. */
-function wireDrag(frame, onScroll = () => {}) {
+/* Exported for the catalog pages, which run the same looping rails over their
+   list previews. Same two functions, so the two pages cannot drift apart in how
+   a shelf behaves under a drag or at the seam. */
+export function wireDrag(frame, onScroll = () => {}) {
   let drag = null;
   let suppressClick = false;
 
@@ -438,7 +441,7 @@ function wireDrag(frame, onScroll = () => {}) {
    rail keeps the drag and simply ends, which is honest about how much is there. */
 const MIN_LOOP_RATIO = 2.2;
 
-function wireLoopRail(frame, originalRun, { overlap = false } = {}) {
+export function wireLoopRail(frame, originalRun, { overlap = false } = {}) {
   const shelf = originalRun.parentElement;
   const before = originalRun.cloneNode(true);
   const after = originalRun.cloneNode(true);
@@ -1693,7 +1696,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-detail11");
+  const { initHero } = await import("./library-hero.js?v=library-detail12");
   initHero(items);
 }
 

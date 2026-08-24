@@ -13,7 +13,7 @@
        and js/library.js wholesale and the copies were a maintenance problem the
        moment they existed. This page adds the quote markup and nothing else, so
        what is being judged here is exactly what will ship. -->
-  <link rel="stylesheet" href="css/library.css?v=library-detail11" />
+  <link rel="stylesheet" href="css/library.css?v=library-detail12" />
   <style>
     /* Lab chrome only. None of this ships. */
     body.hero-quotes-lab { padding: 0; }
@@ -125,7 +125,7 @@
   </div>
 
   <script type="module">
-    import { initQuotes } from "./js/library-quotes.js?v=library-detail11";
+    import { initQuotes } from "./js/library-quotes.js?v=library-detail12";
 
     const reveal = await initQuotes("#hero-quote");
     const host = document.querySelector("#hero-quote");
@@ -151,7 +151,7 @@
     });
 
     /* Every line rendered flat, so a bad wrap does not need to be hunted. */
-    const data = await (await fetch("data/library-quotes.json?v=library-detail11")).json();
+    const data = await (await fetch("data/library-quotes.json?v=library-detail12")).json();
     const list = document.getElementById("qlab-list");
     for (const [i, quote] of data.quotes.entries()) {
       const li = document.createElement("li");

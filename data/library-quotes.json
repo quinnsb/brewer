@@ -19,8 +19,16 @@
     "",
     "No song lyrics. A line of a lyric on a page like this is a reproduction",
     "rather than a quotation, so the musicians here are talking about the work",
-    "instead of performing it."
+    "instead of performing it.",
+    "",
+    "`welcome` is the line the hero opens on, before it turns over into a random",
+    "quote. It carries no author: it is the page talking, not someone being",
+    "quoted, so the attribution line stays empty for it."
   ],
+  "welcome": {
+    "text": "Welcome to the public library of my private imagination.",
+    "author": ""
+  },
   "quotes": [
     {
       "text": "Without music, life would be a mistake.",

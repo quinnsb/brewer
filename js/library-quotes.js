@@ -13,13 +13,14 @@
    and the characters inside it are what get masked. Wrapping happens between
    words the way it normally does; the mask only ever clips a single glyph.
 
-   And it does not cycle. A verb rotating every 2.2s is a texture you read
-   once; a quotation swapping under you while you are half way through it is
-   just rude. One per visit, revealed once. If it should cycle later, mount()
-   is already re-entrant: call it again with another quote.
+   And it turns over exactly once. The hero opens on a welcome line, holds it
+   long enough to be read, then hands over to one random quotation and stops
+   there. It does not cycle beyond that: a verb rotating every 2.2s is a
+   texture you read once, but a sentence swapping under you while you are half
+   way through it is just rude.
    ============================================================ */
 
-const QUOTES_URL = "data/library-quotes.json?v=library-detail11";
+const QUOTES_URL = "data/library-quotes.json?v=library-detail12";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||
@@ -32,6 +33,16 @@ const REDUCED =
    lines keep the original snap, long ones compress instead of dragging. */
 const STAGGER_BUDGET = 620;
 const STAGGER_MAX = 26;
+
+/* How long the welcome line holds before handing over. Long enough to read
+   nine words without hurrying, short enough that nobody who is going to scroll
+   has already scrolled. */
+const WELCOME_HOLD = 3000;
+/* The exit is quicker than the entrance, and tighter: leaving is not the part
+   worth watching. The replacement is mounted while the tail of the old line is
+   still clearing, which is what keeps the handover from reading as a gap. */
+const EXIT_BUDGET = 300;
+const EXIT_HANDOVER = 360;
 
 function staggerFor(length) {
   return Math.min(STAGGER_MAX, STAGGER_BUDGET / Math.max(length, 1));
@@ -96,7 +107,13 @@ function mount(host, quote, { animate = true } = {}) {
 
   const { fragment, count } = build(quote.text);
   line.replaceChildren(fragment);
-  if (cite) cite.textContent = quote.author;
+  if (cite) {
+    cite.textContent = quote.author || "";
+    /* The welcome line is the page talking rather than someone being quoted,
+       so it has no author and the attribution slot collapses instead of
+       reserving space for nothing. */
+    cite.hidden = !quote.author;
+  }
   if (sr) {
     sr.textContent = quote.author
       ? `${quote.text} ${quote.author}`
@@ -120,13 +137,30 @@ function mount(host, quote, { animate = true } = {}) {
   });
 }
 
+/* Takes the current line up and out, then mounts the next one underneath it.
+   .leave is the same class the verb swap used: the glyph rises out of its own
+   mask, the mirror of .enter arriving from below. */
+function handOver(host, next) {
+  const line = host.querySelector("[data-quote-line]");
+  const glyphs = line ? [...line.querySelectorAll(".ch")] : [];
+  if (REDUCED || !glyphs.length) {
+    mount(host, next, { animate: !REDUCED });
+    return;
+  }
+  const step = Math.min(STAGGER_MAX, EXIT_BUDGET / Math.max(glyphs.length, 1));
+  /* Drops the attribution at the same time, so the pair leaves together. */
+  host.classList.remove("is-in");
+  glyphs.forEach((glyph, i) => setTimeout(() => glyph.classList.add("leave"), i * step));
+  setTimeout(() => mount(host, next), EXIT_HANDOVER);
+}
+
 async function load() {
   const response = await fetch(QUOTES_URL, { cache: "no-cache" });
   if (!response.ok) throw new Error(`quotes ${response.status}`);
   const data = await response.json();
   const quotes = (data.quotes || []).filter((quote) => quote?.text);
   if (!quotes.length) throw new Error("quotes file has no usable entries");
-  return quotes;
+  return { quotes, welcome: data.welcome?.text ? data.welcome : null };
 }
 
 /* Returns a reveal function rather than revealing straight away, because the
@@ -144,15 +178,19 @@ export async function initQuotes(hostSelector = "#hero-quote") {
   host.dataset.quotesInitialized = "true";
 
   let quotes;
+  let welcome;
   try {
-    quotes = await load();
+    ({ quotes, welcome } = await load());
   } catch (error) {
     console.warn("Hero quotes unavailable:", error.message);
     host.hidden = true;
     return () => {};
   }
 
-  let current = pick(quotes);
+  /* The line the hero opens on. Without a welcome in the file it opens on the
+     quotation directly and there is simply nothing to hand over from. */
+  let current = welcome || pick(quotes);
+  let handoverTimer = 0;
 
   /* Built now, held back. The characters are in the DOM with .enter on them,
      which is off-screen inside its own mask, so nothing is visible yet. */
@@ -161,8 +199,22 @@ export async function initQuotes(hostSelector = "#hero-quote") {
   host.classList.remove("is-in");
 
   return function reveal(next) {
-    if (next) current = pick(quotes, current.text);
+    clearTimeout(handoverTimer);
+    if (next) {
+      /* The lab's reroll button: straight to another quotation, no welcome. */
+      current = pick(quotes, current.text);
+      handOver(host, current);
+      return current;
+    }
     mount(host, current);
+    /* Hand over to a quotation once the welcome has had its three seconds.
+       Only from the welcome: a quotation is where this comes to rest. */
+    if (welcome && current === welcome) {
+      handoverTimer = setTimeout(() => {
+        current = pick(quotes);
+        handOver(host, current);
+      }, WELCOME_HOLD);
+    }
     return current;
   };
 }
