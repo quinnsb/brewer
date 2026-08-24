@@ -1466,3 +1466,53 @@ body.menu-open .sound-toggle { opacity: 0; pointer-events: none; }
   .catalog-filter-link, .catalog-card-image img { transition: none; }
 }
 html.reduce-motion .list-stream-card { animation-play-state: paused; }
+
+/* ---------- HERO QUOTE ----------
+   Replaces the "You are what you [verb]" line. The heading beside it is now a
+   fixed line, so the h1 stays one string for search and for a screen reader,
+   and the part that changes per visit is a blockquote underneath it.
+
+   Reuses .mask and .ch from the verb swap. The one addition is .quote-word:
+   a verb was one word in an absolutely-positioned box, and a quotation has to
+   wrap, so each word is its own inline-block and the line breaks between them
+   while the masks only ever clip a single glyph. */
+.hero-quote {
+  margin: clamp(20px, 3.2vh, 34px) 0 0;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; max-width: min(640px, 82vw);
+}
+.hero-quote-line {
+  margin: 0;
+  font-family: "Aeonik", system-ui, sans-serif; font-weight: 400;
+  /* Big enough to be the thing that changes rather than a caption under the
+     heading, small enough that a fifteen-word line still fits two rows. */
+  font-size: clamp(19px, 2.35vw, 30px); line-height: 1.32;
+  letter-spacing: -0.015em;
+  color: var(--lib-fg);
+  text-wrap: balance;
+}
+/* No quotation marks. Aeonik draws U+201C and U+201D as angled double strokes
+   which at this size read as guillemets rather than as quotes, and the mono
+   attribution underneath already says what the line is. If they are ever
+   wanted back, they belong here on the container rather than in the JSON, so a
+   line in the data cannot end up double-quoted. */
+.quote-word { display: inline-block; white-space: nowrap; }
+.hero-quote-cite {
+  margin-top: clamp(10px, 1.4vh, 16px);
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--hero-verb);
+  opacity: 0; transform: translateY(8px);
+  transition: opacity 0.5s ease, transform 0.5s var(--ease);
+}
+/* The attribution arrives after the words it belongs to, the same idea as the
+   copy column trailing the cover on the detail takeover. */
+.hero-quote.is-in .hero-quote-cite {
+  opacity: 1; transform: none;
+  transition-delay: 0.42s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-quote-cite { transition: none; opacity: 1; transform: none; }
+}
+html.reduce-motion .hero-quote-cite { transition: none; opacity: 1; transform: none; }

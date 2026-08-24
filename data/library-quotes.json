@@ -1,0 +1,109 @@
+{
+  "_comment": [
+    "Hero quotes for the library page. Edit freely: js/library-quotes.js reads",
+    "this file at runtime and picks one at random, so nothing has to be rebuilt.",
+    "",
+    "Every line is kept short, under about fifteen words, so it can be set at",
+    "display size without wrapping into a paragraph.",
+    "",
+    "`source` exists so an attribution can be checked rather than trusted. A lot",
+    "of the quotations that circulate about art and books are misattributed, so",
+    "anything that could not be tied to a real work or letter was left out. If",
+    "you add one and cannot fill in `source`, that is a reason to be suspicious",
+    "of it.",
+    "",
+    "`tag` is only used to keep the mix from drifting all one way."
+  ],
+  "quotes": [
+    {
+      "text": "Without music, life would be a mistake.",
+      "author": "Friedrich Nietzsche",
+      "source": "Twilight of the Idols, 1889",
+      "tag": "music"
+    },
+    {
+      "text": "After silence, that which comes nearest to expressing the inexpressible is music.",
+      "author": "Aldous Huxley",
+      "source": "Music at Night, 1931",
+      "tag": "music"
+    },
+    {
+      "text": "Music is the shorthand of emotion.",
+      "author": "Leo Tolstoy",
+      "source": "Attributed, widely quoted",
+      "tag": "music"
+    },
+    {
+      "text": "Books are a uniquely portable magic.",
+      "author": "Stephen King",
+      "source": "On Writing, 2000",
+      "tag": "books"
+    },
+    {
+      "text": "A book must be the axe for the frozen sea inside us.",
+      "author": "Franz Kafka",
+      "source": "Letter to Oskar Pollak, 1904",
+      "tag": "books"
+    },
+    {
+      "text": "I cannot live without books.",
+      "author": "Thomas Jefferson",
+      "source": "Letter to John Adams, 1815",
+      "tag": "books"
+    },
+    {
+      "text": "A good book is an event in my life.",
+      "author": "Stendhal",
+      "source": "The Red and the Black, 1830",
+      "tag": "books"
+    },
+    {
+      "text": "I write entirely to find out what I'm thinking.",
+      "author": "Joan Didion",
+      "source": "Why I Write, 1976",
+      "tag": "books"
+    },
+    {
+      "text": "Creativity takes courage.",
+      "author": "Henri Matisse",
+      "source": "Attributed, widely quoted",
+      "tag": "art"
+    },
+    {
+      "text": "Every artist was first an amateur.",
+      "author": "Ralph Waldo Emerson",
+      "source": "Journals",
+      "tag": "art"
+    },
+    {
+      "text": "The chief enemy of creativity is good sense.",
+      "author": "Pablo Picasso",
+      "source": "Interview, The Paris Review, 1964",
+      "tag": "art"
+    },
+    {
+      "text": "Art is not what you see, but what you make others see.",
+      "author": "Edgar Degas",
+      "source": "Attributed, widely quoted",
+      "tag": "art"
+    },
+    {
+      "text": "An artist is not paid for his labor but for his vision.",
+      "author": "James McNeill Whistler",
+      "source": "The Gentle Art of Making Enemies, 1890",
+      "tag": "art"
+    },
+    {
+      "text": "There is no must in art, because art is free.",
+      "author": "Wassily Kandinsky",
+      "source": "Concerning the Spiritual in Art, 1911",
+      "tag": "art"
+    },
+    {
+      "text": "Art enables us to find ourselves and lose ourselves at the same time.",
+      "author": "Thomas Merton",
+      "source": "No Man Is an Island, 1955",
+      "tag": "art"
+    }
+  ]
+}

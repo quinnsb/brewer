@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/svg+xml" href="images/brewerfavicon.svg" />
+  <title>Hero quotes lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <!-- The real stylesheet, not a copy. The last lab duplicated css/library.css
+       and js/library.js wholesale and the copies were a maintenance problem the
+       moment they existed. This page adds the quote markup and nothing else, so
+       what is being judged here is exactly what will ship. -->
+  <link rel="stylesheet" href="css/library.css?v=library-detail9" />
+  <style>
+    /* Lab chrome only. None of this ships. */
+    body.hero-quotes-lab { padding: 0; }
+    .qlab-stage {
+      position: relative; min-height: 78vh;
+      display: grid; place-items: center;
+      border-bottom: 1px solid var(--lib-line);
+    }
+    .qlab-inner { width: min(760px, 82vw); display: grid; justify-items: center; }
+    .qlab-bar {
+      position: fixed; z-index: 50; left: 12px; right: 12px; bottom: 16px;
+      display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: center;
+      padding: 10px 12px; width: max-content; max-width: calc(100% - 24px);
+      margin: 0 auto;
+      font-family: "Space Mono", ui-monospace, monospace; font-size: 11px;
+      background: rgba(16, 16, 19, 0.93); color: var(--site-cream);
+      border: 1px solid rgba(241, 236, 227, 0.2); border-radius: 8px;
+      backdrop-filter: blur(14px);
+    }
+    .qlab-bar button, .qlab-bar select {
+      font: inherit; color: inherit; cursor: pointer; flex: 0 0 auto;
+      padding: 7px 10px; border-radius: 4px;
+      background: transparent; border: 1px solid rgba(241, 236, 227, 0.26);
+    }
+    .qlab-bar button:hover, .qlab-bar select:hover { border-color: rgba(241, 236, 227, 0.55); }
+    .qlab-bar .primary { background: var(--hero-verb); border-color: var(--hero-verb); color: #101013; }
+    .qlab-bar span { opacity: 0.55; }
+    .qlab-note {
+      max-width: 62ch; margin: 0 auto; padding: 34px 24px 120px;
+      font-family: "Space Mono", ui-monospace, monospace; font-size: 11px; line-height: 1.7;
+      color: var(--lib-dim);
+    }
+    .qlab-note code { color: var(--site-cream); }
+    .qlab-note h2 {
+      margin: 0 0 12px; font-size: 11px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--site-cream);
+    }
+    /* Every line at once, to check the ones that wrap badly without rerolling
+       fifteen times to find them. */
+    .qlab-all { display: none; padding: 0 24px 90px; }
+    body.show-all .qlab-all { display: block; }
+    body.show-all .qlab-stage { display: none; }
+    .qlab-all ol { max-width: 760px; margin: 0 auto; padding: 0; list-style: none; }
+    .qlab-all li { padding: 22px 0; border-bottom: 1px solid var(--lib-line); }
+    .qlab-all .n {
+      font-family: "Space Mono", ui-monospace, monospace; font-size: 10px;
+      color: var(--lib-faint); display: block; margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body id="top" class="library hero-quotes-lab">
+
+  <section class="qlab-stage">
+    <div class="qlab-inner">
+      <!-- The shape being proposed for library.html: a fixed h1, with the part
+           that changes per visit as a blockquote underneath it. Two words, so
+           there is no wrap to control and nothing short to strand. Sentence
+           case, like every other h1 on the site. -->
+      <h1 id="hero-heading" class="hero-line is-in">
+        <span class="stem">
+          <span data-heading>Personal curation</span>
+        </span>
+      </h1>
+
+      <figure class="hero-quote" id="hero-quote">
+        <blockquote class="hero-quote-line" data-quote-line cite="" aria-hidden="true"></blockquote>
+        <figcaption class="hero-quote-cite" data-quote-cite aria-hidden="true"></figcaption>
+        <span class="sr-only" data-quote-sr></span>
+      </figure>
+    </div>
+  </section>
+
+  <div class="qlab-all">
+    <ol id="qlab-list"></ol>
+  </div>
+
+  <div class="qlab-note">
+    <h2>What to look at</h2>
+    <p>
+      Reroll a few times and watch how the long ones wrap. Fifteen lines are in
+      <code>data/library-quotes.json</code>; every one has a
+      <code>source</code> so the attribution can be checked rather than trusted,
+      because a lot of the quotations that circulate about art and books are
+      misattributed. Anything that could not be tied to a real book, letter or
+      interview was left out.
+    </p>
+    <p>
+      The reveal is the same per-character mask the old verb swap used, so the
+      hero still moves the way the rest of the page does. It does not cycle: one
+      quote per visit. A verb rotating every couple of seconds is a texture, but
+      a sentence swapping while you are half way through reading it is not.
+    </p>
+    <p>
+      <strong>All lines</strong> shows every quote at once, which is the quicker
+      way to spot the ones that wrap badly.
+      <strong>Narrow</strong> and <strong>wide</strong> set the stage width
+      without resizing the window.
+    </p>
+  </div>
+
+  <div class="qlab-bar">
+    <button type="button" class="primary" data-reroll>Reroll</button>
+    <button type="button" data-replay>Replay reveal</button>
+    <button type="button" data-all>All lines</button>
+    <span>heading</span>
+    <select data-heading-pick>
+      <option>Personal curation</option>
+      <option>Personally curated</option>
+      <option>A personal collection</option>
+      <option>What I keep coming back to</option>
+      <option>The library</option>
+    </select>
+    <span>width</span>
+    <select data-width>
+      <option value="82vw">stage default</option>
+      <option value="340px">narrow (phone)</option>
+      <option value="520px">medium</option>
+      <option value="760px">wide</option>
+    </select>
+    <span data-count></span>
+  </div>
+
+  <script type="module">
+    import { initQuotes } from "./js/library-quotes.js?v=library-detail9";
+
+    const reveal = await initQuotes("#hero-quote");
+    const host = document.querySelector("#hero-quote");
+
+    /* The hero holds the reveal back until its ring of cards has landed, about
+       2.5s in. Here there is no ring, so it fires on a short delay instead,
+       which is enough to actually see the mask do its work. */
+    setTimeout(() => reveal(), 350);
+
+    document.querySelector("[data-reroll]").addEventListener("click", () => {
+      const quote = reveal(true);
+      console.log("quote:", quote.text, "—", quote.author, "|", quote.source);
+    });
+    document.querySelector("[data-replay]").addEventListener("click", () => reveal());
+
+    document.querySelector("[data-all]").addEventListener("click", () => {
+      document.body.classList.toggle("show-all");
+    });
+
+    /* The wording is easier to judge than to argue about. */
+    document.querySelector("[data-heading-pick]").addEventListener("change", (event) => {
+      document.querySelector("[data-heading]").textContent = event.target.value;
+    });
+
+    document.querySelector("[data-width]").addEventListener("change", (event) => {
+      document.querySelector(".hero-quote").style.maxWidth = event.target.value;
+      document.querySelector(".qlab-inner").style.width = event.target.value;
+    });
+
+    /* Every line rendered flat, so a bad wrap does not need to be hunted. */
+    const data = await (await fetch("data/library-quotes.json?v=library-detail9")).json();
+    const list = document.getElementById("qlab-list");
+    for (const [i, quote] of data.quotes.entries()) {
+      const li = document.createElement("li");
+      const n = document.createElement("span");
+      n.className = "n";
+      n.textContent = `${String(i + 1).padStart(2, "0")} / ${quote.tag} / ${quote.text.split(" ").length} words / ${quote.source}`;
+      const fig = document.createElement("figure");
+      fig.className = "hero-quote is-in";
+      fig.style.alignItems = "flex-start";
+      fig.style.textAlign = "left";
+      fig.style.maxWidth = "none";
+      fig.style.margin = "0";
+      const line = document.createElement("blockquote");
+      line.className = "hero-quote-line";
+      line.textContent = quote.text;
+      const cite = document.createElement("figcaption");
+      cite.className = "hero-quote-cite";
+      cite.textContent = quote.author;
+      fig.append(line, cite);
+      li.append(n, fig);
+      list.append(li);
+    }
+    document.querySelector("[data-count]").textContent = `${data.quotes.length} lines`;
+  </script>
+</body>
+</html>
