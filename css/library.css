@@ -166,6 +166,23 @@ body.library a { color: inherit; }
   padding: 0 var(--gutter) 110px;
   position: relative; z-index: 3; background: var(--lib-bg);
 }
+/* The shelves ride up over the hero, and their own background is the thing
+   that hides the ring behind them. But the background stops at --shell, and
+   the ring does not: on anything wider than 1240px the arc kept showing down
+   both sides of the column, level with the book covers, which reads as two
+   pages printed on top of each other.
+
+   So the backdrop is full-bleed while the content stays in its column. It is a
+   pseudo-element rather than a wider .shelves, because widening .shelves would
+   widen every shelf inside it. z-index -1 puts it behind the shelf content but
+   still inside .shelves' own stacking context, so it stays above the hero. */
+.shelves::before {
+  content: ""; position: absolute; z-index: -1;
+  top: 0; bottom: 0; left: 50%;
+  width: 100vw; transform: translateX(-50%);
+  background: var(--lib-bg);
+  pointer-events: none;
+}
 
 /* The pill reservation this used to hold now lives at the end of the file,
    below the rules that were quietly overriding it. See "ROOM FOR THE MENU". */
