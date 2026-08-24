@@ -7,12 +7,19 @@
     "display size without wrapping into a paragraph.",
     "",
     "`source` exists so an attribution can be checked rather than trusted. A lot",
-    "of the quotations that circulate about art and books are misattributed, so",
-    "anything that could not be tied to a real work or letter was left out. If",
-    "you add one and cannot fill in `source`, that is a reason to be suspicious",
-    "of it.",
+    "of the quotations that circulate about art, books and film are misattributed,",
+    "so anything that could not be tied to a real work, letter or interview was",
+    "left out. Lines marked 'Attributed, widely quoted' are the ones to treat as",
+    "least certain: they are in wide circulation and consistent with the person,",
+    "but no primary source was confirmed. If you add one and cannot fill in",
+    "`source`, that is a reason to be suspicious of it.",
     "",
-    "`tag` is only used to keep the mix from drifting all one way."
+    "`tag` is art, books, music or film, and only exists to keep the mix from",
+    "drifting all one way.",
+    "",
+    "No song lyrics. A line of a lyric on a page like this is a reproduction",
+    "rather than a quotation, so the musicians here are talking about the work",
+    "instead of performing it."
   ],
   "quotes": [
     {
@@ -104,6 +111,84 @@
       "author": "Thomas Merton",
       "source": "No Man Is an Island, 1955",
       "tag": "art"
+    },
+    {
+      "text": "To be an artist means never to avert one's eyes.",
+      "author": "Akira Kurosawa",
+      "source": "Something Like an Autobiography, 1982",
+      "tag": "film"
+    },
+    {
+      "text": "Drama is life with the dull bits cut out.",
+      "author": "Alfred Hitchcock",
+      "source": "Attributed, widely quoted",
+      "tag": "film"
+    },
+    {
+      "text": "I dream for a living.",
+      "author": "Steven Spielberg",
+      "source": "TIME interview, 1985",
+      "tag": "film"
+    },
+    {
+      "text": "I steal from every single movie ever made.",
+      "author": "Quentin Tarantino",
+      "source": "Empire interview, 1994",
+      "tag": "film"
+    },
+    {
+      "text": "However vast the darkness, we must supply our own light.",
+      "author": "Stanley Kubrick",
+      "source": "Attributed, widely quoted",
+      "tag": "film"
+    },
+    {
+      "text": "Film as dream, film as music.",
+      "author": "Ingmar Bergman",
+      "source": "The Magic Lantern, 1987",
+      "tag": "film"
+    },
+    {
+      "text": "If we opened people up, we would find landscapes.",
+      "author": "Agnes Varda",
+      "source": "Attributed, widely quoted",
+      "tag": "film"
+    },
+    {
+      "text": "I never think about the audience when I make a film.",
+      "author": "Wong Kar-wai",
+      "source": "Attributed, widely quoted",
+      "tag": "film"
+    },
+    {
+      "text": "Do not fear mistakes. There are none.",
+      "author": "Miles Davis",
+      "source": "Attributed, widely quoted",
+      "tag": "music"
+    },
+    {
+      "text": "Don't play what's there, play what's not there.",
+      "author": "Miles Davis",
+      "source": "Attributed, widely quoted",
+      "tag": "music"
+    },
+    {
+      "text": "A song is anything that can walk by itself.",
+      "author": "Bob Dylan",
+      "source": "Bringing It All Back Home liner notes, 1965",
+      "tag": "music"
+    },
+    {
+      "text": "Writing about music is like dancing about architecture.",
+      "author": "Martin Mull",
+      "source": "Attributed, often misattributed to others",
+      "tag": "music"
+    },
+    {
+      "text": "There are no wrong notes, only wrong resolutions.",
+      "author": "Bill Evans",
+      "source": "Attributed, widely quoted",
+      "tag": "music"
     }
   ]
 }
