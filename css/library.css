@@ -1434,9 +1434,9 @@ body.menu-open .sound-toggle { opacity: 0; pointer-events: none; }
 html.reduce-motion .list-stream-card { animation-play-state: paused; }
 
 /* ---------- HERO QUOTE ----------
-   Replaces the "You are what you [verb]" line. The heading beside it is now a
-   fixed line, so the h1 stays one string for search and for a screen reader,
-   and the part that changes per visit is a blockquote underneath it.
+   Replaces the "You are what you [verb]" line. There is no visible heading: the
+   quotation is the whole hero, and the h1 is a visually hidden page name, so
+   the one string that says what this page is does not change on every load.
 
    Reuses .mask and .ch from the verb swap. The one addition is .quote-word:
    a verb was one word in an absolutely-positioned box, and a quotation has to
@@ -1452,32 +1452,24 @@ html.reduce-motion .list-stream-card { animation-play-state: paused; }
      It cannot always fit entirely: the ring's radius is capped at 350px, so on
      a mid-width screen a twelve-word quotation at readable size is wider than
      the gap however it wraps, and shrinking the type until it fits would make
-     the hero's only words the smallest thing on it. The scrim below handles
-     that instead. */
+     the hero's only words the smallest thing on it. The halo on the glyphs
+     handles the overlap instead. */
   position: relative;
   text-align: center; max-width: min(520px, 56vw);
 }
-/* A soft hole in the ring, so the type reads over any cover it crosses without
-   hiding the cover. Sized past the text on both axes and faded to nothing well
-   before its edge, so there is no visible disc, only the covers behind the
-   words dropping back. Sits above the stage because .hero-inner already does. */
-.hero-quote::before {
-  content: ""; position: absolute; z-index: -1;
-  left: 50%; top: 50%; transform: translate(-50%, -50%);
-  width: 176%; height: 340%;
-  /* Two stops, not four. Four shades of near-black over a near-black page
-     banded into visible concentric rings; a single long falloff dithers
-     cleanly and separates the type just as well. */
-  background: radial-gradient(
-    ellipse at center,
-    rgba(11, 11, 12, 0.88) 0%,
-    rgba(11, 11, 12, 0) 70%
-  );
-  pointer-events: none;
-}
+/* Separation from whatever cover the line crosses. This was a radial scrim
+   behind the text, which worked but banded: a gradient of near-black over a
+   flat near-black page has no texture to hide 8-bit quantisation in, so it drew
+   visible concentric rings around the quote. A halo on the glyphs themselves
+   does the same job with no gradient to band, costs nothing, and darkens only
+   the few pixels around each letter rather than a whole ellipse of the ring. */
 .hero-quote-line {
   position: relative;
   margin: 0;
+  text-shadow:
+    0 0 14px rgba(11, 11, 12, 0.92),
+    0 0 28px rgba(11, 11, 12, 0.78),
+    0 0 46px rgba(11, 11, 12, 0.55);
   font-family: "Aeonik", system-ui, sans-serif; font-weight: 400;
   /* The quotation is the hero now, with no heading above it, so it is sized as
      display type rather than as a caption. Kept below the old headline's 72px
@@ -1499,6 +1491,7 @@ html.reduce-motion .list-stream-card { animation-play-state: paused; }
   font-family: "Space Mono", ui-monospace, monospace;
   font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--hero-verb);
+  text-shadow: 0 0 12px rgba(11, 11, 12, 0.95), 0 0 24px rgba(11, 11, 12, 0.7);
   opacity: 0; transform: translateY(8px);
   transition: opacity 0.5s ease, transform 0.5s var(--ease);
 }
