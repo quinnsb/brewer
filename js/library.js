@@ -7,14 +7,14 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
-import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail13";
+import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail14";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
    run and the version below only moves when someone remembers to move it. The
    cost is one conditional request that normally answers 304. */
-const DATA_URL = "data/library.json?v=library-detail13";
-const SOURCES_URL = "data/library-sources.json?v=library-detail13";
+const DATA_URL = "data/library.json?v=library-detail14";
+const SOURCES_URL = "data/library-sources.json?v=library-detail14";
 
 /* Which outside profiles belong beside which shelf, in the order they render.
    Albums have two, because the streaming history and the record shelf are
@@ -1696,7 +1696,7 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-detail13");
+  const { initHero } = await import("./library-hero.js?v=library-detail14");
   initHero(items);
 }
 

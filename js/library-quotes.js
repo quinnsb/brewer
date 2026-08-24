@@ -20,7 +20,7 @@
    way through it is just rude.
    ============================================================ */
 
-const QUOTES_URL = "data/library-quotes.json?v=library-detail13";
+const QUOTES_URL = "data/library-quotes.json?v=library-detail14";
 
 const REDUCED =
   matchMedia("(prefers-reduced-motion: reduce)").matches ||
@@ -48,19 +48,50 @@ function staggerFor(length) {
   return Math.min(STAGGER_MAX, STAGGER_BUDGET / Math.max(length, 1));
 }
 
+/* Phrases wrapped in asterisks are emphasised, and each run gets its own
+   number so the stylesheet can colour the first differently from the second.
+   Written in the data as
+
+     "Welcome to the *public library* of my *private imagination*."
+
+   which stays readable as a sentence in the file, unlike markup would. */
+const EMPHASIS = /\*([^*]+)\*/g;
+
+export function parseEmphasis(text) {
+  const parts = [];
+  let at = 0;
+  let run = 0;
+  for (const match of String(text ?? "").matchAll(EMPHASIS)) {
+    if (match.index > at) parts.push({ text: text.slice(at, match.index), emphasis: 0 });
+    run += 1;
+    parts.push({ text: match[1], emphasis: run });
+    at = match.index + match[0].length;
+  }
+  if (at < text.length) parts.push({ text: text.slice(at), emphasis: 0 });
+  return parts.filter((part) => part.text.length);
+}
+
+/* The sentence without its markers, for the screen-reader copy and for
+   anything that wants to compare two quotes as text. */
+export function plainText(text) {
+  return String(text ?? "").replace(EMPHASIS, "$1");
+}
+
 /* One word, one inline-block, so the line breaks between words and not inside
-   the masks. The trailing space is a real character in its own mask: putting it
-   outside would let the browser collapse it at a line end and run words
-   together. */
+   the masks. The space between words is its own mask for the same reason: put
+   outside, the browser would collapse it at a line end and run words together.
+
+   A word can span an emphasis boundary, so emphasis is carried per character
+   rather than per word. */
 function buildWord(word, startIndex) {
   const node = document.createElement("span");
   node.className = "quote-word";
   let i = startIndex;
-  for (const character of word) {
+  for (const { character, emphasis } of word) {
     const mask = document.createElement("span");
     mask.className = "mask";
     const glyph = document.createElement("span");
-    glyph.className = "ch enter";
+    glyph.className = emphasis ? `ch enter is-em is-em-${emphasis}` : "ch enter";
     glyph.textContent = character;
     glyph.dataset.i = String(i);
     i += 1;
@@ -71,14 +102,26 @@ function buildWord(word, startIndex) {
 }
 
 function build(text) {
+  /* Flattened to characters first, each carrying its emphasis, then split on
+     spaces. Doing it the other way round would lose a run that starts or ends
+     mid-word. */
+  const characters = [];
+  for (const part of parseEmphasis(text)) {
+    for (const character of part.text) characters.push({ character, emphasis: part.emphasis });
+  }
+
+  const words = [[]];
+  for (const entry of characters) {
+    if (entry.character === " ") words.push([]);
+    else words[words.length - 1].push(entry);
+  }
+
   const fragment = document.createDocumentFragment();
-  const words = text.split(" ");
   let index = 0;
   words.forEach((word, position) => {
     const built = buildWord(word, index);
     index = built.next;
     fragment.append(built.node);
-    /* A space between words, and none after the last one. */
     if (position < words.length - 1) {
       fragment.append(document.createTextNode(" "));
       index += 1;
@@ -115,9 +158,9 @@ function mount(host, quote, { animate = true } = {}) {
     cite.hidden = !quote.author;
   }
   if (sr) {
-    sr.textContent = quote.author
-      ? `${quote.text} ${quote.author}`
-      : quote.text;
+    /* Without the markers: read aloud, an asterisk is not emphasis. */
+    const spoken = plainText(quote.text);
+    sr.textContent = quote.author ? `${spoken} ${quote.author}` : spoken;
   }
 
   const glyphs = line.querySelectorAll(".ch");

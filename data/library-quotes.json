@@ -23,10 +23,15 @@
     "",
     "`welcome` is the line the hero opens on, before it turns over into a random",
     "quote. It carries no author: it is the page talking, not someone being",
-    "quoted, so the attribution line stays empty for it."
+    "quoted, so the attribution line stays empty for it.",
+    "",
+    "A phrase wrapped in *asterisks* is emphasised, and each run gets its own",
+    "colour: the first is the hero yellow, the second the library's accent. The",
+    "markers are stripped from the screen-reader copy, because read aloud an",
+    "asterisk is not emphasis."
   ],
   "welcome": {
-    "text": "Welcome to the public library of my private imagination.",
+    "text": "Welcome to the *public library* of my *private imagination*.",
     "author": ""
   },
   "quotes": [

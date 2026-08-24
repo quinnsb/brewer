@@ -1512,6 +1512,24 @@ html.reduce-motion .list-stream-card { animation-play-state: paused; }
    visible concentric rings around the quote. A halo on the glyphs themselves
    does the same job with no gradient to band, costs nothing, and darkens only
    the few pixels around each letter rather than a whole ellipse of the ring. */
+/* The masks are what set the line height, and they were setting it wrong. .mask
+   carries padding-bottom: 0.14em so overflow: hidden does not shear the
+   descenders off a glyph mid-reveal, which is right, but as an inline-block
+   that padding is also part of the line box: a 36px line with 45px of
+   line-height was laying out at 59px, so every wrapped line sat a third of a
+   line further from the one above it than it should.
+
+   The negative margin cancels it for layout while leaving it for painting, so
+   the clip area is still tall enough for a descender and the rows close up.
+   vertical-align: top takes the masks off the baseline strut, which was adding
+   the rest. */
+.hero-quote-line .mask {
+  padding-bottom: 0.18em;
+  margin-bottom: -0.18em;
+  vertical-align: top;
+}
+.hero-quote-line .quote-word { line-height: inherit; }
+
 .hero-quote-line {
   position: relative;
   margin: 0;
@@ -1519,7 +1537,7 @@ html.reduce-motion .list-stream-card { animation-play-state: paused; }
     0 0 14px rgba(11, 11, 12, 0.92),
     0 0 28px rgba(11, 11, 12, 0.78),
     0 0 46px rgba(11, 11, 12, 0.55);
-  font-family: "Aeonik", system-ui, sans-serif; font-weight: 400;
+  font-family: "Aeonik", system-ui, sans-serif; font-weight: 500;
   /* The quotation is the hero now, with no heading above it, so it is sized as
      display type rather than as a caption. Kept below the old headline's 72px
      ceiling so a fifteen-word line still lands in two or three rows instead of
@@ -1535,6 +1553,13 @@ html.reduce-motion .list-stream-card { animation-play-state: paused; }
    wanted back, they belong here on the container rather than in the JSON, so a
    line in the data cannot end up double-quoted. */
 .quote-word { display: inline-block; white-space: nowrap; }
+/* Phrases wrapped in asterisks in data/library-quotes.json, numbered in the
+   order they appear so the two halves of a line can differ. Both colours are
+   already on this page: the yellow is the attribution's, the orange is the
+   library's accent. A third run and beyond falls back to the yellow rather
+   than inventing a colour the site does not use. */
+.hero-quote-line .ch.is-em { color: var(--hero-verb); }
+.hero-quote-line .ch.is-em-2 { color: var(--lib-accent); }
 .hero-quote-cite {
   margin-top: clamp(16px, 2.4vh, 28px);
   font-family: "Space Mono", ui-monospace, monospace;
