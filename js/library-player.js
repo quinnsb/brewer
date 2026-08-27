@@ -4,7 +4,7 @@ import {
   soundOn,
   stop as stopAlbum,
 } from "./library-sound.js?v=library-player1";
-import { libraryPlaylist } from "./library-playlist.js?v=library-player3";
+import { libraryPlaylist } from "./library-playlist.js?v=library-player4";
 
 const VOLUME_KEY = "library-player-volume";
 const SPEED_KEY = "library-player-speed";

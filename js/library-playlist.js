@@ -27,7 +27,7 @@ export const libraryPlaylist = [
     artist: "Vulfmon, Jacob Jeffries & Evangeline",
   },
   {
-    src: "content/library/music mp3/Café Pacific.mp3",
+    src: "content/library/music mp3/cafe-pacific.mp3",
     title: "Café Pacific",
     artist: "TOAST CLUB",
   },
