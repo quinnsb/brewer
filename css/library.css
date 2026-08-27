@@ -32,12 +32,39 @@
   --site-blurple: #4a4de6;
   --site-green: #1b9e57;
   --gutter: clamp(20px, 4vw, 56px);
-  /* Left inset that keeps content clear of the fixed bottom-left menu pill, the
-     same idea as --rail-safe in styles.css: the pill's own left offset plus its
-     width plus a gap. Content uses max() with the normal gutter, so on narrow
-     screens, where the pill gives way to the full-width bottom bar and this
-     reservation would only squeeze the page, the gutter wins. */
-  --pill-safe: calc(clamp(30px, 3.2vw, 62px) + 132px);
+  /* ---------- the left rail ----------
+     Two fixed controls stand on it: the Menu pill at the bottom and the music
+     player at the top. Both are anchored to the same offset, so it is written
+     once here and read by the player, by the reservations below, and by
+     site-menu.css through its own --page-edge fallback, which is this value.
+     It steps in at the two widths the pill steps in at. */
+  --rail-edge: clamp(30px, 3.2vw, 62px);
+  /* The player's own width, declared here rather than on .library-player so
+     the reservation below cannot drift from the thing it is reserving for. */
+  --player-w: clamp(152px, 14.5vw, 196px);
+  /* The clearance between either control and the content beside it. */
+  --rail-gap: 32px;
+  /* What the Menu pill needs: its offset, its width, the gap. */
+  --pill-safe: calc(var(--rail-edge) + 100px + var(--rail-gap));
+  /* What the rail needs, which is whatever the wider of the two controls
+     needs. The player is the wider one at every width, and it sits at the top
+     of the screen where the shelves scroll under it, so reserving only for the
+     pill left covers passing beneath the transport buttons. Content uses max()
+     with the normal gutter, so on narrow screens, where the pill gives way to
+     the full-width bottom bar and this reservation would only squeeze the
+     page, the gutter wins. */
+  --rail-safe: calc(var(--rail-edge) + max(100px, var(--player-w)) + var(--rail-gap));
+  /* How far the --shell column is already inboard of the viewport edge. The
+     rail is measured from the viewport and the column is centred in it, so on
+     a wide screen the centring has done the reserving already and adding the
+     full inset on top only shoves the page into its own right half. This is
+     that head start, and the reservation subtracts it.
+
+     The 10px is slack. 100vw counts a classic scrollbar that the box is not
+     actually offset by, which would overstate the head start by half a
+     scrollbar and eat into the clearance; giving the subtraction 10px less
+     than it asks for covers the widest of them. */
+  --rail-inboard: max(0px, calc((100vw - var(--shell)) / 2 - 10px));
   /* How far the shelves ride up over the hero. The arc sits in the upper part of
      the pinned viewport, so the space beneath it is empty, and on a phone that is
      most of a screen of nothing. Pulling the shelves up closes that gap and,
@@ -66,6 +93,13 @@
   --detail-close-ms: 300;
   --card: 72px;
 }
+
+/* The rail steps in twice, where the Menu pill steps in: site-menu.css moves
+   the pill to 20px at 900 and hands it to the full-width bottom bar at 620,
+   where the bar sits 14px in. Both overrides live here, in width order, so the
+   narrower one wins rather than losing to a 900px rule further down the file. */
+@media (max-width: 900px) { :root { --rail-edge: 20px; } }
+@media (max-width: 620px) { :root { --rail-edge: 14px; } }
 
 * { box-sizing: border-box; }
 
@@ -1081,6 +1115,287 @@ html.reduce-motion body.media-detail-pushed .detail-dolly-host { transform: none
 @media (max-width: 620px) { .sound-toggle .sound-toggle-text { display: none; } }
 body.menu-open .sound-toggle { opacity: 0; pointer-events: none; }
 
+/* One surface, two densities. The shell itself changes height while the same
+   border changes from a pill to a compact panel; nothing is mounted beneath it. */
+.library-player {
+  --player-surface: #171719;
+  --player-surface-raised: #242427;
+  /* Width and rail come from :root, where the reservation that keeps content
+     clear of this thing reads them too. The rest is sized in clamps for the
+     same reason: the shell should give ground as the window narrows rather
+     than hold one desktop size all the way down, so height, padding and icons
+     scale with the width and it stays the same object, only smaller. */
+  --player-bar: clamp(42px, 3.9vw, 50px);
+  --player-pad: clamp(10px, 1vw, 14px);
+  --player-icon: clamp(15px, 1.45vw, 18px);
+  position: fixed; top: 14px; left: var(--rail-edge); z-index: 80;
+  /* The open panel is a 0fr -> 1fr row, not a fixed pixel height: the shell is
+     then exactly as tall as what is inside it. That is what let the speed
+     fader be added underneath the volume row without re-measuring the box, and
+     it is what keeps the open height honest as the type inside it scales. */
+  display: grid; grid-template-rows: var(--player-bar) 0fr;
+  width: min(var(--player-w), calc(100vw - (2 * var(--rail-edge))));
+  overflow: hidden; color: var(--lib-fg);
+  background: var(--player-surface); border: 1px solid var(--lib-line);
+  border-radius: 0.6em; box-shadow: none;
+  font-family: "Space Mono", ui-monospace, monospace;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transform: translateY(-10px);
+  transition:
+    grid-template-rows 0.3s var(--ease), border-radius 0.28s ease,
+    box-shadow 0.28s ease, opacity 0.2s ease, transform 0.25s var(--ease),
+    visibility 0s linear 0.25s;
+}
+.library-player.is-revealed {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+.library-player.is-expanded {
+  grid-template-rows: var(--player-bar) 1fr;
+  border-radius: 0.6em; box-shadow: none;
+}
+.library-player-bar {
+  position: relative; display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--player-disclosure, clamp(38px, 3.4vw, 44px));
+  width: 100%; min-height: 0; padding: 0; overflow: hidden;
+}
+.library-player-disclosure {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 100%; min-width: 0; height: 100%; padding: 0;
+  border: 0; border-left: 1px solid var(--lib-line); border-radius: 0;
+  background: transparent; color: var(--lib-dim);
+  cursor: pointer; touch-action: manipulation;
+  transition: color 0.18s ease, background 0.18s ease;
+}
+.library-player-disclosure:hover { color: var(--hero-verb); background: var(--player-surface-raised); }
+.library-player-disclosure svg {
+  width: var(--player-icon); height: var(--player-icon);
+  transition: transform 0.24s var(--ease);
+}
+.library-player.is-expanded .library-player-disclosure svg { transform: rotate(180deg); }
+.library-player-disclosure:focus-visible,
+.library-player-button:focus-visible,
+.library-player-sound-button:focus-visible {
+  outline: 2px solid var(--hero-verb); outline-offset: -3px;
+}
+.library-player-summary {
+  display: grid; gap: 3px; min-width: 0;
+  padding: 12px var(--player-pad) 6px;
+}
+.library-player-title,
+.library-player-artist { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.library-player-title {
+  font-family: "Aeonik", system-ui, sans-serif;
+  font-size: clamp(11px, 1.05vw, 13px); line-height: 1.1;
+  font-weight: 500; letter-spacing: -0.01em; color: var(--lib-fg);
+}
+.library-player-artist {
+  font-size: clamp(7px, 0.66vw, 8px); line-height: 1.2; text-transform: uppercase;
+  letter-spacing: 0.09em; color: var(--lib-dim);
+}
+.library-player-compact-controls {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); min-width: 0;
+}
+.library-player-button {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 0; min-height: 0; height: 100%; padding: 0;
+  border: 0; border-left: 1px solid var(--lib-line); border-radius: 0;
+  background: transparent; color: var(--lib-fg);
+  cursor: pointer; opacity: 0.76; touch-action: manipulation;
+  transition: opacity 0.18s ease, color 0.18s ease, background 0.18s ease;
+}
+.library-player-button:first-child { border-left: 0; }
+.library-player-button svg { width: var(--player-icon); height: var(--player-icon); flex: 0 0 auto; }
+.library-player-button:hover { color: var(--hero-verb); background: var(--player-surface-raised); opacity: 1; }
+.library-player-button:active { background: color-mix(in srgb, var(--hero-verb) 16%, var(--player-surface)); }
+.library-player-button:disabled { cursor: default; opacity: 0.22; }
+.library-player-play {
+  min-width: 0; min-height: 0; height: 100%; background: transparent;
+  color: var(--hero-verb); opacity: 1;
+}
+.library-player-play:hover { background: var(--player-surface-raised); color: var(--lib-accent); }
+.library-player .player-pause-icon { display: none; }
+.library-player.is-playing .player-play-icon { display: none; }
+.library-player.is-playing .player-pause-icon { display: block; }
+
+.library-player-panel {
+  position: relative; min-height: 0; padding: 0; overflow: hidden;
+  background: transparent;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.28s var(--ease), visibility 0s linear 0.28s;
+}
+.library-player.is-expanded .library-player-panel {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translateY(0); transition-delay: 0.12s, 0.06s, 0s;
+}
+.library-player-progress {
+  display: block; height: 18px; padding: 0 var(--player-pad);
+}
+.library-player-progress input,
+.library-player-volume input {
+  --player-range-progress: 0%;
+  appearance: none; -webkit-appearance: none;
+  display: block; width: 100%; height: 18px; margin: 0;
+  background: transparent; cursor: pointer;
+}
+.library-player-progress input::-webkit-slider-runnable-track,
+.library-player-volume input::-webkit-slider-runnable-track {
+  height: 3px; border-radius: 999px;
+  background: linear-gradient(to right, var(--hero-verb) 0 var(--player-range-progress), rgba(216, 214, 209, 0.24) var(--player-range-progress) 100%);
+}
+.library-player-progress input::-moz-range-track,
+.library-player-volume input::-moz-range-track {
+  height: 3px; border-radius: 999px;
+  background: linear-gradient(to right, var(--hero-verb) 0 var(--player-range-progress), rgba(216, 214, 209, 0.24) var(--player-range-progress) 100%);
+}
+.library-player-progress input::-webkit-slider-thumb,
+.library-player-volume input::-webkit-slider-thumb {
+  appearance: none; -webkit-appearance: none;
+  width: 12px; height: 12px; margin-top: -4.5px; border: 0; border-radius: 50%;
+  background: var(--hero-verb); box-shadow: 0 0 0 2px var(--player-surface);
+}
+.library-player-progress input::-moz-range-thumb,
+.library-player-volume input::-moz-range-thumb {
+  width: 12px; height: 12px; border: 0; border-radius: 50%;
+  background: var(--hero-verb); box-shadow: 0 0 0 2px var(--player-surface);
+}
+.library-player-progress input:focus-visible,
+.library-player-volume input:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 3px; }
+.library-player-times {
+  display: flex; justify-content: space-between; padding: 0 var(--player-pad);
+  color: var(--lib-dim); font-size: clamp(7px, 0.66vw, 8px);
+  line-height: 1; font-variant-numeric: tabular-nums;
+}
+.library-player-volume-row,
+.library-player-speed-row {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center;
+  gap: 10px; padding: 2px var(--player-pad);
+}
+.library-player-speed-row { padding-bottom: 10px; }
+.library-player-sound-button {
+  display: inline-flex; align-items: center; gap: 8px; padding: 0;
+  min-height: clamp(38px, 3.6vw, 44px);
+  border: 0; background: transparent; color: var(--lib-fg); cursor: pointer;
+}
+.library-player-sound-button svg {
+  width: var(--player-icon); height: var(--player-icon); flex: 0 0 auto;
+}
+.library-player-sound-button span {
+  font-size: clamp(7px, 0.66vw, 8px); text-transform: uppercase; letter-spacing: 0.09em;
+}
+
+/* ---------- the pitch fader ----------
+   A turntable's pitch slider rests in the middle and is pushed either way from
+   there, so this one is drawn from its centre out rather than filled from the
+   left like volume: the lit part of the track is the distance travelled from
+   normal speed, on whichever side of it you are.
+
+   The two stops are set in JS as the low and high end of that span, which is
+   why one rule can draw both directions. */
+.library-player-speed-button {
+  font-variant-numeric: tabular-nums;
+}
+.library-player-speed-button span {
+  min-width: 4.6ch; text-align: left; text-transform: none; letter-spacing: 0.04em;
+}
+.library-player.is-speed-shifted .library-player-speed-button { color: var(--hero-verb); }
+.library-player-speed { display: block; min-width: 0; }
+.library-player-speed input {
+  --player-range-low: 50%;
+  --player-range-high: 50%;
+  appearance: none; -webkit-appearance: none;
+  display: block; width: 100%; height: 18px; margin: 0;
+  background: transparent; cursor: ew-resize;
+}
+.library-player-speed input::-webkit-slider-runnable-track {
+  height: 3px; border-radius: 999px;
+  background:
+    linear-gradient(to right,
+      rgba(216, 214, 209, 0.24) 0 var(--player-range-low),
+      var(--hero-verb) var(--player-range-low) var(--player-range-high),
+      rgba(216, 214, 209, 0.24) var(--player-range-high) 100%);
+}
+.library-player-speed input::-moz-range-track {
+  height: 3px; border-radius: 999px;
+  background:
+    linear-gradient(to right,
+      rgba(216, 214, 209, 0.24) 0 var(--player-range-low),
+      var(--hero-verb) var(--player-range-low) var(--player-range-high),
+      rgba(216, 214, 209, 0.24) var(--player-range-high) 100%);
+}
+/* The detent mark: the one position the fader snaps back to. */
+.library-player-speed::after {
+  content: ""; display: block; height: 9px; margin: -13.5px auto 0; width: 1px;
+  background: rgba(216, 214, 209, 0.4); pointer-events: none;
+}
+.library-player-speed input::-webkit-slider-thumb {
+  appearance: none; -webkit-appearance: none;
+  width: 8px; height: 16px; margin-top: -6.5px; border: 0; border-radius: 2px;
+  background: var(--hero-verb); box-shadow: 0 0 0 2px var(--player-surface);
+}
+.library-player-speed input::-moz-range-thumb {
+  width: 8px; height: 16px; border: 0; border-radius: 2px;
+  background: var(--hero-verb); box-shadow: 0 0 0 2px var(--player-surface);
+}
+.library-player-speed input:focus-visible { outline: 2px solid var(--hero-verb); outline-offset: 3px; }
+.library-player .sound-cross { opacity: 0; }
+.library-player.is-sound-off .library-player-sound-button { color: var(--lib-dim); }
+.library-player.is-sound-off .sound-wave { opacity: 0; }
+.library-player.is-sound-off .sound-cross { opacity: 1; }
+.library-player-volume { display: block; min-width: 0; }
+.library-player.is-empty { opacity: 0.58; }
+body.menu-open .library-player { opacity: 0; pointer-events: none; }
+
+/* The Menu pill is chrome, and the library home's hero is not a screen with
+   chrome on it: it is a pinned ring of covers you fall through. So on that one
+   page the pill arrives when the player does, at the point the shelves have
+   taken the screen, and the hero is left to itself. The catalog pages keep
+   theirs throughout, their hero being an ordinary screen-high header with a
+   page around it. is-past-hero is set by the player module, which is already
+   working out that moment for its own reveal. */
+body.library:not(.library-lists):not(.is-past-hero) .menu-btn,
+body.library:not(.library-lists):not(.is-past-hero) .menu-bar {
+  opacity: 0; pointer-events: none;
+}
+
+/* The rail steps in where the Menu pill's does, so the player keeps sharing an
+   edge with it rather than drifting off on its own at these widths. The offset
+   is set on --player-edge, not on `left`, because the width is measured from
+   it too: setting only `left` would move the shell without letting it use the
+   room that move just freed. */
+@media (max-width: 620px) {
+  .library-player { top: 10px; border-radius: 999px; }
+  .library-player.is-expanded { border-radius: 22px; }
+}
+
+/* On a short landscape screen the desktop Menu pill occupies the same lower
+   left corner as the expanded sound row. Keep both controls available by
+   handing the Menu pill to the open lower-right corner for this one state. */
+@media (max-height: 430px) and (min-width: 621px) {
+  .library-player.is-expanded + .menu-btn { left: auto; right: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .library-player,
+  .library-player-bar,
+  .library-player-disclosure,
+  .library-player-title,
+  .library-player-artist,
+  .library-player-compact-controls,
+  .library-player-button,
+  .library-player-panel { transition: none; }
+}
+html.reduce-motion .library-player,
+html.reduce-motion .library-player-bar,
+html.reduce-motion .library-player-disclosure,
+html.reduce-motion .library-player-title,
+html.reduce-motion .library-player-artist,
+html.reduce-motion .library-player-compact-controls,
+html.reduce-motion .library-player-button,
+html.reduce-motion .library-player-panel { transition: none; }
+
 .spotify-host { min-height: 152px; }
 
 /* The trailer sits in the detail panel like the record player does. 16:9 rather
@@ -1125,7 +1440,7 @@ body.menu-open .sound-toggle { opacity: 0; pointer-events: none; }
   gap: clamp(20px, 3vw, 48px); max-width: 1560px;
   margin: 0 auto;
 }
-.giant-wordmark { display: block; width: clamp(330px, 68vw, 1100px); height: auto; }
+.giant-wordmark { display: block; width: clamp(380px, 76vw, 1300px); height: auto; }
 .footer-side { padding-bottom: 4px; }
 .socials { display: flex; flex-direction: column; gap: 6px; }
 .socials a {
@@ -1233,9 +1548,20 @@ body.menu-open .sound-toggle { opacity: 0; pointer-events: none; }
   text-transform: uppercase; letter-spacing: 0.12em; text-decoration: none;
   pointer-events: auto;
 }
+/* Same column as the shelves on the library home page, so the left gap is the
+   gap everywhere in the library rather than one gap on the home page and a
+   narrower one on every catalog page. .shelves is a --shell-wide centred
+   column; these were full-bleed, so their padding started at the viewport
+   edge and their content sat further left than the shelves' did.
+
+   .lib-column is the hook for pages built later: put it on a section and it
+   lands in the same column with the same reservation for the menu pill,
+   which is set on this same list of selectors at the end of the file. */
 .list-index-section,
-.catalog-section {
-  width: 100%; margin: 0; padding-left: var(--gutter); padding-right: var(--gutter);
+.catalog-section,
+.lib-column {
+  width: 100%; max-width: var(--shell); margin-inline: auto;
+  padding-left: var(--gutter); padding-right: var(--gutter);
   scroll-margin-top: 40px;
 }
 .list-index-section { padding-top: clamp(52px, 6vw, 84px); }
@@ -1451,7 +1777,7 @@ body.menu-open .sound-toggle { opacity: 0; pointer-events: none; }
   :root { --hero-overlap: 50vh; --book-scale: 0.66; }
   .hero-inner { width: min(86vw, 540px); }
   .footer-brand { flex-direction: column-reverse; align-items: center; gap: 64px; }
-  .giant-wordmark { width: min(88vw, 400px); }
+  .giant-wordmark { width: min(94vw, 460px); }
   .footer-side { width: 100%; }
   .socials { flex-direction: row; justify-content: center; gap: 10px; }
   .socials a { width: clamp(60px, 19vw, 80px); }
@@ -1613,6 +1939,11 @@ html.reduce-motion .hero-quote-cite { transition: none; opacity: 1; transform: n
   .shelves,
   .list-index-section,
   .catalog-section,
+  .lib-column {
+    padding-left: max(var(--gutter), calc(var(--rail-safe) - var(--rail-inboard)));
+  }
+  /* The list hero is the one place the player is not shown, so it reserves for
+     the pill alone and keeps its full width. */
   .list-page-intro { padding-left: max(var(--gutter), var(--pill-safe)); }
   /* The intro is a centred column inside a full-bleed hero, so it takes the
      reservation as a margin on the centring box rather than as padding that

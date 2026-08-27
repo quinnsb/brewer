@@ -21,20 +21,94 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site-menu.css?v=2" />
-  <link rel="stylesheet" href="css/library.css?v=library-detail15" />
+  <link rel="stylesheet" href="css/library.css?v=library-player14" />
 </head>
 <body id="top" class="library">
   <!-- Roughly a hundred cover buttons stand between the top of the page and
        anything else, so the keyboard needs a way past them. First element in
        the body, so it is the first stop in the tab order. -->
   <a class="skip-link" href="#shelves">Skip to the shelves</a>
-  <button
-    class="sound-toggle"
-    type="button"
-    aria-pressed="true"
-    aria-label="Turn album sound off"
-    data-sound-toggle
-  ></button>
+  <aside class="library-player" aria-label="Music player" data-library-player>
+    <div class="library-player-bar">
+      <div class="library-player-compact-controls">
+        <button class="library-player-button" type="button" aria-label="Previous song" data-player-previous disabled>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 5.5v13M18 6.5 9.5 12 18 17.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="library-player-button library-player-play" type="button" aria-label="Play" data-player-play disabled>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path class="player-play-icon" d="m8 5.5 10 6.5L8 18.5z" fill="currentColor"/>
+            <path class="player-pause-icon" d="M8.5 6.5v11M15.5 6.5v11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="library-player-button" type="button" aria-label="Next song" data-player-next disabled>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.5 5.5v13M6 6.5l8.5 5.5L6 17.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <button
+        class="library-player-disclosure"
+        type="button"
+        aria-expanded="false"
+        aria-controls="library-player-panel"
+        aria-label="Open music player"
+        data-player-disclosure
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m7 9.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="library-player-panel" id="library-player-panel" aria-hidden="true" inert data-player-panel>
+      <div class="library-player-summary" aria-live="polite" aria-atomic="true">
+        <span class="library-player-title" data-player-title>Song name</span>
+        <span class="library-player-artist" data-player-artist>Artist</span>
+      </div>
+      <label class="library-player-progress">
+        <span class="sr-only">Song position</span>
+        <input type="range" min="0" max="0" step="0.1" value="0" data-player-progress />
+      </label>
+      <div class="library-player-times" aria-hidden="true">
+        <span data-player-current-time>0:00</span>
+        <span data-player-duration>--:--</span>
+      </div>
+      <div class="library-player-volume-row">
+        <button
+          class="library-player-sound-button"
+          type="button"
+          aria-pressed="true"
+          aria-label="Turn sound off"
+          data-player-sound
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z" fill="currentColor"/>
+            <path class="sound-wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path class="sound-cross" d="M16 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span data-player-sound-text>Sound on</span>
+        </button>
+        <label class="library-player-volume">
+          <span class="sr-only">Volume</span>
+          <input type="range" min="0" max="1" step="0.01" value="0.7" data-player-volume />
+        </label>
+      </div>
+      <div class="library-player-speed-row">
+        <button
+          class="library-player-sound-button library-player-speed-button"
+          type="button"
+          aria-label="Reset speed to normal"
+          data-player-speed-reset
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="12" cy="12" r="2" fill="currentColor"/>
+          </svg>
+          <span data-player-speed-text>1.00&#215;</span>
+        </button>
+        <label class="library-player-speed">
+          <span class="sr-only">Playback speed</span>
+          <input type="range" min="0.5" max="1.5" step="0.01" value="1" data-player-speed />
+        </label>
+      </div>
+    </div>
+  </aside>
   <button class="menu-btn" aria-label="Open menu">Menu</button>
   <div class="menu-bar">
     <a class="menu-bar-logo" href="./" aria-label="Quinn Brewer home"></a>
@@ -99,10 +173,11 @@
         </div>
       </div>
     </div>
-    <div class="footer-legal"><p>&copy; QUINN BREWER 2026 | <a href="index.html">Home</a> | <a href="about.html">About Me</a> | <a href="work.html">Work</a> | <a href="contact.html">Let's Talk</a> | <a href="privacy.html">Privacy Policy</a></p></div>
+    <div class="footer-legal"><p>&copy; QUINN BREWER 2026 | <a href="index.html">Home</a> | <a href="about.html">About Me</a> | <a href="work.html">Work</a> | <a href="library.html">Library</a> | <a href="contact.html">Let's Talk</a> | <a href="privacy.html">Privacy Policy</a></p></div>
   </footer>
 
   <script src="js/site-menu.js?v=2"></script>
-  <script type="module" src="js/library.js?v=library-detail15"></script>
+  <script type="module" src="js/library-player.js?v=library-player14"></script>
+  <script type="module" src="js/library.js?v=library-continuous2"></script>
 </body>
 </html>

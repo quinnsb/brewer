@@ -7,7 +7,7 @@
    ============================================================ */
 
 import { spineHeight as coverHeight } from "./lib/geometry.js?v=hero-orbit2";
-import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-detail15";
+import { playAlbum, stop as stopSound } from "./library-sound.js?v=library-player1";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
@@ -299,9 +299,6 @@ export function renderShelves(items, root, sources = {}) {
     }
     const anchor = LIST_ANCHOR[type];
     const actions = el("div", "shelf-actions");
-    /* When the shelf is a selection, the button's job is the rest of the
-       collection, so it goes to the catalogue rather than the lists above it. */
-    const truncated = list.length < all.length;
     /* One phrasing for all four shelves. It used to read "All 198 albums" on a
        truncated shelf and "See all album lists" on a complete one, so the row
        of buttons said two different things depending on how much of a
@@ -310,13 +307,14 @@ export function renderShelves(items, root, sources = {}) {
        under a header already reading "24 of 198". The header is where the
        count belongs.
 
-       Only the destination still varies: a truncated shelf jumps to the
-       catalogue, because the rest of the collection is the thing you want,
-       while a complete one lands at the top of the page, where the lists are. */
+       Both land at the top of the page. A truncated shelf used to jump
+       straight to the catalogue, on the reasoning that the rest of the
+       collection is what you came for, but that meant arriving at a medium's
+       landing page having never seen it: no hero, no lists, just a grid. The
+       page opens where it starts, and "Browse the catalog" is right there in
+       the hero for anyone who wants the grid. */
     const label = `See all ${TYPE_LABEL[type][0].toLowerCase()}`;
-    const href = truncated
-      ? `library-lists?type=${anchor}#catalog`
-      : `library-lists?type=${anchor}`;
+    const href = `library-lists?type=${anchor}`;
     const listLink = el("a", `lib-btn is-shelf is-${type}`, { href });
     listLink.append(
       Object.assign(el("span"), { textContent: label }),
@@ -1686,7 +1684,7 @@ async function loadSources() {
   }
 }
 
-async function main() {
+export async function initLibrary() {
   const root = document.getElementById("shelves");
   /* A versioned import specifier is a module identity, so if any file asks for
      a different ?v= than the page loaded, this module is evaluated twice and
@@ -1705,8 +1703,8 @@ async function main() {
 
   /* Deferred so this module finishes evaluating first: library-hero.js
      imports openItem back from here. */
-  const { initHero } = await import("./library-hero.js?v=library-detail15");
+  const { initHero } = await import("./library-hero.js?v=library-continuous1");
   initHero(items);
 }
 
-if (document.getElementById("shelves")) main();
+if (document.getElementById("shelves")) initLibrary();

@@ -13,7 +13,7 @@
 import { lerp, circlePosition, arcPosition, springStep } from "./lib/geometry.js?v=hero-orbit2";
 /* Keep this URL identical to library.html. A different query string creates a
    second module instance, which renders every shelf and detail handler twice. */
-import { openItem, coverPicture } from "./library.js?v=library-detail15";
+import { openItem, coverPicture } from "./library.js?v=library-continuous1";
 import { initQuotes } from "./library-quotes.js?v=library-detail15";
 
 const REDUCED =
@@ -209,6 +209,7 @@ export async function initHero(items) {
   let last = performance.now();
   let orbitAngle = 0;
   function frame(now) {
+    if (!stage.isConnected) return;
     const dt = Math.min((now - last) / 1000, 1 / 30);
     last = now;
 

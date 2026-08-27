@@ -1,7 +1,7 @@
 /* Media-specific list and catalog pages. The moving corridor is decorative;
    the catalog underneath owns all navigation and accessible media names. */
 
-import { wireExpansion, coverPicture, wireDrag, wireLoopRail } from "./library.js?v=library-detail15";
+import { wireExpansion, coverPicture, wireDrag, wireLoopRail } from "./library.js?v=library-continuous1";
 
 /* Revalidated on every load (see the fetch below) rather than trusted from
    cache, because this file is rewritten by every `node tools/library-build.mjs`
@@ -50,17 +50,29 @@ const PAGE = {
 };
 
 const LEGACY_HASH = { books: "book", albums: "album", films: "film", podcasts: "other" };
-const params = new URLSearchParams(location.search);
-const requested = params.get("type");
-const requestedList = params.get("list");
-const legacy = LEGACY_HASH[location.hash.slice(1)];
+let params;
+let requested;
+let requestedList;
+let legacy;
 /* A ?list= id carries its own type, so both are settled in main() once the
    lists file has been read. Until then this is only the ?type= reading. */
-let type = PAGE[requested] ? requested : PAGE[legacy] ? legacy : "book";
-let page = PAGE[type];
+let type;
+let page;
 const node = (selector) => document.querySelector(selector);
-const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches || params.get("motion") === "reduce";
-if (reducedMotion) document.documentElement.classList.add("reduce-motion");
+let reducedMotion;
+
+function readRoute() {
+  params = new URLSearchParams(location.search);
+  requested = params.get("type");
+  requestedList = params.get("list");
+  legacy = LEGACY_HASH[location.hash.slice(1)];
+  type = PAGE[requested] ? requested : PAGE[legacy] ? legacy : "book";
+  page = PAGE[type];
+  reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches || params.get("motion") === "reduce";
+  document.documentElement.classList.toggle("reduce-motion", reducedMotion);
+}
+
+readRoute();
 
 function hrefFor(filter, value) {
   const next = new URLSearchParams({ type });
@@ -529,7 +541,12 @@ async function loadLists() {
   }
 }
 
-async function main() {
+export async function initLibraryLists() {
+  readRoute();
+  const routeRoot = node(".list-page-main");
+  const routeKey = `${location.pathname}${location.search}`;
+  if (routeRoot?.dataset.listsRendered === routeKey) return;
+  if (routeRoot) routeRoot.dataset.listsRendered = routeKey;
   const [response, lists] = await Promise.all([fetch(DATA_URL, { cache: "no-cache" }), loadLists()]);
   if (!response.ok) throw new Error(`Could not load catalog: ${response.status}`);
   const { items } = await response.json();
@@ -574,7 +591,7 @@ async function main() {
   if (chosen) document.body.dataset.listView = "single";
 }
 
-main().catch((error) => {
+initLibraryLists().catch((error) => {
   console.error(error);
   node("[data-catalog-count]").textContent = "The catalog could not be loaded.";
 });

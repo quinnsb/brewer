@@ -73,3 +73,4 @@ if (document.readyState === "loading") {
 } else {
   wireSiteMenu();
 }
+document.addEventListener("site-menu:mount", wireSiteMenu);

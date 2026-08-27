@@ -89,6 +89,7 @@ export function stop() {
 export async function playAlbum(host, item) {
   stop();
   if (!item.spotifyId) return;
+  window.dispatchEvent(new CustomEvent("library:album-play"));
 
   const token = {};
   current = { token, controller: null };
@@ -157,9 +158,8 @@ export function wireSoundToggle(button) {
   button.addEventListener("click", () => setSound(!soundOn()));
 }
 
-/* Wired here rather than from each page's entry script: library.js imports this
-   module and both library pages load library.js, directly or through
-   library-lists.js, so one hook covers both without either page knowing. */
+/* The list pages retain the standalone switch. The main Library player uses
+   the exported preference functions above and does not render this hook. */
 const wire = () => wireSoundToggle(document.querySelector("[data-sound-toggle]"));
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", wire);
 else wire();
