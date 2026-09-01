@@ -3,6 +3,14 @@
   "cleanUrls": true,
   "headers": [
     {
+      "source": "/projects/ridgeline",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/projects/ridgeline.html",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
       "source": "/admin.html",
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, nofollow" },

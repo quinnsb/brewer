@@ -31,7 +31,7 @@ const PAGES = [
   "/projects/ms-consulting.html", "/projects/collegiate-church-network.html",
   "/projects/the-forgotten-initiative.html", "/projects/atlas-ivy.html",
   "/projects/foxglove.html", "/projects/homefield.html", "/projects/nix.html",
-  "/projects/rally.html", "/projects/ridgeline.html",
+  "/projects/rally.html",
 ];
 
 const VIEWPORTS = [

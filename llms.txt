@@ -33,7 +33,6 @@ is actually trying to say rather than with a template.
 - [Homefield](https://www.quinnbrewer.com/projects/homefield.html)
 - [Nix](https://www.quinnbrewer.com/projects/nix.html)
 - [Rally](https://www.quinnbrewer.com/projects/rally.html)
-- [Ridgeline](https://www.quinnbrewer.com/projects/ridgeline.html)
 
 ## Capabilities
 
