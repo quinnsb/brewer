@@ -2659,4 +2659,9 @@ html.home-intro .site-logo {
     line-height: 0.95;
     letter-spacing: -0.03em;
   }
+  /* The home headline's authored breaks are cut for the desktop measure. At
+     this size they strand a single word on its own line, so the breaks are
+     dropped and the browser balances the wrap instead. */
+  .hero .h-display.hero-headline br { display: none; }
+  .hero .h-display.hero-headline { text-wrap: balance; }
 }
