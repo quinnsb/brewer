@@ -679,6 +679,38 @@ p + .case-btn { margin-top: 34px; }
 }
 .project-card:hover .tfi-card-logo { transform: translate(-50%, -50%) scale(1.025); }
 
+/* Atlas & Ivy follows the TFI tile pattern: key art under a scrim with the
+   lockup reversed out over it. The supplied lockup is a black PNG, so it is
+   forced flat and inverted the same way the case study hero does it. */
+.atlas-work-tile {
+  background: #2b360c;
+  color: #eceadb;
+}
+.atlas-work-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(18, 24, 6, 0.14), rgba(18, 24, 6, 0.52));
+  pointer-events: none;
+}
+.atlas-card-image {
+  display: block;
+  object-position: center 42%;
+}
+.atlas-card-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: min(56%, 620px);
+  height: auto;
+  filter: brightness(0) invert(1) drop-shadow(0 8px 24px rgba(0, 0, 0, 0.42));
+  transform: translate(-50%, -50%);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-card:hover .atlas-card-logo { transform: translate(-50%, -50%) scale(1.025); }
+
 /* ---------- promo card (year in review) ---------- */
 
 .promo-card {
@@ -2588,6 +2620,7 @@ html.home-intro .site-logo {
   .site-logo { --wordmark-size: min(calc(var(--logo-height) * 1.4615), 11.5vw); }
   .case-page .site-logo { position: absolute; }
   .tfi-card-logo { width: min(72%, 300px); }
+  .atlas-card-logo { width: min(72%, 300px); }
   .footer-panel { padding-top: 64px; }
   .footer-cta h2 { font-size: clamp(36px, 11vw, 52px); }
   /* Trust-style mobile footer: centered CTA, socials row, wordmark last */
