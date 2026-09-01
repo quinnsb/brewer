@@ -1,0 +1,119 @@
+/* Atlas & Ivy case study, lab copy.
+   Prototype styles only. Nothing here is loaded by projects/atlas-ivy.html. */
+
+.case-study.atlas-lab {
+  --case-accent: #7fa338;   /* matcha foam, sampled from the pour shots */
+  --case-paper: #eceadb;    /* oat */
+  --case-ink: #22280f;
+  --ai-deep: #2b360c;       /* deep matcha, from the backlit pour */
+  --ai-sage: #b1b273;
+  --ai-wood: #c39a63;
+  --ai-stone: #b4aa8c;
+}
+
+/* theme-carnival re-declares --case-paper on every [class*="case-"] element
+   itself, so setting it on the ancestor above never reaches the stages.
+   This has to outrank `.theme-carnival [class*="case-"]` (0,2,0). */
+.theme-carnival .atlas-lab [class*="case-"] {
+  --case-paper: #eceadb;
+  --case-ink: #22280f;
+}
+
+/* Deep green stage, warmer than the stock near-black */
+.atlas-lab .case-stage.deep {
+  background: var(--ai-deep);
+  color: #eceadb;
+}
+.atlas-lab .case-stage.sage {
+  background: var(--ai-sage);
+  color: #22280f;
+}
+
+/* Logo lockups sit as images rather than type */
+.atlas-lab .case-lockup {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+.atlas-lab .case-lockup img {
+  width: min(660px, 78%);
+  height: auto;
+  object-fit: contain;
+}
+.atlas-lab .case-lockup.stacked img { width: min(340px, 52%); }
+.atlas-lab .case-lockup.mark img { width: clamp(150px, 22vw, 300px); }
+
+/* The supplied logos are black PNGs, so flip them on dark grounds */
+.atlas-lab .case-stage.deep .case-lockup img,
+.atlas-lab .case-stage.dark .case-lockup img {
+  filter: invert(1);
+}
+
+.atlas-lab .case-lockup small {
+  display: block;
+  margin-top: 26px;
+  font-family: "Space Mono", monospace;
+  font-size: clamp(10px, 1vw, 13px);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0.72;
+}
+
+/* Palette board, matching the sampled colours */
+.atlas-lab .brand-board { background: var(--case-paper); color: var(--case-ink); }
+.atlas-lab .brand-board i { border: 1px solid rgba(34, 40, 15, 0.12); }
+
+/* Portrait source files crop better with a taller frame in the collage */
+.atlas-lab .case-collage .case-media { min-height: clamp(340px, 44vw, 660px); }
+
+/* The bag design is a composed 16:9 layout rather than a photo to crop, so it
+   overrides .case-media's min-height and keeps its own ratio exactly. */
+.atlas-lab .case-media.artwork {
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+}
+
+/* Lab-only banner so this copy is never mistaken for the live page */
+.lab-flag {
+  position: fixed;
+  z-index: 999;
+  top: 12px;
+  right: 12px;   /* top-right so it clears the mobile menu bar */
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #2b360c;
+  color: #eceadb;
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* The identity's type is a geometric sans, so the board should not show the
+   site's default serif against the real lockup. */
+.atlas-lab .brand-board strong {
+  font-family: var(--sans-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.atlas-lab .brand-board .bb-lockup {
+  width: min(460px, 70%);
+  height: auto;
+  object-fit: contain;
+}
+
+/* Hero carries the stacked lockup instead of set type. The supplied PNG is
+   black, so brightness(0) forces it flat before invert takes it to pure white
+   (safer than invert alone if the asset is ever re-exported off-black). */
+.hero-lockup .work-hero-mark { align-content: center; }
+.hero-lockup .hero-mark-img {
+  /* `.work-hero img` pins every image in the hero to position:absolute;inset:0
+     for the background photo, which would drag the lockup into the corner. */
+  position: static;
+  width: clamp(250px, 35vw, 580px);
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 26px rgba(0, 0, 0, 0.3));
+}
+.hero-lockup .work-hero-mark small { margin-top: 28px; }
