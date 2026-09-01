@@ -5,9 +5,6 @@
   --case-paper: #eceadb;    /* oat */
   --case-ink: #22280f;
   --ai-deep: #2b360c;       /* deep matcha, from the backlit pour */
-  --ai-sage: #b1b273;
-  --ai-wood: #c39a63;
-  --ai-stone: #b4aa8c;
 }
 
 /* theme-carnival re-declares --case-paper on every [class*="case-"] element
@@ -23,10 +20,6 @@
   background: var(--ai-deep);
   color: #eceadb;
 }
-.atlas .case-stage.sage {
-  background: var(--ai-sage);
-  color: #22280f;
-}
 
 /* Logo lockups sit as images rather than type */
 .atlas .case-lockup {
@@ -39,7 +32,6 @@
   height: auto;
   object-fit: contain;
 }
-.atlas .case-lockup.stacked img { width: min(340px, 52%); }
 .atlas .case-lockup.mark img { width: clamp(150px, 22vw, 300px); }
 
 /* The supplied logos are black PNGs, so flip them on dark grounds */
