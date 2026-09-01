@@ -101,9 +101,12 @@
 }
 .hero-lockup .work-hero-mark small { margin-top: 28px; }
 
-/* Primary lockup sits over a washed-back photograph. .case-stage has no
-   position of its own, so it needs one before the image can be pinned behind. */
-.atlas .case-stage.stage-bloom { position: relative; }
+/* Primary lockup sits over a looping clip at full strength. .case-stage has no
+   position of its own, so it needs one before the video can be pinned behind. */
+.atlas .case-stage.stage-loop {
+  position: relative;
+  color: #eceadb;
+}
 .atlas .stage-bg {
   position: absolute;
   inset: 0;
@@ -111,9 +114,17 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.35;
 }
-.atlas .case-stage.stage-bloom .case-lockup {
+.atlas .case-stage.stage-loop .case-lockup {
   position: relative;
   z-index: 1;
+}
+/* Reversed out over the footage, the same way the hero handles the black PNG. */
+.atlas .case-stage.stage-loop .case-lockup img {
+  filter: brightness(0) invert(1) drop-shadow(0 6px 22px rgba(0, 0, 0, 0.5));
+}
+/* The default 0.72 caption disappears against the lit patches of the wood. */
+.atlas .case-stage.stage-loop .case-lockup small {
+  opacity: 0.92;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
 }

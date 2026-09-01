@@ -5,3 +5,6 @@ inspo images 4/
 .superpowers/
 node_modules/
 tools/audit/shots/
+
+# ProRes masters stay local; web encodes are committed instead
+*.mov

@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* Respect reduced-motion preferences while preserving the video as a still. */
   const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const cardVideos = document.querySelectorAll(".ccn-card-video, .tfi-card-video");
+  const cardVideos = document.querySelectorAll(".ccn-card-video, .tfi-card-video, .stage-loop-video");
   const syncCollegiateVideoMotion = () => {
     cardVideos.forEach((video) => {
       if (motionQuery.matches) {
