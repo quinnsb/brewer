@@ -29,6 +29,7 @@ is actually trying to say rather than with a template.
 - [Collegiate Church Network](https://www.quinnbrewer.com/projects/collegiate-church-network.html)
 - [The Forgotten Initiative](https://www.quinnbrewer.com/projects/the-forgotten-initiative.html)
 - [Atlas Ivy](https://www.quinnbrewer.com/projects/atlas-ivy.html)
+- [Bright Trip](https://www.quinnbrewer.com/projects/brighttrip.html)
 - [Foxglove](https://www.quinnbrewer.com/projects/foxglove.html)
 - [Homefield](https://www.quinnbrewer.com/projects/homefield.html)
 - [Nix](https://www.quinnbrewer.com/projects/nix.html)

@@ -711,6 +711,34 @@ p + .case-btn { margin-top: 34px; }
 }
 .project-card:hover .atlas-card-logo { transform: translate(-50%, -50%) scale(1.025); }
 
+/* Bright Trip: a Shinjuku street frame with the client's lockup over it. The
+   supplied asset is already white on transparency, so unlike the Atlas card it
+   takes no brightness/invert pass, only the scrim underneath and a shadow. */
+.bt-work-tile {
+  background: #0d1c24;
+  color: var(--cream);
+}
+.bt-work-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(6, 20, 26, 0.18), rgba(6, 20, 26, 0.52));
+  pointer-events: none;
+}
+.bt-card-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: min(50%, 540px);
+  height: auto;
+  filter: drop-shadow(0 8px 26px rgba(0, 0, 0, 0.46));
+  transform: translate(-50%, -50%);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-card:hover .bt-card-logo { transform: translate(-50%, -50%) scale(1.025); }
+
 /* ---------- promo card (year in review) ---------- */
 
 .promo-card {
@@ -2621,6 +2649,7 @@ html.home-intro .site-logo {
   .case-page .site-logo { position: absolute; }
   .tfi-card-logo { width: min(72%, 300px); }
   .atlas-card-logo { width: min(72%, 300px); }
+  .bt-card-logo { width: min(70%, 300px); }
   .footer-panel { padding-top: 64px; }
   .footer-cta h2 { font-size: clamp(36px, 11vw, 52px); }
   /* Trust-style mobile footer: centered CTA, socials row, wordmark last */

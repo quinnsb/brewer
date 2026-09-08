@@ -301,9 +301,10 @@
    ratio and the poster/play behaviour). Square corners here, because every
    other piece of media on this page is square except the browser mock. The
    paper disc and green mark keep the button inside the CCN palette. The disc
-   sits low and left because this poster puts "What if you said yes?" across
-   the middle of the frame, and a centred button lands on top of the type. */
-.ccn-video { --yt-play-fill: var(--ccn-paper); --yt-play-mark: var(--ccn-bg); --yt-play-x: 13%; --yt-play-y: 76%; border-radius: 0; background: #000; }
+   was parked low and left to dodge the poster's "What if you said yes?"; it
+   sits centred now, which is the site-wide convention, and the type behind it
+   still reads either side of the button. */
+.ccn-video { --yt-play-fill: var(--ccn-paper); --yt-play-mark: var(--ccn-bg); border-radius: 0; background: #000; }
 .ccn-lt-grid { grid-template-columns: 1.35fr .65fr; }
 .ccn-landscape { min-height: clamp(470px, 57vw, 850px); background: #a6a7a2; }
 .ccn-lt-grid .ccn-portrait { min-height: clamp(470px, 57vw, 850px); background: #72736f; }
