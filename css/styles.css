@@ -2527,6 +2527,21 @@ html.home-intro body.home .project-stack .project-card:first-child {
    clipped once the animation settles. The bottom padding gives them room; the
    matching negative margin cancels it from layout so line spacing is unchanged.
    Horizontal padding does the same for wide terminals. */
+/* Before main.js runs, a .split headline is still a plain text node sitting at
+   full opacity in its final position, so it paints once and then jumps as the
+   script swaps it for masked .word spans. Hold it invisible from the first
+   paint instead and let the split itself reveal it, which costs nothing
+   visually because the words start fully masked anyway. Gated on html.js, set
+   by an inline head script, so the headline still shows with JS off; a load
+   handler drops that class if the split never ran.
+
+   Only under no-preference: with reduced motion the words never move, so the
+   pre-split text and the finished headline look identical and there was no
+   flash to fix. Hiding there would just add a blank beat. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .split:not(.is-split) { visibility: hidden; }
+}
+
 .split .word {
   display: inline-block;
   overflow: hidden;

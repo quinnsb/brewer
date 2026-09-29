@@ -70,6 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
       el.appendChild(document.createTextNode(" "));
       i += 1;
     });
+    // reveals the headline: html.js .split:not(.is-split) keeps it invisible
+    // until the masked words are in place, so there is nothing to flash
+    el.classList.add("is-split");
   });
 
   /* ----- facade YouTube embeds -----
